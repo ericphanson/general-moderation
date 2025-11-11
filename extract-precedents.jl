@@ -166,7 +166,18 @@ $(JSON.json(minimal))
 If no significant quotes, return empty array."""
 
     # Schema: array of quote strings
-    schema = "quotes: array of quote strings"
+    schema = """{
+  "type": "object",
+  "properties": {
+    "quotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["quotes"]
+}"""
 
     result = call_llm(prompt, schema)
     return result === nothing ? [] : get(result, "quotes", [])
@@ -199,7 +210,18 @@ Categories:
 - cli_tool_name: Package provides CLI tool with this name"""
 
     # Schema: array of justification category strings
-    schema = "justifications: array of justification categories"
+    schema = """{
+  "type": "object",
+  "properties": {
+    "justifications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["justifications"]
+}"""
 
     result = call_llm(prompt, schema)
     return result === nothing ? [] : get(result, "justifications", [])

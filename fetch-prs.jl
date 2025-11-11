@@ -331,14 +331,15 @@ function fetch_details()
         println("Resuming from PR #$last_completed")
     end
 
-    # Filter to PRs after last completed
-    remaining = filter(pr -> pr["number"] > last_completed, to_fetch)
-    println("Remaining to fetch: $(length(remaining))")
+    # # Filter to PRs after last completed
+    # remaining = filter(pr -> pr["number"] <= last_completed, to_fetch)
+    # println("Remaining to fetch: $(length(remaining))")
 
-    if length(remaining) == 0
-        println("✓ Stage 3 complete: All PRs already fetched")
-        return
-    end
+    # if length(remaining) == 0
+    #     println("✓ Stage 3 complete: All PRs already fetched")
+    #     return
+    # end
+    remaining = to_fetch
 
     # Fetch each PR
     fetched = 0
@@ -348,7 +349,12 @@ function fetch_details()
         pr_number = pr["number"]
         package_name = pr["package_name"]
 
+        output_path = get_output_path(package_name, pr_number)
+        isfile(output_path) && continue
+
         println("\n[$idx/$(length(remaining))] Fetching PR #$pr_number ($package_name)...")
+
+
 
         try
             # Fetch PR details (body and comments)
