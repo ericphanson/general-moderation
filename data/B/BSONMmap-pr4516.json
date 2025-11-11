@@ -1,0 +1,59 @@
+{
+  "created_at": "2019-10-18T18:04:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-28T09:21:59Z",
+  "pr_number": 4516,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Mzg2NTgwMw==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- The following dependencies do not have a compat entry that has an upper bound: BSON, Requires\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-18T18:07:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4516#issuecomment-543865803",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg2MDY3NA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/AStupidBear/BSONMmap.jl/releases/tag/v0.1.0) it is.\n<!-- 64851580-f964-11e9-84ab-e8f55aeb906b -->",
+      "createdAt": "2019-10-28T09:22:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4516#issuecomment-546860674",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg2MDY4MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please fix the compatibility bounds for the next release such that it will be automatically merged.",
+      "createdAt": "2019-10-28T09:22:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4516#issuecomment-546860680",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: BSONMmap\n- Repository: https://github.com/AStupidBear/BSONMmap.jl\n- Created by: @AStupidBear\n- Version: v0.1.0\n- Commit: 552a8daece14ca83c8c91fe20537665e272411a7\n- Reviewed by: @AStupidBear\n- Reference: https://github.com/AStupidBear/BSONMmap.jl/commit/552a8daece14ca83c8c91fe20537665e272411a7#commitcomment-35566664\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4efb294bbf23364bfcc311d4f93d4eef65e6bf436926cda36e8811e962a11c8df5008ec193bde4da38fe1e3455cfa3dce79139aeedfa2e2152cf8a6fcca363ee232d01018800f16ba811582385df02d254679dd097ce46722d0531499d79c8e1530aebc37c386054040e84170d309d37d86b6750ef632aedb85e04f2dfb28b8b0f5e2eee7dbbd26cc5d01b8e12fc424780cc5013b3a3f194b24247f1b8811552ac0b0ba25e190335a307a02bd864b249c -->",
+  "package_name": "BSONMmap",
+  "title": "New package: BSONMmap v0.1.0"
+}

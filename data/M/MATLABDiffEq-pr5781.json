@@ -1,0 +1,141 @@
+{
+  "created_at": "2019-11-23T15:15:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-11-27T00:13:37Z",
+  "pr_number": 5781,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzgwNjMwNg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- I was not able to install and import the package. See the Travis logs for details. Please make sure to read all of the Travis logs for all jobs. In particular, make sure to look at the logs for all Julia versions.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-23T15:18:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-557806306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzgwNjM4Nw==",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This won't run on the standard CI since it needs a valid MATLAB installation.",
+      "createdAt": "2019-11-23T15:19:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-557806387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3MTMxMA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you make that error non-fatal? Thats what the GPU packages have done.",
+      "createdAt": "2019-11-27T00:13:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-558871310",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3MTM0OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/JuliaDiffEq/MATLABDiffEq.jl/releases/tag/v0.1.0) it is.\n<!-- c2636500-10aa-11ea-81d7-e126efb1ca6a -->",
+      "createdAt": "2019-11-27T00:13:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-558871348",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODk2MDUyNA==",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "How do you make it non-fatal?",
+      "createdAt": "2019-11-27T07:09:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-558960524",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTI2NDM3Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just make it load with a warning or similar, registry CI does not run test, jut makes sure the package can be `using`d. Maybe it does not make sense in this situation though, I don't know.\r\n\r\nI think loading with a warning is useful not only for automerge, otherwise you are screwed if the package is somewhere in the dependency chain even if you are not using it yourself.",
+      "createdAt": "2019-11-27T21:57:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-559264373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTI3NzY5OA==",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The problem isn't this package though, it's MATLAB.jl. It will fail if it can't find MATLAB:\r\n\r\n`ERROR: LoadError: InitError: failed process: Process(`which matlab`, ProcessExited(1)) [1]`\r\n\r\nSo MATLAB.jl needs a better non-fatal exit there. That said, this is such an end user package that I would be surprised if a user wanted it but didn't have MATLAB, so 🤷‍♂ it's not the highest priority, but I'll keep this in mind.",
+      "createdAt": "2019-11-27T22:54:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-559277698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTI3ODE5OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Right, something to think about for MATLAB.jl then maybe.",
+      "createdAt": "2019-11-27T22:56:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5781#issuecomment-559278198",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: MATLABDiffEq\n- Repository: https://github.com/JuliaDiffEq/MATLABDiffEq.jl\n- Created by: @ChrisRackauckas\n- Version: v0.1.0\n- Commit: 0fdb294f06cd3ccdadf841b17d3d342e4b981380\n- Reviewed by: @ChrisRackauckas\n- Reference: https://github.com/JuliaDiffEq/MATLABDiffEq.jl/issues/13#issuecomment-557806048\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf25a08e44f9a5b47f2c0e7b345c6c990e793ee25b84e30fb834cb5d88f6e5eb1ab3b1f81d1a71da29674bfc221795cee960307dbad315eab462cd35ca7a12912b67446ed583fd0ac1c9f6874458973dd153530eebaca9957b641a49ce38c18920526c9bbfe197f409ab0843702f073a85c641a4b8de76272ec21954d4ca242966 -->",
+  "package_name": "MATLABDiffEq",
+  "title": "New package: MATLABDiffEq v0.1.0"
+}

@@ -1,0 +1,164 @@
+{
+  "created_at": "2019-10-16T05:19:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-31T08:24:41Z",
+  "pr_number": 4420,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MjUyMDk4Mg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n- The following dependencies do not have a compat entry that has an upper bound: julia\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-16T05:21:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-542520982",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MjUyNTg5MA==",
+      "author": {
+        "login": "lstagner"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have added the upper limit for the julia dependency.",
+      "createdAt": "2019-10-16T05:38:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-542525890",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MjUyODkzMA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-16T05:47:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-542528930",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg1MzYxMA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Would `EquilibriumFitting` be a better/more descriptive name?",
+      "createdAt": "2019-10-28T09:02:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-546853610",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzA3NzM1Mw==",
+      "author": {
+        "login": "lstagner"
+      },
+      "authorAssociation": "NONE",
+      "body": "Considering this package does not do Equilibrium Fitting I think that would be a poor choice . EFIT is a separate code that I do not develop. The ultimate goal of this package is to be an interface for running EFIT but currently all it can do is read EFIT's output file which is useful by itself. \r\n\r\nSince this package is wrapping a seperate code I believe the package name is appropriate as per the [naming guidelines](https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1)\r\n```\r\n6. Packages that wrap external libraries or programs should be named after those libraries or programs.\r\n\r\nCPLEX.jl wraps the CPLEX library, which can be identified easily in a web search.\r\nMATLAB.jl provides an interface to call the MATLAB engine from within Julia.\r\n```",
+      "createdAt": "2019-10-28T18:11:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-547077353",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzU3NjE3NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "How about `EFITFiles` or `EFITfiles`?",
+      "createdAt": "2019-10-29T18:51:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-547576174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzU3ODEwNw==",
+      "author": {
+        "login": "lstagner"
+      },
+      "authorAssociation": "NONE",
+      "body": "The plan is to eventually be a interface to EFIT so I would like to keep the name as is.",
+      "createdAt": "2019-10-29T18:56:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-547578107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Nzk3ODQ5MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-10-30T15:56:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-547978490",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODAwMzQ5OQ==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-10-30T16:48:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-548003499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODI2MjI2MQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/JuliaFusion/EFIT.jl/releases/tag/v0.1.0) it is.\n<!-- e28d2a80-fbb7-11e9-9ec7-5b7484d3ca99 -->",
+      "createdAt": "2019-10-31T08:24:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4420#issuecomment-548262261",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: EFIT\n- Repository: https://github.com/JuliaFusion/EFIT.jl\n- Created by: @lstagner\n- Version: v0.1.0\n- Commit: d0de5cafd3c7a3fd08d9bcecfbb36c57160ae3f2\n- Reviewed by: @lstagner\n- Reference: https://github.com/JuliaFusion/EFIT.jl/commit/d0de5cafd3c7a3fd08d9bcecfbb36c57160ae3f2#commitcomment-35518981\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4715cf49bc0252282b3eb453933e5156ae8722340a51d4f2c2b5c06c867f650ca24c8856c9a7a243c1f0579ba2998a7b07408f3004e8a182b7f7945f115223457f88d0a728d130fe536cacc4124c7e78f46c32c56370b57b616a564ba75a1b1d59ced40b3b3646a6a06a75460428dc932bfbf4013de6a5a51d1b7bd9c331ac39c014618965a37469b82dc62463cb8132a579a62b1be31987ed77eaebda7f674ae8d42bd7dfe7bea102e40aa953d42c3d7 -->",
+  "package_name": "EFIT",
+  "title": "New package: EFIT v0.1.0"
+}

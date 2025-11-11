@@ -1,0 +1,156 @@
+{
+  "created_at": "2020-01-27T16:59:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-01-27T17:57:12Z",
+  "pr_number": 8518,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODg0OTMyNQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- I was not able to load the package (i.e. `import CombinatorialBandits` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-01-27T17:06:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578849325",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODg2Mjc1Mg==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The failure looks like it's only related to DataStructures.jl… ",
+      "createdAt": "2020-01-27T17:34:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578862752",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODg3MjU2NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you please open an issue on DataStructures.jl?",
+      "createdAt": "2020-01-27T17:57:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578872564",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODg3MjY2OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/dourouc05/CombinatorialBandits.jl/releases/tag/v0.1.0) it is.\n<!-- 724a6280-412e-11ea-97f7-b3127463fceb -->",
+      "createdAt": "2020-01-27T17:57:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578872668",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODkwNjEwMw==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge I created an issue on their repo: https://github.com/JuliaCollections/DataStructures.jl/issues/569",
+      "createdAt": "2020-01-27T19:14:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578906103",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODk0MjI3NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It turns out this was an error - I should not have merged this. Thanks to @oxinabox for his help.",
+      "createdAt": "2020-01-27T20:40:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578942274",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODk1MzM1MA==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge so, how shall I proceed to have the package registered? Shall I untag v0.1.0 and retry `@JuliaRegistrator`? ",
+      "createdAt": "2020-01-27T21:08:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578953350",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODk2MTY2Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Correct.",
+      "createdAt": "2020-01-27T21:28:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578961666",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODk2NDU5OQ==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm resubmitting something :)! \r\n\r\nhttps://github.com/JuliaRegistries/General/pull/8538",
+      "createdAt": "2020-01-27T21:35:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8518#issuecomment-578964599",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: CombinatorialBandits\n- Repository: https://github.com/dourouc05/CombinatorialBandits.jl\n- Created by: @dourouc05\n- Version: v0.1.0\n- Commit: 0927352b3afd782e6573c4491a678051db9eea37\n- Reviewed by: @dourouc05\n- Reference: https://github.com/dourouc05/CombinatorialBandits.jl/commit/0927352b3afd782e6573c4491a678051db9eea37#commitcomment-36984673\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae49ae1ef6318239845bc9a627f21c420b5e9b41e7a013916989b18c2e917ee2cb8923840c600e6aa229f6bacc8d4fe436c929aa98a46afc52c45b5029bf381fff3c2ebca793d5ef8913bce1df6444282986f2e180ef292f923d1a7c935dca3918ed31572b3db87b25ee378aa7d8317f717c3dee59bc3c7b0bb547fa8505abbb1abce92eed1b83e91be44303a0de26fd98d69f5f23e4629827ef01ce9e78e0409371ac27b3896c5b7fef38ec0a22232631554f8e10f9b77558cd8bea2a410aa3b5b -->",
+  "package_name": "CombinatorialBandits",
+  "title": "New package: CombinatorialBandits v0.1.0"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2020-04-17T15:59:38Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-04-20T03:45:49Z",
+  "pr_number": 13176,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNTMyODU1Mg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Version number is not 0.0.1, 0.1.0, 1.0.0, or X.0.0\n- The following dependencies do not have a compat entry that has an upper bound: NNlib, PaddedViews, ProgressMeter, julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-04-17T16:02:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13176#issuecomment-615328552",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNTMzNTcwMg==",
+      "author": {
+        "login": "MohHizzani"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nI don't want to change the name of the package (NumNN) it stands for Numerical systems Neural Network\r\n\r\nThis is the version number ready to be used, should I change jump into 1.0.0???\r\n\r\nI add the compathelper Action workflow but it's scheduled to work at midnight\r\n\r\n",
+      "createdAt": "2020-04-17T16:15:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13176#issuecomment-615335702",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: NumNN\n- Repository: https://github.com/MohHizzani/NumNN.jl\n- Created by: @MohHizzani\n- Version: v0.5.2\n- Commit: c87117f36de4a2d997fe0299a6637c91ae8a11c8\n- Reviewed by: @MohHizzani\n- Reference: https://github.com/MohHizzani/NumNN.jl/commit/c87117f36de4a2d997fe0299a6637c91ae8a11c8#commitcomment-38564890\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4c077344dbbc9e3a3fb4a94269154fc1e384de431195e0bf197026a18665c100e98d11f3bd5a8080c81061d339f4348128e5bc7cedb94442a79b195e889c689e85df97eb10b9ada1c74516da953dcc8e54f9a72f46785522607b9bcccf72668f24cdbbdc79f3ef24df8c750a360d8eaca22e35011a2a4eaccf2c515798b8626575f1168373fc0343db43e546a55a24c3f4b14c5886d1e595db0d17542c5cdbac3958f4165df65572408f4f874fb0e55ab -->",
+  "package_name": "NumNN",
+  "title": "New package: NumNN v0.5.2"
+}

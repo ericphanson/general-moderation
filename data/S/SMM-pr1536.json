@@ -1,0 +1,156 @@
+{
+  "created_at": "2019-06-24T12:57:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-06-27T09:54:06Z",
+  "pr_number": 1536,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTA3OTU0Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please add (at least)\r\n```\r\n[compat]\r\njulia = \"1\"\r\n```\r\nto your project file and retrigger the bot.",
+      "createdAt": "2019-06-24T16:18:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505079543",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTQyODA1Ng==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just to make sure, did you intend to disallow Julia 1.0?",
+      "createdAt": "2019-06-25T12:45:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505428056",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTQ1NTE5Ng==",
+      "author": {
+        "login": "floswald"
+      },
+      "authorAssociation": "NONE",
+      "body": "i have been using 1.1 so that's why i set it there. travis runs on 1.0. so i guess it would be better to use 1.0. sorry about that, i'll change again!",
+      "createdAt": "2019-06-25T13:53:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505455196",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTUwODg3MA==",
+      "author": {
+        "login": "floswald"
+      },
+      "authorAssociation": "NONE",
+      "body": "travis died on the previous build no idea why. restarted now.",
+      "createdAt": "2019-06-25T15:57:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505508870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTk0NzEyNw==",
+      "author": {
+        "login": "floswald"
+      },
+      "authorAssociation": "NONE",
+      "body": "phew... i had removed a `__precompile__(false)` without knowing too much about it. all hell broke loose! i think we're ready to go now.",
+      "createdAt": "2019-06-26T16:22:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505947127",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTk0OTMxNg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> phew... i had removed a __precompile__(false) without knowing too much about it. all hell broke loose! i think we're ready to go now.\r\n\r\nWhat happened? Unless you do weird things it should be fine to precompile. maybe you just need to initialize these https://github.com/floswald/SMM.jl/blob/86923918ebc55103a51ce446427130079375bae2/src/SMM.jl#L79-L80 in the `__init__()`?\r\n\r\n(Btw, its a bit weird that your package swaps out the users logger.)",
+      "createdAt": "2019-06-26T16:28:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505949316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTk1MzgxNQ==",
+      "author": {
+        "login": "floswald"
+      },
+      "authorAssociation": "NONE",
+      "body": "Oh. That’s a couple of things I don’t fully understand I have to admit.\nSorry for all that. I noticed the logger actually doesn’t even work for me\n(like setting debut level didn’t change anything). How to do this\nproperly?  Should I not specify a logger at all?\n\nOn Wed 26 Jun 2019 at 18:28, Fredrik Ekre <notifications@github.com> wrote:\n\n> phew... i had removed a *precompile*(false) without knowing too much\n> about it. all hell broke loose! i think we're ready to go now.\n>\n> What happened? Unless you do weird things it should be fine to precompile.\n> maybe you just need to initialize these\n> https://github.com/floswald/SMM.jl/blob/86923918ebc55103a51ce446427130079375bae2/src/SMM.jl#L79-L80\n> in the __init__()?\n>\n> (Btw, its a bit weird that your package swaps out the users logger.)\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/1536?email_source=notifications&email_token=AAHZM5Q3T6TML5A65SVMQWTP4OKMPA5CNFSM4H26LNT2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGODYUCZBA#issuecomment-505949316>,\n> or mute the thread\n> <https://github.com/notifications/unsubscribe-auth/AAHZM5TYXJPICGMIGU77J5LP4OKMPANCNFSM4H26LNTQ>\n> .\n>\n",
+      "createdAt": "2019-06-26T16:41:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505953815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTk2MzE3OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Should I not specify a logger at all?\r\n\r\nIMO a package should not set the global logger, for example, if in my code I have\r\n```\r\nmy_logger = ...\r\nusing SMM\r\n???\r\n```\r\nloading your package changes my own set logger. So I think setting loggers is only for top level applications, not for packages. See https://github.com/JuliaLang/julia/pull/28229 for some more discussion.\r\n\r\n",
+      "createdAt": "2019-06-26T17:07:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505963178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNTk3NDUyMA==",
+      "author": {
+        "login": "floswald"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see that makes sense. Only have experience with publishing R packages\nwhere logging is left totally to packages. But that was bad extrapolation,\nsorry. Let me remove that and submit again!\n\nOn Wed 26 Jun 2019 at 19:07, Fredrik Ekre <notifications@github.com> wrote:\n\n> Should I not specify a logger at all?\n>\n> IMO a package should not set the global logger, for example, if in my code\n> I have\n>\n> my_logger = ...\n> using SMM\n> ???\n>\n> loading your package changes my own set logger. So I think setting loggers\n> is only for top level applications, not for packages. See\n> JuliaLang/julia#28229 <https://github.com/JuliaLang/julia/pull/28229> for\n> some more discussion.\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/1536?email_source=notifications&email_token=AAHZM5QGAE6CECAZYSDFG6LP4OO57A5CNFSM4H26LNT2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGODYUGFKQ#issuecomment-505963178>,\n> or mute the thread\n> <https://github.com/notifications/unsubscribe-auth/AAHZM5SORQC3366IQ7ZYTW3P4OO57ANCNFSM4H26LNTQ>\n> .\n>\n",
+      "createdAt": "2019-06-26T17:38:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1536#issuecomment-505974520",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: SMM\n- Repository: https://github.com/floswald/SMM.jl\n- Created by: @floswald\n- Version: v1.4.0\n- Commit: 5691e0682b2b1b0c8be34f640d026045b30e781c\n- Reviewed by: @floswald\n- Reference: https://github.com/floswald/SMM.jl/commit/5691e0682b2b1b0c8be34f640d026045b30e781c#commitcomment-34101243\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae46fd6f0ee7c0a1adbf52d41910f39c4af683c7b03d82f923efb5480f5252cabce660ca52cba2a2e8877c878dd8d52b9d98b600295c8ba789c7cabc1a4dc8d9d79d404201b22aabced1b2e3f36e6ccdcdc47cb8852f186e7c611368899ac669f37a86ef3201f3e567cb3daa1670586a3ae4db1c6b9b773db4565caa46a27d6ec9b1c7f9479a8e0101c4a5e51df91c529cd9b155af849fe1a4a917f03aaea133a3344007282ea73a2cee47595f10dbde970 -->",
+  "package_name": "SMM",
+  "title": "New package: SMM v1.4.0"
+}

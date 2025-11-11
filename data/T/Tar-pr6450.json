@@ -1,0 +1,122 @@
+{
+  "created_at": "2019-12-09T16:08:44Z",
+  "review_comments": [
+    {
+      "id": 329036627,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzI5MDM2NjI3",
+      "user": {
+        "login": "DilumAluthge",
+        "id": 5619885,
+        "node_id": "MDQ6VXNlcjU2MTk4ODU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5619885?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DilumAluthge",
+        "html_url": "https://github.com/DilumAluthge",
+        "followers_url": "https://api.github.com/users/DilumAluthge/followers",
+        "following_url": "https://api.github.com/users/DilumAluthge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DilumAluthge/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DilumAluthge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DilumAluthge/subscriptions",
+        "organizations_url": "https://api.github.com/users/DilumAluthge/orgs",
+        "repos_url": "https://api.github.com/users/DilumAluthge/repos",
+        "events_url": "https://api.github.com/users/DilumAluthge/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DilumAluthge/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/6450#pullrequestreview-329036627",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/6450",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/6450#pullrequestreview-329036627"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/6450"
+        }
+      },
+      "submitted_at": "2019-12-09T16:12:11Z",
+      "commit_id": "8f2c2f1aa4af0cc45c031141e4ddf825e2edd2f5"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-12-09T16:22:33Z",
+  "pr_number": 6450,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MzMxMDU5Nw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Decided to go with the conservative option and register Tar.jl now with a 0.1 version number. The intention is that it can include broader functionality in the future, which may entail changing a few defaults, hence the pre-1.0 version number to give some room to grow.",
+      "createdAt": "2019-12-09T16:10:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6450#issuecomment-563310597",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MzMxMDczOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name is not at least five characters long\n\nNote: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versionsyour package is compatible with. See [https://julialang.github.io/Pkg.jl/v1/compatibility/.] for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-09T16:10:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6450#issuecomment-563310739",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MzMxNTYzMQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Given that the previous PR for Tar was open for 4 days and this only changes the initial version number, it should be acceptable to merge this some time today.",
+      "createdAt": "2019-12-09T16:21:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6450#issuecomment-563315631",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MzMxNjI3Nw==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/JuliaLang/Tar.jl/releases/tag/v0.1.0) it is.\n<!-- 1b1a0100-1aa0-11ea-8273-263ef86eb4e3 -->",
+      "createdAt": "2019-12-09T16:22:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6450#issuecomment-563316277",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Tar\n- Repository: https://github.com/JuliaLang/Tar.jl\n- Created by: @StefanKarpinski\n- Version: v0.1.0\n- Commit: ec03551cccdacbfde6b08fdd03f75a7923076d29\n- Reviewed by: @StefanKarpinski\n- Reference: https://github.com/JuliaLang/Tar.jl/commit/ec03551cccdacbfde6b08fdd03f75a7923076d29#commitcomment-36338873\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4e2822fb38cfc762b0b486106a450ae7fee8c9e66e2856d0c734e03ee9a32f2f2c53fd3ce16d87a0240deeee3028712dad9149b11c700c44cf62b1eb1b5f7fe2910eaabe0c64dd0c7abe30f1eb0ceeed18db1444f242ea170739d8c0966516cdf3ea2e6f3a244dca0eafed9944d303cdf54539bb891ad66e9e2e6e483a5fba4c6a190a2486f9abc77989e0ee16d44043c7582ca778acde5cb5f6f4fb26ccc43c349aa85817a377bdd147958abc6fb6657 -->",
+  "package_name": "Tar",
+  "title": "New package: Tar v0.1.0"
+}

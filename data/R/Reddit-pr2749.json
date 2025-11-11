@@ -1,0 +1,74 @@
+{
+  "created_at": "2019-08-17T00:53:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-08-20T21:33:54Z",
+  "pr_number": 2749,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjU3MTAyMg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Needs a `[compat]` section in `Project.toml` with at least an entry for `julia` itself, e.g.:\r\n```toml\r\n[compat]\r\njulia = \"1\"\r\n```\r\nwould mean that the package is compatible with Julia versions `[1.0.0, 2.0.0)`.",
+      "createdAt": "2019-08-19T13:19:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2749#issuecomment-522571022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjY2NDExNg==",
+      "author": {
+        "login": "RossBerry"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've added a [compat] section to the Project.toml.  Do I just need to comment with `@JuliaRegistrator register` in my latest commit?",
+      "createdAt": "2019-08-19T16:57:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2749#issuecomment-522664116",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjcwNzMwMA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, that will update this PR with the new commit.",
+      "createdAt": "2019-08-19T18:50:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2749#issuecomment-522707300",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjgwMzY0MA==",
+      "author": {
+        "login": "RossBerry"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have commented on a commit with `@JuliaRegistrator register` but it doesn't seem to be triggering the Registrator.  I initially triggered this PR via the web interface.  Is there something else besides commenting on a commit that needs to be done to trigger the Registrator to update the PR?\r\n\r\nEdit: I hadn't actually installed the Registrator yet.",
+      "createdAt": "2019-08-20T00:26:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2749#issuecomment-522803640",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: Reddit\n- Repository: https://github.com/kennethberry/Reddit.jl\n- Created by: @kennethberry\n- Version: v0.1.0\n- Commit: 52967c810f1678043c4c09302a2af4c416b984bc\n- Reviewed by: @kennethberry\n- Reference: https://github.com/kennethberry/Reddit.jl/commit/52967c810f1678043c4c09302a2af4c416b984bc#commitcomment-34751230\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae45cd482ca2816c075989346a99e18a760c05389880b00b11c181de1cdbb7965aecc30f6367a9ffcbd0b1917a6f91c555564caba4572053258fffc89c9949cdc4a09128811e2f06d2b74f2bda62deb8eca13e02075bc6024395c83cfbfd21983308284441ac2e5bf925634e77845e5fbbc9722956d357095239c71fd2fd8930bf3e0ed582d276215d1b2a071480f7166b10c39f8d1ff9cb756d6031d75c91f10aac97659b8a6b34089678142f5f28a9aa1 -->",
+  "package_name": "Reddit",
+  "title": "New package: Reddit v0.1.0"
+}

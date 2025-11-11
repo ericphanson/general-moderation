@@ -1,0 +1,81 @@
+{
+  "created_at": "2019-10-21T05:27:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-28T09:34:29Z",
+  "pr_number": 4566,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NDM1NDg4Mg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- The following dependencies do not have a compat entry that has an upper bound: EzXML, MusicManipulations, MIDI\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-21T05:30:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4566#issuecomment-544354882",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg2NTI1OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please fix the compatibility bounds for the next release such that it will be automatically merged.",
+      "createdAt": "2019-10-28T09:34:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/4566#issuecomment-546865258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg2NTI2Mg==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/JuliaMusic/MusicXML.jl/releases/tag/v0.1.0) it is.\n<!-- 238e0080-f966-11e9-87f4-9c5a563d2936 -->",
+      "createdAt": "2019-10-28T09:34:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4566#issuecomment-546865262",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg4MTgyMA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a changelog but failed, you may want to edit the release yourself.",
+      "createdAt": "2019-10-28T10:19:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4566#issuecomment-546881820",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: MusicXML\n- Repository: https://github.com/aminya/MusicXML.jl\n- Created by: @aminya\n- Version: v0.1.0\n- Commit: b1f01d6fd3343ae3a7125d376701e15ee71ebb9b\n- Reviewed by: @aminya\n- Reference: https://github.com/aminya/MusicXML.jl/commit/b1f01d6fd3343ae3a7125d376701e15ee71ebb9b#commitcomment-35584218\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae498c9e94c9fea916ee5dd926d07276707164e363728e6848799a9767e8043feffbf04ce57f89526e44d24d79040d88e103f12249e3f0e3bef6f6ba567fea02479b5b02aa1f7e0ae12da9501b68d1384c3056557c8bcc8c36ef7b0fe399ea7eefa98947ff189c866d4f63f6c779056648f063c12aa07f16014ce2aeac69be937a767ebd21e7e8e42adeb45010b7aa36b8a31231de40a37cdc79677b01511a3bc5a26d3e35617e87c93e9c7251419072f8e -->",
+  "package_name": "MusicXML",
+  "title": "New package: MusicXML v0.1.0"
+}

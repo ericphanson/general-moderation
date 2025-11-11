@@ -1,0 +1,111 @@
+{
+  "created_at": "2020-01-25T06:16:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-01-27T23:16:26Z",
+  "pr_number": 8415,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODM4MTQzMA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- I was not able to install the package (i.e. `Pkg.add(\"QuantumLab\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import QuantumLab` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-01-25T06:20:50Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-578381430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODM4NTcwMA==",
+      "author": {
+        "login": "vonDonnerstein"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] \r\n\r\nLooking at the automerge output, the issue seems to be writing permissions (while writing to the log file when building the binary dependencies). Comparing to other packages like GSL.jl I can't figure out where my file permissions differ. \r\n\r\nAnd on travis-CI the build does succeed (https://travis-ci.org/vonDonnerstein/QuantumLab.jl/jobs/641652598).\r\n\r\n@DilumAluthge Anything I should be doing differently? \r\n\r\nThank you!",
+      "createdAt": "2020-01-25T07:48:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-578385700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODQ5MjEyNQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nCertainly a puzzler. Can you open an issue on the Pkg.jl repository?\r\n\r\nIf you can ping me after this PR has been open for three days (the new package waiting period), I'll merge it manually.",
+      "createdAt": "2020-01-26T11:18:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-578492125",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODk3OTgwOQ==",
+      "author": {
+        "login": "vonDonnerstein"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nissue to Pkg.jl created: https://github.com/JuliaLang/Pkg.jl/issues/1638",
+      "createdAt": "2020-01-27T22:12:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-578979809",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3OTAwMTk0MA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v1.0.0`, [here](https://github.com/vonDonnerstein/QuantumLab.jl/releases/tag/v1.0.0) it is.\n<!-- 0af6d780-415b-11ea-8302-2b3008450d15 -->",
+      "createdAt": "2020-01-27T23:16:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-579001940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3OTA0MDQ3MQ==",
+      "author": {
+        "login": "vonDonnerstein"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for merging manually! That allowed me to figure out what was going on now:\r\n\r\nI hadn't .gitignore'd \"deps/build.log\" so that file had existed in the repository. Apparently, Pkg.add makes all package files read-only, so regardless of that files permissions Pkg.build wasn't allowed to write to it.\r\n\r\nSolution: One has to remove all output files from the build process including the log files! That way their permissions don't get reset and they can be written to.",
+      "createdAt": "2020-01-28T01:46:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/8415#issuecomment-579040471",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: QuantumLab\n- Repository: https://github.com/vonDonnerstein/QuantumLab.jl\n- Created by: @vonDonnerstein\n- Version: v1.0.0\n- Commit: 49db797c1b6f5f39609b5c6034478f6e1788f88a\n- Reviewed by: @vonDonnerstein\n- Reference: https://github.com/vonDonnerstein/QuantumLab.jl/commit/49db797c1b6f5f39609b5c6034478f6e1788f88a#commitcomment-36960769\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> This is a rerelease of the package available previously in Pkg2 (prior to julia v1).\n<!-- END RELEASE NOTES -->\n\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae428ac3c2f649430628ed3782fcab9da52dc7c6dc3139e15670fee7ce65ee54f9c2ee2a4f74a92adafab7432220625f263ba04d442b3cfb362215d8807a0629cc3140e8549a47c9c4546fd353d5ad57ea72f6bcca86dfe0613adb56d8606986b44534d3bac1da78706cd5079739f03de541fac2c0460aa155eb4df37ca576a745e3a6b8be398c08ccdde6943c522704ae7700a5b350c6d716a27aa247a18d8c45904c540be8742c1119cd4f7212db22f7a363c22def84a24fb7f87224540c82623 -->",
+  "package_name": "QuantumLab",
+  "title": "New package: QuantumLab v1.0.0"
+}

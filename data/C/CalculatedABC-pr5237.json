@@ -1,0 +1,104 @@
+{
+  "created_at": "2019-11-09T19:59:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-11-18T12:55:03Z",
+  "pr_number": 5237,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjEzMjM4OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- The following dependencies do not have a compat entry that has an upper bound: Interpolations, Plots, julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-09T20:01:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-552132388",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjEzMjkyMg==",
+      "author": {
+        "login": "ckafi"
+      },
+      "authorAssociation": "NONE",
+      "body": "I added upper compat bounds for all deps in the current master branch.\r\nI was not aware that the package name should end with a lowercase. How severe is this? Should I rename the package?",
+      "createdAt": "2019-11-09T20:08:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-552132922",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjY0ODIzOQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I added upper compat bounds for all deps in the current master branch.\r\n\r\nCan you retrigger Registrator? That will update this PR.\r\n\r\n>  I was not aware that the package name should end with a lowercase. How severe is this? Should I rename the package?\r\n\r\nNo, its just a heuristic, you can keep the name if you want. However, see https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1, which might suggest the name `ABCanalysis` (or `ABCAnalysis`) since this is a port of an existing software.\r\n\r\nIt is up to you, keep the name if you want!",
+      "createdAt": "2019-11-11T22:35:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-552648239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjgyMDIzOA==",
+      "author": {
+        "login": "ckafi"
+      },
+      "authorAssociation": "NONE",
+      "body": "> No, its just a heuristic, you can keep the name if you want. However, see https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1, which might suggest the name ABCanalysis (or ABCAnalysis) since this is a port of an existing software.\r\n\r\nThat won't work, because the module contains a `ABCanalysis` struct.",
+      "createdAt": "2019-11-12T09:56:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-552820238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjgyMDQ4MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-12T09:56:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-552820481",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NTAwMTM2MA==",
+      "author": {
+        "login": "ckafi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Any ETA of when this will be merged?",
+      "createdAt": "2019-11-18T12:49:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5237#issuecomment-555001360",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: CalculatedABC\n- Repository: https://github.com/ckafi/CalculatedABC.jl\n- Created by: @ckafi\n- Version: v0.1.0\n- Commit: 83fdd83fc9c79fdda6cf65dc1405f012889bee16\n- Git reference: master",
+  "package_name": "CalculatedABC",
+  "title": "New package: CalculatedABC v0.1.0"
+}

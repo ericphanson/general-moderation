@@ -1,0 +1,134 @@
+{
+  "created_at": "2019-10-26T13:47:22Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-29T16:51:11Z",
+  "pr_number": 4752,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjYwNDIzNw==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-26T13:49:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-546604237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg3NTM0NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you retrigger to fix the conflicts?",
+      "createdAt": "2019-10-28T10:02:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-546875345",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njk2NjEyMA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-28T14:15:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-546966120",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njk2Njk4MA==",
+      "author": {
+        "login": "natgeo-wong"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Retrigger how?  This is an update for https://github.com/JuliaRegistries/General/pull/4727\r\n\r\nSorry I'm still pretty new to the complex functionalities of GitHub.",
+      "createdAt": "2019-10-28T14:17:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-546966980",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzAxNjU4OQ==",
+      "author": {
+        "login": "rickedanielson"
+      },
+      "authorAssociation": "NONE",
+      "body": "(I had the same question earlier today.)  Try navigating to your latest github commit and enter \"@JuliaRegistrator register\" to see what happens ([this might be the correct result](https://github.com/JuliaAtmosOcean/ICOADSDict.jl/commit/6f1de0fbdb6ac201e93b95a088094e83e4033700)).  First, if you need to delete or correct tags (both locally and remotely), check out [this link](https://stackoverflow.com/questions/5480258/how-to-delete-a-remote-tag), as in\r\n git tag -l ; git fetch\r\n git push origin :refs/tags/v0.1.1\r\n git tag -d v0.1.1\r\nfollowed by, say, removal of the 0.1.0 tag as well and retagging the most recent commit using 0.1.0 instead.",
+      "createdAt": "2019-10-28T16:00:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-547016589",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzUxODI5NQ==",
+      "author": {
+        "login": "natgeo-wong"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Mmmmm as in, I'd like to bump the ver up to v0.1.1 right now.  Is there a way to do that?",
+      "createdAt": "2019-10-29T16:43:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-547518295",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzUyMTQzNg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-10-29T16:50:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-547521436",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzUyMTk2NA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.1`, [here](https://github.com/natgeo-wong/ClimateEasy.jl/releases/tag/v0.1.1) it is.\n<!-- 4f93a980-fa6c-11e9-9932-c2c4f251d43b -->",
+      "createdAt": "2019-10-29T16:51:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4752#issuecomment-547521964",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: ClimateEasy\n- Repository: https://github.com/natgeo-wong/ClimateEasy.jl\n- Created by: @natgeo-wong\n- Version: v0.1.1\n- Commit: 1d60210b8653c78d1d3dbd490c8d9012d670cb11\n- Reviewed by: @natgeo-wong\n- Reference: https://github.com/natgeo-wong/ClimateEasy.jl/commit/1d60210b8653c78d1d3dbd490c8d9012d670cb11#commitcomment-35692223\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4e921d374f0293dd89af0a674dc946f3d6c59cbb6b0cf07c92582715949d513e88343f166c7d70d949557edb1f2dc15eb63bfc3caccfaeb0f3865c43a229b64ccb6520d2f91c8c41cb01fce7520d975c2e814614ee42e7b2f5b0dc053ce64f46d204b09bbdf03353d2219d83db3c07351030545a151481c94843859aea863148c8cbfd7bf6a6aac899b364f9ab25f2ea586a6e3b858d3ebde0625e1b11ced2cddacbb91b8fadde59e0afafb9fa290f1e2 -->",
+  "package_name": "ClimateEasy",
+  "title": "New package: ClimateEasy v0.1.1"
+}

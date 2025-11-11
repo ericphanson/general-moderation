@@ -1,0 +1,81 @@
+{
+  "created_at": "2019-04-21T10:57:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-04-22T15:26:50Z",
+  "pr_number": 160,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NTM1NDY3NQ==",
+      "author": {
+        "login": "tlienart"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If someone is wondering what this is about, it's a piece of [JuDoc.jl](https://github.com/tlienart/JuDoc.jl), a static site generator (and the main project). I wanted to detach this as it's just the template files and it helps to separate the development of those and the core package which looks after parsing and rendering. \r\n\r\nI wanted to register it to avoid problems with un-registered dependency, Documenter.jl and Travis (the somewhat dreaded `ERROR: Unsatisfiable requirements detected for package JuDocTemplates`.).",
+      "createdAt": "2019-04-22T07:49:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/160#issuecomment-485354675",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NTQ0OTQ0Nw==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nPOST https://api.github.com/repos/tlienart/JuDocTemplates.jl/releases: 422 Validation Failed [{Resource:Release Field:tag_name Code:already_exists Message:}]\n```\ncc: @christopher-dG",
+      "createdAt": "2019-04-22T15:26:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/160#issuecomment-485449447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NTQ1MDk5Ng==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@tlienart no need to manually create tags :slightly_smiling_face: ",
+      "createdAt": "2019-04-22T15:32:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/160#issuecomment-485450996",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NTU5Mzg0Mg==",
+      "author": {
+        "login": "tlienart"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@christopher-dG yes thanks, I had tagged a version before reading about installing TagBot 😕 ",
+      "createdAt": "2019-04-23T00:03:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/160#issuecomment-485593842",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "Registering: JuDocTemplates\nRepository: https://github.com/tlienart/JuDocTemplates.jl\nVersion: v0.1.0\nCommit: 9f6c23aed55c1125514e96100beee7774134d711\nProposed by: @tlienart\nReviewed by: @tlienart\nReference: [https://github.com/tlienart/JuDocTemplates.jl/issues/4](https://github.com/tlienart/JuDocTemplates.jl/issues/4)\n\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf4391946e6748c71547b7097c013f08354fa393ccca860111b24b1b90896c7698c4523798d7f0ee06f0778a1945eda5cc6b4cb3b524d4826947128a5092a4e3319ae8cc50e0068f6b2e051da34785bb3102104b4420668f2ab1ffda629cfa1168d62c36a5c1f6d283d23d5d9e58497bb119f61fb38feced6fe35db67b0153427e -->\n",
+  "package_name": "JuDocTemplates",
+  "title": "Register JuDocTemplates: 0.1.0"
+}

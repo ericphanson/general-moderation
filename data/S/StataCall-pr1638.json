@@ -1,0 +1,282 @@
+{
+  "created_at": "2019-06-28T20:54:58Z",
+  "review_comments": [
+    {
+      "id": 257530794,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU3NTMwNzk0",
+      "user": {
+        "login": "StefanKarpinski",
+        "id": 153596,
+        "node_id": "MDQ6VXNlcjE1MzU5Ng==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153596?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/StefanKarpinski",
+        "html_url": "https://github.com/StefanKarpinski",
+        "followers_url": "https://api.github.com/users/StefanKarpinski/followers",
+        "following_url": "https://api.github.com/users/StefanKarpinski/following{/other_user}",
+        "gists_url": "https://api.github.com/users/StefanKarpinski/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/StefanKarpinski/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/StefanKarpinski/subscriptions",
+        "organizations_url": "https://api.github.com/users/StefanKarpinski/orgs",
+        "repos_url": "https://api.github.com/users/StefanKarpinski/repos",
+        "events_url": "https://api.github.com/users/StefanKarpinski/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/StefanKarpinski/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/1638#pullrequestreview-257530794",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/1638",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/1638#pullrequestreview-257530794"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/1638"
+        }
+      },
+      "submitted_at": "2019-07-03T14:33:16Z",
+      "commit_id": "f57d2e07a8c2420c4e2353c7dc95e262801dc9af"
+    },
+    {
+      "id": 258512445,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU4NTEyNDQ1",
+      "user": {
+        "login": "StefanKarpinski",
+        "id": 153596,
+        "node_id": "MDQ6VXNlcjE1MzU5Ng==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153596?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/StefanKarpinski",
+        "html_url": "https://github.com/StefanKarpinski",
+        "followers_url": "https://api.github.com/users/StefanKarpinski/followers",
+        "following_url": "https://api.github.com/users/StefanKarpinski/following{/other_user}",
+        "gists_url": "https://api.github.com/users/StefanKarpinski/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/StefanKarpinski/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/StefanKarpinski/subscriptions",
+        "organizations_url": "https://api.github.com/users/StefanKarpinski/orgs",
+        "repos_url": "https://api.github.com/users/StefanKarpinski/repos",
+        "events_url": "https://api.github.com/users/StefanKarpinski/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/StefanKarpinski/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/1638#pullrequestreview-258512445",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/1638",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/1638#pullrequestreview-258512445"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/1638"
+        }
+      },
+      "submitted_at": "2019-07-05T18:24:58Z",
+      "commit_id": "61c65713780353846c49aae6be9150d44fa24112"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-07-05T18:25:08Z",
+  "pr_number": 1638,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwNzM2NzYwNg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Needs compat at least for Julia itself.",
+      "createdAt": "2019-07-01T18:07:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-507367606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODAwMzM1NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Did you intend to exclude Julia 1.0? You are still running with that on CI and it looks like tests pass. Maybe you can update to\r\n```\r\n[compat]\r\njulia = \"1\"\r\n```\r\n?",
+      "createdAt": "2019-07-03T08:51:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508003354",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODY1OTAxOQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Bump @jmboehm",
+      "createdAt": "2019-07-05T07:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508659019",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzMjEwNg==",
+      "author": {
+        "login": "jmboehm"
+      },
+      "authorAssociation": "NONE",
+      "body": "Good idea, I've updated it. Strictly speaking, the CI tests are not doing much because Stata is proprietary software and so I can't test it via travis.",
+      "createdAt": "2019-07-05T18:17:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508832106",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzMzc0Nw==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nApp is installed for user but the repository is not enabled\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- 38384fe0-9f52-11e9-9539-94d791d8d9ac -->",
+      "createdAt": "2019-07-05T18:25:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508833747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzNDc3Ng==",
+      "author": {
+        "login": "jmboehm"
+      },
+      "authorAssociation": "NONE",
+      "body": "`TagBot tag`",
+      "createdAt": "2019-07-05T18:30:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508834776",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzNDc4NA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nA tag already exists, but it points at the wrong commit\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- fb2c9b50-9f52-11e9-83b6-cc333a7b45e8 -->",
+      "createdAt": "2019-07-05T18:30:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508834784",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzNTE1Nw==",
+      "author": {
+        "login": "jmboehm"
+      },
+      "authorAssociation": "NONE",
+      "body": "Not sure how to fix this...?",
+      "createdAt": "2019-07-05T18:32:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508835157",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzNTYyMw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Delete the existing tag and then retag pointing at the right commit.",
+      "createdAt": "2019-07-05T18:34:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508835623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzNzE5OA==",
+      "author": {
+        "login": "jmboehm"
+      },
+      "authorAssociation": "NONE",
+      "body": "`TagBot tag`",
+      "createdAt": "2019-07-05T18:43:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508837198",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODgzODIxMA==",
+      "author": {
+        "login": "jmboehm"
+      },
+      "authorAssociation": "NONE",
+      "body": "Apologies, I'm new to this. I deleted the v0.1.0 tag and release from the repo page, and then created it anew pointing it to the most recent commit. Is that what you meant?",
+      "createdAt": "2019-07-05T18:48:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508838210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwODg0MTIyMw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It should point at the commit that was registered here. If that's the latest, then 👍",
+      "createdAt": "2019-07-05T19:05:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/1638#issuecomment-508841223",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: StataCall\n- Repository: https://github.com/jmboehm/StataCall.jl\n- Created by: @jmboehm\n- Version: v0.1.0\n- Commit: dc7f6de199c6d970ae6bcddcf5b7f27a5e5457e3\n- Git reference: master",
+  "package_name": "StataCall",
+  "title": "New package: StataCall v0.1.0"
+}

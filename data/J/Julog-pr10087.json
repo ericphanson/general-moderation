@@ -1,0 +1,167 @@
+{
+  "created_at": "2020-02-25T19:52:37Z",
+  "review_comments": [
+    {
+      "id": 366857669,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzY2ODU3NjY5",
+      "user": {
+        "login": "DilumAluthge",
+        "id": 5619885,
+        "node_id": "MDQ6VXNlcjU2MTk4ODU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5619885?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DilumAluthge",
+        "html_url": "https://github.com/DilumAluthge",
+        "followers_url": "https://api.github.com/users/DilumAluthge/followers",
+        "following_url": "https://api.github.com/users/DilumAluthge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DilumAluthge/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DilumAluthge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DilumAluthge/subscriptions",
+        "organizations_url": "https://api.github.com/users/DilumAluthge/orgs",
+        "repos_url": "https://api.github.com/users/DilumAluthge/repos",
+        "events_url": "https://api.github.com/users/DilumAluthge/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DilumAluthge/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "How do you feel about `LogicProgramming.jl`?\r\n\r\n`Logic.jl` is also available.",
+      "state": "CHANGES_REQUESTED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/10087#pullrequestreview-366857669",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/10087",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/10087#pullrequestreview-366857669"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/10087"
+        }
+      },
+      "submitted_at": "2020-03-01T13:00:44Z",
+      "commit_id": "d164e7c0902e58f3864ec76e361c0f2514ce9cb7"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-03-01T19:40:07Z",
+  "pr_number": 10087,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MTAzODczMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-02-25T19:55:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-591038732",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MjUxMTA0NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Usually Julia is not referenced in the name, maybe Prolog.jl would be a better name and fit better with the guidlines?",
+      "createdAt": "2020-02-28T13:24:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-592511044",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MjUxOTk4OA==",
+      "author": {
+        "login": "ztangent"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre Thanks for the suggestion! I thought about it myself, but I think Prolog.jl would imply this package supports all standard Prolog features and syntax, or is an interface to an external Prolog engine, neither of which this package provides.",
+      "createdAt": "2020-02-28T13:47:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-592519988",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA5NjY4NA==",
+      "author": {
+        "login": "ztangent"
+      },
+      "authorAssociation": "NONE",
+      "body": "> How do you feel about `LogicProgramming.jl`?\r\n> \r\n> `Logic.jl` is also available.\r\n\r\nI was considering `Logic.jl`, but decided that both of them would be too general. There are other logic programming languages like [`miniKanren`](https://github.com/latticetower/MuKanren.jl), and so I didn't want to take up namespace in the registry with something as specific as a Prolog-variant. \r\n\r\nI like `Julog` because it communicates that it is Prolog-based, while not exactly being Prolog. It follows the pattern of other Prolog variants, like Datalog, Problog, AnsProlog, etc. It also makes for a convenient macro name for parsing logical formulas. `@julog` is memorable and short, doesn't clash with `@prolog` (which is a macro this package provides to parse Prolog strings directly, though it doesn't handle full Prolog syntax), and is specific enough that it is unlikely to clash with other packages (whereas a macro like `@logic` seems much more likely to do that).",
+      "createdAt": "2020-03-01T13:22:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-593096684",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA5NzE3OQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ultimately it’s up to you I guess.",
+      "createdAt": "2020-03-01T13:26:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-593097179",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA5NzQwMw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would recommend a name without `Ju` or `Julia` in it, but it’s your package, so if you really want to keep this name, let me know, and I’ll merge this PR.",
+      "createdAt": "2020-03-01T13:28:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-593097403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzEzNTMyNA==",
+      "author": {
+        "login": "ztangent"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge Gotcha -- I appreciate the spirit of the guidelines, but all things considered, I'd like to stick with `Julog` as the name for the reasons I've mentioned. Thanks for understanding!",
+      "createdAt": "2020-03-01T19:29:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10087#issuecomment-593135324",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Julog\n- Repository: https://github.com/ztangent/Julog.jl\n- Created by: @ztangent\n- Version: v0.1.0\n- Commit: 57d6cdb499671a77b899e06b61818888d773ccd2\n- Reviewed by: @ztangent\n- Reference: https://github.com/ztangent/Julog.jl/commit/57d6cdb499671a77b899e06b61818888d773ccd2#commitcomment-37482726\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae477eaf03fc6773ac648b5a463ed2ba3ac7f41c4f19de32c0efae4f96bc012e916391690af8be1e365e22f1b2b4dd90f86bf6ca9061960bff02d34c4f83a2512c3d94e2d3e6b275e90403304296b09bb0b04eb9e2a6d9d14be9f064dc2935016bc959d9fd2ba2b0f806d1feb339a0f6863bf934b597d0fb1cc5eb6ca8ca69e8a060d812780e8a71717eac52f95c76c5a8c5896530a250317837b6b2eab2ad8d9a2e267132e6b15bce2cb8da425a7d2ee6d -->",
+  "package_name": "Julog",
+  "title": "New package: Julog v0.1.0"
+}

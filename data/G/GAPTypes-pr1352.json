@@ -1,0 +1,325 @@
+{
+  "created_at": "2019-06-13T07:33:14Z",
+  "review_comments": [
+    {
+      "id": 249631234,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjQ5NjMxMjM0",
+      "user": {
+        "login": "StefanKarpinski",
+        "id": 153596,
+        "node_id": "MDQ6VXNlcjE1MzU5Ng==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153596?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/StefanKarpinski",
+        "html_url": "https://github.com/StefanKarpinski",
+        "followers_url": "https://api.github.com/users/StefanKarpinski/followers",
+        "following_url": "https://api.github.com/users/StefanKarpinski/following{/other_user}",
+        "gists_url": "https://api.github.com/users/StefanKarpinski/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/StefanKarpinski/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/StefanKarpinski/subscriptions",
+        "organizations_url": "https://api.github.com/users/StefanKarpinski/orgs",
+        "repos_url": "https://api.github.com/users/StefanKarpinski/repos",
+        "events_url": "https://api.github.com/users/StefanKarpinski/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/StefanKarpinski/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/1352#pullrequestreview-249631234",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/1352",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/1352#pullrequestreview-249631234"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/1352"
+        }
+      },
+      "submitted_at": "2019-06-13T22:13:21Z",
+      "commit_id": "de8fa592a049b98876e2d2a1e28d990ab7c448ec"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-06-16T10:13:35Z",
+  "pr_number": 1352,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTU4NjY2MQ==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "Just to give some context here:\r\n\r\nThis is merely package providing technical support for GAP.jl. Since the types for GAP objects in GAP.jl are created at GAP startup (i.e., in the `init` function), we need this additional abstract type to make the GAP `MPtr` type a concrete instance of it. We can then use this type to define functions for GAP objects.",
+      "createdAt": "2019-06-13T07:35:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-501586661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTc0NDgxMA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't understand why it has to be in a separate package? ",
+      "createdAt": "2019-06-13T15:09:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-501744810",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTc2MTI1OA==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "We have two modes of using GAP with the Julia GC: From Julia and from GAP itself.\r\n\r\nWhen we load GAP from Julia, we load GAP after GAP.jl is loaded, so there `GapObj` could be defined in GAP.jl\r\n\r\nWhen we use Julia with GAP as a front-end, we load Julia immediately at startup. It is then possible to use GAP even without using any interfacing functionality, just with the Julia GC. When doing this, I would actually like to not load GAP.jl, but only a really small piece of code, which is encapsulated in this module, since more is not needed.",
+      "createdAt": "2019-06-13T15:49:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-501761258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTc2MzAxOQ==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "Additionally, with the current setup GAP.jl is using, it is not possible to load GAP.jl in GAP at the point where we need the `GapObj` type, as the type needs to be available before any memory in GAP is initialized (because it is needed for the GC), but GAP.jl also loads GAP code, which cannot be loaded at this time.",
+      "createdAt": "2019-06-13T15:53:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-501763019",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQzODk0NA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nApp is installed for user but the repository is not enabled\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- 67482cc0-901f-11e9-8247-8df4cc2051d5 -->",
+      "createdAt": "2019-06-16T10:13:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502438944",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0NzEzNg==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "Done in https://github.com/oscar-system/GAPTypes.jl/commit/9989a54f6acfdbd5f3c902375b6252b5658f0c86#commitcomment-33955085",
+      "createdAt": "2019-06-16T12:18:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502447136",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0ODEzMw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "TagBot tag",
+      "createdAt": "2019-06-16T12:32:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502448133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0ODEzNQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nApp is installed for user but the repository is not enabled\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- d7dcb100-9032-11e9-9b78-c17807ad758d -->",
+      "createdAt": "2019-06-16T12:32:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502448135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0ODQ0MA==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "TagBot tag\n\nFor future reference, it means to put that reply here. ",
+      "createdAt": "2019-06-16T12:37:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502448440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0ODQ0MQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nApp is installed for user but the repository is not enabled\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- 90e21be0-9033-11e9-90fd-c2dbcc1abf41 -->",
+      "createdAt": "2019-06-16T12:37:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502448441",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjQ0ODUxOA==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oops, didn't see that Fredrik already tried. @sebasguts you need to update your installation settings at https://github.com/apps/julia-tagbot.  ",
+      "createdAt": "2019-06-16T12:39:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502448518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjU0MTYwMA==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thx, you are right, I messed that up. It should all work now.",
+      "createdAt": "2019-06-17T05:40:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502541600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMDQyNw==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "TagBot tag",
+      "createdAt": "2019-06-17T14:14:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502700427",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMDQ4NQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nApp is installed for user but the repository is not enabled\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- 3cdda550-910a-11e9-9059-d263eb228f3f -->",
+      "createdAt": "2019-06-17T14:14:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502700485",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMDczOQ==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Still not enabled @sebasguts!",
+      "createdAt": "2019-06-17T14:15:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502700739",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMzYxMg==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "TagBot tag",
+      "createdAt": "2019-06-17T14:21:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502703612",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMzY1MQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v1.0.0`, [here](https://github.com/oscar-system/GAPTypes.jl/releases/tag/v1.0.0) it is.\n<!-- 417b2cd0-910b-11e9-8a5f-e9128069500d -->",
+      "createdAt": "2019-06-17T14:21:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502703651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMjcwMzc5OA==",
+      "author": {
+        "login": "sebasguts"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ah, looks better now. Sorry, and thank you for the patience",
+      "createdAt": "2019-06-17T14:22:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1352#issuecomment-502703798",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: GAPTypes\n- Repository: https://github.com/oscar-system/GAPTypes.jl\n- Created by: @sebasguts\n- Version: v1.0.0\n- Commit: 9989a54f6acfdbd5f3c902375b6252b5658f0c86\n- Reviewed by: @sebasguts\n- Reference: https://github.com/oscar-system/GAPTypes.jl/commit/9989a54f6acfdbd5f3c902375b6252b5658f0c86#commitcomment-33921896\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae42ce4f4ecf62a6beb5dddabbb22990da3f38aec450b0de11727651ba25605918ce75ada657d6091b95194eeb938a634b4e5fc9671f659913845dd24732f2c8180495e348939616297f33ca1b147bd89234f322e954801c7594a87337b412cf85a1585ea0063a61094b40ab33d0dd362ffca411035ff74e037c25ce8ccdd4174d60a78fe0e9e3c49ef9ea158ca55f18650321c930d8c983f75f65ca758e3887908ccaf569954f00bd3bde80b6942ed5a92 -->",
+  "package_name": "GAPTypes",
+  "title": "New package: GAPTypes v1.0.0"
+}

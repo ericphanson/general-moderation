@@ -1,0 +1,100 @@
+{
+  "created_at": "2019-12-29T16:48:23Z",
+  "review_comments": [
+    {
+      "id": 336968693,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzM2OTY4Njkz",
+      "user": {
+        "login": "DilumAluthge",
+        "id": 5619885,
+        "node_id": "MDQ6VXNlcjU2MTk4ODU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5619885?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DilumAluthge",
+        "html_url": "https://github.com/DilumAluthge",
+        "followers_url": "https://api.github.com/users/DilumAluthge/followers",
+        "following_url": "https://api.github.com/users/DilumAluthge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DilumAluthge/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DilumAluthge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DilumAluthge/subscriptions",
+        "organizations_url": "https://api.github.com/users/DilumAluthge/orgs",
+        "repos_url": "https://api.github.com/users/DilumAluthge/repos",
+        "events_url": "https://api.github.com/users/DilumAluthge/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DilumAluthge/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "The name seems fine to me.\r\n\r\n[noblock]",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/7289#pullrequestreview-336968693",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/7289",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/7289#pullrequestreview-336968693"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/7289"
+        }
+      },
+      "submitted_at": "2019-12-29T17:48:13Z",
+      "commit_id": "d073af9e2cb2be3d5f7db1f2f80abda19171b3fb"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-01-01T06:57:37Z",
+  "pr_number": 7289,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2OTUyMjQ5NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2019-12-29T16:51:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7289#issuecomment-569522494",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2OTUyNTI3NA==",
+      "author": {
+        "login": "chriselrod"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nRNG could be mistaken as an abbreviation for range, but I suspect most folks read it as Random Number Generator.\r\n\r\nIn case \"VectorizedRNG\" is not okay, I created a library called \"PermutedCongruentialGenerator\" that I can move relevant files over to (and then update all libraries depending on VectorizedRNG). That is the only type I've implemented so far, although I may implement others in the future.\r\n\r\nI could also do \"VectorizedRandomNumberGenerator\", but this name is rather long.",
+      "createdAt": "2019-12-29T17:25:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7289#issuecomment-569525274",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MDAyODU0OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/chriselrod/VectorizedRNG.jl/releases/tag/v0.1.0) it is.\n<!-- ff031d00-2c63-11ea-9581-de46a196cd9f -->",
+      "createdAt": "2020-01-01T06:57:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7289#issuecomment-570028548",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: VectorizedRNG\n- Repository: https://github.com/chriselrod/VectorizedRNG.jl\n- Created by: @chriselrod\n- Version: v0.1.0\n- Commit: a011fd2dc94072af64e2d352fda3bbaa8badf92d\n- Reviewed by: @chriselrod\n- Reference: https://github.com/chriselrod/VectorizedRNG.jl/commit/a011fd2dc94072af64e2d352fda3bbaa8badf92d#commitcomment-36605189\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae43f9c8aee0a66c141e88496bb2b234849759677810e2a2c6588a28941e7d511cb86766a8dce164433998f5e5c63ea7b43b4f50d0ac3921357e532091937ced8cec7c4f3c45d19a3e926125c6202d334343dac4e9dd21e48196a69b7f633c67c4ba9440c379162a6f3c8450e06437d62d91047b75057d30e994fbee5c4dee1d672709f7cb22579804435739a61b8880b4be048b00273cfb80cd6dcd97927bcd57b71e8c07fccc9db8352a278a97ea67be2 -->",
+  "package_name": "VectorizedRNG",
+  "title": "New package: VectorizedRNG v0.1.0"
+}

@@ -1,0 +1,149 @@
+{
+  "created_at": "2019-07-09T11:15:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-07-16T11:23:17Z",
+  "pr_number": 1908,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTc2MTYxMg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You should have some compat entries for your dependencies.",
+      "createdAt": "2019-07-09T18:47:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509761612",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTc3NjUyNg==",
+      "author": {
+        "login": "j-fu"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> You should have some compat entries for your dependencies.\r\n\r\nDone, but waiting for ExtendableSparse in order to fix this dependency.",
+      "createdAt": "2019-07-09T19:31:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509776526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTc4NTU4Mg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you just put the appropriate compat info in here, I'll make sure that this and https://github.com/JuliaRegistries/General/pull/1907 are merged at the same time.",
+      "createdAt": "2019-07-09T19:59:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509785582",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTc5ODEzMg==",
+      "author": {
+        "login": "j-fu"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> If you just put the appropriate compat info in here, I'll make sure that this and #1907 are merged at the same time.\r\n\r\nOk it's in the repo and I repeat it here.\r\n````\r\n[compat]\r\nDiffResults = \"0.0.4\"\r\nDiffRules = \"0.0.10\"\r\nDocStringExtensions = \"0.8.0\"\r\nElasticArrays = \"0.4.0\"\r\nExtendableSparse = \"0.1.0\"\r\nForwardDiff = \"0.10.0\"\r\nIterativeSolvers = \"0.8.1\"\r\nPyPlot = \"2.8.1\"\r\njulia = \"1\"\r\n\r\n````\r\n",
+      "createdAt": "2019-07-09T20:37:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509798132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTc5ODQ5OA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you could retrigger registrator, that will update this pull request.",
+      "createdAt": "2019-07-09T20:38:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509798498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTgwMDc2NQ==",
+      "author": {
+        "login": "j-fu"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "catch22:\r\n\r\n``ERROR: Registration failed: Error in Project.toml: Package 'ExtendableSparse' with UUID: 95c220a8-a1cf-11e9-0c77-dbfce5f500b3 not found in registry or stdlib``\r\n\r\nIt seems we need first fully register ExtendableSparse to find it in the registry and only then VornoiFVM once we can add the former from the registry instead of the url.\r\n",
+      "createdAt": "2019-07-09T20:46:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509800765",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwOTg0MDQwOQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, ok, that makes sense. What we'd really want for this case is the ability to register multiple new packages/versions together. I'll merge VornoiFVM after the customary wait and then ping you again.",
+      "createdAt": "2019-07-09T22:57:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-509840409",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUxMDgxNzY4NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The other PR is merged, you can add the `[compat]` now.",
+      "createdAt": "2019-07-12T09:23:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-510817685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUxMTc3NTg0Ng==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.4.0`, [here](https://github.com/j-fu/VoronoiFVM.jl/releases/tag/v0.4.0) it is.\n<!-- 1be05e10-a7bc-11e9-8235-1095ba98a72b -->",
+      "createdAt": "2019-07-16T11:23:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/1908#issuecomment-511775846",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: VoronoiFVM\n- Repository: https://github.com/j-fu/VoronoiFVM.jl\n- Created by: @j-fu\n- Version: v0.4.0\n- Commit: d6a86e3df7fca207d86a91cc0c99215c3fa8ab97\n- Git reference: master",
+  "package_name": "VoronoiFVM",
+  "title": "New package: VoronoiFVM v0.4.0"
+}

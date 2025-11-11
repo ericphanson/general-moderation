@@ -1,0 +1,74 @@
+{
+  "created_at": "2020-01-10T23:20:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-01-11T03:36:54Z",
+  "pr_number": 7763,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzI0NDQ2NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n- I was not able to load the package (i.e. `import IntelVectorMath` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-01-10T23:24:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7763#issuecomment-573244465",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzI0NTU5MQ==",
+      "author": {
+        "login": "Crown421"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge \r\nAs discussed in https://github.com/JuliaRegistries/General/pull/5942, we renamed the package and the repo has also been renamed. \r\n\r\nIt says above that the package was not loaded, which makes sense given that VML currently does not load its own binaries, but instead relies on standalone MKL or MKL.jl, which is tested in the [package CI.](https://github.com/JuliaMath/IntelVectorMath.jl/actions).\r\n\r\nThat being said, adding the small number of required binaries might be a sensible addition for a later release. ",
+      "createdAt": "2020-01-10T23:29:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7763#issuecomment-573245591",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzI3NjY3MA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’ll manually merge this since we already went through the waiting period on the previous PR.",
+      "createdAt": "2020-01-11T03:36:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7763#issuecomment-573276670",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzI3NjY4NA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.2.0`, [here](https://github.com/JuliaMath/IntelVectorMath.jl/releases/tag/v0.2.0) it is.\n<!-- 9cf4a580-3423-11ea-96e0-6a0b1c555a30 -->",
+      "createdAt": "2020-01-11T03:37:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7763#issuecomment-573276684",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: IntelVectorMath\n- Repository: https://github.com/JuliaMath/IntelVectorMath.jl\n- Created by: @Crown421\n- Version: v0.2.0\n- Commit: 5b67e8e66f7c651d6282c8e349311ff35cc6a3f1\n- Reviewed by: @Crown421\n- Reference: https://github.com/JuliaMath/IntelVectorMath.jl/commit/5b67e8e66f7c651d6282c8e349311ff35cc6a3f1#commitcomment-36753441\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4c3a2f5a7e315dbfd0f0d9a7511c3569209480df46dc80b74a2260f76a88c0ea65494a3698596df346eaa3455ec4e52c63bdfbf8ecbb9f0208538d5fb70ef747ec92f83a89995d6427d5ba71df669a2ba75dbc1820f53e3928258c96f5359307fc5330890f40e0c50f6e80571de5474ba4edc550114e01be5ec85a05869b275bedbf51312792ea09eb013028ce4db2c281df1a0e3502ccdf1281c7c83c6f8c692dda3d18a9bb3a77366fcb4fbadcc04625b1f03360ba99e38c1130f4c4c69bd31 -->",
+  "package_name": "IntelVectorMath",
+  "title": "New package: IntelVectorMath v0.2.0"
+}

@@ -1,0 +1,88 @@
+{
+  "created_at": "2020-05-11T11:15:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-05-26T02:32:31Z",
+  "pr_number": 14548,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyNjYzOTgyMg==",
+      "author": {
+        "login": "djsegal"
+      },
+      "authorAssociation": "NONE",
+      "body": "Based off of one of Alan's requests for an extended-standard library",
+      "createdAt": "2020-05-11T11:16:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14548#issuecomment-626639822",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyNjY0MDQ4MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: DataFrames, DataStructures, Reexport, StatsBase, julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-05-11T11:18:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14548#issuecomment-626640481",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzODczODA3Nw==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It doesn't seem like a good idea to start merging \"collection\"-packages where someone just puts together a bunch of their favorite packages and slaps a name on it. It pollutes the namespace of the registry and there are also problems with compatibility. ",
+      "createdAt": "2020-06-04T09:36:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/14548#issuecomment-638738077",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzODk3MzEwNw==",
+      "author": {
+        "login": "ararslan"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Especially with such a generic name...",
+      "createdAt": "2020-06-04T16:42:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/14548#issuecomment-638973107",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Numerics\n- Repository: https://github.com/djsegal/Numerics.jl\n- Created by: @djsegal\n- Version: v0.1.0\n- Commit: 33ca8b7986ee18f99d0f85d34fd3222daedd5679\n- Reviewed by: @djsegal\n- Reference: https://github.com/djsegal/Numerics.jl/commit/33ca8b7986ee18f99d0f85d34fd3222daedd5679#commitcomment-39084946\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60c478d057273c0cedf3b196e5593a7fc789e4c972abd71006b656b700d15c4d43dca834f31f074d9ad8145f8f9a00fdd368eb3fa39c9e7bf10af9d3de5d57a7eb192532bdcd52737b364a1082f34bed58b1015a6111fc54fb0b000b9bf21f8af4e334591a74577704a4970c5872523b7274a005321928aee3d3be1c2e2abb50876831e70cd8869509aecd6883f05bafa3f07de4f63bdf20d55330c4b4ce615ad62e0fd0e6ef19ae64ba8a312243daeff -->",
+  "package_name": "Numerics",
+  "title": "New package: Numerics v0.1.0"
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2020-02-05T16:03:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-02-08T03:12:29Z",
+  "pr_number": 8919,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MjQ4MTU5NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- The following dependencies do not have a compat entry that has an upper bound: DataFrames, DataStreams, MySQL, Revise, SearchLight. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n- I was not able to load the package (i.e. `import SearchLightMySQL` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-02-05T16:07:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8919#issuecomment-582481595",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MjYxMjM5Ng==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "Block, I'll address the points",
+      "createdAt": "2020-02-05T21:06:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8919#issuecomment-582612396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MzY5Njc5OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/GenieFramework/SearchLightMySQL.jl/releases/tag/v0.1.0) it is.\n<!-- d7506300-4a20-11ea-96e6-554c98cdd87c -->",
+      "createdAt": "2020-02-08T03:12:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8919#issuecomment-583696798",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: SearchLightMySQL\n- Repository: https://github.com/GenieFramework/SearchLightMySQL.jl\n- Created by: @essenciary\n- Version: v0.1.0\n- Commit: 33c28714f516b3a71fcbb3c964eb9b1bbda42418\n- Reviewed by: @essenciary\n- Reference: https://github.com/GenieFramework/SearchLightMySQL.jl/commit/33c28714f516b3a71fcbb3c964eb9b1bbda42418#commitcomment-37153677\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae40dc1f4823c060c4301331529b5d33a9dc0fc0decd234d80e3941b7f945161f64e70d74ef8dec8354ec1395ce5c712556a17bbd965a1ae1ccfeeec8bcf7f14f919f4ad1c6563d6fb054d9f7387ce97319331152fdb90091e647a08144f65766e30a129675b00077cb83042e2a5ba14947686136e2cd5c20dbb55f68e7388116c0fdebd2869ba14a85d540eba92aedd14a88a647df14257c21f7aebac41dbc6ee5800a751949f0560a2b250e3bdc19a2d39f25ce0820ade3d7e323bc5d2361bcf7 -->",
+  "package_name": "SearchLightMySQL",
+  "title": "New package: SearchLightMySQL v0.1.0"
+}

@@ -1,0 +1,96 @@
+{
+  "created_at": "2019-10-15T16:33:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-28T08:56:59Z",
+  "pr_number": 4402,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MjkwOTY1NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please add (at least)\r\n```\r\n[compat]\r\njulia = \"1\"\r\n```\r\nto your project file and retrigger the bot.",
+      "createdAt": "2019-10-16T22:00:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/4402#issuecomment-542909654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Mjk1ODQxMg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- The following dependencies do not have a compat entry that has an upper bound: Persa\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-17T01:36:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4402#issuecomment-542958412",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg1MTQ2Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please add compatibility bounds for the next release such that it will be automatically merged.",
+      "createdAt": "2019-10-28T08:56:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4402#issuecomment-546851463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg1MTUyNQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/JuliaRecsys/EvaluationCF.jl/releases/tag/v0.1.0) it is.\n<!-- e70bd600-f960-11e9-9ec5-c5e1c6570dde -->",
+      "createdAt": "2019-10-28T08:57:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4402#issuecomment-546851525",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzEwNDczMw==",
+      "author": {
+        "login": "filipebraida"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre , I was waiting for the new Persa.jl release to be accepted to add. Thanks!",
+      "createdAt": "2019-10-28T19:18:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4402#issuecomment-547104733",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: EvaluationCF\n- Repository: https://github.com/JuliaRecsys/EvaluationCF.jl\n- Created by: @filipebraida\n- Version: v0.1.0\n- Commit: 342c9cab39a9d7944e7bee79be0c462040549145\n- Reviewed by: @filipebraida\n- Reference: https://github.com/JuliaRecsys/EvaluationCF.jl/commit/342c9cab39a9d7944e7bee79be0c462040549145#commitcomment-35535703\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4b9cd049de19c831ccca02a7a8aa99f95a3b9d0119b173d22dd1a40532302d478578551fc45958ba65fb0729c6e1ece65fa7afb0d86a2522ee910fcb270a11a876b2d1c2e1f0159fe8ad8270e4c5df8ffdbaf20ac7e45ddca4f5713f37c57aca93e94f88a95cfdf342098c249b97c9bc061885341bdf19dd83524c9d6bba5247ce9f2564badc1ca2d40a0a68e6eec957dee120306cf6866e6530aae144f4dd94987471a0f3452b9b7cbc27f47f2ad2371 -->",
+  "package_name": "EvaluationCF",
+  "title": "New package: EvaluationCF v0.1.0"
+}

@@ -1,0 +1,212 @@
+{
+  "created_at": "2019-08-13T05:36:33Z",
+  "review_comments": [
+    {
+      "id": 274486673,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3Mjc0NDg2Njcz",
+      "user": {
+        "login": "StefanKarpinski",
+        "id": 153596,
+        "node_id": "MDQ6VXNlcjE1MzU5Ng==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/153596?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/StefanKarpinski",
+        "html_url": "https://github.com/StefanKarpinski",
+        "followers_url": "https://api.github.com/users/StefanKarpinski/followers",
+        "following_url": "https://api.github.com/users/StefanKarpinski/following{/other_user}",
+        "gists_url": "https://api.github.com/users/StefanKarpinski/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/StefanKarpinski/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/StefanKarpinski/subscriptions",
+        "organizations_url": "https://api.github.com/users/StefanKarpinski/orgs",
+        "repos_url": "https://api.github.com/users/StefanKarpinski/repos",
+        "events_url": "https://api.github.com/users/StefanKarpinski/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/StefanKarpinski/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/2653#pullrequestreview-274486673",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/2653",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/2653#pullrequestreview-274486673"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/2653"
+        }
+      },
+      "submitted_at": "2019-08-13T18:52:42Z",
+      "commit_id": "a709913dda6fe820dfaa6dbd1ce7eabb10ee492a"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-08-19T14:15:28Z",
+  "pr_number": 2653,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMDkzOTUxOQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Needs a `[compat]` section in `Project.toml` with at least an entry for `julia` itself, e.g.:\r\n```toml\r\n[compat]\r\njulia = \"1\"\r\n```\r\nwould mean that the package is compatible with Julia versions `[1.0.0, 2.0.0)`.",
+      "createdAt": "2019-08-13T17:55:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-520939519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTI1MzIxMg==",
+      "author": {
+        "login": "diegozea"
+      },
+      "authorAssociation": "NONE",
+      "body": "Bioinformatics is a very broad name. Is `Rosalind.jl` a better name? @BenJWard ",
+      "createdAt": "2019-08-14T13:48:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-521253212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTI3MTE1OQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@diegozea But it is not only for Rosalind.info problems. ",
+      "createdAt": "2019-08-14T14:32:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-521271159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTMyMTg0Mg==",
+      "author": {
+        "login": "TransGirlCodes"
+      },
+      "authorAssociation": "NONE",
+      "body": "We made a similar mistake in BioJulia - we called a flagship package Bio.jl.\r\n\r\nWhich wasn't very informative (plus there was a tendency to put everything in this one monolithic package). I think calling a package Bioinformatics.jl will result in a similar thing.\r\n\r\nAs someone who says they work in Bioinformatics, I have to keep reminding myself that it's a pretty poorly defined concept: I work in genome assembly and evolutionary genetics, yet someone doing something completely different will also call themselves a bioinformatician.\r\nSo it's not clear at all from the name what the package will let you do. That's one lesson I learned from Bio.jl anyway.\r\n\r\nI'm not sure what the sequence utilities in Bioinformatics.jl gives you - outside the context of solving a Rosalind problem in a specific way - that BioSequences.jl does not already provide, with the added benefit of 5 or so years of implementing optimized sequence types.",
+      "createdAt": "2019-08-14T16:35:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-521321842",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTU2OTA1OQ==",
+      "author": {
+        "login": "diegozea"
+      },
+      "authorAssociation": "NONE",
+      "body": "It is not clear to me what is the other source of bioinformatic problems. Maybe you can add the links in `README.md` or in the documentation.\r\nWhat about something including the idea of problems, solutions, answers or helper, e.g. `BioinfoProblemHelper.jl`?",
+      "createdAt": "2019-08-15T08:59:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-521569059",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTY1MDc3MA==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@diegozea I'll definitely add more documentation over time.",
+      "createdAt": "2019-08-15T13:58:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-521650770",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjIzODQzMA==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "Do I need to change the name before merge?",
+      "createdAt": "2019-08-17T13:46:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-522238430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjU4ODg2MA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's up to you whether you want to proceed with this name or not.",
+      "createdAt": "2019-08-19T14:01:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-522588860",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjU5MDI5OQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "I want to proceed with this name.",
+      "createdAt": "2019-08-19T14:04:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-522590299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjU5NDYyMA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/mrtkp9993/Bioinformatics.jl/releases/tag/v0.1.0) it is.\n<!-- cbd13940-c28b-11e9-8190-9f0423c7216a -->",
+      "createdAt": "2019-08-19T14:15:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2653#issuecomment-522594620",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: Bioinformatics\n- Repository: https://github.com/mrtkp9993/Bioinformatics.jl\n- Created by: @mrtkp9993\n- Version: v0.1.0\n- Commit: 6f5d2a477aa128c25d3f4a19d8ab1ae01ca3ddbb\n- Reviewed by: @mrtkp9993\n- Reference: https://github.com/mrtkp9993/Bioinformatics.jl/commit/6f5d2a477aa128c25d3f4a19d8ab1ae01ca3ddbb#commitcomment-34677936\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae413ee6a83cf8c6671b7fb62ca39c0373c52f3af858fcf661d1d631926141ea9a6eaca855055a7a5a261b07c0f1dfe53c2bfa59d63fde875a21324359150266be11f0c7cfa4a3d2242e69095bd50a3a6145ebe47253a75681660c81f2f32a1640127a1e6f442c97a5cb83cc18241a0aede3996c059db387db3dc044672a4ac1aa15a4be695cff0d431a09753225343feb6b384b1c0b26a96f50c394208fb82f2e5cf6d9b6de8520d696ed56b211257cf09 -->",
+  "package_name": "Bioinformatics",
+  "title": "New package: Bioinformatics v0.1.0"
+}

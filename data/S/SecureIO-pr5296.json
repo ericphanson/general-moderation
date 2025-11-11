@@ -1,0 +1,267 @@
+{
+  "created_at": "2019-11-11T21:31:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-11-27T20:44:57Z",
+  "pr_number": 5296,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjYyNjAzNQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-11T21:33:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-552626035",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjYyNzA1OQ==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would be happy for new name suggestions. ",
+      "createdAt": "2019-11-11T21:35:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-552627059",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1MjYzMjE0MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems like a fine name to me, you don't think its good?",
+      "createdAt": "2019-11-11T21:49:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-552632140",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1Mjc4MjY1Ng==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I wanted to use SecureIO for the definition of the type which is <:IO (now it is SecureTunnel). But if therer are no issues with the name for the registry I would be happy to keep the name. ",
+      "createdAt": "2019-11-12T08:13:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-552782656",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1Mjc4NDkyMA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I wanted to use SecureIO for the definition of the type which is <:IO\r\n\r\nAh, in that case the standard name would be `SecureIOs` (cf. e.g. `StaticArrays` which define the type `StaticArray`). But IMO `SecureIO` is a better-looking name. It is up to you really.",
+      "createdAt": "2019-11-12T08:20:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-552784920",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzQ4MTQxMg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think `SecureIO` is better than `SecureIOs`.\r\n\r\nAnyway, can you retrigger Registrator to fix the merge conflict?\r\n\r\n[noblock]",
+      "createdAt": "2019-11-22T10:35:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-557481412",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzQ4Nzc0Mg==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I am still thinking about the change of name for the package and the main struct name. Just some ideas popping up:\r\n\r\n- SecureIO and SecureTunnel (current)\r\n- SecureIO and SecureStream\r\n- SecureIO and SecureSerializer\r\n- SecureSerializers and SecureSerializer\r\n- CryptoSerializers and CryptoSerializer\r\n- CryptoStreams and CryptoStream\r\n- SecureStreams and SecureStream\r\n\r\nI will try to decide on  this in the weekend. \r\n\r\n",
+      "createdAt": "2019-11-22T10:56:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-557487742",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzQ5MDc5Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> SecureStreams and SecureStream\r\n\r\nI kinda like that. I also don't have a problem with the current names.",
+      "createdAt": "2019-11-22T11:05:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-557490793",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzgxNjk5NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-23T17:29:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-557816994",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzgxNzAzMQ==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "So I decided to keep the name SecureIO, but I will rename type SecureTunnel to SecureSerializer to reflect that it can also be used with a buffer in case one wants to exchange secure messages in old fashion way. ",
+      "createdAt": "2019-11-23T17:29:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-557817031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg2MTc1Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Whats the status here?",
+      "createdAt": "2019-11-26T23:30:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-558861753",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTA1MTQ1NA==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "From my point of view, the package could be merged.",
+      "createdAt": "2019-11-27T11:36:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-559051454",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTA1NzE4NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> So I decided to keep the name SecureIO, but I will rename type SecureTunnel to SecureSerializer to reflect that it can also be used with a buffer in case one wants to exchange secure messages in old fashion way.\r\n\r\nDon't you wanna retrigger to include these changes?",
+      "createdAt": "2019-11-27T11:56:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-559057185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTA1NzczNw==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, indeed I can do that. I will retrigger registrator by the the evening. ",
+      "createdAt": "2019-11-27T11:57:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-559057737",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTI0NDU1MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-27T20:42:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5296#issuecomment-559244550",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: SecureIO\n- Repository: https://github.com/PeaceFounder/SecureIO.jl\n- Created by: @akels\n- Version: v0.1.0\n- Commit: a6599b5f1f84c6edf033ddd17df06c17184cc267\n- Reviewed by: @akels\n- Reference: https://github.com/PeaceFounder/SecureIO.jl/commit/a6599b5f1f84c6edf033ddd17df06c17184cc267#commitcomment-36167291\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4a75d09c6c534f31254dbc55e08185ec978d7942b6c269ff93fe9744cbf89cdd9a220480b7e32d320280b71b71656248209019063e81a834a4bed37416eb8759c5dc318109bca3764b133661055512b968f542d60f8874ffcf7591dd76141d6f091eb2f18f32a60a4d122c1ffffcd3433399108486d7867e0dfcf009e758dc1c11bd47afd1bbae9ac495a1c062496377ea6b06884a386e26bf8476977ad72d6a169f6a034650fc1785ce96e7edabcc1b9 -->",
+  "package_name": "SecureIO",
+  "title": "New package: SecureIO v0.1.0"
+}

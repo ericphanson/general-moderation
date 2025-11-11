@@ -1,0 +1,89 @@
+{
+  "created_at": "2020-05-17T02:32:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-05-20T08:36:37Z",
+  "pr_number": 14886,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyOTczMzYyNQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-05-17T02:34:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14886#issuecomment-629733625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyOTczMzc5Ng==",
+      "author": {
+        "login": "GiggleLiu"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "There are two related packages [SimpleTropical.jl](https://github.com/scheinerman/SimpleTropical.jl) and [TropicalSemiring.jl](https://github.com/saschatimme/TropicalSemiring.jl). However, the tropical numbers in these packages contains an unnessesary extra field `isinf`. Which makes the number hard to fit the BLAS implementation for tropical numbers:\r\n\r\nhttps://github.com/YingboMa/MaBLAS.jl/tree/myb/tropical",
+      "createdAt": "2020-05-17T02:37:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14886#issuecomment-629733796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzMTE2OTc2Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@GiggleLiu do you want to have this merged?  I think your comment blocked automerge",
+      "createdAt": "2020-05-20T00:55:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14886#issuecomment-631169766",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzMTIxMTI2MQ==",
+      "author": {
+        "login": "GiggleLiu"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes, thanks @giordano ",
+      "createdAt": "2020-05-20T03:20:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14886#issuecomment-631211261",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzMTMyODM2OQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/GiggleLiu/TropicalNumbers.jl/releases/tag/v0.1.0) it is.\n<!-- 055c2f00-9a75-11ea-88af-f5269b50e169 -->",
+      "createdAt": "2020-05-20T08:36:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14886#issuecomment-631328369",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: TropicalNumbers\n- Repository: https://github.com/GiggleLiu/TropicalNumbers.jl\n- Created by: @GiggleLiu\n- Version: v0.1.0\n- Commit: 91c34a20e575ba15c2c46bf02f9035ebe93356c5\n- Reviewed by: @GiggleLiu\n- Reference: https://github.com/GiggleLiu/TropicalNumbers.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359845df99f4b6ff982b94aa50b7ff5bd6028c3dec3a1505b70e23b709d82a84b05b052d336f9ba5fef83be9b69b74faf51754c94cfeb374315c7d79e55a2c7e764d0e73dfc20af2213fa0e30da86eb3706f408a62ca2608f401d4c5a6b94969775bcab64b6d0f8c94ff8ff2847ff37554811069b74dd9a24582f2113eef01c6511d -->",
+  "package_name": "TropicalNumbers",
+  "title": "New package: TropicalNumbers v0.1.0"
+}

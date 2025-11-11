@@ -1,0 +1,134 @@
+{
+  "created_at": "2019-10-25T18:30:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2019-10-28T09:58:44Z",
+  "pr_number": 4727,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjQ2MzcyMg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- The following dependencies do not have a compat entry that has an upper bound: Conda, PyCall, PyPlot\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-25T18:32:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546463722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjQ2OTY2NA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- The following dependencies do not have a compat entry that has an upper bound: Conda, PyCall, PyPlot\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-25T18:49:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546469664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjQ3Mjk1OQ==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- I was not able to install and import the package. See the Travis logs for details.\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-25T18:59:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546472959",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjQ4NjQ5OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nThe error message is correct. To see why, take the following steps:\r\n\r\n1. Under the `Some checks were not successful` heading, in the `Travis CI - Pull Request` row, click on the `Details` link.\r\n2. Scroll all the way to the bottom and click on `View more details on Travis CI`.\r\n3. Click on the `Julia: 1.2` job.\r\n4. Read the Travis logs. You may need to click the ▶ triangle in the left hand column in order to show hidden rows.\r\n\r\nFor example, in this case, look at the Travis logs starting at line 363. (Here is a link: https://travis-ci.com/JuliaRegistries/General/jobs/249652874#L363)\r\n\r\nHere is what the logs say starting at line 363:\r\n```\r\n363[ Info: Successfully installed package\r\n364[ Info: Attempting to import package\r\n365ERROR: LoadError: InitError: PyError (PyImport_ImportModule\r\n366\r\n367The Python package matplotlib could not be found by pyimport. Usually this means\r\n368that you did not install matplotlib in the Python version being used by PyCall.\r\n369\r\n370PyCall is currently configured to use the Python version at:\r\n371\r\n372/usr/bin/python3\r\n373\r\n374and you should use whatever mechanism you usually use (apt-get, pip, conda,\r\n375etcetera) to install the Python package containing the matplotlib module.\r\n376\r\n377One alternative is to re-configure PyCall to use a different Python\r\n378version on your system: set ENV[\"PYTHON\"] to the path/name of the python\r\n379executable you want to use, run Pkg.build(\"PyCall\"), and re-launch Julia.\r\n380\r\n381Another alternative is to configure PyCall to use a Julia-specific Python\r\n382distribution via the Conda.jl package (which installs a private Anaconda\r\n383Python distribution), which has the advantage that packages can be installed\r\n384and kept up-to-date via Julia.  As explained in the PyCall documentation,\r\n385set ENV[\"PYTHON\"]=\"\", run Pkg.build(\"PyCall\"), and re-launch Julia. Then,\r\n386To install the matplotlib module, you can use `pyimport_conda(\"matplotlib\", PKG)`,\r\n387where PKG is the Anaconda package the contains the module matplotlib,\r\n388or alternatively you can use the Conda package directly (via\r\n389`using Conda` followed by `Conda.add` etcetera).\r\n390\r\n391) <class 'ImportError'>\r\n392ImportError(\"No module named 'matplotlib'\",)\r\n393\r\n394Stacktrace:\r\n395 [1] pyimport(::String) at /tmp/jl_mgAz2i/packages/PyCall/ttONZ/src/PyCall.jl:544\r\n396 [2] pyimport_conda(::String, ::String, ::String) at /tmp/jl_mgAz2i/packages/PyCall/ttONZ/src/PyCall.jl:702\r\n397 [3] pyimport_conda at /tmp/jl_mgAz2i/packages/PyCall/ttONZ/src/PyCall.jl:701 [inlined]\r\n398 [4] __init__() at /tmp/jl_mgAz2i/packages/PyPlot/4wzW1/src/init.jl:179\r\n399 [5] _include_from_serialized(::String, ::Array{Any,1}) at ./loading.jl:685\r\n400 [6] _require_from_serialized(::String) at ./loading.jl:736\r\n401 [7] _require(::Base.PkgId) at ./loading.jl:1023\r\n402 [8] require(::Base.PkgId) at ./loading.jl:911\r\n403 [9] require(::Module, ::Symbol) at ./loading.jl:906\r\n404 [10] include at ./boot.jl:328 [inlined]\r\n405 [11] include_relative(::Module, ::String) at ./loading.jl:1094\r\n406 [12] include(::Module, ::String) at ./Base.jl:31\r\n407 [13] top-level scope at none:2\r\n408 [14] eval at ./boot.jl:330 [inlined]\r\n409 [15] eval(::Expr) at ./client.jl:432\r\n410 [16] top-level scope at ./none:3\r\n411during initialization of module PyPlot\r\n412in expression starting at /tmp/jl_mgAz2i/packages/ClimateEasy/cKz0E/src/ClimateEasy.jl:13\r\n413ERROR: Failed to precompile ClimateEasy [47ceb0c8-0fe6-4c49-a4a1-92bc59187c00] to /tmp/jl_mgAz2i/compiled/v1.2/ClimateEasy/E2jGb.ji.\r\n414Stacktrace:\r\n415 [1] error(::String) at ./error.jl:33\r\n416 [2] compilecache(::Base.PkgId, ::String) at ./loading.jl:1253\r\n417 [3] _require(::Base.PkgId) at ./loading.jl:1013\r\n418 [4] require(::Base.PkgId) at ./loading.jl:911\r\n419 [5] require(::Module, ::Symbol) at ./loading.jl:906\r\n420┌ Error: Was not able to successfully install the package\r\n421└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/386uz/src/AutoMerge/guidelines.jl:170\r\n```\r\n",
+      "createdAt": "2019-10-25T19:40:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546486498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjYwMjQxNA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- I was not able to install and import the package. See the Travis logs for details.\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-26T13:26:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546602414",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjYxMDE4Nw==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- I was not able to install and import the package. See the Travis logs for details.\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-26T14:57:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546610187",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NjYxMjY4Mg==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- I was not able to install and import the package. See the Travis logs for details.\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-26T15:29:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546612682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg3NDE3OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/natgeo-wong/ClimateEasy.jl/releases/tag/v0.1.0) it is.\n<!-- 86cd6200-f969-11e9-9d50-3dd94fc71467 -->",
+      "createdAt": "2019-10-28T09:58:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4727#issuecomment-546874178",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: ClimateEasy\n- Repository: https://github.com/natgeo-wong/ClimateEasy.jl\n- Created by: @natgeo-wong\n- Version: v0.1.0\n- Commit: 5563057136a169c288d6879d0740ccd42caedeec\n- Reviewed by: @natgeo-wong\n- Reference: https://github.com/natgeo-wong/ClimateEasy.jl/commit/5563057136a169c288d6879d0740ccd42caedeec#commitcomment-35676463\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae487f2be23ad75ef57b7094902f6ade5e1135d5c1814cc85e8e80bacdef799ce4e6c3cb2f95a2ab2f78de18ec16e2a3b7db28db49a7dc8f2f5a2a9dee44dc3f30ab443eca9471caa578294b798bd97323951d16a9033e79d3bfea08300305ff574981545a85249942702341a8c8ae45a5b4aff2dfc7cabc1a370411f99bb152defd067ebe495bd0dc4fc87d13fb2e48330254fa1a12501913b0c28174570e566091f74d10f033e25f2290fadc86a2b7956 -->",
+  "package_name": "ClimateEasy",
+  "title": "New package: ClimateEasy v0.1.0"
+}
