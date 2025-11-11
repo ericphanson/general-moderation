@@ -1,0 +1,126 @@
+{
+  "created_at": "2025-02-04T13:31:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-02-11T18:52:25Z",
+  "pr_number": 124318,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86c_4N3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-04T13:39:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2633991031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dAAQg",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "Same Problem happens https://github.com/JuliaRegistries/General/pull/124282 . Please dismiss this PR. Very sorry.\r\n[noblock]",
+      "createdAt": "2025-02-04T13:48:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2634023968",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dA-HC",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz\r\nSorry for making several PRs (In https://github.com/Michi-Tsubaki/ROS2.jl/issues/6, it cannot triggerd in same version tag) \r\nCould you please close PR for v0.1.4(https://github.com/JuliaRegistries/General/pull/124282) .\r\n\r\nAs shown below ↓\r\n\r\n> . [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\r\nName does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\r\nName is not at least 5 characters long\r\nPackage name similar to 3 existing packages.\r\nSimilar to ROS. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\r\nSimilar to BOSS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.97 is at or below cutoff of 2.50.\r\nSimilar to ROOT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nAccording to CI log\r\n>  Warning: ROS2 initialization deferred: ProcessFailedException(Base.Process[Process(setenv(`/tmp/jl_hH9yG4/conda/3/x86_64/bin/conda install -y rclpy`,[\"PATH=/opt/hostedtoolcache/julia/1.11.3/x64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\", \"CONDA_PREFIX=/tmp/jl_hH9yG4/conda/3/x86_64\", \"***\", \"DISPLAY=:99\", \"OPENBLAS_DEFAULT_NUM_THREADS=1\", \"JULIA_REGISTRYCI_AUTOMERGE=true\", \"XAUTHORITY=/tmp/xvfb-run.qnHAeW/Xauthority\", \"HOME=/home/runner\", \"JULIA_PKG_PRECOMPILE_AUTO=0\", \"CONDARC=/tmp/jl_hH9yG4/conda/3/x86_64/condarc-julia.yml\", \"JULIA_DEPOT_PATH=/tmp/jl_hH9yG4\", \"OPENBLAS_MAIN_FREE=1\", \"R_HOME=*\", \"PYTHONIOENCODING=UTF-8\"]), ProcessExited(1))])\r\n└ @ ROS2 /tmp/jl_hH9yG4/packages/ROS2/SK1VV/src/ROS2.jl:32\r\n[ Info: Successfully `import`ed package\r\n[ Info: Suc\r\n\r\nROS2 initialize problem = import problem has pass CI, by making  ERROR --> Warning\r\n\r\n\r\n[noblock]",
+      "createdAt": "2025-02-04T15:14:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2634277314",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dVdob",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Sorry for making several PRs (In https://github.com/Michi-Tsubaki/ROS2.jl/issues/6, it cannot triggerd in same version tag)\r\n\r\nThis is why you should not create version tags manually. The normal workflow in Julia (which is very unusual compared to how most other systems handle it) is that you submit a particular commit for registration. Once that is merged, the [TagBot](https://github.com/JuliaRegistries/TagBot) in your repo is triggered, and that is what creates the tag for the release. This is important, because you might run into problems during the registration (such as in https://github.com/JuliaRegistries/General/pull/124282, but potentially also for releases after the initial registration), and you can _update_ a registration to fix these problems while keeping the version number the same. Creating the tag _after_ everything is fixed ensures that the tag is pointing to the correct commit that was actually registered.\r\n\r\nBTW, I never really understood this \"registration via comment on an issue\". I know there's an older tutorial from Chris floating around that recommends this, but personally, it makes much more sense to me to just navigate to the commit you want to submit for registration, and comment `@JuliaRegistrator register` on that commit. If something needs to be fixed, you just make another commit, or even rewrite/force-push, and just comment again on the new commit to update the existing registration PR.",
+      "createdAt": "2025-02-06T12:09:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2639649307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86duRvk",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Can you put [noblock] in the comment above? I feel like it is triggering the lock, maybe.",
+      "createdAt": "2025-02-09T09:55:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2646154212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86du8Tm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No, it’s blocked by the name. You’re going to have to ping Slack again until someone with sufficient permission merges it manually ",
+      "createdAt": "2025-02-09T14:29:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2646328550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dyUd3",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, I see. Thank you.",
+      "createdAt": "2025-02-10T08:07:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2647213943",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: ROS2\n- Repository: https://github.com/Michi-Tsubaki/ROS2.jl\n- Created by: @Michi-Tsubaki\n- Version: v0.1.5\n- Commit: bb362b0d266519215a2ad396d0bb5876d1bdf0c4\n- Reviewed by: @Michi-Tsubaki\n- Reference: https://github.com/Michi-Tsubaki/ROS2.jl/issues/6#issuecomment-2634591295\n- Description: Robot Operating tool using Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ef5d13a2899ca805b9ec225fb5aa7d2b675ec081d472063577d244471d3e612e8ae65f08b7e684eb99799b6e85f6f1e7148533c56cdcb092dc3632f3f81a2259673fc8ef0a242e5179897b47904084842fa4351eb532d8a0244befda77ddee536f097f7a056e47065676e43d6d8809cc4e060143773bb0ea7a1a8ec902099368 -->",
+  "package_name": "ROS2",
+  "title": "New package: ROS2 v0.1.5"
+}

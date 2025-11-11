@@ -1,0 +1,81 @@
+{
+  "created_at": "2025-04-28T16:16:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-05-06T17:33:05Z",
+  "pr_number": 129936,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86pBwzV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-28T16:24:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129936#issuecomment-2835811541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pCqud",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I would probably be okay with the name, but if you can't find / convince a registry maintainer to merge it, `PhyloSNaQ` might be a good alternative.",
+      "createdAt": "2025-04-28T17:58:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129936#issuecomment-2836048797",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pPYKR",
+      "author": {
+        "login": "jjustison"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks for the guidance, @goerz! I'll try pinging some of the folks in the Julia slack\r\n\r\nThe core functions from this package package  were originally a part of [PhyloNetworks](https://github.com/JuliaPhylo/PhyloNetworks.jl) but we recently split things out to keep the scope more focused and have things a bit more modular. SNaQ is the name of the approach published [here](https://doi.org/10.1371/journal.pgen.1005896) and has been known as such in the phylogenetic community, so we would like to keep the name as `SNaQ.jl`",
+      "createdAt": "2025-04-29T15:39:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129936#issuecomment-2839380625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pPib0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure, I understand, but I can't override the 5-character rule. You would need a full registry maintainer to merge it manually",
+      "createdAt": "2025-04-29T15:54:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129936#issuecomment-2839422708",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SNaQ\n- Repository: https://github.com/JuliaPhylo/SNaQ.jl\n- Created by: @jjustison\n- Version: v1.0.0\n- Commit: 7b5457aed10ad5ba3aea35fdd9858176686f3268\n- Reviewed by: @jjustison\n- Reference: https://github.com/JuliaPhylo/SNaQ.jl/commit/7b5457aed10ad5ba3aea35fdd9858176686f3268#commitcomment-156067409\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c032bea0a465ee7972144f6a97727d3338048bfb36e6f72659119212e1e99855b9af098fc054d734c5804013412b5b4febcc088b661501309a90e7506814537ea4895a260ca9d0b8d8530337cecab5f359636508f06a4525111dc937786a8ab0a2c2a7ec3a6182203104eb44b53c4a0d452725a3f93af692be530438e86ac7cd0623ec4170d7076534ea3329d5002d484510c3487666f1b49cfdc6f6bc156fd308eb58a53556c8d7a8a6579e3471b8d9 -->",
+  "package_name": "SNaQ",
+  "title": "New package: SNaQ v1.0.0"
+}

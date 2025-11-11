@@ -1,0 +1,110 @@
+{
+  "created_at": "2025-05-28T18:34:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-06-05T14:59:30Z",
+  "pr_number": 131898,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86t4iOI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-28T18:41:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131898#issuecomment-2917278600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86t4nyZ",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] So, auto-merging fails because the package name is all uppercase. I would be fine with changing it to something else if need be, but SLOPE is an established acronym for the type of statistical model this package fits (Sorted L-One Penalized Estimation). The name mimics that of the R package SLOPE (https://cran.r-project.org/package=SLOPE). \r\n\r\nSo, I hope that you might reconsider.",
+      "createdAt": "2025-05-28T18:50:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131898#issuecomment-2917301401",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86t5bk5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Personally, I think it's okay, but I don't have sufficient permissions to override that rule. So, you'll have to go via the #pkg-registration channel in the [public Julia Slack](https://julialang.org/slack/) after the three-day waiting period ends to find a full registry maintainer to merge it. They're not always very responsive, so it might take a few pings, some days apart, to get someone's attention.\r\n\r\nQuite honestly, I think we should get rid of the \"not all letters are upper-case\" check in the automatic bot. The \"5 characters minimum length\" rule already catches 90% of unwanted acronyms. Longer, especially pronounceable acronyms like this one really should be okay. And we can still block manually for packages that are questionable. Anyway, that's a discussion to be had at some point.\r\n\r\nThat being said, `SLOPE` is very non-specific and not an acronym that is familiar to the wide audience of the General registry. A good approach (especially if you can't find a maintainer to merge manually or don't like the idea of having to push people repeatedly) would be to _combine_ `SLOPE` with another word either as a prefix or as a suffix that gives additional context. Something like `SLOPEMinimizer`.\r\n\r\nOn the other hand,\r\n\r\n> The SLOPE.jl package is a thin wrapper around the [C++ slope library](https://github.com/jolars/libslope)\r\n\r\nis something that the registry maintainers tend to find convincing… Anything that's a \"wrapper\" tends to be okay using the name of the library being wrapped (up to small changes to adapt to Julia's convention, like the first letter having to be capitalized).",
+      "createdAt": "2025-05-28T20:21:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131898#issuecomment-2917513529",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86t5iUS",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks for the suggestions, @goerz!",
+      "createdAt": "2025-05-28T20:33:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131898#issuecomment-2917541138",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ugOTd",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] (EDIT: No longer relevant.) Superceded by https://github.com/JuliaRegistries/General/pull/132126",
+      "createdAt": "2025-06-01T18:48:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": true,
+      "minimizedReason": "OUTDATED",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131898#issuecomment-2927682781",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SLOPE\n- Repository: https://github.com/jolars/SLOPE.jl\n- Created by: @jolars\n- Version: v1.0.0\n- Commit: f99f5dcdf4ec98bad3c4f5bee11177dc47cd0bd6\n- Reviewed by: @jolars\n- Reference: https://github.com/jolars/SLOPE.jl/commit/f99f5dcdf4ec98bad3c4f5bee11177dc47cd0bd6#commitcomment-158946625\n- Description: Julia package for Sorted L-One Penalized Estimation (SLOPE)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60b91153d95b8ddc6dbd962151576213c43fde1f3302860871afd4bf426f7cb8d4fb2ddc98bc824011c0c5e166db4df71de392fe63df24c10760d7f299801e7004fb65a591702ec85a22a6e81b869ec495d8c3a69eb9df94880b797c94df8407543aa6e4550b096dee9a6657383b72bea8ecd5e2f5b395614498b894e01e61bfe1460df94e2f834158b02a20fab4d7958d78d2f42767c02b97d07a35f71994313 -->",
+  "package_name": "SLOPE",
+  "title": "New package: SLOPE v1.0.0"
+}

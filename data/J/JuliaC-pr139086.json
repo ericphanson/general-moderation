@@ -1,0 +1,171 @@
+{
+  "created_at": "2025-09-24T16:07:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-10-01T19:01:59Z",
+  "pr_number": 139086,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87Gd4kV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Lowercase package name juliac contains the string \"julia\".\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-24T16:13:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3329722645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Ggv-I",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Lowercase package name juliac contains the string \"julia\".\r\n\r\nI'd vote for an exception to that rule being made for this package! ;-)\r\n\r\n[noblock]",
+      "createdAt": "2025-09-24T20:00:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3330473864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GhfgW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Although I might just throw out there that `JuliaCompiler` could be an even more \"Julian\" package name, leading by example with respect to the [\"Err on the side of clarity\" guideline](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1). That \"clarity\" rule really seems like it's becoming the main guiding principle for new registrations, by wide consensus of the registry maintainers. The package would, of course, still be providing the `juliac` command line interface.\r\n\r\nNot that I think that a package so \"core\" as this one is necessarily bound by the same considerations as other packages in the wider ecosystem.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-24T20:50:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3330668566",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G0lij",
+      "author": {
+        "login": "JeffBezanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We considered `JuliaCompiler` but that really makes it sound like it implements a compiler, which it doesn't. Maybe `JuliaCompilerDriver`? The name of the package doesn't matter so much, the script name `juliac` is what's important so the package name could be longer/clearer.",
+      "createdAt": "2025-09-25T19:37:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3335674019",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G0pFe",
+      "author": {
+        "login": "JeffBezanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Other ideas: `JuliaCompilerScript`, `JuliacScript`, `JuliacApp`, ...",
+      "createdAt": "2025-09-25T19:42:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3335688542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G5x41",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Assuming that the `juliac` script gets wide use, the discoverability benefits from the package having the same name (modulo capitalization).",
+      "createdAt": "2025-09-26T06:54:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3337035317",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G53tE",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps `juliac` then? There are already non-jll packages with all lowercase letters, e.g. https://github.com/JuliaRegistries/General/blob/master/J/jlpkg/Package.toml",
+      "createdAt": "2025-09-26T07:03:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3337059140",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HIRx-",
+      "author": {
+        "login": "JeffBezanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh in that case I would vote for just `juliac`.",
+      "createdAt": "2025-09-27T00:05:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3340835966",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HlL48",
+      "author": {
+        "login": "gbaraldi"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't like the no caps capitalization. If I tell someone to install JuliaC.jl they will assume that it's written like every other julia package. The only non caps packages i've seen are jlls which follow naming from non julia things",
+      "createdAt": "2025-09-29T18:23:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3348414012",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87H1-Mr",
+      "author": {
+        "login": "Keno"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Let's just do JuliaC and move on - nobody will ever use this as a dependency and that's just the way we spell these.",
+      "createdAt": "2025-09-30T15:45:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139086#issuecomment-3352814379",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: JuliaC\n- Repository: https://github.com/JuliaLang/JuliaC.jl\n- Created by: @gbaraldi\n- Version: v0.1.0\n- Commit: 0bd593720a5fb116c592c0ec2d3a6f6cf5b298ea\n- Reviewed by: @gbaraldi\n- Reference: https://github.com/JuliaLang/JuliaC.jl/commit/0bd593720a5fb116c592c0ec2d3a6f6cf5b298ea#commitcomment-166443100\n- Description: Package for compiling and bundling julia binaries, specially trimmed ones\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nRelease!\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e36d76b0aeac94f28aeb0d30c80b5c7c3d89bdd62bbe822b04dacae90ed5dbd2d7fee2ff9c1ce249e7cf92706c9024054d7370225c38586f55d139d29ac11a684eb2c7a1f7aeaa4c0683a55afe3ffd8ed88fae3bd834666c3bef65a62de012cf23e813bd7cc671f8faa62535ac4e3db7c3b9efa85d48ae38cb18526e877037afcdbf1515e51315386ead6e24ce2d1100a91afd58ce14a9c7df13f47ecf50e80633ada1da3aed61f4470e43e5af23ef00 -->",
+  "package_name": "JuliaC",
+  "title": "New package: JuliaC v0.1.0"
+}

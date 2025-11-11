@@ -1,0 +1,281 @@
+{
+  "created_at": "2025-08-12T00:28:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-08-20T11:23:30Z",
+  "pr_number": 136519,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q869Yd8k",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-12T00:36:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3177307940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869ZEsF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I remember there being some debate (possibly down the Slack-hole) coming to the conclusion that we kinda really want the “first letter should be capitalized” to be a hard rule. The maybe most notable deviation, `oneAPI.jl` being considered a mistake. I’d vote for `CuOpt`, but maybe that debate needs to be reopened (only wrapper packages in the GPU space get the first-letter-lowercase-exception?)",
+      "createdAt": "2025-08-12T02:15:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3177466629",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869ZlfP",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n> only wrapper packages in the GPU space get the first-letter-lowercase-exception\r\n\r\nYeah. There is some precedence:\r\n\r\n<img width=\"249\" height=\"179\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a97d78c5-ee2a-4e8c-a28d-7c06c220da2f\" />\r\n\r\nOne thing to note is that this package lives in `jump-dev`, but it was authored by NVIDIA. Various logistical reasons meant they didn't host it in `NVIDIA` instead.",
+      "createdAt": "2025-08-12T03:50:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3177600975",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869mQjI",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] cc @rgsl888prabhu",
+      "createdAt": "2025-08-12T20:27:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3180923080",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869m-5x",
+      "author": {
+        "login": "rgsl888prabhu"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Package name similar to 3 existing packages.\r\n> 1. Similar to GSOpt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> 2. Similar to RKOpt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> 3. Similar to COPT. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\r\n\r\nAgree, naming is with respect to all other NVIDIA projects which starts with cu*.\r\n\r\nAnd I am not sure how to tackle the other issue with similarity. Is there an option to get exception ?",
+      "createdAt": "2025-08-12T21:37:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181112945",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869nQXE",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n> And I am not sure how to tackle the other issue with similarity. Is there an option to get exception ?\r\n\r\nYes. The name similarity isn't a problem. Its just an automated check to guard against people [typosquatting](https://en.wikipedia.org/wiki/Typosquatting)",
+      "createdAt": "2025-08-12T22:10:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181184452",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869nybK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> all other NVIDIA projects which starts with cu*\r\n\r\nI would say consistency with existing names takes precedence even over “hard” naming rules adopted since. But let’s consider the `cu*` namespace for NVIDIA cuda to be a _very_ special exception.",
+      "createdAt": "2025-08-12T23:03:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181323978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869oAUY",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't feel strongly about the specific case of this package, but in general I disagree with this statement:\r\n\r\n> I would say consistency with existing names takes precedence even over “hard” naming rules adopted since.\r\n\r\nAs a general rule, I don't think that past name registrations should bind us to any kind of precedent. As the Julia package ecosystem grows, I expect that we will need to be progressively stricter with names over time.\r\n\r\nFor the specific case of this package, I don't have a strong objection to starting the package name with `cu`.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-12T23:14:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181380888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869oPOI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> As a general rule, I don't think that past name registrations should bind us to any kind of precedent.\r\n\r\nI don't think that either (and I think we've even formalized that statement somewhere in the guidelines).\r\n\r\nJust in this particular case (if I understand the situation correctly), we already have a whole bunch of `cu*` packages related to CUDA. I don't think it would be helpful to now add another package that breaks the pattern only by making the first letter uppercase, as `CuOpt`. That just creates unnecessary confusion. Better to say \"CUDA-related packages can use the lowercase `cu` prefix\" (also for future packages that fit the same pattern).\r\n\r\nI would not derive any kind of precedent from this that it should be okay to establish lowercase prefixes for any other (new) context. I think we should be _extremely_ strict with the first-letter-uppercase going forward. Even for wrapper packages where the wrapped library has a lowercase name. So `cu*` would be an extremely rare exception to that rule.",
+      "createdAt": "2025-08-12T23:27:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181441928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869oTiA",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] \r\n\r\nExcluding `_jll`, there's a few reasonable, and a few clangers:\r\n\r\n```Julia\r\njulia> filter(map(v -> v[\"name\"], values(data[\"packages\"]))) do n\r\n       return islowercase(first(n)) && !endswith(n, \"_jll\") && n != \"julia\"\r\n       end |> sort!\r\n19-element Vector{String}:\r\n \"cuDNN\"\r\n \"cuStateVec\"\r\n \"cuTENSOR\"\r\n \"cuTensorNet\"\r\n \"deSolveDiffEq\"\r\n \"eQuilibrator\"\r\n \"gRPCClient\"\r\n \"jInv\"\r\n \"jlpkg\"\r\n \"mPulseAPI\"\r\n \"mlpack\"\r\n \"oneAPI\"\r\n \"oneAPIKernels\"\r\n \"openPMD\"\r\n \"sparseQFCA\"\r\n \"uCSV\"\r\n \"vOptGeneric\"\r\n \"vOptSpecific\"\r\n \"vSmartMOM\"\r\n```\r\n\r\n> we already have a whole bunch of cu* packages related to CUDA\r\n\r\nWell. 4. There's a slightly larger precedent for \"Cu\":\r\n```\r\n \"CuArrays\"\r\n \"CuCountMap\"\r\n \"CuFluxSampler\"\r\n \"CuNFFT\"\r\n \"CuTropicalGEMM\"\r\n \"CuYao\"\r\n```",
+      "createdAt": "2025-08-12T23:31:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181459584",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869oZFG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> There's a slightly larger precedent for \"Cu\"\r\n\r\nOkay, then I might have a slight preference for renaming to `CuOpt`. But I don’t have super strong feelings either way. So this is mostly up to whoever has merge permissions and feels it’s okay to merge, I suppose 😊",
+      "createdAt": "2025-08-12T23:36:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181482310",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869pbYO",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I guess the `cu*` packages are direct wrappers of NVIDIA libraries and follow the upstream naming convention, whereas the `Cu` are Julia packages that also support GPU.\r\n\r\nSo that might be a settled argument to leave as `cuOpt`.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-13T00:32:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181753870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869pt4x",
+      "author": {
+        "login": "imciner2"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think a rationale for all the Cuda packages from NVIDIA having lowercase `cu` here is probably rule 6 of the naming guidelines:\r\n\r\n> Packages that wrap external libraries or programs can be named after those libraries or programs.\r\n\r\nPeople coming from other ecosystems and wanting to use these have an easier time if we keep the upstream name (including capitalization). I also don't think we should make a blanket statement that \"all Cuda packages from NVIDIA get lowercase `cu` at the front\", because then if someone wanted to bring the CUTLASS library into Julia we'd be having this same conversation in reverse. So I think the best thing to do is to think of this as applying rule 6 and not trying to build some pattern or general exception.\r\n\r\nSince this is the actual NVIDIA \"cuOpt\" library (even if we do build the underlying JLL instead of repackaging it, since they open-sourced this) I think that justifies having the lowercase `cu` at the start.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-13T00:50:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181829681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869p9xt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Packages that wrap external libraries or programs can be named after those libraries or programs.\r\n\r\nRight, but we decided at some point recently that this rule (in general) does not extend to the first letter being allowed to be lowercase.\r\n\r\nIn this _particular_ case, I’m okay either way, personally. Whatever would be most consistent with users’ expectations based on the existing set of package names in the domain (and I would lean towards the rationale in https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181753870, i.e., leaving the lowercase as-is)",
+      "createdAt": "2025-08-13T01:26:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181894765",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-alOU",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe consensus seems to be:\r\n\r\n * that we're okay with `cuOpt.jl` for this package\r\n * it doesn't create a precedent for future packages\r\n * the three day waiting period has elapsed\r\n\r\nSo are we happy to merge this PR?",
+      "createdAt": "2025-08-17T20:41:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3194639252",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: cuOpt\n- Repository: https://github.com/jump-dev/cuOpt.jl\n- Created by: @odow\n- Version: v0.1.0\n- Commit: c8c2ae84896aec3701b9ad70451244e9e7d27045\n- Reviewed by: @odow\n- Reference: https://github.com/jump-dev/cuOpt.jl/commit/c8c2ae84896aec3701b9ad70451244e9e7d27045#commitcomment-163814409\n- Description: A Julia interface to NVIDIA's cuOpt\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68f5374c54257896109cd174ff6dfb23ea8a1e587621e2f080d8c7ee2cf6041d0fd32f00d6487ef28a2d271f7b5e7c0fe69ae89c6e3fc0cbe5404cc303ca05050891db5c4871c67de5cbaee27a94f969cc166993909b910df21d25b5e812031595f675cd96976b47ab2bc3df3753c2a57ac3c0c22f0e4fe27d572712b018bfce75f6962fe84f8974f38b0096631dfa7733d40d5c2eaad66f3366d271bb17d7e3cfd543ab1f0ec5f9946fb666f013499e5 -->",
+  "package_name": "cuOpt",
+  "title": "New package: cuOpt v0.1.0"
+}

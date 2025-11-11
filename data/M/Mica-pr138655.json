@@ -1,0 +1,89 @@
+{
+  "created_at": "2025-09-16T21:33:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2025-09-20T21:15:58Z",
+  "pr_number": 138655,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87EuRxs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-16T21:52:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138655#issuecomment-3300465772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Eudor",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name `Mica` seems perfectly fine to me, but it will need a manual merge. Please wait for the end of the three-day registration period, and then go on [Slack](https://julialang.org/slack/) to request a manual merge in the `#pkg-registration` channel. Note that it sometimes takes repeated pings (a few days apart) to get the attention of a registry maintainer who can merge this.\r\n\r\nI would also note that your documentation is already in very good shape, so I would encourage you not to [wait too long](https://0ver.org) before tagging a 1.0 version, [if the API can reasonably be considered \"stable\"](https://semver.org/#how-do-i-know-when-to-release-100). That's not to say that you need to register as `1.0` _now_: I'm a big fan of treating `0.x` (`0.1.2`, in this case) as a \"release candidate\" for `1.0`. You never know what kind of issues come up once the package is actually used \"in the wild\", after registration, which may require \"breaking changes\" to fix. Best to wait with making the 1.0 release until the dust has settled, IMO.\r\n\r\nOne small detail: your CHANGELOG already (incorrectly) mentions `1.0.0`. I don't think packages < 1.0 really need to have a CHANGELOG, but if you want to have one at this point (not a terrible idea, since the General registry goes beyond SemVer by requiring release notes detailing \"breaking changes\" even for `0.x` releases), you should fix that to say `0.1.2`.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-16T22:14:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138655#issuecomment-3300514347",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Fgs43",
+      "author": {
+        "login": "Mehdilotfi7"
+      },
+      "authorAssociation": "NONE",
+      "body": "> The name `Mica` seems perfectly fine to me, but it will need a manual merge. Please wait for the end of the three-day registration period, and then go on [Slack](https://julialang.org/slack/) to request a manual merge in the `#pkg-registration` channel. Note that it sometimes takes repeated pings (a few days apart) to get the attention of a registry maintainer who can merge this.\r\n> \r\n> I would also note that your documentation is already in very good shape, so I would encourage you not to [wait too long](https://0ver.org) before tagging a 1.0 version, [if the API can reasonably be considered \"stable\"](https://semver.org/#how-do-i-know-when-to-release-100). That's not to say that you need to register as `1.0` _now_: I'm a big fan of treating `0.x` (`0.1.2`, in this case) as a \"release candidate\" for `1.0`. You never know what kind of issues come up once the package is actually used \"in the wild\", after registration, which may require \"breaking changes\" to fix. Best to wait with making the 1.0 release until the dust has settled, IMO.\r\n> \r\n> One small detail: your CHANGELOG already (incorrectly) mentions `1.0.0`. I don't think packages < 1.0 really need to have a CHANGELOG, but if you want to have one at this point (not a terrible idea, since the General registry goes beyond SemVer by requiring release notes detailing \"breaking changes\" even for `0.x` releases), you should fix that to say `0.1.2`.\r\n> \r\n> [noblock]\r\n\r\nHi goerz, I recently posted a manual merge request in the #pkg-registration channel but haven’t received any response yet. Could you help me with this?",
+      "createdAt": "2025-09-19T20:13:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138655#issuecomment-3313684023",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FhA8o",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sorry, I don't have sufficient permissions to do a manual merge.\r\n\r\nAll you can do is to bump the request every couple of days. Make sure to select \"Also send to `#pgk-registration`\" when you do. Without that, the bump would easily be missed.\r\n\r\nI think if you stick to insisting on the name, it will eventually get merged. But it can take a while. There are not that many people with permissions to merge, they tend to be busy, or not checking in on the `#pgk-registration` channel that often. And some of the maintainers also seem to be getting less comfortable with shorter names. But at least as far as the official guidelines are concerned, you should be in the clear. So I think you have a pretty good shot (hopefully)\r\n\r\n[noblock]",
+      "createdAt": "2025-09-19T20:49:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138655#issuecomment-3313766184",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FmvGO",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks all. To summarize, we've asked the package author to consider a different package name, and the package author is insisting on keeping this name. For this specific case, because the author insists on keeping this name, I will manually merge the registration.\r\n\r\n---\r\n\r\nNote to others that may find this comment in the future: A package author insisting on keeping the name does not guarantee or ensure that they will get that name. Each registration is evaluated on a case by case basis. Additionally, the standards for the General registry continue to evolve over time. Package names similar to those that were merged in the past may be rejected in the future.",
+      "createdAt": "2025-09-20T21:15:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138655#issuecomment-3315265934",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Mica\n- Repository: https://github.com/Mehdilotfi7/Mica.jl\n- Created by: @Mehdilotfi7\n- Version: v0.1.2\n- Commit: 980ee3e2219f77019199cc31e4d0d8640f0004e2\n- Reviewed by: @Mehdilotfi7\n- Reference: https://github.com/Mehdilotfi7/Mica.jl/issues/10#issuecomment-3300422231\n- Description: Mica is a Julia package for change point detection in time series models, identifying points where model parameters change and segmenting accordingly for more accurate simulation.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598865653ca65165dab65870698878ea7077b5a9367fddbb73976ab45ecd9b5bde2221065843c0f4529ab2a56202304dd7001cfa16941a92d6d594a732bb0a76acac2cb3c2005f113f56a2446126bb71ad1b533c9651a3b372fc696cb1f1d3402c95cc4c34cd98926dfaf235db93482db2dd3b8f6a83e9c6dd84cf51d8b7c416d91 -->",
+  "package_name": "Mica",
+  "title": "New package: Mica v0.1.2"
+}
