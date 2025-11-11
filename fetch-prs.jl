@@ -147,9 +147,67 @@ function main()
     println("\n=== Complete! ===")
 end
 
-# Placeholder functions - will implement in later tasks
 function fetch_pr_list()
-    error("Not implemented")
+    println("Fetching PRs from $(REPO) with label '$(LABEL)'...")
+
+    all_prs = []
+    has_next_page = true
+    cursor = nothing
+    page = 0
+
+    while has_next_page
+        page += 1
+        println("Fetching page $page...")
+
+        # Build GraphQL query
+        cursor_arg = cursor === nothing ? "" : ", after: \"$cursor\""
+        query = """{
+          search(query: "repo:$(REPO) label:\\"$(LABEL)\\" is:merged is:closed", type: ISSUE, first: 100$(cursor_arg)) {
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
+            nodes {
+              ... on PullRequest {
+                number
+                title
+                author { login }
+                state
+                createdAt
+                mergedAt
+                mergedBy { login }
+              }
+            }
+          }
+        }"""
+
+        # Execute query
+        result = gh_with_retry(`gh api graphql -f query=$query`)
+        data = JSON.parse(result)
+
+        # Extract PRs
+        search_data = data["data"]["search"]
+        prs = search_data["nodes"]
+        append!(all_prs, prs)
+
+        # Check pagination
+        page_info = search_data["pageInfo"]
+        has_next_page = page_info["hasNextPage"]
+        cursor = page_info["endCursor"]
+
+        println("  Fetched $(length(prs)) PRs ($(length(all_prs)) total)")
+
+        # Small delay between pages
+        sleep(0.5)
+    end
+
+    # Save to file
+    println("\nSaving $(length(all_prs)) PRs to $(PR_LIST_FILE)")
+    open(PR_LIST_FILE, "w") do f
+        JSON.print(f, all_prs, 2)
+    end
+
+    println("✓ Stage 1 complete: $(length(all_prs)) PRs fetched")
 end
 
 function filter_prs()
