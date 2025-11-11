@@ -1,0 +1,171 @@
+{
+  "created_at": "2021-08-30T07:26:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-09-03T04:37:10Z",
+  "pr_number": 43765,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q842IJRP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to FastJet. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.43 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-30T07:30:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908104783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842IRmz",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hmm this module is already in use fairly widely, would be a shame to rename it ...",
+      "createdAt": "2021-08-30T08:11:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908138931",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842IVhG",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "... so I explored a bit which alternatives seem permissible. The only things that worked so far are quite silly, such as adding multiple dashes ",
+      "createdAt": "2021-08-30T08:35:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908154950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842IWyX",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "This code has actually been development in some shape or form since 2013, when I finished my previous network simulation toolkit. Published here:  https://academic.oup.com/bioinformatics/article/29/2/277/202011 .  I have fairly recently started switching all my projects to Julias, but Fastnet is used throughout my lab and has branched to several collaborators. I think it might already be pretty widely used for things like epidemic simulation and opinion dynamics. Changing the name would likely mess with many existing projects, so I would really appreciate if this could be manually merged. ",
+      "createdAt": "2021-08-30T08:44:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908160151",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842KIcY",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name similarity is OK— does not seem like it would get confused with FastJet to me. But the compat issues AutoMerge brought up do need to get addressed!",
+      "createdAt": "2021-08-30T19:27:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908625688",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q842KKFH",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I think the name similarity is OK— does not seem like it would get confused with FastJet to me. But the compat issues AutoMerge brought up do need to get addressed!\r\n\r\nThanks alot for the quick help. Where do I see the compatibility issues? Everything seems to be ok to me?",
+      "createdAt": "2021-08-30T19:37:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908632391",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842KKMC",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > I think the name similarity is OK— does not seem like it would get confused with FastJet to me. But the compat issues AutoMerge brought up do need to get addressed!\r\n> \r\n> Thanks alot for the quick help. Where do I see the compatibility issues? Everything seems to be ok to me?\r\n\r\nOK found it!",
+      "createdAt": "2021-08-30T19:38:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908632834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842KM7O",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I think the name similarity is OK— does not seem like it would get confused with FastJet to me. But the compat issues AutoMerge brought up do need to get addressed!\r\n\r\nOK done, I have fixed the toml on the repository and tested that it compiles correctly.",
+      "createdAt": "2021-08-30T19:55:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908644046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842KQWW",
+      "author": {
+        "login": "bridgewalker"
+      },
+      "authorAssociation": "NONE",
+      "body": "No more compat issues (I think), but still stuck on the namecheck.",
+      "createdAt": "2021-08-30T20:12:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908658070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842KYEb",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Great! We will manually merge it once 3 days have passed from the initial registration. This is a waiting period all new packages have to allow for community comment. (If we forget feel free to ping me then)",
+      "createdAt": "2021-08-30T20:58:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43765#issuecomment-908689691",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Fastnet\n- Repository: https://github.com/bridgewalker/Fastnet.jl\n- Created by: @bridgewalker\n- Version: v0.1.0\n- Commit: 976c26fc6165d5501fb765048fd18d2e30181a94\n- Git reference: v0.1.0\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Fastnet is a Julia package that allows very fast (linear-time) simulation of discrete-state dynamical processes on networks, such as commonly studied models of epidemics\n<!-- END RELEASE NOTES -->",
+  "package_name": "Fastnet",
+  "title": "New package: Fastnet v0.1.0"
+}

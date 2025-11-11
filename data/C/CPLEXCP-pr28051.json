@@ -1,0 +1,200 @@
+{
+  "created_at": "2021-01-16T00:35:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-01-19T11:31:35Z",
+  "pr_number": 28051,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTI3NDcxMw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Package name similar to 1 existing package.\n1. Similar to CPLEX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-16T00:38:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761274713",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTI3NjY2Mg==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@StefanKarpinski : the package does not meet the guidelines, does not meet all guidelines, but that's on purpose. \r\n\r\n* name close to CPLEX.jl: that's wrapping another part of the same software suite (this one is for CPLEX CP Optimizer)\r\n* not importable, because the CI environment doesn't have CPLEX installed\r\n* https://github.com/JuliaRegistries/General/pull/28051/checks?check_run_id=1711999279 is unrelated, I think\r\n\r\nCan it be merged as is?",
+      "createdAt": "2021-01-16T00:46:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761276662",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTYwNDIxOA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems ok to me. Will wait for feedback from others. Ping again after the three day wait.",
+      "createdAt": "2021-01-16T17:43:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761604218",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTYxNzI0OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dourouc05 Note that you can allow AutoMerge to not fail: https://github.com/JuliaRegistries/RegistryCI.jl/issues/283#issuecomment-715355664.  This would make registration of new versions much easier, as it won't require manual intervention",
+      "createdAt": "2021-01-16T19:06:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761617248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTY5MTk2NA==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano thanks for the tip, I'm trying it! \r\n\r\n@StefanKarpinski thanks for checking, I'll ping you once the 3-day period has elapsed.",
+      "createdAt": "2021-01-16T22:44:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761691964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTcwOTgyMg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The package still fails to load, but because of `JavaCall`... https://github.com/JuliaRegistries/General/pull/28051/checks?check_run_id=1715034746#step:6:350",
+      "createdAt": "2021-01-17T01:15:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761709822",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTcxMzg0MQ==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for keeping an eye on this. Actually, it's not a problem with JavaCall, but with Julia 1.6: I can reproduce locally this exact error with 1.6.0 beta 1 (even on Windows!). What I don't get is that this issue does not arise with 1.5.",
+      "createdAt": "2021-01-17T01:51:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761713841",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTc0NDA5NQ==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I got it: it's due to a change in the dependencies (CP.Strictly now takes two types, but used to take only one).",
+      "createdAt": "2021-01-17T06:49:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761744095",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MTg5NTc5NA==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The package finally passes AutoMerge, with the exception of the guidelines for naming new projects. I'll bump this tomorrow to get it merged if there is no more objection!",
+      "createdAt": "2021-01-17T22:58:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-761895794",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MjU1MzMxMg==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@StefanKarpinski three days have passed, could you please manually merge this? Thanks in advance! ",
+      "createdAt": "2021-01-19T02:03:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-762553312",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2MzA0ODIzMw==",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano thanks for merging! ",
+      "createdAt": "2021-01-19T18:49:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28051#issuecomment-763048233",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: CPLEXCP\n- Repository: https://github.com/dourouc05/CPLEXCP.jl\n- Created by: @dourouc05\n- Version: v0.0.1\n- Commit: ca5351f41143eb18713127971d2c769aa13808da\n- Reviewed by: @dourouc05\n- Reference: https://github.com/dourouc05/CPLEXCP.jl/commit/ca5351f41143eb18713127971d2c769aa13808da#commitcomment-46053208\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bc5d2fc74043ab002537c8fc8426dd438eb1a791e2f0a62539c4448f5c0cf7ed00beeadbd7dc5fae994e96aeb4762ea567928062435013255c2a686afde1b2408fb3630decfa8d12f6d03e6a165f44f23d2a4a6bf8929e4406805d07e5081322897915e1eb9028ea48c1fe3f299925e1d0333512094a4fba828127b038b42938fdfda88ba30d2d001d44c8102bc19e346080f59bbcb80596e789bd1a609aa0bd8706a5e20f92851a0c7ed8e85b5ccf99 -->",
+  "package_name": "CPLEXCP",
+  "title": "New package: CPLEXCP v0.0.1"
+}

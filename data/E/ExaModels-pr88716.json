@@ -1,0 +1,81 @@
+{
+  "created_at": "2023-07-31T15:19:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-07T18:07:53Z",
+  "pr_number": 88716,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85i3CK2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to EHTModels. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-31T15:24:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88716#issuecomment-1658593974",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85i3E1z",
+      "author": {
+        "login": "sshin23"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] The name is conflicting with EHTModels.\r\n\r\nTo me, there won't be any confusion with EHTModels. The current name is intended to be aligned with other packages developed by [our team](https://github.com/exanauts), such as ExaPF.jl, ExaAdmm.jl, etc.\r\n\r\nA manual merge would be appreciated!",
+      "createdAt": "2023-07-31T15:30:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88716#issuecomment-1658604915",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jb4L7",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems OK to me, but the compat error should be addressed first:\r\n\r\n> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: NLPModels\r\n",
+      "createdAt": "2023-08-07T16:52:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88716#issuecomment-1668252411",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q85jcXp6",
+      "author": {
+        "login": "sshin23"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, @ericphanson!",
+      "createdAt": "2023-08-07T18:22:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/88716#issuecomment-1668381306",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: ExaModels\n- Repository: https://github.com/sshin23/ExaModels.jl\n- Created by: @sshin23\n- Version: v0.1.0\n- Commit: eda7f609cdb22b67b42a9a71b5cea93172689fd7\n- Reviewed by: @sshin23\n- Reference: https://github.com/sshin23/ExaModels.jl/commit/eda7f609cdb22b67b42a9a71b5cea93172689fd7#commitcomment-123844928\n- Description: An implementation of SIMD abstraction of nonlinear programs and its automatic differentiation\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e0da312c149466a1c6e5c4c1f27386f96ad70f221fd99510ee8601992f17bfd02d72d60afc65026bd1bd69df6fccf20ec070eb35bcd719ed8905c54d62c7b6a02d282c1adfca4fec27b21af8459e6e7b3d2e8dd6fdf51192f801f496208e2ee4a98eeee1248b68c7e968db4809b5e0601cc2a0005b75f1fac40cdc7c524453c947faadc6b80b6f6f28f5086a478b7f9bd8a00a31476c3cfafa675969707eae35d739c00ec145c309a1fc19220ea6059e -->",
+  "package_name": "ExaModels",
+  "title": "New package: ExaModels v0.1.0"
+}

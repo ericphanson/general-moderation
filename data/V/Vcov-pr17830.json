@@ -1,0 +1,74 @@
+{
+  "created_at": "2020-07-12T20:45:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-09-24T20:55:55Z",
+  "pr_number": 17830,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY1NzI3MzE3MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name is not at least five characters long\n- The following dependencies do not have a compat entry that has an upper bound: CategoricalArrays, Combinatorics. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details. Please note: in order to satisfy this guideline, each compat entry must only include a finite number of breaking releases. Compat entries of the form `PkgA = \"0\"` include an infinite number of breaking releases and therefore do not meet this guideline.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-07-12T20:48:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/17830#issuecomment-657273171",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODE4ODY0NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing due to inactivity, please comment if this is still relevant.",
+      "createdAt": "2020-09-24T08:09:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/17830#issuecomment-698188645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODQ1MzE1Mw==",
+      "author": {
+        "login": "matthieugomez"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No, I would still like to register this package, even though it is only 4\nletters.\n\nOn Thu, Sep 24, 2020 at 1:10 AM Fredrik Ekre <notifications@github.com>\nwrote:\n\n>\n>\n> Closed #17830 <https://github.com/JuliaRegistries/General/pull/17830>.\n>\n>\n>\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/17830#event-3801941479>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/ABPPPXIEOOPUAILED6DKZ3TSHL5GJANCNFSM4OX67LHA>\n> .\n>\n>\n>\n",
+      "createdAt": "2020-09-24T16:31:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/17830#issuecomment-698453153",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODQ3NDk4Mw==",
+      "author": {
+        "login": "matthieugomez"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Just to give some context. This package does not export anything: the types\ncan be constructed using VCOV.robust() or VCOV.cluster(). In spirit, it is\nsimilar to the api CSV.file().\n\nOn Thu, Sep 24, 2020 at 9:47 AM Fredrik Ekre <notifications@github.com>\nwrote:\n\n>\n>\n> Reopened #17830 <https://github.com/JuliaRegistries/General/pull/17830>.\n>\n>\n>\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/17830#event-3804167270>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/ABPPPXMLZVHJWZF3V22RL53SHNZ2XANCNFSM4OX67LHA>\n> .\n>\n>\n>\n",
+      "createdAt": "2020-09-24T17:13:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/17830#issuecomment-698474983",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Vcov\n- Repository: https://github.com/matthieugomez/Vcov.jl\n- Created by: @matthieugomez\n- Version: v0.1.0\n- Commit: 4840c9f4b953c26cadd4b722048fe023814de1ec\n- Reviewed by: @matthieugomez\n- Reference: https://github.com/matthieugomez/Vcov.jl/commit/4840c9f4b953c26cadd4b722048fe023814de1ec#commitcomment-40693652\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd640aab3781daee8123734294ddc9def528a7083994caeae75377543c6d398eb6ba1697b8f6b077328e61a535fd0fbe2bbbdfe41ba1d0ab5bdda302fbb4c83af542889a17fd8f59d9c3eeeed31139092f46f8ae12cffa5a6241835e9076ffe7e0d8eb52aa48c4c77d3b11ac9ec246b996c404999d3c2b970a777ce3c5667c27bc57b8e6224cbdb65d8e73f0c6517a7a6689bd302c71c938dc321d1a8f67b01f8b1ea56606cae60e53bdcb5021a697cdbdc -->",
+  "package_name": "Vcov",
+  "title": "New package: Vcov v0.1.0"
+}

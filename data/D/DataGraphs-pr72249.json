@@ -1,0 +1,89 @@
+{
+  "created_at": "2022-11-15T15:32:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-12-01T23:06:12Z",
+  "pr_number": 72249,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85OaMJb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to MetaGraphs. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.04 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-15T15:37:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72249#issuecomment-1315488347",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Oad3-",
+      "author": {
+        "login": "mtfishman"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nI think the name `DataGraphs.jl` and `MetaGraphs.jl` are different enough that people won't get confused between the two.\r\n\r\n`DataGraphs.jl` defines graph types that have metadata on the vertices and edges, like `MetaGraphs.jl` and related packages, but allows for more flexible vertex and edge types (based on `NamedGraphs.jl`), as well as a high-level syntax based around using `getindex` and `setindex!` to access vertex and edge metadata.",
+      "createdAt": "2022-11-15T16:27:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72249#issuecomment-1315560958",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PQpx7",
+      "author": {
+        "login": "mtfishman"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nCan this be merged?",
+      "createdAt": "2022-11-28T21:08:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72249#issuecomment-1329765499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Pim3c",
+      "author": {
+        "login": "mtfishman"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nFriendly reminder (this is holding up registering some downstream dependencies).",
+      "createdAt": "2022-12-01T21:31:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72249#issuecomment-1334472156",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Pi8l7",
+      "author": {
+        "login": "mtfishman"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[no block]\r\n\r\nThanks!",
+      "createdAt": "2022-12-01T23:06:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72249#issuecomment-1334561147",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: DataGraphs\n- Repository: https://github.com/mtfishman/DataGraphs.jl\n- Created by: @mtfishman\n- Version: v0.0.1\n- Commit: bef970cb7aa80df330eeb20dc9448b268b3547c3\n- Reviewed by: @mtfishman\n- Reference: https://github.com/mtfishman/DataGraphs.jl/commit/bef970cb7aa80df330eeb20dc9448b268b3547c3#commitcomment-89992060\n- Description: A simple graph type with data on the vertices and edges.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd653afc386892e327ba589085c58a82fd8176d5ffd87a95ce9ead3b196438d74492c4e1be3798aea29712b5f29c81863db26b5abafaf45505113efe42e5da6a435c00fe7fd0bed45902db89c20a243cbb4fb656b71a14a4f0371f7356c5bf064680a5eb4eef4cb271f91ec5fd45310635fb6251d086d4213f734dc6e7dd5dc7e65f9ac16745dd0a258c49e7af3dc685691c63004d0ac27a6ccc55f5f7b90bcc82f4256bbed1676777daff5b61d697e88d6 -->",
+  "package_name": "DataGraphs",
+  "title": "New package: DataGraphs v0.0.1"
+}

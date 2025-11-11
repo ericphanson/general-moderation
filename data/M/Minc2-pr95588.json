@@ -1,0 +1,107 @@
+{
+  "created_at": "2023-11-19T06:30:53Z",
+  "review_comments": [
+    {
+      "id": 1741007540,
+      "node_id": "PRR_kwDOBhF1q85nxaq0",
+      "user": {
+        "login": "ararslan",
+        "id": 6396159,
+        "node_id": "MDQ6VXNlcjYzOTYxNTk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6396159?u=cc84063fd3b265af35e1b7153fc75bcc228fba4c&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/ararslan",
+        "html_url": "https://github.com/ararslan",
+        "followers_url": "https://api.github.com/users/ararslan/followers",
+        "following_url": "https://api.github.com/users/ararslan/following{/other_user}",
+        "gists_url": "https://api.github.com/users/ararslan/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/ararslan/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/ararslan/subscriptions",
+        "organizations_url": "https://api.github.com/users/ararslan/orgs",
+        "repos_url": "https://api.github.com/users/ararslan/repos",
+        "events_url": "https://api.github.com/users/ararslan/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/ararslan/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/95588#pullrequestreview-1741007540",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/95588",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/95588#pullrequestreview-1741007540"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/95588"
+        }
+      },
+      "submitted_at": "2023-11-21T02:42:27Z",
+      "commit_id": "4c48c2c228ec4c20467f4bb19b8e99688d7ad7c6"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-11-21T02:44:08Z",
+  "pr_number": 95588,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85sWN-j",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Minio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Finch. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-19T06:35:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95588#issuecomment-1817763747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85setXc",
+      "author": {
+        "login": "ararslan"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n@vfonov, I assume the separate Minc2, JMinc, and jminc PRs are iterations on naming to meet the automatic merge requirements? IMO, Minc2 makes the most sense and is not ambiguous with Minio nor Finch, despite the low edit distance. I can merge this PR manually and close the others for you if you'd like.",
+      "createdAt": "2023-11-20T23:51:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95588#issuecomment-1819989468",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sfIWa",
+      "author": {
+        "login": "vfonov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, that would be preferable, I reverted back to Minc2 package name, and  https://github.com/vfonov/Minc2.jl.git repository\r\n",
+      "createdAt": "2023-11-21T02:08:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/95588#issuecomment-1820099994",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ararslan",
+  "body": "- Registering package: Minc2\n- Repository: https://github.com/vfonov/Minc2.jl\n- Created by: @vfonov\n- Version: v0.1.0\n- Commit: 9b99df2d301292cabca7d2a19c4bfa892253119a\n- Reviewed by: @vfonov\n- Reference: https://github.com/vfonov/Minc2.jl/commit/9b99df2d301292cabca7d2a19c4bfa892253119a#commitcomment-133007200\n- Description: minc2 interface for Julia Language\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a25e60cd141cd0fa493a2eaf894615cb3b10c64ad6a423af64b6b9f62625da75681e1e8c2ed577cbe5421aba182e1a3bdd388f09718989e064d9474a724c484c4622fb727bcfabeea145752fa29287b620d6aef7ed6a2741a6d9cfbcdee4202805f2aab744331c13b0e33215178557792b662c05a5d2f57709e957f91347cffce9fc6fce7eb6ef6e9b85c40776c271085f477af455acd7d8f8e80813791a8859 -->",
+  "package_name": "Minc2",
+  "title": "New package: Minc2 v0.1.0"
+}

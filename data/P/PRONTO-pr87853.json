@@ -1,0 +1,81 @@
+{
+  "created_at": "2023-07-20T05:26:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-08T22:04:21Z",
+  "pr_number": 87853,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85h8iFE",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You’re going to need a manual merge for the all-caps name, but personally, I think pronounceable acronyms like this should be ok. (Unfortunately, I’m not a maintainer and can’t merge this for you)",
+      "createdAt": "2023-07-20T05:39:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87853#issuecomment-1643258180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85h8icj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-20T05:40:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87853#issuecomment-1643259683",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iCIWH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] You do have to fix the `compat` issue, though, before asking for a merge on Slack in a few days",
+      "createdAt": "2023-07-20T22:43:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87853#issuecomment-1644725639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iCZWt",
+      "author": {
+        "login": "narijauskas"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks! I'll get the julia compat added shortly. We'd prefer to keep the name as is to match the literature. I assume I should retrigger Registrator on the new commit?",
+      "createdAt": "2023-07-20T23:49:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87853#issuecomment-1644795309",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: PRONTO\n- Repository: https://github.com/narijauskas/PRONTO.jl\n- Created by: @narijauskas\n- Version: v1.0.0\n- Commit: 3724adbf21b0dd52ac52956c297a9d909a06e5d8\n- Reviewed by: @narijauskas\n- Reference: https://github.com/narijauskas/PRONTO.jl/commit/3724adbf21b0dd52ac52956c297a9d909a06e5d8#commitcomment-122403311\n- Description: A Julia implementation of PRONTO\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63cfd960406f84197415dc7be213fb68dbcfaa5998b889ad56f4b94e47cf5a3605e830f2bc25ce9fa89ce9f855ce3c7bfad2f12ef9d8f335a7d52e60d8318008a0c572a5acfab55f97a7c11deba8c2344f4542df66e59031ce7ac4d7222f30881ef3557e2649e48330cad42044ff477864defcd4329f54db755b1c9cc0e4143dae4e9fbe9b2884f24c73e68281b23faaeb2727f9790f3e347a955fcda01b1123bfe88413263bb522dd7476733830706e5 -->",
+  "package_name": "PRONTO",
+  "title": "New package: PRONTO v1.0.0"
+}

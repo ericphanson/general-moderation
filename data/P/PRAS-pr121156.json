@@ -1,0 +1,81 @@
+{
+  "created_at": "2024-12-10T22:22:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-12-13T14:43:38Z",
+  "pr_number": 121156,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86W-6az",
+      "author": {
+        "login": "GordStephen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Note that the automerge checks won't pass because of the package name, but consensus in https://github.com/JuliaRegistries/General/pull/120172 and https://github.com/JuliaRegistries/General/pull/120786 seems to be that we can get an exception for this? [noblock]",
+      "createdAt": "2024-12-10T22:28:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/121156#issuecomment-2533074611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86W-6sA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-12-10T22:29:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121156#issuecomment-2533075712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86W-7_N",
+      "author": {
+        "login": "GordStephen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Whoops, looks like we're missing compat bounds for Reexport, let me fix that. [noblock]\r\n\r\nUpdate: fixed",
+      "createdAt": "2024-12-10T22:31:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121156#issuecomment-2533081037",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86XfeuI",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/JuliaRegistries/General/pull/121152#issuecomment-2533063077",
+      "createdAt": "2024-12-13T14:43:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121156#issuecomment-2541611912",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: PRAS\n- Repository: https://github.com/NREL/PRAS\n- Created by: @GordStephen\n- Version: v0.7.0\n- Commit: ffb58a54145d3f40b385817d737d691bbbbcec4a\n- Reviewed by: @GordStephen\n- Reference: https://github.com/NREL/PRAS/commit/ffb58a54145d3f40b385817d737d691bbbbcec4a#commitcomment-150179467\n- Description: NREL's Probabilistic Resource Adequacy Suite (PRAS)\n<!-- 723ffce5a574ab95236c1e8ac347ee92f3733613d647d8d2c2809b18c54e6600dca4d707397128835dfe95999b49634af06ac2a0f9c60efbc4ee45776fe5bece7a9fe865189436c3e521a23ad4d8b0abead532491f143c0c0a4968d144f8668e30dc9bf4bedf70c6af554253d380b765cccfd4ae141140fbbe7152681f74330e1df20ba5af64a24614eb447f7144a359cf16b3023ed0ad94f5e300b95d1c41e87bc216aa544776581487067f518ee6c8cf83a4244c3aa0605daefa8dd20addcc5d0b119578ce3b15431a2f44c0aa5ed0716aa8e042a0096dcff88dc52461a979 -->",
+  "package_name": "PRAS",
+  "title": "New package: PRAS v0.7.0"
+}

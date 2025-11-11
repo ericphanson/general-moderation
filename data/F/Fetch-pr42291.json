@@ -1,0 +1,59 @@
+{
+  "created_at": "2021-08-06T10:12:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-12T04:43:06Z",
+  "pr_number": 42291,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841S8qC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Match. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.43 is at or below cutoff of 2.50.\n  2. Similar to Fatou. Normalized visual distance 2.17 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-06T10:15:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42291#issuecomment-894159490",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841S_VS",
+      "author": {
+        "login": "foldfelis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nHi, @giordano , due to the fact that `Fetch` doesn't share the same (not even close) meaning with both `Match` and `Fatou`. And I would like to keep the name simple. Is there any chance to use `Fetch` as the name of this project?",
+      "createdAt": "2021-08-06T10:36:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42291#issuecomment-894170450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841bywg",
+      "author": {
+        "login": "foldfelis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, @giordano , this PR is ready to merge. Thanks in advance. ",
+      "createdAt": "2021-08-11T03:51:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42291#issuecomment-896478240",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Fetch\n- Repository: https://github.com/foldfelis/Fetch.jl\n- Created by: @foldfelis\n- Version: v0.1.0\n- Commit: 97dac5b9cb459d63bf5605a88cf65688e1d074a0\n- Reviewed by: @foldfelis\n- Reference: https://github.com/foldfelis/Fetch.jl/commit/97dac5b9cb459d63bf5605a88cf65688e1d074a0#commitcomment-54510062\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6328c86e52871474fcedb95c9615ec7a9292466fc9a83e8e3b27e0595d64532f8a95491e6a2a158dd534c5745b23c9bb1bb953db12a662c855b4c993cdac909c384f1c7ac62d1af0d2dbba6605dd2193de59a9a00b6c7609c83470378a8475905735364057a06ed869f69ed1eee99fe455fdd50873ba8f9cf54dae490fbea421c1bad705cb3245f1aa440111d0a34ee6792b54f96e2446b6147f4493b0cb7e5837ac1a9e03ecd525a0975e73e8c2690f7 -->",
+  "package_name": "Fetch",
+  "title": "New package: Fetch v0.1.0"
+}

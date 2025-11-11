@@ -1,0 +1,96 @@
+{
+  "created_at": "2023-10-09T16:37:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-10-13T00:17:56Z",
+  "pr_number": 93098,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ogco_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Lowess. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Loess. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-09T16:41:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93098#issuecomment-1753336383",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85og5Yx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarities are false positives, but you’ll still need a manual merge",
+      "createdAt": "2023-10-09T18:19:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93098#issuecomment-1753454129",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ohAzn",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nCongrats on the package! Maybe consider something more specific to vision, like \"SegmentationLosses\"?",
+      "createdAt": "2023-10-09T18:46:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93098#issuecomment-1753484519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oh7au",
+      "author": {
+        "login": "Dale-Black"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thanks, I definitely like the slightly light-hearted nature of the name Losers. So far this package is pretty lightweight but I have future plans to implement more loss functions than just segmentation. With that, what are yall's thoughts about sticking with Losers and getting a manual merge?",
+      "createdAt": "2023-10-09T20:25:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93098#issuecomment-1753724590",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oh_3d",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] For the record, I think the package name `Losers` is cute. I'd have no objections to it (but I don't have merge permissions). In any case, wait three days for further input, or to reflect on whether or not you want to change the name. After that, ping the Slack channel again for a manual merge.",
+      "createdAt": "2023-10-09T20:29:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93098#issuecomment-1753742813",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: Losers\n- Repository: https://github.com/Dale-Black/Losers.jl\n- Created by: @Dale-Black\n- Version: v0.1.0\n- Commit: 16cb338927648fe7b2685396fef9b5f7554fda43\n- Reviewed by: @Dale-Black\n- Reference: https://github.com/Dale-Black/Losers.jl/commit/16cb338927648fe7b2685396fef9b5f7554fda43#commitcomment-129535736\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63defaa2e47f8abdbb16311eb9c9ce1dcc88e26dbd68e3557961aee0e752349119cb1955144214a505291d723d867c3c3849a1dcff461db4cd2b7ee04aa1ad1d966e6d845d53a68b8fdd217c6398e5f2c62e249a53bfe60892fcbfbbe68d57505fafe83e1868e5861db2be51a084712098eab552cff2c5b9ee436d03722a1e97405af5ae99caaf392a10a3bff66f17e59e1f3867a422e3ab393cf2924f7c0f4069178210a2201817863bc3b558a2f4886 -->",
+  "package_name": "Losers",
+  "title": "New package: Losers v0.1.0"
+}

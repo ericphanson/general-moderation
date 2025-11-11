@@ -1,0 +1,134 @@
+{
+  "created_at": "2022-10-09T21:20:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-10-17T15:26:11Z",
+  "pr_number": 69811,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85L2s4j",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Clipper. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-09T21:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1272630819",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85L2y9p",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@aplavin isn't https://gitlab.com/aplavin/Skipper.jl/-/blob/010000030bc4c0e9ff6b32751dc69ca34b70483f/src/Skipper.jl#L11 type-piracy?",
+      "createdAt": "2022-10-09T23:47:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1272655721",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85L8Vzd",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano yes, that's indeed the case. Never heard of `Base.skip` before, and had to use `Base.skip(...) = ...` instead of just `skip(...) = ...` after finding that it exists.",
+      "createdAt": "2022-10-11T05:32:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1274109149",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MSt5z",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "name similarity looks totally fine for me, please merge...\r\n3 days have passed",
+      "createdAt": "2022-10-16T13:55:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1279975027",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MSuCW",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Name is fine, but I'm concerned about the type piracy.  Can't you just define a function `Skipper.skip` without importing `Base.skip`?",
+      "createdAt": "2022-10-16T13:58:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1279975574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MSuNi",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Maybe I'm somewhat out of the loop, but don't see major issues with piracy turning a methoderror into working code. Clearly, there are packages doing these things already.\r\nDifferent story with turning \"working\" into \"working in a different way\", of course.\r\n\r\nIf I define `Skipper.skip`, then it cannot be used as `using Skipper; skip(...)` (right?).",
+      "createdAt": "2022-10-16T14:02:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1279976290",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MW0hv",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, well, we'll see how this goes with regards to possible invalidations",
+      "createdAt": "2022-10-17T15:26:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1281050735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MYCem",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks!\r\nI'm still not very familiar with this (piracy/invalidations/...) part of julia development, so may be mistaken that the current approach is optimal...",
+      "createdAt": "2022-10-17T19:29:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/69811#issuecomment-1281370022",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Skipper\n- Repository: https://gitlab.com/aplavin/Skipper.jl\n- Created by: https://gitlab.com/aplavin\n- Version: v0.1.1\n- Commit: 010000030bc4c0e9ff6b32751dc69ca34b70483f\n- Git reference: HEAD",
+  "package_name": "Skipper",
+  "title": "New package: Skipper v0.1.1"
+}

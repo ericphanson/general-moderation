@@ -1,0 +1,66 @@
+{
+  "created_at": "2022-04-19T22:25:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-05-21T09:41:32Z",
+  "pr_number": 58765,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Bwe4A",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Mixers. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Vimes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-19T22:28:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58765#issuecomment-1103228416",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BwfuR",
+      "author": {
+        "login": "ufechner7"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do not think at all that the package name \"Timers\" is similar to \"Mixers\" or \"Vimes\". I think it clearly describes what this package shall provide (not much implemented yet), but it shall provide a functionality similar to the Timer class of QT. Single shot timers, periodic timers, with different accuracies and tradeoffs.\r\n\r\nTherefore I kindle ask this to be manually merged.\r\n[noblock]",
+      "createdAt": "2022-04-19T22:35:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/58765#issuecomment-1103231889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DhjiC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-20T12:56:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58765#issuecomment-1132869762",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Timers\n- Repository: https://github.com/ufechner7/Timers.jl\n- Created by: @ufechner7\n- Version: v0.1.0\n- Commit: 47c1712cd7bab1fbe63c2bc45dbcd2cf53e18c63\n- Reviewed by: @ufechner7\n- Reference: https://github.com/ufechner7/Timers.jl/issues/1#issuecomment-1103226521\n- Description: Timers for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598141e18a6f554e8a365eb30db6a0b724f7fca0fd3e2afa2907748247c0089e0dd2bb9bbc38ea6b327f4262e7e321d4e852a79f0229ee444bcb024df0f4fc62a9d2ec8388818419a9561243dfbf89f205b19dfb9ad2ad977d72938b58333787ffc2c32c068820b990e753bb628c9faeea4882f3ead88d7235f7c3a22bda6c82fbd -->",
+  "package_name": "Timers",
+  "title": "New package: Timers v0.1.0"
+}

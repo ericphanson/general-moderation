@@ -1,0 +1,81 @@
+{
+  "created_at": "2024-06-28T14:13:00Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-07-01T10:32:57Z",
+  "pr_number": 110011,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86C9D72",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-28T14:18:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110011#issuecomment-2197044982",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86C-WVc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think `Ket` could be okay as a package name. However: `Ket` is also a very \"nice\" name, and at least in my book, such names should come with extra scrutiny: A package with a name like that should be one of the pre-eminent Julia packages in its domain. We should avoid registering high-profile names for packages that are likely to end up incomplete and unmaintained. My general criteria are that the package should be fairly full-featured and fully documented at the time of registration, and that the maintainer can make a long-term commitment. Generally, that means someone with a permanent position (or backing by, e.g., an academic PI that is committed to having multiple generations of PhD students/postdocs work on the package). Multiple maintainers and ownership by an organization (as opposed to a personal account) are also a big plus. Specifically for quantum frameworks, it is also good to be aware that this is not a small endeavor, and there are a number of established frameworks in the domain. Most notably, QuantumOptics.jl and more recently QuantumToolbox.jl, which is intended as a Julia translation of the very popular QuTiP (Python) package. How would Ket position itself in that existing space? Is it worth starting another package? These questions should also be answered in the README/documentation. It wouldn't be a bad idea to draft a \"statement of need\" like that required for a [JOSS submission](https://joss.readthedocs.io/en/latest/review_criteria.html).\r\n\r\n[noblock]",
+      "createdAt": "2024-06-28T17:39:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110011#issuecomment-2197382492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86C-mBU",
+      "author": {
+        "login": "araujoms"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do have a permanent position in the University of Valladolid, and two of my collaborators also have permanent positions (@peterjbrown519 and @mtcq). We commit to maintaining the package long-term. In fact we started Ket precisely because the existing packages don't really cut it. QuantumInformation.jl would be the closest analogue, but it is buggy and the maintainers uninterested. OpenQuantumTools.jl, QuantumToolbox.jl, and QuantumOptics.jl are focused on quantum simulation, not quantum information. There's some overlap, but they only do a small fraction of what we need, and don't do it the way we need. For example, in quantum information one always need the functions `partial_trace` and `partial_transpose`. QuantumToolbox.jl, QuantumOptics.jl, and QuantumInformation.jl have them, but their implementation is incompatible with JuMP, so they're useless for us. I managed to fix the ones from OpenQuantumTools.jl, but still they are very slow and cannot handle the general case, so we lost patience and implemented our own. Still, our focus is on things they are not interested, such as our functions to produce MUBs and SIC-POVMs, which as far as I can see nobody else has, and (still unimplemented) numerical optimization techniques that we describe in our [review](https://arxiv.org/abs/2307.02551). The package is intended as an spiritual successor to the widely used MATLAB package [QETLAB](https://github.com/nathanieljohnston/QETLAB) (which I have contributed to).\r\n\r\nThe package is admittedly still very incomplete. I requested registration now because I've just submitted the first paper using it to the arXiv, and I don't want to bother my readers asking it to install it manually. The second paper will follow next week, and @sebastiendesignolle has a third one in the works.\r\n\r\nI think I must add that the few functions that we have already implemented are the best ones available. \r\n\r\n[noblock]",
+      "createdAt": "2024-06-28T18:40:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110011#issuecomment-2197446740",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86C-7WG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Based on that explanation, I would have no objections to this package being registered under the name `Ket`. I don't have merge permissions, though, so ultimately it'll come down to convincing at least one registry maintainer to merge it manually. If nobody else voices any concerns, you can wait the three-day period, and then ping the `#pkg-registration` channel on Slack again and ask for a merge.",
+      "createdAt": "2024-06-28T19:49:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110011#issuecomment-2197534086",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: Ket\n- Repository: https://github.com/araujoms/Ket.jl\n- Created by: @araujoms\n- Version: v0.1.0\n- Commit: 205d4dd8fb865f63542bfbb398948a315b5cc842\n- Reviewed by: @araujoms\n- Reference: https://github.com/araujoms/Ket.jl/commit/205d4dd8fb865f63542bfbb398948a315b5cc842#commitcomment-143648891\n- Description: Toolbox for quantum information, nonlocality, and entanglement\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6759c4f1f77c6ce564844fee057442eb7d5b72cfe0f635b044c39a6098bf6933b2333bb666faa8ed374ffdee6d0855c7eb48b8ee4dec80ca553adcfa97e47a9d0087d95a38f9705c5a5e59cfc74b70111a5a314a3e84a5c3dee03488ce75404f66dad5b2f0a763eb59d920ff28440df8db87eb959f2d267a004f948629903c6d1fff9535df5bfd19a96e5a753a4b0b06b39afc3afce743c2bd42a75622e5cdf88 -->",
+  "package_name": "Ket",
+  "title": "New package: Ket v0.1.0"
+}

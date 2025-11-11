@@ -1,0 +1,81 @@
+{
+  "created_at": "2023-09-16T01:04:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-09-25T12:28:25Z",
+  "pr_number": 91522,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85mpQNc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to NIfTI. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-16T01:09:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91522#issuecomment-1722090332",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mpXNn",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I'm trying to register a package and I got a naming conflict. Pull request is [here](https://github.com/JuliaRegistries/General/pull/91522). I propose to call my package CIFTI.jl, after the [CIFTI filetype](https://www.nitrc.org/projects/cifti/) that it is designed to support. The package with a similar name that conflicted with mine is NIfTI.jl, which is for a related but different filetype. Therefore the similarity in names is appropriate.",
+      "createdAt": "2023-09-16T03:17:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91522#issuecomment-1722119015",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85m34Fm",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Bumping this. My package name CIFTI.jl adheres to the requirements I believe: \"6. Packages that wrap external libraries or programs should be named after those libraries or programs.\" Thanks in advance.",
+      "createdAt": "2023-09-19T15:45:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91522#issuecomment-1725923686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nUvMG",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n@myersm0 I'm unclear on what \"JuliaRegistrator deployed to stopwatch 5 days ago\" means, it seems it's because of submission https://github.com/myersm0/CIFTI.jl/issues/4 above, not this open PR (it should have taken 3 days).\r\n\r\nFYI: Your package will become 9999 or 10,000 depending on when this gets unblocked. Please don't consider unblocking Cifti.jl lower case just to be number 10,000 :)\r\n\r\n",
+      "createdAt": "2023-09-25T11:35:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/91522#issuecomment-1733489414",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: CIFTI\n- Repository: https://github.com/myersm0/CIFTI.jl\n- Created by: @myersm0\n- Version: v1.0.0\n- Commit: bc8578f8d8fd84d6c20b47e31c47c18fcdc92004\n- Reviewed by: @myersm0\n- Reference: https://github.com/myersm0/CIFTI.jl/issues/4\n- Description:  A Julia package for reading CIFTI files for surface-space neuroimaging data\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835985a9502809b48c6c7e914a7733074d4ec944a84cc3883f942719e7cd4024af46d46ad21a8768664fddda369b2a7d31ffaf8c5954ef214dc38ccdeea65a545e6a8d30f0236aede81773accec9d44f0beb586b4c0cf0c67642bed62ec5c97437259808ae5e029d6daa5b4c58f4cb3beebdf -->",
+  "package_name": "CIFTI",
+  "title": "New package: CIFTI v1.0.0"
+}

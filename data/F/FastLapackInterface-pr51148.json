@@ -1,0 +1,164 @@
+{
+  "created_at": "2021-12-23T19:41:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-28T12:14:13Z",
+  "pr_number": 51148,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847olej",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"FastLapackInterface\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import FastLapackInterface` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-23T19:45:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1000495011",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847qei3",
+      "author": {
+        "login": "MichelJuillard"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I don't understand the first AutoMerge error:\r\n```\r\n┌ Error: Some registries failed to update:\r\n│     — `/tmp/jl_OezAT2/registries/General` — registry dirty\r\n└ @ Pkg.Registry /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.7/Pkg/src/Registry/Registry.jl:450\r\n```",
+      "createdAt": "2021-12-25T08:23:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1000990903",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847rVas",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That error seems to be an issue with the test infrastructure. \r\n\r\nThe next issue `ERROR: Unsatisfiable requirements detected for package FastLapackInterface [29a986be]:` seems to be due to the fact that the automerge tests are running on, I'm guessing 1.6 while this package has a julia lower bound of 1.7. Maybe the earlier registry dirty issue is being caused as a result of this problem? \r\n\r\nI guess in this case this PR should be merged manually by some maintainer.  \r\n\r\n[noblock]",
+      "createdAt": "2021-12-26T17:20:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001215660",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847rXk-",
+      "author": {
+        "login": "MichelJuillard"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> That error seems to be an issue with the test infrastructure.\r\n> \r\n> The next issue `ERROR: Unsatisfiable requirements detected for package FastLapackInterface [29a986be]:` seems to be due to the fact that the automerge tests are running on, I'm guessing 1.6 while this package has a julia lower bound of 1.7. Maybe the earlier registry dirty issue is being caused as a result of this problem?\r\n> \r\n> I guess in this case this PR should be merged manually by some maintainer.\r\n> \r\n> [noblock]\r\n\r\nThis version of the package is only for Julia v.1.6 but the Registrator infrastructure seems to run on v1.7.1",
+      "createdAt": "2021-12-26T18:21:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001224510",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847sarH",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, the problem is that tests here run on Julia v1.7, but this package claims to be compatible only with the v1.6 series.  Can I ask you why you do that?  Unless you hook deeply into Julia internals, there is generally no reason to restrict yourself to a single minor version.\r\n\r\n[noblock]",
+      "createdAt": "2021-12-27T10:35:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001499335",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847sbIY",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Side note: it isn't useful to open two or more pull requests to register a new package at the same time: #51171.  The way Git works, these are bound to conflict anyway, and you'll have in any case to wait for one to be merged before you can retrigger registration again on the other PR to resolve the merge conflicts\r\n\r\n[noblock]",
+      "createdAt": "2021-12-27T10:41:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001501208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847sd5C",
+      "author": {
+        "login": "MichelJuillard"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Yes, the problem is that tests here run on Julia v1.7, but this package claims to be compatible only with the v1.6 series. Can I ask you why you do that? Unless you hook deeply into Julia internals, there is generally no reason to restrict yourself to a single minor version.\r\n> \r\n> [noblock]\r\n\r\nThanks. This package accesses Lapack directly and I have to handle the switch to  `libblastrampoline` in Julia 1.7.",
+      "createdAt": "2021-12-27T11:09:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001512514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847seDh",
+      "author": {
+        "login": "MichelJuillard"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Side note: it isn't useful to open two or more pull requests to register a new package at the same time: #51171. The way Git works, these are bound to conflict anyway, and you'll have in any case to wait for one to be merged before you can retrigger registration again on the other PR to resolve the merge conflicts\r\n> \r\n> [noblock]\r\n\r\nThanks Giordano. I take good note of it. ",
+      "createdAt": "2021-12-27T11:10:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1001513185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847ukwk",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Thanks. This package accesses Lapack directly and I have to handle the switch to libblastrampoline in Julia 1.7.\r\n\r\nOk, I'm going to manually merge this pull request, but note that differences between different Julia versions are best handled with stuff like\r\n```julia\r\n@static if VERSION < v\"1.7\"\r\n    # do something for Julia v1.6-....\r\nelse\r\n    # do something else for Julia v1.7+....\r\nend\r\n```\r\nThis allows you to have a single codebase for all Julia versions, instead of basically splitting your package.",
+      "createdAt": "2021-12-28T12:12:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1002064932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847ureF",
+      "author": {
+        "login": "MichelJuillard"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> > Thanks. This package accesses Lapack directly and I have to handle the switch to libblastrampoline in Julia 1.7.\r\n> \r\n> Ok, I'm going to manually merge this pull request, but note that differences between different Julia versions are best handled with stuff like\r\n> \r\n> ```julia\r\n> @static if VERSION < v\"1.7\"\r\n>     # do something for Julia v1.6-....\r\n> else\r\n>     # do something else for Julia v1.7+....\r\n> end\r\n> ```\r\n> \r\n> This allows you to have a single codebase for all Julia versions, instead of basically splitting your package.\r\n\r\nThanks Mosè. I will do that for the next version.\r\n",
+      "createdAt": "2021-12-28T12:56:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51148#issuecomment-1002092421",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: FastLapackInterface\n- Repository: https://github.com/MichelJuillard/FastLapackInterface.jl\n- Created by: @MichelJuillard\n- Version: v0.1.2\n- Commit: c70a9dc7b5969286e111076614054f96dd18e4f6\n- Reviewed by: @MichelJuillard\n- Reference: https://github.com/MichelJuillard/FastLapackInterface.jl/commit/c70a9dc7b5969286e111076614054f96dd18e4f6#commitcomment-62519796\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c45bd39b4c0a48dc866091d465639a217fba787dc857a6175163bbad0e16691cfee612edb81db8aca2450b13bbf91989eadc37b6795d2b12e57f3b0dac5b2e36e35e177fc8e4136eb64b3fa7e51aa4ea3a6e8ec3895209a34b5de9a80d51b2df17d30090ed712f256c3e1697c3a7eb3385be9eacd4e3768ac085c138e130c85573caba68a96558c112f0b897dab9ba86d138257f5b07c486bd8cb026b8cbe5d539592c890e6a861a495ce45166e80c19fc6ae3e8c9d1f4c0ef60188317a624b7 -->",
+  "package_name": "FastLapackInterface",
+  "title": "New package: FastLapackInterface v0.1.2"
+}

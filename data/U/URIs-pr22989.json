@@ -1,0 +1,133 @@
+{
+  "created_at": "2020-10-15T11:41:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-10-19T07:47:53Z",
+  "pr_number": 22989,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTIzMTIwOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name is not at least five characters long\n- Package name similar to 4 existing packages.\n1. Similar to GRIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n2. Similar to ULID. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to DRIPs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to Iris. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-10-15T11:44:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709231209",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTIzNjY5OQ==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package moves some long-stable URI parsing code from HTTP.URIs as discussed with @quinnj.\r\n\r\nThe name should be pretty non-controversial I hope :)",
+      "createdAt": "2020-10-15T11:51:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709236699",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTMxMDA3Ng==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ericphanson didn't you fix the sorting?",
+      "createdAt": "2020-10-15T13:03:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709310076",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTMyMzYyMw==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I did something with the sorting but maybe it's not quite the right fix 😅 \r\n\r\nSo there's three separate checks, DL distance, DL distance between lowercased names, and visual distance. So one is definitely worse than the other if all 3 checks are lower (it's pareto-lower in some sense) but then we can have some incomparable entries, which is what we have here: DRIPS has DL = 2, lowercase DL > 1, vd > 2.5, and Iris has DL > 2, lowercase DL = 1, vd > 2.5. So DRIPS is closer in DL but farther in lowercase DL than Iris and vice-versa.\r\n\r\nSo to get a total ordering, I just chose lexicographic order, i.e. DL is most important, then if there's a tie check lowercase DL, and if there's still a tie check visual distance. (This is somewhat sensible in that if one is pareto-lower than another, then it will be sorted further up).\r\n\r\nWe also could do something like \"add them all together\" (what they call a scalarization in multi-objective optimization...), but visual distance morally has different units (roughly units of pixels to render the string for visual distance vs units of # of edits for the edit distances) so I didn't really like that, and anyway we don't always calculate the visual distance to save some time.",
+      "createdAt": "2020-10-15T13:26:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709323623",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTM0MDQ4MQ==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">Package name similar to 4 existing packages.\r\n\r\nNo it isn't. No human would confuse with GRIB, ULID, DRIPs or Iris. :)\r\n\r\n[You know you need to put [noblock] in, at least usually (or after the \"ok\" label). I guess this one got enough exposure for a human to merge.]",
+      "createdAt": "2020-10-15T13:53:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709340481",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTM2MjY1MA==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> No it isn't. No human would confuse with GRIB, ULID, DRIPs or Iris. :)\r\n\r\nAgreed-- that's why I added the \"AutoMerge: package name similarity is okay\" label :). The checks are very basic right now, but maybe in time we can tune them to be less aggressive while still catching things appropriately. You might note that the fancy visual distance check did not trigger at all on this package-- though it's set with a pretty low threshold, so it doesn't trigger much in general.\r\n\r\n(This one will need to be manually merged anyway because of the length requirement, which is why we haven't been using noblock. Also, the label doesn't actually do anything yet, it's just for tracking at this point).",
+      "createdAt": "2020-10-15T14:26:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-709362650",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTUzMzk4Mw==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can someone merge this manually then?",
+      "createdAt": "2020-10-19T04:29:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22989#issuecomment-711533983",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: URIs\n- Repository: https://github.com/JuliaWeb/URIs.jl\n- Created by: @c42f\n- Version: v1.0.0\n- Commit: 44ad88f3cfffa24dd700d32932e69f72e1fe8e61\n- Reviewed by: @c42f\n- Reference: https://github.com/JuliaWeb/URIs.jl/commit/44ad88f3cfffa24dd700d32932e69f72e1fe8e61#commitcomment-43267387\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd658bdbbef40d9fbca1d3f8ca7f1fe927213249fdae342f568fbb3279ed152de58d135791ceac292922e55f0bb28a0bd3a9062bf0e86782fd14c4fead4dd833a4553945265245913d667b154389533e46acaded041319184b3b3e7d446a2336769457f9d924c93fe5bf57db93bf93e71caaec911480cbed660f60e8ca4838ad0950f4e42a1e33d3d7fe02c8e76596dbe56fe61e9d88b663e3a2282698e5b88de65f499cf601fabee7047ef69d172e5984c -->",
+  "package_name": "URIs",
+  "title": "New package: URIs v1.0.0"
+}

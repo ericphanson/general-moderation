@@ -1,0 +1,89 @@
+{
+  "created_at": "2022-05-31T11:07:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-06-04T13:08:44Z",
+  "pr_number": 61376,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85EEX8o",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Healpix. Normalized visual distance 1.71 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-31T11:13:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61376#issuecomment-1141997352",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EVMOg",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@chenspc please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-06-03T22:15:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61376#issuecomment-1146405792",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EV7WM",
+      "author": {
+        "login": "chenspc"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano I've updated the package according to the message. However, due to the package name change required by the automerge, a new pull request #61726 was generated. \r\n\r\nAlthough I would prefer a shorter package name (Medipix is quite different from Healpix in my opinion), deleting either of this pull request is fine by me. Thanks.\r\n\r\n[noblock]",
+      "createdAt": "2022-06-04T12:19:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61376#issuecomment-1146598796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EV7dF",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sorry, the name was ok, the check is there only to prevent malign typosquatting, which wasn't the case here.  But the other issue had to be addressed.  If you want to revert the name back to Medipix you can do that, trigger registration again and this PR will be updated\r\n\r\n[noblock]",
+      "createdAt": "2022-06-04T12:22:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61376#issuecomment-1146599237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EV8K5",
+      "author": {
+        "login": "chenspc"
+      },
+      "authorAssociation": "NONE",
+      "body": "That's great, thanks! It saves me a lot of trouble updating existing scripts and installations. \r\n\r\n[noblock]",
+      "createdAt": "2022-06-04T12:44:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61376#issuecomment-1146602169",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Medipix\n- Repository: https://github.com/chenspc/Medipix.jl\n- Created by: @chenspc\n- Version: v0.3.0\n- Commit: b189faf742b4d11b193d7925d9c54a9f5d35c437\n- Reviewed by: @chenspc\n- Reference: https://github.com/chenspc/Medipix.jl/issues/6#issuecomment-1146601643\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983388c210056a7a6a55adca7a972f0b26269741a454b1c71d0bb379477442f33f09a04b439e69c6c0ee5878406efb076473506a2130fca3730634112df59e4ac4641e64ccae1265075739486e2633366e5778541d986155f00e63dc17453dd5469d9e834ffbe9aac503afa51e6db7493e97eacfe9b3571f26b1c746b9023b0f9f -->",
+  "package_name": "Medipix",
+  "title": "New package: Medipix v0.3.0"
+}

@@ -1,0 +1,147 @@
+{
+  "created_at": "2020-09-22T22:49:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-09-23T23:16:13Z",
+  "pr_number": 21815,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NzAyMzUwMA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Version number is not allowed to contain prerelease or build data\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-09-22T22:51:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-697023500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NzAzNTg4OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> Version number is not allowed to contain prerelease or build data\r\n\r\nThis is a mistake. We should not apply this check to JLL packages. @giordano want to look into why this check was applied?",
+      "createdAt": "2020-09-22T23:31:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-697035888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODAxOTg1NQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I dug up a bit in the code of `RegistryCI.jl`, my understanding is that that check is triggered because only @jlbuild [is expected](https://github.com/JuliaRegistries/General/blob/d7a2ea5563429e1224a406898eac24444da656c9/.github/workflows/automerge.yml#L53) to open pull requests for JLL packages, so other users will go through the standard checks.  I hope you can confirm my understanding.  In the meantime I'm going to merge this pull request anyway.",
+      "createdAt": "2020-09-23T23:16:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-698019855",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODAxOTg5NQ==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.0.1+0`, [here](https://github.com/JuliaBinaryWrappers/Enzyme_jll.jl/releases/tag/v0.0.1%2B0) it is.\n<!-- c65b3300-fdf2-11ea-9df7-33964cef3f47 -->",
+      "createdAt": "2020-09-23T23:16:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-698019895",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODAyODQzOA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I dug up a bit in the code of `RegistryCI.jl`, my understanding is that that check is triggered because only @jlbuild [is expected](https://github.com/JuliaRegistries/General/blob/d7a2ea5563429e1224a406898eac24444da656c9/.github/workflows/automerge.yml#L53) to open pull requests for JLL packages, so other users will go through the standard checks. I hope you can confirm my understanding. In the meantime I'm going to merge this pull request anyway.\r\n\r\nYes that is correct- we only apply the special JLL exemptions for registrations made by @jlbuild.\r\n\r\nIs there a reason why this PR was made by JuliaRegistrator instead of @jlbuild?",
+      "createdAt": "2020-09-23T23:44:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-698028438",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODAyODk5Nw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Valentin built this locally and triggered registration with JuliaRegistrator, but this isn't the norm",
+      "createdAt": "2020-09-23T23:46:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-698028997",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODAzMjAwOQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Cool. Yeah if this workflow is rare, it's easy enough to just manually merge.",
+      "createdAt": "2020-09-23T23:55:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/21815#issuecomment-698032009",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Enzyme_jll\n- Repository: https://github.com/JuliaBinaryWrappers/Enzyme_jll.jl\n- Created by: @vchuravy\n- Version: v0.0.1+0\n- Commit: a24ad44259a0d85fe97a3398853c6879bc51b408\n- Reviewed by: @vchuravy\n- Reference: https://github.com/JuliaBinaryWrappers/Enzyme_jll.jl/commit/a24ad44259a0d85fe97a3398853c6879bc51b408#commitcomment-42640398\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd674dbf26f7609ea4bd2a8a1e6e5ca8dfcd39ef171f188cf4aebee3bdea5dada53a83b34f57d3ab0289d7cc9ff78374a099faa27e67a6038bb91b9bb7a48ea8b4eace9ec5840dcaf78f63caf245496521227c3d1ae4c5531be4e79d2eb7b29f1e14045bf48d35ab5d102cc8b05d7a1df98ebc0d82ba593a5e1ddb73083dedbf43eed95a3cf0a52cff3eeca187b9829dfe8f2d623b8c0706fa00d4cbc7b6bac7d3eb735be761ab8ad5a0443a66a8e5421c0ac7f43f087080c3f5586ded26b0b5da1 -->",
+  "package_name": "Enzyme_jll",
+  "title": "New package: Enzyme_jll v0.0.1+0"
+}

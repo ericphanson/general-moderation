@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-05-01T12:56:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-05-17T12:12:29Z",
+  "pr_number": 59449,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85CacpN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to WebIO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-01T12:59:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59449#issuecomment-1114229325",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Cac90",
+      "author": {
+        "login": "zsz00"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nHexIO.jl is integrat by StructIO.jl and HexEdit.jl. \r\nI think the HexIO name is quite suitable for the functions of this package, and it is quite different from WebIO. Please check it manually.  \r\ncc @giordano",
+      "createdAt": "2022-05-01T13:03:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59449#issuecomment-1114230644",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: HexIO\n- Repository: https://github.com/zsz00/HexIO.jl\n- Created by: @github-actions[bot]\n- Version: v0.0.2\n- Commit: 0086989b98dc3bd3de718de1db8377f4606c3bb1\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/zsz00/HexIO.jl/commit/0086989b98dc3bd3de718de1db8377f4606c3bb1#commitcomment-72606736\n- Description: HexIO.jl is integrat by StructIO.jl and HexEdit.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6433601c388f56914a91fe417611352eed292f90aa7a1dc4b578f363bc673209333c3d1e57f689eff8e9a8986e12803fb21c892e7a79e023c90eabe36f5ff4f151fd90f27a7990590f993e71a0bd19c215840c33cff4ce472e4fc530b4afd355128e754b0e109b49499c96f655b1d344b2a8763a84c742d0fa837bdd65f682e73591c23187cab291c632b6d8a06f3b61a49ebc4b218678e4c7d5e0e02e50d0699 -->",
+  "package_name": "HexIO",
+  "title": "New package: HexIO v0.0.2"
+}

@@ -1,0 +1,207 @@
+{
+  "created_at": "2020-10-17T03:36:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-10-22T08:50:15Z",
+  "pr_number": 23128,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMDczOTk5OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n1. Similar to Logging. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-10-17T03:39:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-710739998",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMDg0MTIyNQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ericphanson we should probably also compare with the stdlibs (e.g. `Logging` in this case).",
+      "createdAt": "2020-10-17T11:26:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-710841225",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMDkzNjcxOA==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah, I thought it was ironic that the system wasn't happy with the name `URIs` but that `Logging2` was fine.\r\n\r\nTo explain the name here — I've started this library as a staging area for `Logging`, to have somewhere which is easier to experiment and version separately from Base.",
+      "createdAt": "2020-10-17T13:08:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-710936718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTE1MjY0MA==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The comments will block automerge unless you both edit in a [noblock] btw\r\n\r\n[noblock]",
+      "createdAt": "2020-10-18T11:14:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711152640",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTE1MzM0NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "An alternative name would perhaps be `LoggingX`? There is `ThreadsX` for example.",
+      "createdAt": "2020-10-18T11:20:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711153345",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTE1NzI3MA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe something more explicit:\r\n- FutureLogging\r\n- ExperimentalLogging\r\n- LoggingSandbox\r\n- LoggingExperiments",
+      "createdAt": "2020-10-18T11:58:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711157270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTE1NzgzMg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ericphanson @fredrikekre The stdlib name comparison seems to be working now.",
+      "createdAt": "2020-10-18T12:03:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711157832",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTUxODU5NA==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "TBH I'm pretty surprised people care about this name; I figured that since I implemented most of `Logging`, it'd be fair enough if I took the name `Logging2` ;-)\r\n\r\nOut of the options mentioned so far I prefer `LoggingX` and it seems like it could be an improvement as the `X` cannot be confused for a particular version number.\r\n\r\nHowever, I'd like to avoid renaming the package more than once. To confirm, would you accept the PR if I renamed the package to `LoggingX`?",
+      "createdAt": "2020-10-19T04:16:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711518594",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTUyNDk4OQ==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "On second thought, I think `LoggingX` and `LoggingExtras` (an existing package) are quite phonetically similar. (I didn't want to put the code directly into `LoggingExtras` as I think I want to head in a slightly different design direction.)\r\n\r\nWould people agree to `LoggingNext`?",
+      "createdAt": "2020-10-19T04:22:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711524989",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTcyMjc5Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> To confirm, would you accept the PR if I renamed the package to LoggingX?\r\n\r\nLogging2 is fine too, it was just a drive by comment about LoggingX",
+      "createdAt": "2020-10-19T07:11:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-711722793",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxNDMzNjgwNQ==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Having thought about this, I'm not sure renaming this really brings any clarity. We have precedent in these kind of names in `Pkg3`, `JSON{1,2,3}` etc and I didn't see those causing confusion. (Or at least, the confusion in the plethora of JSON packages would exist just the same regardless of the names.)\r\n\r\nSo my preference right now is to leave this as is. If people feel very strongly I could be persuaded (particularly if you can supply a really nice new name ;-) ), but to me it kind of seems like unnecessary work for unclear advantage.",
+      "createdAt": "2020-10-22T08:47:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/23128#issuecomment-714336805",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Logging2\n- Repository: https://github.com/c42f/Logging2.jl\n- Created by: @c42f\n- Version: v0.1.0\n- Commit: 489617997d7c74fcec9835ba197e4cd09605ec0d\n- Reviewed by: @c42f\n- Reference: https://github.com/c42f/Logging2.jl/commit/489617997d7c74fcec9835ba197e4cd09605ec0d#commitcomment-43320740\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62dee8bf8ec184df5cdc1a4529427f8f240da74fefb5d780f32c5c2ca5bccc2da77d9dc9cc95c5dccc41e5c3ba367f4ddf0792bb950f012ae30969002f09feed27f183ce35ec7e74839146f9d7980fb5096d2a3bdbe91e11bec6edce077d6c29084d04168a278d27d56d2b58c90d308a5ac27362826838d7218236ed10a108d6bb0b903043cec1606026e86b3a8bb2aaec043b6ba68616f35b1c100cbf3268b710b6816f238b28258764baa7213e7f4a7 -->",
+  "package_name": "Logging2",
+  "title": "New package: Logging2 v0.1.0"
+}

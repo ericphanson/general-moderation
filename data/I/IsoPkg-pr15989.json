@@ -1,0 +1,141 @@
+{
+  "created_at": "2020-06-07T07:37:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-06-13T05:20:49Z",
+  "pr_number": 15989,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDE3MTc0Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-06-07T07:39:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640171747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDIzOTI5Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just FYI this is not going to work -- you can only load one version of a package per Julia process.",
+      "createdAt": "2020-06-07T15:53:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640239293",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDI0NDA2OQ==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "When Julia tries to load a package it checks if a package with that UUID has already been loaded. If it has, it just gives you the already loaded package (ignoring whatever version the manifest says) ",
+      "createdAt": "2020-06-07T16:27:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640244069",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDI1MDE1OQ==",
+      "author": {
+        "login": "longqian95"
+      },
+      "authorAssociation": "NONE",
+      "body": "No, this purpose of this package is not for loading two different versions of the same package, but only for installing two different versions or installing some version conflicted packages. So you can easily use them in different sessions. Maybe it should be described as an environment manager. I keep using this package to manage the convicted packages (the version conflict is quite normal,  especially for the less maintained packages). I found it is convenient. Otherwise, I have to create environment for every small script.",
+      "createdAt": "2020-06-07T17:13:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640250159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDI1MjEzNg==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, so it's a way to disable the compatibility checks?\r\n\r\nWhat version will be used of a shared dependency to two packages that are incompatible but then installed using IsoPkg?\r\n\r\nWould something like https://github.com/JuliaLang/Pkg.jl/pull/1607 do something similar? ",
+      "createdAt": "2020-06-07T17:28:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640252136",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDUxOTU4NQ==",
+      "author": {
+        "login": "longqian95"
+      },
+      "authorAssociation": "NONE",
+      "body": "Not similar. Just both enable install the newest packages. Personally I think without the features such as to load packages with specific version, and to install same packages with different version, the feature of JuliaLang/Pkg.jl#1607 has very little meaning. In fact, the purpose of IsoPkg is totally not for disabling compatibility check, but for making Julia work more smoothly as tools for researchers everyday work.\n\nI think current package manager is good for package developing, but too heavy for small working scripts. For example, several months ago, I wrote a script to solve a problem by using package A at v0.1.0. It works very fine. Now A upgrade to v0.2.0, the scrip cannot work with the new version. But I need to use the new features to write a new script to solve another problem. Without IsoPkg, I need to create environments and manage the toml files. With IsoPkg, I just need write @iso using A “0.1.0” in first script and @iso using A “0.2.0” in second one. These scripts will always work fine without worrying the package upgrading anymore. This also helps to share code snippets, otherwise you have to prepare two toml files for every piece of code for sharing to colleagues.\n\nCurrently, after you installed dozens packages, if you do not create new environments for every simple work, Julia will be in mess. There are always some packages conflicting with each other or breaking some scripts or downgrading some other packages or stopping some package upgrading. It stops Julia working as an convenient tools like matlab.\n\nOf course, I hope Julia itself can change the loading mechanism to respect the package version. Then Pkg.jl can install same packages with different version without breaking compatibility. I think this feature will solve all above troubles. It will be much better than using IsoPkg.",
+      "createdAt": "2020-06-08T10:32:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-640519585",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MzA1NjUxNw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Now that the community has provided some feedback, @longqian95 do you still want to register this package? If so, let me know and I will merge it.",
+      "createdAt": "2020-06-12T04:21:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-643056517",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MzU3MDE3Mw==",
+      "author": {
+        "login": "longqian95"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge According to the feedback, this original commit especially the documentation has some problems which may confuse some users. I have improved the document as well as related code, especially mentioned in the document that this package may bypass the package version compatibility check. So could you please help to merge the newest commit #8893ca7.",
+      "createdAt": "2020-06-13T04:59:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15989#issuecomment-643570173",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: IsoPkg\n- Repository: https://github.com/longqian95/IsoPkg\n- Created by: @longqian95\n- Version: v1.0.0\n- Commit: 8893ca736251f039211d37f230b548962a9da527\n- Reviewed by: @longqian95\n- Reference: https://github.com/longqian95/IsoPkg/commit/8893ca736251f039211d37f230b548962a9da527#commitcomment-39875381\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd669057dc3da6d6396e8a8a3c17cbb72f804947a70d763171375eb42654018134c2e66dae9eaed90759117b25863906efe6bcfe8ca8a60dd2d96dc8c1f2073a94ab476c92d5b7ecec27329b2b586377692bfb3e800d92e338c96039975a394dded06444be874d60c8359b7007dc4004473a916d3aa3121c000d98dcabd58dd91385538e1909fa2a0230b6051875810c9e048e618193f1227cf4913144ecc2edd7aaa6e8a1e1ddac36606ffa6c9c52f1f3f -->",
+  "package_name": "IsoPkg",
+  "title": "New package: IsoPkg v1.0.0"
+}

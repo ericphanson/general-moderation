@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-02-04T23:28:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-11T19:24:02Z",
+  "pr_number": 53916,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849axvW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to MHLib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to PDELib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Spglib. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-04T23:33:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53916#issuecomment-1030429654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849kNq4",
+      "author": {
+        "login": "noahrhodes"
+      },
+      "authorAssociation": "NONE",
+      "body": "The package name is based on the data library is provides, which is abbreviated to PGLib.  https://github.com/power-grid-lib\r\n\r\nPlease let me know if the name is too similar  for the package to be merged.\r\n",
+      "createdAt": "2022-02-08T17:59:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53916#issuecomment-1032903352",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PGLib\n- Repository: https://github.com/noahrhodes/PGLib.jl\n- Created by: @noahrhodes\n- Version: v0.1.0\n- Commit: 67ad9addf15f2a0919421d5cb80ea0f0977897c9\n- Reviewed by: @noahrhodes\n- Reference: https://github.com/noahrhodes/PGLib.jl/issues/4#issuecomment-1030445488\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b0e629bfd830e5c3026e08df79570d64160598118ce133e4cd4e3e27920fda9c2b17cb8240173125543285e009ee2a5b4fc07957c718bf5b02051325828f07ddeccb1e35c2438144381fe96a9bea33cd0629696af55f9d1371d689eae94f2f88e7db33e93124ef0fc0b444f9f1b02a29183fccac125775e647b13062ebe0c608 -->",
+  "package_name": "PGLib",
+  "title": "New package: PGLib v0.1.0"
+}

@@ -1,0 +1,207 @@
+{
+  "created_at": "2023-05-26T01:57:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-30T20:46:14Z",
+  "pr_number": 84268,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85dNGuo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Assets. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-26T02:04:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1563716520",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dNU8Y",
+      "author": {
+        "login": "epatters"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sorry for the trouble, but I would like to request that this PR be manually merged on the grounds that\r\n\r\n- The two packages concern very different domains (databases/data structures and finance)\r\n- \"ACSets\" is a made-up word (short for \"attributed C-sets\"), so in any case is unlikely to be confused with other things\r\n- We've been using this word in our software and writings for several years now\r\n\r\nThanks!",
+      "createdAt": "2023-05-26T03:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1563774744",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dQoHf",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Using the \"what are the words you use to describe it\" method, it seems like `AttributedCSets` would be a better name.",
+      "createdAt": "2023-05-26T16:28:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1564639711",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dUPVG",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "+1 to AttributedCSets.jl",
+      "createdAt": "2023-05-27T16:38:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1565586758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dglr6",
+      "author": {
+        "login": "epatters"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for the suggestions. However, the AlgebraicJulia team would prefer the original name since that is the name that we have been using and are now accustomed to.\r\n\r\nCan this PR please be manually merged?",
+      "createdAt": "2023-05-30T17:40:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568824058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dguoC",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\r\n\r\nDid everyone read this and disagree with the reasoning?",
+      "createdAt": "2023-05-30T18:09:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568860674",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dgxvo",
+      "author": {
+        "login": "epatters"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Point taken. We'll rename the package (name TBD). This PR can be closed. Thanks.",
+      "createdAt": "2023-05-30T18:20:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568873448",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dgzDo",
+      "author": {
+        "login": "mehalter"
+      },
+      "authorAssociation": "NONE",
+      "body": "@epatters @rafaqz actually I believe changing the name here goes against the package naming guidelines. Pointedly guideline 3: \"Packages that provide most of their functionality in association with a new type should have pluralized names.\"\r\n\r\nThis package purely exports the `ACSet` type and functionality for this type. Therefore it should be named `ACSets.jl`\r\n\r\nThis would also align with the Python implementation package `py-acsets` which we would like to maintain a common naming convention with.",
+      "createdAt": "2023-05-30T18:24:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568878824",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dgz60",
+      "author": {
+        "login": "jpfairbanks"
+      },
+      "authorAssociation": "NONE",
+      "body": "I agree with @mehalter that guideline 3 exceeds the value of guideline 1 in this case. AttributedCSets is still jargon, since CSet is a play on the name G-Set for a group action, which is jargon from abstract algebra. ",
+      "createdAt": "2023-05-30T18:27:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568882356",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dg1Sb",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sure! That makes sense.\n\nI was making the point that wanting the name anyway should be in reference to the guidelines and your situation, not just a preference. Because everyone prefers their own idea.\n\nNow you just need to convince someone who actually has commit rights :)\n\n",
+      "createdAt": "2023-05-30T18:31:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568887963",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dg_83",
+      "author": {
+        "login": "JeffBezanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm ok with this; I don't find Assets and ACSets very confusable.",
+      "createdAt": "2023-05-30T19:03:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/84268#issuecomment-1568931639",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: ACSets\n- Repository: https://github.com/AlgebraicJulia/ACSets.jl\n- Created by: @epatters\n- Version: v0.1.0\n- Commit: 672186a05a6b298417223d4c1cb01d34fd59ab92\n- Git reference: HEAD\n- Description: ACSets: Algebraic databases as in-memory data structures",
+  "package_name": "ACSets",
+  "title": "New package: ACSets v0.1.0"
+}

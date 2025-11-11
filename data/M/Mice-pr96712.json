@@ -1,0 +1,73 @@
+{
+  "created_at": "2023-12-07T18:45:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-12-11T19:56:39Z",
+  "pr_number": 96712,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85uBo4z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 12 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to Hive. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.23 is at or below cutoff of 2.50.\n  2. Similar to Pipe. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Fire. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Miter. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Mimi. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Xyce. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Dices. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Minc2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to MoYe. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to Jive. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to Mill. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to Juice. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-07T18:49:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96712#issuecomment-1845923379",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uBrZa",
+      "author": {
+        "login": "tom-metherell"
+      },
+      "authorAssociation": "NONE",
+      "body": "Because this package is heavily based on an [R package of the same name](https://github.com/amices/mice), I believe that the name should be `Mice.jl`. So I am requesting a manual PR merge please :)",
+      "createdAt": "2023-12-07T18:57:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96712#issuecomment-1845933658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uBsn1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems fine to me. Ping the Slack channel in 3 days.",
+      "createdAt": "2023-12-07T19:01:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96712#issuecomment-1845938677",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: Mice\n- Repository: https://github.com/tom-metherell/Mice.jl\n- Created by: @tom-metherell\n- Version: v0.3.0\n- Commit: c3ba70e3031cca1295688f8666b423d23d3c0793\n- Reviewed by: @tom-metherell\n- Reference: https://github.com/tom-metherell/Mice.jl/commit/c3ba70e3031cca1295688f8666b423d23d3c0793#commitcomment-134533373\n- Description: a package for missing data handling via multiple imputation by chained equations in Julia. It is heavily based on the R package {mice} by Stef van Buuren, Karin Groothuis-Oudshoorn and collaborators.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis is the first registered version of `Mice.jl`.\r\n\r\n## Breaking changes\r\n* Removed internal multithreading option (i.e. no more `threads` argument).\r\n\r\n## Other major changes\r\n* Improved overall performance significantly and\r\n* Removed now unused internal functions.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68e4f4f14d75e1a5226963bd12cfd1f966f5f3ae13e6c810979bd29b95e9970f75b57434f720311af8192e5a7c941aaf8c9eb9887ef4dfe9a37c0cad0ab8d40542ad3305a69aeaeb5ae26f820e468013828047a3271c290e57690f21ca00b871cc9425397f8445085595856cc94d08a040926685e46d1fb998dda0f2f8225ba241b312fda75dc2a9ef2faad0ae819e873a7545c0af2fadbe4df7b674eccaf024d95fce594bda22820414c251ce7ac9dfa -->",
+  "package_name": "Mice",
+  "title": "New package: Mice v0.3.0"
+}

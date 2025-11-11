@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-07-21T18:02:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-29T15:15:46Z",
+  "pr_number": 88006,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85iHR79",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 5 existing packages.\n  1. Similar to Edlib. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.16 is at or below cutoff of 2.50.\n  2. Similar to Colab. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to NNlib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to CRlibm. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Coils. Normalized visual distance 2.36 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-21T18:14:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88006#issuecomment-1646075645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iHZfR",
+      "author": {
+        "login": "rngil"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi there, \r\n\r\nOn behalf of [Cclib's](https://github.com/cclib/cclib/tree/master) development team, we are very excited to join Julia's ecosystem. Cclib is a library used for parsing and interpreting outputs of computational chemistry programs that has been around for years and is well-known in the cheminformatics community. As such would, we would greatly appreciate being able to retain library's original name. ",
+      "createdAt": "2023-07-21T18:45:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88006#issuecomment-1646106577",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Cclib\n- Repository: https://github.com/cclib/Cclib.jl\n- Created by: @vcanogil\n- Version: v0.2.0\n- Commit: a14e987d0f0e158997efbafb96451221b21f2b13\n- Reviewed by: @vcanogil\n- Reference: https://github.com/cclib/Cclib.jl/issues/4#issuecomment-1646062350\n- Description: Parsers and algorithms for computational chemistry logfiles (Julia bindings to the cclib Python package).\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835981d4ef21085fe13050e57584392c405b6da23130a609e4dc7270429b48ab0ce92591b20c8ee22f3953ec9d05f9586fa4901eda0cc174878275495236d5325c219c555b739edbcc9c64ecf86c9e247134de3c4609c77bc652695dd4f3b2d75a487851898599caea8c83696f030b22e4687 -->",
+  "package_name": "Cclib",
+  "title": "New package: Cclib v0.2.0"
+}

@@ -1,0 +1,122 @@
+{
+  "created_at": "2021-07-27T13:17:33Z",
+  "review_comments": [
+    {
+      "id": 716486192,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzE2NDg2MTky",
+      "user": {
+        "login": "ararslan",
+        "id": 6396159,
+        "node_id": "MDQ6VXNlcjYzOTYxNTk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6396159?u=cc84063fd3b265af35e1b7153fc75bcc228fba4c&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/ararslan",
+        "html_url": "https://github.com/ararslan",
+        "followers_url": "https://api.github.com/users/ararslan/followers",
+        "following_url": "https://api.github.com/users/ararslan/following{/other_user}",
+        "gists_url": "https://api.github.com/users/ararslan/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/ararslan/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/ararslan/subscriptions",
+        "organizations_url": "https://api.github.com/users/ararslan/orgs",
+        "repos_url": "https://api.github.com/users/ararslan/repos",
+        "events_url": "https://api.github.com/users/ararslan/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/ararslan/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/41606#pullrequestreview-716486192",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/41606",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/41606#pullrequestreview-716486192"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/41606"
+        }
+      },
+      "submitted_at": "2021-07-28T00:40:20Z",
+      "commit_id": "568198f38083522b73330b3f9f6d32abe67adb4a"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-07-28T00:40:59Z",
+  "pr_number": 41606,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8405lqw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to FastaIO. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to FastCGI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-07-27T13:26:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41606#issuecomment-887511728",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8405vUW",
+      "author": {
+        "login": "lorenzoh"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would like this pull request to be merged despite the name similarity. As the approved Julia version of the original [fastai](docs.fast.ai), the name carries some recognition value. The similarly named packages also seem to have been inactive for more than a year now.",
+      "createdAt": "2021-07-27T14:16:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41606#issuecomment-887551254",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8406D7Y",
+      "author": {
+        "login": "lorenzoh"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Does that mean within 3 days or after 3 days? I was planning this release to before JuliaCon, when the name similarities caught me off guard; let me know if I can do something to speed this up in the latter case :)",
+      "createdAt": "2021-07-27T16:00:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41606#issuecomment-887635672",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8407KmW",
+      "author": {
+        "login": "ararslan"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Name similarity is not a problem. Expedited merging by request.",
+      "createdAt": "2021-07-28T00:40:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/41606#issuecomment-887925142",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ararslan",
+  "body": "- Registering package: FastAI\n- Repository: https://github.com/FluxML/FastAI.jl\n- Created by: @lorenzoh\n- Version: v0.1.0\n- Commit: 9cafd1e6d0d74c8b6cbf7da38993ea94e00aa78a\n- Git reference: HEAD",
+  "package_name": "FastAI",
+  "title": "New package: FastAI v0.1.0"
+}

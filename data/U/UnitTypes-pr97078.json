@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-12-14T04:46:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-12-21T09:40:20Z",
+  "pr_number": 97078,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ukvaY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Unityper. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-14T04:50:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97078#issuecomment-1855125144",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uk0pF",
+      "author": {
+        "login": "bc0n"
+      },
+      "authorAssociation": "NONE",
+      "body": "The similarly-named package, [Unityper](https://github.com/YingboMa/Unityper.jl), is not at all concerned with dimensional analysis or unit handling, leading to zero risk of confusion.  UnitTypes is the most literal and descriptive name for this package.",
+      "createdAt": "2023-12-14T05:16:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97078#issuecomment-1855146565",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: UnitTypes\n- Repository: https://github.com/mechanomy/UnitTypes.jl\n- Created by: @bc0n\n- Version: v0.0.5\n- Commit: d4101773519d14e1e42bd8ecc59414407c4f1f48\n- Reviewed by: @bc0n\n- Reference: https://github.com/mechanomy/UnitTypes.jl/issues/2#issuecomment-1855135908\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598941139d6b85156e90179ac7b2cf7177bb429723a384c09d0d0e79567e10640d43e9d9a863c4ab7656f398c3d257c6da0d0a30c8560cfc77f8899c4710a13a9af80cd12e64bd8e8f87b68f8669303e5c4b56b57b34b02a6143e0f6ad0d47af83a4d20f81e7945c9c3029110b5ffc5c487bf6de6ae6013c0707b7001c9d857758f -->",
+  "package_name": "UnitTypes",
+  "title": "New package: UnitTypes v0.0.5"
+}

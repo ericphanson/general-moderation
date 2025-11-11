@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-11-16T05:31:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-12-01T23:42:19Z",
+  "pr_number": 72286,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85OdokN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to EAGO. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.38 is at or below cutoff of 2.50.\n  2. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-16T05:38:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72286#issuecomment-1316391181",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OeXuU",
+      "author": {
+        "login": "adow031"
+      },
+      "authorAssociation": "NONE",
+      "body": "It would be great if the name for this package could remain as PoGO. PoGO implements a number of methods for modelling non-convex global optimization problems using the JuMP mathematical modelling framework.\r\n\r\nAlthough this name is only four characters, there are only two packages identified as having similar names: EAGO and PEG and these names are both quite different to PoGO.\r\n\r\nThanks for considering this request,\r\nTony.\r\n\r\nDr Anthony Downward,\r\nEngineering Science,\r\nUniversity of Auckland,\r\nNew Zealand.",
+      "createdAt": "2022-11-16T08:25:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72286#issuecomment-1316584340",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PoGO\n- Repository: https://github.com/adow031/PoGO.jl\n- Created by: @adow031\n- Version: v0.2.1\n- Commit: e9e743b1ec23236108a29b5e1c2009b4f67cd998\n- Git reference: main\n- Description: PoGO is a Julia package that facilitates automatic piecewise linearization of various non-linear functions within JuMP models.",
+  "package_name": "PoGO",
+  "title": "New package: PoGO v0.2.1"
+}

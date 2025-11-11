@@ -1,0 +1,66 @@
+{
+  "created_at": "2021-11-19T16:59:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-11-22T18:52:25Z",
+  "pr_number": 49053,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846EdBV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to AtomBase. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-19T17:02:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49053#issuecomment-974245973",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846E16X",
+      "author": {
+        "login": "rkurchin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "👋 Hi General maintainers!\r\n\r\nThe [package](https://github.com/yaozhenghangma/AtomBase.jl) that's causing the automerge failure due to name similarity has had no commits since it was registered almost two years ago. Is there a process for \"claiming\" this package name anyway since that one seems to be orphaned?\r\n\r\nThe developers of AtomsBase (myself, @mfherbst, @gregstrq, @jgreener64) have been working within the [JuliaMolSim](https://github.com/JuliaMolSim) community on this project since a session Michael and I co-led at JuliaCon last summer, and there's pretty substantial community buy-in and excitement about this, so we're confident it would be made use of!\r\n\r\nLet us know what next steps are here.",
+      "createdAt": "2021-11-19T19:26:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49053#issuecomment-974347927",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846JzxD",
+      "author": {
+        "login": "mfherbst"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Cool, thanks @giordano !",
+      "createdAt": "2021-11-22T15:36:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/49053#issuecomment-975649859",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: AtomsBase\n- Repository: https://github.com/JuliaMolSim/AtomsBase.jl\n- Created by: @rkurchin\n- Version: v0.1.0\n- Commit: a14916246753efbdd5975dc4c1e17167eb68e59c\n- Reviewed by: @rkurchin\n- Reference: https://github.com/JuliaMolSim/AtomsBase.jl/commit/a14916246753efbdd5975dc4c1e17167eb68e59c#commitcomment-60569420\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6653c515ca549a47c4e6e2d19a367e8546080ba19b9368fdb8b8105d8e735500b66884ad222b159781d3e653099ed95ac6cbf3643c190c7b068e3eb13df2e47770622d693c7adb916e1411e4728a870709a74474f4f655b2c99c9aedbfe88d06d6c5ebbfc41adef8c9baee7280150d1cd94ec80e468a2eea0a11c7ee8e6b09f8f8853cad24441a9c70dc779760ef9d0c74b5405338bdb8735f981bef350807fb6607a7de2f649cff9d732e95f68a933bc -->",
+  "package_name": "AtomsBase",
+  "title": "New package: AtomsBase v0.1.0"
+}

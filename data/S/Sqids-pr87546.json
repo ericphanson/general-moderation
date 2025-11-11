@@ -1,0 +1,73 @@
+{
+  "created_at": "2023-07-15T12:29:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-18T14:40:31Z",
+  "pr_number": 87546,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hjuR9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 2 existing packages.\n  1. Similar to Gaius. Normalized visual distance 2.30 is at or below cutoff of 2.50.\n  2. Similar to Folds. Normalized visual distance 2.48 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-15T12:34:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87546#issuecomment-1636754557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hj7vT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This should be totally fine, but it will need to be merged manually by a maintainer ",
+      "createdAt": "2023-07-15T16:02:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87546#issuecomment-1636809683",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hkBtn",
+      "author": {
+        "login": "antimon2"
+      },
+      "authorAssociation": "NONE",
+      "body": "As the creator of this package, let me clarify:\r\n\r\n+ `Sqids` module is intended as a utility with common specifications across various languages. The organizer prefers to maintain the repository-naming convention `sqids-<langname>` if possible.\r\n+ Although the name `Sqids` is simple, it's unique and clearly distinguishable from `Gaius` or `Folds` upon visual inspection.\r\n\r\nGiven these points, I request the manual registration of the package.",
+      "createdAt": "2023-07-15T17:33:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87546#issuecomment-1636834151",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Sqids\n- Repository: https://github.com/sqids/sqids-julia\n- Created by: @antimon2\n- Version: v0.1.0\n- Commit: 2d39f033df8506fc026c3d31f944bffbb3ed3be3\n- Reviewed by: @antimon2\n- Reference: https://github.com/sqids/sqids-julia/commit/2d39f033df8506fc026c3d31f944bffbb3ed3be3#commitcomment-121693041\n- Description: Official Julia port of Sqids. Generate short YouTube-looking IDs from numbers.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6267ec4efaac442e25cb84cf2e64366225a98c44d32da8927198e47462db6f4055b637170813ae04030a4b1ea7487137e1ba0079444c8fdfe9bfa81f867b92ef2de71ad220038919e7a7827231c753332ba5d1d2dc15b3a21dce8ccdd8392c2e648290701cce523d6af63ac2d4a258bb7cda7f454fb7c61878901565b540fcd2f9b6ae0c3312afa583100174534a27680d66405e1871a7a98b33587d7a4da2f88936c52ec0201d35e070b368f96bef33f -->",
+  "package_name": "Sqids",
+  "title": "New package: Sqids v0.1.0"
+}

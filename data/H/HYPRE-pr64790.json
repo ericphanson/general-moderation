@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-07-22T19:36:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-07-28T21:08:33Z",
+  "pr_number": 64790,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85HGe__",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-07-22T19:40:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64790#issuecomment-1192882175",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HHiz8",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This wraps the library `HYPRE`, hence the name. They sometimes use `HYPRE`, sometimes `hypre` (which would mean `Hypre.jl` I suppose). The corresponding JLL package is named `HYPRE_jll` already, so I think it would be best to use all caps here too.\r\n\r\n[noblock]",
+      "createdAt": "2022-07-23T17:27:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64790#issuecomment-1193159932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HcK2s",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm ok with the allcaps name in this case. ",
+      "createdAt": "2022-07-28T19:52:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64790#issuecomment-1198566828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HcLGB",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think this is the right name. It is a wrapper around HYPRE which has been around for a very long time. In its community, it is a known name, and the spelling is uncommon enough to not conflict with other things.",
+      "createdAt": "2022-07-28T19:54:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64790#issuecomment-1198567809",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: HYPRE\n- Repository: https://github.com/fredrikekre/HYPRE.jl\n- Created by: @fredrikekre\n- Version: v1.0.0\n- Commit: 27fdb9b35b5b0c49da1b92244015617a678e84ae\n- Reviewed by: @fredrikekre\n- Reference: https://github.com/fredrikekre/HYPRE.jl/commit/27fdb9b35b5b0c49da1b92244015617a678e84ae#commitcomment-79678172\n- Description: Julia interface to hypre linear solvers (https://github.com/hypre-space/hypre)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c383435215cb7d50f1b3c395f04e4e6ef9ab827f25e1784d89aeae95e1e1d8abae551174ff62eedfc5f56f5ea02238faca29b3441d322c9ec8cba76bb13e8c8fd352534532f050d7d1f8f7d050966a2eb14bd1ef7e316c594c2a74020fe691d746c66ab828d490fc792a65b855ba1b490310d4163d4db1b075ccd7b383dfafb4d06582761f71deb6724fdb7e60a4eae943405bb50a3c686479845a8236a22c1751aa86a3d9b68713d038029381e49fa9 -->",
+  "package_name": "HYPRE",
+  "title": "New package: HYPRE v1.0.0"
+}

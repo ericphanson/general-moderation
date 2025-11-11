@@ -1,0 +1,104 @@
+{
+  "created_at": "2021-05-10T03:57:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-05-10T18:52:43Z",
+  "pr_number": 36395,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNjEzNjYzOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to FreudenthalTriangulation. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.85 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-10T04:00:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-836136639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNjgxMTkyOQ==",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@giordano Is it ok to merge this one? The earlier PR had a misspelling and got merged and not much we can do about it now.But since this package is going into a book, it needs to be registered with the right spelling.",
+      "createdAt": "2021-05-10T15:04:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-836811929",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNjgyMjIxNA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, bit unfortunate the original name is wrong.  The main concern is that the old repository was renamed to the new one, which might make the old package uninstallable in the future without PkgServer.  It is maybe not too worrying if the package is deprecated, but still not ideal.",
+      "createdAt": "2021-05-10T15:13:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-836822214",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNzEwODI2MQ==",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah - nobody will use the wrongly spelled package or even know about it. I assume Github will still forward, right?",
+      "createdAt": "2021-05-10T18:32:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-837108261",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNzExMTgzMg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I assume Github will still forward, right?\r\n\r\nIt should, yes, unless the repo `https://github.com/sisl/FreudenthalTriangulation.jl` is created, or GitHub decides to stop redirecting renamed repositories.",
+      "createdAt": "2021-05-10T18:34:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-837111832",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNzExNTg4Mg==",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, shall we merge then?",
+      "createdAt": "2021-05-10T18:37:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36395#issuecomment-837115882",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: FreudenthalTriangulations\n- Repository: https://github.com/sisl/FreudenthalTriangulations.jl\n- Created by: @SidhartK\n- Version: v2.1.0\n- Commit: efe9e140f62cfde9bf2ab2828c8fecdc66a75f00\n- Git reference: HEAD",
+  "package_name": "FreudenthalTriangulations",
+  "title": "New package: FreudenthalTriangulations v2.1.0"
+}

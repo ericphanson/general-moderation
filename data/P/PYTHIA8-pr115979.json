@@ -1,0 +1,161 @@
+{
+  "created_at": "2024-09-25T16:37:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-09-29T21:32:47Z",
+  "pr_number": 115979,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86NiYBf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-25T16:41:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2374598751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NigWj",
+      "author": {
+        "login": "peremato"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] @goerz Can you please unblock the request with this new name. Thanks! ",
+      "createdAt": "2024-09-25T16:55:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2374632867",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ni5y7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] So yeah, unfortunately, this still caught the \"not all letters are upper-case\" check, which I can't override. But it should be fine. You just have to go back on Slack in three days and ask for a maintainer to merge it manually. I don't see this PR as particularly controversial, so it's just a matter of getting someone's attention",
+      "createdAt": "2024-09-25T17:32:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2374737083",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NjALF",
+      "author": {
+        "login": "peremato"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks!",
+      "createdAt": "2024-09-25T17:45:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2374763205",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N9BRG",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Why is this called PYTHIA**8**.jl, that is, why is the version number included in the package name? If a version 9 of the upstream package is released, should we expect a PYTHIA9.jl? That doesn't seem ideal. Otherwise I think this can be merged.",
+      "createdAt": "2024-09-29T19:58:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2381583430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N9Bze",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] very good question, for some reason HEP has settled to this pattern:\r\n\r\n- https://launchpad.net/mg5amcnlo\r\n- https://github.com/scikit-hep/uproot5\r\n- https://gitlab.cern.ch/hepmc/HepMC3\r\n- https://en.wikipedia.org/wiki/Geant4",
+      "createdAt": "2024-09-29T20:05:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2381585630",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N9CTK",
+      "author": {
+        "login": "peremato"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] PYTHIA6 was written in FORTRAN, PYTHIA8 is in C++. If ever there is a PYTHIA9 will be written on a different language, perhaps in Julia 😄, so we do not expect a PYTHIA9 in the immediate future. ",
+      "createdAt": "2024-09-29T20:12:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2381587658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N9JfI",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alright, I take it that these different \"versions\" are more like entire rewrites, in which case this makes sense. I'll go ahead and merge this.",
+      "createdAt": "2024-09-29T21:32:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115979#issuecomment-2381617096",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "carstenbauer",
+  "body": "- Registering package: PYTHIA8\n- Repository: https://github.com/JuliaHEP/PYTHIA8.jl\n- Created by: @peremato\n- Version: v0.1.0\n- Commit: 9b576775e56d11536594fe4fef97bea1f717e9d7\n- Reviewed by: @peremato\n- Reference: https://github.com/JuliaHEP/PYTHIA8.jl/commit/9b576775e56d11536594fe4fef97bea1f717e9d7#commitcomment-147197461\n- Description: Pythia8 Julia interface\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## Initial release\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6438221903c9e0086ff39398b0034a40f25afcb8acac1ce41a5960ce8b48d2ab0b1977a4c2563c192e06fde84a6d894b4d1e666275122a056ed8b8622c150067cfebb0aa19d0e55285cd7782e049be323ed1126042060736ca899355075515b416455ae934c52080ee272722fcc9112d145e7ed4ce3a522bafb15039f37965b015ee7ad8fb7732dba4b4e60c8846db4051e4d33eda9d7dcf2a1dcdf47da20d68a1d0962af9e48f0553adcde35e72afc85 -->",
+  "package_name": "PYTHIA8",
+  "title": "New package: PYTHIA8 v0.1.0"
+}

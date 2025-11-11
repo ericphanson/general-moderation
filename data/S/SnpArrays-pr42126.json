@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-08-04T00:21:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-07T17:57:51Z",
+  "pr_number": 42126,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841LtcD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to SymArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to IntArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to GeoArrays. Normalized visual distance 2.13 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-04T00:26:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42126#issuecomment-892262147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Lwl5",
+      "author": {
+        "login": "kose-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is deliberately named to express that it read/writes data for SNP, short for single nucleotide polymorphisms. We have been internally using this name for quite a while, so hopefully, this name can be allowed. ",
+      "createdAt": "2021-08-04T00:54:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42126#issuecomment-892275065",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SnpArrays\n- Repository: https://github.com/OpenMendel/SnpArrays.jl\n- Created by: @kose-y\n- Version: v0.3.10\n- Commit: 658376a2a31998b6aa222e736073ff7ea6a35e94\n- Reviewed by: @kose-y\n- Reference: https://github.com/OpenMendel/SnpArrays.jl/commit/658376a2a31998b6aa222e736073ff7ea6a35e94#commitcomment-54381471\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e39d270922e81b7c6725a40ccf94f755cc92923d7a17227bedac4c31c29ab6c372264cee902db140c00da98881d6f844d57de5b389f5997c1b4f1d788eea0d02b4a95ab02cfae6d2f5417f2f93e790d6e548cfd814bdb2193eaa96b1efc5165b47b48995c6723e208c7410c622e468b9e038b25fed3af7fc3766d7c1d9c1722e922a938bf62b5e3b921a864bd51607072eabe00725efd01e39f86522235121bda8abf60444a627427c8923fa2741b37e -->",
+  "package_name": "SnpArrays",
+  "title": "New package: SnpArrays v0.3.10"
+}

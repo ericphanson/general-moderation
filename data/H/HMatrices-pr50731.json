@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-12-17T08:39:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-23T18:34:48Z",
+  "pr_number": 50731,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847ZfNQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to HssMatrices. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-17T08:42:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50731#issuecomment-996537168",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847ZhUw",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi,\r\n\r\nAutomerge has halted due to an existing package with a very similar name (`HSSMatrices`). I am reluctant to change the package's name, which I think is descriptive and provides an accurate description of the hierarchical matrix format implemented. The issue is that the names of various hierarchical matrix format are very similar (e.g. HMatrix, HSSMatrix, H2Matrix, HODLRMatrix, etc), so trying to name the package according to the implemented format causes a conflict.  \r\n\r\nIs it acceptable to keep the name as such and manually merge this? If not, any suggestions on how to proceed? \r\n\r\nThanks.",
+      "createdAt": "2021-12-17T08:57:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50731#issuecomment-996545840",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847cXVF",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To be honest, I think `HierarchicalMatrices` would be a better name, instead of trying to guess what the `H` stands for",
+      "createdAt": "2021-12-18T22:07:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50731#issuecomment-997291333",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847cjzw",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> To be honest, I think `HierarchicalMatrices` would be a better name, instead of trying to guess what the `H` stands for\r\n\r\nThat name is already taken by another package implementing more of an abstract interface to hierarchical matrices. I guess I could go with `HierMatrices` then if it seems more explicit, but I would prefer to stick with `HMatrices` since that indicates the *specific format* of hierarchical matrix implemented.",
+      "createdAt": "2021-12-19T07:21:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50731#issuecomment-997342448",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: HMatrices\n- Repository: https://github.com/WaveProp/HMatrices.jl\n- Created by: @maltezfaria\n- Version: v0.1.0\n- Commit: e67f1ecada85e71ca5d4b54fa2aeaa5dde5997e7\n- Git reference: HEAD\n- Description: A Julia library for hierarchical matrices",
+  "package_name": "HMatrices",
+  "title": "New package: HMatrices v0.1.0"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-11-22T22:48:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-11-27T19:05:22Z",
+  "pr_number": 95823,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ssfWB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to TidierVest. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-22T22:52:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95823#issuecomment-1823602049",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ssfxj",
+      "author": {
+        "login": "kdpsingh"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package is a port of R’s tidytext package so I would really like to keep the name as TidierText. Note that TidierVest is a port of R’s rvest package, which is also part of the R tidyverse, and hence both names are carefully selected.\r\n\r\n[noblock]",
+      "createdAt": "2023-11-22T22:55:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95823#issuecomment-1823603811",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: TidierText\n- Repository: https://github.com/TidierOrg/TidierText.jl\n- Created by: @kdpsingh\n- Version: v0.1.0\n- Commit: f3aae23fe08e12da09a4ba4d1114a118970b543a\n- Reviewed by: @kdpsingh\n- Reference: https://github.com/TidierOrg/TidierText.jl/commit/f3aae23fe08e12da09a4ba4d1114a118970b543a#commitcomment-133299729\n- Description: 100% Julia implementation of the tidytext R package\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6622d3f03b4ab2defe310a87e2fc5c12564625a8bb34e487344a0f34f6d02a86bd40c62b564c9b661f7fe7ecd8a0e8cbe3c35bee95c2587e744ea4920b048777f2ac8dc01db71b95fc7c008a5a6c0f6a57538f90dbfb1441abf4954653081e454e9a2defa4b1b18d17b9cde53b10b1b93698c1dbf0893ac48127c2a3f05e21eb59c951695f58ce1b83127f4aaa8476bd950e068b86428a002000dd16bb181632f669247384a8c4c2599f65e2e4a8a2219 -->",
+  "package_name": "TidierText",
+  "title": "New package: TidierText v0.1.0"
+}

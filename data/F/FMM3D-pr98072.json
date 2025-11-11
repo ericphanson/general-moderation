@@ -1,0 +1,391 @@
+{
+  "created_at": "2024-01-02T19:48:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-03-08T17:53:54Z",
+  "pr_number": 98072,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vuj4Q",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to FMM2D. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.75 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-02T19:52:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1874476560",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v3fP-",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is a wrapper and is therefore named after the library that it wraps.\r\n\r\nThe [original library has an Apache 2.0 license](https://github.com/flatironinstitute/FMM3D/blob/master/LICENSE). This is registration is only of the subfolder including the Julia wrapper which does not contain the license. Is this the reason why it complains regarding the license?\r\n\r\nRegarding the name, then FMM2D is for 2D computations while FMM3D for the 3D computations. I think the differences is quite clear.",
+      "createdAt": "2024-01-04T09:59:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1876816894",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v3i88",
+      "author": {
+        "login": "shayandavoodii"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\n\nRegarding the name, what if you combine the FMM2D and the FMM3D in a package called FMMs or whatever? I mean, instead of having these two packages, let's have a package that hopefully includes all the variants.",
+      "createdAt": "2024-01-04T10:09:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1876832060",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v4UPu",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "I do not really know what is the best practice here. The two packages are wrappers to two different (but related) libraries, which would be indicated by having two separate packages. That being said I am not against having a combined package. ",
+      "createdAt": "2024-01-04T12:40:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1877033966",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v4eQG",
+      "author": {
+        "login": "lu1and10"
+      },
+      "authorAssociation": "NONE",
+      "body": "The 2D and 3D library function signatures seems to be quite similar. If @askhamwhat and @mipals both think merging the 2D and 3D is a good idea, I guess we should start a new repo and collaborate on combining the two wrappers. @askhamwhat what do you think?",
+      "createdAt": "2024-01-04T13:12:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1877074950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v4iDl",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "The 2D wrapper is indeed very similar (in fact it is very much just a copy-paste of the 3D wrapper with a few things changed). Note that the 2D wrapper was written quite quickly and could use a freshener at some point. In fact there are many features that it does on include as only the Helmholtz kernel was covered in the documentation at the time it was written (I do know if this has since been fixed). \r\n\r\nWhether or not it makes sense to have a single package I do not know. Part of my likes that they are separated (due to the original packages being separate), but I can also see the idea combining them working. \r\n\r\nRegarding the license issue then the reason is that only the subfolder is distributed. Fredrik Ekre therefore suggested on Slack to copy the license to the Julia subfolder. I guess this should be possible?",
+      "createdAt": "2024-01-04T13:24:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1877090533",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v4k5e",
+      "author": {
+        "login": "lu1and10"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Regarding the license issue then the reason is that only the subfolder is distributed. Fredrik Ekre therefore suggested on Slack to copy the license to the Julia subfolder. I guess this should be possible?\r\n\r\nYes, @mrachh is working on editing and update the license for FMM3D, once it's done we will make a copy to the subfolder.",
+      "createdAt": "2024-01-04T13:33:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1877102174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xB7dM",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "To weight in my opinion as a user of both libraries: \r\n- Despite the one character difference, the distinction between `FMM3D` vs `FMM2D` is quite clear\r\n- Since `FMM2D` and `FMM3D` wrap different libraries, I think they should exist as different Julia packages. \r\n\r\nThanks for trying to register this!",
+      "createdAt": "2024-01-17T18:06:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1896331084",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xCiav",
+      "author": {
+        "login": "tanderson92"
+      },
+      "authorAssociation": "NONE",
+      "body": "> To weight in my opinion as a user of both libraries:\r\n> \r\n> * Despite the one character difference, the distinction between `FMM3D` vs `FMM2D` is quite clear\r\n> * Since `FMM2D` and `FMM3D` wrap different libraries, I think they should exist as different Julia packages.\r\n> \r\n> Thanks for trying to register this!\r\n\r\nI am also a user of both libraries (and recently wrapped each for a project, so I'm familiar with the differences) and I would second this perspective. The difference is clear.\r\n\r\nMoreover, wrapping them in the same way risks confusion at important implementational differences: for example, the 2D library does not (yet) support Laplace. And while the interface may be similar even for `FMMLIB2D`, yet another FMM library that actually does support Laplace, the `FMM3D` and `FMMLIB2D` libraries differ significantly in how they treat evaluation at source-points (targets having a nontrivial intersection with sources). Thus, in the end the user is going to need to pay heed to the documentation for the relevant library, anyway.\r\n\r\nIn fact, as the above differences show there are plenty of different FMM implementations. One can imagine kernel-independent FMMs as well sharing such a common interface. Must all these be wrapped in a single library simply because their names are somewhat similar, yet clearly and understandably distinct?",
+      "createdAt": "2024-01-17T19:22:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1896490671",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xDBQj",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, I am also thinking that having two separated packages is probably the way to go due to them wrapping two different libraries. No reason to mix them up.  \r\n\r\n@tanderson92 A little off topic but are you sure that the FMM2D does not support Laplace? I thought it was just undocumented (similar to Stokes and Biharmonic) and hence did not include it in the Julia wrapper.",
+      "createdAt": "2024-01-17T20:13:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1896616995",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xDEeC",
+      "author": {
+        "login": "tanderson92"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yeah, I am also thinking that having two separated packages is probably the way to go due to them wrapping two different libraries. No reason to mix them up.\r\n> \r\n> @tanderson92 A little off topic but are you sure that the FMM2D does not support Laplace? I thought it was just undocumented (similar to Stokes and Biharmonic) and hence did not include it in the Julia wrapper.\r\n\r\nI was speaking only to the Julia wrapper, which is still relevant for this discussion. Yes, the underlying library has more capabilities that aren't currently exposed in `FMM2D.jl`.",
+      "createdAt": "2024-01-17T20:21:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1896630146",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xDKrE",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "Fair enough @tanderson92. If you at some point need the Julia wrapper of FMM2D to also include Laplace, Stokes, etc. let me know. I just stopped at Helmholtz since that was what I needed (and it was the only thing documented) and since then nobody else than me has seemed to be using the wrapper 😄 ",
+      "createdAt": "2024-01-17T20:41:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1896655556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851VIbL",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge There is a now a license in the Julia subfolder. Can the automerge be run again?",
+      "createdAt": "2024-02-28T08:34:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1968473803",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Y1aS",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Can the automerge be run again?\r\n\r\nYep, just re-trigger Registrator on your latest commit.\r\n\r\n[noblock]",
+      "createdAt": "2024-02-28T17:03:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1969444498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Y_W3",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> There is a now a license in the Julia subfolder. Can the automerge be run again?\r\n\r\n[noblock]\r\n\r\nLooks like the license is fixed now!",
+      "createdAt": "2024-02-28T17:25:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1969485239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tE-l",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nAuto-merge fails due to the *similar name* conflict (`FMM2D` and `FMM3D`). \r\n\r\n@DilumAluthge can this be manually merged now? Thanks!",
+      "createdAt": "2024-03-02T09:59:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1974751141",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852QXL6",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Would you be open to a longer and more descriptive name?",
+      "createdAt": "2024-03-07T16:56:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1984000762",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852QrbF",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Would you be open to a longer and more descriptive name?\r\n\r\nI think the name is descriptive enough within its niche of users (similar to e.g. FFT), but I am neither the author of the library nor the author of this PR 😅 . As a user though, I like *FMM3D.jl* since it corresponds to the name of the library that this package wraps. ",
+      "createdAt": "2024-03-07T17:37:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1984083653",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852WdhB",
+      "author": {
+        "login": "mipals"
+      },
+      "authorAssociation": "NONE",
+      "body": "I agree completely with you @maltezfaria  👍",
+      "createdAt": "2024-03-08T12:21:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1985599553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852WfIn",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@lu1and10 As the package author, would you be open to a longer and more descriptive name?\r\n\r\nWe usually try for package names that are descriptive to the general audience of the Julia community, not just the specific domain of users.",
+      "createdAt": "2024-03-08T12:26:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1985606183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852Yi5q",
+      "author": {
+        "login": "lu1and10"
+      },
+      "authorAssociation": "NONE",
+      "body": "> @lu1and10 As the package author, would you be open to a longer and more descriptive name?\r\n> \r\n> We usually try for package names that are descriptive to the general audience of the Julia community, not just the specific domain of users.\r\n\r\n@DilumAluthge Thanks for asking. As one of the maintainers of the `FMM3D` package, personally I would prefer to keep the current name `FMM3D` agreeing with our friends @mipals @maltezfaria . We (the main authors https://fmm3d.readthedocs.io/en/latest/ackn.html) also discussed in our internal group meeting today, we do prefer to keep the current name if it is possible. We appreciate your help.",
+      "createdAt": "2024-03-08T17:51:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98072#issuecomment-1986145898",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: FMM3D\n- Repository: https://github.com/flatironinstitute/FMM3D\n- Created by: @lu1and10\n- Version: v1.0.1\n- Commit: b0dc85a3da10257adedd32b6068c8b242a6cecbc\n- Reviewed by: @lu1and10\n- Reference: https://github.com/flatironinstitute/FMM3D/commit/b0dc85a3da10257adedd32b6068c8b242a6cecbc#commitcomment-139170329\n- Description: Flatiron Institute Fast Multipole Libraries --- This codebase is a set of libraries to compute N-body interactions governed by the Laplace and Helmholtz equations, to a specified precision, in three dimensions, on a multi-core shared-memory machine. \n<!-- daf33ad5e6d085e55119bc06703763cec7c0b68dd6e421de144489cbdea59452f02bd83fe8a184914156eaf513823d4da5d031214822f9e9b2d69203503e54631078c3f23ce2146c5bded6b04ca9492b0014703b2e5ad41bf44f1cc130e3fd8bcf0624ab4aca34d2c8add5dbc714992f23ea9c46efe78fbbf165760f52e4cb85f5fbe4371d1850af563f5a7530dd4bad8752983b01a131ab92bc29b552b47779140a855561d0540c45bdfcd9e5f818a0e8b0d9337014daa8cc3314bd2e458c7c67eeb69e09fc33865bfb3cae1b861bf514ac03629b098a2d224e177c737653e2 -->",
+  "package_name": "FMM3D",
+  "title": "New package: FMM3D v1.0.1"
+}

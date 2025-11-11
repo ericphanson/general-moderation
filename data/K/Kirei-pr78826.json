@@ -1,0 +1,66 @@
+{
+  "created_at": "2023-03-02T16:59:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-06T17:21:55Z",
+  "pr_number": 78826,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85WjwFZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Fire. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-02T17:03:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78826#issuecomment-1452212569",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Wj8hs",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] The name similarity is clearly silly, and you should ask on Slack to have a maintainer merge the package after the three day waiting period is over.\r\n\r\nWould you consider adding documentation for the package, though? Setting up Documenter.jl with GitHub pages is quite straightforward, and would make the package much more useful for others.",
+      "createdAt": "2023-03-02T17:41:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78826#issuecomment-1452263532",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WkHAs",
+      "author": {
+        "login": "sunoru"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> [noblock] The name similarity is clearly silly, and you should ask on Slack to have a maintainer merge the package after the three day waiting period is over.\r\n> \r\n> Would you consider adding documentation for the package, though? Setting up Documenter.jl with GitHub pages is quite straightforward, and would make the package much more useful for others.\r\n\r\n[noblock] Thanks for your advice! Yes I will ask a maintainer to help me, and yes I am considering adding documentation. I just wanted to register a very early version so that I can publish later releases easily.",
+      "createdAt": "2023-03-02T18:05:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/78826#issuecomment-1452306476",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Kirei\n- Repository: https://github.com/sunoru/Kirei.jl\n- Created by: @sunoru\n- Version: v0.1.0\n- Commit: 2a799463c00c51a46c0e0a28daa29f67499f25fb\n- Reviewed by: @sunoru\n- Reference: https://github.com/sunoru/Kirei.jl/commit/2a799463c00c51a46c0e0a28daa29f67499f25fb#commitcomment-102778358\n- Description: Collection of macros for making your Julia module.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fc2259240e399b641241039c3f240782652dcd611dc6f2a43697a6668fcb06ef36e07bc51211aa731afdb787b185f4720b4883da7670054c91c27f02c1f1ce5e8f1c21185c910c5abd9852d7739bf6b1b4688a2f876105b9ba086ce9b5607edf2399d00db02557b251637a3d0b035be0c7ac374a2f11e1bf76ea2c53b8619b0970f5daf8053128562755ec030ba04262a0493b9b8269c8033c73cc0ada45b026 -->",
+  "package_name": "Kirei",
+  "title": "New package: Kirei v0.1.0"
+}

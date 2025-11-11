@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-11-18T10:30:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-11-21T18:42:50Z",
+  "pr_number": 72431,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85OqtxK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-18T10:34:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72431#issuecomment-1319820362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Oqu8V",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\r\n\r\nFor this reason, the project used to be called [StableTrees.jl](https://github.com/rikhuijzer/StableTrees.jl). However, the [original paper](https://doi.org/10.1214/20-EJS1792) called the algorithm Stable and Interpretable RUle Sets (SIRUS). Using a different name is leading to confusion, so I decided to rename the package to `SIRUS.jl`.\r\n\r\nIt would be nice if this PR can be merged once the mandatory waiting period is over.",
+      "createdAt": "2022-11-18T10:39:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72431#issuecomment-1319825173",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OyUn3",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano, do you think this can be merged?",
+      "createdAt": "2022-11-21T10:12:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72431#issuecomment-1321814519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O1sC4",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks again, @giordano!",
+      "createdAt": "2022-11-21T21:51:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72431#issuecomment-1322696888",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SIRUS\n- Repository: https://github.com/rikhuijzer/SIRUS.jl\n- Created by: @rikhuijzer\n- Version: v1.0.0\n- Commit: 4776dc86ebbfa2698f764ce7552a469d8b9e135c\n- Reviewed by: @rikhuijzer\n- Reference: https://github.com/rikhuijzer/SIRUS.jl/commit/4776dc86ebbfa2698f764ce7552a469d8b9e135c#commitcomment-90327490\n- Description: Pure Julia implementation of the Stable and Interpretable RUle Sets (SIRUS) algorithm\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> This package is the renamed version of https://github.com/rikhuijzer/StableTrees.jl. The old name was confusing.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd682c17ae30035615cf1b3f56359701b0057718e074e4a0a7b6d571f7d42025e3ad864de72f2f4a39fead76e996725fa954f9ccc91469ef6e67a918b9f0878d4814a7469b661c7c959cf5bb592cec17a6bbb2e935a661e88d99bf5ec0afae88f8f649e6f94f17018c60b34e1b018683696d0ae76c596f31d59d7297c4a96fff7133ba16cde5d3064bc2c53f27d74e452312edd0da46111bd1908ae198fcd566c78eee345c3b6e4c9b0ce9532032d7e9115 -->",
+  "package_name": "SIRUS",
+  "title": "New package: SIRUS v1.0.0"
+}

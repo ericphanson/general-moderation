@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-05-27T15:52:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-05-31T04:54:53Z",
+  "pr_number": 37668,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0OTc0OTk0MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to Juno. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Run. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Mux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-27T15:56:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37668#issuecomment-849749941",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MDIwMzk5NQ==",
+      "author": {
+        "login": "ilia-kats"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n`Muon.jl` is part of a cross-language ecosystem, currently consisting of [`muon`](https://github.com/gtca/muon) in Python and an upcoming `muon.r` R package. Changing the name would make it less obvious what this package is about, and would make it harder to find for people who already know about the ecosystem.",
+      "createdAt": "2021-05-28T07:15:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37668#issuecomment-850203995",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Muon\n- Repository: https://github.com/gtca/Muon.jl\n- Created by: @ilia-kats\n- Version: v0.1.0\n- Commit: 81ba2def9051f12f30e5dfd5d838f87d6eada339\n- Reviewed by: @ilia-kats\n- Reference: https://github.com/gtca/Muon.jl/commit/81ba2def9051f12f30e5dfd5d838f87d6eada339#commitcomment-51472947\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f68b6f0f9009b7971c21baa19b84ee9512d33f77cfcfdd8a6f7842c761dd6234b7b5806ef77bd882fd112f1acbfc485508653eb77ab767222a176248eaca58e28a2ebf581844d8c39788511498f6a6ba11c02744cccb628baf6c0e1e6f52a36f6d7262ad509a8e44cb41f8843e46ec1665d8aeabbf7bc7abbc5a45f633b08002e2490c12f15cd0b1dca68cd2ffd70d00b4c617438e05dc33004c51c97989f8d7 -->",
+  "package_name": "Muon",
+  "title": "New package: Muon v0.1.0"
+}

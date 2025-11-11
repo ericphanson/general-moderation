@@ -1,0 +1,51 @@
+{
+  "created_at": "2021-03-09T03:19:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-03-12T11:13:03Z",
+  "pr_number": 31545,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MzMyMTYyMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n1. Similar to MIRTio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-09T03:25:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/31545#issuecomment-793321622",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MzMzMDEzNg==",
+      "author": {
+        "login": "JeffFessler"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nI have about 90K lines of Matlab that I am slowly converting to Julia and I have found it too slow (compiling, debugging, etc.) to put even a small subset of them in one package (MIRT.jl) so I am going to break them across multiple distinct but related packages.  (Most users won't need all of it at once anyway.)  I already have MIRT.jl and MIRTio.jl and now I would like to add MIRTjim.jl and yes these names are close but that is deliberate and hopefully more helpful than having drastically different names for interrelated packages.\r\n\r\nSorry about the manual work, but I hope you can approve this exception to the Damerau–Levenshtein distance.  Thanks!",
+      "createdAt": "2021-03-09T03:35:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31545#issuecomment-793330136",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: MIRTjim\n- Repository: https://github.com/JeffFessler/MIRTjim.jl\n- Created by: @JeffFessler\n- Version: v0.1.0\n- Commit: bac6dc3b0c71017f0e793e1f430207150d683e0f\n- Reviewed by: @JeffFessler\n- Reference: https://github.com/JeffFessler/MIRTjim.jl/commit/bac6dc3b0c71017f0e793e1f430207150d683e0f#commitcomment-48023023\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67d76338cb55619b7115c8efeaf8f82d6a8862fdb35b68941e6b3da19c7e588a45643ac29015db2d49fab6f219046d993589f9e3f50bc0d81ec65be886a724c7f1d7886bcc1af1069ea2a5f224cd1edcb9641c984c8dadb51210e343216a18b3966ec77f3456a59aacc52871e5939691faef4087968945426c394f214f10165ba39daa8d6a2608806a02155039c0b1e64ce75bb7a961fa6ba551687ba27a9d76817c29cac6650d3319cdd7ce87b401b8c -->",
+  "package_name": "MIRTjim",
+  "title": "New package: MIRTjim v0.1.0"
+}

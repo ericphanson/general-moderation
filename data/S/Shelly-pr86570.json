@@ -1,0 +1,59 @@
+{
+  "created_at": "2023-06-30T10:58:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-15T17:41:14Z",
+  "pr_number": 86570,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85gO0Qe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Shell. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-30T11:04:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86570#issuecomment-1614496798",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gXZbg",
+      "author": {
+        "login": "umlet"
+      },
+      "authorAssociation": "NONE",
+      "body": "Technically, the name Shelly.jl is close to the existing Shell.jl. Not sure how firm these metrics are -- could one argue that the diminutive Shelly is quite distinct from Shell? Both packages unlikely to go viral; I could happily live with the two similar names. If not possible, I can rename my package of course.. Thanks! [noblock]",
+      "createdAt": "2023-07-02T17:40:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86570#issuecomment-1616746208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gcmBi",
+      "author": {
+        "login": "umlet"
+      },
+      "authorAssociation": "NONE",
+      "body": "If the shorter version \"Shelly.jl\" would work (maybe I was too hasty to change the name), I would greatly prefer it! If anyone could help me out of the mess I created myself, I'd really appreciate it! Not really sure what I could do next..\r\n[noblock]",
+      "createdAt": "2023-07-03T12:05:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86570#issuecomment-1618108514",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Shelly\n- Repository: https://github.com/umlet/Shelly.jl\n- Created by: @umlet\n- Version: v0.6.1\n- Commit: bc347277a16713030f3bb43eb25a3709285a623d\n- Reviewed by: @umlet\n- Reference: https://github.com/umlet/Shelly.jl/issues/2#issuecomment-1615841334\n- Description: Novel change-dir and ls/ll in the Julia REPL mode\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986600cbbb7859c3e1c6f5ce92d6ddc7b3ccdf36811a0327f7da8b9b5f0c319b7c0f838c452ce6f43252df457d7176f247dec3ffafdcb2d5b99b0997c8b93d1bb51f45806a180248a57c40f53a4a3dd9efe0aaac9d7f6d8cf3361d47998397cec0a3d0ec223a4a0fb442e19db66383ea58 -->",
+  "package_name": "Shelly",
+  "title": "New package: Shelly v0.6.1"
+}

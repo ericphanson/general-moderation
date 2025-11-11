@@ -1,0 +1,73 @@
+{
+  "created_at": "2023-10-18T19:48:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-10-24T09:31:11Z",
+  "pr_number": 93674,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pdCUN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to WignerSymbols. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-18T19:52:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93674#issuecomment-1769219341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pdF3d",
+      "author": {
+        "login": "lkdvos"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi,\r\n\r\nI would like to circumvent the package naming distance problem for this package, because the similarity to the existing WignerSymbols.jl is by design. There is a branch of mathematics that consists of q-deforming existing notions, leading to so-called q-numbers, q-factorials, etc. I specifically want to define q-WignerSymbols, stemming from the q-deformation of SU(2), for which the original wigner symbols are defined. As such I would argue that this name is chosen rather well, and might deserve an exception to the naming rule.\r\n\r\nI agree that it is incredibly unfortunate that in this case Q and W are incredibly close together on most physical keyboards, but I guess the actual chance of mistyping might be rather small.\r\n\r\nThanks for your understanding!",
+      "createdAt": "2023-10-18T20:01:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93674#issuecomment-1769233885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pd2Zm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you make sure that there is a usage example, either in the README or the Documentation?\r\n\r\nThe two documentation badges in the README currently have a 404 error.",
+      "createdAt": "2023-10-18T21:58:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93674#issuecomment-1769432678",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: QWignerSymbols\n- Repository: https://github.com/lkdvos/QWignerSymbols.jl\n- Created by: @lkdvos\n- Version: v0.1.0\n- Commit: 5b3459bc86734f96ff1f31d73119e7884d95a780\n- Reviewed by: @lkdvos\n- Reference: https://github.com/lkdvos/QWignerSymbols.jl/commit/5b3459bc86734f96ff1f31d73119e7884d95a780#commitcomment-130385321\n- Description: A Julia package for computing q-deformed Wigner Symbols and related quantities.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62a433d34bee97f778db2afc9da4c3b99e5e360668ed072dcaded1ed54bd4008306d6db8dd5685b849751eb7d4a1369415e2c8f40edaf6c5dbb02783fe37bfdd61393c6c641b8db0123abfcb75e113af08a9971d1e038519fb15b74a14cdae95fa64151eab1b44743b5387bcdcf557ba34201e40e1e6ec64207c31622571d2cd3ea32d3a9e1ff5fcce1cf7ed1c175a00443216e1521540f0363dae1ec868b986ab95cfb57db0b8a9ce47a5cba6678ee5c -->",
+  "package_name": "QWignerSymbols",
+  "title": "New package: QWignerSymbols v0.1.0"
+}

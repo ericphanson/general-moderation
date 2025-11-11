@@ -1,0 +1,44 @@
+{
+  "created_at": "2024-04-26T22:27:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-04-29T13:10:46Z",
+  "pr_number": 105698,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857_UCg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-26T22:30:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105698#issuecomment-2080194720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857_Zi4",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] This PR is to register a \"manual JLL\" and is similar to as https://github.com/JuliaRegistries/General/pull/103121. Auto-registrator fails because of the `_` in the name. (I have pinged on slack.)\r\n\r\nThe JLL pulls (closed source, commercial) artifacts from https://anaconda.org/Gurobi/gurobi/files, but we have permission from Gurobi to use them in Gurobi_jll.\r\n\r\nThe README of the JLL explains the various licensing implications: https://github.com/jump-dev/Gurobi_jll.jl/tree/master?tab=readme-ov-file#license\r\n\r\ncc @simonbowly",
+      "createdAt": "2024-04-26T23:04:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105698#issuecomment-2080217272",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: Gurobi_jll\n- Repository: https://github.com/jump-dev/Gurobi_jll.jl\n- Created by: @odow\n- Version: v9.5.2\n- Commit: 3bed71ad79b0311a6cc6fdc27d2067fe56339ca8\n- Reviewed by: @odow\n- Reference: https://github.com/jump-dev/Gurobi_jll.jl/commit/3bed71ad79b0311a6cc6fdc27d2067fe56339ca8#commitcomment-141418564\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6baefe64081c500cab0c72201cfc3a97fa12b6d67592e2d2ada2999791cca984ef7e91ad3ca84ecbcd464ca2d8a7d1077b930767f50ab29b62888e7e4eb4c937e2e06f4f3df59416326012f1af3cc8327d8b2b28856a76eb4640f3b6602f6d1b5c81fb3c8290f9c1b84f67345e724c5d46740cdb9436bfbce152bb0d866e50fa2d489c281049eab3ff493885217a55b77e950dac649cb5ee064c04a695e5b9a1de95cbb3351e3232ed167428cd718ab1c -->",
+  "package_name": "Gurobi_jll",
+  "title": "New package: Gurobi_jll v9.5.2"
+}

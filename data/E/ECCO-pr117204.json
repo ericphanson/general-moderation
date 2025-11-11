@@ -1,0 +1,174 @@
+{
+  "created_at": "2024-10-13T16:56:37Z",
+  "review_comments": [
+    {
+      "id": 2365610086,
+      "node_id": "PRR_kwDOBhF1q86NAFhm",
+      "user": {
+        "login": "vchuravy",
+        "id": 145258,
+        "node_id": "MDQ6VXNlcjE0NTI1OA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145258?u=7417f63ac2b52cfcd01d9c75a5bfac5e9008301b&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/vchuravy",
+        "html_url": "https://github.com/vchuravy",
+        "followers_url": "https://api.github.com/users/vchuravy/followers",
+        "following_url": "https://api.github.com/users/vchuravy/following{/other_user}",
+        "gists_url": "https://api.github.com/users/vchuravy/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/vchuravy/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/vchuravy/subscriptions",
+        "organizations_url": "https://api.github.com/users/vchuravy/orgs",
+        "repos_url": "https://api.github.com/users/vchuravy/repos",
+        "events_url": "https://api.github.com/users/vchuravy/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/vchuravy/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/117204#pullrequestreview-2365610086",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/117204",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/117204#pullrequestreview-2365610086"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/117204"
+        }
+      },
+      "submitted_at": "2024-10-14T07:29:17Z",
+      "commit_id": "a76b4964bd9b6d288db087c9e2335acba057cda6"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-10-18T18:27:45Z",
+  "pr_number": 117204,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Plz__",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-13T17:10:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2409054207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pl3Kf",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would like my pull request to be manually merged instead of via AutoMerge for ECCO.jl \r\n\r\nExplanation : the chosen name ECCO.jl stands for Estimating the Circulation and Climate of the Ocean , a major academic effort which is widely known in the climate and ocean science community by its acronym, ECCO.\r\n\r\nMore detailed explanation:\r\nECCO is a 40+ years running effort initiated by Pr. Carl Wunsch at MIT, and which now involves distributed academic projects across the US (MIT, NASA JPL, UCSD, UTA, WHOI), Europe (AWI, UH), the UK (BAS), and more.\r\nexpanding the acronym would make the package name both (1) much harder to find by the targeted scientific community, and (2) a very long package name to type. And we would much rather avoid extending to \"ECCOProject\", \"ECCOGroup\", or something like that if it's just for the sake of the >4 character naming guideline. \r\nif later on another package ended up being called ECCO.jl later, this would be damageable to our climate science and oceanography community building effort (again by making it harder for users to find the present package, and possibly turning them off from bridging to Julia, which is one of the goal of our creating this package).\r\n\r\nTimeliness : this coming week, I intend to feature this package @ https://ecco-hackweek.github.io/ecco-2024/intro.html , and would therefore greatly appreciate if merging could be expedited.\r\n",
+      "createdAt": "2024-10-13T17:53:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2409067167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pl6Bx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I like the name, and I’d definitely support merging this. In my opinion, pronounceable acronyms should always be okay (it’s just hard for the bot to distinguish pronounceable from unpronounceable acronyms)\r\n\r\nIt’s not up to me, though. The 5 letter minimum rule can only be overridden with a manual merge from a registry maintainer.\r\n\r\nYou have to fix the compat issues first, though. Those are mandatory.",
+      "createdAt": "2024-10-13T18:31:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2409078897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pl7lT",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I like the name, and I’d definitely support merging this. In my opinion, pronounceable acronyms should always be okay (it’s just hard for the bot to distinguish pronounceable from unpronounceable acronyms)\r\n> \r\n> It’s not up to me, though. The 5 letter minimum rule can only be overridden with a manual merge from a registry maintainer.\r\n\r\nThanks for the feedback and supporting words! Makes me hopeful that a registry maintainer will agree with you and merge\r\n\r\n> You have to fix the compat issues first, though. Those are mandatory.\r\n\r\nshould be all set with compat now I think, following\r\n\r\n- https://github.com/gaelforget/ECCO.jl/commit/ea87296d36a53d03b57826e3c80bc939594a10c5\r\n- https://github.com/gaelforget/ECCO.jl/commit/3d8305377a6c1535eaca6c99cd6d3065c5694e72\r\n\r\nOr am I overlooking something?",
+      "createdAt": "2024-10-13T18:52:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2409085267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QN5ax",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @goerz & @vchuravy \r\n\r\njust giving this a ping to bring it back up on your radar. Would be awesome if this could be merged today. \r\n\r\nI am almost ready to release the next version, v0.1.1, which I am hoping to do live as a demo tomorrow (at this [hackweek](https://ecco-hackweek.github.io/ecco-2024/)). ",
+      "createdAt": "2024-10-17T13:32:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2419562161",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QN_tt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't have merge permission, unfortunately, but yes, this _should_ be merged as soon as possible, since the three-day period is up. If @vchuravy can't help you out with this, maybe ping the `#pgk-registration` channel on Slack.\r\n\r\n> I am almost ready to release the next version, v0.1.1\r\n\r\nThat seems like a version jump… Do you mean `v0.1.0`? In any case, do not try to register a new version before this PR is merged.",
+      "createdAt": "2024-10-17T13:43:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2419587949",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QOvtI",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I don't have merge permission, unfortunately, but yes, this _should_ be merged as soon as possible, since the three-day period is up. If @vchuravy can't help you out with this, maybe ping the `#pgk-registration` channel on Slack.\r\n\r\nCool. Will give it a minute for now\r\n\r\n> > I am almost ready to release the next version, v0.1.1\r\n> \r\n> That seems like a version jump… Do you mean `v0.1.0`? In any case, do not try to register a new version before this PR is merged.\r\n\r\nGood point. Did mean `v0.1.0`",
+      "createdAt": "2024-10-17T14:57:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117204#issuecomment-2419784520",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: ECCO\n- Repository: https://github.com/gaelforget/ECCO.jl\n- Created by: @gaelforget\n- Version: v0.0.1\n- Commit: ea87296d36a53d03b57826e3c80bc939594a10c5\n- Reviewed by: @gaelforget\n- Reference: https://github.com/gaelforget/ECCO.jl/issues/1#issuecomment-2409075382\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835987ea25743eebebc736c747847a3d39fc5331e93829c6417ef156ca1b53811f60a145df7edb3d092017c196e148c884bead91edf0f517a1f5678d8ba4a819ca8b99864c81e7956027fdc3864fa9e0f2d4618ea104f04f4180c2b73c91ed1ca942c0ae198aeb24708697754ab4dcaa49221e3913bf35f04f56c97cf9f483419f5eb -->",
+  "package_name": "ECCO",
+  "title": "New package: ECCO v0.0.1"
+}

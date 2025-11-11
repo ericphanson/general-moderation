@@ -1,0 +1,118 @@
+{
+  "created_at": "2024-01-10T11:40:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-03-29T16:45:13Z",
+  "pr_number": 98593,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85wVipB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to TSVD. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to PSID. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SVR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-10T11:44:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-1884695105",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wWQoV",
+      "author": {
+        "login": "RomeoV"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n## Justification for the naming.\r\nThe KSVD algorithm is a relatively well known algorithm, e.g. [with it's own Wikipedia page](https://en.wikipedia.org/wiki/K-SVD). Although certainly not known to all Julia users, I believe that to people familiar with the SVD algorithm, the naming KSVD should be clear.\r\n\r\nThere are also similarly named packages like [`TSVD.jl`](https://github.com/JuliaLinearAlgebra/TSVD.jl).\r\nIn fact, for TSVD one could reason to instead name it `TruncatedSVD`. However, our this case, `KSVD` literally stands for `k-SVD`, i.e. the `k` is not short for anything.\r\n\r\nHowever, we can still also consider names like these:\r\n- `KSVDIteration` (however imo not `IterativeKSVD`, as that implies there's a closed-form KSVD)\r\n- `KSVDAlgorithm` (I think the `Algorithm` would be redundant.)\r\n- `DictionaryLearningKSVD` (this would perhaps make sense if there was also `DictionaryLearningBase`, etc, but currently there is not and also I don't think anybody plans to make one)\r\n- `ParallelKSVD` similar to [`ParallelKMeans`](https://github.com/PyDataBlog/ParallelKMeans.jl). However, KSVD.jl implementation provides optimize **single-threaded**, multi-threaded, GPU accelerated, and (WIP) distributed acceleration. Still, I think it's a reasonable contender.\r\n- `FastKSVD`, but that reminds me of something like [`FastSLAM`](https://robots.stanford.edu/papers/montemerlo.fastslam-tr.pdf) which makes algorithmic modifications to be faster. We don't.\r\n\r\nPlease let me know your thoughts.\r\nThanks!",
+      "createdAt": "2024-01-10T13:48:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-1884883477",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851R8xH",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThoughts from Slack:\r\n\r\n> Would have been nicer to be a bit descriptive, but we already have things like TSVD. So should be ok.\r\n> \r\n> It is a bit unfortunate, in that it is not an implementation of the SVD, but uses the SVD to implement clustering algorithms. So KSVDClustering or something might be a better name - and perhaps it is worth asking the authors to reconsider the name to see if we can do something better. If not, then I would go ahead and accept.",
+      "createdAt": "2024-02-27T21:35:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-1967639623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851S7pB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "At least \"KSVD\" in Google gives the \"correct\" hit as the first result, which I tend to use as a benchmark for whether acronyms are OK in package names. As long as this package is an \"authoritative\" implementation of k-SVD, I'd be okay with the name, although I'd definitely also consider `KSVDClustering`",
+      "createdAt": "2024-02-27T23:21:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-1967897153",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8541D-l",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-29T12:23:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-2027175845",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8542MVn",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Let's merge this. @RomeoV Sorry for the long wait here, but ok to bump a couple of times to draw attention.",
+      "createdAt": "2024-03-29T16:44:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98593#issuecomment-2027472231",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: KSVD\n- Repository: https://github.com/RomeoV/KSVD.jl\n- Created by: @RomeoV\n- Version: v1.0.0\n- Commit: e8e58b8ed093e5f2d5424179c1aabe5692379cee\n- Reviewed by: @RomeoV\n- Reference: https://github.com/RomeoV/KSVD.jl/commit/e8e58b8ed093e5f2d5424179c1aabe5692379cee#commitcomment-136706162\n- Description: K-SVD in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6239b3448d27754bdec2d7653fc976e387b77b2f7c1a7b4c2998e806ded5c91713c797e810d1dbe3ec5806f49d97d66e7e9e7355b9f2bf4403b4fecf85abc623305eb152497272e66783f987ec54b16c4a002e6ad0efca9d7d4d4ec6a4cf60f41e4695734066fed3c45ad8e36d55a3d91f279edfc7075bc6670a90a19efa30ca2124695354f0dc6946b62af280282617675972e5c57850d29e33d9d19b91fce82 -->",
+  "package_name": "KSVD",
+  "title": "New package: KSVD v1.0.0"
+}

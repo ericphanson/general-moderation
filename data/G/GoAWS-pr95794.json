@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-11-22T14:51:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-11-28T13:47:23Z",
+  "pr_number": 95794,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85sp6Oe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to GAMS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to AWS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-22T14:55:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95794#issuecomment-1822925726",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tEcQd",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems OK to me, I don't think it can be confused with GAMS or AWS itself.",
+      "createdAt": "2023-11-28T13:47:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95794#issuecomment-1829880861",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: GoAWS\n- Repository: https://github.com/beacon-biosignals/GoAWS.jl\n- Created by: @ericphanson\n- Version: v1.2.0\n- Commit: 22b9a8833d0c2e2111fdf3c143c6d797de157f38\n- Reviewed by: @ericphanson\n- Reference: https://github.com/beacon-biosignals/GoAWS.jl/commit/22b9a8833d0c2e2111fdf3c143c6d797de157f38#commitcomment-133263743\n- Description: Julia wrapper of GoAWS\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nInitial release! Provides a clone of AWS SQS and SNS for local testing.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68a32cbf7f690c58ef807d8fca51323e0785792167b90a6d7759b4e823403f03b1512d42d2366687d613cc7a28971d982c13700a6b8bb0b984bcaec788e9e21093af5d70f2c158ab2cde8f7998c036e04c2a488286f29c0942ea1897bd6d847c41e94a73ed020af2fb4a708c81c05ed22bbda50698dd170ed0b76a66f58e77998eeb0791c19e08eb286938718be2a6257dab23677d32c8005356aef35fbae2c5ab97b9adb5fffddc40379aca4fd628d9c -->",
+  "package_name": "GoAWS",
+  "title": "New package: GoAWS v1.2.0"
+}

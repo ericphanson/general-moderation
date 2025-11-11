@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-05-05T20:07:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-09T14:07:12Z",
+  "pr_number": 82988,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85bmJai",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Nemo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-05T20:12:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82988#issuecomment-1536726690",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bnaNG",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHi, \r\nApparently, there is a package called `Nemo` with a similar name with respect to this (`Tempo`).  This is a package for astronomical time transformations completely developed in Julia with several tests against state-of-art transformation libraries (at the moment `ERFA`, soon `GODOT` and `OREKIT`). \r\n\r\nHere _Tempo_ is the Latin name for _time_ and I think it is reasonably different from `Nemo`.\r\nTherefore would be very appreciated if the pull request is accepted with the current package similarity issue.",
+      "createdAt": "2023-05-06T05:38:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82988#issuecomment-1537057606",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: Tempo\n- Repository: https://github.com/JuliaSpaceMissionDesign/Tempo.jl\n- Created by: @andreapasquale94\n- Version: v1.0.0\n- Commit: 0b42ae0aad1273c6ae8b279d2a1ef6d82e65d09c\n- Reviewed by: @andreapasquale94\n- Reference: https://github.com/JuliaSpaceMissionDesign/Tempo.jl/commit/0b42ae0aad1273c6ae8b279d2a1ef6d82e65d09c#commitcomment-112067555\n- Description: Time transformations in Julia.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ab46ba24003b07f24a81ed20920aceaa5a6acd411c05852fe18b0e84eb6913503d0b95ae68c23e9db63d57831a9ec04a3935cedd81e2ca97b2517b293ffcb4ac27d8ab7531471d8e858c0874a235054599669131406916a2f19d86c8fab605194b4176e3962ca78c3eb35ea0fab6a1b1fb9863a8ed8c8e7201395ab95cc413cae78af1348bf563bcb5e62e7a76a9313f52fbdecddc447945125018a5ca05de116675ae3f18eebb06b6dbec8bdd3cc57b6967b51842bc192d6485b81bb8014512 -->",
+  "package_name": "Tempo",
+  "title": "New package: Tempo v1.0.0"
+}

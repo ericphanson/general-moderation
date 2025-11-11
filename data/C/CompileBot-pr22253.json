@@ -1,0 +1,104 @@
+{
+  "created_at": "2020-10-01T12:39:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-10-16T18:31:34Z",
+  "pr_number": 22253,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwMjEwNzQyMw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-10-01T12:41:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-702107423",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwMzA4NDk4OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Why are you renaming the package? Doesn't that only cause trouble for users?\r\n\r\n[noblock] ",
+      "createdAt": "2020-10-03T10:55:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-703084988",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwMzExNzIyOQ==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I explained here:\r\nhttps://github.com/timholy/SnoopCompile.jl/pull/140#issuecomment-702272669\r\n\r\nIn short: \r\n- SnoopCompileBot was not a package that other packages would depend on. It is a package to be used on its own. Thus, changing the name does not have any disadvantages.\r\n- I had an idea for creating a bot for PackageCompiler. Now, that the repository is no longer a sub-directory of SnoopCompile, I can extend its purpose.\r\n\r\n\r\nI did not just change the name without providing deprecation messages, so those who use the old version will be informed about this change: \r\nhttps://github.com/timholy/SnoopCompile.jl/pull/140\r\n\r\n\r\n",
+      "createdAt": "2020-10-03T15:03:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-703117229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwNjQwOTEzMw==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre Is there anything else? The registration of this package has become a burden for me. I want to continue developing, but I can't. ",
+      "createdAt": "2020-10-09T21:25:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-706409133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMDM4MzY5OA==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre @DilumAluthge I am still waiting for this",
+      "createdAt": "2020-10-16T18:29:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-710383698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMDM4NjA3OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You need to edit all of your comments to include the text [noblock]. Otherwise AutoMerge will not merge it.",
+      "createdAt": "2020-10-16T18:31:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/22253#issuecomment-710386078",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: CompileBot\n- Repository: https://github.com/aminya/CompileBot.jl\n- Created by: @aminya\n- Version: v1.0.0\n- Commit: 28f05eafd7c0fd329fd40895b214f0ceacbcf757\n- Reviewed by: @aminya\n- Reference: https://github.com/aminya/CompileBot.jl/commit/28f05eafd7c0fd329fd40895b214f0ceacbcf757#commitcomment-42882955\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fd90dc0d54dcf319e19bdc287df0b5e020e5706575941a74a0baa1ff170fd1e42b8273365f84051b73dd011b5980e82275c9f76bfc6b1870c649ed6f39225d4eb1950e2b4b768065237f2b7f088b6e85b81e4dfdc855c86b5432a4b4cd47ff5d04e7d6a42e55bf0a3315a2959881aedd7c291d5f56db7206974aa78d813ce59c43b1e27a7c3882059d99e85268a78a1a4bad0e1a119897a0630bac835a223831a9999368f7ab30bab966d950e630479f -->",
+  "package_name": "CompileBot",
+  "title": "New package: CompileBot v1.0.0"
+}

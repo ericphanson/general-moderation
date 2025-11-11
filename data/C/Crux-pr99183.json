@@ -1,0 +1,89 @@
+{
+  "created_at": "2024-01-19T18:13:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-01-24T15:18:16Z",
+  "pr_number": 99183,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xTXmr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to Flux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Lux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Mux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-19T18:28:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99183#issuecomment-1900902827",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xTiys",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm going to assume the name similarity to `Flux` is somewhat intended. So, the name seems fine to me, giving the context of existing packages in the ML space.",
+      "createdAt": "2024-01-19T18:57:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99183#issuecomment-1900948652",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xWhZk",
+      "author": {
+        "login": "ancorso"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yep, you are correct about the name. ",
+      "createdAt": "2024-01-20T04:05:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99183#issuecomment-1901729380",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xvpmB",
+      "author": {
+        "login": "ancorso"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz It looks like everything except the name checks are now passing. I'd like to keep the name as is based on the reasoning you mentioned in your comment. Is it possible to merge?",
+      "createdAt": "2024-01-24T15:04:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99183#issuecomment-1908316545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xvrwH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would merge it, but I don't have maintainer status on the Registry. You'll have to ask on Slack in the `#pgk-registration` channel to get the attention of a maintainer.",
+      "createdAt": "2024-01-24T15:09:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99183#issuecomment-1908325383",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Crux\n- Repository: https://github.com/sisl/Crux.jl\n- Created by: @ancorso\n- Version: v0.1.0\n- Commit: 45a17ee16d947a89d15fa0cfac67bd862d6ae788\n- Reviewed by: @ancorso\n- Reference: https://github.com/sisl/Crux.jl/commit/45a17ee16d947a89d15fa0cfac67bd862d6ae788#commitcomment-137497169\n- Description: Julia library for deep reinforcement learning\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66813b7a4198e2266eedc7b01449237329f6d177f39813a5f55e93257c280b6485216b3d97f1601109a8bed63be8e26b058451503cde6e0ccac6a0787bad6d839634d2407575276ef40333e5ec1ce052ba29300371005107c26b500941ccfcdb78fc9b47f2434360ff0be0f862c8e412b86ab59f53e211f05e0025bffd8e6c67cb0c5b3cf4ce19070074ce138854bd2fd26a84ad8c781891bd97da9752bd05139 -->",
+  "package_name": "Crux",
+  "title": "New package: Crux v0.1.0"
+}

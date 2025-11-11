@@ -1,0 +1,81 @@
+{
+  "created_at": "2021-02-10T10:00:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-02-13T15:11:02Z",
+  "pr_number": 29785,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NjU5MjcxOQ==",
+      "author": {
+        "login": "laurentheirendt"
+      },
+      "authorAssociation": "NONE",
+      "body": "cc: @giordano @ararslan ",
+      "createdAt": "2021-02-10T10:00:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29785#issuecomment-776592719",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NjU5NDM1Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 12 existing packages.\n<details>\n<summary>Similar package names</summary>\n\n1. Similar to SEAL. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.03 is at or below cutoff of 2.50.\n2. Similar to SPPL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to SOM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to TOML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n5. Similar to TSML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n6. Similar to HAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n7. Similar to SMM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n8. Similar to YAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n9. Similar to SIMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n10. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n11. Similar to QML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n12. Similar to CSFML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n</details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-10T10:03:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29785#issuecomment-776594357",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NjU5NTQxNQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name is OK, but note\r\n\r\n> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: julia ",
+      "createdAt": "2021-02-10T10:05:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/29785#issuecomment-776595415",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NjU5NjUxNw==",
+      "author": {
+        "login": "laurentheirendt"
+      },
+      "authorAssociation": "NONE",
+      "body": "Pushing the patch right now 😄 ",
+      "createdAt": "2021-02-10T10:07:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29785#issuecomment-776596517",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SBML\n- Repository: https://github.com/LCSB-BioCore/SBML.jl\n- Created by: @laurentheirendt\n- Version: v0.1.0\n- Commit: dc66bad7fd3189c0db1da5b49bfb5eadbd023921\n- Reviewed by: @laurentheirendt\n- Reference: https://github.com/LCSB-BioCore/SBML.jl/issues/8#issuecomment-776613414\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835988ddd33170e28188ccfdc7da2e109fc5d156e4c142d72c9ef83760bc7d945ad4b713549c5126394a9604634f379eba5a8acdfa92fc516b91f7fd988e0acdc401bddbc61a4f42a4edcc4602c523cd0e6a368be07ed11b0000947c68e5de1c78151efaae605b02f725d1753fd5a9c001e6b478f3b577fdd863ff23231e366e539fc -->",
+  "package_name": "SBML",
+  "title": "New package: SBML v0.1.0"
+}

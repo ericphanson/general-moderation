@@ -1,0 +1,59 @@
+{
+  "created_at": "2021-10-22T17:16:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-10-27T13:01:04Z",
+  "pr_number": 47321,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844nTI8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to TOML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to TSML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to QML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MLJ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to HTML5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-22T17:23:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47321#issuecomment-949826108",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844niQv",
+      "author": {
+        "login": "olivierlabayle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The problem seems to arise from a naming conflict with other packages. I am aware that an acronym is not ideal, however the full \"TargetedMinimumLossBasedEstimation.jl\" seems overly complex.\r\nThis is also the name of the counterpart package in R, see: https://cran.r-project.org/web/packages/tmle/index.html",
+      "createdAt": "2021-10-22T18:56:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47321#issuecomment-949888047",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844wHIV",
+      "author": {
+        "login": "olivierlabayle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can I ask Hhw long does it take to have a review?",
+      "createdAt": "2021-10-26T17:03:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47321#issuecomment-952136213",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: TMLE\n- Repository: https://github.com/olivierlabayle/TMLE.jl\n- Created by: @olivierlabayle\n- Version: v0.1.3\n- Commit: a34007d921c997b46cc90f04d1b7721b2ab9e0c9\n- Reviewed by: @olivierlabayle\n- Reference: https://github.com/olivierlabayle/TMLE.jl/commit/a34007d921c997b46cc90f04d1b7721b2ab9e0c9#commitcomment-58796380\n- Description: An implementation of the Targeted Minimum Loss-based Estimation on top of the https://alan-turing-institute.github.io/MLJ.jl/dev/ framework.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a00ff449f4518934dd89d4df042c879db9ba952f741bf41578e1e6f7009e6b248020c12a09b889cd6548534457c87738959047ce9ddf84e6b6fbdeb8f0465cf920d2a060fa98c8c99c3e852e54a0ebd45906f5b955834024d91ba02939deb98770bcc23709d72bf55e510a9efcda4bf875eaeaeaebbd32f38a1b6a54aa88c70bd79ad23d7b1705253e6885f171474910ab47ed2daac07167fde7ff4967990507f84f74362012b2d4a59a7bb61ed18a42 -->",
+  "package_name": "TMLE",
+  "title": "New package: TMLE v0.1.3"
+}

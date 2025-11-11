@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-05-03T23:39:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-05-12T11:08:19Z",
+  "pr_number": 36006,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzMTYwMjQ1Mw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to RoME. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-03T23:43:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36006#issuecomment-831602453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzMjA1MTI0Mg==",
+      "author": {
+        "login": "sparktseung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe package is named LRMoE because it implements the **L**ogit-**R**educed **M**ixture-**o**f-**E**xpert model. Although it is similar to an existing package (RMoE, **Ro**bot **M**otion **E**stimate), they are doing quite different stuff, so I think it is unlikely that users would confuse these two.\r\n\r\nIn addition, a paper accompanying this package has already been published (see [here](https://www.cambridge.org/core/journals/annals-of-actuarial-science/article/abs/lrmoejl-a-software-package-for-insurance-loss-modelling-using-mixture-of-experts-regression-model/18B8F5C17733C4DBAF2F921E08372DD8)). Changing its name would cause a lot of inconvenience for existing users.\r\n\r\nThanks in advance!",
+      "createdAt": "2021-05-04T15:55:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36006#issuecomment-832051242",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: LRMoE\n- Repository: https://github.com/sparktseung/LRMoE.jl\n- Created by: @sparktseung\n- Version: v0.1.0\n- Commit: 8e768eb934778e58ae52567e2b1b42f9112948db\n- Git reference: v0.1.0\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> First release.\n<!-- END RELEASE NOTES -->",
+  "package_name": "LRMoE",
+  "title": "New package: LRMoE v0.1.0"
+}

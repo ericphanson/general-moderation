@@ -1,0 +1,139 @@
+{
+  "created_at": "2024-02-28T11:34:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-03-15T19:50:15Z",
+  "pr_number": 101888,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851WbZS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-28T11:47:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1968813650",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851ajuj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nAs for the name, I don't necessarily have a problem with `PRISMA`. Generally speaking, I'm fine with pronounceable acronyms. If `Prisma` would be fine (as a \"less systematic\" package name), then so should `PRISMA`.\r\n\r\nAlthough you might also go for a longer descriptive package name, and we might be able to give you some recommendations if you add some more documentation to the README.  In any case, `PRISMA` would need a manual merge by a registry maintainer.\r\n\r\n[noblock]\r\n",
+      "createdAt": "2024-02-28T20:50:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1969896355",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851gRIK",
+      "author": {
+        "login": "cecoeco"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for reviewing my package, goerz. I was able to add a longer description and some documentation in the readme like you said. A little background: the package name comes from the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) statement, my initial reasoning for the name is that the acronym is somewhat established. Though, looking at it does not tell one much about its purpose. ",
+      "createdAt": "2024-02-29T15:32:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1971393034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851hkZG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Thanks for updating the README. That looks good enough to me for registration.\r\n\r\nLike I said, I'm fine with the name. IMO, acronyms that are deliberately designed to result in a pronounceable name or word are fine, and fall in the allowed category of \"less systematic names\", independent of their capitalization.\r\n\r\nThat opinion might not be universal among the registry maintainers, so you may still get some pushback. But if they don't manage to convince you, it'll probably get merged eventually if you stick to your guns. But in any case, you'll have to ask for a manual merge on Slack after the 3-day waiting period ends.\r\n\r\nYou also still have to fix the `compat` issues, no matter what. When you do, just retrigger the registration. Do not change the `version` of the package. As long as the version, UUID, and package name remain the same, retriggering the registration should update this existing PR instead of creating a new one.",
+      "createdAt": "2024-02-29T18:41:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1971734086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852RAIn",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nI'm also fine with the name. You still need to fix the compat entries though.",
+      "createdAt": "2024-03-07T18:23:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1984168487",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852S-Aa",
+      "author": {
+        "login": "cecoeco"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dependencies now have compat entries.",
+      "createdAt": "2024-03-07T22:41:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101888#issuecomment-1984684058",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: PRISMA\n- Repository: https://github.com/cecoeco/PRISMA.jl\n- Created by: @cecoeco\n- Version: v0.0.1\n- Commit: 2510281b7bff674a6d06423cd612d2399526b497\n- Git reference: HEAD\n- Description: Generate checklists and flow diagrams based on the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) statement.",
+  "package_name": "PRISMA",
+  "title": "New package: PRISMA v0.0.1"
+}

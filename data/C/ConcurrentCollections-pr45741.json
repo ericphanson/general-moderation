@@ -1,0 +1,81 @@
+{
+  "created_at": "2021-09-29T06:18:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-10-05T00:51:28Z",
+  "pr_number": 45741,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q843bLo6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"ConcurrentCollections\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import ConcurrentCollections` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-09-29T06:21:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45741#issuecomment-929872442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q843bMN3",
+      "author": {
+        "login": "tkf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> * I was not able to install the package\r\n\r\nIt looks like this is because ConcurrentCollections.jl's Project.toml requires Julia 1.7. I guess I need to re-register this when 1.7 is released?\r\n\r\n[noblock]",
+      "createdAt": "2021-09-29T06:26:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45741#issuecomment-929874807",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q843bZPw",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It can be manually merged.",
+      "createdAt": "2021-09-29T07:51:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/45741#issuecomment-929928176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q843mbHz",
+      "author": {
+        "login": "tkf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "ping :)",
+      "createdAt": "2021-10-02T20:57:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45741#issuecomment-932819443",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: ConcurrentCollections\n- Repository: https://github.com/JuliaConcurrent/ConcurrentCollections.jl\n- Created by: @tkf\n- Version: v0.1.0\n- Commit: c7e440cb614acf864b3541b08330137ed57fe23f\n- Reviewed by: @tkf\n- Reference: https://github.com/JuliaConcurrent/ConcurrentCollections.jl/commit/c7e440cb614acf864b3541b08330137ed57fe23f#commitcomment-57220387\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6228fa47d1d5545a6835220b3b6357559808637340872583d3efab174b1b2bcf8bbd2b6324b255f918af6e897491c7c88d87ac26826cab997b59a8baf189684c553e04411abb0c5c9925fc7e4c0880c076bac0b24fa3e32b09362d09d932fb22d636c6a9c08363b0c8009bf6c1eb76f317b465301675709eb152f86c31c161d8f253142fe16a69798373545343157768ba3a6fa1658420441dcc78de008a8a43fa1d0cde9602031edb379bcd61724b463787a4a126a5447d58c55fe7abce45bd1 -->",
+  "package_name": "ConcurrentCollections",
+  "title": "New package: ConcurrentCollections v0.1.0"
+}

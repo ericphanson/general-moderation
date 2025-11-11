@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-11-26T17:11:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-01T11:29:01Z",
+  "pr_number": 49443,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846bC6r",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name updatejulia contains the string \"julia\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-26T17:14:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49443#issuecomment-980168363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846bHKF",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From the package naming guidelines we have\r\n\r\n> 2. Avoid using Julia in your package name or prefixing it with Ju.\r\n>\r\n>  - It is usually clear from context and to your users that the package is a Julia package.\r\n>  - Package names already have a .jl extension, which communicates to users that Package.jl is a Julia package.\r\n>  - Having Julia in the name can imply that the package is connected to, or endorsed by, contributors to the Julia language itself.\r\n> 4. Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\nThis package is for updating (or managing) the version(s) of the julia programming language installed on a user's system. I believe a package name like `Update` would be ambiguous, and therefore prefer to violate the 2nd guideline in favor the of the 4th.",
+      "createdAt": "2021-11-26T17:25:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49443#issuecomment-980185733",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: UpdateJulia\n- Repository: https://github.com/LilithHafner/UpdateJulia.jl\n- Created by: @LilithHafner\n- Version: v0.1.0\n- Commit: ee0dce8e23b048419aa0b61f310fc21e7e2ca81c\n- Reviewed by: @LilithHafner\n- Reference: https://github.com/LilithHafner/UpdateJulia.jl/commit/ee0dce8e23b048419aa0b61f310fc21e7e2ca81c#commitcomment-60936243\n- Description: simple cross platform julia installer\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bee7669f7df05b84e66374571d16ef1196dbf4e540940fe20df0e47f0d488ad5053a60c3e9e209e38f4d0788f108c4bb7b6197df68a0d2912c2aae77be985a9eab4a80b2ffaf09b081e7dd6c408f87334d90795ac4249b7860d4c917f63875a8fa276ef71af0e0c140ef4bcdaf11a7ceef2fe14230068c422cd1e24e1086f3adaab36eac6c36cd38f4d9989e7fc907686f470503e1ae77e0ffc39ffbed8d0870a80e2b81ea528981ed5c9984518d4796 -->",
+  "package_name": "UpdateJulia",
+  "title": "New package: UpdateJulia v0.1.0"
+}

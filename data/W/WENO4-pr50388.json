@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-12-12T10:36:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-18T22:08:37Z",
+  "pr_number": 50388,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847Hstm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-12T10:40:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50388#issuecomment-991873894",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847HtJ5",
+      "author": {
+        "login": "tiagopereira"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would like to ask this package be merged using its current name (WENO4). It does not meet the auto-merge guidelines naming rule 1. (contain at least one lowercase letter). WENO stands for Weighted  Essentially Non-Oscillatory, a type of interpolation  proposed by [Liu et al. (1994)](https://ui.adsabs.harvard.edu/#abs/1994JCoPh.115..200L/abstract), and is therefore an acronym and not a word. Therefore, inserting one lowercase letter seems forced, and at odds with Julia's package naming guidelines. WENO is sufficiently unique to interpolations that no confusion is likely with other uses. There are also [examples](https://github.com/WENO-OF/WENOEXT) of packages in other languages with all uppercase WENO in the name.",
+      "createdAt": "2021-12-12T10:54:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50388#issuecomment-991875705",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: WENO4\n- Repository: https://github.com/tiagopereira/WENO4.jl\n- Created by: @tiagopereira\n- Version: v0.1.0\n- Commit: be7161abe04a21f58784ea6863cd08c8e6519fe4\n- Reviewed by: @tiagopereira\n- Reference: https://github.com/tiagopereira/WENO4.jl/commit/be7161abe04a21f58784ea6863cd08c8e6519fe4#commitcomment-61772027\n- Description: Julia implementation of the Janett et al (2019) WENO4 interpolation method \n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd650a3209a8999e935e6a8f4be150acbaf9f13feb5b9d5a7a62fa3898dbad64810dfc94118368eec204e45f477068ca858003869e3159b4074358b21ef4c2430a7e8db15aa002eddb737b30aa1d3f76f8b5d4e05656ce5037e56fbf4820b89dfebb2fe5d03e437807b5d7ae729bd445b41790033828e275c0d7a1a0f58976457055db527f3a21e3dcb61c2c69df2839231a157cae9fc9e4c6468e8fcff75daa08c8170e65c8eedbb2a1e9039f084cc332c -->",
+  "package_name": "WENO4",
+  "title": "New package: WENO4 v0.1.0"
+}

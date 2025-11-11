@@ -1,0 +1,176 @@
+{
+  "created_at": "2022-09-19T02:06:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-09-28T00:24:23Z",
+  "pr_number": 68530,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85KiLHA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to QRCode. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-09-19T02:11:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1250472384",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KiMLZ",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is a fork & rewrite of the old QRCode which is archived now. Both are under JuliaImages thus I think it's okay to merge and register this.",
+      "createdAt": "2022-09-19T02:19:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1250476761",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ki1No",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Better would be QRCodes ? (For QRCoders everywhere…) \r\n[noblock]",
+      "createdAt": "2022-09-19T07:07:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1250644840",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ki1hR",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Better would be QRCodes ? (For QRCoders everywhere…)\r\n\r\n`QRCoders` comes from the fact that this package provides one key type: `QRCoder`.",
+      "createdAt": "2022-09-19T07:08:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1250646097",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85K7mbo",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Why the rename? ",
+      "createdAt": "2022-09-25T07:23:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1257137896",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85K7n9f",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Why the rename?\r\n\r\nBecause \"QRCode.jl\" isn't a good package name? and because we'll need to free this name to declare a struct type `QRCode` to dispatch on (https://github.com/JuliaImages/QRCoders.jl/issues/2)",
+      "createdAt": "2022-09-25T08:11:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1257144159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85K7r-G",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, seems like a weak argument to me, and your description makes it feel like this is the next breaking version of the existing package, but if this is what you want we can merge I guess.",
+      "createdAt": "2022-09-25T10:07:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1257160582",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85K7vXh",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This can be perfectly treated as a new package 😀 (without 0.x.x versions)\n\nI was try to explain why the names are similar.",
+      "createdAt": "2022-09-25T11:34:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1257174497",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85K-WC7",
+      "author": {
+        "login": "RexWzh"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Okay, seems like a weak argument to me, and your description makes it feel like this is the next breaking version of the existing package, but if this is what you want we can merge I guess.\r\n\r\nHi:grinning:  I'd like to make a few notes about the version number that I have discussed with @johnnychen94.\r\n\r\n1. QRCoders.jl is in fact a rewrite of QRCode.jl, starting with https://github.com/JuliaImages/QRCoders.jl/pull/15.\r\n2. However, the current version has changed a lot of codes to improve the performance and flexibility, and is **no longer backward compatible**.\r\n3. The encoding modes(Num/AlphaNum/Byte/**Kanji**/**UTF8**) are all supported with optimized performance now, see https://github.com/JuliaImages/QRCoders.jl/pull/21. So we think it can be treated as a new package without 0.x.x versions.\r\n\r\nAlso, the package is renamed in order to meet the [package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines-1) as mentioned before.",
+      "createdAt": "2022-09-26T11:00:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/68530#issuecomment-1257857211",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: QRCoders\n- Repository: https://github.com/JuliaImages/QRCoders.jl\n- Created by: @RexWzh\n- Version: v1.0.0\n- Commit: 8d790ff1062fb4da02e16a00e69fe2ddc7ffc337\n- Reviewed by: @RexWzh\n- Reference: https://github.com/JuliaImages/QRCoders.jl/issues/23#issuecomment-1250469896\n- Description: Creating QR Codes within Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598622207c3dff8da57d08b9c2538d99176a0165223c57a3cb8cbd83dcf784b89f938c2c646a8c2bd054688bd33e2c162c2f212a34300f46f013462a356f2bc11261a17948884eae8c03c44cae63ce963266bf224a2d4466803a5f6afd5d96c59401dab20c7a17f25a00f214034bcc11fdbc0549de5c639f094920123213d5d8634 -->",
+  "package_name": "QRCoders",
+  "title": "New package: QRCoders v1.0.0"
+}

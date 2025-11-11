@@ -1,0 +1,200 @@
+{
+  "created_at": "2021-12-19T06:42:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-01-26T09:21:48Z",
+  "pr_number": 50824,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847cjA4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-19T06:46:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997339192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847cjE6",
+      "author": {
+        "login": "musm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "These filter packages rely upon HDF5 v0.16 which is yet to be released.  ",
+      "createdAt": "2021-12-19T06:49:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997339450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c8xA",
+      "author": {
+        "login": "musm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "cc @giordano  sorry bother, but  as a heads up I wanted to mention that this and the other H5Z* will all require a manual merge for the same reason.",
+      "createdAt": "2021-12-19T19:08:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997444672",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c80Z",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">  will all require a manual merge for the same reason.\r\n\r\nWhich same reason?",
+      "createdAt": "2021-12-19T19:10:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997444889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c87J",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Which same reason?\r\n\r\nOh, HDF.jl v0.16 not being released yet?  Why not waiting for it to be released?",
+      "createdAt": "2021-12-19T19:13:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997445321",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c9Mz",
+      "author": {
+        "login": "musm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Oh, HDF.jl v0.16 not being released yet? Why not waiting for it to be released?\r\n\r\nIt'll simply testing and iteration (we can at least dev in the normal fashion).   I've been PackageSpec'ing in the meantime, but that gets cumbersome with as many filter packages as we have.  The v0.16 release still requires further work and finalization of exposed API, thus I think it would be nice to have these registered in advance of those v0.16 HDF5 changes, which is   independent of the H5Z* subpackage work. \r\n\r\n",
+      "createdAt": "2021-12-19T19:20:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997446451",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c9bX",
+      "author": {
+        "login": "musm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Oh and as @mkitti  mentions in  https://github.com/JuliaRegistries/General/pull/50821#issuecomment-997446365 this is important for downstream testing of JLD, in particular due to the H5zblosc package.",
+      "createdAt": "2021-12-19T19:27:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997447383",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847c-LL",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Blosc is the only legacy plugin that was implemented a long time ago by SGJ. zstd, lz4, and bzip2 are new functionality \n\nAn earlier versions of these were released as HDF5Plugins.jl.\n\n",
+      "createdAt": "2021-12-19T19:48:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-997450443",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848NMQ0",
+      "author": {
+        "login": "musm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano  any  updates here and for https://github.com/JuliaRegistries/General/pull/50821, https://github.com/JuliaRegistries/General/pull/50823, https://github.com/JuliaRegistries/General/pull/50822?  ",
+      "createdAt": "2022-01-11T15:44:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-1010091060",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848N23A",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@musm I think the general sentiment is that we should just do it simultaneously with the 0.16 release of HDF5.jl",
+      "createdAt": "2022-01-11T18:56:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-1010265536",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848N378",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, I'm still a bit confused why you're having problems in development, and I think waiting for the actual release of HDF5 would make sense.  Having packages in the registry that can't be installed anyways isn't much useful.\r\n\r\nSide note (not really blocking for the registration), all other packages I've seen in subdirs are in _different_ subdirs than `src/`, otherwise you end up installing the same source code twice.",
+      "createdAt": "2022-01-11T19:01:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/50824#issuecomment-1010269948",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: H5Zzstd\n- Repository: https://github.com/JuliaIO/HDF5.jl\n- Created by: @musm\n- Version: v0.1.0\n- Commit: 9ddd07b706712aa4ddb1133525fa2a849286f749\n- Reviewed by: @musm\n- Reference: https://github.com/JuliaIO/HDF5.jl/commit/9ddd07b706712aa4ddb1133525fa2a849286f749#commitcomment-64630599\n- Description: Save and load data in the HDF5 file format from Julia\n<!-- 3fef0588152d63110356a17b848af362a674c1d006260c8dc159b82d7cbaf4aa570e2545a0c63d80fe3c177ec75db281c15b4b84f35d6e8287eef4a8bc90cd6c693b68220df98406da0f660e9ef5958b6eb4bbefa7c7bf26465f7f1c532581af48c2fcb5c13d8ec90000cf20808e983db740c2660ba9c1c4bb2b378ed72d98af324bd7a870fb04f63cce19776a33d6754cddf7b60a0c7f654cdc4bcbd71b97f999baa08abbf2793df9d0a8b67aa68212c12d4380de78407a14d86b0c06f8066a4bcd777592dbe7c06d23191ca534412f1368fd932ae6cc3ec3bbd7ae4f91fc42 -->",
+  "package_name": "H5Zzstd",
+  "title": "New package: H5Zzstd v0.1.0"
+}

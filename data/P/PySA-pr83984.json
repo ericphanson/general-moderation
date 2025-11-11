@@ -1,0 +1,51 @@
+{
+  "created_at": "2023-05-21T13:57:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-24T13:21:49Z",
+  "pr_number": 83984,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cwY79",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to PyQHA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to PyTSP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-21T14:06:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83984#issuecomment-1556188925",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dAmAZ",
+      "author": {
+        "login": "pedromxavier"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nThis is a JuMP wrapper for [NASA's PySA](https://github.com/nasa/pysa) and it would be great if it could be named after the original project.",
+      "createdAt": "2023-05-24T04:18:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83984#issuecomment-1560436761",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: PySA\n- Repository: https://github.com/psrenergy/PySA.jl\n- Created by: @pedromxavier\n- Version: v0.1.0\n- Commit: e5647bc414d7e1b3792b43e305cf9f6a2cd6a60a\n- Reviewed by: @pedromxavier\n- Reference: https://github.com/psrenergy/PySA.jl/commit/e5647bc414d7e1b3792b43e305cf9f6a2cd6a60a#commitcomment-114302130\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65568a684206a42e095cbf518f42c08f53f0ffe5a734dccd0d4c9d1631800b68786e8043971bfa9d940dc1ced12a30ad597f612bcfcf20f6b9ce742d0bb170c9186141dcc5d6e9d20dc58384ef78c33626b2a17d6d8795840ac3304da1d99f32766576faa35c71e6449b41ff217d82f8a49e283d66d11ec51c4330cba4bec0bb255ece67bdef06f111509b4e097f93732471806d1359bdee0c094135d575fde3ee447d9315718bee1957861c62335b2af -->",
+  "package_name": "PySA",
+  "title": "New package: PySA v0.1.0"
+}

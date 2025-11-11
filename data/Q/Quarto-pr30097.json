@@ -1,0 +1,155 @@
+{
+  "created_at": "2021-02-15T13:20:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-02-18T05:09:11Z",
+  "pr_number": 30097,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTIyMTcxOA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n1. Similar to Quante. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.15 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-15T13:23:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779221718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTIzNzgyNA==",
+      "author": {
+        "login": "jjallaire"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi there, the auto-merge request for the `Quarto` package has failed due to similarity with the existing `Quante` package. \r\n\r\nI understand the potential issues w/ similar names, but I'd like to request that this be merged nevertheless.  The `Quarto` package name is derived from the [Quarto](https://github.com/quarto-dev/quarto-cli/wiki) CLI that it provides a Julia REPL interface for (and potentially more facilities down the line). Having the Julia package name correspond exactly to the name of the upstream project would be intuitive for users. \r\n\r\nWe could certainly use `QuartoTools` or something along those lines, but that seems a bit less natural and elegant. I'm also hopeful that while these two names do share 4 letters (including the first 3 in exact order), they sound nothing alike when spoken so are unlikely to cause confusion.\r\n\r\n",
+      "createdAt": "2021-02-15T13:53:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779237824",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTM0Nzc4OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name is fine, but we'll need to manually merge this in three days",
+      "createdAt": "2021-02-15T16:58:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779347788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTM3MTg1MA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah the name seems fine to me.",
+      "createdAt": "2021-02-15T17:48:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779371850",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTM3NDQ0MA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Nice to see you here, @jjallaire! The name similarity check is to catch malicious typo squatting attempts, which this clearly isn’t.",
+      "createdAt": "2021-02-15T17:53:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779374440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTQ2NjY1NA==",
+      "author": {
+        "login": "jjallaire"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @StefanKarpinski, great to be here! \r\n\r\nWe are working on a language-agnostic version of R Markdown (very early docs here: https://github.com/quarto-dev/quarto-cli/wiki). The idea is to support multiple computational pre-processors that can all target a common ecosystem of output formats (built on Pandoc but with enhancements for scientific writing e.g. cross-references). \r\n\r\nWe currently have computational pre-processors for knitr and Juypter (so support for Julia comes via IJulia). We definitely want to provide a first rate experiences for Julia users and it's not entirely clear at this point whether that should be based on IJulia or something else like Pluto, Neptune, or Weave.jl. Will ping you back to discuss further when we get past our next milestone.\r\n",
+      "createdAt": "2021-02-15T22:00:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-779466654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MDk5Mjk3Mg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Very cool! Would it be possible to support multiple \"backends\", i.e. Jupyter, Pluto and whatever else someone may come up with?",
+      "createdAt": "2021-02-18T02:16:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-780992972",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MTI4NzUzOA==",
+      "author": {
+        "login": "jjallaire"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, multiple backends is indeed the design. A backend basically just needs to be able to turn an input file into Pandoc markdown (using some shared idioms for marking up \"cells\" and their output and indicating if there are additional dependencies to include e.g. JS libraries). \r\n\r\nIf there is material process startup time (as there is w/ Jupyter on the order of ~ 2-3 seconds) backends should also have a means of re-using sessions to mitigate startup time (as we want rendering of documents to be at \"interactive\" speed). \r\n\r\nWith IJulia + Revise.jl (and the aforementioned Jupyter session persistence) we get blazing fast performance. If we wanted to implement another Julia notebook backend we'd likely need an equivalent session persistence mechanism (likely a single mechanism would suffix for all of the Julia backends, it's really just a socket server that knows how to reset its state across calls). \r\n",
+      "createdAt": "2021-02-18T11:47:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30097#issuecomment-781287538",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Quarto\n- Repository: https://github.com/quarto-dev/quarto-julia\n- Created by: @jjallaire\n- Version: v1.0.0\n- Commit: 3f56372ff199c23111845725be22d15a0a51b154\n- Reviewed by: @jjallaire\n- Reference: https://github.com/quarto-dev/quarto-julia/commit/3f56372ff199c23111845725be22d15a0a51b154#commitcomment-47140019\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd656a60a843197cb77a533f9c1a78c092795fc1fb6b205159b36e71c07d8b5c85cd35ce84b6eb9341aee543f00daeb9f9d720539a3cb67fb2e6975c26bce8550a0e25e1ccd6f0342bc3acfdb68191d6c20bfe016f243a1610afc3c843b7fb1cac8d94aee1d06d23195e7c434cbccde846dea0d8c623b7e1f013662cbd503d2f4b3aa95b92cb6a22fe901eff8641925db752555ed646239a106699f8457631e8535cf55355f01bb4e430820450fbc0a5e1e -->",
+  "package_name": "Quarto",
+  "title": "New package: Quarto v1.0.0"
+}

@@ -1,0 +1,89 @@
+{
+  "created_at": "2021-12-07T21:18:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-20T21:57:33Z",
+  "pr_number": 50124,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84659UT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 10 existing packages.\n  1. Similar to RoME. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.37 is at or below cutoff of 2.50.\n  2. Similar to HAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to GAMS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to YAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to ACME. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to FDM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to FMI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to ASE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-07T21:22:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50124#issuecomment-988271891",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8466FDD",
+      "author": {
+        "login": "bbejanov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello!\r\n\r\nThis package is a Julia interface with the FAME database and analytics engine for storing and working with economic and financial time series. https://en.wikipedia.org/wiki/FAME_(database). I hope you would agree that using the name FAME.jl is straight forward and makes a good sense for the users of the package.\r\n\r\nThank you,\r\nBoyan\r\n\r\n[noblock]",
+      "createdAt": "2021-12-07T22:21:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50124#issuecomment-988303555",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847F3Rp",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Side note, it'd be good if your package actually had tests, instead of an [empty set](https://github.com/bankofcanada/FAME.jl/blob/65a207beb7f4c1cb6f8a2324fe0d21d64f57d1c7/test/runtests.jl) which is even loading a module with the wrong name.  Also, documentation would be useful to let other people use your package.\r\n\r\n[noblock]",
+      "createdAt": "2021-12-11T00:38:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50124#issuecomment-991392873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847GMay",
+      "author": {
+        "login": "bbejanov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Side note, it'd be good if your package actually had tests, instead of an [empty set](https://github.com/bankofcanada/FAME.jl/blob/65a207beb7f4c1cb6f8a2324fe0d21d64f57d1c7/test/runtests.jl) which is even loading a module with the wrong name. Also, documentation would be useful to let other people use your package.\r\n> \r\n> [noblock]\r\n\r\nThanks!  We'll fix the tests and we'll add documentation. It's work in progress.\r\n\r\n[noblock]\r\n",
+      "createdAt": "2021-12-11T06:23:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50124#issuecomment-991479474",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847f0FR",
+      "author": {
+        "login": "bbejanov"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Could you please merge this request when you have a chance?  Thanks for your help!\r\n\r\n[noblock]\r\n",
+      "createdAt": "2021-12-20T19:07:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50124#issuecomment-998195537",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: FAME\n- Repository: https://github.com/bankofcanada/FAME.jl\n- Created by: @bbejanov\n- Version: v0.1.0\n- Commit: 65a207beb7f4c1cb6f8a2324fe0d21d64f57d1c7\n- Git reference: HEAD",
+  "package_name": "FAME",
+  "title": "New package: FAME v0.1.0"
+}

@@ -1,0 +1,74 @@
+{
+  "created_at": "2024-09-11T03:42:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-09-25T18:02:03Z",
+  "pr_number": 114971,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86LoKQ6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-11T03:46:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114971#issuecomment-2342560826",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L_Omt",
+      "author": {
+        "login": "FriesischScott"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "In the README the author states that the package is not actually compatible with *Zarr.jl* version 0.9  but relies on an unreleased feature branch.",
+      "createdAt": "2024-09-13T10:29:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114971#issuecomment-2348607917",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MA36x",
+      "author": {
+        "login": "asinghvi17"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[Noblock] to be more specific: the package itself will work for many catalogs on the released version of Zarr.jl, but some that are generated from netcdf files require Zarr codecs that are on that branch.  I could copy those to the package for now and remove the requirement, though.  Would that make sense?",
+      "createdAt": "2024-09-13T14:01:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114971#issuecomment-2349039281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MR8uB",
+      "author": {
+        "login": "asinghvi17"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I've just updated the repo to remove the dependence on an unreleased branch of Zarr.jl. @FriesischScott does this work for you?",
+      "createdAt": "2024-09-16T17:33:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114971#issuecomment-2353515393",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: Kerchunk\n- Repository: https://github.com/JuliaIO/Kerchunk.jl\n- Created by: @asinghvi17\n- Version: v0.1.0\n- Commit: 2d73c2b5e0464409d7883cbe1002b9391a1f4eb4\n- Reviewed by: @asinghvi17\n- Reference: https://github.com/JuliaIO/Kerchunk.jl/commit/2d73c2b5e0464409d7883cbe1002b9391a1f4eb4#commitcomment-146744391\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63b437cc8e55c2bbe2e4047c8fcd8b486002b5c0e46accf257eba5fac0f7c56be2f905a469af59692692a7271b79435c9dcb8f895954e77eef9eeafdaadea80e116059c243964a77ca9206304949fee3f184f5edb44e379c7c0d7bab093b3900135177b792bdcbc04261668b50fc26f526cd6e9609e201698e3c58f27016b6fa54a876fb0d38e7f41e6fb587e436b8223d51297bfc012bf3ed243a4f44a517ab5c8992c624e4c316b6b2112e3ca8c2e1d -->",
+  "package_name": "Kerchunk",
+  "title": "New package: Kerchunk v0.1.0"
+}

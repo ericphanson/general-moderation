@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-05-09T22:08:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-13T10:44:18Z",
+  "pr_number": 83226,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85b2TSl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-09T22:19:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83226#issuecomment-1540961445",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b9JgG",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Name seems way too general - maybe something like \"CelestialFrames\"?\r\nAlso, can this build on/reuse/extend `SkyCoords.jl`? The latter already nicely transforms between celestial reference frames, maybe it's better to add new frames under that already existing framework?",
+      "createdAt": "2023-05-10T20:17:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83226#issuecomment-1542756358",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b_5cl",
+      "author": {
+        "login": "MicheleCeresoli"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHi @aplavin, \r\n\r\nI'll briefly describe what this package does to comprehensively answer the points you raised. First of all, when we talk about frames, we make a clear distinction between __axes__ and __points__. Axes are used to define an orientation in space, and are related between them via a rotation. On the other hand, points define a location in space, and are related by a translation in a common set of axes. It follows that the most generic transformation foresees an arbitrary number of rotations and translations. \r\n\r\nThis key concept is implemented within `FrameTransformations.jl` by a `FrameSystem` object, a structure that manages a user-defined collection of axes and points and silently handles all transformations between them up to the 4th order (position, velocity, acceleration and jerk). Although it was born to be applied on space (celestial) applications, it can actually be exploited to perform transformations between any two kind of reference systems, the user only has to specify the relative rotation\\translation between them (in case of non-inertial axes, the package also supports automatic differentiation to automatically derive the higher-order derivatives of the given rotation matrix). Therefore, to answer the first point, it is named `FrameTransformations` because it can be re-exploited in any scenario, not only for space-related applications.\r\n\r\nFor what concerns `SkyCoords.jl`, the documentation specifies that it only supports three inertial reference systems. On the other hand, this package supports both inertial and non-inertial reference axes:\r\n\r\n- Inertials: ICRF, J2000,  ECLIPJ2000, etc... \r\n- Fixed-offset axes \r\n- All the IAU body-fixed axes (IAU_EARTH, IAU_MARS, etc...)\r\n- Ephemeris axes (e.g., those whose orientation is defined within ephemeris kernels, e.g., ITRF or MOON_PA). \r\n- Custom rotating axes (e.g., whose relative DCM is a generic function of time)\r\n- Two vector axes (those defined by specifying the directions of two vectors in space)\r\n\r\nAnd different types of points: \r\n- Ephemeris points (i.e., those whose state vector is written in ephemeris kernels, e.g., DE440). \r\n- Fixed-points: with a constant position offset\r\n- Dynamic points (e.g., whose translation is a generic function of time)\r\n- Updatable points (e.g., whose state must be manually updated by the user at the epoch of interest).\r\n\r\nThe orientation and routines to compute some of these _space-related_ frames are contained in the `Orient` submodule, which enables the computation of the ICRF to ITRF rotation (according to the IERS conventions), the parsing of .tpc files and the automatic computation of IAU body-fixed rotations, the relative orientations between some inertial frames (ICRF, J2000, ECLIPJ2000), and support for the lunar Principal Axes and ME axes. \r\n\r\nTL; DR: this package can be seen as a modern and thread-safe re-write of SPICE. Its purpose is not only to define rotations between reference systems but to enable any type of transformation between them, so that those which are defined within `SkyCoords.jl` could be eventually registered with a `FrameSystem` object at run-time by the user.\r\n\r\nHappy to provide more insights if you're interested! ",
+      "createdAt": "2023-05-11T07:28:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83226#issuecomment-1543477029",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cEQbD",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Must admit this went a bit over my head :)\r\nMy suggestion to reuse/extend SkyCoords was motivated by usage simplicity. It's very easy to convert SkyCoords coordiates between frames, but that package only supports inertial celestial frames for now, indeed. It would be useful to convert SkyCoords to eg terrestial coordinates (with FrameTransformations.jl) keeping the same simple API.\r\nAnyway, those were just suggestions.",
+      "createdAt": "2023-05-11T20:18:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83226#issuecomment-1544619715",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: FrameTransformations\n- Repository: https://github.com/JuliaSpaceMissionDesign/FrameTransformations.jl\n- Created by: @MicheleCeresoli\n- Version: v1.0.0\n- Commit: e458e638ea5f2fdd0aae2ddfd3887045cde25754\n- Reviewed by: @MicheleCeresoli\n- Reference: https://github.com/JuliaSpaceMissionDesign/FrameTransformations.jl/commit/e458e638ea5f2fdd0aae2ddfd3887045cde25754#commitcomment-112619111\n- Description: A modern, high-performance and comprehensive set of tools to perform arbitrary rotations and translations between standard and user-defined reference frames.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> -  Transformations between ICRF, ITRF, ECLIPJ2000, MOON_PA, MOON_ME.\r\n> -  Transformations to and from IAU body-fixed frames.\r\n> -  Possibility to define custom axes and points (including arbitrary rotating frames, fixed-offset frames, two vector frames, etc... ).\r\n> -  Support for position, velocity, acceleration and jerk state transformations.\r\n> -  Light time and stellar aberration state corrections.\r\n> -  Pure Julia implementation (without any foreign C/C++ library calls)\r\n> -  Deep unit testing against ERFA and SPICE.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6297236c00e3e32cad375b9076e92f0b68e54234be568be3c8cb7601670b3dffea537d81fe3c7913651d96dd84daedff430f1172cd845ffd2d964d410abed7e3b168688690cde0a584d4d2b4da79d6f11853c6511090a3a08337f1f751c901e321351394ef4100c7630ea42bd9814b557460a79d88769b98d84fb86e64508b8d8c1f6cb236e7f4982d5f03e64bf739b52202b78272bea61bb08c9707418aab7c1e8d76b62e6c7caf6d1265aa8528330f801f2a7e5cf43a6ed7f16ab12f12ce575 -->",
+  "package_name": "FrameTransformations",
+  "title": "New package: FrameTransformations v1.0.0"
+}

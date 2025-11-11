@@ -1,0 +1,196 @@
+{
+  "created_at": "2024-01-25T14:08:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-01-29T17:19:27Z",
+  "pr_number": 99518,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85x3MzX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Serd. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Conda. Normalized visual distance 2.42 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-25T14:12:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1910295767",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x4SW5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] My first impression on this was that the name is fine. However, as was pointed out on Slack, there already is https://serde.rs (which comes up prominently when you google \"Serde\"). That has quite a lot of potential for confusion. I'd say that a `Serde.jl` package *should* be compatible with Rust serialization, which means this package would have to be renamed.",
+      "createdAt": "2024-01-25T16:41:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        },
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1910580665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEIwH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I should clarify that I'm not objecting to this strongly, especially after the [discussion on Slack](https://julialang.slack.com/archives/C6M4DQA5P/p1706192010314929) and the update to the README. \r\n\r\nI'm mostly sympathetic to @gryumov's arguments:\r\n\r\n> 1. As long as there is no trademark infringement and the library name does not mislead regarding its functionality or affiliation, such practice is generally acceptable.\r\n> 2. The term 'Serde', while widely associated with the Rust serialization framework, is essentially a contraction of two common words: 'serialize' and 'deserialize'. From this point of view, it can be argued that the term is sufficiently generic and could be an appropriate name for any library that provides serialization and deserialization functionalities, regardless of the programming language.\r\n> 3. Acknowledging the influence of the original Rust Serde library in the README or documentation of the Julia package could provide clarity. This would demonstrate respect for the influence of the original library and could prevent any potential misunderstanding regarding the source of inspiration for the package.\r\n\r\nStill, there were some people in the Slack channel who had reservations about using the name of an existing project in general, so this is still a judgement call for whatever registry maintainer wants to merge or not merge this.\r\n\r\n[noblock]\r\n",
+      "createdAt": "2024-01-28T18:43:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1913687047",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yITEr",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nIt seems to me that the best thing would just be to call it Deser.jl or something to avoid perhaps improperly using someone elses name, but I also don't think it's a huge deal. ",
+      "createdAt": "2024-01-29T14:13:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1914777899",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yIyho",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Michael Goerz\r\n> [In general, the \"same\" library having the same name in different languages is a good thing](https://julialang.slack.com/archives/C6M4DQA5P/p1706207116222909?thread_ts=1706192010.314929&cid=C6M4DQA5P)\r\n\r\nWe only just reached an agreement on something else, and you're proposing a new name again? сс @MasonProtter\r\n\r\n[noblock]",
+      "createdAt": "2024-01-29T15:16:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1914906728",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yI2I7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nMaybe we should just ask @dtolnay (main current contributor for serde.rs) for an opinion instead of speculating. If the Rust folks say \"we don't care\", the discussion here is mostly moot.",
+      "createdAt": "2024-01-29T15:22:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1914921531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yJKJO",
+      "author": {
+        "login": "dtolnay"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have no issue with the current name.",
+      "createdAt": "2024-01-29T15:56:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1915003470",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yJO5r",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> We only just reached an agreement\r\n\r\nI'm not sure if there was a complete consensus on that\r\n\r\n> In general, the \"same\" library having the same name in different languages is a good thing\r\n\r\nWhether this Serde is the \"same\" library as the Rust Serde is still pretty debatable. Personally, I think it's close enough to be okay, but it's a judgment call.\r\n\r\n> you're proposing a new name again?\r\n\r\nThat is still a viable option. If you went so far as to use the \"long descriptive names\" that are encouraged in the Julia community (like `SerializeDeserialize.jl`), it would even automerge without any discussion.\r\n\r\nBut at this point, I'd maybe just wait for input from the Rust people. If they say they don't have an objection, or don't respond in the next couple of days, I'd recommend merging. If they object, I think it's a no-go.\r\n\r\nBut a registry maintainer will have to approve any merge anyway, so ultimately it's not up to me.",
+      "createdAt": "2024-01-29T16:05:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1915022955",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yJQQb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I have no issue with the current name.\r\n\r\nI think that settles it for me. I recommend merging with the current name.",
+      "createdAt": "2024-01-29T16:07:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99518#issuecomment-1915028507",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Serde\n- Repository: https://github.com/bhftbootcamp/Serde.jl\n- Created by: @gryumov\n- Version: v1.0.0\n- Commit: adf7cf6d9a724ddb640da3529ee6bf6dfe394cf2\n- Reviewed by: @gryumov\n- Reference: https://github.com/bhftbootcamp/Serde.jl/commit/adf7cf6d9a724ddb640da3529ee6bf6dfe394cf2#commitcomment-137792946\n- Description: Serde is a Julia library for (de)serializing data to/from various formats. The library offers a simple and concise API for defining custom (de)serialization behavior for user-defined types\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a1dd7ebd3f40bde72cdcb019f4e58f8428b86f6ef7b242111a2562c0d05213f9eef1ddf3a9280f6cbad23c5615bac0d7a38a4694f65bcd5858cf5fc1f621545ef169aef3f189e21563ddc06a834563351e73599ecea8ee51ce0e8109bf6648a83afe48dfe84bd4fc6fd94fe6d9a06d12d92db97f4ddcfcfb4f0436a30616deca7d1970fe0d3b3339841f7738e06f3ada9d664bce3190bb47241fd3419bbb9c76e975499598c97aa7f9ec3ad4a724d943 -->",
+  "package_name": "Serde",
+  "title": "New package: Serde v1.0.0"
+}

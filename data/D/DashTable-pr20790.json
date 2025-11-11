@@ -1,0 +1,59 @@
+{
+  "created_at": "2020-09-03T20:39:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-09-09T10:40:26Z",
+  "pr_number": 20790,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY4Njc1NDMyMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Version number is not 0.0.1, 0.1.0, 1.0.0, or X.0.0\n- The following dependencies do not have a compat entry that has an upper bound: DashBase. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-09-03T20:41:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/20790#issuecomment-686754322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY4ODk1OTExMg==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Please review these Dash packages for @waralex: \"You can contact a human in the #pkg-registration channel in the official Julia Slack to expedite this process.\" I think they should be (speedily) confirmed as not \"Julia\" packages, or maybe not confirmed at all for that reason? [noblock]",
+      "createdAt": "2020-09-08T15:34:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/20790#issuecomment-688959112",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY4OTA2ODkyMw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The version number not being 0.0.1, 0.1.0 or x.0.0 is fine with me, but the package should have proper compat bounds, otherwise _all_ updates to this package will require manual intervention",
+      "createdAt": "2020-09-08T18:50:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/20790#issuecomment-689068923",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: DashTable\n- Repository: https://github.com/plotly/dash-table\n- Created by: @waralex\n- Version: v4.10.1\n- Commit: f074a5bf823b675d9bb6fbeb25d9ef357c26a2de\n- Git reference: master",
+  "package_name": "DashTable",
+  "title": "New package: DashTable v4.10.1"
+}

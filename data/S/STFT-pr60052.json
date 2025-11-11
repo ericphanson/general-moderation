@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-05-11T12:20:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-06-24T20:31:08Z",
+  "pr_number": 60052,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85C-h4s",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to SSHT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to NFFT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to NTFk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SOFA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-11T12:23:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60052#issuecomment-1123687980",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85C-qX_",
+      "author": {
+        "login": "s-zymon"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package implements Short-Time Fourier Transform (STFT) routines in Julia, hence the name of the package. STFT is a common transformation for the time-frequency analysis of signals. The package exports at this moment two core functions of the package: `stft` and `istft`.\r\n\r\nThe package name is clearly against \"Package naming guidelines\", but the content of this package fits the name STFT best in my opinion. There are other packages in the `General` which does not meet this package naming guideline, for example:\r\n* `NFFT` - Non-equidistant Fast Fourier Transform,\r\n* `SSHT` - Spin-weighted Spherical Harmonic Transforms,\r\n\r\nso I believe the name of the package is not obstacle here and the package can be registered in `General` registry.\r\n",
+      "createdAt": "2022-05-11T12:53:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60052#issuecomment-1123722751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Eryl2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-06-10T12:56:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60052#issuecomment-1152330102",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Er0Be",
+      "author": {
+        "login": "s-zymon"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would appreciate a review to see if the name `STFT` is acceptable. Thanks.",
+      "createdAt": "2022-06-10T13:02:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60052#issuecomment-1152335966",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: STFT\n- Repository: https://github.com/s-zymon/STFT.jl\n- Created by: @s-zymon\n- Version: v1.0.0\n- Commit: 346c7438b760a5e6795b007551232d8567e8f8b1\n- Reviewed by: @s-zymon\n- Reference: https://github.com/s-zymon/STFT.jl/commit/346c7438b760a5e6795b007551232d8567e8f8b1#commitcomment-73395367\n- Description: Short-Time Fourier Transform\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6085eb5765d74aa15fab8bde413343d291fd56cae8ce1ce409a952a86b14c7f79fd1c398240a4a9e9f9f90848c986b9c18a0d15710c5c6a4adf64cf9a3d4eb3c72f2bc29cfedc78ae1c2fd86dad94489704612e5762e66ed70ee061b5c776e97f2f5585cf717df1d281c6af60294450b486a3aef218974822ebffbe3984d1bbc8378ddfc92fedcb721f7e25ab0d036b7344f9631722463f1d418b3a154f626d0f -->",
+  "package_name": "STFT",
+  "title": "New package: STFT v1.0.0"
+}

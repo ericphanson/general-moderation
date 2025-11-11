@@ -1,0 +1,88 @@
+{
+  "created_at": "2023-12-03T09:10:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-12-11T06:52:16Z",
+  "pr_number": 96381,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85thM00",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 3 existing packages.\n  1. Similar to CUDD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to CUDA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to CDCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-03T09:17:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96381#issuecomment-1837419828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85th53p",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`CUDSS.jl` is a Julia interface to the new toolbox `CUDSS` developed by NVIDIA for direct solvers of sparse linear systems. It is not included in `CUDA.jl` as the library is still in preview. I would like to keep the name `CUDSS` because it aligns with the naming convention we use for other CUDA libraries, such as `CUBLAS`, `CUSOLVER`, `CUSPARSE`, etc.",
+      "createdAt": "2023-12-03T21:22:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96381#issuecomment-1837604329",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tiy1j",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you add that explanation to the README and documentation? Right now these do not make it clear that what the purpose of the package is.",
+      "createdAt": "2023-12-04T04:49:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96381#issuecomment-1837837667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tr56k",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for your comment @goerz! I updated the README.md and the documentation.",
+      "createdAt": "2023-12-05T08:13:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96381#issuecomment-1840225956",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: CUDSS\n- Repository: https://github.com/exanauts/CUDSS.jl\n- Created by: @amontoison\n- Version: v0.1.0\n- Commit: d0adcb7cf398673894c769e49669775b8f39b6ce\n- Reviewed by: @amontoison\n- Reference: https://github.com/exanauts/CUDSS.jl/commit/d0adcb7cf398673894c769e49669775b8f39b6ce#commitcomment-134665579\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6baaecec6b393544966617c99988c0695d6edd622cc25ca27b7600d8fcbfc8d26e6da807d8b80e6c9dfd7e563fa772c15c33a2b721559b6b1c356d3b82b85b8a3915c8965860c1a83f1f9c4a6211f05eb879a6b3756eeff546a28a4fcbde0c0809b6f2a02d71bb73a038e304fbfb8e1cd542e3ebc73c14fb9c3fb065a94d5d9b5b07cabd8185b643b79d21520bd5e8c8fa908971b4f6dab222650843e7e8911cc566704617ca2b996b4387f1f8d3261d3 -->",
+  "package_name": "CUDSS",
+  "title": "New package: CUDSS v0.1.0"
+}

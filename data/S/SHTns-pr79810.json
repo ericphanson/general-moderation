@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-03-17T22:58:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-22T14:49:09Z",
+  "pr_number": 79810,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85X4wE7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to QXTns. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Skans. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-17T23:03:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79810#issuecomment-1474494779",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85X5m2Y",
+      "author": {
+        "login": "fgerick"
+      },
+      "authorAssociation": "NONE",
+      "body": "I do not wish to change the name, as it is a wrapper for the library of that same name.",
+      "createdAt": "2023-03-18T05:27:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79810#issuecomment-1474719128",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SHTns\n- Repository: https://github.com/fgerick/SHTns.jl\n- Created by: @fgerick\n- Version: v0.1.0\n- Commit: bc2ab58cd77b3e72c0bcedfd8cb58f68a4fbf86d\n- Reviewed by: @fgerick\n- Reference: https://github.com/fgerick/SHTns.jl/commit/bc2ab58cd77b3e72c0bcedfd8cb58f68a4fbf86d#commitcomment-104931449\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6dc6badb435ccfec9efff57e125115306ee5188ec8f5194c6f79528642dfa33b4761ff80c8ab5c52d089358393f18fad2f08a6cf6fadb72667bc5932de0c3439c7f1e6a370fd315171de4811f171902c3bd88c947c17b9429d4e2e75997b29a7e4477ff36cce5c194c7e3509153dcb352832bc35d21aa3d9a8817462f87b0ba5fd3b74e2a4647e4a8aa82068ebc563d71a21130afda5f9cfd6d56faf2fa50f472a5dc3615f2bfbeddd7f879d0f34937e2 -->",
+  "package_name": "SHTns",
+  "title": "New package: SHTns v0.1.0"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-10-10T07:54:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-10-16T16:54:41Z",
+  "pr_number": 93146,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85olhDW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Caesar. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-10T08:16:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93146#issuecomment-1754665174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oljcy",
+      "author": {
+        "login": "dehann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Good day, I would like this package to registered with the current name `PyCaesar` please.  I am an author of both `Caesar` and this new `PyCaesar`.  The point of `PyCaesar` is to expose all the functionality of `Caesar` plus `PyCall` related features.  \r\n\r\nWe have strong use-cases both with and without `PyCall` and therefore found it sensible to separate out to `PyCaesar` the related functionality.  In addition, this approach allows better use of `weakdeps`, since \"double weakdeps\" with both PyCall and other packages does not seem like the right design.",
+      "createdAt": "2023-10-10T08:21:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93146#issuecomment-1754674994",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PyCaesar\n- Repository: https://github.com/JuliaRobotics/PyCaesar.jl\n- Created by: @dehann\n- Version: v0.1.0\n- Commit: 0d4bc802226eff1eab70344eda8c54003fc2c978\n- Reviewed by: @dehann\n- Reference: https://github.com/JuliaRobotics/PyCaesar.jl/issues/21\n- Description: Python extensions relating to Caesar.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835985526a557fdb6b58f4add23ccb9a1a3f11dc04c815bf6b4d5d3d93a03302ed72b7141a05fb2eae3855e4fe434f9a768124c13c82a02c61d3ff2086bcce1a2eacf47d7f3ecd1016cc84d9ef96758a0349a1921b77a1431cdbbcd3c6bfab1e6e01a2381005ac6cc4af928c86c63cac3f66c274b585931fc4c4e01038635efd9c517 -->",
+  "package_name": "PyCaesar",
+  "title": "New package: PyCaesar v0.1.0"
+}

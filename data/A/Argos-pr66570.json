@@ -1,0 +1,148 @@
+{
+  "created_at": "2022-08-19T16:41:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-08-28T09:05:44Z",
+  "pr_number": 66570,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85IxTcc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Erdos. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Arrow. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-08-19T16:47:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1220884252",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85I4kmI",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@frapac please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-08-22T19:00:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1222789512",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85I7Ex4",
+      "author": {
+        "login": "frapac"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Thank you for the precision. I confess I was a bit lost about the road to follow to solve the issue. The issues have been fixed, it was just unclear to me if I should use `@register` on the new commit (including the fixes) or the old one.  \r\n\r\n[no block]",
+      "createdAt": "2022-08-23T02:25:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1223445624",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JQ3yr",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nYou will need to comment `@JuliaRegistrator` on the **new** commit that includes the fixes.\r\n\r\nBTW, it seems fine to override the name similarity check here; this doesn't seem to be typosquatting. @giordano @ericphanson Do you agree?",
+      "createdAt": "2022-08-27T09:37:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1229159595",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JQ30H",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@frapac Note that the correct syntax to include in your comment is `[noblock]` (not `[no block]`).\r\n\r\n[noblock]",
+      "createdAt": "2022-08-27T09:37:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1229159687",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JRh8P",
+      "author": {
+        "login": "frapac"
+      },
+      "authorAssociation": "NONE",
+      "body": "Now I am not sure to understand: I tried to register the other commit, and I get [this error message](https://github.com/exanauts/Argos.jl/commit/0088e95dbe1bc5411c36e01659591f7fd9d8419c#commitcomment-81639949):\r\n\r\n```\r\nError while trying to register: \"Tag with name v0.2.1 already exists and points to a different commit\"\r\n```\r\n\r\n[noblock]\r\n\r\n",
+      "createdAt": "2022-08-27T23:36:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1229332239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JRlAD",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Delete the git tag and try again.\r\n\r\nAs a general remark, you shouldn't create a git tag ***before*** successful registration of a version, because then if there is anything to fix (which is the case here) then you get a mismatch. Not that the package manager cares at all about git tags (the only thing which matters to it is the registry) but human beings tends to get confused when things don't match. Instead, you should use [TagBot](https://github.com/JuliaRegistries/TagBot) to automatically create the git tag ***after*** a version is actually registered.",
+      "createdAt": "2022-08-28T00:20:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1229344771",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JRnem",
+      "author": {
+        "login": "frapac"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see! I followed your instruction, and apparently it worked. Thanks for your time, and your help!\r\n\r\n[noblock]",
+      "createdAt": "2022-08-28T01:43:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66570#issuecomment-1229354918",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Argos\n- Repository: https://github.com/exanauts/Argos.jl\n- Created by: @frapac\n- Version: v0.2.1\n- Commit: 0088e95dbe1bc5411c36e01659591f7fd9d8419c\n- Reviewed by: @frapac\n- Reference: https://github.com/exanauts/Argos.jl/commit/0088e95dbe1bc5411c36e01659591f7fd9d8419c#r82387301\n- Description: Reduced-space optimization, for optimal power flow.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69b76050490418c0b558e3186d218b805d48840ccaeffde69c3267a5682ce0c10b29afc9d10fafae329a50257de57edaf06a074bd2e61cf01cb96b20d72f70a4a42acf1d6936fb1ae8ac2b7766a5a566e377f89fb3d9ff1f0692934d5341d2da8a13abf761887958b3dda1168cfc9d98b0ce2723781555c0a73f75293f44897383d0d34a3d28f92a51e6cfb3b65780935e46e084b968c4eced93c072262232d7e60477aaa08bf4c0efe3a59e4ad9574ac -->",
+  "package_name": "Argos",
+  "title": "New package: Argos v0.2.1"
+}

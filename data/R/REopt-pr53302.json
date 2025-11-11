@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-01-27T17:29:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-01-30T17:58:00Z",
+  "pr_number": 53302,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849AQVI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to NLopt. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.37 is at or below cutoff of 2.50.\n  2. Similar to Ipopt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-27T17:36:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53302#issuecomment-1023477064",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849AVrY",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "Auto merge failed because:\r\n```Package name similar to 2 existing packages.\\n  1. Similar to NLopt. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.37 is at or below cutoff of 2.50.\\n  2. Similar to Ipopt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\"```\r\nI don't see why we can't have a new package called `REopt`? (Plus this name has been registered for many years as part of a patent).",
+      "createdAt": "2022-01-27T18:02:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53302#issuecomment-1023498968",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849F0KC",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would like this PR manually merged because the only auto-failing component is two similar names.",
+      "createdAt": "2022-01-29T15:42:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53302#issuecomment-1024934530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849HYlr",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano!",
+      "createdAt": "2022-01-31T03:30:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53302#issuecomment-1025345899",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: REopt\n- Repository: https://github.com/NREL/REopt.jl\n- Created by: @NLaws\n- Version: v0.12.3\n- Commit: c66ec77784cd2cc12aa856c8823ed9294a5e7547\n- Reviewed by: @NLaws\n- Reference: https://github.com/NREL/REopt.jl/commit/c66ec77784cd2cc12aa856c8823ed9294a5e7547#commitcomment-64746636\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f13013cf1cc954de4e71a6e314ed8aac23543530b102475dad4dbef0cdd77c4f2ac431540b40958d72aa440a659250839eaafe66e0723bc2c1877c62ae8b7e8e1c60dc0865c3a473a58585e26217e374c5d79a099d763a1c7daeaa325632c1c83980ac00266899b5c9ca8812e865c14bd6b7f3dae16db5baee3ba0389907b5ab1d5433cd97cd45c7d3bdaef3e0c5e0aec70b09cc570f8fc11311f3d62d1f00b2 -->",
+  "package_name": "REopt",
+  "title": "New package: REopt v0.12.3"
+}

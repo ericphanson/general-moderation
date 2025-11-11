@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-01-02T13:50:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-01-05T21:05:46Z",
+  "pr_number": 51544,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84704w6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to AbstractFFTs. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-02T13:53:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51544#issuecomment-1003719738",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84705AH",
+      "author": {
+        "login": "tknopp"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] The naming distance is unavoidable. AbstractNFFTs is a sister package to AbstractFFTs but it targets the non equidistant FFT, which AbstractFFTs will not capture. The package AbstractNFFTs will allow NFFT.jl and NFFT3.jl to use a common interface. ",
+      "createdAt": "2022-01-02T14:00:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51544#issuecomment-1003720711",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: AbstractNFFTs\n- Repository: https://github.com/tknopp/NFFT.jl\n- Created by: @tknopp\n- Version: v0.1.0\n- Commit: e07b474d87e73187d61281b86e967355ae8a4848\n- Reviewed by: @tknopp\n- Reference: https://github.com/tknopp/NFFT.jl/commit/e07b474d87e73187d61281b86e967355ae8a4848#commitcomment-62792323\n- Description: Julia implementation of the Non-equidistant Fast Fourier Transform (NFFT)\n<!-- 066ce589f7ec84d2a1c02c92bed9abaf3aeadfa1233542c8c374215ed871ecc61aac7c65a2fd153c2f73445cd87730c3fda203df23550d00f1e3a4ce4062d600392165955801ce831c432ee9c944a9c7fe69e39775546d48629e69fbf536e45741f63437744cfe084cb122ceba779df7f4564f53b94ca07fb58dd3570bd23f630b9332c2fd7dda56ad5a9155294abb4d2c07164311ae113af84b6c0b83d48408c02e298f72a0dd03588327bb0e575b1167cd64b40836c82aa895738162d9a0d0d04c6e80b86647a7d7581786518d1f32f7f1856cb35415a0bab54b4fe1287d89 -->",
+  "package_name": "AbstractNFFTs",
+  "title": "New package: AbstractNFFTs v0.1.0"
+}

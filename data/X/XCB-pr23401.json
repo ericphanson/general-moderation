@@ -1,0 +1,119 @@
+{
+  "created_at": "2020-10-21T18:36:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-11-15T17:50:42Z",
+  "pr_number": 23401,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMzc5MTg5OQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 11 existing packages.\n<details>\n<summary>Similar package names</summary>\n\n1. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.15 is at or below cutoff of 2.50.\n2. Similar to XDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.44 is at or below cutoff of 2.50.\n3. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to XPA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n5. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n6. Similar to GCP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n7. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n8. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n9. Similar to FIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n10. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n11. Similar to XKCD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n</details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-10-21T18:40:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-713791899",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzIxMTYzNw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@serenity4 @SimonDanisch :point_up: ",
+      "createdAt": "2020-11-14T14:03:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727211637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzIxODY2Nw==",
+      "author": {
+        "login": "serenity4"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We'd like to keep the name XCB.jl if possible, since it wraps the library of the same name. The compat entries were also updated.",
+      "createdAt": "2020-11-14T14:55:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727218667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzIxOTAwMQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The compat entries were also updated.\r\n\r\nAutomerge doesn't think so and [this file](https://github.com/JuliaRegistries/General/blob/0fa5d146ebc1b57e1a1db09de766aa0c3a5938f3/X/XCB/Compat.toml) doesn't have any entry for `CEnum`.  You need to retrigger registration (without changing the version number) so that this pull request is updated",
+      "createdAt": "2020-11-14T14:57:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727219001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzYwNjYyMA==",
+      "author": {
+        "login": "serenity4"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Oh, my bad, I indeed need to retrigger registration. I can't manage to do it though. I tried [here](https://github.com/JuliaGL/XCB.jl/issues/7) (last comment) and [there](https://github.com/JuliaGL/XCB.jl/issues/10), without success.\r\n\r\nThe instructions from the [README](https://github.com/JuliaRegistries/General/blob/master/README.md) say\r\n> How do I retrigger Registrator in order to update my pull request?\r\n> \r\n> Do what you did when you triggered Registrator the first time.\r\n\r\nand this is what I did, am I doing something wrong?",
+      "createdAt": "2020-11-15T17:32:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727606620",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzYwNzY1OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "JuliaRegistrator has been down yesterday and until a couple of hours ago.  Try again",
+      "createdAt": "2020-11-15T17:39:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727607658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcyNzYwODAzMw==",
+      "author": {
+        "login": "serenity4"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Great, it worked! Thanks.",
+      "createdAt": "2020-11-15T17:42:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23401#issuecomment-727608033",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: XCB\n- Repository: https://github.com/JuliaGL/XCB.jl\n- Created by: @serenity4\n- Version: v0.2.0\n- Commit: 0d73da7af702f96a4c60a4d69ab25e68918de3e2\n- Reviewed by: @serenity4\n- Reference: https://github.com/JuliaGL/XCB.jl/issues/10#issuecomment-727607872\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598df65df9886380caf4032bfe2d768bdbfc22d0f5dbdfb80a1c7cb8bc80ae5e0d6dfade13cb14b3a7e70b332d788c626171d62b06328dc801f692943b8a7133825c114f558d966699deb5f54f5c00bcba81e597fcdb061b3004aeba8fda16fb077579e3333b9b2f50c6bb2ffebb818ded8 -->",
+  "package_name": "XCB",
+  "title": "New package: XCB v0.2.0"
+}

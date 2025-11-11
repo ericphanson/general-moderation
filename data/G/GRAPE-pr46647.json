@@ -1,0 +1,119 @@
+{
+  "created_at": "2021-10-13T03:34:38Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-10-16T19:21:44Z",
+  "pr_number": 46647,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844JBIh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to GAP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-13T03:39:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-941888033",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844JB6K",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "GRAPE is the most widely used algorithm in quantum control theory and is generally referenced by its acronym in all-caps, see e.g. https://qutip.org/docs/4.0.2/guide/guide-control.html#the-grape-algorithm or https://aip.scitation.org/doi/10.1063/1.4949534\r\n\r\nPeople would expect this package to be named GRAPE, and (especially as an acronym!) it should be highly distinctive. There's clearly no possibility to confuse it with \"GAP\". Hence, I'd like to keep the name as-is.",
+      "createdAt": "2021-10-13T03:48:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-941891210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844K7-M",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Agreed there's no confusion with GAP, but our naming guidelines specifically say to avoid acronyms, especially in the context of technical jargon: https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines-1",
+      "createdAt": "2021-10-13T14:57:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-942391180",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q844K-M3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package would have gone through automatically if I had named it `Grape` instead of the standard spelling `GRAPE` that people would expect. It's a *very* established acronym in the quantum control community (the algorithm has been around for nearly 20 years now). To be honest, while I appreciate the Julia community pushing for good package names, I'm rather ambivalent about overly policing naming decisions, and in particular, I don't see a problem with good, pronounceable acronyms. If `Grape` is an acceptable package name, so should `GRAPE`.",
+      "createdAt": "2021-10-13T15:07:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-942400311",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844LGH_",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> If Grape is an acceptable package name, so should GRAPE.\r\n\r\nWell, if it's an as acronym, it's still against the guidelines, it would just manage to slip past the automated check.\r\n\r\n> It's a very established acronym in the quantum control community (the algorithm has been around for nearly 20 years now)\r\n\r\nThat may be, but it's not a very established acronym in the Julia community overall. I did my PhD in quantum information theory, which is at least somewhat adjacent, and had never heard of it.\r\n\r\n> To be honest, while I appreciate the Julia community pushing for good package names, I'm rather ambivalent about overly policing naming decisions, and in particular, I don't see a problem with good, pronounceable acronyms.\r\n\r\nYeah, I'm also ambivalent 😄. I also don't like policing but I also think good names can encourage more important things like making packages more accessible beyond their subfield.\r\n\r\nBut they are just guidelines, not hard rules. Either way, the package needs to wait 3 days (exactly so that the community has time to comment!), so there's still time to discuss and comment 🙂.",
+      "createdAt": "2021-10-13T15:41:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-942432767",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q844LHZY",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks!\r\n\r\nCould you tag it with \"needs to be manually merged in 3 days\"?",
+      "createdAt": "2021-10-13T15:46:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-942437976",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844LKo3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I should also note that this package is basically a sub-package of [QuantumControl.jl](https://github.com/JuliaQuantumControl/QuantumControl.jl), and people will primarily interact with it via that package (akin to a `Plots.jl` backend). This might alleviate somewhat the \"accessibility\" problem.",
+      "createdAt": "2021-10-13T16:00:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46647#issuecomment-942451255",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: GRAPE\n- Repository: https://github.com/JuliaQuantumControl/GRAPE.jl\n- Created by: @goerz\n- Version: v0.0.1\n- Commit: e9e10b088822a0379329d1eddba4a1cfe589ee87\n- Reviewed by: @goerz\n- Reference: https://github.com/JuliaQuantumControl/GRAPE.jl/commit/e9e10b088822a0379329d1eddba4a1cfe589ee87#commitcomment-57911782\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6869e6f488e9fb4ab3030cd4f08a8fef8f16c23d257f2c18e560f05aab7bdfa0019ad433a5788eb83e7e2b73a36d9e6b4d1280608af5cbafa851d5fe137a1abfcdae08e4b9aece53cadb98ca1e2efcfc3433eec7103533c58d3860687ecee50b3c96a945f8aceded67722d25cff47052367a75601c001913605e97a3532e4bcbcec4fe018071001affef064c0ef87ff0667263cbcc3772e973aa738663eb5b8a4b68992c40cf99da2c865ca81d3214dae -->",
+  "package_name": "GRAPE",
+  "title": "New package: GRAPE v0.0.1"
+}

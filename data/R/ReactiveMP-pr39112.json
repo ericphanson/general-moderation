@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-06-18T08:19:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-21T11:05:27Z",
+  "pr_number": 39112,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2Mzg1NzEzOA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Reactive. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-18T08:23:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39112#issuecomment-863857138",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2Mzg2OTgzMw==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We would like to use the current name `ReactiveMP.jl`, which means _reactive message passing_. MP or VMP are conventional abbreviations for (variational) message passing algorithms. `ReactiveMessagePassing.jl` seems to be an unnecessary long package name for me. \r\n\r\nThe presentation on the upcoming JuliaCon2021 is also scheduled to be with `ReactiveMP.jl` name.",
+      "createdAt": "2021-06-18T08:43:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39112#issuecomment-863869833",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: ReactiveMP\n- Repository: https://github.com/biaslab/ReactiveMP.jl\n- Created by: @bvdmitri\n- Version: v1.0.0\n- Commit: 9e624c86277c09a7bc303387e630a25acb69ebf1\n- Reviewed by: @bvdmitri\n- Reference: https://github.com/biaslab/ReactiveMP.jl/commit/9e624c86277c09a7bc303387e630a25acb69ebf1#commitcomment-52339689\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64b957f8436d6ceea822f970e9c3a4a424b71d29c2ad3b3cbab0f787800823aa42e2f52742715b2b92528f571d51e902f93de4b0c12b6ce2e723c4dad9bda4fb4bf346dcd15754d20e00e4a469bd8fe2981d7b5f567b479f22afd1e86583390b3929817686c75978fabb3b3e160be88177f14dbd85d7317f04840bb3cd38dd23671689247e19cea668d3a2ab027ce0fc9d76e38d8eda2339d5fbb7d81708b1524a48d24c657e4561ba9923187285130ec -->",
+  "package_name": "ReactiveMP",
+  "title": "New package: ReactiveMP v1.0.0"
+}

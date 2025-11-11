@@ -1,0 +1,59 @@
+{
+  "created_at": "2023-11-09T02:57:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-11-13T16:43:01Z",
+  "pr_number": 95025,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85rePgI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 7 existing packages.\n  1. Similar to Sqids. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.39 is at or below cutoff of 2.50.\n  2. Similar to Folds. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.55 is at or below cutoff of 2.50.\n  3. Similar to Coils. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Books. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Bits. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Mods. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Gaius. Normalized visual distance 2.28 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-09T03:02:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95025#issuecomment-1803089928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85reUXD",
+      "author": {
+        "login": "jeanfdp"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nIs the name an issue? Not sure what would be better. I am however very happy to change it to good suggestions if needed.\r\n\r\nName originally suggested when I was registering a much less flexible implementation:\r\nhttps://github.com/JuliaRegistries/General/pull/93973#issuecomment-1789711413",
+      "createdAt": "2023-11-09T03:33:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95025#issuecomment-1803109827",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85rlxZb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I think the name is fine. The “name similarity” is a false positive (it usually is). This just needs a manual merge. Wait three days, and then ping the Slack channel again.",
+      "createdAt": "2023-11-10T04:21:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95025#issuecomment-1805063771",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Boids\n- Repository: https://github.com/jeanfdp/Boids.jl\n- Created by: @jeanfdp\n- Version: v1.0.0\n- Commit: bad0299c05593a7e748483475c9aec268932eaed\n- Git reference: HEAD\n- Description: This is a Julia package for implementing boid flocking simulations",
+  "package_name": "Boids",
+  "title": "New package: Boids v1.0.0"
+}

@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-06-03T12:10:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-07T02:22:50Z",
+  "pr_number": 38075,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MzgyMjU0Mg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 5 existing packages.\n  1. Similar to Redis. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.40 is at or below cutoff of 2.50.\n  2. Similar to Javis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Media. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Metis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Jets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-03T12:13:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38075#issuecomment-853822542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MzgyNzkxNQ==",
+      "author": {
+        "login": "captchanjack"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHi Julia General Registry team!\r\n\r\nI would like to address the above two points preventing auto-merging of this package:\r\n- I did not include a compat because there is only one dependancy on a Julia Base module `Sockets`\r\n- I named the package with inspiration from redis clients developed in other languages, in particular [`Jedis`](https://github.com/redis/jedis), a popular Java redis client, I was hoping to fuse the notion of a `redis` client developed in Julia, hence `Jedis.jl`\r\n- I am aware of the existing Redis.jl client, however I believe my package differentiates mainly on atomic locks applied to the client socket and pub/sub interface\r\n\r\nHoping to discuss this with you further, and reach a common solution to get this package merged!\r\n\r\nMany thanks,\r\nJack",
+      "createdAt": "2021-06-03T12:23:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38075#issuecomment-853827915",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NDQ5MTkwOQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We don't make exceptions on having compat bounds with julia, also because that'd block registration of all future versions of the package, which will always cause delays \r\n\r\n[noblock]",
+      "createdAt": "2021-06-04T08:48:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38075#issuecomment-854491909",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NDUzNzk5OQ==",
+      "author": {
+        "login": "captchanjack"
+      },
+      "authorAssociation": "NONE",
+      "body": "[no block]\r\n\r\nThanks for your feedback @giordano \r\n\r\nI have updated the compat as per your suggestion!\r\n\r\nIn regards to the naming of the package, what would be the resolution for that?\r\n\r\n\r\nThanks\r\n\r\nJack",
+      "createdAt": "2021-06-04T09:43:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38075#issuecomment-854537999",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Jedis\n- Repository: https://github.com/captchanjack/Jedis.jl\n- Created by: @captchanjack\n- Version: v0.1.0\n- Commit: c0f4fa8503456da6af4122b9ea5de5c42adc1716\n- Reviewed by: @captchanjack\n- Reference: https://github.com/captchanjack/Jedis.jl/commit/c0f4fa8503456da6af4122b9ea5de5c42adc1716#commitcomment-51717452\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66d6625538afcba3f1a774f94694dcfd65093531a4f258fa3df0c04e2fab5e7f4139fcc08fddd86c4b626edaa8bc43745108658f4c149b2cd447f59f9eda009dab5d9a3714feb958bd95013c0d3553cbaa6860170a6585a634700d6fd5d66717c8c71f4f5a50d9d5b2701dc9a5a4fa19c4950b4b1b8459d2ba4931ade17ac4b6739e2d5d53f0cdb77f39876569cb2b863d0ccbea6e92c3b5bf44d8b38999490d6cec9b3da12a7acf9c9b630cc78f87402 -->",
+  "package_name": "Jedis",
+  "title": "New package: Jedis v0.1.0"
+}

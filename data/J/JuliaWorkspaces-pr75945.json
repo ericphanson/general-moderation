@@ -1,0 +1,89 @@
+{
+  "created_at": "2023-01-19T00:53:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-01-19T01:01:14Z",
+  "pr_number": 75945,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85TOehO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name juliaworkspaces contains the string \"julia\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-19T00:57:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75945#issuecomment-1396303950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85TOfr8",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Whats the reason for instant merge, skipping the usual 3 day wait?\r\n\r\nWouldn't something like `LanguageServerWorkspaces` be a better name?",
+      "createdAt": "2023-01-19T01:04:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75945#issuecomment-1396308732",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85TOglu",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I have a small-time window to push something forward, and I can't without it being blocked. And my understanding is that it would be merged in any case, right?\r\n\r\nThe idea of this package is to move a lot of the functionality from LS out, so that it is available for non-LS use-cases. So, I don't think having the `LanguageServer` name in it would be good, as the point of the package is kind of to move some of the analysis parts away from that. At the moment this is for the test item stuff.",
+      "createdAt": "2023-01-19T01:09:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75945#issuecomment-1396312430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85TPng0",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I have a small-time window to push something forward, and I can't without it being blocked.\r\n\r\nThe package manager works perfectly fine without registering though.\r\n\r\n> And my understanding is that it would be merged in any case, right?\r\n\r\nSure, but IMO it looks bad that maintainers merge early, in particular their own packages, and then we make everyone wait 3 days.",
+      "createdAt": "2023-01-19T08:24:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75945#issuecomment-1396602932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85TYxY6",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The package manager works perfectly fine without registering though.\r\n\r\nThe problem is that I need to run CI for downstream packages, and that gets really cumbersome if the package is not registered.\r\n\r\n> IMO it looks bad that maintainers merge early\r\n\r\nI hear you, I won't do it again.",
+      "createdAt": "2023-01-20T22:00:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75945#issuecomment-1399002682",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "davidanthoff",
+  "body": "- Registering package: JuliaWorkspaces\n- Repository: https://github.com/julia-vscode/JuliaWorkspaces.jl\n- Created by: @davidanthoff\n- Version: v1.0.0\n- Commit: c95a0b6d0f249f1f63c2169942b5c584dbf1bf68\n- Reviewed by: @davidanthoff\n- Reference: https://github.com/julia-vscode/JuliaWorkspaces.jl/commit/c95a0b6d0f249f1f63c2169942b5c584dbf1bf68#commitcomment-97293856\n- Description: Underlying engine for LanguageServer.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cc40e343706561ce056806a4995c34290c8469ed1a15a7ccf6f116172af4200d52f453ec4bedd1b07a671eb4b96bdc408363b0faf2f203660d6d8669133b4c237ce144234bf298b4e60b3683a17c4f2aba7ec7cae22f7ef56a9d030f07d1364bb8eb9a7c2e8b54c187f0f9c132518ccf1f529db810264b7bf24880a479632ae3edf4419064a26767a0efcc3feb2b82354be6b97e870856534dda8b4bf3f89f3ed83a3e7f6dac7d196bf0f375d6347203 -->",
+  "package_name": "JuliaWorkspaces",
+  "title": "New package: JuliaWorkspaces v1.0.0"
+}

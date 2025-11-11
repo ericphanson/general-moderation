@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-08-28T12:47:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-09-01T08:56:21Z",
+  "pr_number": 90383,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85lEZLH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 4 existing packages.\n  1. Similar to GeoIP. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.45 is at or below cutoff of 2.50.\n  2. Similar to WebIO. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.33 is at or below cutoff of 2.50.\n  3. Similar to HexIO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to GeNIOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-28T12:54:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90383#issuecomment-1695650503",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lEZqf",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We would like to keep the proposed name given that it is short and clear for the purposes of the package. It follows the naming convention of similar IO packages in Julia we submitted in the past.",
+      "createdAt": "2023-08-28T12:56:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90383#issuecomment-1695652511",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: GeoIO\n- Repository: https://github.com/JuliaEarth/GeoIO.jl\n- Created by: @juliohm\n- Version: v1.0.0\n- Commit: 5602a4f7888bc1c3cc9aeb5db417444c736abb5e\n- Reviewed by: @juliohm\n- Reference: https://github.com/JuliaEarth/GeoIO.jl/commit/5602a4f7888bc1c3cc9aeb5db417444c736abb5e#commitcomment-125710471\n- Description: Load/save geospatial data compatible with the GeoStats.jl framework\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a623c4ada85486c5aea0104dc2683127a6132d004079be53dc12f27ba3cfa73af035de8c847de08b0536bccb3fff8743b99081fba81dadd1b05eac2db789f8fc0a2fd5243bb0a053471fdd7248ddc93d28ccb532b9debf94fa912b8e01332681ad59a134ac309f7b78201f278175e720e7cdc4b3d48a655ba9f6520990acb18c5d3c6adb2f2e83125b67b4849689b3bf1a84b7fffebb2776c5ee041769c04916a901175193e2a1880542b1bdec1bb1f2 -->",
+  "package_name": "GeoIO",
+  "title": "New package: GeoIO v1.0.0"
+}

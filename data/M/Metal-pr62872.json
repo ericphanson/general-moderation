@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-06-22T13:39:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-06-24T08:10:04Z",
+  "pr_number": 62872,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85FU72T",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"Metal\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import Metal` failed). See the CI logs for details.\n- Package name similar to 3 existing packages.\n  1. Similar to Metis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Mera. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MeCab. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-22T13:43:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62872#issuecomment-1163115923",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FVEWN",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Package name similar to 3 existing packages.\r\n> \r\n>     1. Similar to Metis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> \r\n>     2. Similar to Mera. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> \r\n>     3. Similar to MeCab. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nNone seen relevant here.\r\n\r\n> * I was not able to install the package (i.e. `Pkg.add(\"Metal\")` failed). See the CI logs for details.\r\n> \r\n> * I was not able to load the package (i.e. `import Metal` failed). See the CI logs for details.\r\n\r\nMetal.jl requires Julia 1.8, while AutoMerge uses 1.7, so that isn't going to work.\r\n\r\nI'll wait a couple of days and merge this manually.",
+      "createdAt": "2022-06-22T14:09:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62872#issuecomment-1163150733",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FVEy9",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps make it 0.1.0? Otherwise it will be impossible to make patch releases.",
+      "createdAt": "2022-06-22T14:10:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62872#issuecomment-1163152573",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FVXPp",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Perhaps make it 0.1.0? Otherwise it will be impossible to make patch releases.\r\n\r\nThat's a good point. I wanted to make an initial release ASAP to 'reserve' the name (and pass the 3 day waiting period), and am going to release 0.1 as soon as I publish a blog post announcing the package, if that makes sense.",
+      "createdAt": "2022-06-22T15:05:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62872#issuecomment-1163228137",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "maleadt",
+  "body": "- Registering package: Metal\n- Repository: https://github.com/JuliaGPU/Metal.jl\n- Created by: @maleadt\n- Version: v0.0.1\n- Commit: 1f21291652be2acec9087359e7de31000aceb898\n- Reviewed by: @maleadt\n- Reference: https://github.com/JuliaGPU/Metal.jl/commit/1f21291652be2acec9087359e7de31000aceb898#commitcomment-76714188\n- Description: Metal programming in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62064c2e918e4833fe9a09d2227570856550fa568ec22f8c05f019efbe644c7bd80523f5b4c5cf723e518b98ca541f9e9400b2285e6d1ae48f062bac943ae2614afef0a7d1f343b9186ac395d82a1f4ba93a482d1cbf958f9d58bae00b57995cf61532b25ca7e9d6c388867937f8b44dfa5c99616f9a53219aec6dcf48b6433a6104eb3eb52c4fa6f49f3f9060b60d6cdef78d49b7a09300fa05f01f18313a8d6f652906b35139673a9057b06a98c04d3 -->",
+  "package_name": "Metal",
+  "title": "New package: Metal v0.0.1"
+}

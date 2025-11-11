@@ -1,0 +1,306 @@
+{
+  "created_at": "2020-12-08T03:19:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-01-04T16:57:08Z",
+  "pr_number": 26026,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0MDM1MDQ2OQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n1. Similar to NonlinearSolve. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-12-08T03:27:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-740350469",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0MDcwNzA4Ng==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Unfortunately, NonlinearSolve.jl is [not GPU friendly with ForwardDiff](https://github.com/JuliaComputing/NonlinearSolve.jl/issues/19). So, I would like to continue with registering NonlinearSolvers.jl",
+      "createdAt": "2020-12-08T15:55:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-740707086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDUyODY1MQ==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is it not possible to add the desired GPU support to the existing package? ",
+      "createdAt": "2020-12-14T15:47:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744528651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDUzNTIyOQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Admittedly, I didn't spend too much time trying. I'm sure it's possible, but I've not allocated much time for the task that requires this functionality. Also, NonlinearSolve.jl does not appear to tested on GPUs, and may easily lose GPU support without having GPU tests.",
+      "createdAt": "2020-12-14T15:58:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744535229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDUzNjQxMA==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I could allocate some time to try to fix the support but, unless someone can help configure GPU CI, I'd rather not get stuck in a version deadlock vs GPU support.",
+      "createdAt": "2020-12-14T15:59:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744536410",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDU1NDI0MA==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@maleadt can help with CI, or me if he's busy.",
+      "createdAt": "2020-12-14T16:27:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744554240",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDU2MDIyOQ==",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure, I can have a look. What exactly is the problem wrt. CI?",
+      "createdAt": "2020-12-14T16:36:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744560229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDU2MDUxOQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "GPU CI is non-existent, AFAICT",
+      "createdAt": "2020-12-14T16:37:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744560519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDU2ODAyOA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's a bit unfortunate to have two packages with such similar goals, but sometimes it's unavoidable. It would be great if you can try, in the future, to converge these somehow, but in the meantime, I think the names NonlinearSolve and NonlinearSolvers are sufficiently different to both be registered.",
+      "createdAt": "2020-12-14T16:49:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744568028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDU5OTUyNg==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I completely agree.\r\n\r\nI can try and help to fix GPU support for NonlinearSolve.jl in the long run. I'm definitely keen to help out more in the ecosystem.",
+      "createdAt": "2020-12-14T17:41:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744599526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDYzNTQ2OQ==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just seems unfortunate that if/when that happens, this package will probably be deprecated/abandoned and still super easy to accidentally install.",
+      "createdAt": "2020-12-14T18:45:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744635469",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDYzOTQ0Mg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We can continue work with whichever of the two packages we like the name of better (personally I like this one).",
+      "createdAt": "2020-12-14T18:53:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-744639442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NTUwNjIzOQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I went to dig into NonlinearSolve.jl's issue but, I realized that there's also a separate issue related to the interface. NonlinearSolve.jl uses [keyword arguments](https://github.com/JuliaComputing/NonlinearSolve.jl/blob/master/src/solve.jl#L38-L39) for some important parameters we'll need access to. Unfortunately, we've observed elusive [performance issues with kwargs inside GPU kernels](https://github.com/JuliaGPU/KernelAbstractions.jl/issues/114). Personally, I'd really like to fix this issue because it may really help clean up some of our interfaces, but I've been unsuccessful in writing an MWE that captures the problem.",
+      "createdAt": "2020-12-15T19:14:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-745506239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0ODYwMTI3OQ==",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">but in the meantime, I think the names NonlinearSolve and NonlinearSolvers are sufficiently different to both be registered.\r\n\r\nI think it would be good for the NLSolvers org to have domain over the NonlinearSolvers name. We made sure to make it a two variation difference. NonlinearSolvers is a one variation difference from two entities, one of which is hosts some of the most used Julia packages (NLsolve.jl, Optim.jl), and the other of which is already a dependency of some of the most used Julia packages (through DiffEqBase.jl). It is essentially the one variation of the naming that wasn't hit, but that makes me a bit weary about it...\r\n\r\n>Also, NonlinearSolve.jl does not appear to tested on GPUs, and may easily lose GPU support without having GPU tests.\r\n\r\nI think it's clear from the history of SciML that there is not only an intention to add GPU CI and GPU support here, but to heavily support the GPU CI for this project as a good chunk of the CI bots are hosted by us and we plan to add even more. \r\n\r\nThe first goal here was to essentially deprecate Roots.jl because it's hilariously bad: it's made for scalar rootfinding but it allocates on every function call because it's type-unstable and uses dictionaries everywhere. It's more than 6x faster and non-allocating there. Next, for the NeuralSim project, was to make its static array Newton as non-allocating as fast as possible. Now we're building up to the next phase the moment we hit a problem where nonlinear tearing isn't able to reduce the size of the system enough. The issue is that we're using methods that are pretty optimized, so we transform 8,000 equation systems into scalar or 2-dimensional rootfinding problems to solve large stiff ODE systems fast, so with these methods it's going to take a bit before we get to a real system that generates even a 20-term nonlinearity. But we're building up, and we'd like to work with anyone who wants to build a full alternative to NLsolve that is fully pre-cached and GPU compatible. (Of course, both NonlinearSolve.jl and NonlinearSolvers.jl would be inefficient to use within an ODE solver so that's a whole different ballgame, so this is about reduced forms).\r\n\r\n>NonlinearSolve.jl uses keyword arguments for some important parameters we'll need access to. Unfortunately, we've observed elusive performance issues with kwargs inside GPU kernels.\r\n\r\nClosures and dropping down one step won't fix the problem? There's other ways to do this that we can discuss.\r\n\r\nAnyways, I'm happy to work with anyone here. Getting this to be GPU compatible is probably a few steps away.\r\n\r\nAlso BTW, this isn't going to be your main issue getting these tools into kernels. The main GPU issue you'll have is https://github.com/CliMA/NonlinearSolvers.jl/blob/master/src/newton_method_ad.jl#L56-L57 trying to have a dynamically-sized history vector that you push into won't work on a kernel, so you'd want to change how the history is handled by making it on the caller side. You can do that by using an iterator interface instead, so that the user can inject code between iterations. NonlinearSolve.jl happens to have an iterator interface, and that's indeed otherwise it wouldn't compose well with https://github.com/SciML/DiffEqGPU.jl where it's used in the event handling interface.",
+      "createdAt": "2020-12-20T12:26:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-748601279",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0ODYzODU4OA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "👍🏻. In any case, it seems like we should go ahead with this as a separate package for now? You still want this merged, @charleskawczynski?",
+      "createdAt": "2020-12-20T17:48:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-748638588",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0ODY2NjQwMQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I think it would be good for the NLSolvers org to have domain over the NonlinearSolvers name\r\n\r\nI think this makes sense in the long run.\r\n\r\n> The first goal here was to essentially deprecate Roots.jl...\r\n\r\nMakes sense. We originally tried using Roots.jl but, IIRC, we ran into issues and ended up writing [RootSolvers.jl](https://github.com/CliMA/RootSolvers.jl), which is just the scalar-counterpart to NonlinearSolvers.jl.\r\n\r\n> Closures and dropping down one step won't fix the problem? There's other ways to do this that we can discuss. Anyways, I'm happy to work with anyone here. Getting this to be GPU compatible is probably a few steps away.\r\n\r\nI'm not sure if it will fix the problem. I agree that there may be other ways, but it might be awkward / result in duplicate code. I think the right/clean thing to do is make a reproducer of the observed problem, fix the issue, and then use a kwarg interface but I'd need help with this. For the short term, I would prefer to avoid the uncertainty of this timeline.\r\n\r\n> The main GPU issue you'll have is ...\r\n\r\nThat function is only for CPU debugging and has [do nothing behavior](https://github.com/CliMA/NonlinearSolvers.jl/blob/master/src/solution_types.jl#L76-L82) for `CompactSolution`, which is what we'll use for GPU runs.\r\n\r\n> You can do that by using an iterator interface instead, so that the user can inject code between iterations.\r\n\r\nWe thought about this and didn't add it for no particular reason-- I think this would be a nice improvement over what we currently have.\r\n\r\n> You still want this merged, @charleskawczynski?\r\n\r\nUltimately, yes. Would it make sense to register under the NLSolvers org to start with? or transfer later? I think I'd need admin privileges to add/register under the NLSolvers org.",
+      "createdAt": "2020-12-20T20:25:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-748666401",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0OTU4NTY0NA==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Actually, that would require reconfiguring the CI infrastructure. I prefer to just merge this.",
+      "createdAt": "2020-12-22T15:04:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-749585644",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1MTg5MzcwOQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Do you want to tag a newer commit as 0.1.0 or merge this as is?",
+      "createdAt": "2020-12-28T23:20:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-751893709",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1MjY1NjM2Mw==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm fine with merging this as is--we haven't added any newer commits.",
+      "createdAt": "2020-12-30T15:13:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26026#issuecomment-752656363",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: NonlinearSolvers\n- Repository: https://github.com/CliMA/NonlinearSolvers.jl\n- Created by: @charleskawczynski\n- Version: v0.1.0\n- Commit: af3227973b0677371fd409c28463d2c1b84c697d\n- Reviewed by: @charleskawczynski\n- Reference: https://github.com/CliMA/NonlinearSolvers.jl/commit/af3227973b0677371fd409c28463d2c1b84c697d#commitcomment-44903533\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e33f1179d73a4cd3ea20815053acc8a6fb25a4a655af7711caff9ceb9e1f820d572bd04d2bf40825a82b1607d69d5d3e831a30b93e499fe3b791c5f487cb8344e5b875ce508930921887eff791ce645743693ac8fe12efb363e7ca0335182091752f096893524a69e72c9f3b8ef0ccf093d5cf50a8e1e6ccd6cd0c351c9aceffd172cfa46cd122419f0d5642496df7e84bcf29a4ab3ad7676c42841c86a49717504315a3c02d1458a7b0c14002d2066c -->",
+  "package_name": "NonlinearSolvers",
+  "title": "New package: NonlinearSolvers v0.1.0"
+}

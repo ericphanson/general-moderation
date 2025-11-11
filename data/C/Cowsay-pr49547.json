@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-11-29T14:09:22Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-12-04T00:58:55Z",
+  "pr_number": 49547,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846gyFf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Catsay. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Dogsay. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-29T14:13:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49547#issuecomment-981672287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846g2-H",
+      "author": {
+        "login": "MillironX"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't think that the package name similarity is actually a problem. It's pretty clear (for English speakers, anyway) what the difference is between `{cow,cat,dog}say`. Besides, [cowsay](https://en.wikipedia.org/wiki/Cowsay) is the original anyway.\r\n\r\n[noblock]",
+      "createdAt": "2021-11-29T14:35:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49547#issuecomment-981692295",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Cowsay\n- Repository: https://github.com/MillironX/Cowsay.jl\n- Created by: @MillironX\n- Version: v0.2.0\n- Commit: dd7518654720dc9efedd7a4e2feb9f879b4411c7\n- Reviewed by: @MillironX\n- Reference: https://github.com/MillironX/Cowsay.jl/commit/dd7518654720dc9efedd7a4e2feb9f879b4411c7#commitcomment-61044291\n- Description: :cow2: cowsay for Julia!\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e7d05da7a675490e1a92a65a77fc8244ad69768810332b769a8e9621ee01962675f367113f961d76ebb13c512949e77ec3f57d3e1890904cf55223ada5ed5ff2a7d9d6a0a91ac76f4b6da3bd814fb37a8eb6304184c8da0a8db557ae34b881206c1222b2fe9023d76e91d80a419b3a0e5cd7e6c3ed84c9c22c3761104c4b06debc45418b3527c2b360ba77c4b81ca23ef89fa9ef97923a2da2fe74fca35a8cbfd4cd13029ee5cb0c3cf074f3b28a11b4 -->",
+  "package_name": "Cowsay",
+  "title": "New package: Cowsay v0.2.0"
+}

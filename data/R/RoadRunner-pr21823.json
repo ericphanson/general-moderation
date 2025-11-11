@@ -1,0 +1,164 @@
+{
+  "created_at": "2020-09-23T00:40:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-09-26T11:56:18Z",
+  "pr_number": 21823,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NzA1NTUzMQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-09-23T00:43:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-697055531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODU3OTYxMQ==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello,\r\n1) I have updated the compat entry of Documenter and deleted Plots\r\n2) I am able to import RoadRunner and can add the package from this git website. Please see the attached picture.\r\n<img width=\"804\" alt=\"import_and_add\" src=\"https://user-images.githubusercontent.com/3339893/94198474-2e019480-fe6c-11ea-9ebd-1f7bc4e25f19.png\">\r\n\r\nI am afraid the AutoMerge does not go through because this package is only applicable to windows 64 due to the Dynamic-link library files (libantimony.dll and roadrunner_c_api.dll under /src), which is necessary.\r\nHope to have your approval soon. Thanks in advance.\r\nJin\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "createdAt": "2020-09-24T20:46:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-698579611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODU4NTMwOQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, you should probably look into using BinaryBuilder instead of including the binaries in the source repo like that.",
+      "createdAt": "2020-09-24T20:59:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-698585309",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODU4ODAyNQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, did you intend to register a fork of a fork?",
+      "createdAt": "2020-09-24T21:05:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-698588025",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODU4OTU0Mw==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you. I will look into the BinaryBuilder. Yes, it is a folk of a folk. I can not add an issue from my github, but can only add one from an organization. The original person who started this project is not working on it anymore.\r\n",
+      "createdAt": "2020-09-24T21:08:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-698589543",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5OTE3MjcxNg==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello, \r\nThe compat entries are updated again. \r\nI have difficulties to build our specific software (https://github.com/sys-bio/roadrunner/wiki/Building-from-Source) by BinaryBuilder. Do you have other suggessions? Is it ok to just use the dll files in the folder /src? Please see my previous comments for details, if necessary. Thanks in advance.",
+      "createdAt": "2020-09-25T21:50:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-699172716",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5OTE3NTk5Mw==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "There are errors when I built by BinaryBuilder may be because the building process of our specific software is quite sensitive.",
+      "createdAt": "2020-09-25T21:59:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-699175993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5OTIwMDU1Nw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@SunnyXu from what you say I understand that this package is expected to work only on Windows, is that correct?  However the test here is performed on a Linux machine.  Maybe you could make your `__init__` something like\r\n```julia\r\nfunction __init__()\r\n    @static if Sys.iswindows()\r\n        global rrlib = Libdl.dlopen(rr_api)\r\n        global antlib = Libdl.dlopen(antimony_api)\r\n    else\r\n        @warn \"This platform isn't supported by RoadRunner.jl\"\r\n    end\r\nend\r\n```\r\n?  In this way the user trying to use your package on a different platform will be gracefully warned, instead of causing a bad crash.  Also, this will let AutoMerge work",
+      "createdAt": "2020-09-25T22:56:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-699200557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5OTIyMTQ5Ng==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Many thanks for your suggessions. I will try it.\r\n\r\n",
+      "createdAt": "2020-09-25T23:44:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-699221496",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5OTI2MDM2OA==",
+      "author": {
+        "login": "SunnyXu"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano @fredrikekre My package finally has passed the auto merge. I appreciate for your comments and help. Could you please help merge it? Or I have to wait for auto merge?  Thanks in advance. [noblock]",
+      "createdAt": "2020-09-26T01:18:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21823#issuecomment-699260368",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: RoadRunner\n- Repository: https://github.com/sys-bio/RoadRunner.jl\n- Created by: @SunnyXu\n- Version: v0.1.0\n- Commit: ef50166dc2ab8f46edd6fd6051019552d1519129\n- Reviewed by: @SunnyXu\n- Reference: https://github.com/sys-bio/RoadRunner.jl/issues/11\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835988417dd17288da5ecbdc1bb8d4accf4576cd8add1f90b282fee13a233de7a3e30d7b139b5a3323e280b3d2af77767d7ce8ee52324142cebb57671ae53048e35896280d76f9de7ad529f8410ce7beec5a805f422dbf4a58e359adf1c51c850dc621cb16135198bbf2752299675db6f111fb25918efebda5f0b583e670cf04b9bc7 -->",
+  "package_name": "RoadRunner",
+  "title": "New package: RoadRunner v0.1.0"
+}

@@ -1,0 +1,163 @@
+{
+  "created_at": "2022-06-25T16:41:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-09-15T14:23:35Z",
+  "pr_number": 63100,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85FhK5M",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Loess. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-25T16:45:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166323276",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FhNno",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Any thoughts here @nalimilan @andreasnoack @joshday ? The upstream R version is called `Lowess`, and given that this is almost the same functionality, should we override?\r\n\r\nAlternately, any suggestions for other names?\r\n\r\n(Edited to update typos)",
+      "createdAt": "2022-06-25T17:56:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166334440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Fhbtk",
+      "author": {
+        "login": "nalimilan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What do you mean? R has both `loess` and `lowess`. JuliaStats has Loess.jl, and indeed it could make sense to implement both methods in the same package, with a more general name.",
+      "createdAt": "2022-06-26T01:27:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166392164",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FhhbJ",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "So best to integrate the contents of Lowess.jl into Loess.jl?",
+      "createdAt": "2022-06-26T04:32:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166415561",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FiBCy",
+      "author": {
+        "login": "nalimilan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That would probably be OK. Or find a new name for the package providing both.",
+      "createdAt": "2022-06-26T14:11:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166545074",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FjoJA",
+      "author": {
+        "login": "ayushpatnaikgit"
+      },
+      "authorAssociation": "NONE",
+      "body": "> So best to integrate the contents of Lowess.jl into Loess.jl?\r\nI'll do a PR to add Lowess to Loess. It seems appropriate. We can discuss further over there. ",
+      "createdAt": "2022-06-27T07:10:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1166967360",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JzTcV",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ayushpatnaikgit Is this a package you plan to manage? I am happy to get it merged if so, since it is unlikely that we can get the review done to incorporate it into Loess.jl.\r\n\r\n@andreasnoack @nalimilan Wanted to make sure you see this and would agree.",
+      "createdAt": "2022-09-06T13:54:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1238185749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JzYgE",
+      "author": {
+        "login": "nalimilan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah better merge this for now, the package can be deprecated if the features get included in Loess.jl at some point.",
+      "createdAt": "2022-09-06T14:10:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1238206468",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KXhdw",
+      "author": {
+        "login": "ayushpatnaikgit"
+      },
+      "authorAssociation": "NONE",
+      "body": "> @ayushpatnaikgit Is this a package you plan to manage? I am happy to get it merged if so, since it is unlikely that we can get the review done to incorporate it into Loess.jl.\r\n> \r\n> @andreasnoack @nalimilan Wanted to make sure you see this and would agree.\r\n\r\nHi Viral, yes, @codetalker7 and I will manage this package. I also think it's unlikely that it'll get merged with Loess. \r\n\r\nCan you please merge this? ",
+      "createdAt": "2022-09-15T07:15:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63100#issuecomment-1247680368",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: Lowess\n- Repository: https://github.com/xKDR/Lowess.jl\n- Created by: @codetalker7\n- Version: v0.1.0\n- Commit: e496eedf0d514a7bf8ea84bdba6576d4537f4ea3\n- Git reference: main\n- Description: Hand translated version of Cleveland's Lowess.c\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial release.\n<!-- END RELEASE NOTES -->",
+  "package_name": "Lowess",
+  "title": "New package: Lowess v0.1.0"
+}

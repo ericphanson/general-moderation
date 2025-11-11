@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-11-02T15:37:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-11-06T22:27:19Z",
+  "pr_number": 47975,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q845F6c6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 9 existing packages.\n  1. Similar to Mux. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.25 is at or below cutoff of 2.50.\n  2. Similar to Gen. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MKL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to MD5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to MLJ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Mera. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-02T15:41:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47975#issuecomment-957851450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q845GYW9",
+      "author": {
+        "login": "taylormcd"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is named after MATLAB's Mex file functions, so I think the current name is appropriate, because it describes the manner by which Julia is embedded in the MATLAB process.",
+      "createdAt": "2021-11-02T17:32:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47975#issuecomment-957973949",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Mex\n- Repository: https://github.com/byuflowlab/Mex.jl\n- Created by: @taylormcd\n- Version: v0.1.0\n- Commit: 03e2773ac4b1d63a21a9395b8422f7471adb86e9\n- Reviewed by: @taylormcd\n- Reference: https://github.com/byuflowlab/Mex.jl/issues/9#issuecomment-957955448\n- Description: Embedding Julia in the MATLAB process.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ecb800f9c4dcfc990e28d7566d2f565f9b3e677b6671099a43f62d7a8d10ced29ccd432030514c6c7ac2846a98d2c63c1c0092a2611eea7e482e089a25084a1bb519df56fec3c0cf2a1f99c218f203a7ded1e16355e23df27f6308c91978a40a9beb08babb37edc016a5887d97b1f528 -->",
+  "package_name": "Mex",
+  "title": "New package: Mex v0.1.0"
+}

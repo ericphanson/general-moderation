@@ -1,0 +1,51 @@
+{
+  "created_at": "2023-07-30T20:59:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-09T14:50:33Z",
+  "pr_number": 88680,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ix-hw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to QuDiffEq. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-30T21:15:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88680#issuecomment-1657268336",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85i5jU7",
+      "author": {
+        "login": "Crown421"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name of this Package is noticeably different from the package being mentioned, and is consistent with the naming of the related packages:\r\n- The use of ` GP` , as in AbstractGPs.jl and ApproximateGPs.jl, both dependencies of this package. \r\n- `DiffEq, as in multiple other DiffEq related packages, most noticably DiffEqBase, which is also a dependency.  \r\n\r\n[noblock]",
+      "createdAt": "2023-07-31T22:06:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/88680#issuecomment-1659254075",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: GPDiffEq\n- Repository: https://github.com/Crown421/GPDiffEq.jl\n- Created by: @Crown421\n- Version: v0.1.0\n- Commit: 68d359c63c44a7deca88d7204ab4feea2f3e55cf\n- Reviewed by: @Crown421\n- Reference: https://github.com/Crown421/GPDiffEq.jl/commit/68d359c63c44a7deca88d7204ab4feea2f3e55cf#commitcomment-123453979\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69696d1512c767e53aa7f44c584a3c4fbd422c684750974cb9ef798c275c98e6b2c0577f705c7f7263b51f901ae1e9ac642b0bbdbcd4fbd0333986182423350314dbf0c5223aa3a0ab7761d9d52927ab0c839a08caf1a4cc843a6d965518e9ec453faba96b3f031411645d45e31702f9f619fd25c2abec269d987ce1495763134c812c1df5a039980aff2df8081998561ff6c000d64da16a6d433fec7a553c46f5c9edbacfe27a340ea7837410bc310d8 -->",
+  "package_name": "GPDiffEq",
+  "title": "New package: GPDiffEq v0.1.0"
+}

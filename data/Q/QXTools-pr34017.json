@@ -1,0 +1,96 @@
+{
+  "created_at": "2021-04-11T12:12:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-04-14T22:20:50Z",
+  "pr_number": 34017,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNzI5ODE1Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to IRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-04-11T12:17:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34017#issuecomment-817298156",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNzI5OTA0OA==",
+      "author": {
+        "login": "nmoran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] \r\nHoping this can be merged manually despite the name being a distance 2 from IRTools since\r\n\r\n- I have already changed the name to try to avoid name conflicts and am running out of ideas\r\n- The QXTools name works with the rest of the packages already registered at github.com/JuliaQX\r\n- Seems overly restrictive to not allow packages with names with format XXTools ",
+      "createdAt": "2021-04-11T12:23:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34017#issuecomment-817299048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNzMwMTM1Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Seems overly restrictive to not allow packages with names with format XXTools\r\n\r\nThe point of the automatic check isn't to not allow packages with names with format XXTools, but to prevent malicious [typosquatting](https://en.wikipedia.org/wiki/Typosquatting): a human has to manually review the pull request to make sure everything is OK ",
+      "createdAt": "2021-04-11T12:40:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34017#issuecomment-817301356",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNzMwMzIwNQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As a matter of fact, using 2-letter acronyms + a common word has a very high probability of being similar to the name chosen by someone else who had the same idea. ",
+      "createdAt": "2021-04-11T12:52:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34017#issuecomment-817303205",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNzMzNzYwNQ==",
+      "author": {
+        "login": "nmoran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Great! Thanks for explaining the logic behind this. Makes a lot of sense.",
+      "createdAt": "2021-04-11T16:52:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/34017#issuecomment-817337605",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: QXTools\n- Repository: https://github.com/JuliaQX/QXTools.jl\n- Created by: @nmoran\n- Version: v0.1.7\n- Commit: bfbcecd331bfd9661663dea2b5111cb055a8e230\n- Git reference: HEAD",
+  "package_name": "QXTools",
+  "title": "New package: QXTools v0.1.7"
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2022-02-06T00:12:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-10T16:37:35Z",
+  "pr_number": 53987,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849b7yQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to BaytesMCMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-06T01:47:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53987#issuecomment-1030732944",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849cHn5",
+      "author": {
+        "login": "paschermayr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear maintainers of the general registry, could please consider this PR?\r\n\r\nThe name is fine as MCMC and SMC are clearly separated with different meanings in the Monte Carlo literature. I would like to avoid writing overly long and complicated package names (BaytesSequentialMonteCarlo), writing parts full and parts as abbreviation (BaytesSequentialMC) or start a new MCMC package, as there exist already a lot in the Julia registrty.\r\n\r\nThank you for your time and effort!",
+      "createdAt": "2022-02-06T09:05:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53987#issuecomment-1030781433",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849st-k",
+      "author": {
+        "login": "paschermayr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry for the double post, but is there something else I can do for this package to be merged without automerge? \r\n\r\nThank you for your time and consideration!\r\n\r\n",
+      "createdAt": "2022-02-10T16:32:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53987#issuecomment-1035132836",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: BaytesSMC\n- Repository: https://github.com/paschermayr/BaytesSMC.jl\n- Created by: @paschermayr\n- Version: v0.1.0\n- Commit: 1ca0afb67c8dd1ef8ed30f2579005c709eb7a765\n- Reviewed by: @paschermayr\n- Reference: https://github.com/paschermayr/BaytesSMC.jl/commit/1ca0afb67c8dd1ef8ed30f2579005c709eb7a765#commitcomment-66090815\n- Description: BaytesSMC.jl is a library to perform SMC proposal steps on `ModelWrapper` structs, see ModelWrappers.jl. Kernels that are defined in BaytesMCMC.jl and BaytesFilters.jl can be used inside this library.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60e9b70094f8f991192c59947082ef4078682f0ce1deee19dfd89e5ae5e0bd3268dfc19982a734b107773a4a3e0b73d5e1a04dd0e5bcadfd57fb74ad847a8d4df7f92faa90afebf1d21451dfcfd4d1a7f80a7869c6a1621ba0a278c7055205a2fb9c0ab7313ba9b3ee22ff7eb97fcaa6db4c19e26409079a50aa79b3f903383d62b2949bf5dabe0f8675941b968447d31528e0f7391829ac9113dcff1191db55a12edab6a9da41db19f32a35ea26c1017 -->",
+  "package_name": "BaytesSMC",
+  "title": "New package: BaytesSMC v0.1.0"
+}

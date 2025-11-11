@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-02-10T21:31:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-22T13:52:49Z",
+  "pr_number": 54384,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849uTxA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-10T21:41:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54384#issuecomment-1035549760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849yps0",
+      "author": {
+        "login": "RupeshJey"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, I am trying to rename a package: RadiativeTransfer.jl to vSmartMOM.jl. \r\n\r\n[vSmartMOM](https://www.sciencedirect.com/science/article/abs/pii/S0022407313003592) is the underlying method in our radiative transfer code, and we feel that this renaming would properly attribute the proper method instead of advertising the package generically as \"radiative transfer\" (for which there are many methods). \r\n\r\nI understand the Julia package naming guidelines are for the initial letter to be capitalized, but I was wondering whether this exception can be made since the source paper follows this capitalization pattern. ",
+      "createdAt": "2022-02-11T22:26:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54384#issuecomment-1036688180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-dGdw",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems fine to me given that it's straight from the paper. Looks like a nice package!",
+      "createdAt": "2022-02-22T13:49:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54384#issuecomment-1047816048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-dHYF",
+      "author": {
+        "login": "RupeshJey"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you!",
+      "createdAt": "2022-02-22T13:53:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54384#issuecomment-1047819781",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: vSmartMOM\n- Repository: https://github.com/RemoteSensingTools/vSmartMOM.jl\n- Created by: @RupeshJey\n- Version: v0.5.0\n- Commit: ab1c78700813c62e8419447f674e2197f81df9f6\n- Reviewed by: @RupeshJey\n- Reference: https://github.com/RemoteSensingTools/vSmartMOM.jl/issues/107#issuecomment-1035540516\n- Description: A full end-to-end modular software suite for radiative transfer and related atmospheric analysis\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359884ba7d471eaaf2b4139ba5ec63b841f8c756b9bd077cb351247c28856a344a4ca612697fc68e739e99f4bf491378fdd687c496688e67f01f383c79eac0951ec137477a83bcbdc7ae35e4f56b745c9ebe7e0a1dc98656081255db7e67aaa03440fc6710c17a933a0fecfafa790d78c0e4bcce42dd8ee897cb052271bc26fea071 -->",
+  "package_name": "vSmartMOM",
+  "title": "New package: vSmartMOM v0.5.0"
+}

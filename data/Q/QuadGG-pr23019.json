@@ -1,0 +1,134 @@
+{
+  "created_at": "2020-10-15T23:22:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-10-25T22:01:58Z",
+  "pr_number": 23019,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTY0MjA0Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n1. Similar to QuadGK. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.96 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-10-15T23:28:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-709642047",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTY0Mjg2Nw==",
+      "author": {
+        "login": "tbeason"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] naming scheme is intentionally similar to QuadGK. I do link to the package in the readme as a preferred alternative. ",
+      "createdAt": "2020-10-15T23:31:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-709642867",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTY1MzIxNw==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Pretty close! In my opinion, this is getting close to the kind of name that's worth flagging to take a look (which I did and agree it's fine). [I'm writing this mostly for future me who will be tuning the tolerances]\r\n\r\n[noblock]",
+      "createdAt": "2020-10-16T00:10:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-709653217",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcwOTY1Mzk2OQ==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "~~Actually, I'll take off the label, since I'm going use the labelled ones to track strictly false positives.~~\r\n\r\nedit: changed my mind again, added back the label. I think the label should just mean \"revisit for name similarity stuff\" and not \"is definitely a false positive\". Otherwise I wouldn't look back at this one again but it's still useful to remember.\r\n\r\n[no block]",
+      "createdAt": "2020-10-16T00:12:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-709653969",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTE3MzAzOA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't love this package name. I'd recommend something that is more than a single letter away from QuadGK.\r\n\r\nUp to you, though.\r\n\r\n[noblock]",
+      "createdAt": "2020-10-18T14:08:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-711173038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTI0Mjg1MQ==",
+      "author": {
+        "login": "tbeason"
+      },
+      "authorAssociation": "NONE",
+      "body": "1 out of 6, though. With short names, you are going to get near-collisions like this. Suppose that this package already existed, would we want QuadGK to register with a different name? I don't believe so.\r\n\r\nHowever, I'm open to changing it but I have no idea how to do so. I know I can just rename the GitHub repo in settings and I guess update the code & Project.toml files. What do I do with this PR?\r\n\r\n[noblock]",
+      "createdAt": "2020-10-18T15:49:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-711242851",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTI0NDYxMQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's up to you. I don't feel too strongly, I think this name is probably fine.\r\n\r\nIf you do end up renaming, here are the instructions: https://github.com/JuliaRegistries/General#what-to-do-when-asked-to-reconsiderupdate-the-package-name\r\n\r\n[noblock]",
+      "createdAt": "2020-10-18T15:51:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-711244611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDcxMTI2MTQyNg==",
+      "author": {
+        "login": "tbeason"
+      },
+      "authorAssociation": "NONE",
+      "body": "Nah let's leave it as is then.\r\n\r\n[noblock]",
+      "createdAt": "2020-10-18T16:09:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/23019#issuecomment-711261426",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: QuadGG\n- Repository: https://github.com/tbeason/QuadGG.jl\n- Created by: @tbeason\n- Version: v0.1.0\n- Commit: f24b06a1d3726276e8aefe9924dd0205d9af6269\n- Reviewed by: @tbeason\n- Reference: https://github.com/tbeason/QuadGG.jl/commit/f24b06a1d3726276e8aefe9924dd0205d9af6269#commitcomment-43287229\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6910367deb795d90664e481f27d4f561c734935f4c1a6974f6d6ab80c6add84550dffa8a64d04a26ea3da51a70ddde672654f9cac32b92098c4bb03d2655ff2f576f78f1567da9c983ecbf540400ea3b47837f4fb3a5fdf9d13603f3187cab490055342e8f7da296ce049ea2805cb49df7b9cd104f29f5641cb36053fdc67e320b77bd21907ce29d39ecff63954302a605db854572e621b481ad3b813ac002b491fbf79a2281dc9cccbcb5870b795e5b2 -->",
+  "package_name": "QuadGG",
+  "title": "New package: QuadGG v0.1.0"
+}

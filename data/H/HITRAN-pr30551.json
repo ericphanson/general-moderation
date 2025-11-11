@@ -1,0 +1,111 @@
+{
+  "created_at": "2021-02-21T18:51:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-02-25T02:35:29Z",
+  "pr_number": 30551,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkwNzA1OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-21T18:56:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782907058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkxMDg1NQ==",
+      "author": {
+        "login": "TacHawkes"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would like to stick to the name \"HITRAN\" as this is the name and common type of referring to the HITRAN spectral database.",
+      "createdAt": "2021-02-21T19:21:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782910855",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkxMzc2MA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@TacHawkes thanks for your package!  That's a good argument for the name, but you still need to fix compat bounds for the dependencies:\r\n\r\n> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, FileIO, Interpolations, JLD2, PooledArrays, SQLite, SpecialFunctions",
+      "createdAt": "2021-02-21T19:42:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782913760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkxOTA0NA==",
+      "author": {
+        "login": "TacHawkes"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, this should be fixed already. I have retriggered the Registrator bot, see \"1d50dab\". If I did forget something, just let me know and I will fix the issue.",
+      "createdAt": "2021-02-21T20:16:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782919044",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkxOTUyMg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, the problem is that you shouldn't use `>= X.Y.Z`: that would mean \"literally any version including and after X.Y.Z\", but that's in contrast with semantic versioning.  Simply removing `>=` in those specifications should do the work",
+      "createdAt": "2021-02-21T20:19:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782919522",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkyMjM1NQ==",
+      "author": {
+        "login": "TacHawkes"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yes, the problem is that you shouldn't use `>= X.Y.Z`: that would mean \"literally any version including and after X.Y.Z\", but that's in contrast with semantic versioning. Simply removing `>=` in those specifications should do the work\r\n\r\nOk, thanks! I've re-triggered the Registrator.",
+      "createdAt": "2021-02-21T20:38:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30551#issuecomment-782922355",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: HITRAN\n- Repository: https://github.com/TacHawkes/HITRAN.jl\n- Created by: @TacHawkes\n- Version: v0.1.0\n- Commit: 190ede22eaed20f569cc0d1bcfd5229577251e7f\n- Reviewed by: @TacHawkes\n- Reference: https://github.com/TacHawkes/HITRAN.jl/commit/190ede22eaed20f569cc0d1bcfd5229577251e7f#commitcomment-47388165\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69607284a911b748a5572e0fedf2e5c0033368e2d562dc46ffb31d7105a1a2eafadd5e6ff7a581ec5afef63af6245b5813635a51b60226a62d2235f6ad7488147d6a0a7d371f94042a420c32c536fb34af6aa04c92cde33803830a4edb048a7dbccbe01b5b6a4263021882553e13b9b4ebf35ec50186c72f93c41f8c9f7f1aac3f2bf0d6bbed3cddf4f8ec9664066505bf2c6368d1af5ff22b39ccc58080883aaf912b54cdc55501ca47cbd0a609cc1c9 -->",
+  "package_name": "HITRAN",
+  "title": "New package: HITRAN v0.1.0"
+}

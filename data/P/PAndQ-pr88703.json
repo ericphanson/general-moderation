@@ -1,0 +1,125 @@
+{
+  "created_at": "2023-07-31T11:38:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-09T22:02:18Z",
+  "pr_number": 88703,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85i1j_I",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to PANDA. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-31T11:44:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1658208200",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85i1pSv",
+      "author": {
+        "login": "jakobjpeters"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package was originally named `PAQ`. The auto-merge failed due to the name being too short and being similar with 13 existing packages. @goerz [recommended](https://github.com/JuliaRegistries/General/pull/88641#issuecomment-1657197547) that I change it to `PAndQ`.\r\n\r\nRegarding the name similarity with `PANDA`, this package name differs both by the final character and from the capitalization of `nd`. They would be unlikely to be confused for each other or accidentally typed incorrectly. `PANDA` is likely to be read as a single word, whereas `PAndQ` is likely to be read as `P` `And` `Q`.\r\n\r\nThank you for reviewing.\r\n\r\n[noblock]",
+      "createdAt": "2023-07-31T11:58:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1658229935",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jOdg8",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Isn't this name, PAndQ, (also) in conflict with point 1 of [Package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines): Jargon.\r\n\r\nSomething with PropositionalLogic sounds more like what the package contains... why wasn't this name chosen (it's free)?\r\n\r\n[noblock]",
+      "createdAt": "2023-08-03T22:51:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1664735292",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jOh1w",
+      "author": {
+        "login": "jakobjpeters"
+      },
+      "authorAssociation": "NONE",
+      "body": "I chose the name because I liked it and thought it was cute. I chose not to use something like `PropositionalLogic` because I am uncertain of the future scope of the package. If the name is unacceptable, I will workshop a [less systematic name](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines).\r\n\r\nThanks for your feedback.\r\n\r\n[noblock]",
+      "createdAt": "2023-08-03T23:18:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1664753008",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jOmtP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For what it’s worth, I think the name is totally fine. “Cute” names (“less systematic names”, as the guidelines call them) are usually good choices if you can come up with one, and I would encourage them especially in a situation like this where the scope of the package is in flux. I would recommend sticking to your choice.",
+      "createdAt": "2023-08-03T23:52:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1664772943",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jP5XL",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK - I agree with @goerz that coming up with a \"less systematic name\" is (too) hard.\r\n\r\nNot sure I quite understand the scope/aim of the package - and hence it is a bit hard to understand the need for registering it - but I won't block this any further.\r\n\r\n[noblock]",
+      "createdAt": "2023-08-04T07:03:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/88703#issuecomment-1665111499",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: PAndQ\n- Repository: https://github.com/jakobjpeters/PAndQ.jl\n- Created by: @jakobjpeters\n- Version: v0.1.0\n- Commit: b0ea900353940b03e6d9b446d4f64d57a873059f\n- Reviewed by: @jakobjpeters\n- Reference: https://github.com/jakobjpeters/PAndQ.jl/issues/3#issuecomment-1658199854\n- Description: A symbolic implementation of propositional logic\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598dbb9ab1fb6394dbfd1d4aed3ffd6e515ce5b838bee3171a9099ca6c0cdce588567ab0d2dd09bad80388e6639b724f9b03f92961ab32047ac786d7f8b54145e5bfdbdb4b59c140386c12ca2dd91f55d12fb8795cdc80908a2b4451e1c8adba4497feadb89ea293b65bd23fe2c13cffd224556bb4620c7c9303116e7e532d07d38 -->",
+  "package_name": "PAndQ",
+  "title": "New package: PAndQ v0.1.0"
+}

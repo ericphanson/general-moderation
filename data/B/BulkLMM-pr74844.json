@@ -1,0 +1,74 @@
+{
+  "created_at": "2022-12-31T03:58:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-01-12T21:28:38Z",
+  "pr_number": 74844,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85RjHge",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to BulkSMS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-31T04:05:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74844#issuecomment-1368160286",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RjdQw",
+      "author": {
+        "login": "GregFa"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand that the name `BulkLMM.jl` is similar to `BulkSMS.jl` with a Damerau-Levenshtein distance of 2, but there is no confusion between the two names. The typing and the meaning of LMM and SMS are very distinct. I would like this pull request to be manually merged, please.",
+      "createdAt": "2022-12-31T16:32:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74844#issuecomment-1368249392",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RnX0Z",
+      "author": {
+        "login": "sens"
+      },
+      "authorAssociation": "NONE",
+      "body": "The two packages share the word \"bulk\", but SMS (short message service) and LMM (linear mixed model) are very different things and I see no potential for confusion.  The BulkSMS package has not been updated for 4 years, for what it's worth.",
+      "createdAt": "2023-01-02T23:53:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74844#issuecomment-1369275673",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SURe0",
+      "author": {
+        "login": "GregFa"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre  Thank you for the manual merging.",
+      "createdAt": "2023-01-12T22:07:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74844#issuecomment-1381046196",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: BulkLMM\n- Repository: https://github.com/senresearch/BulkLMM.jl\n- Created by: @GregFa\n- Version: v0.1.0\n- Commit: 0da4e875174aab33ed6140ad0dbb82bd8de1378f\n- Git reference: HEAD\n- Description: Linear mixed model genome scans for many traits",
+  "package_name": "BulkLMM",
+  "title": "New package: BulkLMM v0.1.0"
+}

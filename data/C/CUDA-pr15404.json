@@ -1,0 +1,59 @@
+{
+  "created_at": "2020-05-26T06:44:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-05-26T15:32:07Z",
+  "pr_number": 15404,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzMzgzODkwNw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.**\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-05-26T06:47:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15404#issuecomment-633838907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzMzg0NzE1Nw==",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.**\r\n\r\n> Name is not at least five characters long\r\n\r\nCan ignore these under \"Packages that wrap external libraries or programs should be named after those libraries or programs.\"\r\n\r\n\r\n\r\n> I was not able to load the package (i.e. `import CUDA` failed). See the CI logs for details.\r\n\r\nAh yes this needs a GPUCompiler.jl tag. Will fix.",
+      "createdAt": "2020-05-26T07:03:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15404#issuecomment-633847157",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYzNDAwNzY5Mw==",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "OK, fixed, and the bot can now import the package. Should be good to go!",
+      "createdAt": "2020-05-26T12:57:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15404#issuecomment-634007693",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: CUDA\n- Repository: https://github.com/JuliaGPU/CUDA.jl\n- Created by: @maleadt\n- Version: v0.1.0\n- Commit: 1ed8b5144b9c9fbee744bda9ab5745e0da3b93a4\n- Reviewed by: @maleadt\n- Reference: https://github.com/JuliaGPU/CUDA.jl/commit/1ed8b5144b9c9fbee744bda9ab5745e0da3b93a4#commitcomment-39442571\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fb3cea263dcc55ca73f924c6430f06d45a905886369b6a6bce394d3f5ff7ab7d0d80eca900d18f745f9441e03163ab7357211d9eada71770aaed1451797a3c3d657e69b7afbda7abc9ccea59b833e0a0c127c2beb4764e1b0466d8bf78db99b1a780912309dcfd87d39ea92ea41a763e65bebdab5d4b65b4e4a372a0d84f1b879ab1eea56eaccf8b49e2861e8b0277b6b3504228df81f002d09af198527def90b463d5512592659191b2f0f422f54dbe -->",
+  "package_name": "CUDA",
+  "title": "New package: CUDA v0.1.0"
+}

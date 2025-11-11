@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-11-26T11:00:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-12-06T04:43:57Z",
+  "pr_number": 72923,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85PKA_x",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 2 existing packages.\n  1. Similar to GBIF. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to GPI2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-26T11:04:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72923#issuecomment-1328025585",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKC3F",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "GBIF is an acronym for the Global Biodiversity Information Facility (https://www.gbif.org/) but most people don't use (or even know) that name, just GBIF.\r\n\r\n\r\nThis package name follows JSON2/JSON3.jl, it's a rethink of the internals of providing a GBIF api in Julia.",
+      "createdAt": "2022-11-26T11:56:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72923#issuecomment-1328033221",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: GBIF2\n- Repository: https://github.com/rafaqz/GBIF2.jl\n- Created by: @rafaqz\n- Version: v0.1.0\n- Commit: ab971d732fdf7e3ca31b6e4554b2d259b5937b36\n- Reviewed by: @rafaqz\n- Reference: https://github.com/rafaqz/GBIF2.jl/commit/ab971d732fdf7e3ca31b6e4554b2d259b5937b36#commitcomment-91136807\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e33057b974123e59138414abd3ca9c5ae1bdaa554df98d9d5641dd4ec08232e93443f916a28faf03758dc1c0afd8b20b85d4d1e0b6d489561b42a6558d6b6d4a55fd700776c969e06fddf9d9a6027aec7415a4155f3dc09ed622b88ad7953ba4179d4fd0a5c5eb31c6f84ecb13aa34052b47fbec4a1e6f321eeabd85442a168640ad001e81d6a1ec101a5a103b0541f1f0bd8838500e12297b883b3db6f21115 -->",
+  "package_name": "GBIF2",
+  "title": "New package: GBIF2 v0.1.0"
+}

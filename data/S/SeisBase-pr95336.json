@@ -1,0 +1,66 @@
+{
+  "created_at": "2023-11-14T21:27:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-11-18T01:06:39Z",
+  "pr_number": 95336,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85r9x-j",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SoleBase. Normalized visual distance 1.42 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-14T21:32:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95336#issuecomment-1811357603",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85r99gO",
+      "author": {
+        "login": "niyiyu"
+      },
+      "authorAssociation": "NONE",
+      "body": "SeisBase is a package for **seismology basic data IO** in Julia. It will be part of the core packages required by **SeisNoise**, **SeisDvv**, **SeisMonitoring**, etc. Thus the team have reached the agreement to use this name. It would be great to keep this name.",
+      "createdAt": "2023-11-14T21:55:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95336#issuecomment-1811404814",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sD6El",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nI think your name is fine and the report is a false positive. If you wait for three days and then send a message to the slack channel `#pkg-registration`, one of the registry maintainers will look at this and probably merge by hand. ",
+      "createdAt": "2023-11-15T17:28:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/95336#issuecomment-1812963621",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SeisBase\n- Repository: https://github.com/JuliaSeismo/SeisBase.jl\n- Created by: @niyiyu\n- Version: v0.1.0\n- Commit: 61894500c9837cda0c9a2f3c70cf3f28d6ef378c\n- Git reference: HEAD",
+  "package_name": "SeisBase",
+  "title": "New package: SeisBase v0.1.0"
+}

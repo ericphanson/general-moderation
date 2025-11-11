@@ -1,0 +1,163 @@
+{
+  "created_at": "2020-06-07T23:40:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-06-11T18:36:11Z",
+  "pr_number": 16023,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDI5NzczOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-06-07T23:44:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640297739",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDUzMjAzOQ==",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Pinging @MikeInnes @dhairyagandhi96 for a quick look.",
+      "createdAt": "2020-06-08T10:59:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640532039",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDUzODY4NA==",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for the quick register!",
+      "createdAt": "2020-06-08T11:13:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640538684",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDUzOTU1NA==",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Note the package is not registered yet. I requested a review since it looks like a very small package (for now), and perhaps it may be possible to include in an existing package. At least, getting some eyes on it. Hope that's ok.",
+      "createdAt": "2020-06-08T11:15:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640539554",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDU0MTUxNQ==",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ah sorry I misread that! Sure no problem.",
+      "createdAt": "2020-06-08T11:20:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640541515",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDY3Nzc2MQ==",
+      "author": {
+        "login": "mcabbott"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I haven't looked closely but would this work just with ZygoteRules? If so, then perhaps it could be part of StructArrays? Would be nice to have always available. \r\n\r\nEdit: now I see `Zygote.accum` too.",
+      "createdAt": "2020-06-08T14:49:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640677761",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDY4MTk2Ng==",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I agree this is not a permanent solution. Probably Zygote should just be able to work this out (Zygote claims to be able to differentiate arbitrary Julia code). But it might take sometime before that is a reality.\r\n\r\nIn the meantime I chose a pretty descriptive title for this package so it doesn't collide with anything else, and I think it is safe to merge as it is even though in principle there should be a better solution in the future.",
+      "createdAt": "2020-06-08T14:56:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-640681966",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MjgzMDYxNg==",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think because of the comments that the auto-merge did not happen after the 3 days.\r\n@ViralBShah can we merge this? Unless there are any objections @dhairyagandhi96 @MikeInnes ?",
+      "createdAt": "2020-06-11T17:38:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-642830616",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0Mjg2MDg5Ng==",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks!",
+      "createdAt": "2020-06-11T18:38:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/16023#issuecomment-642860896",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: ZygoteStructArrays\n- Repository: https://github.com/cossio/ZygoteStructArrays.jl\n- Created by: @cossio\n- Version: v0.1.0\n- Commit: 48cbde5383991fd6048dc9d694a8948f839b42c8\n- Reviewed by: @cossio\n- Reference: https://github.com/cossio/ZygoteStructArrays.jl/commit/48cbde5383991fd6048dc9d694a8948f839b42c8#commitcomment-39787621\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a2f330951eca20241e0e3d7e548faad05bd9eaefb2811a9f2f42564a517d881722d9cee661ac3477d27dd179ebda219ce0edec51f61221adb48f14a52e19374c451362675a0fd564811413b8d3fe8773809ba6320a2fcd8c09275d28aa56763a15ed634763cb1de4a2e1992bf161713c1566eec5754a851233a76ec6338cea48ea4ecd25cbd9198098b84b8f91f17493bbd47701ecbb24131fb9658e587e8a4f73fa3a26bcea4f02897a2790fbf551a5 -->",
+  "package_name": "ZygoteStructArrays",
+  "title": "New package: ZygoteStructArrays v0.1.0"
+}

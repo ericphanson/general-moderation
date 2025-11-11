@@ -1,0 +1,73 @@
+{
+  "created_at": "2022-03-31T13:34:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-04-04T08:35:15Z",
+  "pr_number": 57692,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ApY4D",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 14 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to BAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.54 is at or below cutoff of 2.50.\n  2. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.98 is at or below cutoff of 2.50.\n  3. Similar to FMI. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.29 is at or below cutoff of 2.50.\n  4. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to ADI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to QOI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to ROS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to WAV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to GAP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to Run. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to RAFF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to PAPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-31T13:39:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57692#issuecomment-1084591619",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AqOTH",
+      "author": {
+        "login": "bradlo"
+      },
+      "authorAssociation": "NONE",
+      "body": "We use the acronym RAI to brand all of our developer materials, including all language SDKs. Our users appreciate the consistency and we think it is more \"developer friendly\" than using the relatively long company name, RelationalAI.",
+      "createdAt": "2022-03-31T16:21:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/57692#issuecomment-1084810439",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AqPhh",
+      "author": {
+        "login": "NHDaly"
+      },
+      "authorAssociation": "NONE",
+      "body": "👍 Will also add that we see this as similar to the following examples of SDKs for cloud services:\r\n- AWS.jl\r\n- GCP.jl\r\netc\r\n\r\n",
+      "createdAt": "2022-03-31T16:26:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/57692#issuecomment-1084815457",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: RAI\n- Repository: https://github.com/RelationalAI/rai-sdk-julia\n- Created by: @NRHelmi\n- Version: v0.0.1\n- Commit: 2b61da01fd75a90b0f8b353afa3d70e26c93f633\n- Reviewed by: @NRHelmi\n- Reference: https://github.com/RelationalAI/rai-sdk-julia/commit/2b61da01fd75a90b0f8b353afa3d70e26c93f633#commitcomment-70023960\n- Description: The RelationalAI Software Development Kit (SDK) for Julia.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a38a2aa46f9ac515b0415f27659b499233fd5028813bf2f58fc91e1093040b7e3a0541fef418a00f8c7f9ce4a4ae3f0b47948a4ff5770a9276165d874b9a128ddfe7e8c5de059d3fa35ad8ff46e9e7f8b64169659f28e6d8e530d16ea860d71bdb4ac37fc244c7ba217bd5539ce5241b8658b7b721b908037ed60b30036a29ea5539645af0b70c3af95db8282bbc105bdae93aa8eab769d574603ca813f6568ab3baaacc973e290154a262ce82621a5f -->",
+  "package_name": "RAI",
+  "title": "New package: RAI v0.0.1"
+}

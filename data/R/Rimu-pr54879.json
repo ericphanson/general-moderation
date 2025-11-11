@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-02-18T04:33:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-21T11:45:51Z",
+  "pr_number": 54879,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-OEQ3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 1 existing package.\n  1. Similar to Mimi. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-18T04:41:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54879#issuecomment-1043874871",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-ORb6",
+      "author": {
+        "login": "joachimbrand"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nApologies for the inconvenience, but I would like to ask for a manual review. Auto-merging has failed because the proposed name of our package `Rimu.jl` is\r\n* shorter than 5 letters\r\n* deemed to close to the existing package `Mimi.jl` by the Damerau-Levenshtein distance.\r\n\r\nFirst of all, I have read all the guidelines. Second, we do not think that there is a large risk of confusing the packages `Rimu` and `Mimi` due to their names (despite the short DL distance).\r\n\r\nThe name \"Rimu\" was chosen for representing an acronym for \"**R**andom **i**ntegrators for **m**any-body q**u**antum systems\". It is also the name of a native tree of New Zealand. Hence, we hope that it is suitable despite being short. \r\n\r\nWe have chosen a generic rather than a systematic name for good reason. The main functionality of our package (currently) is to implement a particular flavour of quantum Monte Carlo, (called Full Configuration Interaction Quantum Monte Carlo, FCIQMC), but it also implements an ecosystem for dealing with quantum many-body systems in general. It currently has functionality that goes beyond the Monte Carlo algorithm, e.g. for exact diagonalisation of quantum Hamiltonians. The plan is in future to add other functionality beyond FCIQMC, e.g. other Monte Carlo algorithms. \r\n\r\nFinally, the package has already existed (and was public) as an unregistered package for about two years. The name and GitHub address of `Rimu.jl` was already referenced in three publications in the scientific literature:\r\n* Yang, M., Čufar, M., Pahl, E., & Brand, J. (2022). Polaron-Depleton Transition in the Yrast Excitations of a One-Dimensional Bose Gas with a Mobile Impurity. Condensed Matter, 7(1), 15. https://doi.org/10.3390/condmat7010015\r\n* Yang, M., Pahl, E., & Brand, J. (2020). Improved walker population control for full configuration interaction quantum Monte Carlo. The Journal of Chemical Physics, 153(17), 174103. https://doi.org/10.1063/5.0023088\r\n* Brand, J., Yang, M., & Pahl, E. (2021). Stochastic differential equation approach to understanding the population control bias in full configuration interaction quantum Monte Carlo. 1–18. Retrieved from http://arxiv.org/abs/2103.07800 \r\n\r\nI would thus like to humbly ask for this PR to the General Registry to be merged manually.\r\n",
+      "createdAt": "2022-02-18T05:34:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54879#issuecomment-1043928826",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Rimu\n- Repository: https://github.com/joachimbrand/Rimu.jl\n- Created by: @joachimbrand\n- Version: v0.6.1\n- Commit: 979a490346547d7b9caa708197f63bf40c190e30\n- Reviewed by: @joachimbrand\n- Reference: https://github.com/joachimbrand/Rimu.jl/commit/979a490346547d7b9caa708197f63bf40c190e30#commitcomment-66950101\n- Description: Random Integrators for many-body quantum systems\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fd502104167abf5cd6b2cf3e4ad6565dec4a69545050d83984dc837d9f237ff495d6334331a822612c209edcb4679c11685215b92a0bc5e177e9e7485b9c7f0f1a3325548b44f75ac26cb78d810a8f107fa35805d3d100732cd4baecd75a3226d53c796911eae939b9f85c72727cea732f360abf9eefbb405768ad0c5e8269d1c8df49929fceb76cad06fd9b050f2a9e1d1e6de0516a9f9ccb32c5594b443d61a382a34f55c8ccf5443866185ddff9c4 -->",
+  "package_name": "Rimu",
+  "title": "New package: Rimu v0.6.1"
+}

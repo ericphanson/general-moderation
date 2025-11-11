@@ -1,0 +1,59 @@
+{
+  "created_at": "2022-01-17T10:33:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-01-24T11:34:01Z",
+  "pr_number": 52587,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q848di5N",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to BaytesMCMC. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-17T10:41:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52587#issuecomment-1014378061",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848dkY3",
+      "author": {
+        "login": "paschermayr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear maintainers of the general registry, could please consider this PR?\r\n\r\nThe name is fine as `MCMC` and `PMCMC` are clearly separeted with different meanings in the Markov Chain Monte Carlo literature. I would like to avoid writing overly long and complicated package names (BaytesParticleMarkovChainMonteCarlo), writing parts full and parts as abbreviation (BaytesParticleMCMC) or start a new `MCMC` package, as there exist already way too many of those in the Julia registrty.\r\n\r\nThank you for your time and effort!\r\n\r\ncc: @DilumAluthge ",
+      "createdAt": "2022-01-17T10:49:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52587#issuecomment-1014384183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848yiIs",
+      "author": {
+        "login": "paschermayr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry for the double post, but is there something else I can do for this package to be merged without automerge?",
+      "createdAt": "2022-01-24T09:16:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52587#issuecomment-1019879980",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: BaytesPMCMC\n- Repository: https://github.com/paschermayr/BaytesPMCMC.jl\n- Created by: @paschermayr\n- Version: v0.1.0\n- Commit: 63dfaedb6ba088f942b60682998c0ecde296edbf\n- Reviewed by: @paschermayr\n- Reference: https://github.com/paschermayr/BaytesPMCMC.jl/commit/63dfaedb6ba088f942b60682998c0ecde296edbf#commitcomment-64015059\n- Description: A library to perform particle MCMC proposal steps for parameter in a `ModelWrapper` struct, see [ModelWrappers.jl](https://github.com/paschermayr/ModelWrappers.jl).\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b82e46465cd878a2cb1083a1901d84498e5521428a0d96683e63445f76b0ad65274eab6b5e4017b3a6070e09981e431b1b0b610edecb6254f9baf61418fd61cb9a9a63b218e284d255dc3d0436825cf904213b736dbd4a51f58374335108e4ac417ebccbe45cb5a5d17b1b5b31ea48e7140e355987007ad5f96acd856e0fe175dbefd2acde99fa1b591b4317b5e0d603feb35ad3e2a05aa902c433f8b6b7c3bb3d57b01d6139eaba992ae6d139257178 -->",
+  "package_name": "BaytesPMCMC",
+  "title": "New package: BaytesPMCMC v0.1.0"
+}

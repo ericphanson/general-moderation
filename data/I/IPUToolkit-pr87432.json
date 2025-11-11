@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-07-13T17:20:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-16T20:49:47Z",
+  "pr_number": 87432,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hbnsj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to MPSToolkit. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-13T17:27:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87432#issuecomment-1634630435",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hkAsw",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package provides a series of tools for writing Julia programs for the [Intelligence Processing Unit (IPU)](https://www.graphcore.ai/products/ipu), hence the name.  I don't think there's a risk of confusion with `MPSToolkit`.",
+      "createdAt": "2023-07-15T17:14:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87432#issuecomment-1636830000",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: IPUToolkit\n- Repository: https://github.com/JuliaIPU/IPUToolkit.jl\n- Created by: @giordano\n- Version: v1.0.0\n- Commit: 60b3fad667727177f9d05eab189aaaa92a36a662\n- Reviewed by: @giordano\n- Reference: https://github.com/JuliaIPU/IPUToolkit.jl/commit/60b3fad667727177f9d05eab189aaaa92a36a662#commitcomment-121743868\n- Description: IPU programming in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6387efb10fd9ba4faafb751a88d75f2514c75aabcca7b609081cbcceb85ddb0b649213c9e76f482aa4122b446ed7186ea1e6715bbc26efcf331a58b71ce2fb31a57ce75ee9f7a78d6f9284d21d90f636995a066e816934bf8915447d3672ababeadfb791c65f2083681a1c68c37d4d7fc8504bb0bea8834d16a7bcfa95dfb5e0b12e25827b43e546e33a7e41b9ca5a568f5a202f0446472a607c5dc29d3dfc13a932bbe819d59b2e796ae44923641bdff -->",
+  "package_name": "IPUToolkit",
+  "title": "New package: IPUToolkit v1.0.0"
+}

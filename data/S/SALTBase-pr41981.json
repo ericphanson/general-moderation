@@ -1,0 +1,66 @@
+{
+  "created_at": "2021-08-02T03:11:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-06T14:44:28Z",
+  "pr_number": 41981,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841FrGA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to BATBase. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-02T03:14:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41981#issuecomment-890679680",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Fs7X",
+      "author": {
+        "login": "wsshin"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\r\n> \r\n> * Package name similar to 1 existing package.\r\n>   \r\n>   1. Similar to BATBase. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nThe package name is SALT + BASE.  \r\n- SALT is the acronym for Steady-state Ab-initio Laser Theory, which is an established acronym in the field as shown in https://journals.aps.org/pra/abstract/10.1103/PhysRevA.82.063824.  \r\n- Base is the most widely used suffix for the names of the packages that provide base functionalities to related packages, as exemplified by some core Julia packages like [VectorizationBase](https://github.com/JuliaSIMD/VectorizationBase.jl), [StatsBase](https://github.com/JuliaStats/StatsBase.jl), [MLBase](https://github.com/JuliaStats/MLBase.jl)\r\n\r\nSo neither part of the package name is easy to change.  \r\n\r\nAlso, I don't feel that the current package name gets confused with BATBase, because the two packages are used in very different fields (one in laser theory and the other in Bayesian analysis).  Therefore, I would like to keep the current package name and hope this PR to be merged manually.",
+      "createdAt": "2021-08-02T03:37:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41981#issuecomment-890687191",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841ThSx",
+      "author": {
+        "login": "stevengj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge, @giordano, can you look at this?  I don't think the naming is problematic here.",
+      "createdAt": "2021-08-06T14:43:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/41981#issuecomment-894309553",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SALTBase\n- Repository: https://github.com/wsshin/SALTBase.jl\n- Created by: @wsshin\n- Version: v0.1.0\n- Commit: 51b879e5f33b9c1bde7fdd06b002065e6ce38548\n- Reviewed by: @wsshin\n- Reference: https://github.com/wsshin/SALTBase.jl/commit/51b879e5f33b9c1bde7fdd06b002065e6ce38548#commitcomment-54276334\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> SALTBase.jl is becoming a registered package.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69ef1dbf1ccc9215d5bfb460f4afc139f4bd87012ae4fb05742270e0b7d67fc96def79aa1505bca18d13d1c34819eff51dd7f22ed7e750a3ec678b80362f1e91ff06d6170648ea49844ad82334aa2b78998c1029cb119505f72e8c79358545ace4a219b43ab46efe4cf552ac51be7f106212d0c98b917c539ab36586455e17defdb538d4e949e3ce769eed39d0eabe18013c638bd1006885cdb65da8bf540be69dafc5ba11418fd1a06f3f0dd97640671 -->",
+  "package_name": "SALTBase",
+  "title": "New package: SALTBase v0.1.0"
+}

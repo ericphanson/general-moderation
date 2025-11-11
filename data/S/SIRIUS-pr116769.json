@@ -1,0 +1,66 @@
+{
+  "created_at": "2024-10-07T15:36:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-10-15T22:41:18Z",
+  "pr_number": 116769,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86O45U3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to SIRUS. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-07T15:40:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116769#issuecomment-2397279543",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86O-B7D",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Should be ok, but you will have to ask on Slack for a manual merge after the end of the three-day-period",
+      "createdAt": "2024-10-08T02:57:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116769#issuecomment-2398625475",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P4aXB",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: JSON3, MPI, OpenBLAS32",
+      "createdAt": "2024-10-15T13:32:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116769#issuecomment-2413929921",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SIRIUS\n- Repository: https://github.com/abussy/SIRIUS.jl\n- Created by: @abussy\n- Version: v0.1.0\n- Commit: 83e17086978b30ff62005be254574f454efeac73\n- Reviewed by: @abussy\n- Reference: https://github.com/abussy/SIRIUS.jl/commit/83e17086978b30ff62005be254574f454efeac73#commitcomment-147954302\n- Description: Julia wrappers for the SIRIUS library.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f8653167582184f615f63e31ee2486b90cffed71cf7ddaa484659d4249e02fcff63e6560d46c0524f3a6959a3dc29913c46afeba44e245e900225af7123fa7c87404154ab7f65796367d635e15ad9fe5936ea4663fa5be2fec8e29375bb91a1669b6d3f4bc88e81e4b8b3d321dcd4ec64e306e019c444fc52beabf9cb734d856e7773f0163522598ae3b70bc82ffa436bc7fe4e4aa4a7dfb5274479476bf07df812210835057a407bd3b2ad318a7ff36 -->",
+  "package_name": "SIRIUS",
+  "title": "New package: SIRIUS v0.1.0"
+}

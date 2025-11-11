@@ -1,0 +1,156 @@
+{
+  "created_at": "2024-06-02T16:50:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-06-09T20:23:34Z",
+  "pr_number": 108095,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_yf10",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-02T17:02:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2143944052",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_yf-9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Does this really need `conda` as a dependency?",
+      "createdAt": "2024-06-02T17:04:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2143944637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_ygKL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "(Let me hold off on the \"needs to be merged manually in 3 days\" tag, since at least the compat-issues need to be fixed before it's ready to merge)",
+      "createdAt": "2024-06-02T17:06:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2143945355",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_yhuo",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "The library it wraps is installed with Conda. Ultimately the BinaryProvider will be used, but the cross-compilation is a challenge for the ROOT library source, which is not yet solved yet (https://github.com/JuliaPackaging/Yggdrasil/pull/7666). Use of Conda was a  compromise in order to move on with the distribution of this wrapper.\r\n\r\nFor the compat specs what is the recommendations? Should I used major.minor of the latest version?\r\n\r\n   ",
+      "createdAt": "2024-06-02T17:23:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2143951784",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_ymMg",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Should I used major.minor of the latest version?\r\n\r\nThat's what I usually do. Or, hypothetically, you could try to find out what are the oldest versions that actually work (make sure to have an entry in your test matrix that installs your dependencies in their declared oldest versions, to make sure it actually works and to tell you when you need to bump the compat entries).",
+      "createdAt": "2024-06-02T17:58:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2143970080",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86AiI6-",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "Can we proceed with the merging of this PR?\r\n\r\nLet me know if I can do anything on my side. I don't understand the logs of AutoMerge: all the messages before the exception say \"meets_this_guideline = true\", but may be it is due to the package name, which requires a manual merge as discussed earlier.\r\n\r\nThanks,\r\nPhilippe.",
+      "createdAt": "2024-06-09T10:29:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2156433086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86AiKd3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You’re okay, the only thing to do is to periodically ping the `#pkg-registration` channel on Slack. Usually things get merged quickly, but there’s been a backlog the past week. There’s a pretty small group of full maintainers who have merge permission, and maybe they’re all traveling/busy/on holiday, or something ",
+      "createdAt": "2024-06-09T10:48:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2156439415",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86AifXq",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @goerz for this information. I've posted a message on the Slack channel.",
+      "createdAt": "2024-06-09T12:45:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2156525034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86A73BU",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @ericphanson for the merge.",
+      "createdAt": "2024-06-12T14:34:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108095#issuecomment-2163175508",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: ROOT\n- Repository: https://github.com/JuliaHEP/ROOT.jl\n- Created by: @grasph\n- Version: v0.3.0\n- Commit: 8094ac289cc962c3fe1240c70f2100acef935bdc\n- Reviewed by: @grasph\n- Reference: https://github.com/JuliaHEP/ROOT.jl/issues/22#issuecomment-2153472235\n- Description: CERN ROOT compatiblility for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359881cd8755c280d6680c6eeadb7c62f5dcc6ea7ee36d42b9ba34f30c84d13ee07aadbe0f7e5664a002594d5b670023b551a24cc6feb7ceb6e397f69dd4db568d7a58015d126c9f2c3894f03cd5126d09bf3023cb16899fbd6dc2cc67cc2bd69a08268daff2d5c20a740944c8e0ba5f706f -->",
+  "package_name": "ROOT",
+  "title": "New package: ROOT v0.3.0"
+}

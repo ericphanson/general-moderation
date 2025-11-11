@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-03-22T06:09:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-04-05T07:08:20Z",
+  "pr_number": 57060,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85AD9Cv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 10 existing packages.\n  1. Similar to Tau. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Tar. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Why. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Org. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Tk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Fri. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Turf. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to Taro. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to Term. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-22T06:13:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57060#issuecomment-1074778287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AD-wj",
+      "author": {
+        "login": "tkf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think \"Try\" is the best word describing the philosophy behind this package. For example, quoting the first paragraph in a discussion section [Focus on *actions*; not the types](https://github.com/tkf/Try.jl#focus-on-actions-not-the-types):\r\n\r\n> Try.jl aims at providing generic tools for composing failable procedures.  This emphasis on performing *actions* that can fail contrasts with other [similar Julia packages](https://github.com/tkf/Try.jl#similar-packages) focusing on types and is reflected in the name of the package: *Try*.  This is an important guideline on designing APIs for dynamic programming languages like Julia in which high-level code should be expressible without managing types.\r\n\r\nGiven that there are some broader interests in this type of error handling  https://github.com/JuliaLang/julia/discussions/43773, I'm also willing to hand this over to a larger organization once this package is sufficiently matured and tested in the wild (e.g., to JuliaLang if `Base` needs to use something like this).\r\n\r\n[noblock]",
+      "createdAt": "2022-03-22T06:26:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57060#issuecomment-1074785315",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Try\n- Repository: https://github.com/tkf/Try.jl\n- Created by: @tkf\n- Version: v0.1.0\n- Commit: 390646d2f152e73b214ef4a3bf3f7ff9ae921329\n- Reviewed by: @tkf\n- Reference: https://github.com/tkf/Try.jl/commit/390646d2f152e73b214ef4a3bf3f7ff9ae921329#commitcomment-69270411\n- Description: Zero-overhead and debuggable error handling\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60d2884df88e57fdf3e5927d8b463a94d517c87d88d2af99f14a561efcdff20eb8549b34111aac78c13ddc54d921a5d582556e428893fc726244ac83b291c7556c407747bebce0f9819b85cc5d3123b4132630a479fd6a112c0e5dd3d7342f65eb269b90a612e2f9d84fe3d6d46fc0828f9d69814d111edc1e4879ce91fab96cf8d6b18de82d60b77cc0adae07647a430c485583ad3e2f03ee6d9b81b62b2bf3f -->",
+  "package_name": "Try",
+  "title": "New package: Try v0.1.0"
+}

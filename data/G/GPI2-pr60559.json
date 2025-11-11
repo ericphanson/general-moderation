@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-05-19T13:55:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-05-22T15:28:04Z",
+  "pr_number": 60559,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85DdM3i",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to GRIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.83 is at or below cutoff of 2.50.\n  2. Similar to GBIF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-19T13:58:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60559#issuecomment-1131728354",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DdSgD",
+      "author": {
+        "login": "sloede"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We followed the [package naming guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines-1) in choosing the package name, insofar as\r\n> Packages that wrap external libraries or programs should be named after those libraries or programs.\r\n\r\nThis package is a Julia wrapper for the [GPI-2](https://github.com/cc-hpc-itwm/GPI-2) library, thus naming it GPI2.jl seemed like the closest possible fit. I thus kindly ask to merge it anyways. [noblock]",
+      "createdAt": "2022-05-19T14:13:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60559#issuecomment-1131751427",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: GPI2\n- Repository: https://github.com/hlrs-tasc/GPI2.jl\n- Created by: @sloede\n- Version: v0.1.0\n- Commit: 94205ba4ff2d57d650f0d0e43b50bfeb3d6c224d\n- Reviewed by: @sloede\n- Reference: https://github.com/hlrs-tasc/GPI2.jl/commit/94205ba4ff2d57d650f0d0e43b50bfeb3d6c224d#commitcomment-74030639\n- Description: GPI2.jl is a lightweight Julia wrapper for the GASPI-conforming GPI-2 library\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67b1b4289e8cdf2dd61cc1a7b73c70b39e0e32333f7aa93cffcccb03fb9b8355b30adf5d78333821067098bff58de7f9c9e5a0c2e8d621633503655d386387d6baf87bb1e7c36b4669ca0eb1f980fe279b849b080116a5a1018d0fac8dba7eb1b4162fe2d2e6c0302c7663320666325738cf4f811e5905d948bc1fcd8158cb681043f2ed3c801f7d7eab799fea8902e67e1552a152d917686ee0e767eefd603aba991b7cc774dffc05f993d9d502e1d99 -->",
+  "package_name": "GPI2",
+  "title": "New package: GPI2 v0.1.0"
+}

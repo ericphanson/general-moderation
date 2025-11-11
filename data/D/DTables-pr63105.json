@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-06-25T19:14:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-07-06T20:10:59Z",
+  "pr_number": 63105,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85FhQvC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to Tables. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to MDTable. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to DBFTables. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-25T19:17:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63105#issuecomment-1166347202",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GIcpP",
+      "author": {
+        "login": "krynju"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey @giordano , could you please merge this? Would be nice to have it for the JuliaCon video\r\n[noblock]",
+      "createdAt": "2022-07-06T19:40:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63105#issuecomment-1176619599",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: DTables\n- Repository: https://github.com/JuliaParallel/DTables.jl\n- Created by: @krynju\n- Version: v0.1.0\n- Commit: 89a7d2c4b5ba51a9d375e3ddc05e7a9871d1b4b2\n- Reviewed by: @krynju\n- Reference: https://github.com/JuliaParallel/DTables.jl/commit/89a7d2c4b5ba51a9d375e3ddc05e7a9871d1b4b2#commitcomment-76982983\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd630d79d25ddd2c2254df5aca2e75392a0ab249a9f8b1a07394269d2ba72cafe9af2e2d35d65bb8d9ceebe2ea3c770d0b5d432c4a0c17efc5aba144f9c8efea67aa426d426c6d41e3d83c18d452b79dbfdc062ff3fb41599388a16ce6693ba03087d37615c8e9f58d89be39411a9a47ccf16f4dc2f474bbec719deb8ccb1966d4543c921ff7abc584e2c72701334727920e0f627d6ed7c175a237a9e61ba4754aa8933a1be629fe4bc1742b2164b940e0c -->",
+  "package_name": "DTables",
+  "title": "New package: DTables v0.1.0"
+}

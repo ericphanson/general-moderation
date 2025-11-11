@@ -1,0 +1,74 @@
+{
+  "created_at": "2024-01-04T11:13:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-01-26T21:40:13Z",
+  "pr_number": 98194,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85v37nu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-04T11:22:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98194#issuecomment-1876933102",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v48r2",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name ParticleInCellAdvection would better meet the naming guidelines \r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n>  -  It's ok to say USA if you're talking about the USA.\r\n>  -  It's not ok to say PMA, even if you're talking about positive mental attitude.",
+      "createdAt": "2024-01-04T14:37:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98194#issuecomment-1877199606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x3A9r",
+      "author": {
+        "login": "albert-de-montserrat"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the name suggestion. However, PiC is a well known acronym for Particles-in-Cell, and it's a product derived from the [JustRelax.jl](https://github.com/PTsolvers/JustRelax.jl) pkg, so that we would prefer to keep the name of this package as it is. Furthermore, we have already used/advertised this software in several conference talks/seminars, so we also want to avoid confusion with a rebranding.",
+      "createdAt": "2024-01-25T13:43:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98194#issuecomment-1910247275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yANkK",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for the background. This seems reasonable.",
+      "createdAt": "2024-01-26T20:31:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98194#issuecomment-1912658186",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: JustPIC\n- Repository: https://github.com/JuliaGeodynamics/JustPIC.jl\n- Created by: @albert-de-montserrat\n- Version: v0.1.0\n- Commit: 19e5c71104482fa5b6ddac02f4ee0d39340c4974\n- Reviewed by: @albert-de-montserrat\n- Reference: https://github.com/JuliaGeodynamics/JustPIC.jl/commit/19e5c71104482fa5b6ddac02f4ee0d39340c4974#commitcomment-136203373\n- Description: Particle-in-Cell advection\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d4a8c77cb2ebeb6ba77c6a728b66438ac9d690799d49c01843f834c6ed48d557e1268fddac61208511d0e822248cb00e42b395dd03f6b52893fefe9ae5327ec9b1ef09e5bf7651fb7841d47c4ffe6d659e9f25ca5706c03ecb361a8fe887957f0bbdd4cb0bcb080c0fffd608b4b0bc8105e9c7d02ae788b07546e55921a7160a18584636c7da599930ba20c9523d88b3d50ceb002a07dbdeaccdd828cfec90b5e30e8fcc746cea14fc9e58867a6dde6d -->",
+  "package_name": "JustPIC",
+  "title": "New package: JustPIC v0.1.0"
+}

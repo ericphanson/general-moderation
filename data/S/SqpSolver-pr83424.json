@@ -1,0 +1,51 @@
+{
+  "created_at": "2023-05-12T04:06:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-06-02T19:44:06Z",
+  "pr_number": 83424,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cGBgZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SatSolver. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-12T04:14:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83424#issuecomment-1545082905",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cKKPL",
+      "author": {
+        "login": "kibaekkim"
+      },
+      "authorAssociation": "NONE",
+      "body": "AutoMerge found that this package name `SqpSolver` is similar to an existing name `SatSolver`. I believe the two names are sufficiently different for people to distinguish. ",
+      "createdAt": "2023-05-12T19:10:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83424#issuecomment-1546167243",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SqpSolver\n- Repository: https://github.com/exanauts/SqpSolver.jl\n- Created by: @kibaekkim\n- Version: v0.1.0\n- Commit: 8bcae2a1e0c259a7845526292096a3222ccdb0b5\n- Reviewed by: @kibaekkim\n- Reference: https://github.com/exanauts/SqpSolver.jl/issues/14#issuecomment-1545076982\n- Description: A sequential quadratic programming solver in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e2c81aa3282906f51b291b59872f7b687d1421f902d31fb4e28b052cbaf281fdb24fb1f5468b4d8a257b34e59469b0136acc8af96533a556074562b6ac19160814bf83903d75fe6c83b356127665e30a225c9cb0bc0e1c9f89d3ec7f508087b54f435f49000513eecb1910b3adc9c0521d50b64b688a82ea928ccfc48cabd180 -->",
+  "package_name": "SqpSolver",
+  "title": "New package: SqpSolver v0.1.0"
+}

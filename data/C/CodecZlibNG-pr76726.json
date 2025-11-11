@@ -1,0 +1,185 @@
+{
+  "created_at": "2023-01-31T12:57:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-03T15:43:15Z",
+  "pr_number": 76726,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85UD3wF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to CodecZlib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-31T13:00:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1410300933",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UD84_",
+      "author": {
+        "login": "Drvi"
+      },
+      "authorAssociation": "NONE",
+      "body": "CodecZlibNG.jl and CodecZlib.jl are as similar as are their underlying jll libs https://github.com/JuliaBinaryWrappers/Zlib_jll.jl and https://github.com/JuliaBinaryWrappers/ZlibNG_jll.jl. FWIW, the two packages can be used interchangeably.",
+      "createdAt": "2023-01-31T13:11:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1410321983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UYSvJ",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "A bit unfortunate to duplicate all the code by making a fork, no? Would it be possible to just change CodecZlib so that you can change the underlying lib with e.g. Preferences.jl?",
+      "createdAt": "2023-02-03T10:33:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1415654345",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VCTlB",
+      "author": {
+        "login": "Drvi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Perhaps. The ccall code in CodecZlib.jl and CodecZlibNG.jl is very similar. yet not identical (perhaps if we managed to build zlib-ng in zlib-compatibility mode then the ccalls could be identical). I've never used Preferences.jl but it feels like it would increase the effort needed to use the zlib-ng compared to just having a separate package.",
+      "createdAt": "2023-02-11T09:06:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1426667841",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85V5KMF",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> A bit unfortunate to duplicate all the code by making a fork, no?\r\n\r\nI agree that keeping all things in one CodecZlib codebase is an attractive idea. However, I don't think the maintenance issue should block the registration of this package; after all, one could always rename it to, e.g., `ZlibNG` to work around it, right? If people later find it troublesome with two packages, they can decide to join forces and deprecate one over the other.\r\n\r\nOne other small thing that might be worth mentioning: CodecZlib is a dependency of 1/4-ish of the entire Julia ecosystem, so if anything, making it minimized might be a good idea.",
+      "createdAt": "2023-02-23T00:23:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1441047301",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Whg-D",
+      "author": {
+        "login": "Drvi"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed in favor of https://github.com/JuliaRegistries/General/pull/78808",
+      "createdAt": "2023-03-02T10:16:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1451626371",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WiIIK",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yea I don't object to the name, just pointed out that it might be good to think twice before essentially registering a duplicate package. Wouldn't this package name be better and more consistent than https://github.com/JuliaRegistries/General/pull/78808?",
+      "createdAt": "2023-03-02T12:25:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1451786762",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Wimbp",
+      "author": {
+        "login": "Drvi"
+      },
+      "authorAssociation": "NONE",
+      "body": "I like this name a bit more but I didn't get any indication that this name is ok. Whichever helps getting the package to the registry is fine with me.",
+      "createdAt": "2023-03-02T14:01:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1451910889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WoyB1",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd merge this one if you have settled on this name, but perhaps you can revert the name change in the repo first to avoid confusion.",
+      "createdAt": "2023-03-03T13:26:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1453531253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Wozp3",
+      "author": {
+        "login": "Drvi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks, @fredrikekre, I reverted the rename :+1:",
+      "createdAt": "2023-03-03T13:31:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76726#issuecomment-1453537911",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: CodecZlibNG\n- Repository: https://github.com/Drvi/CodecZlibNG.jl\n- Created by: @Drvi\n- Version: v0.1.0\n- Commit: d147a6b2aa6829ee925e243b6d2caf7a9ec2b0a3\n- Git reference: HEAD\n- Description: zlib-ng codecs for TranscodingStreams.jl.",
+  "package_name": "CodecZlibNG",
+  "title": "New package: CodecZlibNG v0.1.0"
+}

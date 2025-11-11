@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-12-17T23:48:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-12-21T01:11:37Z",
+  "pr_number": 74308,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Q2qXc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to MHLib. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.85 is at or below cutoff of 2.50.\n  2. Similar to PGLib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-17T23:56:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74308#issuecomment-1356506588",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Q2qfv",
+      "author": {
+        "login": "pedromxavier"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nThis package is a JuMP wrapper for the C++ [MQLib](https://github.com/MQLib/MQLib) project and would be great if there were no changes to its name.\nCould someone merge this repository manually? Thanks!",
+      "createdAt": "2022-12-18T00:00:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74308#issuecomment-1356507119",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: MQLib\n- Repository: https://github.com/psrenergy/MQLib.jl\n- Created by: @pedromxavier\n- Version: v0.1.0\n- Commit: 2b3acc25c555264f6014c8ba555db56a36f726f1\n- Reviewed by: @pedromxavier\n- Reference: https://github.com/psrenergy/MQLib.jl/commit/2b3acc25c555264f6014c8ba555db56a36f726f1#commitcomment-93434400\n- Description: MQLib wrapper for JuMP (ft. Anneal.jl)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66f3c7eaed844b2f081529218d2482bf85f5d56f3a03b09a04270d6fe70195545a6bfcfef953be308bffbdd496b1e2ee8f9bb64c879599441a84a2fb9a83d71063a95118a550d29a2b27c6298e2750788b4ba753cfba870a6958e9b1e3f75bd48d5386996d2c1fa20d1ec0d830d94abd7e750ff5d1f16eef1467e2bf548b5c8a2809cf307436e718113484dbd3948d38a1db7cfa07da18ffbc93ee0c36c0ca7f215a4e271897797d2fcc32fffbe67afee -->",
+  "package_name": "MQLib",
+  "title": "New package: MQLib v0.1.0"
+}

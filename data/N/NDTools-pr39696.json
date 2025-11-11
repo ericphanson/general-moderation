@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-06-26T16:55:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-29T22:25:41Z",
+  "pr_number": 39696,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2OTAyOTkxOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 4 existing packages.\n  1. Similar to QXTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to IRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to NMRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to PDBTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-26T16:58:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39696#issuecomment-869029919",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2OTEyMjYwNw==",
+      "author": {
+        "login": "RainerHeintzmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\r\n> \r\n> * Package name similar to 4 existing packages.\r\n>   \r\n>   1. Similar to QXTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   2. Similar to IRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   3. Similar to NMRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   4. Similar to PDBTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> \r\n> Note that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\r\n> \r\n> After you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\r\n> \r\n> If you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\r\n> \r\n> Since you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\r\n> \r\n> If you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\r\n\r\nI prefer to keep the name, `ND` in `NDTool.jl` refers to multidimensional. Since `ND` is a two-letter acronym it is  not surprising that the Levenberg-distance is only two but this also holds for the clashing packages amongst each other. I do not think there is any change of confusion. So please merge anyway. ",
+      "createdAt": "2021-06-27T08:26:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39696#issuecomment-869122607",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: NDTools\n- Repository: https://github.com/RainerHeintzmann/NDTools.jl\n- Created by: @RainerHeintzmann\n- Version: v0.1.0\n- Commit: 1a87c9e3b15a73eb72000f887d25fe95a8222f53\n- Reviewed by: @RainerHeintzmann\n- Reference: https://github.com/RainerHeintzmann/NDTools.jl/commit/1a87c9e3b15a73eb72000f887d25fe95a8222f53#commitcomment-52701588\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64510347bab9c86b8e9ffe42cdb6eb0f68bb0cbc417b49cf49a1ba4786ce9d167c1c1483533d34a223d0d8548e12f36471a2141528a91c2c9fade812f85e79f6ec50c241ef37a4c43437701a0810be3fe8c601ec19f638a9cbd5fb2a012e82cc211fde49f2325f6ee25052ec20edd8ece8bdcc198369716b19bcc3d59731d92b6012e726580c46abfa28b7bffc804d3170e115c2cfdc3396bf1681a18e5739be481d2e2767b5c0fba832b56db247b81a1 -->",
+  "package_name": "NDTools",
+  "title": "New package: NDTools v0.1.0"
+}

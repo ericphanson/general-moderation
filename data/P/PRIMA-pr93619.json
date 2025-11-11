@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-10-18T00:49:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-10-18T12:06:43Z",
+  "pr_number": 93619,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pWL4p",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge \r\nThe PR https://github.com/JuliaRegistries/General/pull/92606 can be closed. We moved the package into the `libprima` organization.\r\nFor the name, we would like to keep `PRIMA.jl`.",
+      "createdAt": "2023-10-18T00:54:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93619#issuecomment-1767423529",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pWMWt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to ARFIMA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-18T00:56:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93619#issuecomment-1767425453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pZjSY",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name looks fine. It's matching the Fortran that it's wrapping, which is a convention we do allow. ",
+      "createdAt": "2023-10-18T12:04:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93619#issuecomment-1768305816",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pZkTn",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "And this package has been up for 2 weeks with https://github.com/JuliaRegistries/General/pull/92606 and other discussions, so I think it's good to go. People would've responded if they had qualms with the name, only the URL changed.",
+      "createdAt": "2023-10-18T12:06:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93619#issuecomment-1768309991",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ChrisRackauckas",
+  "body": "- Registering package: PRIMA\n- Repository: https://github.com/libprima/PRIMA.jl\n- Created by: @amontoison\n- Version: v0.1.1\n- Commit: 54054b2b32c391e3ab780fcde107ad91257e43f5\n- Reviewed by: @amontoison\n- Reference: https://github.com/libprima/PRIMA.jl/commit/54054b2b32c391e3ab780fcde107ad91257e43f5#commitcomment-130248013\n- Description: a Julia interface to PRIMA, a Reference Implementation for Powell's methods with Modernization and Amelioration\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6122253424aeb6098c13d3157b7b1ead9a0b1924b6f4d65cb0f5badd24086c83d37464f01e61d51a203b76e573cf7d9923ae8b54139e3d49609896f409df0e02e77c8b110238daeda13816d23d42d91969471d45b001288ca6f19498f4360a9ca1d6fdda070f7ec701cbea238a0e7f388b1d7a9410129c015d37923012cf724f837126f3e895659b0a8024525b358ce4282a83d647b5347c55da0e38e42a4e19bc27d01d96b33cc2a299ce0f6982629cb -->",
+  "package_name": "PRIMA",
+  "title": "New package: PRIMA v0.1.1"
+}

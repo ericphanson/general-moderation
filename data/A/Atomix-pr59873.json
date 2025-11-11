@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-05-07T16:20:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-05-07T19:04:20Z",
+  "pr_number": 59873,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85CxXJn",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Atom. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-07T16:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59873#issuecomment-1120236135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CxX6H",
+      "author": {
+        "login": "tkf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Is the Damerau-Levenshtein distance a hard limit? \"Atom\" and \"Atomix\" look and sound pretty different to me. Also, since Atom.jl is maintenance-only mode and two packages cover very different domains, I think the confusion would be very small.",
+      "createdAt": "2022-05-07T16:45:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59873#issuecomment-1120239239",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: Atomix\n- Repository: https://github.com/JuliaConcurrent/Atomix.jl\n- Created by: @tkf\n- Version: v0.1.0\n- Commit: 3cef91e976203437f70f5d551c83e9a0a716e62d\n- Reviewed by: @tkf\n- Reference: https://github.com/JuliaConcurrent/Atomix.jl/commit/3cef91e976203437f70f5d551c83e9a0a716e62d#commitcomment-73103510\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e9cf364d890013a48928fc1861e5c8ae0dc1639fcc68737d0300985f7b7ded1dec6bc8e1cec28a7566bac70fec714365421fc927a056a6caac4ce0c673776cc5f038a7eca3ad9101b0e95296907b429b56392ef84df6e19119e0958259ba78061a552e031c02ec15b0f436e9613568d127595ff0c8e04c91ad27c4c7057e88ef50032773168d23c8fbb0f67fde8f15eb74c3afbd42e60a05669e2535fbb5a78b80e9ace3f99a68ecaa77d8f36438b1ca -->",
+  "package_name": "Atomix",
+  "title": "New package: Atomix v0.1.0"
+}

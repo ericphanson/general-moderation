@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-03-09T13:07:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-13T11:45:57Z",
+  "pr_number": 79250,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85XJRM0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to CAOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to QOI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-09T13:14:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79250#issuecomment-1462047540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XJUOG",
+      "author": {
+        "login": "timbode"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name `QAOA.jl` seems justified since the Quantum Approximate Optimization Algorithm (QAOA) is a well-established acronym in the quantum computing community. Therefore, I would like to keep it.",
+      "createdAt": "2023-03-09T13:21:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79250#issuecomment-1462059910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XJ8As",
+      "author": {
+        "login": "timbode"
+      },
+      "authorAssociation": "NONE",
+      "body": "I posted on Slack about the manual merge - how about that?\r\n",
+      "createdAt": "2023-03-09T15:11:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79250#issuecomment-1462222892",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XXTtq",
+      "author": {
+        "login": "timbode"
+      },
+      "authorAssociation": "NONE",
+      "body": "Do I have to do anything more here?",
+      "createdAt": "2023-03-13T08:46:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79250#issuecomment-1465727850",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: QAOA\n- Repository: https://github.com/FZJ-PGI-12/QAOA.jl\n- Created by: @timbode\n- Version: v1.0.0\n- Commit: f0167a5cdd88acb3a6f7592a6f7549192fdc625b\n- Reviewed by: @timbode\n- Reference: https://github.com/FZJ-PGI-12/QAOA.jl/issues/23#issuecomment-1462137963\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598cd86cac93b5f325d8bf53b2e918544af6a1d86015109672940ab887ab5c47dae38514f536039c583b3901dc574f18368fb99a125afb4150d1701ee2078c7bfe09287c8bc5a9e61de561538301e1a81503ff413478ab5616e38a9b9894c3fb893589b69c1efbb5617879bef737e176fde16551701cc987949e6a43d5d82a32860 -->",
+  "package_name": "QAOA",
+  "title": "New package: QAOA v1.0.0"
+}

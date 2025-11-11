@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-03-19T22:46:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-31T17:06:17Z",
+  "pr_number": 79908,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85X8TFo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DocStringExtensions, STMMRunner, TransitionMatrices\n- Package name similar to 2 existing packages.\n  1. Similar to MSTM4Runner. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.19 is at or below cutoff of 2.50.\n  2. Similar to STMMRunner. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-19T22:52:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79908#issuecomment-1475424616",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85X8UWd",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Could you please help me overwrite the naming check? Both conflicted packages are of mine, and are subpackages belonging to the parent package `STMMRunner.jl`.",
+      "createdAt": "2023-03-19T23:12:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79908#issuecomment-1475429789",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85X8nqU",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks!",
+      "createdAt": "2023-03-20T02:11:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79908#issuecomment-1475508884",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Y8iYN",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Can this be merged?",
+      "createdAt": "2023-03-31T16:56:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79908#issuecomment-1492264461",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: MSTM3Runner\n- Repository: https://github.com/JuliaRemoteSensing/STMMRunner.jl\n- Created by: @lucifer1004\n- Version: v0.1.0\n- Commit: b3a664e6d3b6886f513db69e866e9ba89b8255ee\n- Reviewed by: @lucifer1004\n- Reference: https://github.com/JuliaRemoteSensing/STMMRunner.jl/issues/9#issuecomment-1492263270\n- Description: Runners for several STMM models\n<!-- b6773dd5469382edf93528742e9b6ef2ce47389553c034fccdf1bd3e8a6430f6506fa40f44c784f6e2f005291cfef5d7548ee02ef344cf20d810b90428da95d704d3fd8345443e0fbe0b2f30832cfedef58552aaa40352f0b7fad32984f2494474727e8f78fe617d83d4c9cd8d89a1a42ca8930e4439d0d7edc9ea89b72738f5bbec9fb0825ec794d95235a573df125042f5fa33ca284f454fbc8680b1c083f77c861d0c8416b255382cee668e9c748732b2f44c7020035a918ec6af23e44d05d2ca132075eca8224243a77bab781434 -->",
+  "package_name": "MSTM3Runner",
+  "title": "New package: MSTM3Runner v0.1.0"
+}

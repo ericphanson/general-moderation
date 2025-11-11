@@ -1,0 +1,73 @@
+{
+  "created_at": "2021-03-15T00:04:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-03-18T19:36:23Z",
+  "pr_number": 31965,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5OTAwNzc1Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to MeshArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.58 is at or below cutoff of 2.50.\n  2. Similar to FastArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to DiskArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-15T00:07:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/31965#issuecomment-799007756",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5OTAwOTExMA==",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nCan this be merged please? I think the name is clearly distinctive.",
+      "createdAt": "2021-03-15T00:13:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31965#issuecomment-799009110",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5OTM5NDMzOA==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It’s kind of funny how similar the letters are but how different the words look on this one. \r\n\r\nI think it might be that we (or at least I) read/parse “Mask” as a single token instead of a sequence of letters, and it has a very different sound and meaning to e.g. “Mesh” even if they share some letters in the same places.\r\n\r\n[noblock]",
+      "createdAt": "2021-03-15T12:52:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31965#issuecomment-799394338",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: MaskArrays\n- Repository: https://github.com/cscherrer/MaskArrays.jl\n- Created by: @cscherrer\n- Version: v0.1.0\n- Commit: db6807154438b64b86858b6aeac3bae289c2fc1b\n- Reviewed by: @cscherrer\n- Reference: https://github.com/cscherrer/MaskArrays.jl/commit/db6807154438b64b86858b6aeac3bae289c2fc1b#commitcomment-48243558\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd628557e89dc15982897d279307653316cf806b4febc9f849bb147955f92da6862768a917bc0f657c8678dacc994523fe9791d4c516755cfd32020fbfa01d5c2a165914b0248cceb2eec89b314da4c231de567efb34484604fce767c01f3b73726237bfa2ad8d597227381099160fc457101742e45b663990079c55d4b9c2713f137ebb765ba0c0ca9168018589ce1b3171877f06be3a12792c47ee2a3c95f2b07668bbb2c601d665f732c0a217338942f -->",
+  "package_name": "MaskArrays",
+  "title": "New package: MaskArrays v0.1.0"
+}

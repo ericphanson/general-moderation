@@ -1,0 +1,89 @@
+{
+  "created_at": "2023-07-17T14:05:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-29T15:16:23Z",
+  "pr_number": 87627,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hpWbl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to MonotoneSplines. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-17T14:10:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87627#issuecomment-1638229733",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iQM71",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] @giordano The package name is admittedly similar to MonotoneSplines (was being registered pretty much in parallel), but maybe that's Ok, since the packages do very similar things?",
+      "createdAt": "2023-07-24T18:40:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87627#issuecomment-1648414453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iRfIN",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The check is mainly for preventing malicious typosquatting, which isn't the case here, so I'm going to add the labels for merging this, but I think the names are indeed a bit confusing, it took me a couple of seconds to spot the difference 😬 ",
+      "createdAt": "2023-07-24T23:21:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87627#issuecomment-1648751117",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iUv5F",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thanks @giordano !",
+      "createdAt": "2023-07-25T10:52:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87627#issuecomment-1649606213",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iwSjL",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks @giordano !",
+      "createdAt": "2023-07-29T18:40:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87627#issuecomment-1656826059",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: MonotonicSplines\n- Repository: https://github.com/bat/MonotonicSplines.jl\n- Created by: @oschulz\n- Version: v0.1.0\n- Commit: f0dcf7a2de1e7a8e14308c1b32cf39c02347c3ae\n- Reviewed by: @oschulz\n- Reference: https://github.com/bat/MonotonicSplines.jl/commit/f0dcf7a2de1e7a8e14308c1b32cf39c02347c3ae#commitcomment-122517041\n- Description: [WIP] High performance monotonic splines in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66fab20187ca60e7417fe230a45401fd0f3b6a24c48c4a5b85fd52c8c10bd5272cc5f06c57f03eb115d4f9f91b84ef568db636480e56ce8cda34de48181ce3ba314831a2e2db16b360bb4936b05430f8ddddca8e400ddc9f64d5884a7e774fcf2ebea16e7e027960ead750f886536fa70ac3adb7f7830d638310416203ec7df2ecb19d2d32e776ebd23c5c04ee7a25ea8b0ff58144058d47e2808663c330dcd22deaa683af82e6f3a841b170d9e3290bb -->",
+  "package_name": "MonotonicSplines",
+  "title": "New package: MonotonicSplines v0.1.0"
+}

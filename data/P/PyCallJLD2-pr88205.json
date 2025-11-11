@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-07-24T15:50:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-09-11T09:27:09Z",
+  "pr_number": 88205,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85iPYei",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to PyCallJLD. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-24T16:05:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88205#issuecomment-1648199586",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iP6_x",
+      "author": {
+        "login": "AP6YC"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nI would like to please preserve the name of this package because of how this package is to `JLD2.jl` what `PyCallJLD.jl` is to `JLD.jl`, which I advocate clarifies its purpose rather than confusing the user according to the package naming guidelines.",
+      "createdAt": "2023-07-24T17:45:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88205#issuecomment-1648340977",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PyCallJLD2\n- Repository: https://github.com/AP6YC/PyCallJLD2.jl\n- Created by: @AP6YC\n- Version: v0.1.0\n- Commit: bed1b1ff641a7b2eeb6092407e74bf86daf1e30c\n- Reviewed by: @AP6YC\n- Reference: https://github.com/AP6YC/PyCallJLD2.jl/commit/bed1b1ff641a7b2eeb6092407e74bf86daf1e30c#commitcomment-122531961\n- Description: An implementation of PyCallJLD for the JLD2 package, implementing a serializer for saving and loading PyCall objects.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> This is the first release of the `PyCallJLD2.jl` package, implementing a basic API for saving and loading `PyCall.PyObject`s with `JLD2` along with documentation and unit testing.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ea9c516ec9e44cdd588c545849aacfecbbc9342d68f1bf6a35d53a56efc74fd893d81f9bdcf27707dca6602c59ec019df40bebe80118697e7f8ff2ecbf921cbf501009f7d9134c94ba4ff6e523dfb2aa8e0b32b9d551b378fc2c8810fd365dcd0d210d25a7d939f1edb1b5cd1210119656ae24308875294c78971dcfc4f499e0da7c43adbc10bef0b65b4e82cd3f0a4ddddd5eaf857c5571e3e744a775de9ec91a4bedf9c51568ebc60bbf3e68aaf877 -->",
+  "package_name": "PyCallJLD2",
+  "title": "New package: PyCallJLD2 v0.1.0"
+}

@@ -1,0 +1,126 @@
+{
+  "created_at": "2020-12-10T18:29:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-12-13T23:15:40Z",
+  "pr_number": 26192,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0MjcxNDg5OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 3 existing packages.\n1. Similar to MCVI. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.67 is at or below cutoff of 2.50.\n2. Similar to MIDI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-12-10T18:39:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-742714898",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0MjczMDUzNg==",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano, could we make an exception here regarding package naming? I'm aware of the conventions - in this specific case, I hope the name \"MGVI\" may be acceptable: It's the official acronym of the algorithm implemented by the package (like FFTW, etc.). The original author of the algorithm (and it's Python implementation) has asked if the Julia package could use this name, for recognisability.\r\n",
+      "createdAt": "2020-12-10T19:05:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-742730536",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0Mjc0MDYyMQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm ok, but let's still wait the canonical three days for others to chime in",
+      "createdAt": "2020-12-10T19:23:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-742740621",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0Mjg2MDA0Mg==",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sure, of course! Thanks!",
+      "createdAt": "2020-12-10T23:14:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-742860042",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDA4MzM1NA==",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No objections, it seems. :-)  @giordano , good to merge?",
+      "createdAt": "2020-12-13T23:00:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-744083354",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDA4OTYyNQ==",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Merci, Mose!",
+      "createdAt": "2020-12-13T23:42:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-744089625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NDA5MjUxMQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You're welcome!",
+      "createdAt": "2020-12-14T00:00:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26192#issuecomment-744092511",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: MGVI\n- Repository: https://github.com/bat/MGVI.jl\n- Created by: @oschulz\n- Version: v0.1.0\n- Commit: ea8c0bc1465fbe058865c3e86eb0f5ca2610e8e3\n- Reviewed by: @oschulz\n- Reference: https://github.com/bat/MGVI.jl/commit/ea8c0bc1465fbe058865c3e86eb0f5ca2610e8e3#commitcomment-45002150\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64ca4a9b9b46ba8e0e3ce566d79287ffbac8a0be8848a62ec1bde87aa6263fcca7dc2afd8f71dc993e5b1cb0b3b5b45395ecc1a4165450b38a9ac57002ce08b57790d27d91458f48ea8039d8d7ad0c184657a6898a8e580d554b660db7d147bbc6cd8dbfcd3785eebbc7d8f5def1a730afe98d771126711413b44b8d0c022c2d6e0036c8dac9eebcceb93bd12dd05c96cfe9dfafbedc18d8c194ef4b305bf8d50 -->",
+  "package_name": "MGVI",
+  "title": "New package: MGVI v0.1.0"
+}

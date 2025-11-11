@@ -1,0 +1,111 @@
+{
+  "created_at": "2022-11-30T07:39:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-12-05T12:49:22Z",
+  "pr_number": 73147,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85PYP4G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to FileTrees. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-30T07:43:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1331756550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PY32x",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nThe reason the package couldn't be loaded was that `src/FileTypes.jl` doesn't exist. Renaming a package requires both a change of name in `Project.toml`, renaming the file loaded from `src`, and updating the name of the `module` created there.",
+      "createdAt": "2022-11-30T10:13:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1331920305",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PY8kR",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, I saw the failures, I will do the required changes and if I get stuck anywhere I will ask on slack.",
+      "createdAt": "2022-11-30T10:28:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1331939601",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PavQJ",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @GunnarFarneback \r\nNow, I have access to FileType Object but one of 4 public APIs provided by the lib is no longer working because of a type annotation issue \r\n`Is, matcher, is_extension_supported, is_mime_supported`\r\n\r\n`matcher` is no longer working because of a type annotation issue\r\n\r\nI am still a beginner to Julia, I need suggestions on the overall design  \r\n\r\nI made an abstract type for all other types like Image, Font, and serval other filetype but I am not able to use it like an abstract type I am just using it as a placeholder for types like Image and all \r\n\r\n`ERROR: MethodError: Cannot `convert` an object of type FileTypes.FileType.Images.ABSType.Type to an object of type FileTypes.FileType.ABSType.Type`\r\n\r\n```julia\r\njulia> using FileTypes\r\n\r\njulia> FileType\r\nFileTypes.FileType\r\n\r\njulia> FileType.Images.Image\r\nDict{FileTypes.FileType.Images.ABSType.Type, Function} with 12 entries:\r\n  Type(\"jpg\", MIME type image/jpeg)                => Jpeg\r\n  Type(\"cr2\", MIME type image/x-canon-cr2)         => CR2\r\n  Type(\"webp\", MIME type image/webp)               => Webp\r\n  Type(\"jp2\", MIME type image/jp2)                 => Jpeg2000\r\n  Type(\"bmp\", MIME type image/bmp)                 => Bmp\r\n  Type(\"dwg\", MIME type image/vnd.dwg)             => Dwg\r\n  Type(\"psd\", MIME type image/vnd.adobe.photoshop) => Psd\r\n  Type(\"ico\", MIME type image/vnd.microsoft.icon)  => Ico\r\n  Type(\"jxr\", MIME type image/vnd.ms-photo)        => Jxr\r\n  Type(\"png\", MIME type image/png)                 => Png\r\n  Type(\"gif\", MIME type image/gif)                 => Gif\r\n  Type(\"tif\", MIME type image/tiff)                => Tiff\r\n```\r\none more thing\r\nI want `FileType.Image` to return the above response instead of `FileType.Images.Image` if possible\r\n\r\nthis way I will be able to use `FileType.Image` instead of `FileType.Images.Image`. in the Types var of FileTypes.jl\r\n`const Types=(FileType.Images.Image,FileType.Audios.Audio,FileType.Fonts.Font,FileType.Videos.Video,FileType.Applications.Application,FileType.Archives.Archive)`\r\n\r\n\r\nHere is the link to the repo \r\nhttps://github.com/JuliaIO/FileTypes.jl",
+      "createdAt": "2022-11-30T16:13:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1332409353",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PcO2S",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nI can't say much about what would be a good design without understanding the functionality deeper but spontaneously I'd say that the module hierarchy is much too deep and repeatedly including a file which defines a module from within a variety of other modules is a bad idea as those modules will all be different ones.",
+      "createdAt": "2022-11-30T22:14:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1332800914",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PdFfE",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nThanks for the good pointers @GunnarFarneback , I have changed the overall design.",
+      "createdAt": "2022-12-01T01:36:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73147#issuecomment-1333024708",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: FileTypes\n- Repository: https://github.com/JuliaIO/FileTypes.jl\n- Created by: @Agent-Hellboy\n- Version: v0.1.0\n- Commit: ec2f472abba61537c37fff4aea9c1e06e7af1108\n- Reviewed by: @Agent-Hellboy\n- Reference: https://github.com/JuliaIO/FileTypes.jl/issues/2#issuecomment-1333036386\n- Description: Small and dependency-free Julia package to infer file and MIME type checking the magic numbers signature.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359818cce7091e3e4e1964a3ceaaeb0bd2c30a59bcf1349b55eef4f78bf0f5b6e91d224135f7a1ec698a8cc8532fe38ecafac296aec0b4e1ac8808b4359f4339ec03cf810b01b2c43d03eec66326b549674b04aa52b7fa67422b0ca512d3a70db59295bb79bd7cb8db144fbafd8df6cce12627f8cb1193b9a1acd3fa0e5aca499cd6 -->",
+  "package_name": "FileTypes",
+  "title": "New package: FileTypes v0.1.0"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-02-28T16:11:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-03-03T22:56:56Z",
+  "pr_number": 55640,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-2Tax",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 4 existing packages.\n  1. Similar to Badges. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Jaynes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to EBayes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Dates. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-28T16:17:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55640#issuecomment-1054422705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-2a6T",
+      "author": {
+        "login": "paschermayr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear maintainers of the general registry, could please consider this PR?\r\n\r\n`Baytes.jl` is a summary package that contains wrappers for `BaytesSMC.jl`, `BaytesFiltersl.jl`, `BaytesMCMC.jl`, and `BaytesPMCMC.jl`. The name is fine as the other mentioned packages have no similarities to either of my packages named above. I would also like to avoid writing overly long and complicated package names and just keep the shorter `Baytes` as it is.\r\n\r\nThank you for your time and effort!",
+      "createdAt": "2022-02-28T16:48:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55640#issuecomment-1054453395",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Baytes\n- Repository: https://github.com/paschermayr/Baytes.jl\n- Created by: @paschermayr\n- Version: v0.1.0\n- Commit: 9e5fc84db950576331caf63792b8d73ca3ee2f32\n- Reviewed by: @paschermayr\n- Reference: https://github.com/paschermayr/Baytes.jl/commit/9e5fc84db950576331caf63792b8d73ca3ee2f32#commitcomment-67642313\n- Description: Sampling library for Baytes modules\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f02bb66028b10328ae82ebadb2c823acf3bf02f753a071d11ac3aacb39614695f18067e4fe8e9db2c26745054244849a884ce4d8bea854d8f69dd3c81d81b8b0776e434b63ce7f0193a76ab975d1926532ffb9a2c0dd9fc57ecc84b0f2bb64011cd99b25e7d1bbea3002e09b4a36e2299db925fd9a4612408f6dc9776c9c003d634386816dfc8bb4c2609df78a2dcdec87c436444b5ae0cad40aff1f36e4f4092198e5afcd38fc7561e8718bac47004c -->",
+  "package_name": "Baytes",
+  "title": "New package: Baytes v0.1.0"
+}

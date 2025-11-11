@@ -1,0 +1,96 @@
+{
+  "created_at": "2021-08-04T18:06:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-07T23:53:28Z",
+  "pr_number": 42186,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841OAxo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to PyTSP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-04T18:10:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42186#issuecomment-892865640",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841RS8y",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@jkozdon please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2021-08-05T19:28:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42186#issuecomment-893726514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841RoM4",
+      "author": {
+        "login": "jkozdon"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano. I started addressing the compat earlier, but never finished.\r\n\r\nNot sure what to do about the name though. Do we need to come up with another name for the package? \r\n\r\n[noblock]",
+      "createdAt": "2021-08-05T21:13:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42186#issuecomment-893813560",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841RoeW",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Since this is a wrapper around an external library, the name should be fine.  The similarity check is ok, that's only to catch typosquatting",
+      "createdAt": "2021-08-05T21:15:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/42186#issuecomment-893814678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841TlQ0",
+      "author": {
+        "login": "jkozdon"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano ",
+      "createdAt": "2021-08-06T15:08:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42186#issuecomment-894325812",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PETSc\n- Repository: https://github.com/JuliaParallel/PETSc.jl\n- Created by: @jkozdon\n- Version: v0.1.2\n- Commit: a388bd6749a176a9068ba5358f725274fddf6005\n- Git reference: main",
+  "package_name": "PETSc",
+  "title": "New package: PETSc v0.1.2"
+}

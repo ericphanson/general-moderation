@@ -1,0 +1,88 @@
+{
+  "created_at": "2024-02-22T10:27:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-02-24T09:17:06Z",
+  "pr_number": 101425,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q850xlpp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-22T10:33:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101425#issuecomment-1959156329",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850xmU5",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> * Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\r\n> \r\n> * Name is not at least 5 characters long\r\n> \r\n> * Package name similar to 3 existing packages.\r\n>   \r\n>   1. Similar to NCEI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   2. Similar to DCCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   3. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nThese don't seem deal breakers to me, as we're just naming the package like the upstream library.\r\n\r\n[noblock]",
+      "createdAt": "2024-02-22T10:35:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101425#issuecomment-1959159097",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850ydz7",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nFor what it's worth I don't think this check counts as a name *similarity*, so it will need a manual merge.",
+      "createdAt": "2024-02-22T12:46:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101425#issuecomment-1959386363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850yrlL",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> For what it's worth I don't think this check counts as a name _similarity_, so it will need a manual merge.\r\n\r\nThere was also a similarity complaint, which is hidden now. But yeah, this will still need a manual merge. I'll wait a couple of days and do so.\r\n\r\n[noblock]",
+      "createdAt": "2024-02-22T13:20:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101425#issuecomment-1959442763",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "maleadt",
+  "body": "- Registering package: NCCL\n- Repository: https://github.com/JuliaGPU/NCCL.jl\n- Created by: @maleadt\n- Version: v0.1.0\n- Commit: 3a49978813c5d77a45b77a29d47a4f751b1aec78\n- Reviewed by: @maleadt\n- Reference: https://github.com/JuliaGPU/NCCL.jl/commit/3a49978813c5d77a45b77a29d47a4f751b1aec78#commitcomment-138930923\n- Description: A Julia wrapper for the NVIDIA Collective Communications Library.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ea9e953da8aaea056b42d759465510940bc37efa3e98d1a2eb4edd45e8e93cb211713a953bcd9ec33adcc12b269609ed75aac5f77820a9eac5d0f9da6390fbb836a7b73e987dd9285aba8fb3d164e08423577ff54369aff12c2c11d23c39bd8995be1917599c09950a7be5f7778755ead9cc4106cf002ff94bb3cbe9841ef328b321a6bf0a4a6041be7fa9bb970c6d3102a500dabfe6b334b803b21e5882e27e0f51647007b1ec7eb7a07a797567811a -->",
+  "package_name": "NCCL",
+  "title": "New package: NCCL v0.1.0"
+}

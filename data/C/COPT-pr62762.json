@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-06-21T08:05:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-06-24T10:45:10Z",
+  "pr_number": 62762,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85FObDJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to COBS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to CVXOPT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-21T08:09:50Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62762#issuecomment-1161408713",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FOsph",
+      "author": {
+        "login": "lschork2"
+      },
+      "authorAssociation": "NONE",
+      "body": "Concerning violation of naming guidelines:\r\n\r\n- The mathematical programming solver from Cardinal Operations is publicly known as [COPT](https://www.shanshu.ai/copt). We therefore would like to use this as name for the Julia package, despite that it is not at least 5 characters long.\r\n- We would also prefer to have all letters in uppercase. Because the Julia package is already public for two month, we don't want to change this anymore (and break existing users).",
+      "createdAt": "2022-06-21T09:14:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62762#issuecomment-1161480801",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: COPT\n- Repository: https://github.com/COPT-Public/COPT.jl\n- Created by: @lschork2\n- Version: v1.0.0\n- Commit: 9960e0b13593b625ab7199fdd61c02e4b76a45c3\n- Reviewed by: @lschork2\n- Reference: https://github.com/COPT-Public/COPT.jl/commit/9960e0b13593b625ab7199fdd61c02e4b76a45c3#commitcomment-76590214\n- Description: Julia interface for COPT (Cardinal Optimizer)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6175084223550a8486cbdaa38debd2c51f11fa796422a208aceb0022eed341bfe97efb67b1db974c7be0b0b16be08d136b0478874e3ce4cd1eed66518ef31802e97f200b57cf413e97b090caf92807c8eaacd230070fd45b0a63554390ceb271a2979544734e7ea62e1559ec162e85805403652fafe88df68a60dd66fcd8d2f0d26015abbe4e3913f391f7e5d90f2cb0644eb61068be239599cc045f2805e713f9a733ef3f2845401fae44daed4f3cbb4 -->",
+  "package_name": "COPT",
+  "title": "New package: COPT v1.0.0"
+}

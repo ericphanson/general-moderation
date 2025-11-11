@@ -1,0 +1,239 @@
+{
+  "created_at": "2021-04-03T08:12:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-26T15:50:50Z",
+  "pr_number": 33477,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMjgzMjg5MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 1 existing package.\n  1. Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-04-03T08:15:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-812832890",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMjg4NTkwMw==",
+      "author": {
+        "login": "triztian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi! this is my first package, the auto merge failed because of the following:\r\n\r\n---\r\n1. Name is not at least five characters long\r\n2. The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of     breaking releases: EzXML, ZipFile\r\n3. Package name similar to 1 existing package.\r\n  Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n---\r\n\r\nI think 1) and 3) should not be enforced because the `*.docx` extension is a widely know format produced by MS Word and Libre and Open office suites. I don't think adding a `Document` or some other suffix or prefix so that the package is named `DocxDocument` or `DocumentDocx` or `WordDocx` would disambiguate it any further.\r\n\r\nFor 2) I'll be pushing an update to add an upper bound to the `[compat]` section of those packages, after I add that section should I update this PR's commit hash? or should I create a new one?",
+      "createdAt": "2021-04-03T16:06:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-812885903",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxNDQ5ODU0Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> For 2) I'll be pushing an update to add an upper bound to the [compat] section of those packages, after I add that section should I update this PR's commit hash? or should I create a new one?\r\n\r\nFix the compat bounds, then trigger registration again without changing version number, that will automatically update this pull request",
+      "createdAt": "2021-04-06T23:31:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-814498546",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNTIxMzM4OA==",
+      "author": {
+        "login": "triztian"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator ",
+      "createdAt": "2021-05-08T08:39:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-835213388",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNTIxMzQwMA==",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "An unexpected error occurred during registration.",
+      "createdAt": "2021-05-08T08:39:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-835213400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNTIyNTcxMg==",
+      "author": {
+        "login": "triztian"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Hope everything has been alright! its been a while but after fixing the compat issues AutoMerge failed with the following message:\r\n\r\n```\r\nPackage name similar to 1 existing package.\r\n1. Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n```\r\n\r\nAnd while I agree that the package name is short, I think that the name Docx is not ambiguous at all because `*.docx` is a well known file extension used my Microsoft Word, LibreOffice Writer and OpenOffice Writer. Since this is the only remaining issue I think that the package registry should be merged manually.",
+      "createdAt": "2021-05-08T09:00:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-835225712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNTIyOTg2NA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You're always missing\r\n\r\n> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: EzXML, ZipFile ",
+      "createdAt": "2021-05-08T09:07:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-835229864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0ODMwMzQ5NQ==",
+      "author": {
+        "login": "triztian"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Thank you for your patience, I think I've finally fixed the upper bound issues ... took me a while to figure out from the docs.\r\n\r\nI think the only one which requires manual intervention is the check for the name.",
+      "createdAt": "2021-05-25T22:11:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-848303495",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0ODMyMDU3NQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I think I've finally fixed the upper bound issues ... took me a while to figure out from the docs.\r\n\r\nI don't think so, the automerge comment always shows\r\n\r\n> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: EzXML, ZipFile\r\n\r\nsince April 3rd, it never changed since then",
+      "createdAt": "2021-05-25T22:53:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-848320575",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MjM1MzExOA==",
+      "author": {
+        "login": "brenhinkeller"
+      },
+      "authorAssociation": "NONE",
+      "body": "@triztian you'll need to trigger registrator by commenting `@juliaregistrator register`, *not here*, but in a comment on the commit in which you've fixed the upper bound issue, e.g. https://github.com/triztian/Docx.jl/commit/208f7ebeb88146b9f82d816d96d8999f07973010\r\n\r\nI'm actually a bit unsure if the specification you use there with the `>=` and `<` is valid (c.f. https://pkgdocs.julialang.org/v1.6/compatibility/) but you can give it a try.\r\n\r\nedit: actually, I'm pretty sure there are infinitely many breaking releases in the set `[0.3.9, 1.0)`, regardless of syntax, because 0.x releases are breaking by SemVer, and there are infinitely many possible 0.x releases between 0.3 and 1.0.\r\n\r\nGiven what the current versions are for each package, I might suggest something along the lines of simply\r\n```\r\nZipFile = \"0.3\" \r\nEzXML = \"1\"\r\n```\r\ni.e., all non-breaking releases in the 0.3.x series for the former, and all non-breaking releases in the 1.x.x series for the latter.\r\n\r\n[noblock]",
+      "createdAt": "2021-06-01T18:32:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-852353118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MjM1MzEyNA==",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Error while trying to register: **Register Failed**\n@brenhinkeller, it looks like you are not a publicly listed member/owner in the parent organization (JuliaRegistries).\nIf you are a member/owner, you will need to change your membership to public. See [GitHub Help](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership)",
+      "createdAt": "2021-06-01T18:32:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-852353124",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MjM1MzgzNA==",
+      "author": {
+        "login": "brenhinkeller"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hah, I thought quoting would stop registrator from thinking I meant it here but I guess not\r\n\r\n[noblock]",
+      "createdAt": "2021-06-01T18:33:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-852353834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MjM1OTAwNA==",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Error while trying to register: **Register Failed**\n@brenhinkeller, it looks like you are not a publicly listed member/owner in the parent organization (JuliaRegistries).\nIf you are a member/owner, you will need to change your membership to public. See [GitHub Help](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership)",
+      "createdAt": "2021-06-01T18:42:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-852359004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MjUzOTk2OQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I'm actually a bit unsure if the specification you use there with the >= and < is valid (c.f. pkgdocs.julialang.org/v1.6/compatibility) but you can give it a try.\r\n\r\nThey should _**not**_ be used in the registry, because they allow infinite-many breaking changes.  You have to explicitly list all compatible breaking changes of the dependencies.\r\n\r\n[noblock]",
+      "createdAt": "2021-06-01T22:55:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-852539969",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2NzM1MzU1Mg==",
+      "author": {
+        "login": "triztian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @giordano I think the upper bound issues have been finally resolved, from the looks of the error message [here](https://github.com/JuliaRegistries/General/pull/33477/checks?check_run_id=2901758746) it seems like we're back to the naming being to similar to `Dolo` which I believe requires manual intervention from a registry admin.\r\n\r\nThank you for the patience and @brenhinkeller for the details and pointers so far!",
+      "createdAt": "2021-06-24T05:47:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33477#issuecomment-867353552",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Docx\n- Repository: https://github.com/triztian/Docx.jl\n- Created by: @triztian\n- Version: v0.1.0\n- Commit: ba144c6a41865e0d5e2be41189801eb96ff7b849\n- Git reference: main\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Alpha and minimally usable version for reading Docx\n> NOTICE: THIS SOFTWARE IS UNDER DEVELOPMENT AND ITS API IS NOT YET STABLE\n<!-- END RELEASE NOTES -->",
+  "package_name": "Docx",
+  "title": "New package: Docx v0.1.0"
+}

@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-01-02T22:39:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-01-11T20:57:42Z",
+  "pr_number": 74950,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85RnSLA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-02T22:43:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74950#issuecomment-1369252544",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Rsdd8",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I noticed you changed the name from NURBS to Nurbs here. I think this is a case where the fully upper-case name is better (I assume you made the change to appease the automated checks).\r\n\r\n[noblock]",
+      "createdAt": "2023-01-04T08:22:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74950#issuecomment-1370609532",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Rsmgj",
+      "author": {
+        "login": "HoBeZwe"
+      },
+      "authorAssociation": "NONE",
+      "body": "I guess you are right. I will revert the changes and start the registering process again. Thank you for the fast feedback!\r\n\r\n[noblock]",
+      "createdAt": "2023-01-04T09:04:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74950#issuecomment-1370646563",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SOM6W",
+      "author": {
+        "login": "HoBeZwe"
+      },
+      "authorAssociation": "NONE",
+      "body": "Is a manual merge now justified? Or is there anything else I need to do?\r\n\r\nI guess the question about the package name is settled: all upper case letters make sense here since the abbreviation NURBS is the established name for non-uniform rational B-splines as well as curves and surfaces based on these splines.",
+      "createdAt": "2023-01-11T20:36:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74950#issuecomment-1379454614",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: NURBS\n- Repository: https://github.com/HoBeZwe/NURBS.jl\n- Created by: @HoBeZwe\n- Version: v0.3.0\n- Commit: 899b38e3273791ed3ff9ceeac44bd3839de57ed8\n- Reviewed by: @HoBeZwe\n- Reference: https://github.com/HoBeZwe/NURBS.jl/commit/899b38e3273791ed3ff9ceeac44bd3839de57ed8#commitcomment-95000714\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f67a5cb84fe37af43117856a2911371c581bda7f67aafdb0f88f94954d5098df5f2bb1a80abcef85271f28f7e7b5f87c8ee6d45addccfde5685128f04f9d5920463d8bb3f1554c84b5f04858828b991eab03fa70a5042722273835f38cc8936b2cfc3ed5b9004346c9d3a70fcd0cfaf6a036279ad9febe663c371bad0658191cdd3cbdc9a2e712ea69091e9b75f758032a8f3eba52e25d6898989df5dbcc2206ff83be6104ffa0eaebf793c95e9b0ece -->",
+  "package_name": "NURBS",
+  "title": "New package: NURBS v0.3.0"
+}

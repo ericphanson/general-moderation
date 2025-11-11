@@ -1,0 +1,155 @@
+{
+  "created_at": "2023-08-12T01:03:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-24T13:33:41Z",
+  "pr_number": 89476,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85j33Bv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to JDBC. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.43 is at or below cutoff of 2.50.\n  2. Similar to MFCC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-12T01:08:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1675587695",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j37CV",
+      "author": {
+        "login": "williamfgc"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nThe package name JACC is very different from the above mentioned JDBC, MFCC, ECC (very little chance to human error mixing package name)\r\nACC is taken from OpenACC, but also the package can't have Julia in the name so JACC is a good compromise and well-known in the targeted HPC user community. The LLVM implementation is called CLACC after Clang and ACC.\r\nWe submitted a paper and did a JuliaCon presentation with the repo name using JACC.jl which is also unique name in the Julia Registry.\r\nAccepting this name would be really appreciated in our efforts to provide a stack in HPC.",
+      "createdAt": "2023-08-12T01:41:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1675604117",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j39V5",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It would be helpful for the README to have a little bit more information in it by the time we merge - perhaps some of the stuff you mentioned in here, and some relevant links.",
+      "createdAt": "2023-08-12T01:56:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1675613561",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j39iY",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Email says ornl.com - shouldn't it be ornl.gov?",
+      "createdAt": "2023-08-12T01:58:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1675614360",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j4EOv",
+      "author": {
+        "login": "williamfgc"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nThanks @ViralBShah for the great feedback.\r\n\r\n1. I added more context in the README file as suggested.\r\n2. Fixed the email issue (thanks for bringing this up).",
+      "createdAt": "2023-08-12T02:51:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1675641775",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kbfCX",
+      "author": {
+        "login": "williamfgc"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] \r\n@ViralBShah just a friendly reminder that this is ready with the changes for merging. Thanks a lot!",
+      "createdAt": "2023-08-19T11:52:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1684926615",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kbgjN",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "One of the CI jobs is failing. I have updated. Let's see.",
+      "createdAt": "2023-08-19T12:25:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1684932813",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85k1Amu",
+      "author": {
+        "login": "williamfgc"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nThanks @ViralBShah ! CI runners are now good! ",
+      "createdAt": "2023-08-24T12:51:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89476#issuecomment-1691617710",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ViralBShah",
+  "body": "- Registering package: JACC\n- Repository: https://github.com/JuliaORNL/JACC.jl\n- Created by: @williamfgc\n- Version: v0.0.1\n- Commit: c79a3573c74c1cd4845a7d33970217c5504eec1f\n- Git reference: v0.0.1\n- Description: CPU/GPU parallel performance portable layer in Julia via functions as arguments",
+  "package_name": "JACC",
+  "title": "New package: JACC v0.0.1"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-02-01T06:13:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-04T11:37:22Z",
+  "pr_number": 53590,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849L1UH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SceneGraphs. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.02 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-01T06:16:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53590#issuecomment-1026512135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849MEwt",
+      "author": {
+        "login": "aaronpeikert"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear human,\r\nsorry for bothering you. The complaint that `SceneGraphs` is too close to `StenoGraphs` is reasonable. However, I am very fond of the name, `StenoGraphs` is just too perfect for a domain-specific language for quickly writing graphs.\r\n`StenoGraphs` also fits very well into the naming scheme of the [JuliaGraphs Org](https://github.com/JuliaGraphs)\r\n\r\nDo you think we can make an exception here? The packages are not even in the same domain (the one relates to graphical representation, the other to graphs as mathematical objects) and sound phonetically very different.",
+      "createdAt": "2022-02-01T08:12:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/53590#issuecomment-1026575405",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: StenoGraphs\n- Repository: https://github.com/aaronpeikert/StenoGraphs.jl\n- Created by: @aaronpeikert\n- Version: v0.0.1\n- Commit: 33f89862971d1f03181aefaaa5571eee10945e7b\n- Reviewed by: @aaronpeikert\n- Reference: https://github.com/aaronpeikert/StenoGraphs.jl/commit/33f89862971d1f03181aefaaa5571eee10945e7b#commitcomment-65764089\n- Description: A semi formal way of specifying graphs or Structural Equation Model Interface\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65fce6a24ce0402127be288100fdf7b3ffd23b8e8f5a46a6002633801eb439a58baf335f91d1bd273d71b245b8d931147e0aa306e0d3c5eaf7db5fbe2b628d7beb48f7afe336e6fc0e20b333fc25878df3e42074a14c2fe3cffe0a701be868cd8e2caba13b9d31dfee1a389d81e7a0785cf3b91253e2753c594fbf4ea7ad5b29dea49434ee239529c9883a10d5954e84866135206d2b05cf780bfa0d04e6c276f9a89f1fa0b74061176a9f3050a9b766c -->",
+  "package_name": "StenoGraphs",
+  "title": "New package: StenoGraphs v0.0.1"
+}

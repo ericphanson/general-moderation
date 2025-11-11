@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-05-28T23:42:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-01T00:22:42Z",
+  "pr_number": 37769,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MDcyNjU5Mw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Blosc. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-28T23:45:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37769#issuecomment-850726593",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MDcyOTU1Mw==",
+      "author": {
+        "login": "waralex"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n>Package name similar to 1 existing package.\r\n>Similar to Blosc. \r\n\r\nThe reason for this is the similarity of the names of the underlying c libraries. `Blosc` is the interface to https://github.com/Blosc/c-blosc. `Blosc2` is the interface to https://github.com/Blosc/c-blosc2",
+      "createdAt": "2021-05-29T00:00:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37769#issuecomment-850729553",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Blosc2\n- Repository: https://github.com/waralex/Blosc2.jl\n- Created by: @waralex\n- Version: v0.1.0\n- Commit: 67158dda44a0019bed164cbc03e76c2cb3cce50a\n- Git reference: master\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> initial version\n<!-- END RELEASE NOTES -->",
+  "package_name": "Blosc2",
+  "title": "New package: Blosc2 v0.1.0"
+}

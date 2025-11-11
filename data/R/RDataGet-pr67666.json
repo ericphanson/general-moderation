@@ -1,0 +1,59 @@
+{
+  "created_at": "2022-09-04T10:44:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-09-12T08:21:37Z",
+  "pr_number": 67666,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85JsJhi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to RDatasets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-09-04T10:48:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67666#issuecomment-1236310114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JsJ3D",
+      "author": {
+        "login": "frankier"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe package name is deliberately a play on RDatasets. Although it has low Damerau-Levenshtein distance, the difference in capitalisation makes clear that this is a different approach that fetches datasets rather than vendoring them.\r\n\r\nI certainly don't want to step on any toes regarding RDatasets, and this package is supposed to be complimentary. It seems within JuliaStats it is considered low-priority/feature-complete. See https://github.com/JuliaStats/RDatasets.jl/issues/141 as well a quite a few issues from people who are wanting something else from the package. On the other hand this RDataGet.jl approach could be added to RDatasets, but that would require need RDatasets to have (possibly new) maintainers who want to evolve it.",
+      "createdAt": "2022-09-04T10:57:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67666#issuecomment-1236311491",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85J2wdW",
+      "author": {
+        "login": "frankier"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nI would like to go ahead with publishing this package. Perhaps eventually it can make its way into `RDatasets.jl` directly, but given there is low reviewer capacity in JuliaStats, having a specific package for this for the time being seems like it should probably be okay.",
+      "createdAt": "2022-09-07T08:43:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67666#issuecomment-1239091030",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: RDataGet\n- Repository: https://github.com/frankier/RDataGet.jl\n- Created by: @frankier\n- Version: v0.1.0\n- Commit: 127f38f87b3efba0e599eeff08dd29639a44442d\n- Reviewed by: @frankier\n- Reference: https://github.com/frankier/RDataGet.jl/commit/127f38f87b3efba0e599eeff08dd29639a44442d#commitcomment-83018784\n- Description: Simple Julia library to fetch R dataset from CRAN\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d463e6a36ecf960f36af2df5f02294f9646c823a943a0030a5fe150a9d8296b5d1c298d6098f11b48f3df5c21399ba930c967d2bf2d5d7eb1bb8ecb5b23d8fda836d45c053779accb762599f8254a080d0ae0fdc5f84f69056b870c6e93f77705a37691ca70b33ce6914ce1dae32881e1c1d8ea3c90b7e88a8d8613a9e0159a36c58e9ac665d7eb4156ba21cfb6e5d51ed66f4e61672f0eceacfee8625bd5629d25b0efe3b5a886c89d62f9a159d339f -->",
+  "package_name": "RDataGet",
+  "title": "New package: RDataGet v0.1.0"
+}

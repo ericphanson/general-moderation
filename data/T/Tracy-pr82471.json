@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-04-27T20:31:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-04T13:37:48Z",
+  "pr_number": 82471,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85a-v2W",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Trapz. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Try. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-04-27T20:35:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82471#issuecomment-1526398358",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85a-1l_",
+      "author": {
+        "login": "topolarity"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`using` failure is expected since CI doesn't support `rdtsc` instruction\r\n\r\n`TRACY_NO_INVARIANT_CHECK=1` can be set as an environment variable to bypass that, but I doubt that helps here.",
+      "createdAt": "2023-04-27T20:46:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82471#issuecomment-1526421887",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85a-5sD",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Preferably it should always be `using`able, see https://github.com/JuliaRegistries/General#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do ",
+      "createdAt": "2023-04-27T20:53:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82471#issuecomment-1526438659",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bEuTv",
+      "author": {
+        "login": "topolarity"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for the help, @fredrikekre \r\n\r\nThe `using` problem has been resolved in https://github.com/JuliaPackaging/Yggdrasil/pull/6664",
+      "createdAt": "2023-04-28T18:54:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82471#issuecomment-1527964911",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "KristofferC",
+  "body": "- Registering package: Tracy\n- Repository: https://github.com/topolarity/Tracy.jl\n- Created by: @topolarity\n- Version: v0.1.0\n- Commit: 922ba89d3b617513cafb1eedb8d987eaad8be175\n- Reviewed by: @topolarity\n- Reference: https://github.com/topolarity/Tracy.jl/issues/1#issuecomment-1527963468\n- Description: A convenient interface for using Tracy from within Julia code\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b9ac6d3d0e9a997d399bdff69e9fc23adf1f8f73c1e9b9d914e4a06b8219bc12e2f806c51594e1fdc29d2198bf05e552f402aa98be2f0400b32daa911008ef8bd848e84d7ec91ba41438a2b636bd3e44cdd36384206abd9664aa4122ce26d50518a8665258109a99c95954fe7f5db37061b83aed824e68f7027196f2a590d54b -->",
+  "package_name": "Tracy",
+  "title": "New package: Tracy v0.1.0"
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2022-08-18T22:34:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-09-03T15:18:15Z",
+  "pr_number": 66520,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85IuGah",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to Mill. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Mads. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Lale. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Matte. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to MAT. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-08-18T22:37:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66520#issuecomment-1220044449",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85IuPhO",
+      "author": {
+        "login": "savq"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHow lenient is the rule for names being 5 characters long?\r\n\r\nI came up with the name Malt as an abbreviation of **M**ultiprocessing **Alt**ernative, but it's not meant to be used as an acronym, just a name. It's an actual word after all.\r\n\r\nI could change it to _Malta,_ but I'd rather keep it as it is.\r\n\r\nI also failed to check the name similarities with the snippet suggested in the [Name similarity distance check](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Name-similarity-distance-check) because the function `AutoMerge.get_all_non_jll_package_names` tries to find a file named `Registry.toml`. Is this the same as `General.toml`?",
+      "createdAt": "2022-08-18T23:40:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66520#issuecomment-1220081742",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JoWfi",
+      "author": {
+        "login": "fonsp"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] @savq try the #pkg-registration channel on the julia slack https://julialang.slack.com/archives/C6M4DQA5P",
+      "createdAt": "2022-09-02T10:06:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/66520#issuecomment-1235314658",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Malt\n- Repository: https://github.com/JuliaPluto/Malt.jl\n- Created by: @savq\n- Version: v0.5.0\n- Commit: c11c372d5934b56486f3b3a550cc088851a60498\n- Reviewed by: @savq\n- Reference: https://github.com/JuliaPluto/Malt.jl/commit/c11c372d5934b56486f3b3a550cc088851a60498#commitcomment-81569685\n- Description: WIP\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69cd3e9bec0ed2746cc09b8fe05538a7649eed4092fd18541a433783272cc1904b4059e0584fe564c807a1990433aa7b88923def437a91eb9f165b94563bcc3281101423238e4850451010f8a6c1dc1f433c45ee4b88862436fcb558f9ccf33f8b38128929cd7e6962343026dc70544368eec4e2c2ac10d24deea8226672a876f5531f3cdd41545d91b3c73a47841714c02d4798ff3f98e609ad73b2842a216605592b603271a540a6db2cae7b61031fa -->",
+  "package_name": "Malt",
+  "title": "New package: Malt v0.5.0"
+}

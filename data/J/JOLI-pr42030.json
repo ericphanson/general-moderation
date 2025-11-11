@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-08-02T16:45:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-06T14:52:13Z",
+  "pr_number": 42030,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841HkhJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to JuLIP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to YOLO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to JLD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-02T16:52:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42030#issuecomment-891177033",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841H0La",
+      "author": {
+        "login": "mloubout"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello\r\n\r\nConcerning the naming guidelines. This is a package we started developing a while ago, in 2016 to be exact with Julia 0.5. Since then, we have built numerous packages on top of it so it would be a nightmare to rename the package at this point. We would therefore want to keep the current package name. We were up to that point working with our own registry (https://github.com/slimgroup/SLIMregistryJL), but since some users seem to not like having an additional registry, we are moving towards registering some of our most used packages and most rely on this one.\r\n\r\nConcerning the `compat` section, we never ran in compatibility issues over the years so we never needed it. If you absolutely require one, we will try to add it.\r\n\r\nthank you\r\n",
+      "createdAt": "2021-08-02T18:29:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42030#issuecomment-891241178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Mo5l",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> If you absolutely require one, we will try to add it.\r\n\r\nYes, we do, thanks for the collaboration",
+      "createdAt": "2021-08-04T09:23:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42030#issuecomment-892505701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841NRgQ",
+      "author": {
+        "login": "mloubout"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have updated the `compat` to match the requirements. The only remaining is the name of the package we can't change.\r\n\r\nthank you.",
+      "createdAt": "2021-08-04T13:45:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42030#issuecomment-892672016",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: JOLI\n- Repository: https://github.com/slimgroup/JOLI.jl\n- Created by: @mloubout\n- Version: v0.7.14\n- Commit: 908bfbdeaa5b2fcbcdcd6a0681e5c633c078d04e\n- Reviewed by: @mloubout\n- Reference: https://github.com/slimgroup/JOLI.jl/commit/908bfbdeaa5b2fcbcdcd6a0681e5c633c078d04e#commitcomment-54407502\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a30410f66b0d6a5dfc124550af6e35150987dfa1135be3e103718014d25be00ed11069cc18e4e15c3762cdeb7b78dd1cfa282cb19dbf4d93b68145c9dd4179f151064d49a97d85a843d6df7cd7062f8152da14ddbd2233943b5abb8bc1f9555b71910ba0d412a858c65f8fe057a461e7f15816cd1f80fcfde4f55dfc764dc13431d136569b22fdefb2d61b196df07a889c29bbc0bd07bc0f298674cfa95c94163fcb3fa2fd7fbea6f04fe6b52cc564df -->",
+  "package_name": "JOLI",
+  "title": "New package: JOLI v0.7.14"
+}

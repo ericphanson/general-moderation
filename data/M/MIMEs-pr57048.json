@@ -1,0 +1,89 @@
+{
+  "created_at": "2022-03-21T23:34:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-03-25T13:57:21Z",
+  "pr_number": 57048,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ADAIY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 1 existing package.\n  1. Similar to Vimes. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-21T23:40:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57048#issuecomment-1074528792",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ADEaU",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Xref https://github.com/JuliaRegistries/General/pull/56550 from some days ago.\r\n\r\n[noblock]",
+      "createdAt": "2022-03-22T00:13:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57048#issuecomment-1074546324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AGjog",
+      "author": {
+        "login": "fonsp"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks Fredrik! I also found out about this yesterday 🤦 , discussing options with tkf right now :)\r\n\r\n[noblock]",
+      "createdAt": "2022-03-22T18:07:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57048#issuecomment-1075460640",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AJQgi",
+      "author": {
+        "login": "fonsp"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre We decided to keep both, with MIMEs.jl as a more general mime package (including other queries like charset) with larger DB [noblock]",
+      "createdAt": "2022-03-23T09:54:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57048#issuecomment-1076168738",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AQJtn",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think this is ok to merge. [noblock]",
+      "createdAt": "2022-03-24T19:16:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57048#issuecomment-1077975911",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: MIMEs\n- Repository: https://github.com/fonsp/MIMEs\n- Created by: @fonsp\n- Version: v0.1.0\n- Commit: cf70cc373fa5c7e0982eef17102636c68538ec74\n- Reviewed by: @fonsp\n- Reference: https://github.com/fonsp/MIMEs/commit/cf70cc373fa5c7e0982eef17102636c68538ec74#commitcomment-69218852\n- Description: Get a MIME type from a filename!\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64093f552ce5a0a7f2e7d710c30be5795dca5763a71fa1882eb15a75cdc08a7a3df1ea910d2abe44aadcd5e2d5a7b99120cd7e8d80d6dc659e0daa9e7838f7aa366654a816f9c3e43c0896622fc1658f00f2e436b3ff8c9359c6932117a6094f2cd00a0d7ceabf9629248e852905e39dc24018ecaeeb0ee346d8469be99a6dbaeb276bd6bff847f4fde8d761a50b142a129d5e63f99e2bc846d44a33866f96243 -->",
+  "package_name": "MIMEs",
+  "title": "New package: MIMEs v0.1.0"
+}

@@ -1,0 +1,74 @@
+{
+  "created_at": "2020-12-15T19:08:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-12-21T16:12:15Z",
+  "pr_number": 26429,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NTUwNTc4OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"BPFnative\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import BPFnative` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-12-15T19:13:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26429#issuecomment-745505788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NTUwODQyOA==",
+      "author": {
+        "login": "jpsamaroo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nPackage is 1.6-only.",
+      "createdAt": "2020-12-15T19:17:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26429#issuecomment-745508428",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NzA4NDc0Mw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "```\r\njulia> using BPFnative\r\n[ Info: Precompiling BPFnative [b6338580-32ea-11e9-1791-33a79977d8c4]\r\nERROR: LoadError: LoadError: UndefVarError: BPFCompilerTarget not defined\r\nStacktrace:\r\n  [1] top-level scope\r\n    @ ~/.julia/packages/BPFnative/Bmt2a/src/compiler.jl:7\r\n  [2] include(mod::Module, _path::String)\r\n    @ Base ./Base.jl:386\r\n  [3] include(x::String)\r\n    @ BPFnative ~/.julia/packages/BPFnative/Bmt2a/src/BPFnative.jl:1\r\n  [4] top-level scope\r\n    @ ~/.julia/packages/BPFnative/Bmt2a/src/BPFnative.jl:29\r\n  [5] include\r\n    @ ./Base.jl:386 [inlined]\r\n  [6] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt64}}, source::Nothing)\r\n    @ Base ./loading.jl:1208\r\n  [7] top-level scope\r\n    @ none:1\r\n  [8] eval\r\n    @ ./boot.jl:360 [inlined]\r\n  [9] eval(x::Expr)\r\n    @ Base.MainInclude ./client.jl:446\r\n [10] top-level scope\r\n    @ none:1\r\nin expression starting at /home/mose/.julia/packages/BPFnative/Bmt2a/src/compiler.jl:7\r\nin expression starting at /home/mose/.julia/packages/BPFnative/Bmt2a/src/BPFnative.jl:1\r\nERROR: Failed to precompile BPFnative [b6338580-32ea-11e9-1791-33a79977d8c4] to /home/mose/.julia/compiled/v1.6/BPFnative/jl_m7S6Cn.\r\nStacktrace:\r\n [1] error(s::String)\r\n   @ Base ./error.jl:33\r\n [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::Base.TTY, internal_stdout::Base.TTY)\r\n   @ Base ./loading.jl:1355\r\n [3] compilecache(pkg::Base.PkgId, path::String)\r\n   @ Base ./loading.jl:1301\r\n [4] _require(pkg::Base.PkgId)\r\n   @ Base ./loading.jl:1016\r\n [5] require(uuidkey::Base.PkgId)\r\n   @ Base ./loading.jl:909\r\n [6] require(into::Module, mod::Symbol)\r\n   @ Base ./loading.jl:896\r\n```",
+      "createdAt": "2020-12-16T22:42:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26429#issuecomment-747084743",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0NzEzMzg0Nw==",
+      "author": {
+        "login": "jpsamaroo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ah crap, yeah, I forgot that BPFnative relies on an as-of-yet unreleased commit to GPUCompiler. I'll see if I can get a new version released.",
+      "createdAt": "2020-12-17T00:54:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/26429#issuecomment-747133847",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: BPFnative\n- Repository: https://github.com/jpsamaroo/BPFnative.jl\n- Created by: @jpsamaroo\n- Version: v0.1.0\n- Commit: b066ab3fb72c138b3e6bf69ba0354c7b5b15579b\n- Reviewed by: @jpsamaroo\n- Reference: https://github.com/jpsamaroo/BPFnative.jl/commit/b066ab3fb72c138b3e6bf69ba0354c7b5b15579b#commitcomment-45272953\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6483aa3f0a9763876d38cfb416f8eaae752a534f22fcde35fcaef63b5aff883e3595e311f5ac6297bd19f8c92acaff2b0fbe0c2aed58bf699fd6accd3b172f2e6df1be6692e12691ff86063e5712f6724accd356e3fa9879c8719388b9e788512a19cafe518fdd2f1dfdb7325592d3cc5dc75ac20af727807b1001ccebf67f4564857a6dd992b21f8d6c4fc934a13502d095d7b627051ddf864b87948483703eaf728ef3314fe924ccfaf2fd97b8d3fa6 -->",
+  "package_name": "BPFnative",
+  "title": "New package: BPFnative v0.1.0"
+}

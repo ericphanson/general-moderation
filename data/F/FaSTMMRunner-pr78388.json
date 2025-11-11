@@ -1,0 +1,104 @@
+{
+  "created_at": "2023-02-23T23:36:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-02-27T13:23:27Z",
+  "pr_number": 78388,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85V-_2D",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to STMMRunner. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-02-23T23:41:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1442577795",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85V_AUg",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "Need to override the automerge rule.\r\n\r\n`FaSTMMRunner` is a sub-package of `STMMRunner`, so I think the naming is OK.",
+      "createdAt": "2023-02-23T23:44:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1442579744",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WGu44",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Need to override the automerge rule.\r\n\r\nThe package doesn't have a license and no one is going to override that.",
+      "createdAt": "2023-02-24T22:37:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1444605496",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WHhMd",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano There is the LICENSE under the [main repo](https://github.com/JuliaRemoteSensing/STMMRunner.jl). Do you mean I must put a LICENSE in each sub-package's folder when using a monorepo?",
+      "createdAt": "2023-02-25T00:39:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1444811549",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WHs18",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Pkg serves to users only the directory where an individual package is, not the entire monorepo, so the license must be present in each subdirectory (basically, next to all Project.toml files)",
+      "createdAt": "2023-02-25T01:17:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1444859260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WHteW",
+      "author": {
+        "login": "lucifer1004"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks! I think the only remaining issue is the naming. The same case in #78387 . Could you help me override the rule?\r\n\r\n> Pkg serves to users only the directory where an individual package is, not the entire monorepo, so the license must be present in each subdirectory (basically, next to all Project.toml files)",
+      "createdAt": "2023-02-25T01:19:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78388#issuecomment-1444861846",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: FaSTMMRunner\n- Repository: https://github.com/JuliaRemoteSensing/STMMRunner.jl\n- Created by: @lucifer1004\n- Version: v0.1.0\n- Commit: 762de36c1f16284c6f1138c1c7232849e848b017\n- Reviewed by: @lucifer1004\n- Reference: https://github.com/JuliaRemoteSensing/STMMRunner.jl/issues/9#issuecomment-1444856400\n- Description: Runners for several STMM models\n<!-- b6773dd5469382edf93528742e9b6ef2b573fcb5308f1db5385dc25e8dc4cd5db6e4eb190f418560e2dcb14d5718d09e5f35f3ba4c463c2b7e0e4a259bba0d616949ac00350ddfda9583632275f5eb6f25fbf00dc5e6dac4f85a8031dc814acb24bb142711a698f2f43c47d39416c35e092541bf328288a80fc19b90a6d8139ff4470e93bbcd39e9a9d539df3a1dfc47350c3e866b532f6f907ec6968bae0333e9bfb52602edc65a336dfb20051734f4b48aaf7321e6255ac1de2fcf2cb3ce7d0b089cd45fd7d452ebd54ad923884196 -->",
+  "package_name": "FaSTMMRunner",
+  "title": "New package: FaSTMMRunner v0.1.0"
+}

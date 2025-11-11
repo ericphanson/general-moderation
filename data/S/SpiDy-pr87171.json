@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-07-10T12:51:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-15T17:17:47Z",
+  "pr_number": 87171,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hF2Yb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SciPy. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.40 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-10T13:06:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87171#issuecomment-1628923419",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hGPOn",
+      "author": {
+        "login": "mekise"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have noticed our package name does not pass the name similarity test being at the very edge of the threshold. Given the short name, therefore the high probability of similar letters in the reshuffling, is there any way to \"appeal\"? I believe that, even though the 2 names fall on the edge of the threshold, they look, mean and sound very different. Thanks!",
+      "createdAt": "2023-07-10T13:58:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87171#issuecomment-1629025191",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: SpiDy\n- Repository: https://github.com/quantum-exeter/SpiDy.jl\n- Created by: @cerisola\n- Version: v0.1.0\n- Commit: 1cfc30537e17f68e39db59dd16c820c0d17cb473\n- Reviewed by: @cerisola\n- Reference: https://github.com/quantum-exeter/SpiDy.jl/commit/1cfc30537e17f68e39db59dd16c820c0d17cb473#commitcomment-121164712\n- Description: :spider: Stochastic Spin Dynamics library\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64c88b08b9c2f446e4762dda2d1065f564e24830bcbc57e543c9abfcc2b76281705e1c4460f9a944682024c16f9bf2233e0c680a9f6d548d2741276378573c4972c4fc34478dff85b1dd6c789cccf3d60127b6a79f47b60e9cc318ab748028fe84f2d3162ce44504ee705fd27512151fb3964db2384c1773f350556c98571f5c9bb9dbf808bc1c1385443081dd2c7dd66c5fcdf4edb78304cb576adae1e820e3dd381dd7d648b06e65e6a61515cfea9d4 -->",
+  "package_name": "SpiDy",
+  "title": "New package: SpiDy v0.1.0"
+}

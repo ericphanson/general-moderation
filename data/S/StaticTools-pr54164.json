@@ -1,0 +1,59 @@
+{
+  "created_at": "2022-02-08T06:22:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-11T19:22:43Z",
+  "pr_number": 54164,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849hvaE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"StaticTools\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import StaticTools` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-08T06:25:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54164#issuecomment-1032255108",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849h2pK",
+      "author": {
+        "login": "brenhinkeller"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] the automerge failure is just that I have `julia = \"1.8\"` set in compat, since a lot of things in here don't work properly without Julia 1.8+",
+      "createdAt": "2022-02-08T07:17:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54164#issuecomment-1032284746",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849ygnL",
+      "author": {
+        "login": "brenhinkeller"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks Mosé!",
+      "createdAt": "2022-02-11T21:46:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54164#issuecomment-1036650955",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: StaticTools\n- Repository: https://github.com/brenhinkeller/StaticTools.jl\n- Created by: @brenhinkeller\n- Version: v0.1.0\n- Commit: eb5c57788c37d13c05b60b7ba3c9be9de1387164\n- Reviewed by: @brenhinkeller\n- Reference: https://github.com/brenhinkeller/StaticTools.jl/commit/eb5c57788c37d13c05b60b7ba3c9be9de1387164#commitcomment-66230413\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> * Initial release!\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60ebefd06d85e9b88c2b93326e7ec3c94b5eda0dcfedd68e3e487df930173c2104b59e1c3575c02cfcae9c27af431a6b6312255545322ec6730ea1f9dacd0cc857cf67112dff8db979a31a97cdade75b5e62829a5cd5374bfa037c059d860d9ed0edebf9692f8dd765b69819cc6d3a78caaac6e12227756018693bc41ac0925e5d78d984cfdbd9ee5690d3a3633b729cc5e602acb4916b1d762765d6388dda28a819b59648ffe2be25f861e257542c5f3 -->",
+  "package_name": "StaticTools",
+  "title": "New package: StaticTools v0.1.0"
+}

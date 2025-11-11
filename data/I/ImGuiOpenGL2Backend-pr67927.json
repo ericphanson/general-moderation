@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-09-08T14:59:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-09-11T18:45:20Z",
+  "pr_number": 67927,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85J9cHQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to ImGuiOpenGLBackend. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-09-08T15:03:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67927#issuecomment-1240842704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85J9dnk",
+      "author": {
+        "login": "jpsamaroo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The intention is for this package to be almost identical to ImGuiOpenGLBackend.jl (but with slight differences due to using OpenGL 2 instead of 3+). We may merge them in the future, but for right now we're keeping them intentionally separate.\r\n\r\nAlso, these are low-level packages with probably only ever 1 dependent library (which will load both of them), so the naming shouldn't matter much from a user perspective.",
+      "createdAt": "2022-09-08T15:07:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67927#issuecomment-1240848868",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: ImGuiOpenGL2Backend\n- Repository: https://github.com/JuliaImGui/ImGuiOpenGL2Backend.jl\n- Created by: @jpsamaroo\n- Version: v0.1.0\n- Commit: 6b846ae5e4675f796a196be8971697aebe524608\n- Reviewed by: @jpsamaroo\n- Reference: https://github.com/JuliaImGui/ImGuiOpenGL2Backend.jl/commit/6b846ae5e4675f796a196be8971697aebe524608#commitcomment-83430695\n- Description: OpenGL 2 backend for CImGui.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd690c7c5bbbd01a719fe97b5f410eb49a2940436dce4aba198aa58e18d8d1bfb8e62257437a21075137169cc26510f0a324eaf4d8c16a161111d85c674eaa596667d4477e3195485aed74f8d808362c3de8be10348d4958f4aaa8ce1f2bf28fd046ed9fdd08aa2405c3fc6347231715bb057b640095cc532d648066e308913c9da4ab98429e81e86e52ea47b05f9993c1d5ef01fedd518b78e9f83073b435426a89c5b2fd695a501841a95ea70f7475841b35016db4469d3b77aac9fe51108a051 -->",
+  "package_name": "ImGuiOpenGL2Backend",
+  "title": "New package: ImGuiOpenGL2Backend v0.1.0"
+}

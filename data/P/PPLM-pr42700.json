@@ -1,0 +1,44 @@
+{
+  "created_at": "2021-08-12T08:53:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-08-17T18:03:29Z",
+  "pr_number": 42700,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841fkZT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to SPPL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to GLM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-12T08:59:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42700#issuecomment-897467987",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841fqAr",
+      "author": {
+        "login": "AdarshKumar712"
+      },
+      "authorAssociation": "NONE",
+      "body": "Here the error is related to package naming. \r\n\r\n`PPLM` is standard acronym for Plug and Play Language Models (python implementation: https://github.com/uber-research/PPLM and paper: https://arxiv.org/abs/1912.02164 ). I would like to keep the name as it is for Julia Implementation.  \r\n\r\nThank You.",
+      "createdAt": "2021-08-12T09:33:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42700#issuecomment-897490987",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: PPLM\n- Repository: https://github.com/AdarshKumar712/PPLM.jl\n- Created by: @AdarshKumar712\n- Version: v0.1.0\n- Commit: 0b8e2a202b05fad450a49cb8a114f78216f798f0\n- Reviewed by: @AdarshKumar712\n- Reference: https://github.com/AdarshKumar712/PPLM.jl/issues/20\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983581dd70033b9ee5a02b6c00ef3a6f7ff0fd07616a02d73339a7d74c67c076926a4f9a280ecdfd50cf24bb3b6cd31c0e22fa4332f12033784b7428ec25f68248cc8ab8a2a145f36bdd4cbf1546e1824e9b80146f994ae0699ba2259c24422426bf3d7c40c04155e32596470ef86c86403bae2eab50f953951c8c87f970737bd2 -->",
+  "package_name": "PPLM",
+  "title": "New package: PPLM v0.1.0"
+}

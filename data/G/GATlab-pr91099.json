@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-09-08T23:38:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-09-11T17:52:00Z",
+  "pr_number": 91099,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85mED6P",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Catlab. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to MATLAB. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-08T23:43:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91099#issuecomment-1712340623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mEGQw",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity should be totally fine. Just wait three days and then ping on Slack for someone to merge it",
+      "createdAt": "2023-09-09T00:07:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91099#issuecomment-1712350256",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: GATlab\n- Repository: https://github.com/AlgebraicJulia/GATlab.jl\n- Created by: @olynch\n- Version: v0.0.1\n- Commit: 7a20340e4ed15e5d97f28d8cba60e400d54ac8b0\n- Reviewed by: @olynch\n- Reference: https://github.com/AlgebraicJulia/GATlab.jl/commit/7a20340e4ed15e5d97f28d8cba60e400d54ac8b0#commitcomment-126865255\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62a83fd2278c81cacc9df9a1adbe3c7bfca3524882a42c9d1ab1af502a4c4c681846612ab08fddde1ae603c6a96254c4bdbc7e1d9c5df5ad8f6bd469621cdf1d7236c7425459c198d649b00d6511d6e70f56393c992fabf19bb480aa0883bab7c33f30d1ef522443dac2b7f3b990cf3ec6fa7a8e96876374abed5866a90b297941ffd991d94972a65d10e7a7765d53b133a31ed1701a7a58d6a26931c1224ed0ad0ae42cad6e2386bfe933f8aef801f68 -->",
+  "package_name": "GATlab",
+  "title": "New package: GATlab v0.0.1"
+}

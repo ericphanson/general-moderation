@@ -1,0 +1,182 @@
+{
+  "created_at": "2021-05-26T09:41:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-06-10T12:22:54Z",
+  "pr_number": 37533,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0ODYzMzg4OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 14 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to Fri. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to GMT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to ADI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to ZMQ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to NMF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to QML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to SMM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to FDM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to FIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-26T09:52:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-848633888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0OTUwODQ0Ng==",
+      "author": {
+        "login": "ThummeTo"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nDear Julia-Registrator-Team,\r\n\r\nI read the guidelines for Julia Package Naming.\r\n\r\nI understand, that acronyms should be avoided according to Guideline#1, but \"FunctionalMockUpInterface\" would be a very long package name and the acronym \"FMI\" is straight forward translated into Functional Mock-up Interface, there are no other meanings that would make the acronym misleading. \r\n\r\nFurther, according to Guideline#6, wrapper-packages should be named after the parent library. This is a wrapper package and the parent library is named \"FMI\".\r\n\r\nIs it possible to use the library name \"FMI.jl\" ?\r\n\r\nThanks in advance!",
+      "createdAt": "2021-05-27T10:07:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-849508446",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MDM0MTE5NQ==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I understand, that acronyms should be avoided according to Guideline#1, but \"FunctionalMockUpInterface\" would be a very long package name and the acronym \"FMI\" is straight forward translated into Functional Mock-up Interface, there are no other meanings that would make the acronym misleading.\r\n\r\nI think there are! Googling gives me https://acronyms.thefreedictionary.com/FMI and https://www.allacronyms.com/FMI with lists of other things it could mean. Not all of those seem likely as Julia packages, but some of them do.\r\n\r\n> Further, according to Guideline#6, wrapper-packages should be named after the parent library. This is a wrapper package and the parent library is named \"FMI\".\r\n\r\nIs this the parent library? https://github.com/modelon-community/fmi-library (I couldn't find it linked from the repo). If so, there they write \"FMI Library (FMIL) is a software package...\" which makes me think fmi-library or FMIL is the name of the parent package, not FMI.\r\n\r\nIn my opinion, we really do not need more 3 letter package names-- there are not that many possible ones, after all.\r\n\r\nedit: but https://github.com/JuliaRegistries/General/pull/37152 would count as very recent precedent 🙂 .\r\n\r\n[noblock]",
+      "createdAt": "2021-05-28T11:08:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 5
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-850341195",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1MDM2MDI0Mw==",
+      "author": {
+        "login": "ThummeTo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your reply!\r\n\r\n> Is this the parent library? https://github.com/modelon-community/fmi-library (I couldn't find it linked from the repo). If so, there they write \"FMI Library (FMIL) is a software package...\" which makes me think fmi-library or FMIL is the name of the parent package, not FMI.\r\n\r\nFMI is more like a standard (see: https://fmi-standard.org/). \"fmi-library\" is a C-frontend to use FMUs (Functional Mock-Up Units) inside a C-Application. We didn't wrap fmi-library, we provide the possibility to handle FMUs (which are technically zip-Archives with a *.DLL or *.SO inside) directly in Julia (using ccalls), so there is nothing like a parent library, more like a parent standard (named the FMI standard).\r\n\r\nFurther we are working on two library extensions and a longer name would lead to ridiculous long library names. \r\n\r\nAnd yap, https://github.com/JuliaRegistries/General/pull/37152 seems a VERY similar and recent precedent.\r\n\r\nFinally, there are similar libraries with similar features for other programming languages, like \"FMPy\" and \"PyFMI\" in Pyhton, so \"FMI.jl\" seems a pretty straight forward name for the Julia-pendant.\r\n\r\n[noblock]",
+      "createdAt": "2021-05-28T11:44:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 5
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-850360243",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NDA0MTU3Ng==",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I agree we should be careful about the usage of the 3 letter names. But one of our policies is that wrapper libraries match the name of the library being wrapped. In this case, FMI is a standard for the FMU binaries, and FMI.jl is the implementation of that wrapper interface. It's very analogous to the case of Sundials.jl being a wrapper to SUNDIALS, or Arrow.jl being the implementation of the Arrow interface. While in this case the binaries which satisfy this interface can change around, it's still an interface implementation or binary wrappers so according to our rules and practices this would be acceptable.\r\n\r\nThat said, `FunctionalMockUpInterface` isn't a bad name in terms of discoverability.",
+      "createdAt": "2021-06-03T17:16:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-854041576",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1ODQyNTQ5MQ==",
+      "author": {
+        "login": "ThummeTo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your replys!\r\n\r\nI am struggling, we want to match the Julia Naming Guidelines (we don't match #1, but we do match #6, which is a contradiction), on the other hand we want to continue naming conventions, that are common in the FMI-world. Two worlds coming together.\r\n\r\nThere is a list with available FMI-tools (and names), many are programs that support FMI, but there are also wrapper libraries like ours included: [FMI Tools](https://fmi-standard.org/tools/)\r\n\r\nLibrarys that do something similar are:\r\n- FMPy, PyFMI (Python)\r\n- FMI4cpp (CPP)\r\n- FMI4j, JavaFMI, JFMI (Java)\r\n\r\nThe list does not contain a single \"FunctionalMockUpInterface\" or similar named library. \r\nNames like \"fmi-standard\" are prohibited, because they imply that it's an offical thing from the Modelica Association (the parents of FMI).\r\n\r\nMapped to our case, possible alternatives for names would be:\r\n- FMIJulia.jl (doubling)\r\n- JuliaFMI.jl (already exists, doubling)\r\n- FMI4Julia.jl (doubling)\r\n\r\nOr straight forward: FMI.jl\r\n\r\nIf there are other opinions or ideas, I am definitely **open for a renaming**, but please keep into account both communities: Julia _and_ FMI.\r\n\r\nUsers, that are fimilar with FMI (and know the corresponding libraries) should feel like it's only a small step to try out the Julia-way: \"Using PyFMI and Python? Using JFMI and Java? Why not try FMI.jl and Julia!\"\r\n\r\nThanks in advance.",
+      "createdAt": "2021-06-10T08:30:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-858425491",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1ODU3NDQzMA==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, let's do it",
+      "createdAt": "2021-06-10T12:22:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-858574430",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1ODYxNzM3OA==",
+      "author": {
+        "login": "ThummeTo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much!",
+      "createdAt": "2021-06-10T13:20:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37533#issuecomment-858617378",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: FMI\n- Repository: https://github.com/ThummeTo/FMI.jl\n- Created by: @ThummeTo\n- Version: v0.1.0\n- Commit: ee406b3793a8d19ec970b7f9f463b9d817cfcfcf\n- Reviewed by: @ThummeTo\n- Reference: https://github.com/ThummeTo/FMI.jl/issues/3#issuecomment-849463712\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e63b0e5558b403d844804c51b48c971572e4bd82d59e98ae8c8e93bd3122432905ede76e0b6807cf3b6d760e4eb97473176d7831f817168f256f6cf16ac4050baa40aceb2ab2f4be1e2e2cb888fe6ec899a4389622a211bb75fd5469d16ae316e718934759ede2503aeec187587c7613 -->",
+  "package_name": "FMI",
+  "title": "New package: FMI v0.1.0"
+}

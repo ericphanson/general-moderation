@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-01-03T18:34:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-01-11T01:15:58Z",
+  "pr_number": 75000,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85RqhZP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 2 existing packages.\n  1. Similar to CRC32c. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.20 is at or below cutoff of 2.50.\n  2. Similar to CRC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-03T18:37:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75000#issuecomment-1370101327",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RqnVF",
+      "author": {
+        "login": "stevengj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The name similarity here is intentional — the package is a companion to and drop-in replacement for the CRC32c standard library, except that it computes the CRC-32 checksum rather than CRC-32c.",
+      "createdAt": "2023-01-03T19:05:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75000#issuecomment-1370125637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R1G9h",
+      "author": {
+        "login": "stevengj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Bump.",
+      "createdAt": "2023-01-05T22:32:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75000#issuecomment-1372876641",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SI-79",
+      "author": {
+        "login": "stevengj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "bump",
+      "createdAt": "2023-01-11T00:44:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75000#issuecomment-1378086653",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: CRC32\n- Repository: https://github.com/JuliaIO/CRC32.jl\n- Created by: @stevengj\n- Version: v1.0.0\n- Commit: 174034c3b1f3ec32fc7192ee7f921f7f0341349c\n- Reviewed by: @stevengj\n- Reference: https://github.com/JuliaIO/CRC32.jl/commit/174034c3b1f3ec32fc7192ee7f921f7f0341349c#commitcomment-94963955\n- Description: CRC32 package for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65db4f11b468d4ec22f8c557b9649950a74a62cdb73066466ba8db68ad05059af936fbeace973352c3d728a6924cfac113b90ddd5c3d858b3f0e47dad3b511b7038b7748766da10440f7bfee1e44e70e4d8f6739a0889fa8fde023012d82c680dec7538c77843fc0215854c0207184a37f7cd89ac5348f07724378d4be158f0473d2a81a36c6fea1e7c1cd6a1fb7c2af7a432b765579be316229091847aff614bd0ade00ce0c86609bfec0b1bf0f18394 -->",
+  "package_name": "CRC32",
+  "title": "New package: CRC32 v1.0.0"
+}

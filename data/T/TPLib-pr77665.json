@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-02-14T13:24:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-03-13T11:45:22Z",
+  "pr_number": 77665,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85VOEFS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 5 existing packages.\n  1. Similar to PGLib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MHLib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MQLib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to DTALib. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to TSPLIB. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-02-14T13:28:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77665#issuecomment-1429750098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VOOwY",
+      "author": {
+        "login": "JuliaTPLib"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi,\r\nI understand that the auto-merge has failed because the name of this package is similar to that of there packages. However, that it to be expected for libraries that follow the conventional names ending in `Lib`. In these cases, the preceding letters are most often meaningful acronyms, and the risk of confusion is minimal. For example, in the 5 other packages listed as having a similar name, none of them contain both letters `TP` except `TSPLIB`. This library reads `.tsp` files associated to the Travelling Salesman Problem, and therefore cannot be confused with `TPLib`.\r\n\r\nFinally, this library provides a wrapper for the [`TPLib`](https://ocaml.org/p/tplib/1.3) library written in OCaml, and therefore it would make sense for it to share the same name.\r\n\r\nI would therefore appreciate a manual review for this request. Thanks a lot !",
+      "createdAt": "2023-02-14T14:01:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77665#issuecomment-1429793816",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: TPLib\n- Repository: https://github.com/JuliaTPLib/TPLib.jl\n- Created by: @JuliaTPLib\n- Version: v0.1.0\n- Commit: cf4d4c0c21e589c54987a59f3ddb85f49d950077\n- Reviewed by: @JuliaTPLib\n- Reference: https://github.com/JuliaTPLib/TPLib.jl/commit/cf4d4c0c21e589c54987a59f3ddb85f49d950077#commitcomment-100572661\n- Description: Julia wrapper for the Tropical Polyhedra Library\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60ec7a78533aa171a69e4900e30a2c281c0a57f28914c6144f1591f41927824788ce00d93e99eab1fcba47100723aee4d5affb2286786e871fe402c0e320cd5a0a93d9956253ca690bf833cd8f83b51915d4088f3c4df9665ef111ad2abe00257685c7e2224e4ea8db50ada3278f4bdf1558effa3056a48477c780c163c883dad353436b2cf7ba081d754e4f3d2f3d43faf7bdaef88880c4d23ed7c43bd7f3ec78fd94a38acb88187c18f34c756155dcf -->",
+  "package_name": "TPLib",
+  "title": "New package: TPLib v0.1.0"
+}

@@ -1,0 +1,89 @@
+{
+  "created_at": "2022-10-31T07:48:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-11-06T07:21:13Z",
+  "pr_number": 71338,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85NSl96",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-31T07:51:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71338#issuecomment-1296719738",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NSoyJ",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name of the package (all uppercase letters) makes sense here because both BLIS and BLAS are the original spellings. Also, this package is a cousin of https://github.com/JuliaLinearAlgebra/MKL.jl (and, in some sense, also https://github.com/JuliaLinearAlgebra/BLIS.jl) which both are all upper case as well. Can someone please merge this manually?",
+      "createdAt": "2022-10-31T08:03:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71338#issuecomment-1296731273",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NtnC4",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It would be nice to have this merged (I see labelled to make it happen by now). I do though see \"blis_jll\" (EDIT: I see it was registered long time ago, so likely needs to stay that way, and not worth it to add/replace with the other) and maybe it too should be upper-cased \"BLIS_jll\" (that probably needs to be registered first). I don't know of a policy for or against.\r\n\r\nI do see tblis_jll, likely related with lower case though, and CHiPPS_BLIS_jll: https://github.com/JuliaRegistries/General/pull/39082 likely unrelated.\r\n\r\n[noblock]",
+      "createdAt": "2022-11-04T15:58:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71338#issuecomment-1303802040",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nt1Ez",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@carstenbauer happy with the name?",
+      "createdAt": "2022-11-04T16:43:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71338#issuecomment-1303859507",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NxKNI",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@fredrikekre I'm definitely happy with the name of this package here, yes. Please merge 😄  (FWIW, if anything, I would think it should have the more premium name BLIS.jl but that's already taken by an older more manual effort.)\r\n\r\nAs for blis_jll.jl, I guess the name had been chosen because the source github repo is named https://github.com/flame/blis. However, in their own README, they also refer to it as BLIS. I'm not sure it is worth to change blis_jll.jl -> BLIS_jll.jl. I don't have a strong opinion. In any case, this matter should probably be discussed in a separate issue over in the Yggdrasil repo. I can switch to a differently named dependency in BLISBLAS.jl in the future.",
+      "createdAt": "2022-11-06T06:56:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71338#issuecomment-1304732488",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: BLISBLAS\n- Repository: https://github.com/JuliaLinearAlgebra/BLISBLAS.jl\n- Created by: @carstenbauer\n- Version: v0.1.0\n- Commit: ee0fcce598109344b128f47b419985d06decb301\n- Reviewed by: @carstenbauer\n- Reference: https://github.com/JuliaLinearAlgebra/BLISBLAS.jl/commit/ee0fcce598109344b128f47b419985d06decb301#commitcomment-88390560\n- Description: BLIS-pendant of MKL.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6361d551d328f541d215fcdcbb3611a55e7936142c42da5a3136020c9c07a6240b9bcdc396a677a903b789f308e4c60db35db429119246ea8619a621d8a89b44410713a79aecaa6fe0839c59a87230f9984517d348c7abef53653d1c9d56797f23ddaaca358328e8e7a7eac6f84b48e7ef069d0785b38252f10c5033bdcfae34c9fbb6a20a1ee9f5a39d927d64e1402ce64030784ca5bfddfb0f834f3cc657a32f3b20e197fe8ed62e6760f32557629d2 -->",
+  "package_name": "BLISBLAS",
+  "title": "New package: BLISBLAS v0.1.0"
+}

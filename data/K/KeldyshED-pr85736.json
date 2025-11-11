@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-06-16T15:29:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-06-20T08:48:19Z",
+  "pr_number": 85736,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85fD_nt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Keldysh. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-16T15:36:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85736#issuecomment-1594882541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fELqp",
+      "author": {
+        "login": "krivenko"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is an Exact Diagonalization solver (hence the `ED` in the name) for quantum models that heavily depends on `Keldysh`. I could probably extend `ED` to something like `ExactDiag`, but that would require a lot of renaming and break some dependent codes.\r\n\r\n[noblock]",
+      "createdAt": "2023-06-16T16:14:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85736#issuecomment-1594931881",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: KeldyshED\n- Repository: https://github.com/krivenko/KeldyshED.jl\n- Created by: @krivenko\n- Version: v0.7.0\n- Commit: 5cae3b5c3f002fefd217c21e96005a8536a9ab4a\n- Reviewed by: @krivenko\n- Reference: https://github.com/krivenko/KeldyshED.jl/commit/5cae3b5c3f002fefd217c21e96005a8536a9ab4a#commitcomment-118396282\n- Description: Equilibrium ED solver for finite fermionic models that can compute Keldysh Green's functions\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> - This is the first release to be registered in the General package registry.\r\n> - Added proper docstrings and created a [documentation website](https://krivenko.github.io/KeldyshED.jl/) on GitHub Pages.\r\n> - A few new functions to compute full and reduced density matrices and evolution operators.\r\n> - `Hilbert`: New functions `matching_indices()`, `translate()`, `product_basis_map()` and `factorized_basis_map()`.\r\n> - `Hilbert`: New operators `⊗` and `Base.(/)` defined for pairs of `FullHilbertSpace`'s.\r\n> - `Hilbert`: A new overload of `merge_subspaces!()`. It merges some of the invariant subspaces in a `SpacePartition` object to ensure that the resulting subspaces are also invariant w.r.t. a given operator.\r\n> - `EDCore`: New keyword argument `symmetry_breakers` of `EDCore`'s constructor. It allows for passing an optional list of operators that must share invariant subspaces with the Hamiltonian.\r\n> - `EDCore`: New functions `tofockbasis()`, `toeigenbasis()` and `full_hs_matrix()`.\r\n> - A few minor bug fixes.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62bac5172642692a9c9b4ff91bd04155daa363602681fa87bcff4beae72a12a1a46624510f531926de272decddc85eee6a0ee2b6f60632c95bb318aba9c844c73690438a0d712ca307da2ab25a8338853c11a1985e9e086300aaab8ee13e7f534bc72565a04eee5420932fa5ac78218a1fabfc48be9f310ff19f3499e760724fc802d8a6eeec16ce319d551e4b15042ed54bf73d834a84ef7bce9715cf586e7bc854c5cc009e303f39028018c571158bf -->",
+  "package_name": "KeldyshED",
+  "title": "New package: KeldyshED v0.7.0"
+}

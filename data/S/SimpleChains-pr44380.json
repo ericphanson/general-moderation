@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-09-07T15:16:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-09-11T16:22:30Z",
+  "pr_number": 44380,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q842gKjK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SampleChains. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.86 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-09-07T15:21:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44380#issuecomment-914401482",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842gLFZ",
+      "author": {
+        "login": "chriselrod"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nIs SampleChains.jl vs SimpleChains.jl a problem?\r\nOnly 1 letter difference, but I don't think people are particularly likely to confuse the two.",
+      "createdAt": "2021-09-07T15:24:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44380#issuecomment-914403673",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842jWbQ",
+      "author": {
+        "login": "chriselrod"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge should I change the name, or is this fine?",
+      "createdAt": "2021-09-08T13:24:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44380#issuecomment-915236560",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842knRF",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@chriselrod there was some discussion in #pkg-registration on Slack:\r\n \r\n<img width=\"1142\" alt=\"Screenshot 2021-09-08 at 23 01 26\" src=\"https://user-images.githubusercontent.com/5846501/132585021-ff5d0baa-edf4-4fe9-b57f-c7260f7f1083.png\">\r\n",
+      "createdAt": "2021-09-08T21:01:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44380#issuecomment-915567685",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: SimpleChains\n- Repository: https://github.com/JuliaSIMD/SimpleChains.jl\n- Created by: @chriselrod\n- Version: v0.1.0\n- Commit: 6fc764e7600cf6187785217a2e4c59793a5ef239\n- Reviewed by: @chriselrod\n- Reference: https://github.com/JuliaSIMD/SimpleChains.jl/commit/6fc764e7600cf6187785217a2e4c59793a5ef239#commitcomment-56197714\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd662b19ffc11f1f14717e4732b6a98d189346316aa756821423ac685b02ac8b1c6dcdc411f47d00e785f1f33ddbc78778542c38661c7bc52ad918cf7de1a239f770662d8bee9458c4e10095f335af2acb33165548b5b1efc4b64d0bf0e3a40468335a0d717f9a5f3676dc2149716a6074c8af57d854d5b5018b9667c2f529b52f3b88fea49a32a9dcd08706e721edf4ea099c59e2313d594a1c58d4a2f3633fc27fd8a157a073da784a36843a874b1a384 -->",
+  "package_name": "SimpleChains",
+  "title": "New package: SimpleChains v0.1.0"
+}

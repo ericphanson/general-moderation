@@ -1,0 +1,74 @@
+{
+  "created_at": "2023-07-28T23:12:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-08-09T13:38:58Z",
+  "pr_number": 88578,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85iuypm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import ArviZPythonPlots` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-28T23:22:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88578#issuecomment-1656433254",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ixyvL",
+      "author": {
+        "login": "sethaxen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Because the package uses PyCall, on some machines it requires some work be down to correctly configure the python environment. On GitHub actions, loading the package will indeed fail unless one either configures PyCall to use Conda.jl's Conda environment or first sudo installs all Python dependencies into the default Python environment. On ArviZPythonPlots's own CI, we use the Conda environment, and loading the package is successful, see e.g. https://github.com/arviz-devs/ArviZPythonPlots.jl/actions/runs/5703430989 [noblock]",
+      "createdAt": "2023-07-30T16:59:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88578#issuecomment-1657220043",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jnCx1",
+      "author": {
+        "login": "sethaxen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've replaced PyCall with PythonCall and bumped the version bounds, which makes the package much easier to install. See for example that the [CI workflow](https://github.com/arviz-devs/ArviZPythonPlots.jl/blob/main/.github/workflows/ci.yml) contains no special setup code, and that [CI passes](https://github.com/arviz-devs/ArviZPythonPlots.jl/actions/runs/5808216438) (on all but windows, which is expected). AutoMerge seems to fail because it claims at load time that one of the Python dependencies uses an illegal ascii character, but the dependency loads fine on multiple OSes and Julia versions on our CI, so I'm not certain why it fails for AutoMerge. [noblock]",
+      "createdAt": "2023-08-09T11:49:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88578#issuecomment-1671179381",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jnnHO",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Happy to manually merge but it might also be good to figure out why the CI fails and get it working. Let me know if you're ok with waiting to get a green CI or you want me to merge now.",
+      "createdAt": "2023-08-09T13:28:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88578#issuecomment-1671328206",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: ArviZPythonPlots\n- Repository: https://github.com/arviz-devs/ArviZPythonPlots.jl\n- Created by: @sethaxen\n- Version: v0.1.0\n- Commit: 161aa79042f6983ce4388f60015bf5ca9d25266e\n- Reviewed by: @sethaxen\n- Reference: https://github.com/arviz-devs/ArviZPythonPlots.jl/commit/161aa79042f6983ce4388f60015bf5ca9d25266e#commitcomment-124027581\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66b07b760fb846253c80adeb75506736cc3b20c304f765b51e4ee83ca58e36acfc55cb3a79206336be6acc975d30d331bc52000234b1ec8cc6dae24e602021ce0568654dd20f2b779630e13e258b5b64e27bca543ad15078606c90066b6633e1312e54de950ad473438ba1b0d05c55709ba88d9efa8d614bd7f436795695196531e63677cbc703667626684f0efcc523daeae54d5b115e7e3308bc9b35ad3c8524443bd737a58f130ceb0f2829fe77255 -->",
+  "package_name": "ArviZPythonPlots",
+  "title": "New package: ArviZPythonPlots v0.1.0"
+}

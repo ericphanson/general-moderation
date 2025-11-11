@@ -1,0 +1,89 @@
+{
+  "created_at": "2023-10-17T18:10:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-10-22T22:57:10Z",
+  "pr_number": 93594,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pUTvE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-17T18:17:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93594#issuecomment-1766931396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pUc0l",
+      "author": {
+        "login": "hochunlin"
+      },
+      "authorAssociation": "NONE",
+      "body": "Due to the auto-merge issue from the package name, a manual merge may be needed.\r\n\r\nWe intend to keep the name MESTI, for our 3D electromagnetics solver in Julia, given the existence of our 2D solver in MATLAB, MESTI.m ([https://github.com/complexphoton/MESTI.m](https://github.com/complexphoton/MESTI.m)), released last year. We want to attract users accustomed to the 2D code to our latest 3D Julia version. Additionally, we aim for the convenience of easy recall and memorability, like other electromagnetics solvers, such as MEEP and S4. Therefore, we want to retain the name MESTI, and please help us to do the manual merge. Thanks.",
+      "createdAt": "2023-10-17T18:43:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93594#issuecomment-1766968613",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pVlns",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Additionally, we aim for the convenience of easy recall and memorability, like other electromagnetics solvers, such as MEEP and S4.\r\n\r\nNone of these have easy recall or memorability 😉\r\n\r\nSo in that sense `MESTI` is not a good package name, and normally I would urge you to come up with a better name.\r\n\r\nHaving an existing MATLAB package and wanting to transition users from the MATLAB code to the Julia code by keeping the same name does seem like a legitimate reason, though.\r\n\r\nYou still have the three day waiting period for others to chime in, or to reflect on whether you want to prioritize transitioning your existing users under a familiar name or whether you might prefer to attract new Julia users with a more descriptive name that’s in line with the expectations of the Julia community, after all.\r\n\r\nAt the end of the waiting period, ping the Slack channel again for a manual merge.",
+      "createdAt": "2023-10-17T22:08:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93594#issuecomment-1767266796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pgDVR",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The MESTI.jl name will be interpreted by many julia users as \"this package wraps an old C or Fortran library called MESTI\"\n\nThats probably not what you want?\n\n",
+      "createdAt": "2023-10-19T05:24:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93594#issuecomment-1770009937",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pnm1a",
+      "author": {
+        "login": "hochunlin"
+      },
+      "authorAssociation": "NONE",
+      "body": "> The MESTI.jl name will be interpreted by many julia users as \"this package wraps an old C or Fortran library called MESTI\"\r\n> \r\n> Thats probably not what you want?\r\n\r\nAs far as we know, there is no C or Fortran library named MESTI, which should minimize the potential for confusion.\r\n\r\nWe intend to keep the name MESTI to draw our original MATLAB users to notice and embrace our Julia version. Then they can be involved in the Julia community.",
+      "createdAt": "2023-10-20T02:44:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93594#issuecomment-1771990362",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: MESTI\n- Repository: https://github.com/complexphoton/MESTI.jl\n- Created by: @hochunlin\n- Version: v0.1.0\n- Commit: 3545150745137a612ef3a2872907e8d61e31cc4d\n- Reviewed by: @hochunlin\n- Reference: https://github.com/complexphoton/MESTI.jl/issues/2\n- Description: 3D multi-source electromagnetic simulations in frequency domain, implementing the augmented partial factorization (APF) and other methods.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b6d0091178eb5daabe4f1f3ac247badcaf12377c37e306b4e816a51b2b6dba07ae6aa3a137e9d8640c39293dab3780ef8d9c8d0571be48c9d2620aca34f5d078665cd6b839c915e8a48e7d2d054ceaea5caf37ff7564c251f5add09e035c820b2edbec1e8e80127ceed9a9feffd65bc711c7c470a9633e66ecf9d123780964ff -->",
+  "package_name": "MESTI",
+  "title": "New package: MESTI v0.1.0"
+}

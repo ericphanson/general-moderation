@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-02-02T13:15:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-02-02T13:50:58Z",
+  "pr_number": 76858,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85UQ-7k",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to NumNN. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-02-02T13:21:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76858#issuecomment-1413738212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UQ_qe",
+      "author": {
+        "login": "maleadt"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> * Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\r\n> \r\n> * Package name similar to 1 existing package.\r\n>   \r\n>   1. Similar to NumNN. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nI'm sticking to how NVIDIA calls their library, which is `cuDNN` (https://developer.nvidia.com/cudnn).",
+      "createdAt": "2023-02-02T13:23:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76858#issuecomment-1413741214",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "maleadt",
+  "body": "- Registering package: cuDNN\n- Repository: https://github.com/JuliaGPU/CUDA.jl\n- Created by: @maleadt\n- Version: v1.0.0\n- Commit: a70c83e2cbe978873a7aa74f2493838b509aa42c\n- Reviewed by: @maleadt\n- Reference: https://github.com/JuliaGPU/CUDA.jl/commit/a70c83e2cbe978873a7aa74f2493838b509aa42c#commitcomment-99040593\n- Description: CUDA programming in Julia.\n<!-- 3f9608d46009a544ffb2e0a7f1e246422e09032be73da75ef40f0663b18b489f38ff27db03c7982797fa1b062f12ad6e0f31c1b86b193e04d0f1921460412315937ff265e17fad66f119d6b1431f6f44b62e1662cb6208058c1b530d1746d99664cc813d324bd71a89a2a626ad3065df18c5b8c427f34b2a9293ee7d201348bacec9c1343dc412b501c1335a328791a385630841ecaad95223691a6624c910787dfa01d9f981a2b39e7fffa9e98a5a6dadc0b980048af3c26e50ed3b2a33dc7c0d908b00d2013c1cddf6cec8e96283b67a1986d82bf7feee698e090764d72621 -->",
+  "package_name": "cuDNN",
+  "title": "New package: cuDNN v1.0.0"
+}

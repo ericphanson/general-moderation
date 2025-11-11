@@ -1,0 +1,44 @@
+{
+  "created_at": "2022-02-23T03:54:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-26T23:21:58Z",
+  "pr_number": 55258,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-fcJh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Sixel. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-23T04:00:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55258#issuecomment-1048429153",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-fd_C",
+      "author": {
+        "login": "xzackli"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package is based on a python package of the same name, [simonsobs/pixell](https://github.com/simonsobs/pixell). The name is `pixel` + `ell` (as in the degree of a spherical harmonic) because it manipulates rectangular pixels on the sphere.\r\n\r\nI think this is a false positive on the package name similarity. Although both packages have a portmanteau name involving \"pixel\", I think it's very unlikely that humans would mistake `Pixell` for `Sixel`. The two packages also have very different functionalities and target audiences.",
+      "createdAt": "2022-02-23T04:19:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55258#issuecomment-1048436674",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Pixell\n- Repository: https://github.com/simonsobs/Pixell.jl\n- Created by: @xzackli\n- Version: v0.1.0\n- Commit: 963a4ee4895a38c01a2ba317cbaf18ed8d9ecdf2\n- Reviewed by: @xzackli\n- Reference: https://github.com/simonsobs/Pixell.jl/commit/963a4ee4895a38c01a2ba317cbaf18ed8d9ecdf2#commitcomment-67275139\n- Description: next-generation sky map manipulation on rectangular pixels\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68d0ae5bebb17e30e78ecc87c85f731cac81f6a7a2d8098c0829496fd67ff4bac1da53f9e725813a539989c177e1d43960f17f439348665d66bfa4307af91ba66a30932f3146e58e753f65f0b72646cd6972d674ded3a1f7bf49b7228e3086dbfb74c312f8aac784b94ce2701efbe9e67a8ab10776e3fd78ed774b26af9209d2a478826d24b3402fa4adc5db5846ab61e3e806caa70cedc975ef39b41e9d98158de5e91a9713a89a9c0419c9f96ddbca7 -->",
+  "package_name": "Pixell",
+  "title": "New package: Pixell v0.1.0"
+}

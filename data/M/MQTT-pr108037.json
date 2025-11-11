@@ -1,0 +1,66 @@
+{
+  "created_at": "2024-05-31T16:50:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-06-09T20:24:39Z",
+  "pr_number": 108037,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_tiKT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-31T16:53:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108037#issuecomment-2142642835",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_tjcR",
+      "author": {
+        "login": "NickMcSweeney"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I am aware that this package does not comply with the minimum 5 character package name. However I was hoping that an exception could be made as `MQTT` is the most logical name for a MQTT api. And as it is intended to be used with other MQTT backends (such as MQTTClient.jl) keeping the name short should help with differentiation. Also `HTTP.jl` gets to do it..",
+      "createdAt": "2024-05-31T16:57:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108037#issuecomment-2142648081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ANIpC",
+      "author": {
+        "login": "NickMcSweeney"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No concerns were raised in slack. I think that this is okay to go in the next round of manual merges.",
+      "createdAt": "2024-06-05T20:40:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108037#issuecomment-2150926914",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: MQTT\n- Repository: https://github.com/JuliaMessaging/MQTT.jl\n- Created by: @NickMcSweeney\n- Version: v0.1.0\n- Commit: 9aa452a3c0fb9a04e04973c28015822f104d6b81\n- Reviewed by: @NickMcSweeney\n- Reference: https://github.com/JuliaMessaging/MQTT.jl/commit/9aa452a3c0fb9a04e04973c28015822f104d6b81#commitcomment-142608181\n- Description: Julia MQTT umbrella interface. Provides generic structure for MQTT systems to follow to help provide broker agnostic compatibility.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nFirst version.\r\n\r\n* there ARE tests\r\n* there IS documentation\r\n* there ARE functional MQTT Backends\r\n\r\nwhat more can you ask for.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e8e8440af412fced2836c03cac04b6e2e72953c80ff6a75ad8f8871ea2bc6c6390235f640bca3d0519bdf37781471b78c6c04080ce36efe3045f45da18ad4ede496cc96834a71fa3e2f134c389dde0a03f105994dbcc4053c8741dc67d48bf670dea2ee83314f495e46453b2b4e711483fdfa177b30dee7e89e444bb87e6f0e79575ecba901e02d64fe8fb4ff24ea05a084c5cebdaf607f12d026562475a134e4345eef0168873aa22692474642a0a42 -->",
+  "package_name": "MQTT",
+  "title": "New package: MQTT v0.1.0"
+}

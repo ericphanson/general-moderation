@@ -1,0 +1,141 @@
+{
+  "created_at": "2021-02-06T00:25:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-02-09T00:26:11Z",
+  "pr_number": 29448,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDM1OTI4NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n1. Similar to Mimi. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n2. Similar to MiniFB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-06T00:29:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774359285",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDM2MDYwMw==",
+      "author": {
+        "login": "ExpandingMan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package is named for the min.io data storage service.  Particularly as this is existing and fairly well known software, I do not think it will be confused with the names `Mimi` or `MiniFB`, and it would be inappropriate to give it a much different name.",
+      "createdAt": "2021-02-06T00:34:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774360603",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDQ4OTE4MA==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do not personally have an issue with the name, but might it be a trademark issue? \r\n\r\nhttps://min.io/logo\r\n>Your use of MinIO's trademarks must always be non-confusing. People should always know who they are dealing with, and where the software they are downloading came from. Websites and software that are not produced or officially authorized by MinIO shouldn't imply, either directly or by omission, that they are.\r\n>\r\n>7. [..] For example, it would be inappropriate for your products or website to say \"based on MinIO\". Instead, in the interest of complete accuracy, you should describe it as \"based on MinIO technology\", or \"incorporating MinIO source code.\" You must also change the name of the products and binaries so as to reduce the chance that a user of the modified software will be misled into believing it to be a native MinIO or affiliated with us.\r\n\r\nI don't think you're misleading anyone. Is there a policy of first come, first served, or could the company claim they want Minio.jl or MinIO.jl (and would that be preferred, or MinIOwrapper.jl?) for their software later? [Would you be willing to transfer your code to them to make it official later?]\r\n\r\nI do see you use MIT license, and in the docs:\r\n>During this package's build step, it checks whether a minio binary is available (it determines this using which minio). If no minio binary is found, the latest version will be downloaded using Julia's Pkg artifacts system.\r\n\r\nI'm not sure, but a least some of their code uses AGPL, so I would at least mention that clearly, if not relicence to AGPL. It seem to me APGL would apply for the whole, you package, and code using it, even if your package is MIT, and people might not realize? I'm not a lawyer...\r\n\r\nShould the registry have some policy on license used, or pointers like how to handle [A]GPL wrappers? I believe it might have only a policy that there is a licence, and it should be open source. At least it should... OSI licence, plus maybe address that issue.\r\n\r\nEDIT: The license seems to be your choice, see similar example:\r\n\r\nhttps://github.com/JuliaMath/FFTW.jl#License",
+      "createdAt": "2021-02-06T14:55:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774489180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDUxNTkxMg==",
+      "author": {
+        "login": "ExpandingMan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It looks pretty clear from their documentation that this package is on safe ground, it is in no way commercial, and only uses the min.io name and not any logo.  I have, however, made it much clearer that the package is unofficial by\r\n- Saying so on the README.\r\n- Saying so in the docs, and describing how the binaries are used.\r\n- Saying so in the gitlab description.\r\n\r\nIt even says on their site \"You can distribute unchanged official binaries downloaded from https://min.io/download to anyone in any way\", so even the build step seems like intended use.\r\n\r\nI'd really prefer not to come up with some weird, obfuscatory name for the package.  If someone wanted to move it to an official repository at some point, I'd be perfectly happy with that.  I'd also be happy to change the name at a later time if another package came along with much more complete functionality.\r\n\r\nSo what should I do now?  Should I close this and re-tag the package?  That seems unnecessary as the documentation mainly appears on gitlab, and you will see the updates I described above already, but I'd really just like to get this merged.\r\n\r\n[noblock]",
+      "createdAt": "2021-02-06T17:59:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774515912",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDUyNzIxMA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Should I close this and re-tag the package?\r\n\r\nYou can simply trigger registration again on the latest commit with the same version number (as mentioned in the [message above](https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774359285)): this PR will be simply updated",
+      "createdAt": "2021-02-06T19:11:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774527210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDUzMjQ3NA==",
+      "author": {
+        "login": "ExpandingMan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Great thanks, I will do that soon.",
+      "createdAt": "2021-02-06T19:51:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774532474",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDY2ODUyMg==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">this package is on safe ground\r\n\r\nGood enough for me if you made sure (for the name), I just scanned their trademark docs. I wanted to bring this up for this specific package, but also in general if there are some rules or need to be for the registry itself. It would be annoying to have to change later, for everyone (and deleting a package shouldn't really happen).\r\n\r\nThe other issue is mentioning the AGPL front and center, seems even more important than for GPL. See here: https://github.com/JuliaMath/FFTW.jl#License\r\n\r\nI meant to add noblock the first time, then hesitated, I see you guys didn't so maybe this is blocked.\r\n[noblock]",
+      "createdAt": "2021-02-07T12:44:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774668522",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDY3MTg3NA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I meant to add noblock the first time, then hesitated, I see you guys didn't so maybe this is blocked.\r\n\r\nAutoMerge is blocked anyway, that's why there is the \"needs to be manually merged in 3 days\" label",
+      "createdAt": "2021-02-07T13:09:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/29448#issuecomment-774671874",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Minio\n- Repository: https://gitlab.com/ExpandingMan/Minio.jl\n- Created by: https://gitlab.com/ExpandingMan\n- Version: v0.1.0\n- Commit: 49bdb49453d98734041ae7a6fd2dd213c6f8fad2\n- Git reference: master",
+  "package_name": "Minio",
+  "title": "New package: Minio v0.1.0"
+}

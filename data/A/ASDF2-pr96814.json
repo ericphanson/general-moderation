@@ -1,0 +1,51 @@
+{
+  "created_at": "2023-12-09T21:02:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-12-15T14:44:24Z",
+  "pr_number": 96814,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85uMKrK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 1 existing package.\n  1. Similar to ASDF. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-09T21:06:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96814#issuecomment-1848683210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uMMyP",
+      "author": {
+        "login": "eschnett"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`[noblock]`\r\n\r\nThis new package `ASDF2` is currently under development. Once ready it will provide the same features as the existing `ASDF` package. Their difference is that `ASDF` wraps a Python package while `ASDF2` is implemented directly in Julia. At the moment, `ASDF2` already has certain features that are not available in `ASDF` because they are not available in the Python package.",
+      "createdAt": "2023-12-09T21:25:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96814#issuecomment-1848691855",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: ASDF2\n- Repository: https://github.com/eschnett/ASDF2.jl\n- Created by: @eschnett\n- Version: v0.1.0\n- Commit: d7d1cc5c4f72fc2eac0c418dbc4a965e4e1128a1\n- Git reference: HEAD\n- Description: ASDF, the Advanced Scientific Data Format",
+  "package_name": "ASDF2",
+  "title": "New package: ASDF2 v0.1.0"
+}

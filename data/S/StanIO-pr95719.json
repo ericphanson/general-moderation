@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-11-21T17:51:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-12-03T11:42:50Z",
+  "pr_number": 95719,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85skE9y",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Stan. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-21T17:56:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95719#issuecomment-1821396850",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85slA3I",
+      "author": {
+        "login": "goedman"
+      },
+      "authorAssociation": "NONE",
+      "body": "In this case I would like to stick with StanIO.jl as it is linked to a python package with a similar name.\r\n\r\nUnfortunately I'm not on Slack.\r\n\r\n[noblock]",
+      "createdAt": "2023-11-21T20:38:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95719#issuecomment-1821642184",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: StanIO\n- Repository: https://github.com/StanJulia/StanIO.jl\n- Created by: @goedman\n- Version: v0.1.0\n- Commit: 1fa0527d983eef8656d4db569feea1b97eb3024c\n- Git reference: HEAD\n- Description: Cmdstan related I/O operations \n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Rel 0.1.0 = Julia version of reshape.py\n<!-- END RELEASE NOTES -->",
+  "package_name": "StanIO",
+  "title": "New package: StanIO v0.1.0"
+}

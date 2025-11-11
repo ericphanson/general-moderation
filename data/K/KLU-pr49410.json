@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-11-26T01:31:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-11-27T22:06:47Z",
+  "pr_number": 49410,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846Y1AF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to GLM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to JLD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to LKH. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MLJ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to MKL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-26T01:33:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49410#issuecomment-979587077",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846Y1Sx",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nCan this be merged over the name requirements? It's a sister to CHOLMOD, AMD, UMFPACK, etc. The full name is a joke (Clark) Kent LU and it is never referred to as such.",
+      "createdAt": "2021-11-26T01:39:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49410#issuecomment-979588273",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846apha",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] ~~Blocking~~. Going to move to JuliaSparse.",
+      "createdAt": "2021-11-26T15:38:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49410#issuecomment-980064346",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846ddDE",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This name is fine since it matches the standard for wrapper packages, i.e. it's wrapping a package called KLU so KLU.jl is the clear choice. Looks like it's just about time for the 3 day mark so I'll merge.",
+      "createdAt": "2021-11-27T22:06:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49410#issuecomment-980799684",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ChrisRackauckas",
+  "body": "- Registering package: KLU\n- Repository: https://github.com/JuliaSparse/KLU.jl\n- Created by: @Wimmerer\n- Version: v0.1.0\n- Commit: 51ec558f3e0020bacf8adef57e947c2c48ba5779\n- Reviewed by: @Wimmerer\n- Reference: https://github.com/JuliaSparse/KLU.jl/commit/51ec558f3e0020bacf8adef57e947c2c48ba5779#commitcomment-60932474\n- Description: Julia Wrapper for the KLU sparse matrix solver\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68e38f49807b4bea23948bb31edb437b4bbe4946a4e5fdb99d22aee7b5019afaa3a506166b151f4885d5119ff35d881b3a73608e22ddef9571b3cd6c1ad9c001dd121d61b871dd2ec0195aa03c953ce4fe1e9caf507f8b82b19eb4b7ea2e96f7bfd730b33fbcd3d864822c7682883ea24eb459d4fccc93f3501cab37bc87dd639d17c7ee55f6f7413549902add8886107b24436fee7978cdd143227f5c52f9298115925c3378ef206d0d26e567bd14d37 -->",
+  "package_name": "KLU",
+  "title": "New package: KLU v0.1.0"
+}

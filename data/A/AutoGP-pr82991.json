@@ -1,0 +1,148 @@
+{
+  "created_at": "2023-05-05T20:27:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-05-23T21:03:12Z",
+  "pr_number": 82991,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85bmP05",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to AuthGG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Automa. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-05T20:34:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1536752953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bmUmn",
+      "author": {
+        "login": "fsaad"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> * Package name similar to 2 existing packages.\r\n>   \r\n>   1. Similar to AuthGG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n>   2. Similar to Automa. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nThe name of the proposed package, `AutoGP`, is sufficiently distinct from `AuthGG` and `Automa` to cause any real confusion.  Changing the package name to something else would also require a large refactoring of existing codebases that depend on AutoGP.\r\n\r\n[noblock]\r\n",
+      "createdAt": "2023-05-05T20:57:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1536772519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bmdpm",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nFor what it's worth, I'd suggest a more descriptive name, such as `AutoGaussianProcesses.jl`. Not everyone knows what \"GP\" stands for, and we generally recommend that package names are understandable to the general Julia community, and not just the specific sub-community that works in the subject area.",
+      "createdAt": "2023-05-05T21:40:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 7
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1536809574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cdLyM",
+      "author": {
+        "login": "tecosaur"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Changing the package name to something else would also require a large refactoring of existing codebases that depend on AutoGP.\r\n\r\nSurely it's just a matter of find + replace?\r\n\r\n[noblock]",
+      "createdAt": "2023-05-17T10:39:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1551154316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85c20Px",
+      "author": {
+        "login": "fsaad"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> [noblock]\r\n>\r\n> For what it's worth, I'd suggest a more descriptive name, such as AutoGaussianProcesses.jl. Not everyone knows what \"GP\" stands for, and we generally recommend that package names are understandable to the general Julia community, and not just the specific sub-community that works in the subject area.\r\n\r\n@DilumAluthge Thank you for the suggestion.\r\n\r\nThere is existing precedent in the Julia registry for using \"GP\" as an acronym for GaussianProcess, such as GPLikelihoods.jl, AbstractGPs.jl, ApproximateGPs.jl, TemporalGPs.jl, GPnet.jl, etc.\r\n\r\nThere is also existing precedent in the registry for using dozens of statistics, machine learning, or mathematics acronyms that are specific to sub-communities who work in a given subject area. Just a few examples include POMDPs.jl, POMDPGifs.jl, GLM.jl, ANOVA.jl, ARFIMA.jl, AnovaGLM.jl, QuasiGLM.jl, TuringGLM.jl, AdaOPS.jl, ACTRModels.jl, BEAST.jl, BaytesSMC.jl, BaytesMCMC.jl, BaytestPMCMC.jl, PANDA.jl, SMC.jl, GARCH.jl GLMNet.jl, ODE.jl.\r\n\r\n[noblock]",
+      "createdAt": "2023-05-22T19:57:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1557873649",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85c3KkZ",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Does these precedents mean that vague abbreviations must remain allowed forever? Hopefully not :)\r\n\r\nAlso, some abbreviations like \"ODE\" or \"GLM\" have one or very few common meanings, as evidenced by the first page of google search. While searching for GP (or AutoGP) don't show anything even remotely relevant on the first page.\r\n\r\nPresumably, you want to make the package more discoverable by general users, right? Otherwise why register in `General` at all...",
+      "createdAt": "2023-05-22T20:45:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1557965081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85c3teL",
+      "author": {
+        "login": "fsaad"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Does these precedents mean that vague abbreviations must remain allowed forever?\r\n\r\nIs the package name AutoGP.jl allowed or disallowed per the registry rules?  I understood the tags ([noblock], `needs to be manually merged in 3 days`, `Override AutoMerge: name similarity is okay`) applied on May 5th 2023 to mean that the package name is allowed.  If it is allowed, then I wish to respectfully request moving forward with the current name.\r\n\r\n[noblock]",
+      "createdAt": "2023-05-22T22:21:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1558108043",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85c_YyN",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Not a fan of the name, but the author very much wants it to be merged and has pointed to lots of precedent. See [this slack conversation](https://julialang.slack.com/archives/C6M4DQA5P/p1684165314021079) for more.",
+      "createdAt": "2023-05-23T21:03:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82991#issuecomment-1560120461",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: AutoGP\n- Repository: https://github.com/fsaad/AutoGP.jl\n- Created by: @fsaad\n- Version: v0.1.0\n- Commit: 7920e69e4526b101f4c4fe4d85145bf25d36968b\n- Reviewed by: @fsaad\n- Reference: https://github.com/fsaad/AutoGP.jl/issues/1#issuecomment-1536758569\n- Description: Bayesian Time Series Model Discovery\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980b99a2a7c391c67525adfcc3cbd404e2a9c0e972a03903afaade5a67f1488bc2c1cc518ef34a9397c5c355654b3b7bee9d0d52a5a5a547c40eadcfeff54381184825ae1b0a5a34da218bd3c87752302a7da519771887ed00a7deaa038f95fab249a3867699d93f04e7138dc031dea647 -->",
+  "package_name": "AutoGP",
+  "title": "New package: AutoGP v0.1.0"
+}

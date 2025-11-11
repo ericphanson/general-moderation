@@ -1,0 +1,96 @@
+{
+  "created_at": "2022-05-12T16:39:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-06-12T16:33:57Z",
+  "pr_number": 60114,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85DEVwX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-12T16:45:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60114#issuecomment-1125211159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DEcVk",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The package load failure is because we are currently limited to an older version of Ipopt that doesn't load. We will fix this down the road, but for now I would prefer to just merge as is as things work on Windows.\r\n\r\nWe have used the name for a long time in my community, and at this point it is just an artificial moniker, so I would also like to keep it.",
+      "createdAt": "2022-05-12T17:15:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60114#issuecomment-1125238116",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Eu781",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-06-12T12:45:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60114#issuecomment-1153154869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EvNZS",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@giordano Can I merge this PR? If I understand the current rules correctly, I can, right?",
+      "createdAt": "2022-06-12T16:28:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60114#issuecomment-1153226322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EvNj4",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, let's merge it",
+      "createdAt": "2022-06-12T16:31:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/60114#issuecomment-1153227000",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "davidanthoff",
+  "body": "- Registering package: Judyp\n- Repository: https://github.com/anthofflab/Judyp.jl\n- Created by: @davidanthoff\n- Version: v1.0.0\n- Commit: 6af3d790b72edf40b4bf5a91f0c32905e013af37\n- Reviewed by: @davidanthoff\n- Reference: https://github.com/anthofflab/Judyp.jl/commit/6af3d790b72edf40b4bf5a91f0c32905e013af37#commitcomment-73514774\n- Description: Julia package for solving dynamic programming problems\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6721f27807f3c01f55cb8243d2d393b0a605798ce29091f59a8cc6c24578e562b8f0bd7cbe1443c5439b55b4a2a2b1100ea3d9f7f7c23b190d0937f77f2e53c1054cd63ea503e051606f3618c370715372e507808989a485869505be750c667b32d672218d3941855fbee9d5238e6c05c2ab5da8d1241227ee6f93c56280fb4baff4ef1c53bc6d352275b7b7a56d43e7582a37d2d2fd4c73ae6f57b7898666cb755c89c1246f612921ede125a8d3942aa -->",
+  "package_name": "Judyp",
+  "title": "New package: Judyp v1.0.0"
+}

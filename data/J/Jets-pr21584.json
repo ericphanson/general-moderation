@@ -1,0 +1,74 @@
+{
+  "created_at": "2020-09-18T16:54:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2020-09-23T03:59:32Z",
+  "pr_number": 21584,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NDk3NzE0NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-09-18T16:57:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21584#issuecomment-694977144",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NjY2MzMxNA==",
+      "author": {
+        "login": "samtkaplan"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHello, the name is appropriate for this package.  Please see the package docs (https://chevronetc.github.io/Jets.jl/dev/) for more information.  Please merge.  Thanks!  cc: @aviks. ",
+      "createdAt": "2020-09-22T11:31:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21584#issuecomment-696663314",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NjY3MDc3MQ==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@samtkaplan, note, you want to add [noblock] to your comment (as explained above), and I was looking at CI, and I see e.g. (maybe false alarm, I wanted to know more myself why these warnings, seemingly only reason for error in the end):\r\n\r\n```\r\n┌ Warning: Some registries failed to update:\r\n│     — `/tmp/jl_pvislB/registries/General` — registry detached\r\n└ @ Pkg.Types /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Pkg/src/Types.jl:1194\r\n```",
+      "createdAt": "2020-09-22T11:49:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21584#issuecomment-696670771",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5NjY3NTEzNA==",
+      "author": {
+        "login": "samtkaplan"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHi @PallHaraldsson.  Thank you very much for your response.\r\n\r\nI'm not sure what the reason is for the \"Some registries failed to update\" message.  Are you thinking it is that error that caused CI to fail, as opposed to the longer-than-four-character package name requirement?\r\n\r\nWith respect to the \"Some registries failed to update\" message, I'm not sure I know how to solve that, but let me know if I can do anything to help to understand it.\r\n\r\nThanks!!\r\n\r\nSam \r\n\r\n**[edit]**  It occurred to me that the key is that the message mentions that the registry is **detached**.  I'm guessing that there is something in the CI that causes the registry to be detached, and, subsequently, there is probably logic in Pkg.jl that skips updating registries that are detached.  I think that makes sense.  In addition, I looked at other packages that do pass the CI, and they contain the same message about failing to update the detached registry.  Hope that helps.  Sam",
+      "createdAt": "2020-09-22T11:59:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/21584#issuecomment-696675134",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: Jets\n- Repository: https://github.com/ChevronETC/Jets.jl\n- Created by: @jkwashbourne\n- Version: v1.0.0\n- Commit: 381e1e94b81142546d6550ffa4f259dc706546d4\n- Reviewed by: @jkwashbourne\n- Reference: https://github.com/ChevronETC/Jets.jl/commit/381e1e94b81142546d6550ffa4f259dc706546d4#commitcomment-42438334\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68816dead05df2e662098ad7db5930f73e76a981352669b0bf23b9027283af66187556cb263e4d5ea45de544414e0a5565414f8470a35cf9d24b8906025311bd88cf378c48390be5928a2e3301442c12e48a0527e8358377cad958705daae4dc97866d7b76444304a564ed86e11e27719078b1041a3783e98da00c8ed6302420615da2685dac1a01a501bc1b1d57f90c08824212d881fc061e436dadfee972cbd9489254cd2c5ac80faaa513def3e613d -->",
+  "package_name": "Jets",
+  "title": "New package: Jets v1.0.0"
+}

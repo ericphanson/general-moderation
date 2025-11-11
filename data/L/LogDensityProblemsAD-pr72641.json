@@ -1,0 +1,111 @@
+{
+  "created_at": "2022-11-22T11:20:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-11-28T18:42:08Z",
+  "pr_number": 72641,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85O40pN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to LogDensityProblems. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-22T11:23:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1323518541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O5MQu",
+      "author": {
+        "login": "tpapp"
+      },
+      "authorAssociation": "NONE",
+      "body": "The new package is code factored out from the old package, hence the name. Spelling out AD would make the name unwieldy, so I would like to get it registered under this one.",
+      "createdAt": "2022-11-22T12:37:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1323615278",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O-Ig2",
+      "author": {
+        "login": "torfjelde"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Do you need to retrigger the CI @tpapp now that @fredrikekre added the override tag?",
+      "createdAt": "2022-11-23T11:28:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1324910646",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O-K3M",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No.",
+      "createdAt": "2022-11-23T11:36:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1324920268",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PPWWJ",
+      "author": {
+        "login": "torfjelde"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Is something holding this back still?",
+      "createdAt": "2022-11-28T16:51:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1329423753",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PP754",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No.",
+      "createdAt": "2022-11-28T18:41:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72641#issuecomment-1329577592",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: LogDensityProblemsAD\n- Repository: https://github.com/tpapp/LogDensityProblemsAD.jl\n- Created by: @tpapp\n- Version: v1.0.0\n- Commit: c2993f6594a47c90794460df235df1cf6bf450f0\n- Reviewed by: @tpapp\n- Reference: https://github.com/tpapp/LogDensityProblemsAD.jl/commit/c2993f6594a47c90794460df235df1cf6bf450f0#commitcomment-90710612\n- Description: AD backends for LogDensityProblems.jl.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63839fc01940980fc891563f3357fcdfc7b56a650531022bb560f8b85aef3c8d8a5810a843238e42ced74550f9b475d1a0c60c956de9fd7e2efdbdc7d119ee4319b447d96cdbe351064136ba8470f8c5b342410028341a33b31f43545f1f40be6c06dc7c7ed7fe5eaaf4b43fbbf4eaa85e310a6e032a005a8f960b767b35f17e106e29a091905935f508dc06e922ec302309cddede6310f055ce2d6967fcd95f507ffc920e10dbcb6020533bec06de1a1 -->",
+  "package_name": "LogDensityProblemsAD",
+  "title": "New package: LogDensityProblemsAD v1.0.0"
+}

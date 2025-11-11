@@ -1,0 +1,51 @@
+{
+  "created_at": "2021-07-02T16:30:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-07-07T11:35:01Z",
+  "pr_number": 40105,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3MzEyMTM0NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Stan. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Scats. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-07-02T16:33:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/40105#issuecomment-873121345",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3MzEyNjQ2MA==",
+      "author": {
+        "login": "KlausC"
+      },
+      "authorAssociation": "NONE",
+      "body": "`Scanf` is a sibling of `Printf`, which is located in the stdlib.\r\nThe name is very well-known in the C - community and it would be a pity, not to use it. This package will bring the full functionality of\r\nformatted reading in the style of C-function `scanf` to Julia.",
+      "createdAt": "2021-07-02T16:42:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/40105#issuecomment-873126460",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: Scanf\n- Repository: https://github.com/KlausC/Scanf.jl\n- Created by: @KlausC\n- Version: v0.1.0\n- Commit: 3edcaeb567c7e0d7f5834fccd2ab33ab348b706b\n- Reviewed by: @KlausC\n- Reference: https://github.com/KlausC/Scanf.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598fdd177abffd49d858e9e695d40a1e2a89a85f0baef59e4e77c50ff6b43ccdf55954a137d205ccc4259966bebfb2f70dbe298a9b1399c706325e93ea0ae575ea29e8f7791a865171b228de1642cd0f4bfdef1f355e9130afc7440a3fdb3cd8756cf1b2ff5a90e678f86560554cf1f29fa -->",
+  "package_name": "Scanf",
+  "title": "New package: Scanf v0.1.0"
+}

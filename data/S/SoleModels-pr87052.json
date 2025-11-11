@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-07-07T18:23:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-07-15T09:57:33Z",
+  "pr_number": 87052,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85g6Far",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to SeisModels. Normalized visual distance 1.36 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-07T18:30:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87052#issuecomment-1625839275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85g6Vrh",
+      "author": {
+        "login": "giopaglia"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nDear Julia Team,\r\nHi, I'd like to register this package, which is under the core of the Sole.jl framework for symbolic modeling; my team and I are halfway into releasing the framework, and present it at JuliaCon2023.\r\nOf the two issues highlighted by the bot, I've solved the first one by adding the [compat] entry.\r\nThe second one is about renaming the package because one with a similar name, _SeisModels.jl_, is already registered.\r\n\r\nI ask to accept the name *SoleModels.jl* for this package name,\r\nsince it is inline with the names of the other *Sole* packages, and it perfectly captures its raison d'être.\r\nI also believe, it really cannot be confused with the other package, which appears to belong to a different study area.\r\n\r\nRegards,\r\nGiovanni P & [aclai-lab](aclai.unife.it)\r\n",
+      "createdAt": "2023-07-07T19:00:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87052#issuecomment-1625905889",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "ericphanson",
+  "body": "- Registering package: SoleModels\n- Repository: https://github.com/aclai-lab/SoleModels.jl\n- Created by: @giopaglia\n- Version: v0.1.0\n- Commit: d6cb5e2fc16307b2b99056369044e8219bd6ca1a\n- Reviewed by: @giopaglia\n- Reference: https://github.com/aclai-lab/SoleModels.jl/issues/19#issuecomment-1625870930\n- Description: Symbolic modeling in Julia!\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986cabb64a0ff9e8103c82e9603fa387c21268700e2bbbda68abfa7682604fe18301892656d6323da9fe7115ccad83d5490892b7848309f8135eb293d2831ce4f4f7116fdd98fe97d7382afb7e497baf4e226ede3e150bd7c17d7c59abec1cd39858ebe7b9c854569325ad0a5278788c1a86ecab0565734c835aa98d07b87f92e2 -->",
+  "package_name": "SoleModels",
+  "title": "New package: SoleModels v0.1.0"
+}

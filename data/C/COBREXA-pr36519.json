@@ -1,0 +1,81 @@
+{
+  "created_at": "2021-05-11T15:29:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-05-15T23:23:50Z",
+  "pr_number": 36519,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzODY4Nzc5MQ==",
+      "author": {
+        "login": "laurentheirendt"
+      },
+      "authorAssociation": "NONE",
+      "body": "cc: @giordano @exaexa @stelmo @trefex @weiguUL @tpusa @niumnoronha @syarra @paulflang @anandijain @ChrisRackauckas\r\n\r\n[noblock]",
+      "createdAt": "2021-05-11T15:32:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/36519#issuecomment-838687791",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzODcyMTIxOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Package name similar to 1 existing package.\n  1. Similar to COBRA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-11T15:49:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36519#issuecomment-838721219",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzODkwNTM1MA==",
+      "author": {
+        "login": "exaexa"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nsmall update, I fixed the dependency compat issues",
+      "createdAt": "2021-05-11T17:51:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36519#issuecomment-838905350",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzOTA5MTYxOA==",
+      "author": {
+        "login": "laurentheirendt"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear @giordano, \r\n\r\nthis package is developed as part of the [PerMedCoE](https://permedcoe.eu/) project, aiming at bringing the Constraint-based Reconstruction and Analysis (COBRA) capabilities to the exa-scale level.\r\n\r\nThe package name is actually an acronym and stands for `COnstraint-Based Reconstruction and EXascale Analysis` to reflect the domain-specific nature of the HPC-ready package. The package will most certainly pave the way and be the go-to reference to run exa-scale analyses in the future.\r\n\r\nThis package has long been awaited by the community, and has very little overlap with the existing COBRA.jl package.\r\n\r\nThe whole team would really appreciate if we could stick to the current name of `COBREXA.jl`.\r\n\r\nThank you so much :+1: \r\n\r\n[noblock]",
+      "createdAt": "2021-05-11T20:03:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36519#issuecomment-839091618",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: COBREXA\n- Repository: https://github.com/LCSB-BioCore/COBREXA.jl\n- Created by: @exaexa\n- Version: v1.0.0\n- Commit: 373e6b39c0b78fc638f64ef648952f32e230ad3b\n- Reviewed by: @exaexa\n- Reference: https://github.com/LCSB-BioCore/COBREXA.jl/issues/249#issuecomment-838895461\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e97ed9f3e6a607988427a5cbc9febea19e8666ba7fc972c3a2bf0161c7271acecd06cc71389398cfb954d7f596814ad26903a8150daab5b772b1643239a85e1531ffcaf6a1e3355d61e9d5d4f55b0a43364ee8f0b199ee58e8acc1e2d3e5696139b8e6cc37a8631ca6dab7b55a781107ccb0a145b277e1a245403249d13781de -->",
+  "package_name": "COBREXA",
+  "title": "New package: COBREXA v1.0.0"
+}

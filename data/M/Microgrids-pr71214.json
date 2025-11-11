@@ -1,0 +1,149 @@
+{
+  "created_at": "2022-10-28T07:36:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-11-07T11:18:19Z",
+  "pr_number": 71214,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85NKg_2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-28T07:39:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1294602230",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NLr4t",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "I can in the first [AutoMerge test](https://github.com/JuliaRegistries/General/actions/runs/3343728179/jobs/5537250646) that there is an error\r\n\r\n```\r\nERROR: Unsatisfiable requirements detected for package Microgrids [bd581358]:\r\n Microgrids [bd581358] log:\r\n ├─possible versions are: 0.9.0 or uninstalled\r\n ├─restricted to versions 0.9.0 by an explicit requirement, leaving only versions 0.9.0\r\n └─restricted by julia compatibility requirements to versions: uninstalled — no versions left\r\n```\r\n\r\nHowever, I don't understand the root of the problem. I've added a julia compat line in my `Project.toml`:\r\n\r\n```\r\njulia = \"~1.6\"\r\n```\r\nwhich if I understood the [§Compatibility](https://pkgdocs.julialang.org/v1/compatibility/) chapter mean Julia version 1.6 and onwards (1.6.x, 1.7.x, 1.8,1.9...), until 2.x which is excluded. Am I correct?\r\n\r\nOr is it uncommon to use a tilde specifier for Julia version compatibility ?\r\n",
+      "createdAt": "2022-10-28T11:57:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1294908973",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NMJ_T",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`~1.6` means `[1.6.0, 1.7.0)`, there are examples in the docs https://pkgdocs.julialang.org/v1/compatibility/#Tilde-specifiers that you linked to.\r\n\r\n> Or is it uncommon to use a tilde specifier for Julia version compatibility?\r\n\r\nYes. `^1.6` or, since `^` are default, just `1.6` is used by the majority of packages.\r\n\r\nEdit: [noblock]",
+      "createdAt": "2022-10-28T13:56:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1295032275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NMfUY",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "> `~1.6` means `[1.6.0, 1.7.0)`, there are examples in the docs https://pkgdocs.julialang.org/v1/compatibility/#Tilde-specifiers that you linked to.\r\n\r\nOh yes, this is crystal clear in the doc. For some reason I misread it this morning, sorry.\r\n\r\nI've updated the [compat] section with Julia version `1.6`.",
+      "createdAt": "2022-10-28T15:12:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1295119640",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NMfpp",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "What is strange is that I didn't get an error with compat `~1.6` when installing locally on my machine (on Julia 1.8).",
+      "createdAt": "2022-10-28T15:13:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1295121001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NMjZR",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the feedback @fredrikekre, now all tests have passed!\r\n\r\nThere is still the tagging mentioned in https://github.com/Microgrids-X/Microgrids.jl/issues/2 that I need to do, but if I got it right, this should be done after the merge (to be sure to tag the actual final version...).",
+      "createdAt": "2022-10-28T15:27:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1295136337",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nz5Ea",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "Is there something else that I should do to help the review of my package?",
+      "createdAt": "2022-11-07T11:09:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1305448730",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nz7nT",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General#automerge-is-blocked-by-one-of-my-comments-how-do-i-unblock-it, but I can merge it now.",
+      "createdAt": "2022-11-07T11:17:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1305459155",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85N0e2q",
+      "author": {
+        "login": "pierre-haessig"
+      },
+      "authorAssociation": "NONE",
+      "body": "> See https://github.com/JuliaRegistries/General#automerge-is-blocked-by-one-of-my-comments-how-do-i-unblock-it, but I can merge it now.\r\n\r\nAh yes I had forgotten about this rule. Thanks @fredrikekre for merging my package PR and thanks for your patience with me (first contribution to the General registry).",
+      "createdAt": "2022-11-07T13:16:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71214#issuecomment-1305603498",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Microgrids\n- Repository: https://github.com/Microgrids-X/Microgrids.jl\n- Created by: @pierre-haessig\n- Version: v0.9.0\n- Commit: 98a2aa7b20c6594b778aa00fa3cc2933433754ab\n- Reviewed by: @pierre-haessig\n- Reference: https://github.com/Microgrids-X/Microgrids.jl/issues/2#issuecomment-1295117706\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835982b0546d1687ef0553a35cc212c6a22602486605b0b3274e84c3ec9822e778c6d250f3263c108b2cb2597d5a76156b0e97800857da7a999cdc3f6b064440bd4105434694b883925240c44a7fbf2528af72ac5cb1dc941a36d035f1de7c5a1911d9573a9bbb803bf6198198589e8883627de81210227d53cd01c684ed6b2e319aa -->",
+  "package_name": "Microgrids",
+  "title": "New package: Microgrids v0.9.0"
+}

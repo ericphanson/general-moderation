@@ -1,0 +1,44 @@
+{
+  "created_at": "2023-03-31T12:50:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-04-03T12:52:14Z",
+  "pr_number": 80728,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Y7FZl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to TestItems. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-31T12:54:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/80728#issuecomment-1491883621",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Y7GiS",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The name “ReTestItems.jl” comes from combining some of the ideas from ReTest.jl with the _interface_ of VS Code’s TestItems.jl -- so the name similarity with TestItems.jl is purposeful, but we think the `Re` prefix makes it fairly typos safe.\r\n\r\n[noblock]",
+      "createdAt": "2023-03-31T12:58:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/80728#issuecomment-1491888274",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: ReTestItems\n- Repository: https://github.com/JuliaTesting/ReTestItems.jl\n- Created by: @nickrobinson251\n- Version: v1.0.0\n- Commit: 6adc109e67c966117a6243da2e9197ebef6db948\n- Reviewed by: @nickrobinson251\n- Reference: https://github.com/JuliaTesting/ReTestItems.jl/commit/6adc109e67c966117a6243da2e9197ebef6db948#commitcomment-106951156\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69f45e6a310155797accb61b115bd0c2e14de15a30303dd0ca2ef5cc3bc742f03a5d6fbd22f20d1b89a6ac1a619b091fed917b478de43421b371e1f7332185a99f1fd962b750ee191f3318fe64d6e5ba26e11c6a857fd62fd37c55b2f62d5098e6a3e124406afa713fe5d5c61097f2860d7e11884b6dea707da8e2976fde8b950584c644d2b81bdc46e657c8d2ca3b45f5ec8ac70178538ece3f9ac4ed0919f0ef5aed4fd3ea6de978e6462c606558cb1 -->",
+  "package_name": "ReTestItems",
+  "title": "New package: ReTestItems v1.0.0"
+}

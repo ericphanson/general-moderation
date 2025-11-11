@@ -1,0 +1,499 @@
+{
+  "created_at": "2023-01-13T00:02:14Z",
+  "review_comments": [
+    {
+      "id": 1290251069,
+      "node_id": "PRR_kwDOBhF1q85M56s9",
+      "user": {
+        "login": "DilumAluthge",
+        "id": 5619885,
+        "node_id": "MDQ6VXNlcjU2MTk4ODU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5619885?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DilumAluthge",
+        "html_url": "https://github.com/DilumAluthge",
+        "followers_url": "https://api.github.com/users/DilumAluthge/followers",
+        "following_url": "https://api.github.com/users/DilumAluthge/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DilumAluthge/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DilumAluthge/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DilumAluthge/subscriptions",
+        "organizations_url": "https://api.github.com/users/DilumAluthge/orgs",
+        "repos_url": "https://api.github.com/users/DilumAluthge/repos",
+        "events_url": "https://api.github.com/users/DilumAluthge/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DilumAluthge/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "Agreed, it would be far too confusing.",
+      "state": "DISMISSED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/75605#pullrequestreview-1290251069",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/75605",
+      "author_association": "MEMBER",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/75605#pullrequestreview-1290251069"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/75605"
+        }
+      },
+      "submitted_at": "2023-02-09T00:54:07Z",
+      "commit_id": "c841b08ad7212afdf0ff475a6d1816b761c5ea1b"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-02-24T20:22:27Z",
+  "pr_number": 75605,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85SUllP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 1 existing package.\n  1. Similar to Polymer. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.38 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-13T00:06:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1381128527",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SUq78",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think it would be best to allow this package name and repository URL. Please consider:\r\n\r\n1) The package will provide Julia API to a Rust library, and should be located in the same repository. There is also Python API in the repository, and a bunch of packaging. It would be weird for only the Julia interface to have its own repository, and complicate things (it's best to test all implementations together to eliminate bugs -> build/test Julia and Python API right alongside the Rust library for optimal CI/CD).\r\n\r\n2) The name Polymers is _heavily_ standardized across the different areas of this project (GitHub, Cargo, Crates.io, PyPI, Conda, Docker, ReadTheDocs, Binder, Discord, and more soon) and it would be really weird for _only_ the Julia package to have a different namespace. Further, the fact that this will come from a more unique URL should actually alleviate the potential misnaming concern.",
+      "createdAt": "2023-01-13T00:27:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1381150460",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SUyP3",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "The `Polymers.jl` package currently only exports one function `get_name`?",
+      "createdAt": "2023-01-13T01:11:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1381180407",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SiF15",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Added some of the API missing from initial PR.\r\n\r\nSee that the Julia package calls functions from the Rust library. Building the package involves cloning this repository and building the Rust library within it. It then makes the most sense to keep all this together, so they can develop and test together (along with the Python API).\r\n\r\nSee 1 and 2 above!",
+      "createdAt": "2023-01-16T23:25:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1384668537",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85TzMQr",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "halp",
+      "createdAt": "2023-01-27T02:06:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1405928491",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U0PLg",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge what do you think?",
+      "createdAt": "2023-02-08T17:23:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1422979808",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U08c1",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "The version currently in this PR is still the version with only one exported function? ",
+      "createdAt": "2023-02-08T19:58:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423165237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U1HWK",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Alright @SyxP @DilumAluthge check it out now",
+      "createdAt": "2023-02-08T20:37:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423209866",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U1OjR",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I've no further objections apart from the noted name similarity. \r\n\r\nI don't quite understand this line: \"Further, the fact that this will come from a more unique URL should actually alleviate the potential misnaming concern.\", as when you register the package, the average user will either `]add Polymers` or `Pkg.add(\"Polymers\")`, if the intended use case is adding via the unique URL, then it should already work without addition into general repository.",
+      "createdAt": "2023-02-08T21:07:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423239377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U10X5",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "@SyxP yeah I guess I just mean that when people check where the package came from while downloading it from `Pkg.add(\"Polymers\")`, there will be a `.../Polymers.git` compared to a potential `.../Polymer.jl.git` ",
+      "createdAt": "2023-02-08T23:59:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423394297",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U19wQ",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We really cannot have a two packages called `Polymer` and `Polymers` in the registry. It is just too confusing for everybody, I think. It will remain hugely error prone -- we really shouldn't leave such obvious footguns for our users. ",
+      "createdAt": "2023-02-09T00:38:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423432720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U2Cbk",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As far as suggestions for different names: `PolymerModeling` or `PolymersModeling` would probably be good names.",
+      "createdAt": "2023-02-09T00:54:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423451876",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U2GHn",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for considering this and chiming in, everyone! I do appreciate it.\r\n\r\nI just don't understand the big deal about names being close? Every other package manager I've used doesn't do this and it ends up fine. We have to be perfect to the letter when coding anyway, is it so bad to expect a similar level of carefulness for adding packages?",
+      "createdAt": "2023-02-09T01:11:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423466983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U3gDa",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think it is fine. The automated checks exist to catch malicious attempts to confuse which this doesn't seem to be.\r\n\r\nNote also that we already have `Config` and `Configs`, `TreeView` and `TreeViews`, `TeXTable` and `TexTables`, `MCMCChain` and `MCMChains`, to name a few.",
+      "createdAt": "2023-02-09T08:51:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1423835354",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U72CB",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @fredrikekre !\r\n@DilumAluthge would you be willing to reconsider?",
+      "createdAt": "2023-02-09T23:27:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1424973953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U780l",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, of course, this is not malicious. However, consider this: half the users of this package will type `Polymer` and half the users of the other package will type `Polymers`. I know this, because a few hours ago, I typed `DataDep` instead of `DataDeps` and spend five minutes confused by the error. It's a very common mistake to make. In may case, I got an error, and command completion would have helped me. But for this package, and its namesake, it will be even more confusing. \r\n\r\nYes, this name is aesthetically much better, no doubt, but is that worth hundreds or thousands of people be confused for years to come? Shouldn't we be more considerate of our users? Yes, there are already some causes of confusion in the registry, but is that reason to increase the pain? \r\n\r\nAnyways, that's my 2c fwiw. ",
+      "createdAt": "2023-02-10T00:07:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1425001765",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U8DoG",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "It just doesn't seem like a big deal and most people are probably going to copy-paste the Julia line from my README anyway. And like if I `pip install nump` I'll figure out pretty quick that it's not `numpy`. 5 minutes isn't so bad!",
+      "createdAt": "2023-02-10T00:54:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1425029638",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85U_5gX",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Yes, there are already some causes of confusion in the registry, but is that reason to increase the pain?\r\n\r\nAgreed. As a general rule, just because we have some bad examples already existing in the registry, that doesn't mean that we should be forced to adhere to that precedent. Those examples were probably introduced into the registry before we implemented the name similarity check. If those same packages were newly registered today, I would also object to them.",
+      "createdAt": "2023-02-10T16:16:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1426036759",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VDsEb",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I am not aware of a case where a package author who insisted on keeping the name after discussing it have been denied a merge though.",
+      "createdAt": "2023-02-12T13:13:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1427030299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VDx2R",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "And I have good reasons for insisting on the name! 😀",
+      "createdAt": "2023-02-12T14:57:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1427053969",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VEKJz",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Also feel free to can this older PR whenever\r\n\r\nhttps://github.com/JuliaRegistries/General/pull/77316",
+      "createdAt": "2023-02-12T22:49:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1427153523",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VLBO3",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre are you a maintainer?",
+      "createdAt": "2023-02-14T01:12:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1428951991",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VlGZR",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Are there more maintainers I can ping?",
+      "createdAt": "2023-02-18T23:10:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1435788881",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WFTrJ",
+      "author": {
+        "login": "mrbuche"
+      },
+      "authorAssociation": "NONE",
+      "body": "perhaps @ChrisRackauckas ?",
+      "createdAt": "2023-02-24T18:38:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75605#issuecomment-1444231881",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: Polymers\n- Repository: https://github.com/sandialabs/Polymers\n- Created by: @mrbuche\n- Version: v0.1.0\n- Commit: 756333271839bcfdde88d4fc6392c4d6572ec6a3\n- Git reference: HEAD\n- Description: Polymers Modeling Library",
+  "package_name": "Polymers",
+  "title": "New package: Polymers v0.1.0"
+}

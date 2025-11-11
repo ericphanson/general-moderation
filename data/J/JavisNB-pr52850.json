@@ -1,0 +1,104 @@
+{
+  "created_at": "2022-01-20T14:41:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2022-02-01T22:10:25Z",
+  "pr_number": 52850,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q848pxHz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Javis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-20T14:45:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1017582067",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848qCiu",
+      "author": {
+        "login": "gpucce"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, \r\n\r\nThe reason `JavisNB` can't be installed or loaded is that it depends on a version of `Javis` that is yet to be released. This is the case because most the functionality of JavisNB are exported from `Javis` itself and it will be the package holding all the notebooks functionalities. However, doing this required some changes in `Javis` that will be available in the next release, the one `JavisNB` depends on.\r\n\r\nThat said, we though it was not the case to relax the compat because otherwise there would be a downloadable release of `JavisNB` that does not work. At the same time if we release `Javis` 0.8 right now there would be no way to use it within a notebook until `JavisNB` is itself released.\r\n\r\nWhat is the best way to go?\r\n\r\nThanks you in advance!\r\n\r\nTaggin others for reference\r\n@Wikunia",
+      "createdAt": "2022-01-20T15:56:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1017653422",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848qOqZ",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Registering a package which depends on an unregistered version makes the registry inconsistent.  That's not something we want to do",
+      "createdAt": "2022-01-20T16:45:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1017703065",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848qTkQ",
+      "author": {
+        "login": "Wikunia"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Okay then I would suggest we Release v0.8 of Javis and would be great if we would not need to wait 3days for this to be released such that they can immediately work together. \r\nI'm totally fine with waiting three days now though and then release Javis v0.8. ",
+      "createdAt": "2022-01-20T17:05:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1017723152",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849O873",
+      "author": {
+        "login": "Wikunia"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Would be great if this could be merged soon such that Javis users can use notebooks with the latest Javis version. Thanks in advance. Let us (@gpucce and me) know if there is anything else we should do. Thanks in advance!",
+      "createdAt": "2022-02-01T22:02:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1027329783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849QEs-",
+      "author": {
+        "login": "Wikunia"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you ☺️",
+      "createdAt": "2022-02-02T06:20:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52850#issuecomment-1027623742",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: JavisNB\n- Repository: https://github.com/JuliaAnimators/JavisNB.jl\n- Created by: @Wikunia\n- Version: v0.1.0\n- Commit: 9aa6c6c90efac517c172e8207a225cc8fcc3265b\n- Reviewed by: @Wikunia\n- Reference: https://github.com/JuliaAnimators/JavisNB.jl/issues/10#issuecomment-1027321286\n- Description: Notebook integrations for Javis.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f2a8e2e34ccf1220643739f860e87c629bce5b28f5996f03813428b100bf61848995378b2dc700ac9906a1b6e5f1377767fa116d85058d053dba9facc7092657cf4f0dc49118302b784b18e97e8dfdde95bfc28a01174e82a07838c3e21835e609f6310c31c9231d405de2750bf2b075cabd715ce5d22e3e3e04d33eea3efe4e -->",
+  "package_name": "JavisNB",
+  "title": "New package: JavisNB v0.1.0"
+}

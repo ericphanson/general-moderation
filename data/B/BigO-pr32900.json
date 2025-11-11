@@ -1,0 +1,74 @@
+{
+  "created_at": "2021-03-26T14:05:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-03-31T11:39:20Z",
+  "pr_number": 32900,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwODI1MTU3Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name is not at least five characters long\n- Package name similar to 3 existing packages.\n  1. Similar to BigG. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.53 is at or below cutoff of 2.50.\n  2. Similar to Bio. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  3. Similar to Bits. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-26T14:12:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32900#issuecomment-808251576",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwODM0NjQzNA==",
+      "author": {
+        "login": "endremborza"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello!\r\n\r\nI quite like this name as it is a quite common expression and people use it to search for such stuff. Also, I come from python and I'm starting to like the julia convention of using short names.",
+      "createdAt": "2021-03-26T16:22:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32900#issuecomment-808346434",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwODk0NjAyOA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@endremborza the standard way to add custom plotting for your custom datatype is to add a plot recipe with [`RecipesBase.jl`](https://github.com/JuliaPlots/RecipesBase.jl), not to depend on `Plots.jl` and extend the `plot` function.  Also `RecipesBase.jl` is much lighter than `Plots.jl`, you really don't want to depend on `Plots.jl.`",
+      "createdAt": "2021-03-28T19:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32900#issuecomment-808946028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwODk0NjgxMg==",
+      "author": {
+        "login": "endremborza"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you! Plots gave me quite some compatibility issues, I was considering switching to simpleplots, but it is nice to learn about the proper way :)\r\n\r\nIt is my first attempt at a Julia package and so far it's a very pleasant experience.",
+      "createdAt": "2021-03-28T19:29:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32900#issuecomment-808946812",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "giordano",
+  "body": "- Registering package: BigO\n- Repository: https://github.com/endremborza/BigO.jl\n- Created by: @endremborza\n- Version: v0.1.0\n- Commit: 6e52631c23e1dd986c3c3c73531f918346cd5b16\n- Reviewed by: @endremborza\n- Reference: https://github.com/endremborza/BigO.jl/commit/6e52631c23e1dd986c3c3c73531f918346cd5b16#commitcomment-48751532\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd690dfb1614e85b7f461b616b10ff90d886ca9f9d398e777e56452fa2c7a86f8ea1bc6d0088de56fc1988e06cc8ae2bc00df2b9b4a8bd5ed3749225e28ccd22c00cb7773348e52d480ab470f6b429f2191934263076569ac6200c15fbf239046ec1318f1c0f1da620a5693e71150f5da7b386f5f2be9b01cb12995ab09aa6db984c6f5bce8ab7d6d184688a1e68a1ee02670de0f74a6128edb33926e7fd4007a17b763048271de4242e6ab7c43ffb16eb0 -->",
+  "package_name": "BigO",
+  "title": "New package: BigO v0.1.0"
+}

@@ -1,0 +1,111 @@
+{
+  "created_at": "2021-05-19T15:54:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2021-05-22T18:51:18Z",
+  "pr_number": 37064,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NDI0MTU5MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-19T15:58:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-844241590",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NDI0OTEwNA==",
+      "author": {
+        "login": "rpkyle"
+      },
+      "authorAssociation": "NONE",
+      "body": "Greetings! Regarding the error\r\n\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n\r\nthis package is provided via monorepo, in which packages for Python, R and Julia are kept, so renaming the repository is unfortunately not an option for us.\r\n\r\nWe currently offer several other packages for Julia (such as `DashTable`, `DashHtmlComponents` and `DashCoreComponents`) in the same manner.\r\n\r\n[noblock]",
+      "createdAt": "2021-05-19T16:06:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-844249104",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NDMxNjYzNg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah this check (\"Repo URL does not end with `/name.jl.git`, where name is the package name') does not apply to monorepos.\r\n\r\nActually CI is supposed to skip this check for monorepos.\r\n\r\nAnyway, if you can ping me in 3 days, I'll manually merge this.\r\n\r\n[noblock]",
+      "createdAt": "2021-05-19T17:30:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-844316636",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NDMxNzIyMQ==",
+      "author": {
+        "login": "rpkyle"
+      },
+      "authorAssociation": "NONE",
+      "body": "Will do. Thanks @DilumAluthge!\r\n\r\n[noblock]",
+      "createdAt": "2021-05-19T17:31:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-844317221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NDk5ODAzNw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Actually CI is supposed to skip this check for monorepos.\r\n\r\nI think this is supposed to be skipped if `Project.toml` is in a subdirectory, which isn't the case here?",
+      "createdAt": "2021-05-20T11:20:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-844998037",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NTE5OTkyMQ==",
+      "author": {
+        "login": "rpkyle"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Actually CI is supposed to skip this check for monorepos.\r\n> \r\n> I think this is supposed to be skipped if `Project.toml` is in a subdirectory, which isn't the case here?\r\n\r\n@giordano You are correct. As with `DashCoreComponents`, `Project.toml` is in the monorepo root:\r\n\r\nhttps://github.com/plotly/dash-core-components/tree/master",
+      "createdAt": "2021-05-20T15:01:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37064#issuecomment-845199921",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "DilumAluthge",
+  "body": "- Registering package: DashVtk\n- Repository: https://github.com/plotly/dash-vtk\n- Created by: @rpkyle\n- Version: v0.0.9\n- Commit: 8c8b3632355d90e50b6a7d20db53a9d47e1d12ce\n- Reviewed by: @rpkyle\n- Reference: https://github.com/plotly/dash-vtk/commit/8c8b3632355d90e50b6a7d20db53a9d47e1d12ce#commitcomment-51029992\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd611b738a787ff003cc9f3f919f8b58c0e5ef0f1ab556dc456edec346922ecedb9a62e299f7a21fda8e9cedefc5b418557b92cab8b409314851aba1645270fbc2abd765116f6a8b35f56bfa768c9e217b8d6942735a1e7a95971067484931564db1cbde0594bc0e22e2674201a1abcac58e27f08ed4b19cf16582651862f44263ce51ada1df3866810a074e1bad7954a78702469581901550b3fbe4cdff2c12368 -->",
+  "package_name": "DashVtk",
+  "title": "New package: DashVtk v0.0.9"
+}

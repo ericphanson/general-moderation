@@ -1,0 +1,59 @@
+{
+  "created_at": "2024-01-26T18:23:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2024-01-29T18:40:23Z",
+  "pr_number": 99637,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85x_nNJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to BMesh. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Gmsh. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-26T18:26:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99637#issuecomment-1912501065",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x_ns_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems okay to me, given the relation to the existing Fortran package. You'll have to wait three days and then ping the Slack for a manual merge.",
+      "createdAt": "2024-01-26T18:28:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99637#issuecomment-1912503103",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x_oTj",
+      "author": {
+        "login": "sloede"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz Thank you for the fast confirmation 🙏! I was just about to write that since this is a wrapper package for the Fortran package [smesh](https://github.com/trixi-framework/smesh), it would be great if the naming guidelines could be slightly relaxed here.\r\n\r\ncc @bennibolm @simonechiocchetti",
+      "createdAt": "2024-01-26T18:30:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99637#issuecomment-1912505571",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "vchuravy",
+  "body": "- Registering package: Smesh\n- Repository: https://github.com/trixi-framework/Smesh.jl\n- Created by: @sloede\n- Version: v0.1.0\n- Commit: cb50e0ff9573a2651de9d280ec859ea86f05523f\n- Reviewed by: @sloede\n- Reference: https://github.com/trixi-framework/Smesh.jl/commit/cb50e0ff9573a2651de9d280ec859ea86f05523f#commitcomment-137872674\n- Description: Smesh.jl is a lightweight wrapper of the Fortran package smesh for generation and handling of unstructured meshes\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67f1519edf85141f6e84dee9425eef81eddf3a2207f608fb4dd959a4b4cd8ef5b0c6f6fdd8239f820b34988851936a5fe1e5fead6ba5935f02cc662fabf26316524b471edf580cc29397e789d90aecace3a3e3e87b1fa871d63f75b77b6127159cb62891ce6e8643fbae6ee4e0a2dfc92c5e15d461efce45bdbe3bd21c907e8094926fbd4ada317989587c12c27bb9f4de67cba32e07359923d68223a189467aba347f35cde569bebc3fc5ca432c9e431 -->",
+  "package_name": "Smesh",
+  "title": "New package: Smesh v0.1.0"
+}

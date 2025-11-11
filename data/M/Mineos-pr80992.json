@@ -1,0 +1,81 @@
+{
+  "created_at": "2023-04-04T13:22:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "merged_at": "2023-04-17T12:03:31Z",
+  "pr_number": 80992,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ZKr8K",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Mixers. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Minio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-04-04T13:27:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/80992#issuecomment-1495973642",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ZLcVE",
+      "author": {
+        "login": "anowacki"
+      },
+      "authorAssociation": "NONE",
+      "body": "Regarding 'Mineos' is only being a distance of 2 from 'Mixers' and 'Minio', note that this package is a wrapper around the established '[Mineos](https://geodynamics.org/cig/software/mineos)' software used to calculate the normal mode response of the Earth and other planets.  As such, I believe the name is appropriate and would not like to change the name to make is apparently less similar to other packages.\r\n\r\n[Message to be sent via Slack as well.]\r\n\r\n[noblock]",
+      "createdAt": "2023-04-04T15:20:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/80992#issuecomment-1496171844",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ZLyhg",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name is 👍🏻 \r\n\r\n[noblock]",
+      "createdAt": "2023-04-04T16:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/80992#issuecomment-1496262752",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85aD-u0",
+      "author": {
+        "login": "anowacki"
+      },
+      "authorAssociation": "NONE",
+      "body": "Small bump as per [Mark on Slack](https://julialang.slack.com/archives/C6M4DQA5P/p1680643331780409?thread_ts=1680621912.766589&cid=C6M4DQA5P).\r\n\r\n[noblock]",
+      "createdAt": "2023-04-17T09:17:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/80992#issuecomment-1510992820",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "StefanKarpinski",
+  "body": "- Registering package: Mineos\n- Repository: https://github.com/anowacki/Mineos.jl\n- Created by: @anowacki\n- Version: v1.0.0\n- Commit: a91059370ba677ae70635e968cc09b22522af94b\n- Reviewed by: @anowacki\n- Reference: https://github.com/anowacki/Mineos.jl/commit/a91059370ba677ae70635e968cc09b22522af94b#commitcomment-107489286\n- Description: Julia wrapper around the Mineos Earth normal mode package\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6abce26558c390dba752c22887b8361c53fc8dcaa41972eaba80460b8a3d047c2360e3b5cab6e2f14695b02d17d14e5690c473548eed51f8588c929ebb08242b755a0c3450cc572d571df07fc9caedd6182f48a361050315632f255473e23fd816e721e082ac91f6cc66666b9ffec4ef81b4ff5fc083678f3e8374127394be5206b2159bc2416c14e3f9d519adeac7697be74b0a5b17715d6336aceb44781712fb930486979e9ff02649582ba9da236f1 -->",
+  "package_name": "Mineos",
+  "title": "New package: Mineos v1.0.0"
+}

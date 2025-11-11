@@ -75,12 +75,16 @@ end
 
 """Parse package name from PR title"""
 function parse_package_name(title::String)
-    # Match "New package: PackageName v..." or "New package: PackageName.jl v..."
-    m = match(r"New package:\s+(\w+)(?:\.jl)?\s+v", title)
+    # Match various formats:
+    # - "New package: PackageName"
+    # - "Register PackageName: version"
+    # - "Register New Package PackageName: version"
+    m = match(r"(?:New package|Register(?:\s+New\s+Package)?):\s+(\w+)|Register\s+(\w+):", title)
     if m === nothing
         return nothing
     end
-    return m.captures[1]
+    # Return first non-nothing capture
+    return something(m.captures[1], m.captures[2])
 end
 
 """Get first letter directory for package (uppercase)"""
