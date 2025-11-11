@@ -8,14 +8,13 @@ using Dates
 
 const REPO = "JuliaRegistries/General"
 const LABEL = "new package"
-const EXCLUDED_MERGERS = ["JuliaTagBot", "jlbuild"]
+const EXCLUDED_MERGERS = ["JuliaTagBot", "jlbuild", "github-actions[bot]"]
 
 # File paths
 const CACHE_DIR = "cache"
 const DATA_DIR = "data"
 const PR_LIST_FILE = joinpath(CACHE_DIR, "pr-list.json")
 const PR_LIST_COMPLETE = joinpath(CACHE_DIR, "pr-list-complete.marker")
-const PR_LIST_PROGRESS = joinpath(CACHE_DIR, "pr-list-progress.json")
 const TO_FETCH_FILE = joinpath(CACHE_DIR, "to-fetch.json")
 const PROGRESS_FILE = joinpath(CACHE_DIR, "stage3-progress.json")
 const FAILED_FILE = joinpath(CACHE_DIR, "failed.json")
@@ -151,102 +150,84 @@ end
 
 function fetch_pr_list()
     println("Fetching PRs from $(REPO) with label '$(LABEL)'...")
-    println("Using REST API with full pagination (this may take a while)...")
+    println("Using REST API with cursor-based pagination (this may take a while)...")
 
-    # Count existing PRs if resuming (JSONLines format - one JSON per line)
-    pr_count = if isfile(PR_LIST_FILE)
-        count = countlines(PR_LIST_FILE)
-        println("Resuming: $(count) PRs already fetched")
-        count
-    else
-        0
-    end
-
-    # Load last page number if resuming
-    start_page = if isfile(PR_LIST_PROGRESS)
-        progress = JSON.parsefile(PR_LIST_PROGRESS)
-        last_page = get(progress, "last_page", 0)
-        println("Resuming from page $(last_page + 1)")
-        last_page
-    else
-        0
-    end
-
-    page = start_page
-    per_page = 100
-    page_fetched_count = 0
-
-    while true
-        page += 1
-        println("Fetching page $page...")
-
-        # Fetch issues with label filter (PRs are also issues)
-        # Note: URL encoding spaces as %20
-        label_param = replace(LABEL, " " => "%20")
-        result = gh_with_retry(`gh api "repos/$(REPO)/issues?state=closed&labels=$(label_param)&per_page=$(per_page)&page=$(page)"`)
-        issues = JSON.parse(result)
-
-        # Check if we got any results
-        if length(issues) == 0
-            println("  No more results")
-            break
-        end
-
-        # Filter to only PRs (issues have a pull_request field)
-        page_prs = filter(issue -> haskey(issue, "pull_request"), issues)
-
-        # Fetch PR details for each to get mergedBy info
-        open(PR_LIST_FILE, "a") do f
-            for issue in page_prs
-                pr_number = issue["number"]
-
-                # Fetch PR details to get merge info
-                pr_details_json = gh_with_retry(`gh api "repos/$(REPO)/pulls/$(pr_number)"`)
-                pr_details = JSON.parse(pr_details_json)
-
-                # Build PR record with merge info
-                pr = Dict(
-                    "number" => pr_number,
-                    "title" => issue["title"],
-                    "author" => Dict("login" => issue["user"]["login"]),
-                    "state" => pr_details["state"],
-                    "createdAt" => issue["created_at"],
-                    "mergedAt" => get(pr_details, "merged_at", nothing),
-                    "mergedBy" => if get(pr_details, "merged_at", nothing) !== nothing && haskey(pr_details, "merged_by") && pr_details["merged_by"] !== nothing
-                        Dict("login" => pr_details["merged_by"]["login"])
-                    else
-                        nothing
-                    end
-                )
-                println(f, JSON.json(pr))
-                page_fetched_count += 1
+    # Check for existing PRs if resuming
+    existing_pr_numbers = Set{Int}()
+    pr_count = 0
+    if isfile(PR_LIST_FILE)
+        open(PR_LIST_FILE, "r") do f
+            for line in eachline(f)
+                pr_data = JSON.parse(line)
+                push!(existing_pr_numbers, pr_data["number"])
+                pr_count += 1
             end
         end
-
-        pr_count += length(page_prs)
-        println("  Fetched $(length(page_prs)) PRs from $(length(issues)) issues ($(pr_count) total PRs)")
-
-        # Save progress
-        open(PR_LIST_PROGRESS, "w") do f
-            JSON.print(f, Dict("last_page" => page), 2)
-        end
-
-        # If we got fewer than per_page, we're done
-        if length(issues) < per_page
-            println("  Last page reached")
-            break
-        end
-
-        # Small delay between pages to be nice to API
-        sleep(0.5)
+        println("Found $(pr_count) existing PRs, will skip duplicates")
     end
+
+    # Fetch all issues with label using --paginate (handles cursor-based pagination)
+    println("Fetching all issues with label '$(LABEL)'...")
+    label_param = replace(LABEL, " " => "%20")
+    result = gh_with_retry(`gh api --paginate "repos/$(REPO)/issues?state=closed&labels=$(label_param)&per_page=100"`)
+
+    # Parse all issues (gh --paginate returns JSON array)
+    all_issues = JSON.parse(result)
+    println("Fetched $(length(all_issues)) total issues")
+
+    # Filter to only PRs
+    all_prs = filter(issue -> haskey(issue, "pull_request"), all_issues)
+    println("Found $(length(all_prs)) PRs")
+
+    # Fetch PR details for each (with mergedBy info)
+    new_fetched = 0
+    open(PR_LIST_FILE, "a") do f
+        for (idx, issue) in enumerate(all_prs)
+            pr_number = issue["number"]
+
+            # Skip if already fetched
+            if pr_number in existing_pr_numbers
+                continue
+            end
+
+            # Progress indicator
+            if idx % 100 == 0
+                println("Processing PR $idx/$(length(all_prs))...")
+            end
+
+            # Fetch PR details to get merge info
+            pr_details_json = gh_with_retry(`gh api "repos/$(REPO)/pulls/$(pr_number)"`)
+            pr_details = JSON.parse(pr_details_json)
+
+            # Build PR record with merge info
+            pr = Dict(
+                "number" => pr_number,
+                "title" => issue["title"],
+                "author" => Dict("login" => issue["user"]["login"]),
+                "state" => pr_details["state"],
+                "createdAt" => issue["created_at"],
+                "mergedAt" => get(pr_details, "merged_at", nothing),
+                "mergedBy" => if get(pr_details, "merged_at", nothing) !== nothing && haskey(pr_details, "merged_by") && pr_details["merged_by"] !== nothing
+                    Dict("login" => pr_details["merged_by"]["login"])
+                else
+                    nothing
+                end
+            )
+            println(f, JSON.json(pr))
+            new_fetched += 1
+
+            # Rate limiting delay
+            sleep(0.5)
+        end
+    end
+
+    pr_count += new_fetched
+    println("\n✓ Stage 1 complete: $(pr_count) total PRs ($(new_fetched) newly fetched)")
 
     # Mark as complete
     open(PR_LIST_COMPLETE, "w") do f
         write(f, "$(pr_count) PRs fetched at $(now(UTC))")
     end
-
-    println("\n✓ Stage 1 complete: $(pr_count) PRs fetched")
 end
 
 function filter_prs()
