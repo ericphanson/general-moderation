@@ -195,35 +195,61 @@ function classify_comments(comments, package_name::String, pr_body::String; mode
     # Build structured data for each comment
     comment_data = map(enumerate(human_comments)) do (idx, c)
         author = get(get(c, "author", Dict()), "login", "unknown")
+
+        # Extract reaction counts
+        reaction_groups = get(c, "reactionGroups", [])
+        reactions = Dict{String, Int}()
+        for rg in reaction_groups
+            content = get(rg, "content", "")
+            count = get(get(rg, "users", Dict()), "totalCount", 0)
+            if count > 0
+                reactions[content] = count
+            end
+        end
+
         Dict(
             "id" => idx,
             "author" => author,
             "author_association" => get(c, "authorAssociation", "NONE"),
             "is_package_author" => (package_author !== nothing && author == package_author),
-            "text" => get(c, "body", "")
+            "text" => get(c, "body", ""),
+            "reactions" => reactions
         )
     end
 
     author_context = package_author !== nothing ? "\nPackage author: @$package_author" : ""
 
-    prompt = """Classify each comment by its stance on merging THIS SPECIFIC pull request.
+    prompt = """Classify each comment by its stance on merging THIS SPECIFIC pull request AND rate its influence on the decision.
 
 CONTEXT: This PR proposes to register a package named "$package_name"$author_context
 
 For EACH comment, determine:
+
+STANCE:
 - pro_merge: Comment supports/approves merging THIS PR as-is (e.g., "LGTM", "let's merge", "I vote yes", "[noblock]", or argues FOR the proposed name)
 - anti_merge: Comment opposes merging THIS PR or raises blocking concerns about the proposed name
 - neutral_merge: Comment discusses alternatives or asks questions but doesn't take a clear stance on THIS PR
 - unrelated: Comment is off-topic or purely informational
 
+INFLUENCE (1-5 scale):
+- 5: Final approval/decision that directly led to merge (e.g., "Let's merge this", maintainer making final call)
+- 4: Strong argument that clearly shaped the decision or resolved key concerns
+- 3: Meaningful contribution to discussion that influenced thinking
+- 2: Minor input, clarification, or suggestion that didn't strongly affect outcome
+- 1: Minimal to no impact on the decision (off-topic, purely procedural)
+
 IMPORTANT:
 - A comment opposing alternative suggestions is PRO-MERGE if it supports the actual PR name.
 - Package author defending their naming choice = pro_merge
+- Consider comment timing: later comments closer to merge often have higher influence
+- Maintainer (MEMBER) comments generally have higher influence than non-members
+- Reactions: Comments with more reactions (especially THUMBS_UP) likely had higher influence on the discussion
+- [noblock] tag: This just tells the bot not to block auto-merge. Judge influence based on the comment's actual content, NOT the presence of [noblock]
 
 Comments:
 $(JSON.json(comment_data))
 
-Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neutral_merge"|"unrelated"}"""
+Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neutral_merge"|"unrelated", influence: number}"""
 
     # Schema: array of classification objects
     schema = """{
@@ -235,9 +261,10 @@ Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neut
         "type": "object",
         "properties": {
           "id": {"type": "integer"},
-          "stance": {"type": "string", "enum": ["pro_merge", "anti_merge", "neutral_merge", "unrelated"]}
+          "stance": {"type": "string", "enum": ["pro_merge", "anti_merge", "neutral_merge", "unrelated"]},
+          "influence": {"type": "integer", "minimum": 1, "maximum": 5}
         },
-        "required": ["id", "stance"]
+        "required": ["id", "stance", "influence"]
       }
     }
   },
@@ -263,9 +290,11 @@ Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neut
     for (i, comment) in enumerate(human_comments)
         # Find classification for this comment
         classification = nothing
+        influence = nothing
         for c in classifications
             if get(c, "id", 0) == i
                 classification = get(c, "stance", "unclassified")
+                influence = get(c, "influence", nothing)
                 break
             end
         end
@@ -279,7 +308,8 @@ Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neut
             "author" => get(get(comment, "author", Dict()), "login", "unknown"),
             "author_association" => get(comment, "authorAssociation", "NONE"),
             "text" => get(comment, "body", ""),
-            "stance" => classification
+            "stance" => classification,
+            "influence" => influence
         ))
     end
 
@@ -462,11 +492,17 @@ Examples:
     unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
     unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
 
+    # Influence breakdown
+    high_influence = count(c -> get(c, "influence", 0) >= 4, discussion)
+    medium_influence = count(c -> get(c, "influence", 0) == 3, discussion)
+    low_influence = count(c -> get(c, "influence", 0) <= 2 && get(c, "influence", 0) > 0, discussion)
+
     if unclassified > 0
         println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
     else
         println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
     end
+    println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
 
     println("Time to merge: $(extracted["decision"]["time_to_merge_days"]) days")
 
