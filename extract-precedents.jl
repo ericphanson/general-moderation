@@ -115,15 +115,20 @@ function slack_mentioned(comments)
     return false
 end
 
-"""Calculate days between dates"""
-function days_between(created::String, merged::String)
+"""Calculate days between dates (handles null values)"""
+function days_between(created, end_date)
+    # Handle null end dates
+    if end_date === nothing || isempty(end_date)
+        return nothing
+    end
+
     try
         created_dt = DateTime(created[1:19], "yyyy-mm-ddTHH:MM:SS")
-        merged_dt = DateTime(merged[1:19], "yyyy-mm-ddTHH:MM:SS")
-        return round(Int, (merged_dt - created_dt).value / (1000 * 60 * 60 * 24))
+        end_dt = DateTime(end_date[1:19], "yyyy-mm-ddTHH:MM:SS")
+        return round(Int, (end_dt - created_dt).value / (1000 * 60 * 60 * 24))
     catch e
-        @warn "Failed to parse dates" created merged error=e
-        return -1
+        @warn "Failed to parse dates" created end_date error=e
+        return nothing
     end
 end
 
@@ -381,7 +386,14 @@ function extract_precedent(pr_file::String; model="gemini-2.0-flash-exp")
     is_wrapper, wrapped_lib = detect_wrapper(get(pr_data, "body", ""), get(pr_data, "comments", []))
     related_prs = find_related_prs(get(pr_data, "body", ""), get(pr_data, "comments", []))
     slack_flag = slack_mentioned(get(pr_data, "comments", []))
-    time_to_merge = days_between(pr_data["created_at"], pr_data["merged_at"])
+
+    # Determine if PR was merged or just closed
+    merged_at = get(pr_data, "merged_at", nothing)
+    was_merged = merged_at !== nothing
+
+    # Calculate time to decision (use merged_at if merged, closed_at if just closed)
+    decision_date = was_merged ? merged_at : get(pr_data, "closed_at", nothing)
+    time_to_decision = days_between(pr_data["created_at"], decision_date)
 
     # LLM-based extraction (only what we need)
     println("  Classifying comments...")
@@ -416,8 +428,10 @@ function extract_precedent(pr_file::String; model="gemini-2.0-flash-exp")
         "related_prs" => related_prs,
         "slack_mentioned" => slack_flag,
         "decision" => Dict(
-            "merged_by" => pr_data["merged_by"],
-            "time_to_merge_days" => time_to_merge
+            "merged" => was_merged,
+            "merged_by" => get(pr_data, "merged_by", nothing),
+            "closed_by" => get(pr_data, "closed_by", nothing),
+            "time_to_decision_days" => time_to_decision
         ),
         "discussion" => classified_comments,
         "num_comments" => length(get(pr_data, "comments", []))
@@ -504,7 +518,15 @@ Examples:
     end
     println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
 
-    println("Time to merge: $(extracted["decision"]["time_to_merge_days"]) days")
+    # Decision info
+    decision = extracted["decision"]
+    if decision["merged"]
+        println("Decision: MERGED by $(decision["merged_by"]) in $(decision["time_to_decision_days"]) days")
+    else
+        closed_by = decision["closed_by"] !== nothing ? decision["closed_by"] : "unknown"
+        days_str = decision["time_to_decision_days"] !== nothing ? "$(decision["time_to_decision_days"]) days" : "unknown time"
+        println("Decision: CLOSED (not merged) by $closed_by in $days_str")
+    end
 
     # Token usage (query from llm logs database)
     if LLM_CALL_COUNT[] > 0
