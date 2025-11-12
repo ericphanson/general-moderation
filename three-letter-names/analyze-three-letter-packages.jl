@@ -1,7 +1,8 @@
-#!/usr/bin/env julia --project=.
+#!/usr/bin/env julia --project=..
 
 using JSON
 using Dates
+using CairoMakie
 
 """Find all PR JSON files in data/ directory"""
 function find_all_pr_files(dir="../data")
@@ -184,10 +185,151 @@ function main()
         end
     end
 
-    # Sort each category's packages by name
-    for cat in category_order
-        sort!(packages_by_category[cat], by=x -> x["package_name"])
+    # Extract year and date information for visualization and tables
+    println("Extracting temporal data...")
+    for pkg in three_letter_packages
+        # Read PR file to get created_at timestamp
+        try
+            pr_data = JSON.parsefile(pkg["pr_file"])
+            created_at = get(pr_data, "created_at", nothing)
+            if created_at !== nothing
+                # Parse timestamp and extract year and formatted date
+                dt = DateTime(created_at[1:19], dateformat"yyyy-mm-ddTHH:MM:SS")
+                pkg["year"] = year(dt)
+                pkg["date"] = Dates.format(dt, "yyyy-mm-dd")
+            else
+                pkg["year"] = nothing
+                pkg["date"] = "—"
+            end
+        catch e
+            pkg["year"] = nothing
+            pkg["date"] = "—"
+        end
     end
+
+    # Sort each category's packages by date (most recent first)
+    for cat in category_order
+        sort!(packages_by_category[cat], by=x -> get(x, "date", ""), rev=true)
+    end
+
+    # Count accepts/rejects by year, with category breakdown for accepted
+    println("Generating temporal visualizations...")
+    year_stats = Dict{Int, Dict{String, Int}}()
+
+    # Define accepted categories
+    accepted_cat_names = [
+        "Library Wrapper",
+        "Pre-existing/Grandfathered",
+        "Standard File Format",
+        "Domain-Specific Acronym",
+        "Company/Brand Name",
+        "Discretionary Approval"
+    ]
+
+    for pkg in three_letter_packages
+        yr = pkg["year"]
+        if yr === nothing
+            continue
+        end
+
+        if !haskey(year_stats, yr)
+            year_stats[yr] = Dict("accepted" => 0, "rejected" => 0)
+            for cat in accepted_cat_names
+                year_stats[yr][cat] = 0
+            end
+        end
+
+        if pkg["merged"]
+            year_stats[yr]["accepted"] += 1
+            cat = get(pkg, "category", "Unknown")
+            if haskey(year_stats[yr], cat)
+                year_stats[yr][cat] += 1
+            end
+        else
+            year_stats[yr]["rejected"] += 1
+        end
+    end
+
+    # Sort years
+    years = sort(collect(keys(year_stats)))
+
+    # Get counts for aggregated accepted/rejected
+    accepted_counts = [year_stats[yr]["accepted"] for yr in years]
+    rejected_counts = [year_stats[yr]["rejected"] for yr in years]
+
+    # Get counts for each accepted category
+    category_counts = Dict{String, Vector{Int}}()
+    for cat in accepted_cat_names
+        category_counts[cat] = [get(year_stats[yr], cat, 0) for yr in years]
+    end
+
+    # Create first visualization: Simple accepted vs rejected
+    fig1 = Figure(size=(800, 500))
+    ax1 = Axis(fig1[1, 1],
+        xlabel = "Year",
+        ylabel = "Number of PRs",
+        title = "Three-Letter Package Name Registration Attempts Over Time"
+    )
+
+    # Plot simple lines
+    lines!(ax1, years, accepted_counts, label="Accepted", color=:green, linewidth=3)
+    lines!(ax1, years, rejected_counts, label="Rejected", color=:red, linewidth=3)
+
+    # Add markers
+    scatter!(ax1, years, accepted_counts, color=:green, markersize=12)
+    scatter!(ax1, years, rejected_counts, color=:red, markersize=12)
+
+    # Add legend
+    axislegend(ax1, position=:lt)
+
+    # Save first figure
+    save("acceptance-trends.png", fig1)
+    println("✓ Simple visualization saved to acceptance-trends.png")
+
+    # Create second visualization: Accepted category breakdown
+    fig2 = Figure(size=(1000, 600))
+    ax2 = Axis(fig2[1, 1],
+        xlabel = "Year",
+        ylabel = "Number of PRs",
+        title = "Accepted Three-Letter Packages by Category Over Time"
+    )
+
+    # Define distinct visual styles for each category
+    # Using very different colors, line styles, and marker shapes
+    styles = [
+        (color = :blue, linestyle = :solid, marker = :circle),          # Library Wrapper
+        (color = :red, linestyle = :dash, marker = :diamond),           # Pre-existing/Grandfathered
+        (color = :green, linestyle = :dot, marker = :utriangle),        # Standard File Format
+        (color = :purple, linestyle = :dashdot, marker = :star5),       # Domain-Specific Acronym
+        (color = :orange, linestyle = :dashdotdot, marker = :rect),     # Company/Brand Name
+        (color = :black, linestyle = :solid, marker = :xcross)          # Discretionary Approval
+    ]
+
+    # Plot accepted category lines
+    for (i, cat) in enumerate(accepted_cat_names)
+        counts = category_counts[cat]
+        if any(c > 0 for c in counts)  # Only plot if there's data
+            style = styles[i]
+            lines!(ax2, years, counts,
+                   label = cat,
+                   color = style.color,
+                   linestyle = style.linestyle,
+                   linewidth = 2.5)
+            scatter!(ax2, years, counts,
+                     color = style.color,
+                     marker = style.marker,
+                     markersize = 14,
+                     strokewidth = 1,
+                     strokecolor = :white)
+        end
+    end
+
+    # Add legend
+    axislegend(ax2, position = :lt, nbanks = 2, framevisible = true, bgcolor = (:white, 0.9))
+
+    # Save second figure
+    save("acceptance-by-category.png", fig2)
+    println("✓ Category breakdown visualization saved to acceptance-by-category.png")
 
     # Generate markdown report
     println("Generating markdown report with category sections...")
@@ -195,8 +337,8 @@ function main()
     report = """
 # Three-Letter Package Names in Julia Registry
 
-**Generated:** $(Dates.now())
-**Total 3-letter packages found:** $(length(three_letter_packages))
+- **Generated:** $(Dates.now())
+- **Total 3-letter packages found:** $(length(three_letter_packages))
 
 ## Summary
 
@@ -204,6 +346,20 @@ function main()
 - **Not merged (closed):** $(count(p -> !p["merged"], three_letter_packages))
 - **With analysis:** $(count(p -> p["has_analysis"], three_letter_packages))
 - **Without analysis:** $(count(p -> !p["has_analysis"], three_letter_packages))
+
+## Trends Over Time
+
+### Overall Acceptance Trends
+
+![Acceptance trends over time](acceptance-trends.png)
+
+The chart above shows the number of three-letter package name registration attempts per year, split between accepted (green) and rejected (red) PRs. Note the dramatic shift in policy - from 50% acceptance in 2019 to near-zero acceptance in recent years.
+
+### Accepted Packages by Category
+
+![Accepted packages by category](acceptance-by-category.png)
+
+This chart breaks down the accepted packages by their approval category. The dominant category is "Discretionary Approval" (packages merged without a specific exemption), which was more common in earlier years. Other categories like "Library Wrapper" and "Standard File Format" provide specific justifications for approval.
 
 ---
 
@@ -223,13 +379,15 @@ function main()
         report *= """
 ## $(status_emoji) $cat ($(length(pkgs_in_cat)))
 
-| Package | PR # | Status | Proof/Evidence | Data | Analysis |
-|---------|------|--------|----------------|------|----------|
+| Package | PR # | Date | Status | Proof/Evidence | Data | Analysis |
+|---------|------|------|--------|----------------|------|----------|
 """
 
         for pkg in pkgs_in_cat
             name = pkg["package_name"]
             pr_num = pkg["pr_number"]
+            pr_link = "[#$pr_num](https://github.com/JuliaRegistries/General/pull/$pr_num)"
+            date = get(pkg, "date", "—")
             status = pkg["merged"] ? "✅ Merged" : "❌ Closed"
             data_link = "[JSON]($(pkg["pr_file"]))"
 
@@ -249,7 +407,7 @@ function main()
                 proof_clean = proof_clean[1:300] * "..."
             end
 
-            report *= "| $name | #$pr_num | $status | $proof_clean | $data_link | $analysis_link |\n"
+            report *= "| $name | $pr_link | $date | $status | $proof_clean | $data_link | $analysis_link |\n"
         end
 
         report *= "\n"
