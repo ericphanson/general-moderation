@@ -77,15 +77,21 @@ end
 function parse_package_name(title::String)
     # Match various formats:
     # - "New package: PackageName"
+    # - "New package PackageName:"
     # - "Register New Package: PackageName"
     # - "Register PackageName: version"
     # - "Register New Package PackageName: version"
-    m = match(r"(?:New package|Register(?:\s+New\s+Package)?):\s+(\w+)|Register\s+New\s+Package\s+(\w+):|Register\s+(\w+):", title)
+    m = match(r"New package:\s+(\w+)|New package\s+(\w+):|Register New Package:\s+(\w+)|Register\s+New\s+Package\s+(\w+):|Register\s+(\w+):", title)
     if m === nothing
         return nothing
     end
     # Return first non-nothing capture
-    return something(m.captures[1], m.captures[2], m.captures[3])
+    for cap in m.captures
+        if cap !== nothing
+            return cap
+        end
+    end
+    return nothing
 end
 
 """Get first letter directory for package (uppercase)"""
@@ -387,10 +393,11 @@ function fetch_details()
                 end
 
                 # Skip if closed by a bot
-                if pr["closedBy"] !== nothing && pr["closedBy"]["login"] in EXCLUDED_MERGERS
-                    println("  ⊘ Skipped: Closed by bot $(pr["closedBy"]["login"])")
-                    continue
-                end
+                # actually-- let's keep these, that might mean stalebot closed after name was not OK
+                # if pr["closedBy"] !== nothing && pr["closedBy"]["login"] in EXCLUDED_MERGERS
+                #     println("  ⊘ Skipped: Closed by bot $(pr["closedBy"]["login"])")
+                #     continue
+                # end
             catch e
                 println("  ⚠ Warning: Could not fetch closedBy info: $(string(e))")
                 # Continue anyway - we'll save with null closedBy
