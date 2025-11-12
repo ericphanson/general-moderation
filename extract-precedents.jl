@@ -99,9 +99,14 @@ function find_related_prs(body, comments)
     return unique(prs)
 end
 
-"""Check if Slack was mentioned"""
+"""Check if Slack was mentioned (excluding bot comments)"""
 function slack_mentioned(comments)
     for c in comments
+        # Skip bot comments
+        if get(get(c, "author", Dict()), "login", "") == "github-actions"
+            continue
+        end
+
         text = lowercase(get(c, "body", ""))
         if occursin("slack", text) || occursin("#pkg-registration", text)
             return true
@@ -112,19 +117,27 @@ end
 
 """Calculate days between dates"""
 function days_between(created::String, merged::String)
-    created_dt = DateTime(created[1:19], "yyyy-mm-ddTHH:MM:SS")
-    merged_dt = DateTime(merged[1:19], "yyyy-mm-ddTHH:MM:SS")
-    return round(Int, (merged_dt - created_dt).value / (1000 * 60 * 60 * 24))
+    try
+        created_dt = DateTime(created[1:19], "yyyy-mm-ddTHH:MM:SS")
+        merged_dt = DateTime(merged[1:19], "yyyy-mm-ddTHH:MM:SS")
+        return round(Int, (merged_dt - created_dt).value / (1000 * 60 * 60 * 24))
+    catch e
+        @warn "Failed to parse dates" created merged error=e
+        return -1
+    end
 end
 
 # === LLM-based extractors (via `llm` CLI) ===
+
+# Track number of LLM calls
+const LLM_CALL_COUNT = Ref(0)
 
 """Call llm CLI with a prompt and schema, return parsed JSON"""
 function call_llm(prompt::String, schema::String; model="gemini-2.0-flash-exp")
     try
         # Use llm's --schema feature for guaranteed structured output
-        # Julia's Cmd handles escaping automatically
         result = readchomp(`llm -m $model --schema $schema $prompt`)
+        LLM_CALL_COUNT[] += 1
         return JSON.parse(result)
     catch e
         @warn "LLM call failed" error=e
@@ -132,59 +145,153 @@ function call_llm(prompt::String, schema::String; model="gemini-2.0-flash-exp")
     end
 end
 
-"""Extract maintainer quotes using LLM"""
-function extract_quotes(comments)
-    # Filter to maintainer comments only (not bot, not [noblock] only comments)
-    maintainer_comments = filter(comments) do c
-        assoc = get(c, "authorAssociation", "NONE")
+"""Get token usage from llm logs database for the last N calls"""
+function get_usage_stats(num_calls::Int)
+    try
+        # Query the last N log entries as JSON
+        logs_json = readchomp(`llm logs -n $num_calls --json`)
+        logs = JSON.parse(logs_json)
+
+        # Sum up token usage
+        total_input = 0
+        total_output = 0
+
+        for log in logs
+            total_input += get(log, "input_tokens", 0)
+            total_output += get(log, "output_tokens", 0)
+        end
+
+        return total_input, total_output
+    catch e
+        @warn "Failed to get usage stats from llm logs" error=e
+        return 0, 0
+    end
+end
+
+"""Extract package author from PR body"""
+function extract_package_author(body::String)
+    m = match(r"Created by:.*@(\w+)", body)
+    return m !== nothing ? m.captures[1] : nothing
+end
+
+"""Classify all comments by their stance on merging"""
+function classify_comments(comments, package_name::String, pr_body::String; model="gemini-2.0-flash-exp")
+    # Extract package author for context
+    package_author = extract_package_author(pr_body)
+
+    # Filter out bot comments (AutoMerge bot)
+    human_comments = filter(comments) do c
+        author_login = get(get(c, "author", Dict()), "login", "")
         body = get(c, "body", "")
 
-        # Must be maintainer, not just "[noblock]", not bot message
-        assoc == "MEMBER" &&
-        !startswith(body, "Hello, I am") &&
-        length(body) > 20  # Skip very short comments
+        # Skip bot and very short comments
+        author_login != "github-actions" && length(body) > 10
     end
 
-    if isempty(maintainer_comments)
+    if isempty(human_comments)
         return []
     end
 
-    # Build minimal JSON for LLM
-    minimal = map(maintainer_comments) do c
+    # Build structured data for each comment
+    comment_data = map(enumerate(human_comments)) do (idx, c)
+        author = get(get(c, "author", Dict()), "login", "unknown")
         Dict(
-            "author" => get(get(c, "author", Dict()), "login", "unknown"),
+            "id" => idx,
+            "author" => author,
+            "author_association" => get(c, "authorAssociation", "NONE"),
+            "is_package_author" => (package_author !== nothing && author == package_author),
             "text" => get(c, "body", "")
         )
     end
 
-    prompt = """Find 1-2 key quotes from these maintainer comments that explain the decision or set precedents.
-Focus on statements about rules/guidelines, not author justifications.
+    author_context = package_author !== nothing ? "\nPackage author: @$package_author" : ""
+
+    prompt = """Classify each comment by its stance on merging THIS SPECIFIC pull request.
+
+CONTEXT: This PR proposes to register a package named "$package_name"$author_context
+
+For EACH comment, determine:
+- pro_merge: Comment supports/approves merging THIS PR as-is (e.g., "LGTM", "let's merge", "I vote yes", "[noblock]", or argues FOR the proposed name)
+- anti_merge: Comment opposes merging THIS PR or raises blocking concerns about the proposed name
+- neutral_merge: Comment discusses alternatives or asks questions but doesn't take a clear stance on THIS PR
+- unrelated: Comment is off-topic or purely informational
+
+IMPORTANT:
+- A comment opposing alternative suggestions is PRO-MERGE if it supports the actual PR name.
+- Package author defending their naming choice = pro_merge
 
 Comments:
-$(JSON.json(minimal))
+$(JSON.json(comment_data))
 
-If no significant quotes, return empty array."""
+Return array of objects with {id: number, stance: "pro_merge"|"anti_merge"|"neutral_merge"|"unrelated"}"""
 
-    # Schema: array of quote strings
+    # Schema: array of classification objects
     schema = """{
   "type": "object",
   "properties": {
-    "quotes": {
+    "classifications": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "id": {"type": "integer"},
+          "stance": {"type": "string", "enum": ["pro_merge", "anti_merge", "neutral_merge", "unrelated"]}
+        },
+        "required": ["id", "stance"]
       }
     }
   },
-  "required": ["quotes"]
+  "required": ["classifications"]
 }"""
 
-    result = call_llm(prompt, schema)
-    return result === nothing ? [] : get(result, "quotes", [])
+    result = call_llm(prompt, schema; model=model)
+    if result === nothing
+        return []
+    end
+
+    classifications = get(result, "classifications", [])
+
+    # Check if all comments were classified
+    if length(classifications) != length(human_comments)
+        @warn "LLM only classified $(length(classifications))/$(length(human_comments)) comments"
+    end
+
+    # Merge classifications back with comment data
+    classified_comments = []
+    unclassified_count = 0
+
+    for (i, comment) in enumerate(human_comments)
+        # Find classification for this comment
+        classification = nothing
+        for c in classifications
+            if get(c, "id", 0) == i
+                classification = get(c, "stance", "unclassified")
+                break
+            end
+        end
+
+        if classification === nothing
+            classification = "unclassified"
+            unclassified_count += 1
+        end
+
+        push!(classified_comments, Dict(
+            "author" => get(get(comment, "author", Dict()), "login", "unknown"),
+            "author_association" => get(comment, "authorAssociation", "NONE"),
+            "text" => get(comment, "body", ""),
+            "stance" => classification
+        ))
+    end
+
+    if unclassified_count > 0
+        @warn "$(unclassified_count) comments marked as unclassified"
+    end
+
+    return classified_comments
 end
 
 """Extract justification categories using LLM (only for PRs with violations)"""
-function extract_justifications(body, comments)
+function extract_justifications(body, comments; model="gemini/gemini-2.0-flash")
     # Build minimal context
     all_text = body * "\n\n" * join([get(c, "body", "") for c in comments], "\n\n")
 
@@ -193,21 +300,25 @@ function extract_justifications(body, comments)
         all_text = all_text[1:3000] * "..."
     end
 
-    prompt = """What justifications were provided for this package name? Select all that apply:
+    prompt = """Which justifications are EXPLICITLY MENTIONED or DIRECTLY DISCUSSED in this text?
+
+IMPORTANT: Only select a category if there is clear textual evidence. Do not infer or assume.
 
 Text:
 $all_text
 
-Categories:
-- library_wrapper: Package wraps an existing C/C++/Python/R library
-- r_package_precedent: Cites R package with similar name
-- python_package_precedent: Cites Python package with similar name
-- domain_specific_acronym: Acronym is well-known in specific domain
-- pronounceable: Acronym is pronounceable
-- established_name: Name is already established/well-known
-- core_package: Core Julia infrastructure package
-- minimum_length_satisfied: Long enough (5+ chars) even if acronym
-- cli_tool_name: Package provides CLI tool with this name"""
+Categories (select ONLY if explicitly stated):
+- library_wrapper: Text explicitly states package wraps a C/C++/Python/R library (with library name)
+- r_package_precedent: Text explicitly cites an R package with similar naming
+- python_package_precedent: Text explicitly cites a Python package with similar naming
+- domain_specific_acronym: Text explicitly states acronym is well-known in a specific domain
+- pronounceable: Text explicitly discusses that the acronym/name is pronounceable
+- established_name: Text explicitly states name is already established/known
+- core_package: Text explicitly describes package as "core", "infrastructure", or similar
+- minimum_length_satisfied: Text explicitly discusses length requirement (5+ chars)
+- cli_tool_name: Text explicitly mentions CLI tool/script name matching package name
+
+Return EMPTY ARRAY if no explicit justifications are found. Be conservative."""
 
     # Schema: array of justification category strings
     schema = """{
@@ -223,14 +334,15 @@ Categories:
   "required": ["justifications"]
 }"""
 
-    result = call_llm(prompt, schema)
+    result = call_llm(prompt, schema; model=model)
     return result === nothing ? [] : get(result, "justifications", [])
 end
 
 # === Main extraction ===
 
-function extract_precedent(pr_file::String)
+function extract_precedent(pr_file::String; model="gemini-2.0-flash-exp")
     println("Extracting precedents from: $pr_file")
+    println("Using model: $model")
 
     pr_data = JSON.parsefile(pr_file)
 
@@ -242,19 +354,28 @@ function extract_precedent(pr_file::String)
     time_to_merge = days_between(pr_data["created_at"], pr_data["merged_at"])
 
     # LLM-based extraction (only what we need)
-    println("  Extracting quotes...")
-    quotes = extract_quotes(get(pr_data, "comments", []))
+    println("  Classifying comments...")
+    classified_comments = classify_comments(
+        get(pr_data, "comments", []),
+        pr_data["package_name"],
+        get(pr_data, "body", "");
+        model=model
+    )
 
     justifications = []
     if !isempty(violations)
         println("  Extracting justifications...")
-        justifications = extract_justifications(get(pr_data, "body", ""), get(pr_data, "comments", []))
+        justifications = extract_justifications(get(pr_data, "body", ""), get(pr_data, "comments", []); model=model)
     end
+
+    # Extract package author
+    package_author = extract_package_author(get(pr_data, "body", ""))
 
     # Build output
     output = Dict(
         "pr_number" => pr_data["pr_number"],
         "package_name" => pr_data["package_name"],
+        "package_author" => package_author,
         "violations" => violations,
         "has_violations" => !isempty(violations),
         "wrapper_info" => Dict(
@@ -268,7 +389,7 @@ function extract_precedent(pr_file::String)
             "merged_by" => pr_data["merged_by"],
             "time_to_merge_days" => time_to_merge
         ),
-        "maintainer_quotes" => quotes,
+        "discussion" => classified_comments,
         "num_comments" => length(get(pr_data, "comments", []))
     )
 
@@ -293,13 +414,29 @@ Examples:
     end
 
     pr_file = ARGS[1]
+    model = "gemini-2.0-flash-exp"
+
+    # Parse optional arguments
+    i = 2
+    while i <= length(ARGS)
+        if ARGS[i] == "--model"
+            if i + 1 <= length(ARGS)
+                model = ARGS[i + 1]
+                i += 2
+            else
+                error("--model requires an argument")
+            end
+        else
+            error("Unknown argument: $(ARGS[i])")
+        end
+    end
 
     if !isfile(pr_file)
         error("File not found: $pr_file")
     end
 
     # Extract
-    extracted = extract_precedent(pr_file)
+    extracted = extract_precedent(pr_file, model=model)
 
     # Save
     output_file = replace(pr_file, r"\.json$" => "-analysis.json")
@@ -316,8 +453,45 @@ Examples:
     println("Wrapper: $(extracted["wrapper_info"]["is_wrapper"])")
     println("Justifications: $(length(extracted["justifications"]))")
     println("Related PRs: $(length(extracted["related_prs"]))")
-    println("Maintainer quotes: $(length(extracted["maintainer_quotes"]))")
+
+    # Comment stance breakdown
+    discussion = get(extracted, "discussion", [])
+    pro = count(c -> get(c, "stance", "") == "pro_merge", discussion)
+    anti = count(c -> get(c, "stance", "") == "anti_merge", discussion)
+    neutral = count(c -> get(c, "stance", "") == "neutral_merge", discussion)
+    unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
+    unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
+
+    if unclassified > 0
+        println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
+    else
+        println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
+    end
+
     println("Time to merge: $(extracted["decision"]["time_to_merge_days"]) days")
+
+    # Token usage (query from llm logs database)
+    if LLM_CALL_COUNT[] > 0
+        input_tokens, output_tokens = get_usage_stats(LLM_CALL_COUNT[])
+
+        if input_tokens > 0 || output_tokens > 0
+            println("\n=== Token Usage ===")
+            println("Input tokens:  $input_tokens")
+            println("Output tokens: $output_tokens")
+            println("Total tokens:  $(input_tokens + output_tokens)")
+
+            # Cost estimation (prices per 1M tokens)
+            # Default to Gemini 2.0 Flash pricing
+            cost_per_input = 0.10  # per 1M tokens
+            cost_per_output = 0.40  # per 1M tokens
+
+            input_cost = (input_tokens / 1_000_000) * cost_per_input
+            output_cost = (output_tokens / 1_000_000) * cost_per_output
+            total_cost = input_cost + output_cost
+
+            println("Estimated cost: \$$(round(total_cost, digits=6))")
+        end
+    end
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
