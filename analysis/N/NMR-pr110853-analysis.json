@@ -1,0 +1,69 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "missing compat entry",
+      "type": "missing_compat"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 6,
+  "package_author": "marcel",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 39
+  },
+  "pr_number": 110853,
+  "package_name": "NMR",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "In general, we try to avoid domain-specific acronyms for package names. Personally, I think \"NMR\" might be commonly understood enough to be at least *part* of a name. So if you choose `NMR<Something>`, that would probably be fine. It would be good to check what other Julia packages might exist in the NMR space, compare yourself with their feature set, and figure out how you want to situate this package in that space.\r\n\r\nIt might even be possible to use just \"NMR\" as a package name, but I think there's a pretty high bar for that. The package would have to be a very complete NMR framework, basically the \"go to\" package for the entire field of NMR. That also implies exceptionally good documentation (or at least a trajectory towards that). The package should also be expected to receive long-term maintenance. It appears that you might have a permanent academic position, and that would go a very long way towards guaranteeing maintenance.\r\n\r\nIn its current form, the package definitely lacks documentation. In general, the minimum requirement for a package to be registered is a README that explains what problem the package is trying to solve and gives some indication of the features and how the package can be used, e.g., by giving a usage example. For a package name like\" NMR\" the bar would probably be much higher. It should have a full online Documenter-based documentation.\r\n\r\nIf you think this package will live up to the expectations implied by the name \"NMR\", I would say maybe use a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl) for the moment, and re-register in General once the package is a bit more mature (has full documentation). If the package should be smaller in scope, I would recommend that you change the name to something longer and more descriptive.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "marcel-utz",
+      "author_association": "NONE",
+      "text": "Dear Michael,\r\n\r\nMany thanks for your feedback. You are certainly right that the package documentation is not yet ready for prime time. We will continue to develop it and improve its documentation, and get in touch again at a later date. For the moment, we will use a local registry. The name can be made more specific as well. The package contains functionality to both analyse experimental NMR data as well as simulate NMR spin dynamics. Would a name like NmrKIT or similar be acceptable?\r\n\r\nBest wishes,\r\n-Marcel\r\n\r\n\r\nProf. Dr. Marcel Utz\r\n***@***.***\r\n\r\n\r\n\r\n> On 11. Jul 2024, at 14:59, Michael Goerz ***@***.***> wrote:\r\n> \r\n> \r\n> In general, we try to avoid domain-specific acronyms for package names. Personally, I think \"NMR\" might be commonly understood enough to be at least part of a name. So if you choose NMR<Something>, that would probably be fine. It would be good to check what other Julia packages might exist in the NMR space, compare yourself with their feature set, and figure out how you want to situate this package in that space.\r\n> \r\n> It might even be possible to use just \"NMR\" as a package name, but I think there's a pretty high bar for that. The package would have to be a very complete NMR framework, basically the \"go to\" package for the entire field of NMR. That also implies exceptionally good documentation (or at least a trajectory towards that). The package should also be expected to receive long-term maintenance. It appears that you might have a permanent academic position, and that would go a very long way towards guaranteeing maintenance.\r\n> \r\n> In its current form, the package definitely lacks documentation. In general, the minimum requirement for a package to be registered is a README that explains what problem the package is trying to solve and gives some indication of the features and how the package can be used, e.g., by giving a usage example. For a package name like\" NMR\" the bar would probably be much higher. It should have a full online Documenter-based documentation.\r\n> \r\n> If you think this package will live up to the expectations implied by the name \"NMR\", I would say maybe use a LocalRegistry <https://github.com/GunnarFarneback/LocalRegistry.jl> for the moment, and re-register in General once the package is a bit more mature (has full documentation). If the package should be smaller in scope, I would recommend that you change the name to something longer and more descriptive.\r\n> \r\n> —\r\n> Reply to this email directly, view it on GitHub <https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2222877341>, or unsubscribe <https://github.com/notifications/unsubscribe-auth/ACFXILQVJJCGFRGPEKC5ZZTZLZ6TPAVCNFSM6AAAAABKWM24M2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDEMRSHA3TOMZUGE>.\r\n> You are receiving this because you were mentioned.\r\n> \r\n\r\n",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> You are certainly right that the package documentation is not yet ready for prime time. We will continue to develop it and improve its documentation, and get in touch again at a later date. For the moment, we will use a local registry.\r\n\r\nSounds good!\r\n\r\n> The name can be made more specific as well. The package contains functionality to both analyse experimental NMR data as well as simulate NMR spin dynamics. Would a name like NmrKIT or similar be acceptable?\r\n\r\nMaybe `NMRKit`. \"NMR\" still remains an acronym and should always stay in all-caps. It's still pretty generic, though. We already have an `NMRTools.jl` – perhaps you can still come up with something more descriptive or more creative. For these types of framework packages, especially if you want to develop any kind of branding around them, it is often better to use the \"less systematic name\" approach (see [point 5 in the guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines)). Something more along the lines of your colleague Ilya Kuprov's \"Spinach\" framework for NRM in Matlab.\r\n",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    110853
+  ]
+}

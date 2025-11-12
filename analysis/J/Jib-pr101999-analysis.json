@@ -1,0 +1,60 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 6,
+  "package_author": "lbilli",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 101999,
+  "package_name": "Jib",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "This should probably be named `InteractiveBrokers`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "lbilli",
+      "author_association": "NONE",
+      "text": "Though unregistered, the package has been around for quite some time and I'd find it rather inconvenient to change the name at this stage.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> I'd find it rather inconvenient to change the name at this stage\r\n\r\nSorry, but that's not a convincing argument. `Jib` really isn't a suitable name for a Julia package. Not only is \"IB\" jargon, the \"J\" is also for \"Julia\", and we strongly discourage the \"Julia\" prefix/suffix for Julia packages (except for some very special cases).\r\n\r\nNote that you can write\r\n\r\n```\r\nusing InteractiveBrokers: InteractiveBrokers as Jib\r\n```\r\n\r\nin any existing code (and yes, it would be nice if in some future version of Julia that could be written as `using InteractiveBrokers as Jib`)",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "lbilli",
+      "author_association": "NONE",
+      "text": "That's fair.\r\nI'm not trying to convince anybody or build a case.\r\n\r\nRegistration has not been a priority of mine but since some user suggested it I thought I'd give it a try.\r\n\r\nFeel free to disregard this request.\r\n",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "There is also the option of putting it in a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl), which will alleviate most of the problems with unregistered packages, except for \"packages in General can only have dependencies that are also in General\". If that ever becomes the problem, I think you'll have to rename, unfortunately.\r\n\r\n> that's not a convincing argument\r\n\r\nIf you wanted to try a slightly more convincing argument, it would be \"I also have `rib` for the R-version of this package, and I'd like to keep a consistent name\". But a 3-letter package name is just going to be an extremely tough sell.\r\n\r\n> Feel free to disregard this request.\r\n\r\nAlright, I'm going to close this here, but don't hesitate to try again in the future. At least with a more suitable name, this package would be more than welcome in General.\r\n\r\n\r\n",
+      "stance": "anti_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

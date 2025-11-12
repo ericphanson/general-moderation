@@ -1,0 +1,244 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 32,
+  "package_author": "ajgiuliani",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 61
+  },
+  "pr_number": 5733,
+  "package_name": "MSJ",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "Maybe a package name like `MassSpectrometryData.jl` would be easier to discover?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "There is well known R package called mzR.  MS is the usual acronym for mass spectrometry. That's how I arrived to msJ. ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "ararslan",
+      "author_association": "MEMBER",
+      "text": "I understand the desire for symmetry with R, which has a more free-for-all approach to package naming, but I really think this could do with an expanded name, per our naming guidelines. Even searching msr in Google only brings up \"Mountain Safety Research\" for me.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Package naming guidelines: https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "I checked the guidelines and changed the package name to capital letters (MSJ). I would like to keep that short name. There some types which are not public and it is easier to call for example MSJ.Precurso() that something like MassSpectrometryData.Precursor().\r\nActually if you google mzR, you get the right link in first occurences.\r\n\r\nBy the way, would you have any ideas how I could fix the automerge issue ?\r\nBest,\r\nAlex",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "MassSpectrometry seems like a good name, and more typical to Julia packages. Not even that long, so IMO the acronym is not needed.\r\n\r\nAnyway, do you want to add the bounds? https://github.com/bcbi/CompatHelper.jl might be of interest. [noblock]",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "If you want something even shorter, how about `MassSpec.jl`?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I recommend that you add the upper-bounded compat entries as requested by the automerge bot.\r\n\r\nYou may find [CompatHelper.jl](https://github.com/bcbi/CompatHelper.jl) helpful.\r\n\r\n[noblock]",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "From the naming guidelines:\r\n\r\n> In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nSo I really don’t think that MSJ is a good name.\r\n\r\nI know that we have some three-letter package names already registered in the General registry. But I don’t necessarily think it was a good idea to register those. Regardless, I don’t think we should add any more three letter package names unless it is a very well known name or acronym.\r\n\r\nI think `MassSpec.jl`, `MassSpectra.jl`, and `MassSpectrometry.jl` are three very good options.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "I am sorry that the name I picked  does not allow me to register the package. I selected a name that could be remembered by a potential mass spec user. Now, after discussing with some colleagues, I switched to `MSj`. This is easy to remember as MS is a widely used acronym in the field.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "This is my opinion: we should not register any more new packages with 3 letter names unless the acronym is unambiguous and well-known.\r\n\r\nSo I still think something like `MassSpec.jl` is much better.\r\n\r\nhttps://julialang.github.io/Pkg.jl/v1/creating-packages/index.html#Package-naming-guidelines-1\r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\n@StefanKarpinski @KristofferC @fredrikekre What do you think?",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "I understand. I didn't pay enough attention to the guidelines. However, MassSpec.jl is already registered (https://github.com/JuliaSpect/MassSpec.jl) and I would like to avoid ending up with a long package name. Other options such as MassSpectrometry or so would be quite similar to MassSpec.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Here are some options:\r\n\r\n- `MassSpec2.jl`\r\n- `MassSpecX.jl`\r\n- `MassSpecData.jl`\r\n- `MassSpecXml.jl`\r\n\r\nJust for reference, in the registry we have both:\r\n- `PGFPlots.jl`\r\n- `PGFPlotsX.jl`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "That preexisting package seems to have almost nothing in it. Maybe you can combine the functionality and reuse that name? ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "@DilumAluthge , this exactly what I would like to avoid. I will try to give you clearer explanations about my choice.\r\nThis package is made for mass spectrometry users not for Julia package maintainers. At the moment, its main goal is to treat tandem mass spectrometry data. For the targeted audience, tandem mass spectrometry is abbreviated as MS/MS or MS^{2}. Multistage tandem MS is referred to as MS^{n} (https://en.wikipedia.org/wiki/Tandem_mass_spectrometry). Hence, the name of the package refers to tandem MS and to Julia with the letter J. I believe, this name might be easily remembered by the potential user's.  Other well-known packages are mzR (https://bioconductor.org/packages/release/bioc/html/mzR.html) and OpenMS (https://www.openms.de/) and both uses established acronyms in the field.\r\nThis explains why I believe anything like MassSpec of MassSpecSomehting is not a good name.\r\n ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Unfortunately I cannot support this package name.\r\n\r\nIf another registry maintainer wants to merge this PR, I will not stop them. But I cannot merge this PR with the current name `MSJ`.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Here are four additional suggestions for names:\r\n- `MSData.jl`\r\n- `MsData.jl`\r\n- `MZData.jl`\r\n- `MzData.jl`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I’ll leave this open for two more weeks. If another registry maintainer has not merged it by then, I’ll close this.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 2,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "Thank you for your suggestions. I'll get the opinion of colleagues on that. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "Balinus",
+      "author_association": "CONTRIBUTOR",
+      "text": "What about `OpenMSJ.jl` ? ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> What about `OpenMSJ.jl` ?\r\n\r\nSure.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "I personally still would prefer say OpenMassSpec.jl.  It makes it so much clearer to everybody to understand. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> I personally still would prefer say OpenMassSpec.jl. It makes it so much clearer to everybody to understand.\r\n\r\nI agree.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "Balinus",
+      "author_association": "CONTRIBUTOR",
+      "text": "I'm not affiliated, I was just proposing to the authors a solution that would be adequate for both parties 😁",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 2,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "Thanks that could be an option as well. MStools (in ref. to ClimateTools could also do it ).\r\nI'm still waiting for some feedback.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "What we are objecting to is the abbreviation (MS). E.g. This is not a package for studying multiple sclerosis (also abbreviated MS). Abbreviations are just too confusing.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "I understand that. However, some packages name are not related to their functionality either. Googling \"Gadfly\" and \"Winston\" doesn't lead to anything related to computer graphics, just like  \"MS\" as you proved it. However, the latter is meaningful for any mass spectrometrist, which the targeted audience. Now when I google \"MS analysis\",  I get : Mass spectrometry - Wikipedia.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ajgiuliani",
+      "author_association": "NONE",
+      "text": "After asking some colleagues it seems that MSTools is preferred.\r\nSo would you agree to register this package name ?\r\n",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "It doesn't seem like a great name to be honest (Microsoft Tools? Multiple Sclerosis Tools? Management Systems Tools?), but you've already gotten a lot of pushback here and ultimately, it's your call what you want to name your package, so if that's what you want, go for it.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> After asking some colleagues it seems that MSTools is preferred.\r\n> So would you agree to register this package name ?\r\n\r\nI’m fine with `MSTools.jl`.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I’ll close this PR, and then you can make a new package registration once you have renamed the package.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "r_package_precedent",
+    "domain_specific_acronym",
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

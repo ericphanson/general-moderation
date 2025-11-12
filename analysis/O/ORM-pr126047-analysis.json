@@ -1,0 +1,74 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "missing compat entry",
+      "type": "missing_compat"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "Thiago",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 126047,
+  "package_name": "ORM",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "What is “ORM”?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "Thiago-Simoes",
+      "author_association": "NONE",
+      "text": "A Object-relational mapping for databases.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "That seems like the PMA that the [guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules) warn against.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/126050",
+      "stance": "anti_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": [
+    126050
+  ]
+}

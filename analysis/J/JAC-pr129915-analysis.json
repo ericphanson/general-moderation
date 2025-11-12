@@ -1,0 +1,72 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 6,
+  "package_author": "OpenJAC",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 32
+  },
+  "pr_number": 129915,
+  "package_name": "JAC",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`JenaAtomicCalculator` seems like the perfect package name of this",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "OpenJAC",
+      "author_association": "NONE",
+      "text": "> `JenaAtomicCalculator` seems like the perfect package name of this\r\n\r\nWe have created the Julia package JAC, the Jena Atomic Calculator, for the last 7 years.  We like to keep this name JAC, please, since it has been used in more than 25 scientific publications and has more than 100 stars in github meanwhile.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Well, this is why you should register packages _before_ publishing papers. `JAC` is the epitome of what we _don’t_ want for package names. But it’s not up to me, you’ll have to convince one of the registry maintainers. 😕",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/132032\r\n\r\nThank you for re-registering! This looks great!",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    132032
+  ]
+}

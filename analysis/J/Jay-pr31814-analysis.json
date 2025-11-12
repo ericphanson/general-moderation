@@ -1,0 +1,42 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 3,
+  "package_author": "martinvanleeuwen",
+  "decision": {
+    "merged": false,
+    "closed_by": "ericphanson",
+    "merged_by": null,
+    "time_to_decision_days": 6
+  },
+  "pr_number": 31814,
+  "package_name": "Jay",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "martinvanleeuwen",
+      "author_association": "NONE",
+      "text": "Hi Eric,\n\nI have renamed the package to:\n\nJayTracer\n\nand resubmitted my registration on JuliaHub. I also added [compat] lines to\nthe Project.toml file. I hope I did that right. I found this explanation:\n\nhttps://pkgdocs.julialang.org/v1/compatibility/\n\nbut that webpage does not explain how to come up with upper bound values.\nDo you just have to indicate some future (i.e. not yet existent) version\nnumber? So, if a dependency is at version 0.2.3 I would just use 0.3 as the\nupper bound under [compat]?\n\nThanks,\n\nMartin\n\n\n\nOp ma 15 mrt. 2021 om 13:47 schreef Eric Hanson ***@***.***>:\n\n> Reopened #31814 <https://github.com/JuliaRegistries/General/pull/31814>.\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/31814#event-4458490656>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AEPAFBVXFQFTOQVVPZW3OODTDX6WNANCNFSM4ZCRKINQ>\n> .\n>\n",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "ericphanson",
+      "author_association": "MEMBER",
+      "text": "Great! I will close this one then in favor of the new one: https://github.com/JuliaRegistries/General/pull/32270.\r\n\r\n> I also added [compat] lines to\r\nthe Project.toml file. I hope I did that right. I found this explanation:\r\n>\r\n> https://pkgdocs.julialang.org/v1/compatibility/\r\n>\r\n> but that webpage does not explain how to come up with upper bound values.\r\nDo you just have to indicate some future (i.e. not yet existent) version\r\nnumber? So, if a dependency is at version 0.2.3 I would just use 0.3 as the\r\nupper bound under [compat]?\r\n\r\nIf you just put `name_of_dependency = \"0.2.3.\"`, that actually means \"any version [semver](https://semver.org/) compatible with 0.2.3\" which means any version on or after 0.2.3 but strictly before 0.3. So the upper bounds are actually implicit already when you use that syntax. ",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    31814,
+    32270
+  ]
+}

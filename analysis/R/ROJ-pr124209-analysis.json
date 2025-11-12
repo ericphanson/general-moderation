@@ -1,0 +1,62 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "unable to install or load package",
+      "type": "install_load_failure"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 3,
+  "package_author": "Michi",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 1
+  },
+  "pr_number": 124209,
+  "package_name": "ROJ",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "While acronyms like `ROJ` are very frowned upon in the Julia community, there are generally exceptions for wrapper packages, which usually can use the name of the wrapped package. That tends to be the least confusing for the user, and is often preferable to coming up with a \"Julian\" name. In fact, a package with a non-Julian name can serve as a signal that the package wraps something from another language.\r\n\r\nI'm not really familiar with ROS, but it does seem like \"ROS 1\" and \"ROS 2\" are official names. For ROS 1, my understanding is that we have https://github.com/gstavrinos/ROS.jl by @gstavrinos (unmaintained?), and this package would target \"ROS 2\". As such, I think `ROS2` might actually be the most appropriate name for this package. Of course, that absolutely does not pass the automatic rules, and would have to be merged manually by a registry maintainer. I would recommend checking in the `#pkg-registration` channel on Slack for some more community feedback on this.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124282",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    124282
+  ]
+}

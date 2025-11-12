@@ -1,0 +1,88 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 10,
+  "package_author": "ianshmean",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 1
+  },
+  "pr_number": 9508,
+  "package_name": "PNG",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "IanButterworth",
+      "author_association": "MEMBER",
+      "text": "The plan is to create `JuliaIO/PNG.j`, `JuliaIO/JPEG.jl` etc. interfaces for FileIO",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I would prefer PNGImages.jl or PNGFiles.jl. I really don’t like three letter package names.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "IanButterworth",
+      "author_association": "MEMBER",
+      "text": "Yeah, it does feel a bit against the system and could easily clash in namespace with wrapped lib objects.\r\n\r\nOptions that have come up so far\r\n\r\n1. PNG, JPEG,  TIFF\r\n2. Png, Jpeg, Tiff\r\n3. PNGFiles, JPEGFiles, TIFFFiles\r\n4. PngFiles, JpegFiles, TiffFiles\r\n5. PNGImageIO, JPEGImageIO, TIFFImageIO\r\n6. PNGIO, JPEGIO, TIFFIO\r\n7. PngIO, JpegIO, TiffIO\r\n8. PortableNetworkGraphicsFiles, JointPhotographicExpertsGroupFiles, TaggedImageFileFormatFiles\r\n9.  PNGImages, JPEGImages, TIFFImages\r\n10. LibPNG, LibJPEG, LibTIFF\r\n\r\nThere is some precedence and logic for PNGFiles given CSVFiles. I don't love how that looks though.\r\nI'm torn between PNGFiles, PngFiles, PngIO\r\n\r\ncc. @Drvi @timholy",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "Tokazama",
+      "author_association": "CONTRIBUTOR",
+      "text": "I like the names \"PNGFiles\" or \"PortableNetworkGraphics\"",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "timholy",
+      "author_association": "MEMBER",
+      "text": "I'm not picky but PNGFiles sounds good to me.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "IanButterworth",
+      "author_association": "MEMBER",
+      "text": "Yeah, I've been coming to the same conclusion. When we get there, `TIFFFiles` is a little awkward, but I doubt it will spoil anyones fun.\r\n\r\nI'll rename. thanks",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "johnnychen94",
+      "author_association": "CONTRIBUTOR",
+      "text": "> When we get there, TIFFFiles is a little awkward, but I doubt it will spoil anyones fun.\r\n\r\nI thought there will be a wrapper package `ImageIO` for all of these so that users don't need to install each one individually.  If so the slightly lengthy name won't cause any inconvenience for general users. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "IanButterworth",
+      "author_association": "MEMBER",
+      "text": "Where we settled was to not have the `ImageIO` wrapper, because it would've negatively impacted load time as it grew in format support, which seems counter to the FileIO architecture and unhelpful given that typical usage is to use one image format at a time. Also, we're keeping ImageMagick and QuartzImageIO as backup, so this would be opt-in, at least initially.\r\n\r\nI've now renamed to https://github.com/JuliaIO/PNGFiles.jl ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "IanButterworth",
+      "author_association": "MEMBER",
+      "text": "But then again, the ImageIO layer could be a lazy-loader, and just handle the installation of the deps.. That hadn't occurred to me",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

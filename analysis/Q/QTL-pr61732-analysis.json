@@ -1,0 +1,60 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 8,
+  "package_author": "xijiang",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 43
+  },
+  "pr_number": 61732,
+  "package_name": "QTL",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "xijiang",
+      "author_association": "NONE",
+      "text": "Now only the package name is an issue. I am wondering if this package can be manually pushed. Many thx.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "xijiang",
+      "author_association": "NONE",
+      "text": "Anything else that I can do to have this `QTL` package registered?",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "sens",
+      "author_association": "NONE",
+      "text": "To me, the name of your package (QTL) does not accurately describe what the package does (\"about quantitative genetics\").  As a quantitative geneticist myself, I would urge you to either rename the package or more precisely define what your package does. I am assuming QTL is a reference to Quantitative Trait Loci. \r\n\r\nThere are several Julia package performing QTL mapping including the OpenMendel project (which has several packages).  My group has three packages doing some kind of QTL mapping: FaSTLMM, LiteQTL, FlxQTL.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "xijiang",
+      "author_association": "NONE",
+      "text": "The current plan is not to include QTL mapping. Instead, since QTL is also central for genomic selection and breeding, this package was intended to include as many breeding relevant algorithms as possible. For example, population simulation, G matrix construction, its approximate inverse, matrix I/O, breeding value evaluations, and various Bayesian method. It also include some functions that are used frequently in my group. Maybe it looks ambitious, but Julia is such a powerful language and young, it is worth a try.\r\n\r\nMaybe I can add my initials to the name, like `xyQTL`. \r\n\r\nAnyway, I have been using `qtl` as my penname for nearly 20 years, such as twitter, and one of oldest Chinese website. If `QTL` is not a go still, I will try a new name.\r\n",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "sens",
+      "author_association": "NONE",
+      "text": "Thank you for clarifying your long-term plans.  I agree that Julia is fantastic for your goals.\r\n\r\nTo better guide potential users such as myself, I suggest making your intentions clear from the package name.  Perhaps `GenomicSelection`, `GeneticBreeding`, or `GenomicSelectionBreeding`?",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

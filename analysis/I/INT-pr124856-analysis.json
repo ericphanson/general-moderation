@@ -1,0 +1,60 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "missing compat entry",
+      "type": "missing_compat"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "duodenum96",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 38
+  },
+  "pr_number": 124856,
+  "package_name": "INT",
+  "discussion": [
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "The most obvious and appropriate name for this would be `IntrinsicNeuralTimescales`. Long and descriptive names like that are strongly encourage by the community (unlike in other languages, maybe), while acronyms are heavily frowned upon. So writing out acronyms like `INT` is usually the way to go.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "duodenum96",
+      "author_association": "NONE",
+      "text": "Thanks! I will fix the problems and try again. ",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

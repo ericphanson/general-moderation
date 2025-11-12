@@ -1,0 +1,68 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "AntonReinhard",
+  "decision": {
+    "merged": false,
+    "closed_by": "ViralBShah",
+    "merged_by": null,
+    "time_to_decision_days": 7
+  },
+  "pr_number": 114341,
+  "package_name": "QED",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] The documentation is not yet sufficiently complete for registration, and the name `QED` will probably receive *a lot* of push-back. Personally, I might be open to the name, but I don’t have high enough permissions in General to make that decision.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "AntonReinhard",
+      "author_association": "NONE",
+      "text": "[noblock] Oh, it seems the last documentation update wasn't properly pushed to gh-pages. I'll try to fix this. As for the name, we're aware this doesn't fit the normal requirements, but since the individual packages are all called `QEDsomething.jl` it would be nice to have the overall package be just `QED.jl`.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> Since the individual packages are all called QEDsomething.jl it would be nice to have the overall package be just QED.jl\r\n\r\nI'd consider that a pretty strong argument. With \"QED\" being pretty widely understood at least by physicists, names like `QEDprocesses` and `QEDfields.jl` are great package names (although I would have recommended the more standard CamelCase `QEDProcesses` and `QEDfields` – alas, they're already registered). Thus, I would support `QED` to tie these packages together as a framework. There's a pretty strong bias against acronyms for Julia packages, and *especially* three-letter-acronyms. However, I wouldn't consider `QED` to be an acronym in the same sense, given that it is a well-known physics concept, and a nice pun (I think, at least, I never actually looked up who coined the term).\r\n\r\nWith package names like `QED`, it also works in favor of the registration if the package is already reasonably polished and is well-maintained. Multiple contributores, and maintainers with a permanent position or backing by a tenured PI or a company go a long way here. From the contribution summary, that seems to be the case here.\r\n\r\nIn any case, you'll have to ask for a manual merge on Slack after the three-day waiting period.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Followup in https://github.com/JuliaRegistries/General/pull/115082",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    115082
+  ]
+}

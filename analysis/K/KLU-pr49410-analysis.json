@@ -1,0 +1,47 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 4,
+  "package_author": "Wimmerer",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "ChrisRackauckas",
+    "time_to_decision_days": 2
+  },
+  "pr_number": 49410,
+  "package_name": "KLU",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "rayegun",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n\r\nCan this be merged over the name requirements? It's a sister to CHOLMOD, AMD, UMFPACK, etc. The full name is a joke (Clark) Kent LU and it is never referred to as such.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "rayegun",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock] ~~Blocking~~. Going to move to JuliaSparse.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "ChrisRackauckas",
+      "author_association": "MEMBER",
+      "text": "This name is fine since it matches the standard for wrapper packages, i.e. it's wrapping a package called KLU so KLU.jl is the clear choice. Looks like it's just about time for the 3 day mark so I'll merge.",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": "klu"
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "library_wrapper",
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

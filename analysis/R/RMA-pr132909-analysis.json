@@ -1,0 +1,79 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 6,
+  "package_author": "gabriel",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 4
+  },
+  "pr_number": 132909,
+  "package_name": "RMA",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "gabriel-ferr",
+      "author_association": "NONE",
+      "text": "[noblock] Hello, I would like to request an exception for the package name \"RMA\", which stands for \"Recurrence Microstates Analysis\" (or alternatively, \"Recurrence Motifs Analysis\"). I understand that the name does not meet the current registry requirements (e.g., minimum length and uppercase rule), but the abbreviation is relevant to the topic and aligns with terminology emerging in this area of research.\r\n\r\nIf the name cannot be accepted under any circumstance, I understand and will proceed with renaming the package, such as \"RecurrenceMicrostates\".\r\n\r\nThank you for your consideration.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "There is probably very little (if any) chance to have a three-letter acronym like `RMA` accepted. My recommendation would be to write out acronym, as `RecurrenceMicrostatesAnalysis`. Differently from other communities, long and descriptive package names are strongly encouraged in the Julia ecosystem, see the [Package naming rules](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules). This can take some getting used to for people coming from other languages, but once you do, you will find that it makes the ecosystem much more approachable. Fully writing out the acronym would allow you to still use the `RMA` abbreviation in your documentation and \"marketing\", up to and including recommending\r\n\r\n```\r\nimport RecurrenceMicrostatesAnalysis as RMA\r\n```\r\n\r\nas a way to use your package.\r\n\r\nI also noticed that [your API documentation is currently empty](https://dynamicsufpr.github.io/RMA.jl/api/). This might be easy to fix, but if you are registering an initial version `v1.0.0`, and assuming that you intend to adher to [semantic versioning](https://semver.org), I would strongly recommend making sure that the public API of your package is clearly and completely documented. \"Version 1.0.0 defines the public API\" in the semver spec is the crucial distinction between pre-1.0 and 1.0 versions.\r\n\r\nIf the API isn't quite finished yet, or you still want to work on the documentation (there are many other empty sections in the documentation), it's always an option to register with an initial version `v0.1.0`, and then release `v1.0.0` as soon as everything is in place.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "gabriel-ferr",
+      "author_association": "NONE",
+      "text": "Understood. I will talk with my professor on Monday (we are also working on an article) and finish the documentation before version 1.0.0. Thank you for your recommendations =D\r\n\r\nEdit: Please feel free to close the pull request. I’ll change the name according to your suggestion.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "GunnarFarneback",
+      "author_association": "MEMBER",
+      "text": "> the abbreviation is relevant to the topic and aligns with terminology emerging in this area of research\r\n\r\nAs an addition, whether an abbreviation is established in some specialized area bears little weight since the General registry is a shared resource between all users of Julia. There's really no way to know if RMA refers to Reliability, Maintainability, and Availability analysis or Rate-Monotonic Analysis, or something completely different. (Those two terms do figure on the wikipedia disambiguation page for RMA.)\r\n",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/133125",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    133125
+  ]
+}

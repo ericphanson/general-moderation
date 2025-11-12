@@ -1,0 +1,48 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 4,
+  "package_author": "raphaelsaavedra",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 1
+  },
+  "pr_number": 8805,
+  "package_name": "GAS",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "nickrobinson251",
+      "author_association": "CONTRIBUTOR",
+      "text": "Can we rename something that might be more informative to non-experts?\r\n\r\n E.g. `GASModels.jl` would be better, since a google search for `GASModels` turns up relevant results at the top (unlike `GAS`).\r\n\r\nAlternative much longer names...\r\n- `GeneralizedAutoregressiveScoreModels.jl`\r\n- `GeneralizedAutoregressiveModels.jl`\r\n- `GeneralizedAutoregressiveScore.jl`\r\n- `ScoreDrivenModels.jl`\r\n- ...",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "raphaelsaavedra",
+      "author_association": "NONE",
+      "text": "Hey @nickrobinson251! So, the original name for the package was indeed `ScoreDrivenModels.jl`, but we ended up changing It because score-driven models are a somewhat broader class than just GAS. We were avoiding `GASModels` because `GasModels` already exists (https://github.com/lanl-ansi/GasModels.jl) and we want to avoid confusions. We will discuss and come up with a better alternative.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "guilhermebodin",
+      "author_association": "NONE",
+      "text": "This should be closed, it was replaced by #8844 ",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    8844
+  ]
+}

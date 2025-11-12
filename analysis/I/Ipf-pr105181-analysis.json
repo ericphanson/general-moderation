@@ -1,0 +1,53 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 5,
+  "package_author": "andreapasquale94",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 13
+  },
+  "pr_number": 105181,
+  "package_name": "Ipf",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I'd actually recommend just naming this package `ESAInterpolationFiles`. You might be able to get away with something like `IPFFiles`, but there really isn't any reason not to go for a maximally descriptive package name. It would still export `IPF`, so your example would just be \r\n\r\n```julia\r\nusing ESAInterpolationFiles\r\n# or (I think unqualified imports are a bad idea in general):\r\n# using ESAInterpolationFiles: IDF, compute, compute_derivative\r\n\r\n# Load an IPF file\r\nfile = IPF(\"example.ipf\")\r\n\r\n# Compute interpolated value for a given key\r\nvalue = compute(file, 10.5)\r\n\r\n# Compute derivative for a given key\r\nderivative = compute_derivative(file, 10.5)\r\n```\r\n\r\nwhich seems perfectly nice and readable.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "andreapasquale94",
+      "author_association": "NONE",
+      "text": "Thank you for the suggestions, I would rather not use ``ESA`` in the package name as this is not affiliated with the Agency.\r\nI will go ahead and apply the required changes by the auto-merge and change the name to ``IPFiles.jl``.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> I would rather not use ESA in the package name as this is not affiliated with the Agency\r\n\r\nI don't think there would be any issue with that. The package deals with \"ESA Interpolation Files\", so the *file format* is associated with ESA, but that does not imply that your package is, or that you can't use the name of the format as part of your package.\r\n\r\n> I will go ahead and apply the required changes by the auto-merge and change the name to IPFiles.jl\r\n\r\nYeah, `IPFFiles.jl` (two `F`'s, as following the pattern `<FileExtension>Files.jl`) is probably OK, although there is also the Interchangeable Preservation Format (which ranks higher in Google), which is not ideal.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "andreapasquale94",
+      "author_association": "NONE",
+      "text": "Another PR has been opened with the required changes, therefore this can be closed.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

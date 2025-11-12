@@ -1,0 +1,90 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 10,
+  "package_author": "pedrozudo",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 22
+  },
+  "pr_number": 7062,
+  "package_name": "SDD",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "pedrozudo",
+      "author_association": "NONE",
+      "text": "this is a julia wrapper for a library written in C:\r\nhttp://reasoning.cs.ucla.edu/sdd/\r\n\r\nthis is why the name of the package does not pass the auto-merge guideline checks.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "https://julialang.github.io/Pkg.jl/v1/creating-packages/index.html#Package-naming-guidelines-1\r\n\r\nGuideline 1:\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\nGuideline 4:\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nThat being said, I do acknowledge that the guideline 6 says the following:\r\n> CPLEX.jl wraps the CPLEX library, which can be identified easily in a web search.\r\n> MATLAB.jl provides an interface to call the MATLAB engine from within Julia.\r\n\r\nBut I think that naming the Julia package after the library really only makes sense if the library is one of the first search results. For example, if you search for `CPLEX`, then the IBM web page for the CPLEX Optimizer is the first result. And if you search for `MATLAB`, then the Mathworks web page for MATLAB is the first result.\r\n\r\nBut if you search for `SDD`, then the C library doesn't show up in the first few pages.\r\n\r\nSo I think that guidelines 1 and 4 are important here.\r\n\r\nHow about one of the following:\r\n- `SententialDecisionDiagrams.jl`\r\n- `SDDiagrams.jl`",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "pedrozudo",
+      "author_association": "NONE",
+      "text": "Thanks for having a look at this!\r\n\r\nI am not sure I can agree with the point you are making about the search results.\r\n\r\nIf I look at point six of the guidelines, it says:\r\n\r\n> 6. Packages that wrap external libraries or programs should be named after those libraries or programs.\r\n\r\nIt does not really say anything about being easily identifiable in a web search, this is only mentioned in one of the examples. Moreover, if I google (in an anonymous session) \"sdd.jl\" the first hit is the github repo.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "My main point is that when it comes to naming Julia packages, we should prioritize clarity. By which I mean, the name alone should give you some sense of what the package is about.\r\n\r\nIf you ask the average Julia user what `SDD` is, I doubt they will say \"Sentential Decision Diagrams\".\r\n\r\ncc: @StefanKarpinski @fredrikekre @KristofferC and the other registry maintainers.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "It doesn't seem like there is a lot of support for this name. I would highly recommend a more descriptive name.\r\n\r\nPersonally, I can't merge this PR with the current name of `SDD`.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Again, here are some ideas:\r\n- `SententialDecisionDiagrams.jl`\r\n- `SDDiagrams.jl`\r\n- `SDDReasoning.jl`",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Bump.\r\n\r\nI cannot merge this pull request with the current name `SDD`.\r\n\r\nI’ll leave this open for two more weeks. If another registry maintainer has not merged it by then, I’ll close this.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "pedrozudo",
+      "author_association": "NONE",
+      "text": "Okay, no worries. I changed the name to SententialDecisionDiagrams in the Project.toml file. Is there anything else that I should change? Also, I accidentally made a new pull request.\r\n\r\nThanks for taking care of this! ",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of #7877 ",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "library_wrapper"
+  ],
+  "related_prs": [
+    7877
+  ]
+}

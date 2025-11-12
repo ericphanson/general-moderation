@@ -1,0 +1,73 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "FuZhiyu",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 10
+  },
+  "pr_number": 130992,
+  "package_name": "GIV",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`GranularInstrumentVariables` would seem like the appropriate package name for this. I would also encourage you to add a little bit more documentation in the README before registering, and making sure the badges at the top of the README work. Usually, `v0.0.1` is too early for a package to be registered. You should wait until it has reached `v0.1.0` (“useable, but not 'stable' yet”)",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "FuZhiyu",
+      "author_association": "NONE",
+      "text": "Hi sorry for wasting your time to review a bad PR. Had I known it is\r\nmanually monitored I would’ve call RegisterBot more carefully ;)\r\n\r\nAll suggestions duly noted. I’ll fix these issues in the next call\r\n\r\nOn Wed, May 14, 2025 at 3:49 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#130992)\r\n> <https://github.com/JuliaRegistries/General/pull/130992#issuecomment-2881539916>\r\n>\r\n> GranularInstrumentVariables would seem like the appropriate package name\r\n> for this. I would also encourage you to add a little bit more documentation\r\n> in the README before registering, and making sure the badges at the top of\r\n> the README work. Usually, v0.0.1 is too early for a package to be\r\n> registered. You should wait until it has reached v0.1.0 (“useable, but\r\n> not 'stable' yet”)\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/130992#issuecomment-2881539916>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/ACX5M45EMXTTYAX3K52KR6D26OT45AVCNFSM6AAAAAB5ELJ4A6VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDQOBRGUZTSOJRGY>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> Hi sorry for wasting your time to review a bad PR\r\n\r\nNot at all! Please never feel that you should apologize for a registration, or _any_ contribution to the ecosystem. Registry members like myself are here to help you get your package into the community in the most suitable way, not to police against “bad PRs”\r\n\r\n> I’ll fix these issues in the next call\r\n\r\nI'm looking forward to that! This looks like a very nice package!\r\n",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/131667",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    130992,
+    131667
+  ]
+}

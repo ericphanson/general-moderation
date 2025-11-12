@@ -1,0 +1,69 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "devmotion",
+  "decision": {
+    "merged": false,
+    "closed_by": "giordano",
+    "merged_by": null,
+    "time_to_decision_days": 7
+  },
+  "pr_number": 36503,
+  "package_name": "POT",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "devmotion",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n\r\nThe package is a wrapper of the Python Optimal Transport library whose name is POT. @giordano, what's  the general policy regarding such wrappers, is the name POT.jl OK?",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "devmotion",
+      "author_association": "CONTRIBUTOR",
+      "text": "Bump :slightly_smiling_face: \r\n\r\nAnyone who could comment on the name? Maybe @DilumAluthge? Since it's the name of the Python package that is wrapped here it seems reasonable to me. I don't mind renaming the package though if there is a better suggestion or standard. Overall it would just be nice to make it available since it will allow us to remove an optional PyCall-dependent submodule in OptimalTransport that caused me some trouble lately :slightly_smiling_face: ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "Ooops, sorry, this slipped my mind this weekend.  Usually for wrappers we're ok with having the same name as usptream, but in this case the upstream name is particularly bad.  What about expanding the acronym to `PythonOptimalTransport`?",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "devmotion",
+      "author_association": "CONTRIBUTOR",
+      "text": "Or maybe `PythonOT`? That's also the name of the Github organization (https://github.com/PythonOT) and the webpage (https://pythonot.github.io) I just noticed, so maybe it would be easier to discover.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "Yes, that's a bit more clear.  I guess name will still conflict, but we can deal with it",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "devmotion",
+      "author_association": "CONTRIBUTOR",
+      "text": "I renamed the package and started a new registration process: https://github.com/JuliaRegistries/General/pull/36995",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    36995
+  ]
+}

@@ -6,6 +6,7 @@
 using JSON
 using Dates
 using Random
+using OutputCollectors
 
 # === Code-based extractors (FREE) ===
 
@@ -230,25 +231,25 @@ const BATCH_STATE = Dict{String, Any}(
 
 """Call llm CLI with a prompt and schema, return parsed JSON"""
 function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash")
-    try
-        # Use llm's --schema feature for guaranteed structured output
-        result = readchomp(`llm -m $model --schema $schema $prompt`)
-        LLM_CALL_COUNT[] += 1
-        return JSON.parse(result)
-    catch e
-        error_msg = sprint(showerror, e)
+    local result, errs
+    sleep(1)
+    # Use llm's --schema feature for guaranteed structured output
+    oc = OutputCollector(`llm -m $model --schema $schema $prompt`)
+    success = wait(oc)
+    result = OutputCollectors.collect_stdout(oc)
+    errs = OutputCollectors.collect_stderr(oc)
+    LLM_CALL_COUNT[] += 1
+    success && return JSON.parse(result)
 
-        # Check for quota/rate limit errors
-        if occursin(r"quota|429|exhausted", lowercase(error_msg)) ||
-           occursin("rate limit", lowercase(error_msg)) ||
-           occursin("exceeded", lowercase(error_msg))
-            @error "Quota or rate limit exceeded!"
-            throw(ErrorException("QUOTA_EXCEEDED: $error_msg"))
-        end
-
-        @warn "LLM call failed" error=e
-        return nothing
+    # Check for quota/rate limit errors
+    if occursin(r"quota|429|exhausted", lowercase(errs)) ||
+        occursin("rate limit", lowercase(errs)) ||
+        occursin("exceeded", lowercase(errs))
+        @error "Quota or rate limit exceeded!"
+        throw(ErrorException("QUOTA_EXCEEDED: $errs"))
     end
+    @warn errs
+    return JSON.parse(result)
 end
 
 """Get token usage from llm logs database for the last N calls"""

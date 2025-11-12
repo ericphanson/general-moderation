@@ -1,0 +1,76 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "missing compat entry",
+      "type": "missing_compat"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "AndrewWasHere",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 120480,
+  "package_name": "HSM",
+  "discussion": [
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Congratulations on the new package! However, [as a general rule](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1), we would like to avoid acronyms in package names. Using `HierarchicalStateMachines.jl` as the name of this package should be totally fine.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "AndrewWasHere",
+      "author_association": "NONE",
+      "text": "Renamed. Presumably, I just create a new issue on my repo and comment `@JuilaRegistrator register()` again?",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Yes, that’s right. Or just directly comment on the commit you want to tag. You don’t actually need an issue.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/120505",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    120505
+  ]
+}

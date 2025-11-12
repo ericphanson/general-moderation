@@ -1,0 +1,60 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 8,
+  "package_author": "b",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 54
+  },
+  "pr_number": 66266,
+  "package_name": "Out",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "b-fg",
+      "author_association": "NONE",
+      "text": "Hi, I would like this PR to be manually merged since the package name already encapsulates all the information in a clear way. Additionally, it does not clash with any other package name and the only issue that seems to be present is that it is too short.\r\nIf that is indeed the case, I can change it to `Output.jl`, although I am not sure why it would be necessary.\r\nThanks!\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "MasonProtter",
+      "author_association": "CONTRIBUTOR",
+      "text": "Nice little package! I'm no decision maker on these things, but for what it's worth, I think the name is fine and support it.\r\n\r\nIf it's decided that this package name isn't acceptable for some reason, can I suggest the names \"Showln.jl\" and `@showln`? It's not a perfect name because the analogy between this and `@show` is not quite the same as the analogy between `print` and `println`. On the other hand, I think this is more faithful to the `show` function than `@show` itself is, so 🤷. \r\n\r\nI've had a `@showln` in my startup.jl for a long time now that basically does this, and I'd be glad to replace it with a package. \r\n[noblock]",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "b-fg",
+      "author_association": "NONE",
+      "text": "Thanks @MasonProtter. I will keep that in mind in case I finally need to change it :)\r\n\r\n[noblock]",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "mcabbott",
+      "author_association": "CONTRIBUTOR",
+      "text": "Maybe something like OutMacro would also work? Then it would be pretty obvious what `using OutMacro` at the top of some script is doing.\r\n\r\n[noblock]",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "b-fg",
+      "author_association": "NONE",
+      "text": "Thanks for the input @mcabbott .I still prefer just Out to be honest. Do packages that export macros in general include \"Macro\" in the name? If that is the general trend, I am happy to modify it.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

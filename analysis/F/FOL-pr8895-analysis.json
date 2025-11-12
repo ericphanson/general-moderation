@@ -1,0 +1,72 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 8,
+  "package_author": "ztangent",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 3
+  },
+  "pr_number": 8895,
+  "package_name": "FOL",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "nickrobinson251",
+      "author_association": "CONTRIBUTOR",
+      "text": "- `FirstOrderLogic.jl`?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ztangent",
+      "author_association": "NONE",
+      "text": "Unfortunately that's already taken by https://github.com/roberthoenig/FirstOrderLogic.jl and I'd prefer to avoid the clash!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "nickrobinson251",
+      "author_association": "CONTRIBUTOR",
+      "text": ">  I'd prefer to avoid the clash!\r\n\r\nThat package is not registered in the General registry, so there'd be no clash if users were to `] add FirstOrderLogic` (that said, still the potential confusion if users land upon that repo).",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "ztangent",
+      "author_association": "NONE",
+      "text": "Yup, I understand, but `FOL` provides considerably different functionality (it's essentially a Prolog port), and I'd feel bad given that the other package is older and claimed the name first.\r\n\r\nI'd prefer a shorter name, so keeping `FOL` would be great, but otherwise I'd also consider `Julog` (Julian Prolog) or `Predicated` (after predicate calculus).",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "@ztangent `Predicated.jl` seems like a good name to me!",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "@ztangent I'll close this PR, and then you can make a new registration after you have renamed the package to `Predicated.jl`.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 4,
+      "author": "ztangent",
+      "author_association": "NONE",
+      "text": "@DilumAluthge @nickrobinson251 on reflection I personally think `Julog` would a better package name that communicates what this package provides (i.e., Prolog-like functionality in Julia), whereas its unclear what `Predicated` means, it'd be great if we could go with that instead.",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": []
+}

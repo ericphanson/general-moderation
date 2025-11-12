@@ -1,0 +1,75 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "cj",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "fredrikekre",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 2661,
+  "package_name": "ITK",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "cj-mclaughlin",
+      "author_association": "NONE",
+      "text": "Regarding the name being an acronym, this is a wrapper for the ITK package https://itk.org. ",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "ITK is a bit terse as package names go. Would a more descriptive name be better?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "cj-mclaughlin",
+      "author_association": "NONE",
+      "text": "Despite the current package only having image registration, I feel like it's for the best to have a generic name, as I am looking to implement more ITK methods. Would JuliaITK be preferable?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "I have no idea what ITK methods are, which is kind of my point. JuliaITK would not be preferrable, see the Julia Package Naming Guidelines: https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "Given that it's a wrapper for the existing ITK package, the name is 👍",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "cj-mclaughlin",
+      "author_association": "NONE",
+      "text": "Great, thanks for your time. Let me know if there's anything else I can do to help.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 5,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "No, that's good. There's a customary waiting period for a new package but you're good to go.",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "library_wrapper",
+    "established_name"
+  ],
+  "related_prs": []
+}

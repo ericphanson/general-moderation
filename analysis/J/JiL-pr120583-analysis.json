@@ -1,0 +1,78 @@
+{
+  "violations": [
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 9,
+  "package_author": "aptmcl",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 50
+  },
+  "pr_number": 120583,
+  "package_name": "JiL",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "For this type of package, I think a name like `JiL` should be fundamentally okay. However, you'll have to convince a registry maintainer to merge it manually. Since names like `JiL` are somewhat scarce, it is probably much easier to do this if the project is already pretty mature, with full documentation, and there's some community discussion about it. Maybe it would be good to make some kind of [\"pre-announcement\" on Discourse](https://discourse.julialang.org/c/package-announcements/60) to introduce the package and explain your background and motivation for developing this",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "aptmcl",
+      "author_association": "NONE",
+      "text": "I'm not sure I understand what is being requested from me. \r\n\r\nAre you saying that either I change the name of the package to something that has five characters or else I need to ask a registry maintainer to manually merge it?\r\n\r\nI rather prefer the second option, so can you tell me the proper way to contact a registry maintainer?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Yes, that is correct. [As the bot message indicates](https://github.com/JuliaRegistries/General/pull/120583#issuecomment-2514197204), you have to post on the `#pgk-registration` channel on [Slack](https://julialang.org/slack/)",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 4,
+      "author": "MasonProtter",
+      "author_association": "CONTRIBUTOR",
+      "text": "If I understand this package correctly, during initialization, it globally replaces the runtime-wide parser with a new parser that tries to figure out if a piece of code looks lispy, and if it is lispy, it parses using a lisp parser and if not, it'll use julia's parser.\r\n\r\nI must say that even as a lisp enthusiast, this makes me pretty uncomfortable and I don't think this is something that a package in the general registry should be doing, as this behaviour can have profoundly far reaching implications. \r\n\r\nI'd be much more comfortable if instead you had a `lispinclude` function that `include`s code parsed using your lisp parser, and then made a special repl mode (like what REPLMaker.jl does) that lets people use lisp syntax in the REPL if they opt into it. \r\n\r\nAs it is currently, simply `using` this package in a sub-dependancy can have highly non-local disruptive effects in completely different modules...",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "aptmcl",
+      "author_association": "NONE",
+      "text": "I understand your discomfort and, clearly, this package is an experiment on making Julia more like Racket, not only in the use of fully-parenthesized prefix syntax, but also in the support for program files written in different syntaxes, including the original Julia syntax. Those who will use it should expect the parser to change, hopefully, in a backwards-compatible way.\r\n\r\nI don't know what is expected from me at this moment. Can you tell me which of the following is needed for the package to be registered?\r\n\r\n1. Change the name of the package so that it complies with the automatic merge guidelines?\r\n2. Change the implementation of the package, providing the `lispinclude` function that you mention, along with the special REPL mode?\r\n3. Something else?\r\n\r\nThanks in advance.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "MasonProtter",
+      "author_association": "CONTRIBUTOR",
+      "text": "> Those who will use it should expect the parser to change, hopefully, in a backwards-compatible way.\r\n\r\nWhat I mean though is that since you're calling `Core._setparser!(lang_parse)`, you're changing the parser used by all packages in the session non-locally, not just in the namespace or file where the user intends to use JiL (this would even affect `Base` if something got `include`ed after this package was loaded!) . That's what makes me a bit hesitant about this being in the general registry, because then it can be made a dependancy of a package and if someone loads some other random package, this could cause weird and hard to debug parsing errors even though the user might not have loaded `JiL` themselves.\r\n\r\n\r\n\r\n> I don't know what is expected from me at this moment. Can you tell me which of the following is needed for the package to be registered?\r\n\r\nSorry, I should have been more clear. I am also not a registry maintainer and I don't have the rights to approve or deny your package. I am just giving my feedback as to why I am a bit uncomfortable with the implementation itself so that you can consider that feedback, and so that whichever  registry maintainer ends up looking at this knows about that extra context (i.e. that this is potentially not just a naming issue). \r\n\r\nThat said, we usually don't block packages from registration just because they're doing something that a rando like me thinks is a bad idea. I just thought I'd flag it just in case it is important. \r\n\r\n___________\r\n\r\nSeparately, I should also say this is a really cool package and I love to see people playing around with this stuff! It's very neat, (I'm just not totally sure it is a good fit for the general registry -- but I'm also not convinced it *shouldnt* be registed)",
+      "stance": "anti_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    120583
+  ]
+}

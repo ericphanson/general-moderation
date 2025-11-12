@@ -1,0 +1,69 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "nantonel",
+  "decision": {
+    "merged": false,
+    "closed_by": "fredrikekre",
+    "merged_by": null,
+    "time_to_decision_days": 22
+  },
+  "pr_number": 14080,
+  "package_name": "RIM",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "nantonel",
+      "author_association": "NONE",
+      "text": "I know RIM does not pass name guidelines... However the package has been around since julia 0.6 (that's also the reason for using v0.2.0). The gihub link already appeared in some papers, that why I'm a little bit reluctant of changing the name... apologies!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "It is fine, but can you adjust the compat bounds?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "oxinabox",
+      "author_association": "MEMBER",
+      "text": "While I think having been around since 0.6 does give it some precidence for keeping the name, maybe now is the time to seize the day and make it something easier to google for.\r\n\r\nGoogling for `RIM julia` gives me nothing of relevence (googling `RIM jl` does find the package).\r\n\r\nWe renamed FDM.jl to FiniteDifferences.jl a while back because the name was misleading (there is another thing called FDM in scientific commputing) and it isn't very findable.\r\nAnd that was annoying becaues you can't actually rename things as that would break existing users, so have to register a new package, and FDM must remain in the registry forever.\r\nWhere as right now RIM.jl is not in the registry, so this is the best time to rename if if you ever were thinking to.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "> googling `RIM jl` does find the package\r\n\r\nEvent his doesn't find the package for me. I need to search for `rim.jl julia` to find it.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "nantonel",
+      "author_association": "NONE",
+      "text": "Ok, I'll change the name then. Sorry for the trouble.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "nantonel",
+      "author_association": "NONE",
+      "text": "Apparently changing the name triggered a [new PR](https://github.com/JuliaRegistries/General/pull/15346). I suppose this can be closed.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "established_name"
+  ],
+  "related_prs": [
+    15346
+  ]
+}

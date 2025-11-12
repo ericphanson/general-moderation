@@ -1,0 +1,55 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "repo URL does not end with /name.jl.git",
+      "type": "repo_url"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 2,
+  "package_author": "svilupp",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 124630,
+  "package_name": "RAG",
+  "discussion": [
+    {
+      "influence": 5,
+      "author": "svilupp",
+      "author_association": "NONE",
+      "text": "STOP! This is duplicative and no longer needed.\r\n\r\nThis was a package rename due to the reported name similarity: https://github.com/JuliaRegistries/General/pull/124608\r\n\r\nIT seems that Gunnar F has overridden the auto-merge blocker on the original name, so this PR can be removed! I'll revert all changes and proceed with the original name.\r\n\r\nPlease close this one",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    124608
+  ]
+}

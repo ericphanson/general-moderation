@@ -1,0 +1,89 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 9,
+  "package_author": "floswald",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "fredrikekre",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 1536,
+  "package_name": "SMM",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Please add (at least)\r\n```\r\n[compat]\r\njulia = \"1\"\r\n```\r\nto your project file and retrigger the bot.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Just to make sure, did you intend to disallow Julia 1.0?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "floswald",
+      "author_association": "NONE",
+      "text": "i have been using 1.1 so that's why i set it there. travis runs on 1.0. so i guess it would be better to use 1.0. sorry about that, i'll change again!",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "floswald",
+      "author_association": "NONE",
+      "text": "travis died on the previous build no idea why. restarted now.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "floswald",
+      "author_association": "NONE",
+      "text": "phew... i had removed a `__precompile__(false)` without knowing too much about it. all hell broke loose! i think we're ready to go now.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "> phew... i had removed a __precompile__(false) without knowing too much about it. all hell broke loose! i think we're ready to go now.\r\n\r\nWhat happened? Unless you do weird things it should be fine to precompile. maybe you just need to initialize these https://github.com/floswald/SMM.jl/blob/86923918ebc55103a51ce446427130079375bae2/src/SMM.jl#L79-L80 in the `__init__()`?\r\n\r\n(Btw, its a bit weird that your package swaps out the users logger.)",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "floswald",
+      "author_association": "NONE",
+      "text": "Oh. That’s a couple of things I don’t fully understand I have to admit.\nSorry for all that. I noticed the logger actually doesn’t even work for me\n(like setting debut level didn’t change anything). How to do this\nproperly?  Should I not specify a logger at all?\n\nOn Wed 26 Jun 2019 at 18:28, Fredrik Ekre <notifications@github.com> wrote:\n\n> phew... i had removed a *precompile*(false) without knowing too much\n> about it. all hell broke loose! i think we're ready to go now.\n>\n> What happened? Unless you do weird things it should be fine to precompile.\n> maybe you just need to initialize these\n> https://github.com/floswald/SMM.jl/blob/86923918ebc55103a51ce446427130079375bae2/src/SMM.jl#L79-L80\n> in the __init__()?\n>\n> (Btw, its a bit weird that your package swaps out the users logger.)\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/1536?email_source=notifications&email_token=AAHZM5Q3T6TML5A65SVMQWTP4OKMPA5CNFSM4H26LNT2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGODYUCZBA#issuecomment-505949316>,\n> or mute the thread\n> <https://github.com/notifications/unsubscribe-auth/AAHZM5TYXJPICGMIGU77J5LP4OKMPANCNFSM4H26LNTQ>\n> .\n>\n",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "> Should I not specify a logger at all?\r\n\r\nIMO a package should not set the global logger, for example, if in my code I have\r\n```\r\nmy_logger = ...\r\nusing SMM\r\n???\r\n```\r\nloading your package changes my own set logger. So I think setting loggers is only for top level applications, not for packages. See https://github.com/JuliaLang/julia/pull/28229 for some more discussion.\r\n\r\n",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "floswald",
+      "author_association": "NONE",
+      "text": "I see that makes sense. Only have experience with publishing R packages\nwhere logging is left totally to packages. But that was bad extrapolation,\nsorry. Let me remove that and submit again!\n\nOn Wed 26 Jun 2019 at 19:07, Fredrik Ekre <notifications@github.com> wrote:\n\n> Should I not specify a logger at all?\n>\n> IMO a package should not set the global logger, for example, if in my code\n> I have\n>\n> my_logger = ...\n> using SMM\n> ???\n>\n> loading your package changes my own set logger. So I think setting loggers\n> is only for top level applications, not for packages. See\n> JuliaLang/julia#28229 <https://github.com/JuliaLang/julia/pull/28229> for\n> some more discussion.\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/1536?email_source=notifications&email_token=AAHZM5QGAE6CECAZYSDFG6LP4OO57A5CNFSM4H26LNT2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGODYUGFKQ#issuecomment-505963178>,\n> or mute the thread\n> <https://github.com/notifications/unsubscribe-auth/AAHZM5SORQC3366IQ7ZYTW3P4OO57ANCNFSM4H26LNTQ>\n> .\n>\n",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": [
+    1536,
+    28229
+  ]
+}

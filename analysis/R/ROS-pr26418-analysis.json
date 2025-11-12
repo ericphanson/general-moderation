@@ -1,0 +1,81 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 9,
+  "package_author": "gstavrinos",
+  "decision": {
+    "merged": false,
+    "closed_by": "giordano",
+    "merged_by": null,
+    "time_to_decision_days": 11
+  },
+  "pr_number": 26418,
+  "package_name": "ROS",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "gstavrinos",
+      "author_association": "NONE",
+      "text": "I think the naming guidelines here require some human approval since the package is intended for usage inside the [ROS](https://www.ros.org/) ecosystem.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "Besides the name, this package can't be loaded",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "gstavrinos",
+      "author_association": "NONE",
+      "text": "Hey @giordano, thanks for taking a look into this. What do you mean can't be loaded? Are there any changes that I have to make? (compat tag has been added in the new minor version if that's the problem)",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "> I was not able to load the package (i.e. import ROS failed). See the CI logs for details.\r\n\r\nThe log shows\r\n```\r\n   Building Cxx → `/tmp/jl_N9QWwO/packages/Cxx/1RaOv/deps/build.log`\r\n┌ Error: Error building `Cxx`: \r\n│ ERROR: LoadError: could not load library \"libLLVM-9.0.1\"\r\n│ libLLVM-9.0.1.so: cannot open shared object file: No such file or directory\r\n│ Stacktrace:\r\n│  [1] dlopen(::String, ::UInt32; throw_error::Bool) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Libdl/src/Libdl.jl:109\r\n│  [2] dlopen at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Libdl/src/Libdl.jl:109 [inlined] (repeats 2 times)\r\n│  [3] dlpath(::String) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Libdl/src/Libdl.jl:232\r\n│  [4] top-level scope at /tmp/jl_N9QWwO/packages/Cxx/1RaOv/deps/build.jl:23\r\n│  [5] include(::String) at ./client.jl:457\r\n│  [6] top-level scope at none:5\r\n│ in expression starting at /tmp/jl_N9QWwO/packages/Cxx/1RaOv/deps/build.jl:23\r\n│ writing path.jl file\r\n│ Tuning for julia installation at /opt/hostedtoolcache/julia/1.5.1/x64/bin with sources possibly at /opt/hostedtoolcache/julia/1.5.1/\r\n└ @ Pkg.Operations /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Pkg/src/Operations.jl:949\r\n```\r\n\r\nBut I see this is due to `Cxx.jl` not working in Julia v1.5\r\n\r\n> (compat tag has been added in the new minor version if that's the problem)\r\n\r\nWe wont accept anyway a package without compat bounds, so those must be fixed in any case.  Don't create new versions, keep the same version and retrigger registration just as you did before, this pull request will be updated automatically",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "gstavrinos",
+      "author_association": "NONE",
+      "text": "Thanks for the help. Is there any problem if I create a new one since I have pushed the minor versions a bit?",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "No, but this pull request should be closed then ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "gstavrinos",
+      "author_association": "NONE",
+      "text": "Ok, I will prepare a new registration and close this one when ready. Thanks again!",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "gstavrinos",
+      "author_association": "NONE",
+      "text": "New version at #26943",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": [
+    26943
+  ]
+}
