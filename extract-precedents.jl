@@ -442,22 +442,68 @@ end
 
 # === CLI ===
 
+"""Find all PR JSON files in a directory (excluding analysis files)"""
+function find_pr_files(dir::String)
+    all_files = []
+    for (root, dirs, files) in walkdir(dir)
+        for file in files
+            # Match pattern: *-pr*.json but NOT *-analysis.json
+            if occursin(r"-pr\d+\.json$", file) && !occursin("-analysis", file)
+                push!(all_files, joinpath(root, file))
+            end
+        end
+    end
+    return sort(all_files)
+end
+
+"""Convert data/ path to analysis/ path with same structure"""
+function get_analysis_path(pr_file::String)
+    # Extract the relative path after data/
+    if occursin(r"^data/", pr_file) || occursin(r"/data/", pr_file)
+        # Replace data/ with analysis/ and add -analysis suffix
+        analysis_file = replace(pr_file, r"data/" => "analysis/", count=1)
+        analysis_file = replace(analysis_file, r"\.json$" => "-analysis.json")
+
+        # Ensure directory exists
+        dir = dirname(analysis_file)
+        if !isdir(dir)
+            mkpath(dir)
+        end
+
+        return analysis_file
+    else
+        # If not in data/, just add -analysis suffix in same directory
+        return replace(pr_file, r"\.json$" => "-analysis.json")
+    end
+end
+
 function main()
     if length(ARGS) < 1
         println("""
-Usage: ./extract-precedents.jl <pr-json-file> [options]
+Usage: ./extract-precedents.jl <input> [options]
+
+Extract precedent data from PR JSON file(s).
+
+Arguments:
+  input           Path to a PR JSON file OR a directory containing PR JSON files
 
 Options:
-  --model MODEL    LLM model to use (default: gemini-2.0-flash-exp)
+  --model MODEL   LLM model to use (default: gemini-2.0-flash-exp)
 
 Examples:
+  # Single file
   ./extract-precedents.jl data/J/JuliaC-pr139086.json
-  ./extract-precedents.jl data/S/SLOPE-pr131898.json --model claude-3-5-haiku-20241022
+
+  # All files in a directory
+  ./extract-precedents.jl data/
+
+  # With custom model
+  ./extract-precedents.jl data/ --model claude-3-5-haiku-20241022
 """)
         exit(1)
     end
 
-    pr_file = ARGS[1]
+    input_path = ARGS[1]
     model = "gemini-2.0-flash-exp"
 
     # Parse optional arguments
@@ -475,57 +521,107 @@ Examples:
         end
     end
 
-    if !isfile(pr_file)
-        error("File not found: $pr_file")
-    end
-
-    # Extract
-    extracted = extract_precedent(pr_file, model=model)
-
-    # Save
-    output_file = replace(pr_file, r"\.json$" => "-analysis.json")
-    open(output_file, "w") do f
-        JSON.print(f, extracted, 2)
-    end
-
-    println("\n✓ Analysis saved to: $output_file")
-
-    # Summary
-    println("\n=== Summary ===")
-    println("Package: $(extracted["package_name"])")
-    println("Violations: $(length(extracted["violations"]))")
-    println("Wrapper: $(extracted["wrapper_info"]["is_wrapper"])")
-    println("Justifications: $(length(extracted["justifications"]))")
-    println("Related PRs: $(length(extracted["related_prs"]))")
-
-    # Comment stance breakdown
-    discussion = get(extracted, "discussion", [])
-    pro = count(c -> get(c, "stance", "") == "pro_merge", discussion)
-    anti = count(c -> get(c, "stance", "") == "anti_merge", discussion)
-    neutral = count(c -> get(c, "stance", "") == "neutral_merge", discussion)
-    unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
-    unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
-
-    # Influence breakdown
-    high_influence = count(c -> get(c, "influence", 0) >= 4, discussion)
-    medium_influence = count(c -> get(c, "influence", 0) == 3, discussion)
-    low_influence = count(c -> get(c, "influence", 0) <= 2 && get(c, "influence", 0) > 0, discussion)
-
-    if unclassified > 0
-        println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
+    # Determine if input is a file or directory
+    pr_files = []
+    if isfile(input_path)
+        pr_files = [input_path]
+    elseif isdir(input_path)
+        pr_files = find_pr_files(input_path)
+        if isempty(pr_files)
+            error("No PR JSON files found in directory: $input_path")
+        end
+        println("Found $(length(pr_files)) PR files to process")
+        println("Model: $model\n")
     else
-        println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
+        error("Input not found: $input_path")
     end
-    println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
 
-    # Decision info
-    decision = extracted["decision"]
-    if decision["merged"]
-        println("Decision: MERGED by $(decision["merged_by"]) in $(decision["time_to_decision_days"]) days")
-    else
-        closed_by = decision["closed_by"] !== nothing ? decision["closed_by"] : "unknown"
-        days_str = decision["time_to_decision_days"] !== nothing ? "$(decision["time_to_decision_days"]) days" : "unknown time"
-        println("Decision: CLOSED (not merged) by $closed_by in $days_str")
+    # Process all files
+    batch_mode = length(pr_files) > 1
+    success_count = 0
+    error_count = 0
+
+    for (idx, pr_file) in enumerate(pr_files)
+        if batch_mode
+            println("\n[$idx/$(length(pr_files))] Processing: $pr_file")
+            println("=" ^ 70)
+        end
+
+        # Extract
+        try
+            extracted = extract_precedent(pr_file, model=model)
+
+            # Save to analysis/ directory
+            output_file = get_analysis_path(pr_file)
+            open(output_file, "w") do f
+                JSON.print(f, extracted, 2)
+            end
+
+            if batch_mode
+                println("✓ Saved to: $output_file")
+            else
+                println("\n✓ Analysis saved to: $output_file")
+            end
+
+            # Summary (only show full summary for single file mode)
+            if !batch_mode
+                println("\n=== Summary ===")
+                println("Package: $(extracted["package_name"])")
+                println("Violations: $(length(extracted["violations"]))")
+                println("Wrapper: $(extracted["wrapper_info"]["is_wrapper"])")
+                println("Justifications: $(length(extracted["justifications"]))")
+                println("Related PRs: $(length(extracted["related_prs"]))")
+
+                # Comment stance breakdown
+                discussion = get(extracted, "discussion", [])
+                pro = count(c -> get(c, "stance", "") == "pro_merge", discussion)
+                anti = count(c -> get(c, "stance", "") == "anti_merge", discussion)
+                neutral = count(c -> get(c, "stance", "") == "neutral_merge", discussion)
+                unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
+                unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
+
+                # Influence breakdown
+                high_influence = count(c -> get(c, "influence", 0) >= 4, discussion)
+                medium_influence = count(c -> get(c, "influence", 0) == 3, discussion)
+                low_influence = count(c -> get(c, "influence", 0) <= 2 && get(c, "influence", 0) > 0, discussion)
+
+                if unclassified > 0
+                    println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
+                else
+                    println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
+                end
+                println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
+
+                # Decision info
+                decision = extracted["decision"]
+                if decision["merged"]
+                    println("Decision: MERGED by $(decision["merged_by"]) in $(decision["time_to_decision_days"]) days")
+                else
+                    closed_by = decision["closed_by"] !== nothing ? decision["closed_by"] : "unknown"
+                    days_str = decision["time_to_decision_days"] !== nothing ? "$(decision["time_to_decision_days"]) days" : "unknown time"
+                    println("Decision: CLOSED (not merged) by $closed_by in $days_str")
+                end
+            end
+
+            success_count += 1
+        catch e
+            error_count += 1
+            println("❌ ERROR processing $pr_file:")
+            println("  $(sprint(showerror, e))")
+            if batch_mode
+                println("  Continuing with next file...")
+            end
+        end
+    end
+
+    # Batch summary
+    if batch_mode
+        println("\n" * "=" ^ 70)
+        println("BATCH COMPLETE")
+        println("Successfully processed: $success_count/$(length(pr_files))")
+        if error_count > 0
+            println("Errors: $error_count")
+        end
     end
 
     # Token usage (query from llm logs database)
