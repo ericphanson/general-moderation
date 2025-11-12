@@ -1,0 +1,69 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "StefanKarpinski",
+  "decision": {
+    "merged": false,
+    "closed_by": "StefanKarpinski",
+    "merged_by": null,
+    "time_to_decision_days": 4
+  },
+  "pr_number": 6286,
+  "package_name": "Tar",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "mbauman",
+      "author_association": "MEMBER",
+      "text": "I think the name Tar.jl is just fine, but given the scope of the package you could potentially use Targit.jl or Gittar.jl.  Both lend themselves to some great logos 🎯 🎸 and make it clear that it's not (and will never be) a full implementation.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "Hold off on merging this, please. I'm going to think a bit about the scope and defaults for this package—whether it will be limited to what it does now or support more in the future.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "FWIW I think Tar.jl is fine.\r\n\r\nYou could also do PosixTar.jl to emphasize the specification that you implement.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "I think I'm going to go with Tar but I want to clarify the scope in the README first and think a bit about defaults in consideration of future features which broaden the scope beyond git.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> I think I'm going to go with Tar but I want to clarify the scope in the README first and think a bit about default in consideration of future features which broaden the scope beyond git.\r\n\r\nSounds good. I can merge this whenever you are ready, just let me know.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "Superseded by https://github.com/JuliaRegistries/General/pull/6450.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    6450
+  ]
+}

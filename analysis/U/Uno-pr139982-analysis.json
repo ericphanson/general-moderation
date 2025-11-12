@@ -1,0 +1,85 @@
+{
+  "violations": [
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 8,
+  "package_author": "amontoison",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 16
+  },
+  "pr_number": 139982,
+  "package_name": "Uno",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "amontoison",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n[Uno.jl](https://github.com/cvanaret/Uno/tree/main/interfaces/Julia) is the Julia interface for the nonlinear solver [`Uno`](https://github.com/cvanaret/Uno) and directly relies on the JLL package `Uno_jll.jl`.\r\nOther optimization solvers also have a name with only 3 characters and used a JLL with similar name :\r\n- https://github.com/jump-dev/Clp.jl\r\n- https://github.com/jump-dev/Cbc.jl\r\n- https://github.com/jump-dev/SCS.jl\r\n\r\ncc @cvanaret",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`UnoSolver` seems like the most obvious name that would pass the naming guidelines.\r\n\r\nBased on my impression of current sentiments among registry maintainers, I’m not sure if there is any realistic chance to get `Uno` merged.\r\n\r\n> Other optimization solvers also have a name with only 3 characters\r\n\r\nThese were registered before there was any enforcement of the guidelines. We have gotten much stricter about package naming",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> Based on my impression of current sentiments among registry maintainers, I don't think there is any realistic chance to get Uno merged.\r\n\r\nJust to be clear: I have no authority whatsoever to \"reject\" the name, and you're more than welcome to see what kind of response you get on Slack. Personally, I'm actually somewhat more open to short names (as long as they're not acronyms) than some of the registry maintainers seem to be, but I think even I would advocate for a _hard_ limit at 4 letters.\r\n\r\nRenaming would certainly be the _easiest_ way forward.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "amontoison",
+      "author_association": "CONTRIBUTOR",
+      "text": "Thanks, @goerz! I completely understand. I have posted a message on Slack to get the optimization community’s thoughts on the name.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock] FWIW: Cbc and Clp are circa 2012. It was a much more chill time for naming conventions.\r\n\r\nUnoSolver.jl or UnifyingNonlinearOptimization.jl, either of which can be simplified with `import <name> as Uno`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "kellertuer",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock] Oh, Uno even has a long form, I think I really like `UnifyingNonlinearOptimization.jl`!\r\n\r\nTo comment on the old solvers, I would have preferred for readability (especially for non-experts) if e.g. SCS would have been called SplittingConicSolver.jl, easier to parse for a user and we are no longer in the 80s, autocomplete exists.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "amontoison",
+      "author_association": "CONTRIBUTOR",
+      "text": "Thank you all for the comments! We decided to rename the package `UnoSolver.jl` with @cvanaret.\r\nWe found `UnifyingNonlinearOptimization.jl` a little bit too long.\r\nThis PR can be closed, the new one is https://github.com/JuliaRegistries/General/pull/141117.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    141117
+  ]
+}

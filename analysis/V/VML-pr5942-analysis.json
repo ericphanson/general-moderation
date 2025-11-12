@@ -1,0 +1,118 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 17,
+  "package_author": "aminya",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 34
+  },
+  "pr_number": 5942,
+  "package_name": "VML",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "V 0.2 after 3 years 🚀 \r\n[no block]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "Is there a reason for not merging this?\r\n\r\nThe version problem is because the package is old and last release was 3 years ago.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Don’t worry about the 0.2.0 version number.\r\n\r\nI think the name of the package is ambiguous.\r\n\r\nVML can mean a lot of things. For example, typing VML into Wikipedia redirects to Vector Markup Language.\r\n\r\nhttps://julialang.github.io/Pkg.jl/v1/creating-packages/index.html#Package-naming-guidelines-1\r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nI would recommend changing the name to something like `IntelVML.jl`.\r\n\r\n@StefanKarpinski @KristofferC @fredrikekre What do you think?\r\n\r\n\r\n",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "If we want to change the name, I prefer something like `VectorMath` or `IntelVectorMath`. Because `VML` is still vague. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "`IntelVectorMath.jl` sounds good to me.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "@crown421 What is your idea? Should I change it to `IntelVectorMath`? \r\n\r\nWhatever decision we make should be consistent with MKL too.\r\nhttps://github.com/JuliaRegistries/General/pull/6953",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "Crown421",
+      "author_association": "NONE",
+      "text": "I am fine both with `IntelVML` and `IntelVectorMath`. I like the latter better as a descriptive name, the former for brevity.\r\nFor MKL `IntelMKL` seems to be preferred, but not sure if we strongly have to be consistent. MKL is more well known than VML in my experience. \r\nI think I am voting for `IntelVectorMath`",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "mcabbott",
+      "author_association": "CONTRIBUTOR",
+      "text": "As someone pointed out on slack, Intel seems to say things like \"MKL Vector Mathematics functions (VM) \" instead of VML, e.g. https://software.intel.com/en-us/node/521751 . So that's another argument for `IntelVectorMath.jl`. \r\n",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "It might be best for us to wait and see what name the MKL package ends up being registered with. I think it is going to end up being `IntelMKL.jl`. But let's wait and see what the final name for that package is, and then we can figure out this package?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "If someone decides to not overload, they should constantly write `IntelVectorMath` for using every function. That doesn't look good to me.\r\n\r\nWhat is your idea?\r\n\r\nhttps://github.com/JuliaMath/VML.jl/pull/28",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "You can always just write `const VML = IntelVML` or `const VML = IntelVectorMath` at the top of your code.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "aminya",
+      "author_association": "CONTRIBUTOR",
+      "text": "> \r\n> \r\n> You can always just write `const VML = IntelVML` or `const VML = IntelVectorMath` at the top of your code.\r\n\r\nThanks for the suggestion. I did this from inside the package itself!:\r\n\r\nhttps://github.com/JuliaMath/VML.jl/pull/28/commits/a6dc769355d3ab00411ce2da5d5078b28399be3c",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I see that the package has been renamed to `IntelVectorMath` on its `master` branch.\r\n\r\nI'll close this PR. Once a `JuliaMath` admin as renamed your repo to `JuliaMath/IntelVectorMath.jl`, you can make a new registration.",
+      "stance": "anti_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    6953
+  ]
+}

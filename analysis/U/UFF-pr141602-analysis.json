@@ -1,0 +1,70 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "maucejo",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 1
+  },
+  "pr_number": 141602,
+  "package_name": "UFF",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`UniversalFileFormat` and `UFFFiles` would be two possible package names that would meet the expectations of the naming guidelines ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "maucejo",
+      "author_association": "NONE",
+      "text": "I will change for UniversalFileFormat.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "maucejo",
+      "author_association": "NONE",
+      "text": "I finally choose UFFReader.jl, which is shortest than UniversalFileFormat.jl :)",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/141659",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": [
+    141659
+  ]
+}

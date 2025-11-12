@@ -1,14 +1,14 @@
 # Three-Letter Package Names in Julia Registry
 
-**Generated:** 2025-11-12T14:47:32.882
+**Generated:** 2025-11-12T15:22:11.903
 **Total 3-letter packages found:** 210
 
 ## Summary
 
 - **Merged:** 49
 - **Not merged (closed):** 161
-- **With analysis:** 171
-- **Without analysis:** 39
+- **With analysis:** 210
+- **Without analysis:** 0
 
 ---
 
@@ -187,42 +187,42 @@
 | SML | #74719 | ❌ Closed | 2 | — | @mcabbott | Replaced by #74936  | [JSON](data/S/SML-pr74719.json) | [Analysis](analysis/S/SML-pr74719-analysis.json) |
 | SMM | #1536 | ✅ Merged | 9 | @fredrikekre | @fredrikekre | > Should I not specify a logger at all?<br><br>IMO a package should not set the global logger, for example, if in my code I have<br>```<br>my_logger = ...<br>using SMM<br>???<br>```<br>loading your package changes my own set logger. So I think setting loggers is only for top level applications, not for packages. See https://github.com/JuliaLang/julia/pull/28229 for some more discussion.<br><br> | [JSON](data/S/SMM-pr1536.json) | [Analysis](analysis/S/SMM-pr1536-analysis.json) |
 | SPM | #96039 | ❌ Closed | 4 | — | — | — | [JSON](data/S/SPM-pr96039.json) | [Analysis](analysis/S/SPM-pr96039-analysis.json) |
-| SQP | #83422 | ❌ Closed | 3 | — | — | — | [JSON](data/S/SQP-pr83422.json) | — |
-| SSM | #113737 | ❌ Closed | 3 | — | — | — | [JSON](data/S/SSM-pr113737.json) | — |
-| SST | #84731 | ❌ Closed | 3 | — | — | — | [JSON](data/S/SST-pr84731.json) | — |
-| Sim | #5038 | ❌ Closed | 2 | — | — | — | [JSON](data/S/Sim-pr5038.json) | — |
-| Sky | #92375 | ❌ Closed | 7 | — | — | — | [JSON](data/S/Sky-pr92375.json) | — |
-| SpQ | #121275 | ❌ Closed | 1 | — | — | — | [JSON](data/S/SpQ-pr121275.json) | — |
-| TCX | #134 | ✅ Merged | 0 | @StefanKarpinski | — | — | [JSON](data/T/TCX-pr134.json) | — |
-| TFT | #60583 | ❌ Closed | 3 | — | — | — | [JSON](data/T/TFT-pr60583.json) | — |
-| TOV | #121425 | ❌ Closed | 5 | — | — | — | [JSON](data/T/TOV-pr121425.json) | — |
-| TSC | #89938 | ❌ Closed | 6 | — | — | — | [JSON](data/T/TSC-pr89938.json) | — |
-| TSx | #71350 | ❌ Closed | 3 | — | — | — | [JSON](data/T/TSx-pr71350.json) | — |
-| TaD | #43201 | ❌ Closed | 4 | — | — | — | [JSON](data/T/TaD-pr43201.json) | — |
-| Tag | #60993 | ❌ Closed | 2 | — | — | — | [JSON](data/T/Tag-pr60993.json) | — |
-| Tar | #6286 | ❌ Closed | 7 | — | — | — | [JSON](data/T/Tar-pr6286.json) | — |
-| Tar | #6450 | ✅ Merged | 4 | @DilumAluthge | — | — | [JSON](data/T/Tar-pr6450.json) | — |
-| Try | #57060 | ✅ Merged | 2 | @fredrikekre | — | — | [JSON](data/T/Try-pr57060.json) | — |
-| UCX | #28878 | ✅ Merged | 1 | @vchuravy | — | — | [JSON](data/U/UCX-pr28878.json) | — |
-| UFF | #141602 | ❌ Closed | 5 | — | — | — | [JSON](data/U/UFF-pr141602.json) | — |
-| UHD | #12620 | ❌ Closed | 2 | — | — | — | [JSON](data/U/UHD-pr12620.json) | — |
-| UHD | #12621 | ❌ Closed | 2 | — | — | — | [JSON](data/U/UHD-pr12621.json) | — |
-| UHD | #13074 | ❌ Closed | 4 | — | — | — | [JSON](data/U/UHD-pr13074.json) | — |
-| Uno | #139982 | ❌ Closed | 8 | — | — | — | [JSON](data/U/Uno-pr139982.json) | — |
-| VAM | #86284 | ❌ Closed | 3 | — | — | — | [JSON](data/V/VAM-pr86284.json) | — |
-| VCF | #30036 | ❌ Closed | 4 | — | — | — | [JSON](data/V/VCF-pr30036.json) | — |
-| VMD | #16628 | ❌ Closed | 3 | — | — | — | [JSON](data/V/VMD-pr16628.json) | — |
-| VML | #5942 | ❌ Closed | 17 | — | — | — | [JSON](data/V/VML-pr5942.json) | — |
-| VQC | #3322 | ✅ Merged | 6 | @fredrikekre | — | — | [JSON](data/V/VQC-pr3322.json) | — |
-| XCB | #23401 | ✅ Merged | 7 | @giordano | — | — | [JSON](data/X/XCB-pr23401.json) | — |
-| XDF | #20235 | ✅ Merged | 3 | @fredrikekre | — | — | [JSON](data/X/XDF-pr20235.json) | — |
-| XDG | #12376 | ❌ Closed | 2 | — | — | — | [JSON](data/X/XDG-pr12376.json) | — |
-| XML | #58359 | ✅ Merged | 3 | @giordano | — | — | [JSON](data/X/XML-pr58359.json) | — |
-| XPS | #44499 | ❌ Closed | 2 | — | — | — | [JSON](data/X/XPS-pr44499.json) | — |
-| XRT | #114380 | ✅ Merged | 2 | @giordano | — | — | [JSON](data/X/XRT-pr114380.json) | — |
-| XSF | #86958 | ❌ Closed | 6 | — | — | — | [JSON](data/X/XSF-pr86958.json) | — |
-| XYZ | #8192 | ❌ Closed | 3 | — | — | — | [JSON](data/X/XYZ-pr8192.json) | — |
-| bad | #7750 | ❌ Closed | 4 | — | — | — | [JSON](data/B/bad-pr7750.json) | — |
-| drr | #67611 | ❌ Closed | 3 | — | — | — | [JSON](data/D/drr-pr67611.json) | — |
-| fet | #73423 | ❌ Closed | 2 | — | — | — | [JSON](data/F/fet-pr73423.json) | — |
-| gsd | #109760 | ❌ Closed | 3 | — | — | — | [JSON](data/G/gsd-pr109760.json) | — |
+| SQP | #83422 | ❌ Closed | 3 | — | — | — | [JSON](data/S/SQP-pr83422.json) | [Analysis](analysis/S/SQP-pr83422-analysis.json) |
+| SSM | #113737 | ❌ Closed | 3 | — | @goerz | Closing in favor of https://github.com/JuliaRegistries/General/pull/113748 | [JSON](data/S/SSM-pr113737.json) | [Analysis](analysis/S/SSM-pr113737-analysis.json) |
+| SST | #84731 | ❌ Closed | 3 | — | — | — | [JSON](data/S/SST-pr84731.json) | [Analysis](analysis/S/SST-pr84731-analysis.json) |
+| Sim | #5038 | ❌ Closed | 2 | — | — | — | [JSON](data/S/Sim-pr5038.json) | [Analysis](analysis/S/Sim-pr5038-analysis.json) |
+| Sky | #92375 | ❌ Closed | 7 | — | @goerz | Maybe `SkyDomes`? | [JSON](data/S/Sky-pr92375.json) | [Analysis](analysis/S/Sky-pr92375-analysis.json) |
+| SpQ | #121275 | ❌ Closed | 1 | — | — | — | [JSON](data/S/SpQ-pr121275.json) | [Analysis](analysis/S/SpQ-pr121275-analysis.json) |
+| TCX | #134 | ✅ Merged | 0 | @StefanKarpinski | — | — | [JSON](data/T/TCX-pr134.json) | [Analysis](analysis/T/TCX-pr134-analysis.json) |
+| TFT | #60583 | ❌ Closed | 3 | — | — | — | [JSON](data/T/TFT-pr60583.json) | [Analysis](analysis/T/TFT-pr60583-analysis.json) |
+| TOV | #121425 | ❌ Closed | 5 | — | @MasonProtter | In addition to the issues raised by the bot, this package has no README and no docs making it questionable if this package is really intended for others to use (the general registry is typically for tools one intends others to be able to use, not for personal projects) | [JSON](data/T/TOV-pr121425.json) | [Analysis](analysis/T/TOV-pr121425-analysis.json) |
+| TSC | #89938 | ❌ Closed | 6 | — | @nilshg | TSC is really not a great name - google says it means typescript compiler or tuberculosis sclerosis complex.<br><br>Short acronyms aren't always disallowed but there must be very good reasons to get them into General (say the name of a file format like CSV, json, or some published method that is unambiguously identified by an acronym).<br><br>That said this looks like a cool package and we're desperately short on cool time series packages, so consider renaming - why not just `TimeSeriesClassific... | [JSON](data/T/TSC-pr89938.json) | [Analysis](analysis/T/TSC-pr89938-analysis.json) |
+| TSx | #71350 | ❌ Closed | 3 | — | — | — | [JSON](data/T/TSx-pr71350.json) | [Analysis](analysis/T/TSx-pr71350-analysis.json) |
+| TaD | #43201 | ❌ Closed | 4 | — | @Moelf | maybe just call it `TorqueAndDrag.jl` ? | [JSON](data/T/TaD-pr43201.json) | [Analysis](analysis/T/TaD-pr43201-analysis.json) |
+| Tag | #60993 | ❌ Closed | 2 | — | @dylan-asmar | Updated name and added license. This pull request should be closed. The new name is TagPOMDPProblem.jl | [JSON](data/T/Tag-pr60993.json) | [Analysis](analysis/T/Tag-pr60993-analysis.json) |
+| Tar | #6286 | ❌ Closed | 7 | — | @DilumAluthge | > I think I'm going to go with Tar but I want to clarify the scope in the README first and think a bit about default in consideration of future features which broaden the scope beyond git.<br><br>Sounds good. I can merge this whenever you are ready, just let me know. | [JSON](data/T/Tar-pr6286.json) | [Analysis](analysis/T/Tar-pr6286-analysis.json) |
+| Tar | #6450 | ✅ Merged | 4 | @DilumAluthge | @julia-tagbot | I've created release `v0.1.0`, [here](https://github.com/JuliaLang/Tar.jl/releases/tag/v0.1.0) it is.<br><!-- 1b1a0100-1aa0-11ea-8273-263ef86eb4e3 --> | [JSON](data/T/Tar-pr6450.json) | [Analysis](analysis/T/Tar-pr6450-analysis.json) |
+| Try | #57060 | ✅ Merged | 2 | @fredrikekre | — | — | [JSON](data/T/Try-pr57060.json) | [Analysis](analysis/T/Try-pr57060-analysis.json) |
+| UCX | #28878 | ✅ Merged | 1 | @vchuravy | — | — | [JSON](data/U/UCX-pr28878.json) | [Analysis](analysis/U/UCX-pr28878-analysis.json) |
+| UFF | #141602 | ❌ Closed | 5 | — | @goerz | Closing in favor of https://github.com/JuliaRegistries/General/pull/141659 | [JSON](data/U/UFF-pr141602.json) | [Analysis](analysis/U/UFF-pr141602-analysis.json) |
+| UHD | #12620 | ❌ Closed | 2 | — | — | — | [JSON](data/U/UHD-pr12620.json) | [Analysis](analysis/U/UHD-pr12620-analysis.json) |
+| UHD | #12621 | ❌ Closed | 2 | — | — | — | [JSON](data/U/UHD-pr12621.json) | [Analysis](analysis/U/UHD-pr12621-analysis.json) |
+| UHD | #13074 | ❌ Closed | 4 | — | @DilumAluthge | I would **very strongly** recommend a longer and more descriptive package name. | [JSON](data/U/UHD-pr13074.json) | [Analysis](analysis/U/UHD-pr13074-analysis.json) |
+| Uno | #139982 | ❌ Closed | 8 | — | @goerz | `UnoSolver` seems like the most obvious name that would pass the naming guidelines.<br><br>Based on my impression of current sentiments among registry maintainers, I’m not sure if there is any realistic chance to get `Uno` merged.<br><br>> Other optimization solvers also have a name with only 3 characters<br><br>These were registered before there was any enforcement of the guidelines. We have gotten much stricter about package naming | [JSON](data/U/Uno-pr139982.json) | [Analysis](analysis/U/Uno-pr139982-analysis.json) |
+| VAM | #86284 | ❌ Closed | 3 | — | — | — | [JSON](data/V/VAM-pr86284.json) | [Analysis](analysis/V/VAM-pr86284-analysis.json) |
+| VCF | #30036 | ❌ Closed | 4 | — | — | — | [JSON](data/V/VCF-pr30036.json) | [Analysis](analysis/V/VCF-pr30036-analysis.json) |
+| VMD | #16628 | ❌ Closed | 3 | — | @fredrikekre | Have you read the naming guidelines? https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1 Usually it is better to spell out the name instead of using (non-standard) acronyms. | [JSON](data/V/VMD-pr16628.json) | [Analysis](analysis/V/VMD-pr16628-analysis.json) |
+| VML | #5942 | ❌ Closed | 17 | — | @DilumAluthge | I see that the package has been renamed to `IntelVectorMath` on its `master` branch.<br><br>I'll close this PR. Once a `JuliaMath` admin as renamed your repo to `JuliaMath/IntelVectorMath.jl`, you can make a new registration. | [JSON](data/V/VML-pr5942.json) | [Analysis](analysis/V/VML-pr5942-analysis.json) |
+| VQC | #3322 | ✅ Merged | 6 | @fredrikekre | @junhua | @JuliaRegistrator register()<br> | [JSON](data/V/VQC-pr3322.json) | [Analysis](analysis/V/VQC-pr3322-analysis.json) |
+| XCB | #23401 | ✅ Merged | 7 | @giordano | @giordano | > The compat entries were also updated.<br><br>Automerge doesn't think so and [this file](https://github.com/JuliaRegistries/General/blob/0fa5d146ebc1b57e1a1db09de766aa0c3a5938f3/X/XCB/Compat.toml) doesn't have any entry for `CEnum`.  You need to retrigger registration (without changing the version number) so that this pull request is updated | [JSON](data/X/XCB-pr23401.json) | [Analysis](analysis/X/XCB-pr23401-analysis.json) |
+| XDF | #20235 | ✅ Merged | 3 | @fredrikekre | — | — | [JSON](data/X/XDF-pr20235.json) | [Analysis](analysis/X/XDF-pr20235-analysis.json) |
+| XDG | #12376 | ❌ Closed | 2 | — | — | — | [JSON](data/X/XDG-pr12376.json) | [Analysis](analysis/X/XDG-pr12376-analysis.json) |
+| XML | #58359 | ✅ Merged | 3 | @giordano | — | — | [JSON](data/X/XML-pr58359.json) | [Analysis](analysis/X/XML-pr58359-analysis.json) |
+| XPS | #44499 | ❌ Closed | 2 | — | — | — | [JSON](data/X/XPS-pr44499.json) | [Analysis](analysis/X/XPS-pr44499-analysis.json) |
+| XRT | #114380 | ✅ Merged | 2 | @giordano | @goerz | [noblock] Being a wrapper, the name `XRT` seems okay to me, but it will need a manual merge.<br><br>Of course, the compat-issues have to be fixed. | [JSON](data/X/XRT-pr114380.json) | [Analysis](analysis/X/XRT-pr114380-analysis.json) |
+| XSF | #86958 | ❌ Closed | 6 | — | @gdalle | [noblock]<br><br>Hi, thank you for the contribution!<br>Your package name is rather short and noninformative for someone who isn't from your field. How about AtomicStructureXSF.jl? | [JSON](data/X/XSF-pr86958.json) | [Analysis](analysis/X/XSF-pr86958-analysis.json) |
+| XYZ | #8192 | ❌ Closed | 3 | — | @DilumAluthge | Please read the package naming guidelines (https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1) and then pick a longer and more descriptive name for your package.<br><br>I would suggest one of the following:<br>- `XYZFiles.jl`<br>- `XYZChemistryFiles.jl`<br>- `ChemistryFiles.jl`<br>- `ChemistryFileFormats.jl`<br><br>Or something similar. | [JSON](data/X/XYZ-pr8192.json) | [Analysis](analysis/X/XYZ-pr8192-analysis.json) |
+| bad | #7750 | ❌ Closed | 4 | — | @DilumAluthge | Bump @kkmann<br><br>Please read the package naming guidelines (https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1) and then pick a longer and more descriptive name for your package.<br><br>I am going to close this pull request. Once you have renamed your package to something longer and more descriptive, you can make a new registration. | [JSON](data/B/bad-pr7750.json) | [Analysis](analysis/B/bad-pr7750-analysis.json) |
+| drr | #67611 | ❌ Closed | 3 | — | — | — | [JSON](data/D/drr-pr67611.json) | [Analysis](analysis/D/drr-pr67611-analysis.json) |
+| fet | #73423 | ❌ Closed | 2 | — | — | — | [JSON](data/F/fet-pr73423.json) | [Analysis](analysis/F/fet-pr73423-analysis.json) |
+| gsd | #109760 | ❌ Closed | 3 | — | @goerz | Closing in favor of https://github.com/JuliaRegistries/General/pull/110152 | [JSON](data/G/gsd-pr109760.json) | [Analysis](analysis/G/gsd-pr109760-analysis.json) |
