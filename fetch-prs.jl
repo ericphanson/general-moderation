@@ -203,13 +203,19 @@ function fetch_pr_list()
             pr_details_json = gh_with_retry(`gh api "repos/$(REPO)/pulls/$(pr_number)"`)
             pr_details = JSON.parse(pr_details_json)
 
-            # Build PR record with merge info
+            # Build PR record with merge info and close info
             pr = Dict(
                 "number" => pr_number,
                 "title" => issue["title"],
                 "author" => Dict("login" => issue["user"]["login"]),
                 "state" => pr_details["state"],
                 "createdAt" => issue["created_at"],
+                "closedAt" => issue["closed_at"],
+                "closedBy" => if issue["closed_by"] !== nothing
+                    Dict("login" => issue["closed_by"]["login"])
+                else
+                    nothing
+                end,
                 "mergedAt" => get(pr_details, "merged_at", nothing),
                 "mergedBy" => if get(pr_details, "merged_at", nothing) !== nothing && haskey(pr_details, "merged_by") && pr_details["merged_by"] !== nothing
                     Dict("login" => pr_details["merged_by"]["login"])
@@ -245,14 +251,24 @@ function filter_prs()
     end
     println("Total PRs: $(length(all_prs))")
 
-    # Filter out bot merges
+    # Filter out bot merges and bot closes
     manual_prs = filter(all_prs) do pr
+        # Check if manually merged
         merged_by = get(pr, "mergedBy", nothing)
-        if merged_by === nothing
-            return false  # Not merged, skip
+        if merged_by !== nothing
+            login = merged_by["login"]
+            return !(login in EXCLUDED_MERGERS)
         end
-        login = merged_by["login"]
-        return !(login in EXCLUDED_MERGERS)
+
+        # Check if manually closed (not merged)
+        closed_by = get(pr, "closedBy", nothing)
+        if closed_by !== nothing
+            login = closed_by["login"]
+            return !(login in EXCLUDED_MERGERS)
+        end
+
+        # Neither merged nor closed by anyone (shouldn't happen for closed PRs)
+        return false
     end
     println("After excluding bots: $(length(manual_prs)) PRs")
 
@@ -373,8 +389,18 @@ function fetch_details()
                 "author" => pr["author"]["login"],
                 "state" => pr["state"],
                 "created_at" => pr["createdAt"],
+                "closed_at" => pr["closedAt"],
+                "closed_by" => if pr["closedBy"] !== nothing
+                    pr["closedBy"]["login"]
+                else
+                    nothing
+                end,
                 "merged_at" => pr["mergedAt"],
-                "merged_by" => pr["mergedBy"]["login"],
+                "merged_by" => if pr["mergedBy"] !== nothing
+                    pr["mergedBy"]["login"]
+                else
+                    nothing
+                end,
                 "body" => pr_details["body"],
                 "comments" => pr_details["comments"],
                 "review_comments" => reviews
