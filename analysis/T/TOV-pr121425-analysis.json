@@ -1,0 +1,64 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    },
+    {
+      "excerpt": "repo URL does not end with /name.jl.git",
+      "type": "repo_url"
+    },
+    {
+      "excerpt": "missing compat entry",
+      "type": "missing_compat"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "SunkPlane29",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 40
+  },
+  "pr_number": 121425,
+  "package_name": "TOV",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "MasonProtter",
+      "author_association": "CONTRIBUTOR",
+      "text": "In addition to the issues raised by the bot, this package has no README and no docs making it questionable if this package is really intended for others to use (the general registry is typically for tools one intends others to be able to use, not for personal projects)",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "SunkPlane29",
+      "author_association": "NONE",
+      "text": "Only after making trying publishing that I saw there was no documentation. Thanks for the notice!",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

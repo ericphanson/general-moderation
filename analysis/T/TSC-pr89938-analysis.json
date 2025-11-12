@@ -1,0 +1,48 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 6,
+  "package_author": "antoninkriz",
+  "decision": {
+    "merged": false,
+    "closed_by": "github-actions[bot]",
+    "merged_by": null,
+    "time_to_decision_days": 40
+  },
+  "pr_number": 89938,
+  "package_name": "TSC",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "nilshg",
+      "author_association": "CONTRIBUTOR",
+      "text": "TSC is really not a great name - google says it means typescript compiler or tuberculosis sclerosis complex.\n\nShort acronyms aren't always disallowed but there must be very good reasons to get them into General (say the name of a file format like CSV, json, or some published method that is unambiguously identified by an acronym).\n\nThat said this looks like a cool package and we're desperately short on cool time series packages, so consider renaming - why not just `TimeSeriesClassification`? ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "antoninkriz",
+      "author_association": "NONE",
+      "text": "I've talked about this with people on the Julia Slack and we came to the same conclusion. I renamed it to `TimeSeriesClassification.jl`. Thanks!",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "antoninkriz",
+      "author_association": "NONE",
+      "text": "This PR can be closed thanks to https://github.com/JuliaRegistries/General/pull/90018",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    90018
+  ]
+}
