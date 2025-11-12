@@ -4,7 +4,7 @@ using JSON
 using Dates
 
 """Find all PR JSON files in data/ directory"""
-function find_all_pr_files(dir="data")
+function find_all_pr_files(dir="../data")
     files = []
     for (root, _, filenames) in walkdir(dir)
         for file in filenames
@@ -19,8 +19,8 @@ end
 
 """Check if analysis file exists for a PR file"""
 function get_analysis_path(pr_file::String)
-    # Replace data/ with analysis/ and add -analysis suffix
-    analysis_file = replace(pr_file, r"data/" => "analysis/", count=1)
+    # Replace ../data/ with ../analysis/ and add -analysis suffix
+    analysis_file = replace(pr_file, r"\.\./data/" => "../analysis/", count=1)
     analysis_file = replace(analysis_file, r"\.json$" => "-analysis.json")
     return analysis_file
 end
@@ -128,11 +128,69 @@ function main()
 
     println("Found $(length(three_letter_packages)) packages with 3-letter names\n")
 
-    # Sort by package name
-    sort!(three_letter_packages, by=x -> x["package_name"])
+    # Load categories.json
+    println("Loading categories.json...")
+    categories = JSON.parsefile("categories.json")
+
+    # Create a lookup map for categories using package key (PackageName-prNNNNN)
+    pkg_categories = Dict()
+    for (key, cat_data) in categories
+        pkg_categories[key] = cat_data
+    end
+
+    # Add category info to packages
+    for pkg in three_letter_packages
+        # Create key in format PackageName-prNNNNN
+        base_name = replace(pkg["package_name"], r"\.jl$" => "")
+        key = "$(base_name)-pr$(pkg["pr_number"])"
+
+        if haskey(pkg_categories, key)
+            pkg["category"] = pkg_categories[key]["category"]
+            pkg["proof"] = pkg_categories[key]["proof"]
+        else
+            pkg["category"] = "Uncategorized"
+            pkg["proof"] = "N/A"
+        end
+    end
+
+    # Define category order (accepted first, then rejected)
+    category_order = [
+        # Accepted
+        "Library Wrapper",
+        "Pre-existing/Grandfathered",
+        "Standard File Format",
+        "Domain-Specific Acronym",
+        "Company/Brand Name",
+        "Discretionary Approval",
+        # Rejected
+        "Duplicate/Superseded PR",
+        "Rejected: Acronym Not Widely Known",
+        "Rejected: Poor Discoverability",
+        "Rejected: Name Collision/Ambiguity",
+        "Technical Rejection",
+        "Rejected: Generic/Other"
+    ]
+
+    # Group packages by category
+    packages_by_category = Dict{String, Vector}()
+    for cat in category_order
+        packages_by_category[cat] = []
+    end
+
+    for pkg in three_letter_packages
+        cat = get(pkg, "category", "Uncategorized")
+        if haskey(packages_by_category, cat)
+            push!(packages_by_category[cat], pkg)
+        end
+    end
+
+    # Sort each category's packages by name
+    for cat in category_order
+        sort!(packages_by_category[cat], by=x -> x["package_name"])
+    end
 
     # Generate markdown report
-    println("Generating markdown report...")
+    println("Generating markdown report with category sections...")
 
     report = """
 # Three-Letter Package Names in Julia Registry
@@ -149,48 +207,52 @@ function main()
 
 ---
 
-## All 3-Letter Packages
-
-| Package | PR # | Status | Comments | Merged By | Key Reviewer | Comment | Data | Analysis |
-|---------|------|--------|----------|-----------|--------------|---------|------|----------|
 """
 
-    for pkg in three_letter_packages
-        name = pkg["package_name"]
-        pr_num = pkg["pr_number"]
-        status = pkg["merged"] ? "✅ Merged" : "❌ Closed"
-        num_comments = pkg["num_comments"]
-        merged_by = pkg["merged_by"] !== nothing ? "@$(pkg["merged_by"])" : "—"
-        data_link = "[JSON]($(pkg["pr_file"]))"
+    # Generate sections for each category
+    for cat in category_order
+        pkgs_in_cat = packages_by_category[cat]
 
-        analysis_link = if pkg["has_analysis"]
-            "[Analysis]($(pkg["analysis_file"]))"
-        else
-            "—"
+        if isempty(pkgs_in_cat)
+            continue
         end
 
-        # Key reviewer from influential comment
-        key_reviewer = "—"
-        comment_text = "—"
-        if pkg["influential_comment"] !== nothing
-            comment = pkg["influential_comment"]
-            author = get(comment, "author", "unknown")
-            influence = get(comment, "influence", 0)
-            key_reviewer = "@$author"
+        # Determine section emoji
+        status_emoji = startswith(cat, "Rejected") || cat in ["Duplicate/Superseded PR", "Technical Rejection"] ? "❌" : "✅"
 
-            # Get comment text and clean it for markdown table
-            raw_text = get(comment, "text", "")
-            # Replace newlines with <br> for markdown tables
-            # Escape pipes to prevent breaking the table
-            comment_text = replace(raw_text, "|" => "\\|")
-            comment_text = replace(comment_text, r"\R" => "<br>")
-            # Truncate if too long (optional)
-            if length(comment_text) > 500
-                comment_text = comment_text[1:500] * "..."
+        report *= """
+## $(status_emoji) $cat ($(length(pkgs_in_cat)))
+
+| Package | PR # | Status | Proof/Evidence | Data | Analysis |
+|---------|------|--------|----------------|------|----------|
+"""
+
+        for pkg in pkgs_in_cat
+            name = pkg["package_name"]
+            pr_num = pkg["pr_number"]
+            status = pkg["merged"] ? "✅ Merged" : "❌ Closed"
+            data_link = "[JSON]($(pkg["pr_file"]))"
+
+            analysis_link = if pkg["has_analysis"]
+                "[Analysis]($(pkg["analysis_file"]))"
+            else
+                "—"
             end
+
+            # Get proof and clean it for markdown table
+            proof = get(pkg, "proof", "—")
+            # Escape pipes and newlines for markdown table
+            proof_clean = replace(proof, "|" => "\\|")
+            proof_clean = replace(proof_clean, r"\R" => " ")
+            # Truncate if too long
+            if length(proof_clean) > 300
+                proof_clean = proof_clean[1:300] * "..."
+            end
+
+            report *= "| $name | #$pr_num | $status | $proof_clean | $data_link | $analysis_link |\n"
         end
 
-        report *= "| $name | #$pr_num | $status | $num_comments | $merged_by | $key_reviewer | $comment_text | $data_link | $analysis_link |\n"
+        report *= "\n"
     end
 
     # Save report
@@ -200,11 +262,14 @@ function main()
     end
 
     println("\n✅ Report saved to: $output_file")
-    println("\nSummary:")
-    println("  Total 3-letter packages: $(length(three_letter_packages))")
-    println("  Merged: $(count(p -> p["merged"], three_letter_packages))")
-    println("  Closed: $(count(p -> !p["merged"], three_letter_packages))")
-    println("  With analysis: $(count(p -> p["has_analysis"], three_letter_packages))")
+    println("\nSummary by Category:")
+    for cat in category_order
+        count = length(packages_by_category[cat])
+        if count > 0
+            println("  $cat: $count")
+        end
+    end
+    println("\nTotal: $(length(three_letter_packages)) packages")
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
