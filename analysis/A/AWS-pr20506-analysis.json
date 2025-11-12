@@ -1,0 +1,189 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 24,
+  "package_author": "mattBrzezinski",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "fredrikekre",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 20506,
+  "package_name": "AWS",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "I'm not fully understanding what is happening with AutoMerge here. It's throwing the error:\r\n\r\n> ERROR: LoadError: HTTP.ExceptionRequest.StatusError(404, \"GET\", \"/latest/meta-data/iam/info\",\r\n\r\nThis occurs when setting up some default [aws_config](https://github.com/JuliaCloud/AWS.jl/blob/master/src/AWS.jl#L27). This is due to no AWS Credentials being available. However, this is throwing a 404 instead of a timeout error (what I'm expecting).\r\n\r\nThis file matches for the most part what is in [AWSCore.jl](https://github.com/JuliaCloud/AWSCore.jl/blob/master/src/AWSCredentials.jl) which doesn't have issues with auto merge...",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "oxinabox",
+      "author_association": "MEMBER",
+      "text": "This package should be exempt to the 5 letter rule as it is a pre-existing package with a name from long before that guideline that is only now being updated to be Julia 1.0 compatible.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Not that this happened on `import AWS`. Is it trying to do something in `__init__` or similar? For example https://github.com/JuliaCloud/AWS.jl/blob/7315174b628ae4298217572a0b90b94d3cac3fbc/src/AWS.jl#L23-L24 looks strange.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "> Not that this happened on `import AWS`. Is it trying to do something in `__init__` or similar? For example https://github.com/JuliaCloud/AWS.jl/blob/7315174b628ae4298217572a0b90b94d3cac3fbc/src/AWS.jl#L23-L24 looks strange.\r\n\r\nI just tested locally and had no issues with `using AWS` or `import AWS`. If you look into the CI failure you get the message which I posted above. Looking through the [stacktrace](https://github.com/JuliaRegistries/General/pull/20506/checks?check_run_id=1045605562#step:6:327) it's coming in on the line:\r\n\r\n```julia\r\naws_config = Ref(AWSConfig())\r\n```\r\n\r\nThe `AWSConfig()` function will attempt to create a set of credentials, [here](https://github.com/JuliaCloud/AWS.jl/blob/master/src/AWSCredentials.jl#L149). Just looking at them in various places with the final one being AWS Metadata information (if you're running this code on the cloud). If you get to the `ec2_instance_credentials()` function and you're not on an EC2 instance you should be timing out.\r\n\r\nYou can replicate this behaviour in a terminal session by running:\r\n> curl http://169.254.169.254/latest/meta-data/iam/info\r\n\r\nHowever, it looks like the CI is getting a 404 instead of a timeout. I suspect it's the code [here](https://github.com/JuliaCloud/AWS.jl/blob/master/src/AWSCredentials.jl#L294). HTTP.jl will return a `StatusError` for a 404 request, while `AWS.jl` is expecting an `IOError`.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "This is what I get:\r\n```\r\njulia> using AWS\r\n[ Info: Precompiling AWS [fbe9abb3-538b-5e4e-ba9e-bc94f4f92ebc]\r\nERROR: LoadError: MethodError: no method matching parse(::Nothing)\r\nClosest candidates are:\r\n  parse(::AbstractString; dicttype, inttype, allownan, null) at /tmp/tmp.lc3G7tJerH/packages/JSON/d89fA/src/Parser.jl:456\r\n  parse(::IO; dicttype, inttype, allownan, null) at /tmp/tmp.lc3G7tJerH/packages/JSON/d89fA/src/Parser.jl:487\r\nStacktrace:\r\n [1] ec2_instance_credentials() at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSCredentials.jl:314\r\n [2] AWS.AWSCredentials(; profile::Nothing) at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSCredentials.jl:160\r\n [3] AWS.AWSConfig() at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSConfig.jl:13\r\n [4] top-level scope at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWS.jl:27\r\n [5] include(::Function, ::Module, ::String) at ./Base.jl:380\r\n [6] include(::Module, ::String) at ./Base.jl:368\r\n [7] top-level scope at none:2\r\n [8] eval at ./boot.jl:331 [inlined]\r\n [9] eval(::Expr) at ./client.jl:467\r\n [10] top-level scope at ./none:3\r\nin expression starting at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWS.jl:27\r\nERROR: Failed to precompile AWS [fbe9abb3-538b-5e4e-ba9e-bc94f4f92ebc] to /tmp/tmp.lc3G7tJerH/compiled/v1.5/AWS/SpCmB_HQTk3.ji.\r\nStacktrace:\r\n [1] error(::String) at ./error.jl:33\r\n [2] compilecache(::Base.PkgId, ::String) at ./loading.jl:1305\r\n [3] _require(::Base.PkgId) at ./loading.jl:1030\r\n [4] require(::Base.PkgId) at ./loading.jl:928\r\n [5] require(::Module, ::Symbol) at ./loading.jl:923\r\n```",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Worst case we can merge this manually. There are quite a few packages for which `import PackageName` fails, so we merge it manually.\r\n\r\nThat being said, certainly it would be ideal to fix this.\r\n\r\nMaybe AWS treats requests differently when they come from e.g. Azure machines?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "AutoMerge sets a unique-to-AutoMerge environment variable. Off the top of my head I don't remember the name - you can check the source code of RegistryCI.jl, look in the src/AutoMerge/guidelines.jl file.\r\n\r\nYou could detect this environment variable and bypass the credentials check.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Or maybe GitHub/Azure is doing something funky with the IP address that you are trying to reach.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "169.254 is reserved as a private address range, right?\r\n\r\nSo AWS uses those addresses in one way.\r\n\r\nBut presumably Azure is using those addresses also, but in a different way.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "One idea might be to initialize the credentials when they are first needed, instead of when loading the package. Otherwise, do you have to have valid credentials just to load this package? What if I am not explicitly using it but is loaded by some other package.\r\n\r\nEdit: Perhaps you have discussed this already so maybe I am just annoying, but just as an example, here is how I did it for another package: https://github.com/fredrikekre/Canvas.jl/blob/784759a49e67adf533fd0d771d00423c270edbe3/src/Canvas.jl#L33-L38",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Is there a more robust way of checking if you are on an EC2 instance?\r\n\r\nAlso, I wonder what is causing the error that Fredrik posted.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> One idea might be to initialize the credentials when they are first needed, instead of when loading the package.\r\n\r\nSounds like a good idea to me.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "> Or maybe GitHub/Azure is doing something funky with the IP address that you are trying to reach.\r\n\r\n[Microsoft Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service) does a similar instance metadata service as AWS does, using the same IP address. This results in the `AWS.jl` package returning a `404` response instead of the expected `Timeout`.\r\n\r\n> Is there a more robust way of checking if you are on an EC2 instance?\r\n\r\nYes, we do some other [checks](https://github.com/JuliaCloud/AWS.jl/blob/master/src/AWSCredentials.jl#L112) looking for various files and their contents.\r\n\r\n> Also, I wonder what is causing the error that Fredrik posted.\r\n\r\nIt looks like I missed a small `if` check when attempting to retrieve credentials. It looks like @fredrikekre does not have an AWS Credentials on the machine they were using so the package would error out. I was able to replicate this on my machine by:\r\n\r\n- Wiping any AWS Environment Variables\r\n- Renaming my `~/.aws/config` and `~/.aws/credentials` files\r\n\r\nhttps://github.com/JuliaCloud/AWS.jl/pull/157 should allow for `AutoMerge` to pass once it goes through!",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "> It looks like @fredrikekre does not have an AWS Credentials on the machine he was using\r\n\r\nYes, that was kind of the point. I should be able to `using AWS` without having credentials set up (yet).",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "@DilumAluthge this now works as expected, `AutoMerge` fails because no AWS Credentials can be located on the instance itself. Unless we configure some in encrypted environment variables, which I don't particularly want to do it'll just throw these errors.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Did you consider the method I suggested in https://github.com/JuliaRegistries/General/pull/20506#issuecomment-683348199 ? It will be really annoying to manually merge releases to this package, and even more annoying if just loading this package errors. Especially since it might be loaded without choice for many users.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "> Did you consider the method I suggested in [#20506 (comment)](https://github.com/JuliaRegistries/General/pull/20506#issuecomment-683348199) ? It will be really annoying to manually merge releases to this package, and even more annoying if just loading this package errors. Especially since it might be loaded without choice for many users.\r\n\r\nI'll look into this, having a manual merge would be a PITA for every release. Looking at [AWSCore.jl](https://github.com/JuliaCloud/AWSCore.jl/blob/master/src/AWSCore.jl#L119) this has no issues cause we're actually not retrieve the creds on load.\r\n\r\nI'll adjust this later on in the day and kick the registrator.\r\n",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "To keep everything threaded together, link to the PR:  https://github.com/JuliaCloud/AWS.jl/pull/159",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 2,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "Looks like the only AutoMerge failure now is just the package name:\r\n\r\n```\r\n┌ Info: Normal capitalization\r\n│   meets_this_guideline = false\r\n└   message = \"Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\"\r\n```",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Yea that's fine.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "mattBrzezinski",
+      "author_association": "MEMBER",
+      "text": "Before this goes in there is one more final change I would like to make since it would be breaking.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Just ping me when you are ready and have updated this PR:",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "julia-tagbot",
+      "author_association": "NONE",
+      "text": "I've created release `v1.0.0`, [here](https://github.com/JuliaCloud/AWS.jl/releases/tag/v1.0.0) it is.\n<!-- 30703480-ec9a-11ea-89f0-b1bded927f6e -->",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied",
+    "established_name"
+  ],
+  "related_prs": [
+    20506
+  ]
+}

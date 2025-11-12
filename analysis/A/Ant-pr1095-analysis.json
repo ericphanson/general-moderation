@@ -1,0 +1,65 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 6,
+  "package_author": "del2z",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "StefanKarpinski",
+    "time_to_decision_days": 4
+  },
+  "pr_number": 1095,
+  "package_name": "Ant",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "You'll want some `[compat]` bounds, at least for Julia itself. You may also want to consider a more descriptive name, see the [package naming guidelines](https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1).",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "del2z",
+      "author_association": "NONE",
+      "text": "compat is added, but it's hard for me to come up with a new name.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "del2z",
+      "author_association": "NONE",
+      "text": "Several candidates are NLUKit, NLPToolKit, and TextSystems. I am not confident in anyone since the ultimate purpose of this package is to help people build and deploy NLP system in a convenient way.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "StefanKarpinski",
+      "author_association": "MEMBER",
+      "text": "Up to you. If you want to go with `Ant` that's ok too. Just retrigger when you're ready.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "del2z",
+      "author_association": "NONE",
+      "text": "Ok, I prefer `Ant` for this package. `compat` updates have been triggered.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "julia-tagbot",
+      "author_association": "NONE",
+      "text": "I've created release `v0.1.0`, [here](https://github.com/del2z/Ant.jl/releases/tag/v0.1.0) it is.\n<!-- f5b4b630-86e3-11e9-9f54-52513bc21a05 -->",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": []
+}
