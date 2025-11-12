@@ -1,6 +1,6 @@
 # Three-Letter Package Names in Julia Registry
 
-- **Generated:** 2025-11-12T17:03:31.580
+- **Generated:** 2025-11-12T17:07:37.563
 - **Total 3-letter packages found:** 210
 
 ## Summary
@@ -16,7 +16,7 @@
 
 ![Acceptance trends over time](acceptance-trends.png)
 
-The chart above shows the number of three-letter package name registration attempts per year, split between accepted (green) and rejected (red) PRs. Note the dramatic shift in policy - from 50% acceptance in 2019 to near-zero acceptance in recent years.
+The chart above shows the number of three-letter package name registration attempts per year, split between accepted (blue) and rejected (orange) PRs. Note the dramatic shift in policy - from 50% acceptance in 2019 to near-zero acceptance in recent years.
 
 ### Accepted Packages by Category
 

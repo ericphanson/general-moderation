@@ -271,13 +271,13 @@ function main()
         title = "Three-Letter Package Name Registration Attempts Over Time"
     )
 
-    # Plot simple lines
-    lines!(ax1, years, accepted_counts, label="Accepted", color=:green, linewidth=3)
-    lines!(ax1, years, rejected_counts, label="Rejected", color=:red, linewidth=3)
+    # Plot simple lines with colorblind-friendly Okabe-Ito palette colors
+    lines!(ax1, years, accepted_counts, label="Accepted", color="#0072B2", linewidth=3)  # Blue
+    lines!(ax1, years, rejected_counts, label="Rejected", color="#D55E00", linewidth=3)  # Vermillion/Orange
 
     # Add markers
-    scatter!(ax1, years, accepted_counts, color=:green, markersize=12)
-    scatter!(ax1, years, rejected_counts, color=:red, markersize=12)
+    scatter!(ax1, years, accepted_counts, color="#0072B2", markersize=12)  # Blue
+    scatter!(ax1, years, rejected_counts, color="#D55E00", markersize=12)  # Vermillion/Orange
 
     # Add legend
     axislegend(ax1, position=:lt)
@@ -295,14 +295,14 @@ function main()
     )
 
     # Define distinct visual styles for each category
-    # Using very different colors, line styles, and marker shapes
+    # Using colorblind-friendly Okabe-Ito palette with distinct line styles and markers
     styles = [
-        (color = :blue, linestyle = :solid, marker = :circle),          # Library Wrapper
-        (color = :red, linestyle = :dash, marker = :diamond),           # Pre-existing/Grandfathered
-        (color = :green, linestyle = :dot, marker = :utriangle),        # Standard File Format
-        (color = :purple, linestyle = :dashdot, marker = :star5),       # Domain-Specific Acronym
-        (color = :orange, linestyle = :dashdotdot, marker = :rect),     # Company/Brand Name
-        (color = :black, linestyle = :solid, marker = :xcross)          # Discretionary Approval
+        (color = "#0072B2", linestyle = :solid, marker = :circle),      # Library Wrapper (blue)
+        (color = "#D55E00", linestyle = :dash, marker = :diamond),      # Pre-existing/Grandfathered (vermillion)
+        (color = "#009E73", linestyle = :dot, marker = :utriangle),     # Standard File Format (bluish green)
+        (color = "#CC79A7", linestyle = :dashdot, marker = :star5),     # Domain-Specific Acronym (reddish purple)
+        (color = "#E69F00", linestyle = :dashdotdot, marker = :rect),   # Company/Brand Name (orange)
+        (color = "#000000", linestyle = :solid, marker = :xcross)       # Discretionary Approval (black)
     ]
 
     # Plot accepted category lines
@@ -353,7 +353,7 @@ function main()
 
 ![Acceptance trends over time](acceptance-trends.png)
 
-The chart above shows the number of three-letter package name registration attempts per year, split between accepted (green) and rejected (red) PRs. Note the dramatic shift in policy - from 50% acceptance in 2019 to near-zero acceptance in recent years.
+The chart above shows the number of three-letter package name registration attempts per year, split between accepted (blue) and rejected (orange) PRs. Note the dramatic shift in policy - from 50% acceptance in 2019 to near-zero acceptance in recent years.
 
 ### Accepted Packages by Category
 

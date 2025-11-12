@@ -1,13 +1,25 @@
-# General Registry PR Fetcher
+# General moderation decision analysis
+
+This repo contains checked in data and analysis for understanding General's moderation decisions.
+
+As a registry maintainer, I want to help make good decisions in line with the past.
+
+## Analyses
+
+So far I have focused on 3-letter package names. You can see my analysis in [./three-letter-names](./three-letter-names/README.md).
+
+## Scripts
+
+### `fetch-prs.jl`
 
 Fetches manually-merged "new package" PRs from JuliaRegistries/General with full metadata and comments.
 
-## Prerequisites
+### Prerequisites
 
-- Julia
+- Julia 1.12
 - GitHub CLI (`gh`) authenticated
 
-## Usage
+### Usage
 
 ```bash
 ./fetch-prs.jl
@@ -20,14 +32,14 @@ The script runs three stages automatically:
 
 Resume any time by running again - progress is saved after each page/PR.
 
-### Options
+#### Options
 
 ```bash
 ./fetch-prs.jl --refetch-list  # Re-fetch PR list from scratch
 ./fetch-prs.jl --refilter      # Re-run filtering stage
 ```
 
-## Output
+### Output
 
 ```
 data/
@@ -38,12 +50,8 @@ data/
 
 Each file contains PR metadata, package name, body, comments, and review comments.
 
-## Cache
+### `extract-precedents.jl`
 
-```
-cache/
-  pr-list.json          # All PRs (JSONLines format)
-  to-fetch.json         # Filtered PRs to download
-  stage3-progress.json  # Last completed PR
-  failed.json           # Failed PRs with errors
-```
+Runs cheap LLMs to do some basic analysis on the comments and justifications, as well as non-ML text extraction.
+
+Populates `analysis/`.
