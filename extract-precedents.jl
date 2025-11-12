@@ -152,15 +152,29 @@ end
 function find_related_prs(body, comments)
     prs = Int[]
 
+    # Patterns to match:
+    # - #123456 (short reference)
+    # - https://github.com/JuliaRegistries/General/pull/123456
+    # - https://github.com/JuliaRegistries/General/issues/123456
+    patterns = [
+        r"#(\d{4,})",
+        r"github\.com/JuliaRegistries/General/(?:pull|pulls|issues)/(\d+)"
+    ]
+
     # Search body
-    for m in eachmatch(r"#(\d{4,})", body)
-        push!(prs, parse(Int, m.captures[1]))
+    for pattern in patterns
+        for m in eachmatch(pattern, body)
+            push!(prs, parse(Int, m.captures[1]))
+        end
     end
 
     # Search comments
     for c in comments
-        for m in eachmatch(r"#(\d{4,})", get(c, "body", ""))
-            push!(prs, parse(Int, m.captures[1]))
+        comment_body = get(c, "body", "")
+        for pattern in patterns
+            for m in eachmatch(pattern, comment_body)
+                push!(prs, parse(Int, m.captures[1]))
+            end
         end
     end
 
@@ -471,17 +485,6 @@ function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
     # Code-based extraction
     violations = extract_violations(get(pr_data, "comments", []))
 
-    # Skip LLM processing if no violations (not interesting for precedent analysis)
-    if isempty(violations)
-        println("  No violations detected, skipping LLM processing")
-        return Dict(
-            "pr_number" => pr_data["pr_number"],
-            "package_name" => pr_data["package_name"],
-            "violations" => [],
-            "has_violations" => false
-        )
-    end
-
     is_wrapper, wrapped_lib = detect_wrapper(get(pr_data, "body", ""), get(pr_data, "comments", []))
     related_prs = find_related_prs(get(pr_data, "body", ""), get(pr_data, "comments", []))
     slack_flag = slack_mentioned(get(pr_data, "comments", []))
@@ -494,17 +497,22 @@ function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
     decision_date = was_merged ? merged_at : get(pr_data, "closed_at", nothing)
     time_to_decision = days_between(pr_data["created_at"], decision_date)
 
-    # LLM-based extraction (only what we need)
-    println("  Classifying comments...")
-    classified_comments = classify_comments(
-        get(pr_data, "comments", []),
-        pr_data["package_name"],
-        get(pr_data, "body", "");
-        model=model
-    )
+    comments = get(pr_data, "comments", [])
+    if !isempty(comments)
+      println("  Classifying comments...")
+      classified_comments = classify_comments(
+          comments,
+          pr_data["package_name"],
+          get(pr_data, "body", "");
+          model=model
+      )
 
-    println("  Extracting justifications...")
-    justifications = extract_justifications(get(pr_data, "body", ""), get(pr_data, "comments", []); model=model)
+      println("  Extracting justifications...")
+      justifications = extract_justifications(get(pr_data, "body", ""), comments; model=model)
+    else
+      justifications = []
+      classified_comments = []
+    end
 
     # Extract package author
     package_author = extract_package_author(get(pr_data, "body", ""))
@@ -715,17 +723,6 @@ Note: To enable Ctrl-C interruption that shows stats, run with:
         # Extract
         try
             extracted = extract_precedent(pr_file, model=model)
-
-            # Skip if no violations (not interesting for precedent analysis)
-            if isempty(get(extracted, "violations", []))
-                if batch_mode
-                    println("⏭️  Skipping (no violations): $pr_file")
-                else
-                    println("\n⏭️  No violations detected, skipping analysis file")
-                end
-                BATCH_STATE["success_count"] += 1
-                continue
-            end
 
             # Save to analysis/ directory
             open(output_file, "w") do f
