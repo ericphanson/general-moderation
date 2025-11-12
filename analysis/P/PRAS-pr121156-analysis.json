@@ -1,0 +1,59 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 4,
+  "package_author": "GordStephen",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "fredrikekre",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 121156,
+  "package_name": "PRAS",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "GordStephen",
+      "author_association": "NONE",
+      "text": "Note that the automerge checks won't pass because of the package name, but consensus in https://github.com/JuliaRegistries/General/pull/120172 and https://github.com/JuliaRegistries/General/pull/120786 seems to be that we can get an exception for this? [noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "GordStephen",
+      "author_association": "NONE",
+      "text": "Whoops, looks like we're missing compat bounds for Reexport, let me fix that. [noblock]\r\n\r\nUpdate: fixed",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "https://github.com/JuliaRegistries/General/pull/121152#issuecomment-2533063077",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

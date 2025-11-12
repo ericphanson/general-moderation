@@ -1,0 +1,91 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 8,
+  "package_author": "mohamed",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "carstenbauer",
+    "time_to_decision_days": 19
+  },
+  "pr_number": 118365,
+  "package_name": "CAP",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "mohamed-barakat",
+      "author_association": "NONE",
+      "text": "The CAP project was initiated in 2015 as part of two dissertations in computer algebra. CAP is the name of the core package. It is already part of the [GAP distribution](https://www.gap-system.org/packages/) under this three-letter name. [CAP.jl](https://github.com/homalg-project/CAP.jl/) is now completely independent from GAP (and also from the registered [GAP.jl](https://github.com/oscar-system/GAP.jl)). The package [CAP.jl](https://github.com/homalg-project/CAP.jl/) gives native Julia access to the core package of the [CAP project](https://homalg-project.github.io/docs/CAP_project-based/), which, unlike [GAP.jl](https://github.com/oscar-system/GAP.jl), can finally run under Windows without the need of the linux subsystem. This will allow for a wider user base in computer algebra.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] Not a fan of these three-letter acronyms as package names, but I suppose, having GAP, the \"spin-off\" CAP follows a pattern. So I guess this should be okay.\r\n\r\nP.S.: But you'll need support from someone with full merge permissions, which isn't me",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "mohamed-barakat",
+      "author_association": "NONE",
+      "text": "> [noblock] Not a fan of these three-letter acronyms as package names, but I suppose, having GAP, the \"spin-off\" CAP follows a pattern. So I guess this should be okay.\r\n\r\nThank you very much, Michael.\r\n\r\n> P.S.: But you'll need support from someone with full merge permissions, which isn't me\r\n\r\nDo I need to contact a specific person?",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "After the three-day waiting periods ends, you can ask in the `#pkg-registration` channel on Slack",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 4,
+      "author": "carstenbauer",
+      "author_association": "MEMBER",
+      "text": "I agree with @goerz in that we should merge this although it's not optimal.\n\nBut one more question: Can we expect this to be the last short acronym named package from this area for the foreseeable future?",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "mohamed-barakat",
+      "author_association": "NONE",
+      "text": "> I agree with @goerz in that we should merge this although it's not optimal.\r\n\r\nThank you very much to both of you.\r\n\r\n> But one more question: Can we expect this to be the last short acronym named package from this area for the foreseeable future?\r\n\r\nYes, all the other CAP-based packages have names longer than 5 characters :)\r\n\r\nhttps://homalg-project.github.io/docs/CAP_project-based/#packages-part-of-or-based-on-cap_project\r\n\r\n",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "mohamed-barakat",
+      "author_association": "NONE",
+      "text": "P.S. QPA2 is not managed by our team and would probably not be ported to Julia.\r\n",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

@@ -1,0 +1,45 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 2,
+  "package_author": "orso82",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "carstenbauer",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 119721,
+  "package_name": "IMAS",
+  "discussion": [
+    {
+      "influence": 4,
+      "author": "orso82",
+      "author_association": "NONE",
+      "text": "[noblock] IMAS is a standard data format widely used in the fusion community since 2015\r\n* original paper: https://iopscience.iop.org/article/10.1088/0029-5515/55/12/123006\r\n* fusion papers mentioning IMAS: https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=fusion+IMAS&btnG=\r\n\r\nThis is a top-level package, that uses `IMASdd.jl` and `IMASutils.jl` that have already been registered.\r\n`IMAS.jl` gives access to the IMAS ontology in Julia and provides physics functionalities and plotting.",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

@@ -1,0 +1,58 @@
+{
+  "violations": [
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "MarkNahabedian",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "ararslan",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 111228,
+  "package_name": "Rete",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "The name seems fine to me. It will need a manual merge, of course, so post a message in the `#pkg-registration` channel on Slack after the three-day waiting period ends.\r\n\r\nIt might be good to make the text \"Rete algorithm\" in the README a link to https://en.wikipedia.org/wiki/Rete_algorithm or whatever website you think provides the best explanation of the method implemented in this package.\r\n",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Oh, you do need to fix\r\n\r\n> The compat entry for julia is unbounded.\r\n\r\nbefore this can be merged.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "MarkNahabedian",
+      "author_association": "NONE",
+      "text": "Take a look now.  It should be fixed at 1.10.\r\n\r\nOn Jul 17, 2024 3:41 PM, Michael Goerz ***@***.***> wrote:\r\n\r\nOh, you do need to fix\r\n\r\nThe compat entry for julia is unbounded.\r\n\r\nbefore this can be merged.\r\n\r\n—\r\nReply to this email directly, view it on GitHub<https://github.com/JuliaRegistries/General/pull/111228#issuecomment-2234101601>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AIBY3E2AJAKW25CUSQ4JCELZM3CFJAVCNFSM6AAAAABLA4LPPOVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDEMZUGEYDCNRQGE>.\r\nYou are receiving this because you were mentioned.Message ID: ***@***.***>\r\n",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "You'll have to retrigger the registration for it to take effect",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

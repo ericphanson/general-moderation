@@ -1,0 +1,90 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 9,
+  "package_author": "hersle",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "giordano",
+    "time_to_decision_days": 3
+  },
+  "pr_number": 133787,
+  "package_name": "CLASS",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "hersle",
+      "author_association": "NONE",
+      "text": "[noblock] ~Close~",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] The name `CLASS` should be fine, see https://github.com/JuliaRegistries/General/pull/133795#issuecomment-3012616441",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "hersle",
+      "author_association": "NONE",
+      "text": "[noblock] Thank you very much. I also much prefer just CLASS, and reverted back to it now.\r\n\r\nLet me know if there is anything else I should do to complete the manual merge @goerz",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "hersle",
+      "author_association": "NONE",
+      "text": "[noblock] Is merging still blocked? Due to\r\n\r\n> Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, **not all letters are upper-case**.\r\n\r\nMaybe @goerz / @GunnarFarneback ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] Yeah, it still needs a manual merge. Unfortunately, I don't have sufficient permissions to merge manually. The standard procedure is to post on the `#pkg-registration` channel on Slack towards the end of the 3-day waiting period.\r\n\r\n(I think we should get rid of rule against all-caps in the bot; the minimum-length requirement is much more effective at keeping out acronyms, but that's a separate thing to look into at some point)",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "hersle",
+      "author_association": "NONE",
+      "text": "[noblock] I need help with a manual merge here. CLASS.jl is a wrapper around [CLASS](http://class-code.net/), which is a popular C code in cosmology for solving the linearized Einstein-Boltzmann equations. CLASS is short for Cosmic Linear Anisotropy Solving System. According to [package naming convention #6](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules), I have named the wrapper after the code. A manual merge is needed because CLASS only contains capital letters. 3-day wait is over now, so I am posting this on Slack.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] Great, thanks!\r\n\r\nIt sometimes takes a little while (and sometimes repeated pings, a couple of days apart) until someone gets around to the manual merge. Sorry for the (hopefully short) wait, and thank you for your patience!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "hersle",
+      "author_association": "NONE",
+      "text": "Thanks! And thanks @goerz for guiding me :)",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": "cosmological"
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "library_wrapper"
+  ],
+  "related_prs": []
+}

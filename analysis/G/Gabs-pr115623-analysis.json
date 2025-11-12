@@ -1,0 +1,107 @@
+{
+  "violations": [
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 12,
+  "package_author": "apkille",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "ViralBShah",
+    "time_to_decision_days": 4
+  },
+  "pr_number": 115623,
+  "package_name": "Gabs",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "The name similarity is not an issue, but\r\n\r\n> Name is not at least 5 characters long\r\n\r\nis more problematic (and I can't override it anyway). I would push for a longer, more descriptive name. `GaussianBosonicSystems` (which I assume is what `Gabs` derives from) seems perfectly suitable.\r\n\r\nIt also looks like the documentation is not deployed correctly: the links in the README do not work. It would also be good to add a paragraph or two to the README itself to give some idea of what the package is about, before people continue to the full docs.\r\n",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "apkille",
+      "author_association": "CONTRIBUTOR",
+      "text": "@goerz thanks for the feedback. I'm aware of JuliaRegistries policy of encouraging longer names for clarity even if they seem a little long winded, but `GaussianBosonicSystems` is pretty long. How about `GaussianBosons`?\r\n\r\nI'll fix the doc deployment and update the README.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> `GaussianBosonicSystems` is pretty long\r\n\r\nNot by Julia standards ;-) But of course, when a package name becomes \"too long\" is matter of taste.\r\n\r\n> How about `GaussianBosons`\r\n\r\nWorks for me!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "apkille",
+      "author_association": "CONTRIBUTOR",
+      "text": "@goerz Just a quick question: how much pushback is there on the name `Gabs`? I'd like something that is short, fun, and memorable if I can manage it. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "There's some discussion on the `#pgk-registration` channel on [Slack](https://julialang.org/slack/). The minimum line length rule is something that requires a manual merge by a full registry maintainer. So, at least one of them has to be okay with the name.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "kellertuer",
+      "author_association": "CONTRIBUTOR",
+      "text": "In my just very own personal opinion, the name `GaussianBosonicSystems` is more informative and helpful if someone is looking for a package and to that extend probably more “Julia-esque”.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "ViralBShah",
+      "author_association": "MEMBER",
+      "text": "@apkille  Any thoughts on the proposed name?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "We already discussed `GaussianBosonicSystems` above, and I definitely agree that the shorter `GaussianBosons` isn’t any less descriptive and thus probably a better choice. The question is really between that and the original `Gabs`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "kellertuer",
+      "author_association": "CONTRIBUTOR",
+      "text": "Sure the shorter one is also fine with me of course.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "apkille",
+      "author_association": "CONTRIBUTOR",
+      "text": "@ViralBShah @goerz @kellertuer I appreciate the discussion about this. In my own opinion (feel free to disagree), a name that is long and general such as `GaussianBosonicSystems` or `GaussianBosons` is not likely to propagate out of the Julia ecosystem. I would like this package to reach physicists who are generally interested in simulating continuous variable quantum information. There are exceptions, of course, but most well-known quantum packages (in Julia and beyond) have simple and fun names such as `Yao.jl`, `QuTiP`, `stim`, `mitiq`, to name a few. So, if possible, I would like to stick to `Gabs`. ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I feel like @apkille already expressed their thoughts: They’d prefer `Gabs` if there is a maintainer willing to merge it, or otherwise would rename to something that passes the automatic checks",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

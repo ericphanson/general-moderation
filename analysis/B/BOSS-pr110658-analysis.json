@@ -1,0 +1,52 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 3,
+  "package_author": "soldasim",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "ViralBShah",
+    "time_to_decision_days": 9
+  },
+  "pr_number": 110658,
+  "package_name": "BOSS",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I think the name is fine, in the category of \"less systematic names\". In my book, pronounceable acronyms make perfectly fine package names, and all-caps are okay in that situation (we'd accept `Boss`, so we should also accept `BOSS`).\r\n\r\nHowever, it will need a manual merge, so ping the `#pkg-registration` channel on Slack after the end of the tree-day waiting period.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "[noblock] The compat issues have to be fixed before this can be merged, of course.",
+      "stance": "neutral_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

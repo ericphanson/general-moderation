@@ -1,0 +1,60 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 5,
+  "package_author": "jolars",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "giordano",
+    "time_to_decision_days": 8
+  },
+  "pr_number": 131898,
+  "package_name": "SLOPE",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "jolars",
+      "author_association": "NONE",
+      "text": "[noblock] So, auto-merging fails because the package name is all uppercase. I would be fine with changing it to something else if need be, but SLOPE is an established acronym for the type of statistical model this package fits (Sorted L-One Penalized Estimation). The name mimics that of the R package SLOPE (https://cran.r-project.org/package=SLOPE). \r\n\r\nSo, I hope that you might reconsider.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Personally, I think it's okay, but I don't have sufficient permissions to override that rule. So, you'll have to go via the #pkg-registration channel in the [public Julia Slack](https://julialang.org/slack/) after the three-day waiting period ends to find a full registry maintainer to merge it. They're not always very responsive, so it might take a few pings, some days apart, to get someone's attention.\r\n\r\nQuite honestly, I think we should get rid of the \"not all letters are upper-case\" check in the automatic bot. The \"5 characters minimum length\" rule already catches 90% of unwanted acronyms. Longer, especially pronounceable acronyms like this one really should be okay. And we can still block manually for packages that are questionable. Anyway, that's a discussion to be had at some point.\r\n\r\nThat being said, `SLOPE` is very non-specific and not an acronym that is familiar to the wide audience of the General registry. A good approach (especially if you can't find a maintainer to merge manually or don't like the idea of having to push people repeatedly) would be to _combine_ `SLOPE` with another word either as a prefix or as a suffix that gives additional context. Something like `SLOPEMinimizer`.\r\n\r\nOn the other hand,\r\n\r\n> The SLOPE.jl package is a thin wrapper around the [C++ slope library](https://github.com/jolars/libslope)\r\n\r\nis something that the registry maintainers tend to find convincing… Anything that's a \"wrapper\" tends to be okay using the name of the library being wrapped (up to small changes to adapt to Julia's convention, like the first letter having to be capitalized).",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "jolars",
+      "author_association": "NONE",
+      "text": "[noblock] Thanks for the suggestions, @goerz!",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 1,
+      "author": "jolars",
+      "author_association": "NONE",
+      "text": "[noblock] (EDIT: No longer relevant.) Superceded by https://github.com/JuliaRegistries/General/pull/132126",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [],
+  "related_prs": []
+}

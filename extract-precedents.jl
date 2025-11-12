@@ -470,6 +470,18 @@ function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
 
     # Code-based extraction
     violations = extract_violations(get(pr_data, "comments", []))
+
+    # Skip LLM processing if no violations (not interesting for precedent analysis)
+    if isempty(violations)
+        println("  No violations detected, skipping LLM processing")
+        return Dict(
+            "pr_number" => pr_data["pr_number"],
+            "package_name" => pr_data["package_name"],
+            "violations" => [],
+            "has_violations" => false
+        )
+    end
+
     is_wrapper, wrapped_lib = detect_wrapper(get(pr_data, "body", ""), get(pr_data, "comments", []))
     related_prs = find_related_prs(get(pr_data, "body", ""), get(pr_data, "comments", []))
     slack_flag = slack_mentioned(get(pr_data, "comments", []))
@@ -491,11 +503,8 @@ function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
         model=model
     )
 
-    justifications = []
-    if !isempty(violations)
-        println("  Extracting justifications...")
-        justifications = extract_justifications(get(pr_data, "body", ""), get(pr_data, "comments", []); model=model)
-    end
+    println("  Extracting justifications...")
+    justifications = extract_justifications(get(pr_data, "body", ""), get(pr_data, "comments", []); model=model)
 
     # Extract package author
     package_author = extract_package_author(get(pr_data, "body", ""))
@@ -706,6 +715,17 @@ Note: To enable Ctrl-C interruption that shows stats, run with:
         # Extract
         try
             extracted = extract_precedent(pr_file, model=model)
+
+            # Skip if no violations (not interesting for precedent analysis)
+            if isempty(get(extracted, "violations", []))
+                if batch_mode
+                    println("⏭️  Skipping (no violations): $pr_file")
+                else
+                    println("\n⏭️  No violations detected, skipping analysis file")
+                end
+                BATCH_STATE["success_count"] += 1
+                continue
+            end
 
             # Save to analysis/ directory
             open(output_file, "w") do f

@@ -1,0 +1,132 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 15,
+  "package_author": "odow",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "ericphanson",
+    "time_to_decision_days": 8
+  },
+  "pr_number": 136519,
+  "package_name": "cuOpt",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I remember there being some debate (possibly down the Slack-hole) coming to the conclusion that we kinda really want the “first letter should be capitalized” to be a hard rule. The maybe most notable deviation, `oneAPI.jl` being considered a mistake. I’d vote for `CuOpt`, but maybe that debate needs to be reopened (only wrapper packages in the GPU space get the first-letter-lowercase-exception?)",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n\r\n> only wrapper packages in the GPU space get the first-letter-lowercase-exception\r\n\r\nYeah. There is some precedence:\r\n\r\n<img width=\"249\" height=\"179\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a97d78c5-ee2a-4e8c-a28d-7c06c220da2f\" />\r\n\r\nOne thing to note is that this package lives in `jump-dev`, but it was authored by NVIDIA. Various logistical reasons meant they didn't host it in `NVIDIA` instead.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 1,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock] cc @rgsl888prabhu",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "rgsl888prabhu",
+      "author_association": "NONE",
+      "text": "> Package name similar to 3 existing packages.\r\n> 1. Similar to GSOpt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> 2. Similar to RKOpt. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> 3. Similar to COPT. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\r\n\r\nAgree, naming is with respect to all other NVIDIA projects which starts with cu*.\r\n\r\nAnd I am not sure how to tackle the other issue with similarity. Is there an option to get exception ?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n\r\n> And I am not sure how to tackle the other issue with similarity. Is there an option to get exception ?\r\n\r\nYes. The name similarity isn't a problem. Its just an automated check to guard against people [typosquatting](https://en.wikipedia.org/wiki/Typosquatting)",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> all other NVIDIA projects which starts with cu*\r\n\r\nI would say consistency with existing names takes precedence even over “hard” naming rules adopted since. But let’s consider the `cu*` namespace for NVIDIA cuda to be a _very_ special exception.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I don't feel strongly about the specific case of this package, but in general I disagree with this statement:\r\n\r\n> I would say consistency with existing names takes precedence even over “hard” naming rules adopted since.\r\n\r\nAs a general rule, I don't think that past name registrations should bind us to any kind of precedent. As the Julia package ecosystem grows, I expect that we will need to be progressively stricter with names over time.\r\n\r\nFor the specific case of this package, I don't have a strong objection to starting the package name with `cu`.\r\n\r\n[noblock]",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> As a general rule, I don't think that past name registrations should bind us to any kind of precedent.\r\n\r\nI don't think that either (and I think we've even formalized that statement somewhere in the guidelines).\r\n\r\nJust in this particular case (if I understand the situation correctly), we already have a whole bunch of `cu*` packages related to CUDA. I don't think it would be helpful to now add another package that breaks the pattern only by making the first letter uppercase, as `CuOpt`. That just creates unnecessary confusion. Better to say \"CUDA-related packages can use the lowercase `cu` prefix\" (also for future packages that fit the same pattern).\r\n\r\nI would not derive any kind of precedent from this that it should be okay to establish lowercase prefixes for any other (new) context. I think we should be _extremely_ strict with the first-letter-uppercase going forward. Even for wrapper packages where the wrapped library has a lowercase name. So `cu*` would be an extremely rare exception to that rule.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock] \r\n\r\nExcluding `_jll`, there's a few reasonable, and a few clangers:\r\n\r\n```Julia\r\njulia> filter(map(v -> v[\"name\"], values(data[\"packages\"]))) do n\r\n       return islowercase(first(n)) && !endswith(n, \"_jll\") && n != \"julia\"\r\n       end |> sort!\r\n19-element Vector{String}:\r\n \"cuDNN\"\r\n \"cuStateVec\"\r\n \"cuTENSOR\"\r\n \"cuTensorNet\"\r\n \"deSolveDiffEq\"\r\n \"eQuilibrator\"\r\n \"gRPCClient\"\r\n \"jInv\"\r\n \"jlpkg\"\r\n \"mPulseAPI\"\r\n \"mlpack\"\r\n \"oneAPI\"\r\n \"oneAPIKernels\"\r\n \"openPMD\"\r\n \"sparseQFCA\"\r\n \"uCSV\"\r\n \"vOptGeneric\"\r\n \"vOptSpecific\"\r\n \"vSmartMOM\"\r\n```\r\n\r\n> we already have a whole bunch of cu* packages related to CUDA\r\n\r\nWell. 4. There's a slightly larger precedent for \"Cu\":\r\n```\r\n \"CuArrays\"\r\n \"CuCountMap\"\r\n \"CuFluxSampler\"\r\n \"CuNFFT\"\r\n \"CuTropicalGEMM\"\r\n \"CuYao\"\r\n```",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> There's a slightly larger precedent for \"Cu\"\r\n\r\nOkay, then I might have a slight preference for renaming to `CuOpt`. But I don’t have super strong feelings either way. So this is mostly up to whoever has merge permissions and feels it’s okay to merge, I suppose 😊",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "I guess the `cu*` packages are direct wrappers of NVIDIA libraries and follow the upstream naming convention, whereas the `Cu` are Julia packages that also support GPU.\r\n\r\nSo that might be a settled argument to leave as `cuOpt`.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "imciner2",
+      "author_association": "CONTRIBUTOR",
+      "text": "I think a rationale for all the Cuda packages from NVIDIA having lowercase `cu` here is probably rule 6 of the naming guidelines:\r\n\r\n> Packages that wrap external libraries or programs can be named after those libraries or programs.\r\n\r\nPeople coming from other ecosystems and wanting to use these have an easier time if we keep the upstream name (including capitalization). I also don't think we should make a blanket statement that \"all Cuda packages from NVIDIA get lowercase `cu` at the front\", because then if someone wanted to bring the CUTLASS library into Julia we'd be having this same conversation in reverse. So I think the best thing to do is to think of this as applying rule 6 and not trying to build some pattern or general exception.\r\n\r\nSince this is the actual NVIDIA \"cuOpt\" library (even if we do build the underlying JLL instead of repackaging it, since they open-sourced this) I think that justifies having the lowercase `cu` at the start.\r\n\r\n[noblock]",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> Packages that wrap external libraries or programs can be named after those libraries or programs.\r\n\r\nRight, but we decided at some point recently that this rule (in general) does not extend to the first letter being allowed to be lowercase.\r\n\r\nIn this _particular_ case, I’m okay either way, personally. Whatever would be most consistent with users’ expectations based on the existing set of package names in the domain (and I would lean towards the rationale in https://github.com/JuliaRegistries/General/pull/136519#issuecomment-3181753870, i.e., leaving the lowercase as-is)",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "odow",
+      "author_association": "CONTRIBUTOR",
+      "text": "[noblock]\r\n\r\nThe consensus seems to be:\r\n\r\n * that we're okay with `cuOpt.jl` for this package\r\n * it doesn't create a precedent for future packages\r\n * the three day waiting period has elapsed\r\n\r\nSo are we happy to merge this PR?",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "library_wrapper"
+  ],
+  "related_prs": []
+}

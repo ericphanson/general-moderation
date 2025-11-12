@@ -1,0 +1,55 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 4,
+  "package_author": "glwagner",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "DilumAluthge",
+    "time_to_decision_days": 5
+  },
+  "pr_number": 138592,
+  "package_name": "XESMF",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "navidcy",
+      "author_association": "CONTRIBUTOR",
+      "text": "hm... I see now that it's not passing auto merge because \"not all letters are upper-case\". But there are so many other packages like that..? [noblock]",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "glwagner",
+      "author_association": "NONE",
+      "text": "> hm... I see now that it's not passing auto merge because \"not all letters are upper-case\". But there are so many other packages like that..?\r\n\r\nThat's right, to merge this we will need approval from maintainers, which I am seeking on slack (but there is a 3 day waiting period or something, so we still have a day or so).\r\n\r\nMake sure to write [noblock] in your comment, or we won't be able to merge!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "To summarize, we've asked the package author to consider a different package name, and the package author is insisting on keeping this name. For this specific case, because the author insists on keeping this name, I will manually merge the registration.\r\n\r\n---\r\n\r\nNote to others that may find this comment in the future: A package author insisting on keeping the name does not guarantee or ensure that they will get that name. Each registration is evaluated on a case by case basis. Additionally, the standards for the General registry continue to evolve over time. Package names similar to those that were merged in the past may be rejected in the future.",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": "python"
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "library_wrapper"
+  ],
+  "related_prs": []
+}

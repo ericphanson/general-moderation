@@ -1,0 +1,80 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 7,
+  "package_author": "gaelforget",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "vchuravy",
+    "time_to_decision_days": 5
+  },
+  "pr_number": 117204,
+  "package_name": "ECCO",
+  "discussion": [
+    {
+      "influence": 4,
+      "author": "gaelforget",
+      "author_association": "CONTRIBUTOR",
+      "text": "I would like my pull request to be manually merged instead of via AutoMerge for ECCO.jl \r\n\r\nExplanation : the chosen name ECCO.jl stands for Estimating the Circulation and Climate of the Ocean , a major academic effort which is widely known in the climate and ocean science community by its acronym, ECCO.\r\n\r\nMore detailed explanation:\r\nECCO is a 40+ years running effort initiated by Pr. Carl Wunsch at MIT, and which now involves distributed academic projects across the US (MIT, NASA JPL, UCSD, UTA, WHOI), Europe (AWI, UH), the UK (BAS), and more.\r\nexpanding the acronym would make the package name both (1) much harder to find by the targeted scientific community, and (2) a very long package name to type. And we would much rather avoid extending to \"ECCOProject\", \"ECCOGroup\", or something like that if it's just for the sake of the >4 character naming guideline. \r\nif later on another package ended up being called ECCO.jl later, this would be damageable to our climate science and oceanography community building effort (again by making it harder for users to find the present package, and possibly turning them off from bridging to Julia, which is one of the goal of our creating this package).\r\n\r\nTimeliness : this coming week, I intend to feature this package @ https://ecco-hackweek.github.io/ecco-2024/intro.html , and would therefore greatly appreciate if merging could be expedited.\r\n",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I like the name, and I’d definitely support merging this. In my opinion, pronounceable acronyms should always be okay (it’s just hard for the bot to distinguish pronounceable from unpronounceable acronyms)\r\n\r\nIt’s not up to me, though. The 5 letter minimum rule can only be overridden with a manual merge from a registry maintainer.\r\n\r\nYou have to fix the compat issues first, though. Those are mandatory.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "gaelforget",
+      "author_association": "CONTRIBUTOR",
+      "text": "> I like the name, and I’d definitely support merging this. In my opinion, pronounceable acronyms should always be okay (it’s just hard for the bot to distinguish pronounceable from unpronounceable acronyms)\r\n> \r\n> It’s not up to me, though. The 5 letter minimum rule can only be overridden with a manual merge from a registry maintainer.\r\n\r\nThanks for the feedback and supporting words! Makes me hopeful that a registry maintainer will agree with you and merge\r\n\r\n> You have to fix the compat issues first, though. Those are mandatory.\r\n\r\nshould be all set with compat now I think, following\r\n\r\n- https://github.com/gaelforget/ECCO.jl/commit/ea87296d36a53d03b57826e3c80bc939594a10c5\r\n- https://github.com/gaelforget/ECCO.jl/commit/3d8305377a6c1535eaca6c99cd6d3065c5694e72\r\n\r\nOr am I overlooking something?",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "gaelforget",
+      "author_association": "CONTRIBUTOR",
+      "text": "Hi @goerz & @vchuravy \r\n\r\njust giving this a ping to bring it back up on your radar. Would be awesome if this could be merged today. \r\n\r\nI am almost ready to release the next version, v0.1.1, which I am hoping to do live as a demo tomorrow (at this [hackweek](https://ecco-hackweek.github.io/ecco-2024/)). ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I don't have merge permission, unfortunately, but yes, this _should_ be merged as soon as possible, since the three-day period is up. If @vchuravy can't help you out with this, maybe ping the `#pgk-registration` channel on Slack.\r\n\r\n> I am almost ready to release the next version, v0.1.1\r\n\r\nThat seems like a version jump… Do you mean `v0.1.0`? In any case, do not try to register a new version before this PR is merged.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "gaelforget",
+      "author_association": "CONTRIBUTOR",
+      "text": "> I don't have merge permission, unfortunately, but yes, this _should_ be merged as soon as possible, since the three-day period is up. If @vchuravy can't help you out with this, maybe ping the `#pgk-registration` channel on Slack.\r\n\r\nCool. Will give it a minute for now\r\n\r\n> > I am almost ready to release the next version, v0.1.1\r\n> \r\n> That seems like a version jump… Do you mean `v0.1.0`? In any case, do not try to register a new version before this PR is merged.\r\n\r\nGood point. Did mean `v0.1.0`",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

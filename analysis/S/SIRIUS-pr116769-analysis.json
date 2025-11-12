@@ -1,0 +1,52 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 3,
+  "package_author": "abussy",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "giordano",
+    "time_to_decision_days": 8
+  },
+  "pr_number": 116769,
+  "package_name": "SIRIUS",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Should be ok, but you will have to ask on Slack for a manual merge after the end of the three-day-period",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: JSON3, MPI, OpenBLAS32",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": true,
+  "justifications": [
+    "library_wrapper"
+  ],
+  "related_prs": []
+}
