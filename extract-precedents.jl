@@ -232,7 +232,7 @@ const BATCH_STATE = Dict{String,Any}(
 """Call llm CLI with a prompt and schema, return parsed JSON"""
 function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash")
     local result, errs
-    sleep(rand(1:5))
+    sleep(10) # getting rate limited a lot
     # Use llm's --schema feature for guaranteed structured output
     oc = OutputCollector(`llm -m $model --schema $schema $prompt`)
     success = wait(oc)
