@@ -49,9 +49,15 @@ Hybrid extraction tool combining code-based patterns (free) with LLM analysis (c
 
 **Default model:** `gemini/gemini-2.0-flash` (cheap: ~$0.10 per 1M input tokens)
 
+This cost an average of $0.000246 per package to analyze (I spent 12 cents total while developing & running it so far, but I think it's covered by the free tier anyway).
+
 #### Output
 
 Creates analysis files in `analysis/` mirroring the `data/` structure:
 - `data/A/ABC-pr12345.json` → `analysis/A/ABC-pr12345-analysis.json`
 
 Each analysis includes violations, wrapper info, justifications, comment classifications with influence scores, decision metadata, and token usage estimates.
+
+## LLM usage
+
+I used Claude code (Sonnet 4.5) for writing most of the scripts/analysis, as well as categorizing accept/reject reasons for the three-letter-names analysis. I also used `gemini-2.0-flash` for basic NLP stuff.
