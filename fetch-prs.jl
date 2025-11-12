@@ -77,14 +77,15 @@ end
 function parse_package_name(title::String)
     # Match various formats:
     # - "New package: PackageName"
+    # - "Register New Package: PackageName"
     # - "Register PackageName: version"
     # - "Register New Package PackageName: version"
-    m = match(r"(?:New package|Register(?:\s+New\s+Package)?):\s+(\w+)|Register\s+(\w+):", title)
+    m = match(r"(?:New package|Register(?:\s+New\s+Package)?):\s+(\w+)|Register\s+New\s+Package\s+(\w+):|Register\s+(\w+):", title)
     if m === nothing
         return nothing
     end
     # Return first non-nothing capture
-    return something(m.captures[1], m.captures[2])
+    return something(m.captures[1], m.captures[2], m.captures[3])
 end
 
 """Get first letter directory for package (uppercase)"""
@@ -260,15 +261,16 @@ function filter_prs()
             return !(login in EXCLUDED_MERGERS)
         end
 
-        # Check if manually closed (not merged)
+        # Check if manually closed (not merged) - if we have closedBy data
         closed_by = get(pr, "closedBy", nothing)
         if closed_by !== nothing
             login = closed_by["login"]
             return !(login in EXCLUDED_MERGERS)
         end
 
-        # Neither merged nor closed by anyone (shouldn't happen for closed PRs)
-        return false
+        # If mergedBy and closedBy are both null, include it
+        # (we'll fetch closedBy in Stage 3 and filter there)
+        return true
     end
     println("After excluding bots: $(length(manual_prs)) PRs")
 
@@ -370,7 +372,30 @@ function fetch_details()
 
         println("\n[$idx/$(length(remaining))] Fetching PR #$pr_number ($package_name)...")
 
+        # If closedBy is missing (old cache data), fetch it from issues API
+        if !haskey(pr, "closedBy") || pr["closedBy"] === nothing
+            try
+                issue_json = gh_with_retry(`gh api repos/$REPO/issues/$pr_number`)
+                issue_data = JSON.parse(issue_json)
 
+                # Add closedBy and closedAt to pr dict
+                pr["closedAt"] = issue_data["closed_at"]
+                pr["closedBy"] = if issue_data["closed_by"] !== nothing
+                    Dict("login" => issue_data["closed_by"]["login"])
+                else
+                    nothing
+                end
+
+                # Skip if closed by a bot
+                if pr["closedBy"] !== nothing && pr["closedBy"]["login"] in EXCLUDED_MERGERS
+                    println("  ⊘ Skipped: Closed by bot $(pr["closedBy"]["login"])")
+                    continue
+                end
+            catch e
+                println("  ⚠ Warning: Could not fetch closedBy info: $(string(e))")
+                # Continue anyway - we'll save with null closedBy
+            end
+        end
 
         try
             # Fetch PR details (body and comments)
