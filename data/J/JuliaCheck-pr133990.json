@@ -1,0 +1,158 @@
+{
+  "created_at": "2025-07-01T08:03:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 133990,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q860J2uB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Lowercase package name juliacheck contains the string \"julia\".\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- I was not able to load the package (i.e. `import JuliaCheck` failed). See the AutoMerge logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to JuliaChem. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-01T08:09:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3022482305",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860KGNG",
+      "author": {
+        "login": "bellon-tiobe"
+      },
+      "authorAssociation": "NONE",
+      "body": "Stopping registration: I will rename the repository and improve the `README` and `Project.toml` files.",
+      "createdAt": "2025-07-01T08:19:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3022545734",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860L1eU",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For\r\n\r\n> I was not able to load the package (i.e. import JuliaCheck failed). See the AutoMerge logs for details.\r\n\r\ncf. https://github.com/carlobaldassi/ArgParse.jl/pull/106#issuecomment-3022960625, or in summary, `ArgParse.@project_version` without argument is fundamentally broken.\r\n",
+      "createdAt": "2025-07-01T09:35:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3023001492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860MHTF",
+      "author": {
+        "login": "bellon-tiobe"
+      },
+      "authorAssociation": "NONE",
+      "body": "> For\r\n> \r\n> > I was not able to load the package (i.e. import JuliaCheck failed). See the AutoMerge logs for details.\r\n> \r\n> cf. [carlobaldassi/ArgParse.jl#106 (comment)](https://github.com/carlobaldassi/ArgParse.jl/pull/106#issuecomment-3022960625), or in summary, `ArgParse.@project_version` without argument is fundamentally broken.\r\n\r\nI am still trying to figure out where to see those logs, where I would see that `ArgParse.@project_version` is the cause of the package load failure.\r\n\r\nNow, in addition, I wonder which argument would `ArgParse.@project_version` require, when it is meant to extract the project's version and pass it to `ArgParseSettings` (or that was my understanding, anyway).",
+      "createdAt": "2025-07-01T09:49:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3023074501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860MKLi",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "GitHub is making it more and more difficult to find the logs, but start with the \"Checks\" tab at the top of this page and try to find your way. \r\n\r\nI'm not a user of `ArgParse` but it probably needs an argument like `joinpath(@__DIR__, \"..\", \"Project.toml\")`.",
+      "createdAt": "2025-07-01T09:52:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3023086306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860Nmek",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually I'm not sure how the macro can be used correctly at all. The function form looks more useful\r\n```\r\nArgParse.project_version(joinpath(@__DIR__, \"..\", \"Project.toml\"))\r\n```\r\n",
+      "createdAt": "2025-07-01T11:11:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3023464356",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860OeD2",
+      "author": {
+        "login": "bellon-tiobe"
+      },
+      "authorAssociation": "NONE",
+      "body": "It seems to me like the macro is only useful without arguments, with the default path. Otherwise, as you said, better to use the function instead.",
+      "createdAt": "2025-07-01T12:02:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3023692022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860QK92",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #134001.",
+      "createdAt": "2025-07-01T13:56:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3024138102",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q860Vtox",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As already noted that the no-argument macro is also broken, but see https://github.com/carlobaldassi/ArgParse.jl/pull/136.",
+      "createdAt": "2025-07-01T21:28:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133990#issuecomment-3025590833",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuliaCheck\n- Repository: https://github.com/tiobe/JuliaCheck\n- Created by: @bellon-tiobe\n- Version: v0.2.0\n- Commit: 8701e3d125427f66e21ab27346f5b444e388be2b\n- Reviewed by: @bellon-tiobe\n- Reference: https://github.com/tiobe/JuliaCheck/commit/8701e3d125427f66e21ab27346f5b444e388be2b#r161184582\n- Description: Code checker for Julia language\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6511db00163bfd378e8bf2d67557880a5b70a0356f6a5fe47daf363e929fe8ac9249784cbb22ded262e90a8fc3c969ad357375660004ec5b919e096c75ea031e4afe00a551831357eb270db42e38b0799867cb8531d386b614d9ced4289e73e5a82e0408c83b5d1d5d360b2eaf5a8501813ce1a23ff04b958ee5e005382385b84609bd41a4eeae3d923eb7d0366695f91bb01d89e82e2491f597c8d7979f4a7e3d1c5984808a6b05d36c34927af9b7285 -->",
+  "package_name": "JuliaCheck",
+  "closed_at": "2025-07-01T13:56:48Z",
+  "title": "New package: JuliaCheck v0.2.0"
+}
