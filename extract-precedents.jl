@@ -137,6 +137,15 @@ end
 # Track number of LLM calls
 const LLM_CALL_COUNT = Ref(0)
 
+# Global state for cleanup on exit
+const BATCH_STATE = Dict{String, Any}(
+    "batch_mode" => false,
+    "success_count" => 0,
+    "error_count" => 0,
+    "total_files" => 0,
+    "interrupted" => false
+)
+
 """Call llm CLI with a prompt and schema, return parsed JSON"""
 function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash")
     try
@@ -452,6 +461,52 @@ end
 
 # === CLI ===
 
+"""Print summary and token usage (called on exit)"""
+function print_summary()
+    # Only print if we actually started batch processing
+    if !BATCH_STATE["batch_mode"] || BATCH_STATE["total_files"] == 0
+        return
+    end
+
+    println("\n" * "=" ^ 70)
+    if BATCH_STATE["interrupted"]
+        println("BATCH INTERRUPTED")
+        println("Processed: $(BATCH_STATE["success_count"])/$(BATCH_STATE["total_files"])")
+        println("\n💡 Tip: Run the same command again to resume from where you left off.")
+        println("   Existing analysis files will be skipped automatically.")
+    else
+        println("BATCH COMPLETE")
+        println("Successfully processed: $(BATCH_STATE["success_count"])/$(BATCH_STATE["total_files"])")
+    end
+
+    if BATCH_STATE["error_count"] > 0
+        println("Errors: $(BATCH_STATE["error_count"])")
+    end
+
+    # Token usage (query from llm logs database)
+    if LLM_CALL_COUNT[] > 0
+        input_tokens, output_tokens = get_usage_stats(LLM_CALL_COUNT[])
+
+        if input_tokens > 0 || output_tokens > 0
+            println("\n=== Token Usage ===")
+            println("Input tokens:  $input_tokens")
+            println("Output tokens: $output_tokens")
+            println("Total tokens:  $(input_tokens + output_tokens)")
+
+            # Cost estimation (prices per 1M tokens)
+            # Default to Gemini 2.0 Flash pricing
+            cost_per_input = 0.10  # per 1M tokens
+            cost_per_output = 0.40  # per 1M tokens
+
+            input_cost = (input_tokens / 1_000_000) * cost_per_input
+            output_cost = (output_tokens / 1_000_000) * cost_per_output
+            total_cost = input_cost + output_cost
+
+            println("Estimated cost: \$$(round(total_cost, digits=6))")
+        end
+    end
+end
+
 """Find all PR JSON files in a directory (excluding analysis files)"""
 function find_pr_files(dir::String)
     all_files = []
@@ -509,6 +564,9 @@ Examples:
 
   # With custom model
   ./extract-precedents.jl data/ --model claude-3-5-haiku-20241022
+
+Note: To enable Ctrl-C interruption that shows stats, run with:
+  julia -e 'include(popfirst!(ARGS))' extract-precedents.jl data/
 """)
         exit(1)
     end
@@ -546,11 +604,15 @@ Examples:
         error("Input not found: $input_path")
     end
 
-    # Process all files
+    # Setup for batch processing
     batch_mode = length(pr_files) > 1
-    success_count = 0
-    error_count = 0
-    interrupted = false
+    BATCH_STATE["batch_mode"] = batch_mode
+    BATCH_STATE["total_files"] = length(pr_files)
+
+    # Register cleanup function to run on exit
+    if batch_mode
+        atexit(print_summary)
+    end
 
     for (idx, pr_file) in enumerate(pr_files)
         if batch_mode
@@ -567,7 +629,7 @@ Examples:
                 println("\n⏭️  Output already exists: $output_file")
                 println("Delete it first if you want to regenerate.")
             end
-            success_count += 1
+            BATCH_STATE["success_count"] += 1
             continue
         end
 
@@ -626,20 +688,20 @@ Examples:
                 end
             end
 
-            success_count += 1
+            BATCH_STATE["success_count"] += 1
         catch e
             if isa(e, InterruptException)
                 println("\n\n⚠️  Interrupted by user (Ctrl-C)")
-                interrupted = true
+                BATCH_STATE["interrupted"] = true
                 break
             elseif isa(e, ErrorException) && startswith(e.msg, "QUOTA_EXCEEDED")
                 println("\n\n❌ QUOTA/RATE LIMIT EXCEEDED")
                 println("Stopping batch processing to avoid further quota errors.")
                 println("Progress has been saved. You can resume by running the same command again.")
-                interrupted = true
+                BATCH_STATE["interrupted"] = true
                 break
             else
-                error_count += 1
+                BATCH_STATE["error_count"] += 1
                 println("❌ ERROR processing $pr_file:")
                 println("  $(sprint(showerror, e))")
                 if batch_mode
@@ -649,25 +711,8 @@ Examples:
         end
     end
 
-    # Batch summary
-    if batch_mode
-        println("\n" * "=" ^ 70)
-        if interrupted
-            println("BATCH INTERRUPTED")
-            println("Processed: $success_count/$(length(pr_files))")
-            println("\n💡 Tip: Run the same command again to resume from where you left off.")
-            println("   Existing analysis files will be skipped automatically.")
-        else
-            println("BATCH COMPLETE")
-            println("Successfully processed: $success_count/$(length(pr_files))")
-        end
-        if error_count > 0
-            println("Errors: $error_count")
-        end
-    end
-
-    # Token usage (query from llm logs database)
-    if LLM_CALL_COUNT[] > 0
+    # For single file mode, print token usage immediately
+    if !batch_mode && LLM_CALL_COUNT[] > 0
         input_tokens, output_tokens = get_usage_stats(LLM_CALL_COUNT[])
 
         if input_tokens > 0 || output_tokens > 0
@@ -676,11 +721,9 @@ Examples:
             println("Output tokens: $output_tokens")
             println("Total tokens:  $(input_tokens + output_tokens)")
 
-            # Cost estimation (prices per 1M tokens)
-            # Default to Gemini 2.0 Flash pricing
-            cost_per_input = 0.10  # per 1M tokens
-            cost_per_output = 0.40  # per 1M tokens
-
+            # Cost estimation
+            cost_per_input = 0.10
+            cost_per_output = 0.40
             input_cost = (input_tokens / 1_000_000) * cost_per_input
             output_cost = (output_tokens / 1_000_000) * cost_per_output
             total_cost = input_cost + output_cost
@@ -688,6 +731,8 @@ Examples:
             println("Estimated cost: \$$(round(total_cost, digits=6))")
         end
     end
+
+    # For batch mode, summary will be printed by atexit handler
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
