@@ -1,0 +1,171 @@
+{
+  "created_at": "2024-04-21T04:48:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105307,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857QbW-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: FFTW, JLD2, KernelAbstractions, ReadVTK, TimerOutputs, WriteVTK\n- Package name similar to 2 existing packages.\n  1. Similar to Julog. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to JuMP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-21T04:52:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067903934",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857Qbt7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This looks like a very nice package, but I think you should try to find a better name without the `Ju` prefix (unless you can come up with an explanation where `Ju` doesn’t stand for “Julia”). Long and descriptive names are usually encouraged, but if you can find a nice “clever” name, that can work too.\r\n\r\nBTW, it looks like you are trying to have some bibliographic references in the documentation. You might find the [DocumenterCitations](https://github.com/JuliaDocs/DocumenterCitations.jl) plugin useful for that.",
+      "createdAt": "2024-04-21T05:02:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067905403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QeV-",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> This looks like a very nice package, but I think you should try to find a better name without the `Ju` prefix (unless you can come up with an explanation where `Ju` doesn’t stand for “Julia”). Long and descriptive names are usually encouraged, but if you can find a nice “clever” name, that can work too.\r\n> \r\n> BTW, it looks like you are trying to have some bibliographic references in the documentation. You might find the [DocumenterCitations](https://github.com/JuliaDocs/DocumenterCitations.jl) plugin useful for that.\r\n\r\nHi Michael,\r\n\r\nThank you for the suggestion. However, we began this project 5 years ago, and it has already been cited in some publications, for \r\ninstance, [https://arxiv.org/abs/1906.00648]. Therefore, if possible, we would prefer not to change its name.\r\n\r\nIt seems that DocumenterCitations.jl is very helpful, we will use it in our project. \r\n\r\nBest,\r\nWeiwei",
+      "createdAt": "2024-04-21T05:48:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067916158",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QfIF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Unfortunately, it's not up to me. Only a full registry maintainer can override the rule for the `Ju` prefix. But you really [shouldn't publish papers about an unregistered package](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4). If I were a maintainer, I would not be inclined to make exceptions based on that: It's pretty unfair to other registrations. Note that if you rename the package, the link in paper will still work. GitHub automatically forwards the URLs for renamed repositories.",
+      "createdAt": "2024-04-21T06:05:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067919365",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QfgU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I mean, the name probably isn’t an absolute no-go. If you really want to keep it, you can make the argument in the Slack channel, and see if there’s a maintainer willing to merge, after the three-day period.",
+      "createdAt": "2024-04-21T06:12:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067920916",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QgaG",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Unfortunately, it's not up to me. Only a full registry maintainer can override the rule for the `Ju` prefix. But you really [shouldn't publish papers about an unregistered package](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4). If I were a maintainer, I would not be inclined to make exceptions based on that: It's pretty unfair to other registrations. Note that if you rename the package, the link in paper will still work. GitHub automatically forwards the URLs for renamed repositories.\r\n\r\nI hope the package will merged automatically rather than manually, so I will follow the auto-merging rules. I am not sure if the link will work after renaming, but I guess I can create a new package.  ",
+      "createdAt": "2024-04-21T06:31:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2067924614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RHpx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can [follow the steps in the FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name). Definitely use [the GitHub rename feature](https://help.github.com/en/github/administering-a-repository/renaming-a-repository). This will ensure that any link to the old repository will forward to the new name.\r\n\r\nWhen you register the renamed package, it will create a new registration PR. Leave a comment here pointing to that new PR, and then we close this here.",
+      "createdAt": "2024-04-21T15:30:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2068085361",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857SK2g",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> You can [follow the steps in the FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name). Definitely use [the GitHub rename feature](https://help.github.com/en/github/administering-a-repository/renaming-a-repository). This will ensure that any link to the old repository will forward to the new name.\r\n> \r\n> When you register the renamed package, it will create a new registration PR. Leave a comment here pointing to that new PR, and then we close this here.\r\n\r\nThank you so much. I tried my best and can not think of a better name than JuMag, so I gave up registering it, please close this PR.\r\n\r\n",
+      "createdAt": "2024-04-22T02:10:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2068360608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857SNf6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok… maybe just give it a bit of time. As I said, this looks like a nice package, so if you can come up with a suitable name, it would be great to see it registered.",
+      "createdAt": "2024-04-22T02:25:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105307#issuecomment-2068371450",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuMag\n- Repository: https://github.com/ww1g11/JuMag.jl\n- Created by: @ww1g11\n- Version: v0.3.0\n- Commit: ba47df8a8861063c252a721c54962123d262bca3\n- Reviewed by: @ww1g11\n- Reference: https://github.com/ww1g11/JuMag.jl/issues/3\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359808b02380e6660a58e37720da8ce5339a4c424ac419847c1536acc17ecdba9fe6482f77fb5516bb218edb5176f2d1f68b56128bbfea34bb95dcaac263ca7ccc5c67af5a05538d8e9c98b2a08cc62889659c19c124d0939041b472b1b30477477efba27952c22690bf0505cc61997e86aa -->",
+  "package_name": "JuMag",
+  "closed_at": "2024-04-22T02:25:27Z",
+  "title": "New package: JuMag v0.3.0"
+}

@@ -1,0 +1,118 @@
+{
+  "created_at": "2024-01-30T21:32:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 99899,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85yUjQy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for contributing your package!\r\n\r\nHowever, apart from the technical issues (*) with this PR: Does this package provide any feature not in the existing [MathieuFunctions](https://github.com/BBN-Q/MathieuFunctions.jl)? If not, there isn't very much of a reason to register it. And even if does have additional features: it would be better to contribute a PR to the existing package.\r\n\r\nThis is not to discount your work. But not every package needs to be registered, and sometimes an implementation can just be for your own educational purpose.\r\n\r\n(*) There seems to be something wrong with the automatic checks right now… But one issue would just be the name: Julia packages should use CamelCase, which in this case would conflict with the existing `MathieuFunctions`. You would need a significantly different name to get this registered, something like `SpecificNewAspectMathieuFunctions`.",
+      "createdAt": "2024-01-30T22:16:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99899#issuecomment-1917989938",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yUoZo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the dash in the package name might have completely broken the automatic checks, so if you still want to submit this package, changing the package name would be a first step. Also note that the repository name for a Julia package should end with \".jl\".\r\n\r\nLet us know if you need more help with developing your package. I would also point you to the [Discourse community](https://discourse.julialang.org), which is very welcoming to beginners.",
+      "createdAt": "2024-01-30T22:29:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99899#issuecomment-1918010984",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yVCBW",
+      "author": {
+        "login": "mahdi-sasar"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Thank you for contributing your package!\r\n> \r\n> However, apart from the technical issues (*) with this PR: Does this package provide any feature not in the existing [MathieuFunctions](https://github.com/BBN-Q/MathieuFunctions.jl)? If not, there isn't very much of a reason to register it. And even if does have additional features: it would be better to contribute a PR to the existing package.\r\n> \r\n> This is not to discount your work. But not every package needs to be registered, and sometimes an implementation can just be for your own educational purpose.\r\n> \r\n> (*) There seems to be something wrong with the automatic checks right now… But one issue would just be the name: Julia packages should use CamelCase, which in this case would conflict with the existing `MathieuFunctions`. You would need a significantly different name to get this registered, something like `SpecificNewAspectMathieuFunctions`.\r\n\r\nHello! Thanks for your response and the update!\r\nThe already registered package MathieuFunctions doesn't enable you to plot the Mathieu functions themselves and do any computations with them. It appears to only allow the characteristic values to be calculated and plotted. So I couldn't use them for my own project, and had to write it myself. I need the periodic Mathieu functions as a basis set for expanding the wave-function in a test study.\r\nHowever, I was focused on my own calculations and I didn't think about adding my code to the already available MathieuFunctions package. I agree that it is a good idea to do a PR to that directly and avoid cluttering the libraries in Julia and keep things neat. I'll try that and if it doesn't get pulled soon, I'll apply the fixes you mentioned and try registering the package again.\r\n\r\nWell, all is not lost though: this whole thing fished a bug out of the registration process, which is a plus for Julia lang development!\r\n",
+      "createdAt": "2024-01-31T00:00:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99899#issuecomment-1918115926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852cmbO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-10T12:22:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99899#issuecomment-1987208910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852cwel",
+      "author": {
+        "login": "mahdi-sasar"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi everyone. I just got an email that this pull request is still open and that it will be automatically closed in 7 days. As per Michael's suggestion, I made a PR to the MathieuFunctions.jl library and my additions were merged there.  So, my original PR here can be closed. Wanted to leave this message as an update on the whole situation and/or for future reference.\r\nThanks!\r\n\r\n> Thank you for contributing your package!\r\n> \r\n> However, apart from the technical issues (*) with this PR: Does this package provide any feature not in the existing [MathieuFunctions](https://github.com/BBN-Q/MathieuFunctions.jl)? If not, there isn't very much of a reason to register it. And even if does have additional features: it would be better to contribute a PR to the existing package.\r\n> \r\n> This is not to discount your work. But not every package needs to be registered, and sometimes an implementation can just be for your own educational purpose.\r\n> \r\n> (*) There seems to be something wrong with the automatic checks right now… But one issue would just be the name: Julia packages should use CamelCase, which in this case would conflict with the existing `MathieuFunctions`. You would need a significantly different name to get this registered, something like `SpecificNewAspectMathieuFunctions`.\r\n\r\n",
+      "createdAt": "2024-03-10T14:23:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99899#issuecomment-1987250085",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Mathieu-Functions\n- Repository: https://github.com/mahdi-sasar/Mathieu-Functions\n- Created by: @mahdi-sasar\n- Version: v1.0.0\n- Commit: 5130a9fec24f7b073401f343eea7cada8b680dd0\n- Reviewed by: @mahdi-sasar\n- Reference: https://github.com/mahdi-sasar/Mathieu-Functions/issues/1\n- Description: Julia language library for computing periodic Mathieu functions with arbitrary q and n values. Works for large negative and positive values of q.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359885231d21600ea3f20eeedfb3764b0ab7e0be3caa0cef29b54b0cc1a5479c102149fc86d40f58a2c1497b421750210cdbfa19d077662241be8ac10e5c8d790b8d29261d1e795c42a807934517d20401147d4d789756644e658215d104102a0cdb2810b0dd7ec264b39631fd86fcac086f304c473576b92e2a100a9dded441f7c7 -->",
+  "package_name": "Mathieu",
+  "closed_at": "2024-03-24T21:14:58Z",
+  "title": "New package: Mathieu-Functions v1.0.0"
+}

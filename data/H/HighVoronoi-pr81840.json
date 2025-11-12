@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-04-18T17:35:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 81840,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85aNyqm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Version number is not allowed to contain prerelease data\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Crayons, GLPK, IterTools, IterativeSolvers, JLD2, NearestNeighbors, Polyhedra, SpecialFunctions, StaticArrays\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-04-18T17:41:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81840#issuecomment-1513564838",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85aoOnz",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Should the version number end in -DEV? Is it part of SemVer, or allowed by it? I'm not sure I should block:\r\n\r\n[noblock]",
+      "createdAt": "2023-04-24T16:36:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81840#issuecomment-1520495091",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dJqmL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-05-25T12:23:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81840#issuecomment-1562814859",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dzAje",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-06-02T12:24:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81840#issuecomment-1573652702",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HighVoronoi\n- Repository: https://github.com/martinheida/HighVoronoi.jl\n- Created by: @martinheida\n- Version: v1.0.0-DEV\n- Commit: 6e8a41c194ab408fff991f117fc4b26885ff7591\n- Git reference: v1.0.0\n- Description: A Julia Package for setting up high dimensional (i.e. any dimension >= 2) Finite Volume problems on Voronoi Meshes\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Introducing HighVoronoi.jl, a Voronoi mesh generator for arbitrary dimensions greater or equal to 2. This package can generate meshes on polygonal or periodic domains and provides Finite Volume methods for high dimensional meshes. Based on the algorithm published in VoronoiGraph, HighVoronoi offers further features including mesh refinement, integration of functions and fast calculation of periodic grids. This package uses fewer calculations and linear equations than classical algorithms and comes with data sets for convex and bounded or unbounded domains. Additionally, it allows for setting up linear equations for a finite volume Voronoi discretization of an elliptic PDE.\n<!-- END RELEASE NOTES -->",
+  "package_name": "HighVoronoi",
+  "closed_at": "2023-06-02T12:24:29Z",
+  "title": "New package: HighVoronoi v1.0.0-DEV"
+}

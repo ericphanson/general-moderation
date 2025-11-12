@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-03-11T10:09:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 79400,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85XUENb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-11T10:13:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1464877915",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XVftA",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] This doesn't look like it's meant for the general registry, just a couple of very specific convenience functions around XLSX.jl? ",
+      "createdAt": "2023-03-12T17:21:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1465252672",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XVloj",
+      "author": {
+        "login": "christiankral"
+      },
+      "authorAssociation": "NONE",
+      "body": "One could certainly see this as collection of convenience functions only. I agree. \r\n\r\nYet, I devloped this package with a clear work flow in mind for the application in egineering. So this package is not about just reading and writing certian cells from an excel file. Instead the following workflow is enabled for a calculation script in Julia:\r\n\r\n- An Excel spreadsheet is used to provide all the input parameters (including the physical unit) for a calulation with Julia based on `Unitful`: so the Excel file is \"just\" used to organize all the input data\r\n- Such an Excel file may look like:\r\n![image](https://user-images.githubusercontent.com/4184218/224566348-678a7210-3d79-4fb6-90da-f927f0e1d53a.png)\r\n- For example, the function call `XLSXreadvar(file,\"U\")`  identifies where on sheet the variable U is stored, reads the physical quantity based on the number and unit located in the two cells located to the right of \"U\". \r\n- This way, for example, Ohm's law `R = U / I` can be applied in Julia based on real physical quanities, not just numbers.\r\n- The package `WorkflowXLSX` then also allows to write back the results to a copy of the Excel file. \r\n![image](https://user-images.githubusercontent.com/4184218/224566894-41ade600-ea1d-4cba-b3df-92e4202dbc53.png)\r\n\r\nThe package `WorkflowXLSX` shall help to avoid calculations in Excel. Instead a calculation script can be created by an engineer with just little programming knowledge. \r\n",
+      "createdAt": "2023-03-12T19:12:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1465276963",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XhvuY",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Fair enough - with this more descriptive name I guess it's fine",
+      "createdAt": "2023-03-14T16:49:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1468464024",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Z6LsC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-04-14T12:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1508424450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85adw7o",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-04-21T12:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79400#issuecomment-1517752040",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: WorkflowXLSX\n- Repository: https://github.com/christiankral/WorkflowXLSX.jl\n- Created by: @christiankral\n- Version: v0.1.0\n- Commit: 59941d731265a15b68e78bb943df5511951dc53f\n- Git reference: HEAD\n- Description: Read and write physical quantities from XLSX files\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial release\n<!-- END RELEASE NOTES -->",
+  "package_name": "WorkflowXLSX",
+  "closed_at": "2023-04-21T12:23:27Z",
+  "title": "New package: WorkflowXLSX v0.1.0"
+}

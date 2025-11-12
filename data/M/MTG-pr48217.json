@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-11-05T13:33:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 48217,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q845VXZs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 12 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MD5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MKL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to MLJ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Mux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to GMT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to MCTS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to MMTF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to Tk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-05T13:39:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/48217#issuecomment-961902188",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q845VXho",
+      "author": {
+        "login": "VEZY"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Note: I know the package name breaks the convention set by RegistryCI (\"the name is at least 5 characters long\"), but this package can be seen as a port of the Python package called [MTG](https://mtg.readthedocs.io/en/latest/), that's why I prefer to keep this name if possible. ",
+      "createdAt": "2021-11-05T13:39:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/48217#issuecomment-961902696",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q845Vix-",
+      "author": {
+        "login": "VEZY"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "OK after some discussion I decided to change the name to MultiScaleTreeGraph. Sorry for the inconvenience, I triggered again JuliaRegistrator but it created a new pull request instead of updating this one: #48222. Could you please close this PR ? ",
+      "createdAt": "2021-11-05T14:39:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/48217#issuecomment-961948798",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MTG\n- Repository: https://github.com/VEZY/MTG.jl\n- Created by: @VEZY\n- Version: v0.1.0\n- Commit: 599eb01f4352ce08ca8be02f6dedfc917ca921ab\n- Reviewed by: @VEZY\n- Reference: https://github.com/VEZY/MTG.jl/commit/599eb01f4352ce08ca8be02f6dedfc917ca921ab#commitcomment-59503221\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd611fbe8efb65e64c14caac581ad70e4706c8475015a73f6d0ed4536de0103a616d0f595dddc9cbabb2d51b8de1b29ed7e095859d8d65b2a2598bbaca57dd34b109f2b3351eec58a000f15358ec0daadc53a3f20dbf746174e04abf846b3cf17d2c9b5f6fa85d760211cbb528967ec10fafd349d6e0cd6df471cc136965ae81f9d9e4892cbdab55350c5516ed6906cbf48fdccf131d77f05d3e1212710974ca5a7 -->",
+  "package_name": "MTG",
+  "closed_at": "2021-11-06T00:58:33Z",
+  "title": "New package: MTG v0.1.0"
+}

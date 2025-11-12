@@ -1,0 +1,211 @@
+{
+  "created_at": "2020-03-18T23:44:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 11169,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMDkxMjc2MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- I was not able to load the package (i.e. `import DecentralizedInternet` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-03-18T23:47:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-600912760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMDkxMzE5OQ==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hold on, let me fix",
+      "createdAt": "2020-03-18T23:49:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-600913199",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMDkyMTQ0MA==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "I created a seperate julia-configs folder [here](https://github.com/Lonero-Team/Decentralized-Internet/tree/master/.julia-configs) which can serve as the branch for the julia version and export of this project for when it is actively being developed",
+      "createdAt": "2020-03-19T00:20:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-600921440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMDk4OTc2Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It seems like this isn't a Julia package, right? It seems more like a collection of projects.\r\n\r\nThere is no need to register a repository if it is not a Julia package.",
+      "createdAt": "2020-03-19T05:01:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-600989766",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMTQ3NzYzMQ==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "> It seems like this isn't a Julia package, right? It seems more like a collection of projects.\r\n> \r\n> There is no need to register a repository if it is not a Julia package.\r\n\r\nHi @DilumAluthge, yes it is not a Julia package, but I am in the process of making a Julia package that is an extension of it. The .julia-configs folder is where all the Julia code for such will go, and later likely 100s of commits will be given to just adding Julia compatibility for my app.",
+      "createdAt": "2020-03-20T00:32:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-601477631",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMTQ3ODg3MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I see, the Julia package is located in a subdirectory of the repo, not at the top level.\r\n\r\nIf I understand correctly, we do not currently support registering Julia packages located in subdirectories. We hope to add support for that in the future. But at the present time, the Julia package must be located at the top level of the repo.\r\n\r\nI'm not sure when we will have support for this feature, so I think that for now, your best bet will be to make a separate Git repo for your Julia package.",
+      "createdAt": "2020-03-20T00:37:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-601478871",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMTQ4MDQ4OA==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, @DilumAluthge I'm still actively going to work on the Julia code. Any idea on when you may add subdirectory support? As many devs have scientific computing projects in which they want to add Julia compatibility to their pre-existing project but don't want to make a standalone repo for their package. A good example are lots of statistical libraries and collections would have 1000s of repos if they made a repo for every time they integrate compatibility for a specific package manager or language.",
+      "createdAt": "2020-03-20T00:45:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-601480488",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMTQ4MTU0OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You may want to subscribe to the following issues and pull requests:\r\n- https://github.com/JuliaLang/Pkg.jl/issues/1251\r\n- https://github.com/JuliaLang/Pkg.jl/pull/1422\r\n- https://github.com/JuliaRegistries/Registrator.jl/issues/230",
+      "createdAt": "2020-03-20T00:50:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-601481548",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwNjI5MzY0Nw==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, I subscribed to those issues. You are also welcome to update this thread when feature is available too. Thanks for the swift response.",
+      "createdAt": "2020-03-30T22:53:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-606293647",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxMDg3ODU4NQ==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @DilumAluthge , https://github.com/JuliaLang/Pkg.jl/pull/1422 was merged, does that mean subdirectory compatibility is finally there?",
+      "createdAt": "2020-04-08T10:25:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-610878585",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxMDg4MDg3MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I believe we also need https://github.com/JuliaRegistries/Registrator.jl/issues/230",
+      "createdAt": "2020-04-08T10:31:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-610880871",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxMDg4MjQ5Mw==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ah okay, will keep waiting then :+1: ",
+      "createdAt": "2020-04-08T10:35:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-610882493",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3MTE1Mg==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, @DilumAluthge I am wondering if all the pull requests have been merged for subdirectory support so this can finally get merged. As it looks like those other pull requests are now closed. Best regards, Andrew",
+      "createdAt": "2020-04-29T03:30:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11169#issuecomment-620971152",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DecentralizedInternet\n- Repository: https://github.com/Lonero-Team/Decentralized-Internet\n- Created by: @Mentors4EDU\n- Version: v0.1.0\n- Commit: 3c0a39a7a15c5c02ad1055f1eb504da2bbe56ebd\n- Reviewed by: @Mentors4EDU\n- Reference: https://github.com/Lonero-Team/Decentralized-Internet/commit/3c0a39a7a15c5c02ad1055f1eb504da2bbe56ebd#commitcomment-38815615\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae41b89c3c1321b2a37a4b5006ecc25ab5795068c0f3f35ef98bc087eb22b2b9e54ab376972dad29b3e9feecf3a0d85c468434c377d1d3b9e8fdbbf4eb80bf7082eabaf695c7a4f38d695734044dfc4f748d4d40fb7cb0b72cbdbb4661bd080520c2c6a37db2f49de7aabc45601caa617a50d976c78c16aa0911f93a7cf5fc672d4466f85e2a4912efb431a149bc7d83178fa3f1eee74f3b27be06d4c73997b8dd8b029350e6f4ef4998497b18dde0d780b8c0cbd456f759182655f9c1998b8b393 -->",
+  "package_name": "DecentralizedInternet",
+  "closed_at": "2020-04-29T03:38:35Z",
+  "title": "New package: DecentralizedInternet v0.1.0"
+}

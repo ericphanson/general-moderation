@@ -1,0 +1,136 @@
+{
+  "created_at": "2022-12-08T14:08:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 73725,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85QCXkW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-08T14:12:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1342798102",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QCjTq",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "This package will be part of the  [Control Toolbox](https://github.com/control-toolbox) project aiming to provide tools to solve and analyze optimal control problems.",
+      "createdAt": "2022-12-08T14:46:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1342846186",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QCr2J",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "but isn't the name too generic?",
+      "createdAt": "2022-12-08T15:11:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1342881161",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QDCUl",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Can I use a name like CTDescriptions (for ControlToolboxDescriptions)? \r\n\r\nIn the future control toolbox, there will be solvers for optimal control problems but also methods to compute flows of ode (based on DifferentialEquations package), interfaces to NLP solvers (as `JuMP`), interfaces to NLE solvers (as `MINPACK` or `NLSolve`) but also a personal differential path following method to solve a one-parameter family of NLE equations. \r\n\r\nThe solvers will be called via a `solve` method as in the `CommonSolve` package but with an additional \"description\" of the method that will be called by the solver. For instance, if you want to solve an optimal control problem via a descent method with backtracking, with an optional argument `grid` set to `my_grid`, you will do\r\n\r\n```julia\r\nsol = solve(ocp, :descent, :backtracking, grid=my_grid)\r\n# or\r\nsol = solve(ocp, (:descent, :backtracking), grid=my_grid)\r\n# or\r\nsol = solve(ocp, :backtracking, grid=my_grid) # backtracking is only valid for descent method\r\n```\r\n\r\nThis concept of description will be used also for all the other solvers, so it is quite general but I understand that it will be more appropriate to give a more specific name. If `CTDescriptions` is better, I can change.\r\n\r\n",
+      "createdAt": "2022-12-08T16:20:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1342973221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QEkW_",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@control-toolbox yeah pick something more descriptive; If you don't have the functionality ready I'd actually suggest developing everything in a single repo/package and split them later to packages as necessary.",
+      "createdAt": "2022-12-08T21:22:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1343374783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QEybY",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Actually, I have already `Flows.jl` and `ControlToolbox.jl` working with \"Descriptions\" but I can put it the repo for the moment. Thanks!",
+      "createdAt": "2022-12-08T22:03:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1343432408",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R8jKg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-01-08T12:42:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1374827168",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Tvf8p",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-01-26T12:49:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73725#issuecomment-1404960553",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Descriptions\n- Repository: https://github.com/control-toolbox/Descriptions.jl\n- Created by: @control-toolbox\n- Version: v0.1.0\n- Commit: 91875169de4c0f2bb95b596985ed1c24337ed30a\n- Reviewed by: @control-toolbox\n- Reference: https://github.com/control-toolbox/Descriptions.jl/issues/6\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598fb5ce8cec14de2e7925db5789c1caee9030447938d17461729dacae381e1193a80eded2a0addb9a2d8f920d574b195df13a5abc09e4d92a87055b80375e473943868a19973771935f27c93741c4e58925a50e0078879994649611edf963f4b2cc2ff6e6312e3fe4fa05fe837f60d54f72d2fbb7a80c9302d22bc02b70cc542d8 -->",
+  "package_name": "Descriptions",
+  "closed_at": "2023-01-26T12:49:47Z",
+  "title": "New package: Descriptions v0.1.0"
+}

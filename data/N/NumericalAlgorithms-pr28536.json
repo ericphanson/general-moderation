@@ -1,0 +1,248 @@
+{
+  "created_at": "2021-01-24T08:54:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "StefanKarpinski",
+  "merged_at": null,
+  "pr_number": 28536,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NjMxMzYwMQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-24T08:56:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-766313601",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzYxNDUyMQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is this partly based on the Numerical Recipes books?",
+      "createdAt": "2021-01-26T15:19:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767614521",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzYzNTcxMg==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just checking, you registered https://github.com/JuliaRegistries/General/pull/2786 a while ago but now you deleted the repo. What's up with that?",
+      "createdAt": "2021-01-26T15:50:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767635712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY0MDMyMg==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski We can say partly based but not completely. More references will be added.\r\n@KristofferC I dropped working on that project because of many negative comments.",
+      "createdAt": "2021-01-26T15:56:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767640322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY2MTE0Mg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If this code is based on Numerical Recipes, then there are several legal issues here:\r\n\r\n1. You need a license to use Numerical Recipes code: http://numerical.recipes/licenses/\r\n2. Even if you have a license (you may), you cannot publish code based on Numerical Recipes under a different license, including the GPL, which is what you've published this under.\r\n\r\nIn short if it's based on Numerical Recipes as you've indicated then this code is not legally open source and cannot be registered in the Julia general registry (or, for that matter, published online at all).\r\n\r\nRegarding the now-deleted Bioinformatics package, the expectation when a package is registered is that the author will not delete the repo since that makes the package uninstallable. I suspect some of the pushback on that package was due to the overly broad name? This package name has a similar issue.",
+      "createdAt": "2021-01-26T16:26:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767661142",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY2MzMxMA==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski I think there is a misunderstanding, I didn't directly translate Numerical recipes C code to Julia. I wrote codes entirely myself. I referenced Numerical Recipes for numerical methods described in the book. ",
+      "createdAt": "2021-01-26T16:30:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767663310",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY2NTUzMA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That is unfortunately a very murky legal area but the safe legal practice has long been to completely avoid any code based in any way on Numerical Recipes. We cannot, in good conscience, expose Julia users to this kind of legal liability by allowing a package based on those books to be registered. If you want to personally take on that legal risk and publish the code, that's fine and none of our business, but you can't register the package here, I'm afraid.",
+      "createdAt": "2021-01-26T16:33:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767665530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY2NzMxMQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski Is it illegal to implement methods based on books? Is everyone implements their own algorithm? ",
+      "createdAt": "2021-01-26T16:36:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767667311",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY2ODIxMQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, it can be a copyright violation. Whether it is actually illegal or not would have to be decided in court. If there is any question about legality, however, we cannot allow a package to be registered here.",
+      "createdAt": "2021-01-26T16:37:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767668211",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY3MTAzNQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski Methods are not patented, I can give any other books as reference. They are in literature for many years. ",
+      "createdAt": "2021-01-26T16:41:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767671035",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY4MDI2Ng==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you want to rework the code to not be based on Numerical Recipes, that would be fine and you can register that. If you want to do that, you should probably start a new repo from scratch. I would suggest choosing a less general name as well.",
+      "createdAt": "2021-01-26T16:55:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767680266",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY4MzUwMQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski Methods are not based on 'only' Numerical Recipes, I can show you thousands of books contains the same methods.",
+      "createdAt": "2021-01-26T17:00:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767683501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY4NzExMw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You cited Numerical Recipes and answered \"yes\" to the direct question if this code was based on it, which is enough to make it legally irresponsible to accept registration of this package.",
+      "createdAt": "2021-01-26T17:06:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767687113",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY5NzY2MQ==",
+      "author": {
+        "login": "mrtkp9993"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski I'll repeat my previous answers:\r\n\r\n`I think there is a misunderstanding, I didn't directly translate Numerical recipes C code to Julia. I wrote codes entirely myself. I referenced Numerical Recipes for numerical methods described in the book.\r\nMethods are not patented, I can give any other books as reference. They are in literature for many years.`",
+      "createdAt": "2021-01-26T17:22:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-767697661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2OTM4NTQwMA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There's a few issues here...\r\n\r\n1. Legal: since I'm very unlikely to ever be in a position to need to implement these methods I took a look at your code and what's in Numerical Recipes and they do not seem notably similar, so that's good. If you say you didn't derive the code from the book then the legal situation is probably fine.\r\n\r\n2. Depth: this is a very small set of somewhat \"toy\" feeling implementations of a kind of random set of algorithms. It has the feel of \"I took these notes while studying and I'm putting them on the Internet.\" Which is great to do, but doesn't require this being a registered package.\r\n\r\n3. Name: `NumericalAlgorithms` is a very broad and suggests some serious aspirations. Are you intending to implement all numerical algorithms? Packages should generally be focused on some specific functionality. If this ends up being a collection of a lot of implementations of algorithms, all the more reason that it should not be a single package, but rather a collection of more specialized packages for each kind of algorithm. Related to the second point, if this is going to be a large collection of algorithms that are meant to serve as a starting point for more specialized implementations, then it would be better to publish but not register since it's not really meant to be used as a package but as a reference.\r\n\r\n2. History: you registered and then deleted `Bioinformatics`; that leaves some concern that the same thing will happen with this package, especially given the previous points. The package `Bioinformatics` had the same problem of having an overly broad name that it could never reasonably live up to and which, even if it did, would not be a good idea for a single package but rather an organization of more specialized packages.\r\n\r\nYou don't need to register something to have it be published and useful. Registering something is a commitment to maintaining it and not deleting it and means that it's something that makes sense for others to reuse. That doesn't seem like it's the case here.",
+      "createdAt": "2021-01-28T20:54:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28536#issuecomment-769385400",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NumericalAlgorithms\n- Repository: https://github.com/mrtkp9993/NumericalAlgorithms.jl\n- Created by: @mrtkp9993\n- Version: v0.1.0\n- Commit: 200d628f9927934b3ab659161f9b465f52fd1641\n- Git reference: main",
+  "package_name": "NumericalAlgorithms",
+  "closed_at": "2021-01-26T16:55:54Z",
+  "title": "New package: NumericalAlgorithms v0.1.0"
+}

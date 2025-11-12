@@ -1,0 +1,83 @@
+{
+  "created_at": "2019-04-29T05:00:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": "2019-04-30T05:30:33Z",
+  "pr_number": 401,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NzUxMjI0MQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please add julia compat. Also, kinda weird with the word \"App\" twice in the package name :)",
+      "createdAt": "2019-04-29T09:20:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/401#issuecomment-487512241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NzU5MzgzNw==",
+      "author": {
+        "login": "NHDaly"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Please add julia compat.\r\n\r\nI've added `[compat] julia = 1` to `master`. I tried re-typing `@JuliaRegistrator register()`, but it's now saying `An unexpected error occured during registration.` (https://github.com/NHDaly/ApplicationBuilderAppUtils.jl/issues/1#issuecomment-487590872)\r\n\r\nAny idea what i'm supposed to do differently? Or is the Registrator just temporarily down?\r\n\r\n\r\n\r\n> Also, kinda weird with the word \"App\" twice in the package name :)\r\n\r\nHaha yeah I know... I agree with you, but don't have any better ideas.\r\n\r\nIt's cause these are utilities _for the apps_ being built with ApplicationBuilder. That is, users are encouraged to add a dependency to this package if they want to get runtime OS information from inside their app. Before, I was injecting this functionality into the program being compiled, but it was very flaky.\r\n\r\nI didn't want to name it `ApplicationBuilderUtils`, because it's not utilities _for building Apps_, it's utilities to be accessed _from the apps themselves_. But they'll only work if you used `ApplicationBuilder` to build your app. Do you have any other good suggestions? :) I'd appreciate some help. :)\r\n\r\n",
+      "createdAt": "2019-04-29T14:07:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/401#issuecomment-487593837",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NzU5NTIzOA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Probably just something wrong with Registrator.\r\n\r\nNo, I don't really have a suggestion.",
+      "createdAt": "2019-04-29T14:10:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/401#issuecomment-487595238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4NzgyNTQ1OA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/NHDaly/ApplicationBuilderAppUtils.jl/releases/tag/v0.1.0) it is.\n<!-- 13bc5c60-6b09-11e9-9935-dd8d0de6fb5a -->",
+      "createdAt": "2019-04-30T05:30:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/401#issuecomment-487825458",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "Registering: ApplicationBuilderAppUtils\nRepository: https://github.com/NHDaly/ApplicationBuilderAppUtils.jl\nVersion: v0.1.0\nCommit: 8f0cdd6943a58204cdf64dea9a7f913b7d8a186d\nProposed by: @NHDaly\nReviewed by: @NHDaly\nReference: [https://github.com/NHDaly/ApplicationBuilderAppUtils.jl/issues/1#issuecomment-487648985](https://github.com/NHDaly/ApplicationBuilderAppUtils.jl/issues/1#issuecomment-487648985)\n\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf8181c869a954f74ffa97bdb06bb04ac91ccbe8f0b1d569df30106b7f8859eee5e11d49c38acb95723171a0a4ce5d6d091279cab6159b74f44bdc6dca1e7213c67c32330afdb9d0bc5b344e9c3d3a001590c80b2869f454b2e269afa91d79ab5ca78281373b76de6f8e066a6da9faa7c33a9029b8e62bba061c0cf56320eb190b55fa46c96748e2e5ed07bddbbab5e3a2 -->\n",
+  "package_name": "ApplicationBuilderAppUtils",
+  "closed_at": "2019-04-30T05:30:33Z",
+  "title": "New package ApplicationBuilderAppUtils: 0.1.0"
+}

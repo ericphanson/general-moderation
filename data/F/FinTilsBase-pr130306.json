@@ -1,0 +1,186 @@
+{
+  "created_at": "2025-05-05T04:35:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130306,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86p3fS7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-05T04:41:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2849895611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p4rDZ",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Package is still largely empty, cf. #130299\r\n\r\nYou might want to consider post-poning registration of FinTils packages until they have seen some development - if you need it registered in a registry, consider using a separate registry (via LocalRegistry).",
+      "createdAt": "2025-05-05T08:00:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2850205913",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p8i1m",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, this is not yet ready for registration. Based on the description \"Base package for other FinTils (Financial Utilities) packages.\", you should only try to register `FinTilsBase` after some _other_ FinTils package is ready for registration. Until then, independently of how empty or non-empty it is, I would consider it in the category of \"packages that are only useful for a closed group\", and thus ineligible for the General registry.\r\n\r\nBefore registering any other package depending on `FinTilsBase`, please\r\nconsider [the guidelines on when a package can be registered](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) and [additional explanations on Discourse](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4). \r\n\r\nAs a package that is probably not very user-facing, but only serves as dependency of other packages that are user-facing, I wouldn't put _too_ much scrutiny on `FinTilsBase`. Still, I would consider it important to have a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation that at least shows the docstrings of the functions and types in `FinTilsBase`.\r\n\r\nIn any case, please do not try to register this until some user-facing packages in the FinTils organization are sufficiently developed to be useful for the general public. Until then, use a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl).",
+      "createdAt": "2025-05-05T14:36:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2851220838",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p_sc_",
+      "author": {
+        "login": "cnaak"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz  @stemann  some thoughts:\r\n\r\nI don't recall \"Package largely empty\" being a failing criterion for package registration _before_. This is the first time I see it. The package in question, although does little by itself, it **WAS** being conceived/written as the fundamental part of a larger ecosystem, which I wasn't able to properly develop since attempts to `precompile()`ing dependent packages issues the complaint that the dependency is not registered 🙄 (:roll_eyes)!!\r\n\r\nThe very fact that `precompile()` complains about unregistered dependencies, _should instruct registration gate-keepers to be more aware of it, and considerate of one's choice for package development paradigm_, in this and many other cases, of having a small, fundamental/**Base** package with **common anchors** (TypeSystem), **imports**, **definintions**, is a **package development paradigm** quite in use in the julia ecossytem.\r\n\r\nI was inspired towards this package development paradigm by no less than the eminent `DifferentialEquations` ecosystem, that quite regularly includes quite (seemingly) \"empty\" packages like this one: [DiffEqPDEBase](https://github.com/SciML/DiffEqPDEBase.jl/blob/master/src/DiffEqPDEBase.jl) — see? another \"Base\" package that seems empty/useless/niche at first, but belonging to a greater ecosystem.\r\n\r\nIf small players like me are to be given a hard time having pre-requisite, fundamental, Base packages registered, thus hindering one's preferred flow, since other packages down the road cannot (pre)compile due to unregistered dependencies, we'll be forced to change the development paradigm, which is very unfortunate / counter productive and annoying and discriminatory, since the registry already have plenty of \"largely empty\" packages already registered and in production, not to mention the unjustified ban or downplay of a package development paradigm, used by some, cannot be used by others.\r\n\r\nAs for the \"personal\" package wording, I believe to be quite common among brand new packages developers who first have a particular problem to tackle in mind, and don't want to include elegance everywhere (or at all) until the problem is solved, the working concept is tested and established, and then a more formal, better though, form is produced, before removing the \"personal\" label. Do not be mistaken: the packages have a very real world application than can benefit people by the hundreds of thousands, maybe millions, and even serve as a use case for Julia outside the STEM sciences.\r\n\r\nFinally, I'm _**NOT** asking for this particular package to be registered_, as I already steered to another direction. I just leave this thoughts here to prompt reflection.",
+      "createdAt": "2025-05-05T19:02:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2852046655",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p_7R1",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think content has been a requirement since General was called [METADATA.jl](https://github.com/JuliaLang/METADATA.jl).\r\n\r\nDiffEqPDEBase seems to have been deprecated at v0.4.0. Cf. non-deprecated version of said package: https://github.com/SciML/DiffEqPDEBase.jl/blob/v0.3.5/src/DiffEqPDEBase.jl",
+      "createdAt": "2025-05-05T19:25:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2852107381",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qA4lr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> some thoughts:\r\n\r\nThank you for your response! There is a rather fundamental misunderstandings here, and I'm quite sure you're not the only one that has this misunderstanding. So let me try to respond in a bit more detail\r\n\r\n> I don't recall \"Package largely empty\" being a failing criterion for package registration _before_. This is the first time I see it.\r\n\r\nThe [guidelines for `General`](https://github.com/JuliaRegistries/General/?tab=readme-ov-file#faq) have been in place for a long time, long before I ever got involved with Julia. We've never allowed empty placeholder packages. Maybe, until a few years ago there was also very little enforcement or review of registrations. So some things may have slipped through, [but that is no argument for _new_ registrations](https://github.com/JuliaRegistries/General/?tab=readme-ov-file#my-new-package-registration-pr-fails-one-or-more-automerge-checks-because-of-reason-x-however-the-general-registry-already-contains-a-package-pastpackage-that-does-thing-x-will-registry-maintainers-consider-this-pastpackage-when-they-evaluate-my-new-package-registration-pr).\r\n\r\n> I wasn't able to properly develop since attempts to `precompile()`ing dependent packages issues the complaint that the dependency is not registered 🙄 (:roll_eyes)!!\r\n\r\nYes, and this is the crucial point: \"Registered\" does not mean \"Registered in the `General` registry\". It's absolutely true the developing interdependent package is nearly impossible without registering them. But \"registration\" means a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl). In contrast, the `General` registry is for sharing packages with the larger community. These packages must be \"ready\" and contain useful functionality and enough documentation that others can figure out how to use them. Until they reach that stage, they should be \"registered\", but not in the `General` registry.\r\n\r\nNot to get too far off track, but there is even a sizable group of maintainers that want to push for registration [meeting the much higher standard of a 1.0 release](https://github.com/JuliaRegistries/General/issues/111019), which would include a stable and fully documented API. I'm not particularly in favor of that proposal, exactly for the reason that your response shows: In many people's mind, registration in `General` is almost a prerequisite, and we need to have much better communication about the development lifecycle of projects before they are mature enough to belong in `General`.\r\n\r\nUsing a `LocalRegistry`, or working with unregistered packages (e.g., via [the new `[sources]` feature](https://pkgdocs.julialang.org/v1/toml-files/#The-%5Bsources%5D-section)) should be the norm.\r\n\r\n> The very fact that `precompile()` complains about unregistered dependencies, _should instruct registration gate-keepers to be more aware of it, and considerate of one's choice for package development paradigm_, in this and many other cases, of having a small, fundamental/**Base** package with **common anchors** (TypeSystem), **imports**, **definintions**, is a **package development paradigm** quite in use in the julia ecossytem.\r\n\r\nThere is nothing wrong with that paradigm! It's extremely common and useful, but that doesn't mean that development _starts_ with a registration in `General`.\r\n\r\n\r\n> I was inspired towards this package development paradigm by no less than the eminent `DifferentialEquations` ecosystem, that quite regularly includes quite (seemingly) \"empty\" packages like this one: [DiffEqPDEBase](https://github.com/SciML/DiffEqPDEBase.jl/blob/master/src/DiffEqPDEBase.jl) — see? another \"Base\" package that seems empty/useless/niche at first, but belonging to a greater ecosystem.\r\n\r\nThat particular package is 8 years old and marked as obsolete. And besides that, as I said before: I _do_ apply lower standards to a `Base` package, as it is not user-facing. Basically, I think a registration of a `Base` package would (or should) be treated in relation to the ecosystem that it is part of. If that ecosystem is still \"empty\", it is not yet time for the `Base` package to be registered in `General`.\r\n\r\n\r\n> If small players like me are to be given a hard time having pre-requisite, fundamental, Base packages registered\r\n\r\nThat is not what is happening here! First, there is no fundamental distinction between \"big\" and \"small\" players (yes: big established organization would have an easier time with registering a very general package name like `DifferentialEquations` because they can guarantee continuing maintenance; but that's an entirely different issue.\r\n\r\n\r\n> thus hindering one's preferred flow, since other packages down the road cannot (pre)compile due to unregistered dependencies, we'll be forced to change the development paradigm\r\n\r\nYou are not being asked to change your development workflow\r\n\r\n> which is very unfortunate / counter productive and annoying and discriminatory, since the registry already have plenty of \"largely empty\" packages already registered and in production\r\n\r\nEven accounting for `Base` package, I don't actually think that there are many \"largely empty\" packages. Certainly, they would all receive the same scrutiny if registered today.\r\n\r\n> not to mention the unjustified ban or downplay of a package development paradigm, used by some, cannot be used by others.\r\n\r\nAbsolutely not! The paradigm of `Base` packages is open to _all_ developers. The misunderstanding is that that paradigm relies on registrations in the `General` registry.\r\n\r\n\r\n> As for the \"personal\" package wording, I believe to be quite common among brand new packages developers who first have a particular problem to tackle in mind, and don't want to include elegance everywhere (or at all) until the problem is solved, the working concept is tested and established, and then a more formal, better though, form is produced, before removing the \"personal\" label.\r\n\r\nLet's not get too hung up on the \"personal\" wording. What I was trying to say is that a `Base` package _by itself_ is not really useful to the larger Julia community. That makes it not a good candidate for registration in `General` before there isn't at least one other package that relies on it. I'm not saying `Base` packages shouldn't be registered in `General`! This is only about _when_ they should be registered.\r\n\r\n> Finally, I'm _**NOT** asking for this particular package to be registered_, as I already steered to another direction.\r\n\r\nThere is no reason for you to change your development workflow, in terms of having a `Base` package. The only thing you have to do is to make [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) part of your workflow.\r\n\r\n> I just leave this thoughts here to prompt reflection.\r\n\r\nYes, thank you! To me, that reflection should be on how and where to better communicate the role that the `General` registry plays in the ecosystem, and what the right time is for a package to be registered in `General`.\r\n\r\n",
+      "createdAt": "2025-05-05T21:16:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2852358507",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qD6hz",
+      "author": {
+        "login": "cnaak"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thank you for your kind and thorough clarifications! Thank you as well for pointing out alternatives — such as using a local registry, which I hope, won't be too hard and/or time consuming and/or side tracking to implement, as it almost sounds like a scary or to tall of a thing to do.\r\nBest regards!",
+      "createdAt": "2025-05-06T03:12:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2853152883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qKSOi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From personal experience, I've always found a `LocalRegistry` to be very easy to work with (easier than `General`, in fact, with all that reliance on GitHub and bots).\r\n\r\nIf you do run into any issues, I would recommend asking on [Discourse](https://discourse.julialang.org)",
+      "createdAt": "2025-05-06T14:38:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2854822818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qLm6J",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "One can also use `Pkg.develop` with local packages, I use that all the time and don’t use LocalRegistry. However I don’t work on a big coupled ecosystem of packages so maybe the trade offs are different in that case.",
+      "createdAt": "2025-05-06T16:15:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130306#issuecomment-2855169673",
+      "viewerDidAuthor": true
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FinTilsBase\n- Repository: https://github.com/FinTils/FinTilsBase.jl\n- Created by: @cnaak\n- Version: v0.1.0\n- Commit: 8bf587da60be9572c935052a0c3c1aa684384353\n- Reviewed by: @cnaak\n- Reference: https://github.com/FinTils/FinTilsBase.jl/commit/8bf587da60be9572c935052a0c3c1aa684384353#commitcomment-156379006\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d9b6b63c31da831eb19f244c9ac97d3847f32c505c310aa1faba33122b7c6a229289d75dd908090fdc03a5524ade7f3f3e1afc6c890b542811c09031b7fca70512367d91678f66663af792a675a4e7dcd61c12be2c6697899d4207cadceee5ced8da5a80d81c21c858b9c5512d200c3102e9bb4f992fe554485b93d896261e8e280fe008e23eaf1864dcc34348e371207837da06e40368bd75784bc526dcc9be3251aed498db0fff1b2220511d82b42a -->",
+  "package_name": "FinTilsBase",
+  "closed_at": "2025-05-05T14:36:49Z",
+  "title": "New package: FinTilsBase v0.1.0"
+}

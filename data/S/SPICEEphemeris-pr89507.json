@@ -1,0 +1,172 @@
+{
+  "created_at": "2023-08-12T21:10:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 89507,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85j50ws",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-12T21:15:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676102700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j562R",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please make sure to add some documentation before registering; at least a basic usage example in the README.\r\n\r\nThe package name is totally fine, but personally, I wouldn't have been able to resist `EphemeralSPICE` 😉",
+      "createdAt": "2023-08-12T22:31:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676127633",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j57SD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Or maybe not, since TIL that [\"Ephemeris\"](https://en.wikipedia.org/wiki/Ephemeris) is a thing and doesn't have anything to do with \"ephemeral\". I guess I was thinking the package name is a little hard to read… (not an objection)",
+      "createdAt": "2023-08-12T22:36:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676129411",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j6Pmc",
+      "author": {
+        "login": "cadojo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Please make sure to add some documentation before registering; at least a basic usage example in the README.\n\nI do have documentation in the current commit. I think it's sufficient, but I'm always happy for feedback / suggestions. The development version of the documentation is hosted at the following URL.\n\n    https://docs.loopy.codes/SPICEEphemeris.jl/dev/\n\nI'll specify [noblock] here for me. Do you need to add [noblock] to your comments to prevent blocking the merge? Or does the bot only check my comments?",
+      "createdAt": "2023-08-13T03:52:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676212636",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j656U",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> The development version of the documentation is hosted at the following URL.\r\n> https://docs.loopy.codes/SPICEEphemeris.jl/dev/\r\n\r\nYou'll want to put that URL in the README. Your \"Documentation: Passing\" badge currently gives a 404 error. This might fix itself automatically once the package is registered and there's a `stable` folder and automatic redirect, but please ensure that's the case.\r\n\r\nIt would be a good idea to include a paragraph in the README explaining the basic purpose of this package to someone who just randomly comes across it. \"A wrapper around NAIF's SPICE kernel solar system ephemeris platform!\" is a bit too short and only understandable to specialists already familiar with the field. You should add least add a link there to the platform you're wrapping, and summarize in a sentence or two what that platform does.\r\n\r\nI would also duplicate the usage example from the main page of your docs to the README.\r\n\r\n[SPICE.jl](https://github.com/JuliaAstro/SPICE.jl#readme) seems to have a fairly decent README that I would emulate.\r\n\r\n> I think it's sufficient\r\n\r\nYour documentation is fine as a starting point, and definitely good enough for registration. In general, the bar for registration is whether someone can tell what the purpose of the package is and how to get started with it.\r\n\r\n> Do you need to add [noblock] to your comments to prevent blocking the merge?\r\n\r\nYes, I was blocking the merge because of the documentation issue. As soon as you expand the README a little bit and make sure there's a working link to the hosted documentation, I'll unblock so that the merge can go through.",
+      "createdAt": "2023-08-13T15:01:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676385940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j7Cv1",
+      "author": {
+        "login": "cadojo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This PR should not merge. I've updated the README, and renamed this package to `SPICEBodies.jl`. See #89551.",
+      "createdAt": "2023-08-13T17:43:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676422133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j7G46",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It will be closed automatically after 30 days of inactivity",
+      "createdAt": "2023-08-13T19:08:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1676439098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mX1Xg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-09-13T12:23:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1717523936",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nFX5e",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-09-21T12:23:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89507#issuecomment-1729461854",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SPICEEphemeris\n- Repository: https://github.com/cadojo/SPICEEphemeris.jl\n- Created by: @cadojo\n- Version: v0.1.0\n- Commit: 19dfa7ce8c5a51c1f654a4042cc197aaeaddd10b\n- Reviewed by: @cadojo\n- Reference: https://github.com/cadojo/SPICEEphemeris.jl/commit/19dfa7ce8c5a51c1f654a4042cc197aaeaddd10b#commitcomment-124343386\n- Description: Ephemeris via SPICE kernels.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd617bef06f7a5f15636e28a913504dbc1d4ad636b84156a8a17f604438711713e4ec7c63cccb33ac80d1b2de7ea51ce520778ce02c991ab5833c67410974cbd236f54bbe455abf0d10727d9a776a8dac48a755195133eefedd133cd6d6eb9c167256fddbded55809192e8a1aa07d35afc46affc6e82b05e17f199023d36dc4a4e12547dafaa6c2bbc3c38bffd310b5e21fb0865aa6f068afa3b7cbbcb32a28b1952ff59b129c12cd05ebe31eadefd52fa3 -->",
+  "package_name": "SPICEEphemeris",
+  "closed_at": "2023-09-21T12:23:14Z",
+  "title": "New package: SPICEEphemeris v0.1.0"
+}

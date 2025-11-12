@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-05-30T19:17:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 107980,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_mOLM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: AbstractTrees, DataInterpolations, HDF5, JSON, Memoize, OrderedCollections, PCHIPInterpolation, PrecompileTools, StaticArraysCore\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-30T19:22:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2140725964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_mukr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Going by the package description, a name like `IMASDictionaries` would be more suitable. Basically, expand whatever `DD` is supposed to stand for, and you will have a perfectly fine Julia package name that will pass the automatic checks",
+      "createdAt": "2024-05-30T21:02:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2140858667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_my42",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you @goerz for the suggestion. This package is foundational to over 50+ packages that have been developed over years within our organization. We are in the process of making much of our code base open-source, but changing package names at this point would be quite painful. How unreasonable would it be to keep the name as is? Also, we have a few other packages that are also all capital letters.",
+      "createdAt": "2024-05-30T21:14:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2140876342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_nR2j",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "We could do that, but since this is not a strict requirement, what's the general process for requesting the merge to go forward anyways? In fact, two of the packages we depend on don't follow that convention: HDF5.jl and JSON.jl",
+      "createdAt": "2024-05-30T23:34:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2141003171",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_nria",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> How unreasonable would it be to keep the name as is?\r\n\r\nWell, you'd have to go on Slack, find a full registry maintainer, and convince them to merge it manually (cf. [the bot's explanation of the procedure](https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2140725964)). Definitely possible, although it would probably be merged somewhat begrudgingly.\r\n\r\n> Also, we have a few other packages that are also all capital letters.\r\n\r\nThis might be a good time to review your package names and bring as much of it as possible in line with the [package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines). Personally, I'm not opposed to package names with all-caps names. Specifically, pronounceable acronyms. Package names that would be acceptable if not in all-caps (as \"less systematic names\") should also be acceptable in all-caps. Still, it requires a manual merge and thus places a burden on the registry maintainers, so it's best to keep it to a minimum.\r\n\r\nIf you have a large, somewhat closed organization with dozens of packages with names that are unsuitable for the General registry, a `LocalRegistry` would be a good way to go. The one unfortunate consequence would be that packages in General would not be able to depend on those packages.\r\n\r\nP.S.: `HDF5.jl` and `JSON.jl` are both very common file formats. Besides, \"package X got an exception\" is never a good argument.",
+      "createdAt": "2024-05-31T02:00:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2141108378",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DCyHc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-06-30T12:23:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2198544860",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86D9ctr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-07-08T12:23:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107980#issuecomment-2213923691",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IMASDD\n- Repository: https://github.com/ProjectTorreyPines/IMASDD.jl\n- Created by: @orso82\n- Version: v0.1.0\n- Commit: c01df097174381a3594560a798664291d01b86e4\n- Reviewed by: @orso82\n- Reference: https://github.com/ProjectTorreyPines/IMASDD.jl/issues/11#issuecomment-2140719550\n- Description: Basic data dictionary functionalities of IMAS.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598c7a2f3f152e70fa0f1cfdc70f6c76b27c43b920a9dee8a82eb15dc56a323d8b3203cdf26c687c9e51cca5c4fd575b4c7f8cb09a263bed65a6d53653e8cae1246c70309fafeee0d9d7220fa527a8830eb7a3ec5d2d348df234450791f216ca36de9671a05adacf0347d9c382605cd67a18b5315ea02047e4a861eb343fa79d4b7 -->",
+  "package_name": "IMASDD",
+  "closed_at": "2024-07-08T12:23:28Z",
+  "title": "New package: IMASDD v0.1.0"
+}

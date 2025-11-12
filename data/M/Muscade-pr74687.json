@@ -1,0 +1,117 @@
+{
+  "created_at": "2022-12-27T11:10:31Z",
+  "review_comments": [
+    {
+      "id": 1240309578,
+      "node_id": "PRR_kwDOBhF1q85J7Z9K",
+      "user": {
+        "login": "PhilippeMaincon",
+        "id": 7711501,
+        "node_id": "MDQ6VXNlcjc3MTE1MDE=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7711501?u=eaeca35413f29b62c7de5173cef3ef598d9a06e8&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/PhilippeMaincon",
+        "html_url": "https://github.com/PhilippeMaincon",
+        "followers_url": "https://api.github.com/users/PhilippeMaincon/followers",
+        "following_url": "https://api.github.com/users/PhilippeMaincon/following{/other_user}",
+        "gists_url": "https://api.github.com/users/PhilippeMaincon/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/PhilippeMaincon/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/PhilippeMaincon/subscriptions",
+        "organizations_url": "https://api.github.com/users/PhilippeMaincon/orgs",
+        "repos_url": "https://api.github.com/users/PhilippeMaincon/repos",
+        "events_url": "https://api.github.com/users/PhilippeMaincon/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/PhilippeMaincon/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/74687#pullrequestreview-1240309578",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/74687",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/74687#pullrequestreview-1240309578"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/74687"
+        }
+      },
+      "submitted_at": "2023-01-09T11:12:16Z",
+      "commit_id": "db921a0e19d306351444f279134b740d977d2f55"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 74687,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85RaOfI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-27T11:20:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74687#issuecomment-1365829576",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RaPiq",
+      "author": {
+        "login": "PhilippeMaincon"
+      },
+      "authorAssociation": "NONE",
+      "body": "AutoMerge complains that Unit.jl cannot be found hence Muscade does not compile on the server.  However, /src/Unit.jl is part of the package code (it is under VC and present on the GITHUB server), and my tests run locally.  I welcome any insight AND would like the package registered even if faulty, to stake claim to the name \"Muscade.jl\".",
+      "createdAt": "2022-12-27T11:28:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74687#issuecomment-1365833898",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R_IL-",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/SINTEF/Muscade.jl/blob/c3174d37bc855710388c3d319925a318d1eba709/src/Muscade.jl#L60 (and https://github.com/SINTEF/Muscade.jl/blob/c3174d37bc855710388c3d319925a318d1eba709/src/Muscade.jl#L64) need `core` instead of `Core`.\r\n\r\n[noblock]",
+      "createdAt": "2023-01-09T11:43:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74687#issuecomment-1375503102",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R_KaS",
+      "author": {
+        "login": "PhilippeMaincon"
+      },
+      "authorAssociation": "NONE",
+      "body": "Bless you, Frederik!  I was absolutely at wits' end.  So a wrong caps bug, forgiven on Windows, tripped the build on Linux...\r\n\r\nEasy to fix now.",
+      "createdAt": "2023-01-09T11:52:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74687#issuecomment-1375512210",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Muscade\n- Repository: https://github.com/SINTEF/Muscade.jl\n- Created by: @PhilippeMaincon\n- Version: v0.2.0\n- Commit: 3219f3e5634b1a1ec88b64cadd992fafd80ed2c9\n- Reviewed by: @PhilippeMaincon\n- Reference: https://github.com/SINTEF/Muscade.jl/issues/9#issuecomment-1375518064\n- Description: Framework for FEM-constrained optimisation problems\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f36813695daff81f994cc8bebc005525a1e410bfb84f41b7ba6fad51a21a88738d1d761f5ea8998d09aa4d50454a80bce3a9a92c3be90dcc207cae4567df02c37dfe4aadf283dc4a55e511016fdef3d4e3ff9f4de4159c96c210074224d9d67c21f8e8f24907c0de66a213afeed6d9d8 -->",
+  "package_name": "Muscade",
+  "closed_at": "2023-02-24T23:39:37Z",
+  "title": "New package: Muscade v0.2.0"
+}

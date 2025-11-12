@@ -1,0 +1,113 @@
+{
+  "created_at": "2022-04-30T10:04:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 59416,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85CZbiZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, Plots, YAML\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-30T10:12:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1113962649",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CZvIR",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@kaat0 please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-04-30T19:38:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1114042897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CaLFP",
+      "author": {
+        "login": "kaat0"
+      },
+      "authorAssociation": "NONE",
+      "body": "I took the opportunity to review the package naming guidelines. It is better to include the plural 's' in the package name after many thoughts. Therefore, I will register the package with the added 's' and the added `[compat]` entry for `julia`.",
+      "createdAt": "2022-05-01T07:24:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1114157391",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Cbrd4",
+      "author": {
+        "login": "kaat0"
+      },
+      "authorAssociation": "NONE",
+      "body": "How do I close this PR?",
+      "createdAt": "2022-05-02T06:57:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1114552184",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CbrwZ",
+      "author": {
+        "login": "kaat0"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you!",
+      "createdAt": "2022-05-02T06:59:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1114553369",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EW8qA",
+      "author": {
+        "login": "kaat0"
+      },
+      "authorAssociation": "NONE",
+      "body": "see #61785",
+      "createdAt": "2022-06-05T19:02:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59416#issuecomment-1146866304",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TrainRun\n- Repository: https://github.com/railtoolkit/TrainRun.jl\n- Created by: @kaat0\n- Version: v0.8.0\n- Commit: 25959f730233eb1003200047b0f68c2e0b709594\n- Git reference: HEAD\n- Description: TrainRun.jl will take a user-defined train and a path as an input for a train run calculation. It can calculate the train run as a time-efficient or energy-efficient operation mode. The results can then be used within the Julia environment.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial release: TrainRun.jl is a step towards open science and open data in railway engineering. Its modular design offers the possibility to serve as a basis for future optimization and development. TrainRun.jl is suitable for qualitative calculations to compare different trains, and it is publicly available, and we invite others to collaborate.\n<!-- END RELEASE NOTES -->",
+  "package_name": "TrainRun",
+  "closed_at": "2022-05-02T06:58:54Z",
+  "title": "New package: TrainRun v0.8.0"
+}

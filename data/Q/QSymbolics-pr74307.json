@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-12-17T23:44:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 74307,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Q2qaw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Symbolics. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-17T23:58:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74307#issuecomment-1356506800",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Q2qrG",
+      "author": {
+        "login": "Krastanov"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "In the last 6 days I have registered `QSymbolicsBase`, `QSymbolicsClifford`, and `QSymbolicsOptics`, which are all dependencies for this final `QSymbolics` package meant for symbolic manipulation of quantum information objects. It also happens to be based on `Symbolics`.\r\n\r\n**Is this a reason enough to keep the current name `QSymbolics`?**\r\n\r\n[noblock]",
+      "createdAt": "2022-12-18T00:04:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74307#issuecomment-1356507846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RWJ9g",
+      "author": {
+        "login": "Krastanov"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "please close, renamed package is being registered at https://github.com/JuliaRegistries/General/pull/74636",
+      "createdAt": "2022-12-26T00:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74307#issuecomment-1364762464",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QSymbolics\n- Repository: https://github.com/Krastanov/QSymbolics.jl\n- Created by: @Krastanov\n- Version: v0.1.0\n- Commit: b6ed45a7d4fc608cbb9227a1f41b32e179d8e751\n- Reviewed by: @Krastanov\n- Reference: https://github.com/Krastanov/QSymbolics.jl/commit/b6ed45a7d4fc608cbb9227a1f41b32e179d8e751#commitcomment-93434233\n- Description: Computer algebra tools for symbolic manipulations in quantum mechanics and quantum information\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67d6975d831726b8a050d9b66b92f08d70807a719342fb3fefc70edbc81a743928101307f2f0afe90b918f42eccbb341107feff4c465a17e4c7d7068c62174df2e7f60ff339d5b9e6a4124f6d88900647580a699cf93e7a083940975d2cb380bcbab2cd026879ed5902653006544fe330eeed2793deb0b0f06238552d20d0ab52dd4e1e1ec115243d09428a54d0b39902370294da85167eb770e785b80d2f8d9c3d7454de1a3b5e7450d2e5d8e4f70471 -->",
+  "package_name": "QSymbolics",
+  "closed_at": "2022-12-26T22:02:23Z",
+  "title": "New package: QSymbolics v0.1.0"
+}

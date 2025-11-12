@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-07-24T20:38:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 41461,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8400PMv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The compat entry for `julia` is unbounded.\n- Package name similar to 1 existing package.\n  1. Similar to Trapz. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-07-24T20:41:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41461#issuecomment-886108975",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8400QIS",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@azev77 please see the message above.\r\n\r\nHowever, does this package really need to be registered?  It looks like a personal collection of utilities, and at the moment it seems also to be very limited in scope.  Please see https://github.com/JuliaRegistries/General/blob/ec0433f753b4a20b3ed391bac9773efc584e76e8/README.md#do-i-need-to-register-a-package-to-install-it and https://github.com/JuliaRegistries/General/blob/ec0433f753b4a20b3ed391bac9773efc584e76e8/README.md#should-i-register-my-package",
+      "createdAt": "2021-07-24T21:21:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41461#issuecomment-886112786",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8400Qjm",
+      "author": {
+        "login": "azev77"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano thank you for looking @ this. \r\n\r\n> However, does this package really need to be registered? It looks like a personal collection of utilities, and at the moment it seems also to be very limited in scope.\r\n\r\nThis is my first version of a Julia package, so I deliberately made my first version as minimal as possible bc I don't know much about making packages. \r\nOnce I figure this out I intend to add a lot of features to this package (including pure Julia versions...). \r\n\r\n1. the only error I found `ERROR: LoadError: ArgumentError: Package WrapR does not have RCall in its dependencies:`\r\nI fixed it.\r\n2. `Package name similar to 1 existing package.` I have no idea what this means. What is my package similar to?\r\n",
+      "createdAt": "2021-07-24T21:41:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41461#issuecomment-886114534",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: WrapR\n- Repository: https://github.com/azev77/WrapR.jl\n- Created by: @azev77\n- Version: v0.1.0\n- Commit: 1425fa279e2ecea9aa8fbf39587a109cd9b5ddf6\n- Reviewed by: @azev77\n- Reference: https://github.com/azev77/WrapR.jl/issues/1#issuecomment-886118389\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b8da5acb77135e5b6d1790e30e172b7ec541d8e7e0c0ae8c38716a8d4544c60e19965bc2b42441699cd6444579c1adc96ff1eb34af81fc89cbf5dad1015e36410baa656d1872f0aaafab06204cf52d2058c6c28324a78bf0baf2112afff3845037c6231e54deba028e965f22da3cae71 -->",
+  "package_name": "WrapR",
+  "closed_at": "2021-07-29T14:41:48Z",
+  "title": "New package: WrapR v0.1.0"
+}

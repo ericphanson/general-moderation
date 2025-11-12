@@ -1,0 +1,250 @@
+{
+  "created_at": "2020-04-16T09:23:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 13081,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNDUzMTA4NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Name is not at least five characters long\n- The following dependencies do not have a compat entry that has an upper bound: BinaryProvider, Nemo, Singular, julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-04-16T09:31:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-614531085",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjI5NDcwMw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@thofma I would **very strongly** recommend a longer and more descriptive package name.\r\n\r\nHow about `GroebnerBasis.jl`?",
+      "createdAt": "2020-04-20T03:59:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616294703",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjQ3NDc4NQ==",
+      "author": {
+        "login": "thofma"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Up to @ederc, I just helped with the registration process.",
+      "createdAt": "2020-04-20T10:59:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616474785",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjUzNzIzMg==",
+      "author": {
+        "login": "ederc"
+      },
+      "authorAssociation": "NONE",
+      "body": "The package is a wrapper for the C library gb that's why it is called GB.jl. Moreover, the package is already mentioned in several scientific publications, it is already known by its name in the corresponding community. Further, it is part of various proposals for grants which are currently still in the review process. So changing the name wouldn't be a good move for several reasons.",
+      "createdAt": "2020-04-20T13:00:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616537232",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjcxMTI0MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`GB.jl` is very close visually to `GR.jl`. So I don't think we should merge this name.\r\n\r\nThere are plenty of good alternative names.\r\n\r\n@KristofferC What do you think?",
+      "createdAt": "2020-04-20T17:47:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616711241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjcxODI0NA==",
+      "author": {
+        "login": "thofma"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think @ederc has given good reasons why changing the name is not a good idea.\r\n\r\nIs this a new rule about visually close package names? Have not found it in the guidline. And why is there `YAML` and `YAJL`? Or `JSON2` and `JSON3`? Look visually very close, but have been merged happily.",
+      "createdAt": "2020-04-20T18:00:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616718244",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjcyMTIyMA==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I generally think that these names are okay when they're wrapping something with that exact name. And name similarity is IMO not an issue here. At the very least the B and R keys aren't as close together as the J and M keys for YAJL and YAML 😅 ",
+      "createdAt": "2020-04-20T18:06:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616721220",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjcyNjU3MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Let's see what @StefanKarpinski, @KristofferC, and/or @fredrikekre think.\r\n\r\nIf any of those three are fine with this name, I'll merge this PR.\r\n\r\nBecause this is such a short package name, I'd like one of them to review it, since they are the biggest maintainers of the General registry.",
+      "createdAt": "2020-04-20T18:17:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616726571",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjcyNzE4Nw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm generally pretty lax about letting people use names that they prefer, but there is a limited set of two-character names (less than 1000) and it seems kind of unreasonable to want to register something as generic as GB. GR is grandfathered in, is the name of a preexisting framework, and is not nearly as common a pair of letters as GB. GB is gigabyte and Great Britain, neither of which this package is about. So while I've generally sided for letting people pick whatever name they want if they really insist when registering, this feels a bit over the line. Given that the package says:\r\n\r\n> This is a julia library which provides an interface between [Singular](https://github.com/Singular/Sources) and [gb](https://github.com/ederc/gb).\r\n\r\nHow about calling it `SinglarGB`? That makes it a lot less generic.",
+      "createdAt": "2020-04-20T18:18:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616727187",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjczNTAyOQ==",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> So while I've generally sided for letting people pick whatever name they want if they really insist when registering, this feels a bit over the line.\r\n\r\nFor what it's worth, my feelings exactly. ",
+      "createdAt": "2020-04-20T18:34:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616735029",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjczNjAwOA==",
+      "author": {
+        "login": "christopher-dG"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I quite like SingularGB",
+      "createdAt": "2020-04-20T18:36:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616736008",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNzEzMzE2Nw==",
+      "author": {
+        "login": "ederc"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, I will rename it to GroebnerBasis.jl if that's fine for all of you.\nSingularGB is not a good name since there will be different interfaces\nadded in the next months.\n\nOn 04/20/20, Chris de Graaf wrote:\n> I quite like SingularGB\n> \n> -- \n> You are receiving this because you were mentioned.\n> Reply to this email directly or view it on GitHub:\n> https://github.com/JuliaRegistries/General/pull/13081#issuecomment-616736008\n\n-- \ngpg: http://hkps.pool.sks-keyservers.net/pks/lookup?search=0x6e0d034b959fde6a&fingerprint=on&op=index\n",
+      "createdAt": "2020-04-21T11:53:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13081#issuecomment-617133167",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GB\n- Repository: https://github.com/ederc/GB.jl\n- Created by: @thofma\n- Version: v0.1.0\n- Commit: 12f79040d3bbb45b3a95d52d6cc062f1414c8a47\n- Reviewed by: @thofma\n- Reference: https://github.com/ederc/GB.jl/commit/12f79040d3bbb45b3a95d52d6cc062f1414c8a47#commitcomment-38531464\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae48ceefc136ac9a002133c3cc7ec5aae5e635acb5c477d11b5c8b9d7c1918fa836f93be58b4ea2b76852d03af8c6502191030eb75731ae0c0a8e1935caa03f93b74cc74a6d3d2af5eee3ec30ad90fc7c8a43d8c4558b0233e388ad965024d2feb257272332949b7563372cc766724b401e5782cae12754f87b2ee14d31962c63221511cffee2dc9a8f674fa72a0e0db498d32e1146e4fbda6f70c16e99f0e806be -->",
+  "package_name": "GB",
+  "closed_at": "2020-04-27T20:44:04Z",
+  "title": "New package: GB v0.1.0"
+}

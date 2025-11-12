@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-10-21T07:30:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 117721,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Ql8DF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to Spark. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-21T07:38:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117721#issuecomment-2425864389",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Qn6Nv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Could we name this `OpenAISwarm`?\r\n\r\nEven in your README, you’re finding it natural to write\r\n\r\n> This implementation mostly follows the [OpenAI Swarm](https://github.com/openai/swarm) package.\r\n\r\nJust `Swarm` seems too general in this context",
+      "createdAt": "2024-10-21T11:16:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117721#issuecomment-2426381167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QoOYM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> enable support for multiple LLM\r\n\r\nIf you don't want the `OpenAI` prefix, there's still `LLMSwarm` or `AISwarm`",
+      "createdAt": "2024-10-21T11:56:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117721#issuecomment-2426463756",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QsMle",
+      "author": {
+        "login": "svilupp"
+      },
+      "authorAssociation": "NONE",
+      "body": "BLOCK!\r\n\r\nThanks! I've renamed to SwarmAgents.jl -- I'm getting tired of typing LLM and AI everywhere :) ",
+      "createdAt": "2024-10-21T19:07:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117721#issuecomment-2427504990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QsScE",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/117777",
+      "createdAt": "2024-10-21T19:19:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117721#issuecomment-2427528964",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Swarm\n- Repository: https://github.com/svilupp/Swarm.jl\n- Created by: @svilupp\n- Version: v0.1.0\n- Commit: 5ae843f91a710f4e1e1c1aaba6d3e9e12ac06e96\n- Reviewed by: @svilupp\n- Reference: https://github.com/svilupp/Swarm.jl/commit/5ae843f91a710f4e1e1c1aaba6d3e9e12ac06e96#commitcomment-148156178\n- Description: Educational and opinionated translation of OpenAI's swarm into Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6faaa178e3f9920eb0f9958abee9dd2ce80f277e219dd6654d2c10877fcba99c7c3047e39b301ad61f93485229249955b5343c956125d6151f54a7db4a79db8e4e925f35cbcc559355728f54b59b0bf2909544236ef32a8b914a401b65d0ace86dc44ef82b40fbe2693ad46aa74e3f5d33e02d0e12177aa285840c49f7cde8f392530bcc28a34da458920ba801654c5ca895e97c4faed4d7afb582bf5a70c65f63557d13a9a04ea21da0052585c378337 -->",
+  "package_name": "Swarm",
+  "closed_at": "2024-10-21T19:19:32Z",
+  "title": "New package: Swarm v0.1.0"
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-11-01T18:53:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 71434,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85NbLiS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, HORIZONS, IntervalArithmetic, PlanetaryEphemeris, Query, ReferenceFrameRotations, StaticArrays, StatsBase\n- I was not able to install the package (i.e. `Pkg.add(\"NEOs\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import NEOs` failed). See the CI logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to NES. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to NExOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-01T18:56:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71434#issuecomment-1298970770",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NmZkb",
+      "author": {
+        "login": "PerezHz"
+      },
+      "authorAssociation": "NONE",
+      "body": "Superseded by #71551",
+      "createdAt": "2022-11-03T10:39:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71434#issuecomment-1301911835",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NEOs\n- Repository: https://github.com/PerezHz/NEOs.jl\n- Created by: @PerezHz\n- Version: v0.1.1\n- Commit: d64a74741983bdb0692dc14ad3e1a4166e711a89\n- Reviewed by: @PerezHz\n- Reference: https://github.com/PerezHz/NEOs.jl/commit/d64a74741983bdb0692dc14ad3e1a4166e711a89#commitcomment-88570248\n- Description: Jet transport-based Near-Earth Object orbital propagator and fitter in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6740944088f23b85c23f6e1675feb9b16a475e731c5d2083382de846cb00b45372bb0dc9d91513da7030d43a51273cf22d408fc5c9f8921bf653c206e27ea9da1ef7c73cf40e1e7cbfeb8f764dce95a7e3b812a657051ddab8faed36d7a9d098b897defb8089c7f5b04ad75917551a6b54b43cb7ec9b02ab52d759c885b6103ad259c567f6539317c1b897e8b0ef04ee0f6605982dc8a7ed7db9ede80b415e402 -->",
+  "package_name": "NEOs",
+  "closed_at": "2022-11-13T19:33:08Z",
+  "title": "New package: NEOs v0.1.1"
+}

@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-01-23T10:35:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 99367,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xl6aL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The registry consistency tests failed\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 2 existing packages.\n  1. Package name matches existing package name PETSc up to case.\n  2. Similar to PyTSP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-23T10:39:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1905763979",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xpUAc",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What's the reason for another PETSc wrapper? Since we already have PETSc.jl. \r\n\r\nIf this isn't something that can be merged into PETSc.jl then a name that's not 1 capitalization away would be strongly preferred.",
+      "createdAt": "2024-01-23T18:21:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1906655260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xpdRF",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @rayegun !\r\n\r\nthanks for your comment. This new package is a wrapper to petsc, but following a completely different approach.\r\n\r\nI will retry with another package name. Shall we close then this PR? or it can be reused to register with another name?",
+      "createdAt": "2024-01-23T18:38:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1906693189",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xpd7x",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It will be automatically closed eventually\n\nAnother name would be great",
+      "createdAt": "2024-01-23T18:40:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1906695921",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850AkSy",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I feel like it's worth mentioning that we cannot accept package names that differ only by capitalization because it breaks the git repo on case-insensitive file systems, which, unfortunately, is common on both MacOS and Windows.",
+      "createdAt": "2024-02-15T15:18:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1946305714",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850A5qq",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "yes, another good point.\r\n\r\nI already registered the package with another name a while ago.  This PR is then outdated and can be closed.\r\n\r\nThanks @rayegun and @StefanKarpinski for your feedback.",
+      "createdAt": "2024-02-15T15:57:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-1946393258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853Wsrz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-17T12:23:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99367#issuecomment-2002438899",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PETSC\n- Repository: https://github.com/fverdugo/PETSC.jl\n- Created by: @fverdugo\n- Version: v0.1.0\n- Commit: 7abfff25fbeed42ad6d2b446d384d45a7a99875f\n- Reviewed by: @fverdugo\n- Reference: https://github.com/fverdugo/PETSC.jl/commit/7abfff25fbeed42ad6d2b446d384d45a7a99875f#commitcomment-137627886\n- Description: Use PETSc solvers in sequential and parallel Julia runs\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a58d56a8168cb4155f2e91fe649d112373981962ef456e60d39f7a38a5bca5f31c0c6b9c66e0f5dc01f1eb6c790ce54b2286d9ededba9695331254db6905d03f0f5fca8f52864deb90990008d888233e4a789de15cdb3ce74953865dfaa62da3bef763859c87f150f5b1a0799094661679d8d07cee212fc4dded1d73562d276dba24aa497718a2b661d88856457f79ceb2f9cbbcc3217e4f7028d0e73c5368813915e1134c4a668bc73af0ec7954af32 -->",
+  "package_name": "PETSC",
+  "closed_at": "2024-03-24T21:15:50Z",
+  "title": "New package: PETSC v0.1.0"
+}

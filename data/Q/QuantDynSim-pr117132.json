@@ -1,0 +1,180 @@
+{
+  "created_at": "2024-10-12T02:44:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 117132,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86PjDKt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-12T03:22:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408329901",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pj8gU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is there any way this can just be a part of [QuantumDynamics](https://github.com/amartyabose/QuantumDynamics.jl)? Presumably, you could put it in a `QuantumDynamics.CLI` submodule.\r\n\r\n@Roger-luo Any suggestions on how to set up a package that's mainly intended as a normal Julia library, but has an _optional_ CLI component? Glancing at the documentation, it seems to me that it would be sufficient to just not write a `build.jl` file. Then, users of `QuantumDynamics` can install the CLI utilities on demand by running, e.g.,\r\n\r\n```\r\nQuantumDynamics.CLI.comonicon_install()\r\n```\r\n\r\nin the REPL.\r\n\r\nIf, for some reason, it is not possible to keep this as part of `QuantumDynamics`, I would request `QuantumDynamicsCLI` as a package name. I would also ask to add more documentation (in the README) in this case. Give some context and a usage example, explain when and where the `qdsym` executable script is installed, probably show the output of `qdsym --help`.\r\n\r\nOf course, if it's part of `QuantumDynamics`, you'll also want to properly document the script in that package's documentation.\r\n",
+      "createdAt": "2024-10-12T13:24:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408564756",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pj9D6",
+      "author": {
+        "login": "Roger-luo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nwell it's possible wtih https://github.com/JuliaLang/Pkg.jl/pull/3772 maybe. but only possible with the cost letting the package depends on Comonicon at the moment. or if you want to pay a bit overhead to write some wrapper code inside the package, you can also make this a package extension.",
+      "createdAt": "2024-10-12T13:31:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408567034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pj9zR",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's a good point! I'm a big fan of trying to avoid unnecessary or optional dependencies. Thus, I'd definitely support this under the name `QuantumDynamicsCLI` as a straightforward solution",
+      "createdAt": "2024-10-12T13:42:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408570065",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PkSAP",
+      "author": {
+        "login": "amartyabose"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello,\r\n\r\nWhat would you suggest is the best course of action right now?  This package basically creates a CLI command for doing simulations with the most common (and growing) set of algorithms that are present in the QuantumDynamics.jl package.  Should I rename it to QuantumDynamicsCLI.jl or would it be better to do package it inside the QuantumDynamics.jl package itself as @goerz  suggested?\r\n\r\n@Roger-luo , could you help me with the App support bit?  I really like this idea though  I am new to this…",
+      "createdAt": "2024-10-12T18:28:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408652815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PkiKz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If I were you, I would just rename to `QuantumDynamicsCLI`, add some more documentation to the README, and re-register. Not having to add `Comonicon` as a dependency to `QuantumDynamics` is a good argument for not having the CLI tools in `QuantumDynamics` directly.\r\n\r\nIf you can come up with a creative solution that involves a [package extension](https://pkgdocs.julialang.org/v1/creating-packages/#Conditional-loading-of-code-in-packages-(Extensions)), that could be an interesting learning experience. But objectively, I'm not sure if it's worth it.",
+      "createdAt": "2024-10-12T22:34:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408719027",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pkxkb",
+      "author": {
+        "login": "amartyabose"
+      },
+      "authorAssociation": "NONE",
+      "body": "> If I were you, I would just rename to `QuantumDynamicsCLI`, add some more documentation to the README, and re-register. Not having to add `Comonicon` as a dependency to `QuantumDynamics` is a good argument for not having the CLI tools in `QuantumDynamics` directly.\r\n> \r\n> If you can come up with a creative solution that involves a [package extension](https://pkgdocs.julialang.org/v1/creating-packages/#Conditional-loading-of-code-in-packages-(Extensions)), that could be an interesting learning experience. But objectively, I'm not sure if it's worth it.\r\n\r\nThanks.  I’m going to be out of office for the week.  I’ll do this the next week and resubmit a package registration request.",
+      "createdAt": "2024-10-13T01:59:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408782107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Po8Ia",
+      "author": {
+        "login": "Roger-luo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> @Roger-luo , could you help me with the App support bit? I really like this idea though I am new to this…\r\n\r\nno problem, feel free to ask about more specific issues under Comonicon (I might not have much time recently adding new features tho, but happy to answer anything that you think not clear.",
+      "createdAt": "2024-10-14T03:28:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2409873946",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZyCI9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-09T12:24:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2580030013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86as7ZJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-16T12:31:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2595468873",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuantDynSim\n- Repository: https://github.com/amartyabose/QuantDynSim.jl\n- Created by: @amartyabose\n- Version: v0.1.0\n- Commit: 1cba93106f30ed6e19110975fcede23e6017ddd6\n- Reviewed by: @amartyabose\n- Reference: https://github.com/amartyabose/QuantDynSim.jl/commit/1cba93106f30ed6e19110975fcede23e6017ddd6#commitcomment-147870760\n- Description: Simulations using QuantumDynamics.jl made a breeze\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ab56b057189b9540979f43ea5e3e641059d765c9f2008b47949a5a72e4a8d78bea3dd554583c76189869426d8dad984eb446b695abe3f6dd53fc575cf11476e971ebee281afe338b4f82c1358cce44a23672d47b40033b47752797073f66d3e198154be21f7a5fa83d2e03303e6b5111254f1fce37332fd2b30d8977299b52720d3cb990414ddff8334a88c81114ecaad52ada44cf4d91d4e95587572df01cb296159e5452082a7acd046b09376373a1 -->",
+  "package_name": "QuantDynSim",
+  "closed_at": "2025-01-16T12:31:17Z",
+  "title": "New package: QuantDynSim v0.1.0"
+}

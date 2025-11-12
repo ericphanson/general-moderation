@@ -1,0 +1,113 @@
+{
+  "created_at": "2025-05-24T23:16:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 131663,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86tSzI3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-24T23:23:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907386423",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tTWDG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Please avoid changing the version number when fixing automerge issues. That way, it will update the existing PR instead of creating a new one. Would you like to revert to v1.0.0 and try to update https://github.com/JuliaRegistries/General/pull/131656? I would then close this PR in favor of the previous one.",
+      "createdAt": "2025-05-25T00:43:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907529414",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tTggh",
+      "author": {
+        "login": "hespanha"
+      },
+      "authorAssociation": "NONE",
+      "body": "Going back to 1.0.0 sounds great. However, the reason why I changed to\r\nv1.0.1 is that, after fixing the automerge error (a [compat] issue) and\r\nre-submitting the registration request, I got another automerge error\r\nsaying\r\n\r\n     \"Error while trying to register: \"Tag with name v1.0.0 already exists\r\nand points to a different commit\"\r\n\r\nSo I changed Project.toml to v1.0.1 and it went through.\r\nJoao\r\n\r\n\r\n\r\nOn Sat, May 24, 2025 at 5:43 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#131663)\r\n> <https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907529414>\r\n>\r\n> [noblock] Please avoid changing the version number when fixing automerge\r\n> issues. That way, it will update the existing PR instead of creating a new\r\n> one. Would you like to revert to v1.0.0 and try to update #131656\r\n> <https://github.com/JuliaRegistries/General/pull/131656>? I would then\r\n> close this PR in favor of the previous one.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907529414>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AC3N7NNFBIRJ74PI4CU4BEL3AEG27AVCNFSM6AAAAAB53BXEWCVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDSMBXGUZDSNBRGQ>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-05-25T02:52:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907572257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tTiF6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You must not create tags before the registration of a version goes through. Actually, I would _strongly_ recommend not creating tags for Julia projects manually at all, but to use [TagBot](https://github.com/JuliaRegistries/TagBot) instead. The way Julia packages are intended to work is that you register a new version using the Registrator. Once the registration goes through, TagBot will be notified and create the tag in your repository.\r\n\r\nPlease delete all of the existing [\"releases\"](https://github.com/HespanhaPublic/PersistentCache.jl/releases) and [tags](https://github.com/HespanhaPublic/PersistentCache.jl/tags) from the repository, see, e.g. the instructions in [this YouTube video](https://www.youtube.com/watch?v=h-FE0OUjeH4). Install TagBot according to the [setup instructions](https://github.com/JuliaRegistries/TagBot?tab=readme-ov-file#setup). Then, retrigger the registration again for `v1.0.0`, e.g., by commenting `@Registrator register` on the commit that you want to be tagged as `v1.0.0`.\r\n\r\nIf, for some reason, you do not want to use TagBot (you _really_ should, though), you can still create and push tags manually, but only _after_ the registration has gone through.",
+      "createdAt": "2025-05-25T03:11:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907578746",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tTvw6",
+      "author": {
+        "login": "hespanha"
+      },
+      "authorAssociation": "NONE",
+      "body": "Just did what you suggested: erased tags, installed TagBot, went back to\r\n1.0.0, and retriggered registration.\r\nIt looks like all is going smoothly.\r\n\r\nThanks for your help!\r\nJoao\r\n\r\n\r\n\r\nOn Sat, May 24, 2025 at 8:11 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#131663)\r\n> <https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907578746>\r\n>\r\n> You must not create tags before the registration of a version goes\r\n> through. Actually, I would *strongly* recommend not creating tags for\r\n> Julia projects manually at all, but to use TagBot\r\n> <https://github.com/JuliaRegistries/TagBot> instead. The way Julia\r\n> packages are intended to work is that you register a new version using the\r\n> Registrator. Once the registration goes through, TagBot will be notified\r\n> and create the tag in your repository.\r\n>\r\n> Please delete all of the existing \"releases\"\r\n> <https://github.com/HespanhaPublic/PersistentCache.jl/releases> and tags\r\n> <https://github.com/HespanhaPublic/PersistentCache.jl/tags> from the\r\n> repository, see, e.g. the instructions in this YouTube video\r\n> <https://www.youtube.com/watch?v=h-FE0OUjeH4>. Install TagBot according\r\n> to the setup instructions\r\n> <https://github.com/JuliaRegistries/TagBot?tab=readme-ov-file#setup>.\r\n> Then, retrigger the registration again for v1.0.0, e.g., by commenting @Registrator\r\n> register on the commit that you want to be tagged as v1.0.0.\r\n>\r\n> If, for some reason, you do not want to use TagBot (you *really* should,\r\n> though), you can still create and push tags manually, but only *after*\r\n> the registration has gone through.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907578746>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AC3N7NMCV4PL2XUXAOG2SY33AEYF5AVCNFSM6AAAAAB53BXEWCVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDSMBXGU3TQNZUGY>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-05-25T06:09:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907634746",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tUTuh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/131656",
+      "createdAt": "2025-05-25T11:57:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131663#issuecomment-2907782049",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PersistentCache\n- Repository: https://github.com/HespanhaPublic/PersistentCache.jl\n- Created by: @hespanha\n- Version: v1.0.1\n- Commit: 4e288ac732217908b307ed4a17b62571c17ab281\n- Reviewed by: @hespanha\n- Reference: https://github.com/HespanhaPublic/PersistentCache.jl/issues/5\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a29586e37018dd7ef15b90886b72602ce4d8bda88c8542f60b4c333764ef85e19d7cb45860837be481f0db11c919fd1e552eb9e68347024a4252f8b0a43dd754d6efbbfa05209869b75043b5c02087aa8e3d3a255ba6a91fc9e05e35e6210f8f6ef8e50953a84bdea7bc881be7bf367cd0f3dfbaeff7fdf815372be659f55aa3 -->",
+  "package_name": "PersistentCache",
+  "closed_at": "2025-05-25T11:57:43Z",
+  "title": "New package: PersistentCache v1.0.1"
+}

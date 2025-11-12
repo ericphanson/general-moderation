@@ -1,0 +1,83 @@
+{
+  "created_at": "2021-11-21T21:39:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 49128,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846G88G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: JSON, WebSockets\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-21T21:43:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49128#issuecomment-974900998",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846G9Pd",
+      "author": {
+        "login": "roryl23"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Leaving a comment - I changed the Project.toml version before reading the instructions :)",
+      "createdAt": "2021-11-21T21:51:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49128#issuecomment-974902237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846J02j",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@rory-linehan I guess this is superseded by #49129 or #49137, so I'm going to close this.  But note that #49129 will be merged first, and then #49137 will have a merge conflict.  What do you want to actually do?",
+      "createdAt": "2021-11-22T15:40:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49128#issuecomment-975654307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846J1lZ",
+      "author": {
+        "login": "roryl23"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano I commented on the 0.2.1 PR to prevent automerge. #49137 is the correct one",
+      "createdAt": "2021-11-22T15:44:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/49128#issuecomment-975657305",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Gemini\n- Repository: https://github.com/rory-linehan/Gemini\n- Created by: @rory-linehan\n- Version: v0.2.0\n- Commit: 192ed024d462a1cf4bbb563d1439bb4b29e5892e\n- Reviewed by: @rory-linehan\n- Reference: https://github.com/rory-linehan/Gemini/commit/192ed024d462a1cf4bbb563d1439bb4b29e5892e#commitcomment-60647629\n- Description: Gemini API client for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd687243e55bdb1aa065e40771d2595708c05172f40590eada11d131e58c7076f898a364f479b604afc911eae5dd666b1451bbc370620ee5d03d40466d8ada748620cb64d235cf7fea59ebb964157c422e786bd859835d3986bfd5f6c7ca069207e9314bc5d1d3957e35687c5ec73503d2b83ad4af6eaa10eef1f9f597ecbfc73118b1bb460b1c6bb5b843cf1782861e6bb7e0ad94d90f86f012c43e54da3d8563a9368e6cc3efc80c257c07c521403210f -->",
+  "package_name": "Gemini",
+  "closed_at": "2021-11-22T15:40:57Z",
+  "title": "New package: Gemini v0.2.0"
+}

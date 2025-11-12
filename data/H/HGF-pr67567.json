@@ -1,0 +1,120 @@
+{
+  "created_at": "2022-09-02T08:05:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 67567,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Jn7KK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 11 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to BDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.95 is at or below cutoff of 2.50.\n  2. Similar to HSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to XDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to EDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NMF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to PWF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to H3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to JDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to HDF5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to GR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to LHEF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-09-02T08:11:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1235202698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JtwX5",
+      "author": {
+        "login": "PTWaade"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The Hierarchical Gaussian Filter has existed for almost 10 years. It has in all of that time been known in the entire community, as well as the broader behavioral modelling community, as the \"HGF\". There is no other name it can be confused for. There is an earlier MATLAB implementation, which we are moving to Julia, also called 'the HGF Toolbox', as well as a python implementation also just named HGF. For consistency with other implementations, and with common use in the scientific community, it is important the package can be called 'HGF'.",
+      "createdAt": "2022-09-05T09:03:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1236731385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KS3zd",
+      "author": {
+        "login": "PTWaade"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have not received any word since I posted my previous comment 9 days ago, so briefly reposting now as a kind reminder.\r\nTo be clear, I am requesting that the name \"HGF\" can be used for the package in the general registry, despite the fact that it does not meet all of the naming guidelines. If there is anything further I can do in this regard, please inform me, and I shall do my best to be helpful.",
+      "createdAt": "2022-09-14T09:02:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1246461149",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KhYdr",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It will be hard to reserve a 3 letter name in General. Honestly, not being in that community, I have no idea what this is. I recommend  \"HierarchicalGaussianFilter.jl\" or something that is at least longer. I know there are existing short names that got registered earlier, but can you reconsider? Is there any other option with HGF and a short suffix?\r\n\r\nMATLAB doesn't have a global registry, and hence not an issue there. HGF in python seems to be something different: https://pypi.org/project/hgf/, which suggests to me that this would be confusing.",
+      "createdAt": "2022-09-18T12:54:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1250264939",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Kvb0G",
+      "author": {
+        "login": "PTWaade"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Okay: I will change the package name.\r\nThank you for the help! All the best from here",
+      "createdAt": "2022-09-21T16:30:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1253948678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MwgnZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-10-22T13:01:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67567#issuecomment-1287784921",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HGF\n- Repository: https://github.com/ilabcode/HGF.jl\n- Created by: @PTWaade\n- Version: v0.1.1\n- Commit: 4b5ea84eda722c8ada857bbc5b82c0f1032cd758\n- Git reference: HEAD\n- Description: The Julia implementation of the generalised hierarchical Gaussian filter\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> First release, no documentation\n<!-- END RELEASE NOTES -->",
+  "package_name": "HGF",
+  "closed_at": "2022-10-22T15:29:14Z",
+  "title": "New package: HGF v0.1.1"
+}

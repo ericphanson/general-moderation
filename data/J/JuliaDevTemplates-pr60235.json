@@ -1,0 +1,53 @@
+{
+  "created_at": "2022-05-14T00:41:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 60235,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85DJnt0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name juliadevtemplates contains the string \"julia\".\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-14T00:45:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60235#issuecomment-1126595444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DKI7u",
+      "author": {
+        "login": "imciner2"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Looking at the package being registered, this does not seem like something that benefits from being in the general registry. The package is just 2 methods to create templates using `PkgTemplates`, but they hardcode the GitHub username and the author of the package, so they are only useful to that one person.",
+      "createdAt": "2022-05-14T14:57:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/60235#issuecomment-1126731502",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuliaDevTemplates\n- Repository: https://github.com/andylikescodes/JuliaDevTemplates\n- Created by: @andylikescodes\n- Version: v0.1.0\n- Commit: 6a57cf5ca7ce1464e3d6e09a0c1bda53f41aebd8\n- Reviewed by: @andylikescodes\n- Reference: https://github.com/andylikescodes/JuliaDevTemplates/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835989cb5de44c01b79a9a4d2e9c97ed31c588639de01d16b91a83bbc85424e58889ea85e6a8f3174307ed27993ba7cc83fe38ff6c1052e2d402bd7856995f43526072432116fad45b6ae5131baf0e3d22a3cc4a8972f5ca1776248e16903fee778efd7b5e5bebc2a6eedb3094ac8153ef4b1f89cc523989fc3c56190e8c469c5e08d -->",
+  "package_name": "JuliaDevTemplates",
+  "closed_at": "2022-05-15T11:00:48Z",
+  "title": "New package: JuliaDevTemplates v0.1.0"
+}

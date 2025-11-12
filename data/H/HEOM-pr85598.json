@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-06-14T17:02:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 85598,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85e3zUA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to FEHM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to NEOs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to RHEOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SOM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-14T17:15:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1591686400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e32jT",
+      "author": {
+        "login": "ytdHuang"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This PR is a new one of #85552, and I changed the package name (capitalize all the letters).",
+      "createdAt": "2023-06-14T17:22:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1591699667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e5NRv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok… You should wait three days and then ping the `#pkg-registration` Slack channel to have one of the maintainers merge it manually. As the guidelines indicate, most of the maintainers don't like having package names that are acronyms, but will merge it if you insist (and I count this rename from `Heom` to `HEOM` as an indication that you do insist).\r\n\r\nI don't have maintainer access to `General`, myself, so I won't be able to do the merge for you, but I'll keep an eye on the discussion in the channel.\r\n\r\nFor any future packages, I would encourage you to use more descriptive package names, and *definitely* register a package *before* you submit a paper describing it.",
+      "createdAt": "2023-06-14T22:07:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1592054895",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e6GBr",
+      "author": {
+        "login": "ytdHuang"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Ok… You should wait three days and then ping the `#pkg-registration` Slack channel to have one of the maintainers merge it manually. As the guidelines indicate, most of the maintainers don't like having package names that are acronyms, but will merge it if you insist (and I count this rename from `Heom` to `HEOM` as an indication that you do insist).\r\n> \r\n> I don't have maintainer access to `General`, myself, so I won't be able to do the merge for you, but I'll keep an eye on the discussion in the channel.\r\n> \r\n> For any future packages, I would encourage you to use more descriptive package names, and _definitely_ register a package _before_ you submit a paper describing it.\r\n\r\n@goerz \r\nThank you again for your instructions.\r\nI have talked to our team and decided to change the package name to `HierarchicalEOM` to avoid causing any inconvenience to the Julia maintainers, since we really like `Julia`.\r\nThe new PR for the revised Package name is in #85630 .\r\nAgain, this PR can be closed.\r\n\r\nThank you and also the hard work from the `Julia` maintainers.\r\nWish `Julia` become more and more popular!",
+      "createdAt": "2023-06-15T03:20:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1592287339",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hjtvj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-07-15T12:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1636752355",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iKJXD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-07-23T12:22:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85598#issuecomment-1646826947",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HEOM\n- Repository: https://github.com/NCKU-QFort/HEOM.jl\n- Created by: @ytdHuang\n- Version: v0.1.0\n- Commit: a65628de3db491a301eb696a7b2eddf8a3b4f7a2\n- Reviewed by: @ytdHuang\n- Reference: https://github.com/NCKU-QFort/HEOM.jl/commit/a65628de3db491a301eb696a7b2eddf8a3b4f7a2#commitcomment-118046153\n- Description: An efficient Julia framwork for Hierarchical Equations of Motion (HEOM) in open quantum systems\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Here comes the first release of HEOM (v0.1.0)\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66548a6160ac7bc7c7e8addeae8d0d28779ea7bc8c9a19e1e36c5c567cf7e746bdce01770b4272ffa32bf75ee4ffd0c47b71da3134163cb743534fd20ed3abdd8b3e0fe1071fd0e4a0e8c61787e585ef29d01716d05be595b89efec3c38dfedf3e70848917055eea39b929260ed032fffa49a1702d6e617f5c1b4dac9c1a16dfe074bc41c308a224c92cbf3295a609ed7147150841be671f55dbd9cca3b3d3cd30f8161562821c56b7b4b25b002bd75b6 -->",
+  "package_name": "HEOM",
+  "closed_at": "2023-07-23T12:22:53Z",
+  "title": "New package: HEOM v0.1.0"
+}

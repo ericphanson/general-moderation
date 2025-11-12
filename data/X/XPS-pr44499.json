@@ -1,0 +1,53 @@
+{
+  "created_at": "2021-09-08T18:57:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 44499,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q842kYqI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 15 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to XPA. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.86 is at or below cutoff of 2.50.\n  2. Similar to XCB. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.33 is at or below cutoff of 2.50.\n  3. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to NES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to AES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to ROS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to NPZ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to XDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to SPH. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to AWS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to XLSX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  15. Similar to DSP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-09-08T19:24:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44499#issuecomment-915507848",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842kvur",
+      "author": {
+        "login": "singularitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Renamed this package to ExpressCommands.jl, see #44522, this PR can be closed",
+      "createdAt": "2021-09-08T22:00:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/44499#issuecomment-915602347",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: XPS\n- Repository: https://github.com/MineralsCloud/XPS.jl\n- Created by: @singularitti\n- Version: v0.1.0\n- Commit: 496200aed2a7cf64a0cd75487d94c80d3a1b5fe8\n- Reviewed by: @singularitti\n- Reference: https://github.com/MineralsCloud/XPS.jl/commit/496200aed2a7cf64a0cd75487d94c80d3a1b5fe8#commitcomment-56146372\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd613d763d195480c6d5c19a12d974297aa5d5849717006434d37a230c0958e5e3ef317453263dfea4ac9460c28dc21020717824d70266d506fd968c17e4603d6e4c3bdf78911fdcc46a0d2081f5eb2f692d2456a75f012b3e7f0daf8a6ea99efa3cc348b87b4610f19190f20d5ed15dd195f1dcd204b0f52f215ed1546e2571c5cadfb7d7b49707f1429754f9765be1c46b87dfb77fd6049008d802fd082c228c334dc9848d1ac2fcd045d181f7283afe9 -->",
+  "package_name": "XPS",
+  "closed_at": "2021-09-12T10:37:41Z",
+  "title": "New package: XPS v0.1.0"
+}

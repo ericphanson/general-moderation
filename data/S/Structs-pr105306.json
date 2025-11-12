@@ -1,0 +1,239 @@
+{
+  "created_at": "2024-04-21T04:33:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 105306,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857QauB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-21T04:36:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2067901313",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857Qe1P",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nCongrats on the registration! Can I suggest a slightly longer name, like StructUtils or StructMacros?",
+      "createdAt": "2024-04-21T05:59:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2067918159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RCoI",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It would be conventional for the `Structs.jl` package to provide the `Struct` type (or in this case, perhaps the `struct` keyword). Is something like that on the roadmap for this package?\r\n\r\n[noblock]",
+      "createdAt": "2024-04-21T14:28:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2068064776",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857REbP",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah, I'm aware this is perhaps an aggressive request for a package name; it's part of a plan, however, to have this functionality in Base itself as outlined here: https://hackmd.io/@quinnj/HkJ96bxCa. It isn't clear to me exactly what the best order of operations would be in order to achieve my ideal: a Structs module in Base and this registered package to provide compat, similar to ScopedValues. I think I'll try to add a public Base triage agenda item and bring it up there.\r\n\r\nThe overall goal of the functionality is utilities and \"official\" (if in Base) programmatic means to working with structs, hence, Structs.jl.\r\n\r\n[noblock]",
+      "createdAt": "2024-04-21T14:50:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2068072143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RZfh",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Don't think this is the right place to discuss the design/Base questions, but some points there are definitely questionable or solved already in the ecosystem (through ConstructionBase)...\r\n\r\nRegarding the package itself, I second (third? :) ) the point that the Structs name seems not just too short – but easy to cause confusion if it ends up being reasonably popular, and especially if it gets into Base. Like, \"do I need to `using Structs` to create `struct`s?\"...",
+      "createdAt": "2024-04-21T18:33:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2068158433",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RaPs",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nThanks for the clarification, seems fine by me!",
+      "createdAt": "2024-04-21T18:38:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2068161516",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857gHXR",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> The overall goal of the functionality is utilities and \"official\" (if in Base) programmatic means to working with structs, hence, Structs.jl.\r\n\r\nI agree with @aplavin. It seems like the package doesn't offer the intended functionality yet or at least it does not document how to use it. Maybe it's better not to register it under this name for now (you can always install packages from just GitHub). Instead, registering it under a different name like StructUtils.jl as suggested is not a bad idea. Later, if you create a package that truly provides programmatic means to work with structs and implement all your ideas from hackmd, you can always re-register it as Structs.jl, with StructUtils.jl as a dependency.\r\n\r\nCurrently, the package claims a valuable name but lacks documentation, use cases, or examples, and doesn't follow common conventions (e.g. it doesn't define `struct Struct ... end`). Additionally, if it's abandoned without implementing the intended functionality, the name would be lost forever. Also, is it already decided that this goes as a new module in Base?",
+      "createdAt": "2024-04-23T11:05:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2072016337",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-lxvL",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd like to follow up again on this package registration. I understand there are conventions where a package Xs.jl provides a struct named X, but it doesn't seem like that has to be a hard and fast rule. I've added a bunch more documentation for the package, so hopefully that helps clarify for those who are wondering what the package may offer. The primary interface is `Structs.make`, which is extremely descriptive of what it does: make structs. Programmatically. Everything else in the package is additional support or utilities around making structs in various flows.\r\n\r\nAgain, I understand this is a bit of an aggressive name, but I also believe the package _does_ provide functionality that is centralized and core to structs in Julia, and very well could be a stdlib at some point. \r\n\r\nI'd like to request this be allowed to be merged.\r\n\r\n[noblock]",
+      "createdAt": "2024-05-22T04:13:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2123832267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-oxMI",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "From the README, it's still hard to understand how Structs.make helps more than Base.convert. I can easily write a custom methods for Base.convert for my structure to convert it from various sources. Does it generalize structure creation from DataFrames, JSON, or something else? For arbitrary JSON libraries? Or instead of writing custom `Base.convert` I would need to write custom `Structs.applyeach`? \n\nDon't get me wrong; I believe the library could be useful in certain situations. My opinion would also be that it should be registered. The discussion seems to focus on the name, which might be indeed too aggressive, misleading or confusing. Something along `MakeStructs.jl` or previously suggested are still not bad names. It actually may benefit you because just `Structs.jl` is too vague.\n\nThe package has many docstrings, which is great. However, centralized documentation (e.g., a docs folder) would make it easier to understand its applicability. There are no simple examples that demonstrate its applications. For instance, if it truly generalizes the creation of a structure from an arbitrary JSON, how do I use it?\n\nCurrently, the only way to discover how does the library work or how to use it is to install it and read numerous docstrings. But how do I determine where to start? which is the public API and which is not? Reading the source code? That's too difficult. This approach is unproductive and impossible when browsing for libraries on a phone where Julia can't be installed. (I actually did read the source code but quickly got lost, there is just too much methods that could (?) be defined, hard to get an idea where to start or what methods to define.) \n\nA few examples that make me think \"oh, that's cool, I need it\" would greatly benefit the library. E.g. making the structure from JSON (arbitrary library?) easier than just using Base.convert would already \"sell\" me the library.\n\nP.S. I double checked the documentation and you actually mention that this kind of documentation is forthcoming.\n\n[noblock]",
+      "createdAt": "2024-05-22T11:58:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2124616456",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-uMq1",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From Triage, for the components of this that should merge into base, they should probably go in Base, not a submodule; structs and related functionality is so basic that it doesn't need a submodule. Then the package compat for those features can live in Compat.jl\r\n\r\n---\r\n\r\nFor a package that demonstrates this functionality (i.e. the package in question here) some bikeshed ideas for names:\r\n\r\nStructUtils\r\nStructTools\r\nSuperStructs\r\nStructHelpers",
+      "createdAt": "2024-05-23T01:43:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2126039733",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-u4xg",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for bringing this up in triage @LilithHafner! I was going to try and attend, but trying to do bedtime w/ kids make open-source time a real wildcard. I like the idea of going with StructUtils.jl for now and letting the functionality bake for a bit before proposing things to Base.",
+      "createdAt": "2024-05-23T04:44:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2126220384",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-u4zg",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "PR for StructUtils.jl: https://github.com/JuliaRegistries/General/pull/107469",
+      "createdAt": "2024-05-23T04:44:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2126220512",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-u408",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "(this PR can be closed now)",
+      "createdAt": "2024-05-23T04:45:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105306#issuecomment-2126220604",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Structs\n- Repository: https://github.com/quinnj/Structs.jl\n- Created by: @quinnj\n- Version: v1.0.0\n- Commit: d4ae41dbb36de2fe2627876816d9ed76cfd854ad\n- Reviewed by: @quinnj\n- Reference: https://github.com/quinnj/Structs.jl/commit/d4ae41dbb36de2fe2627876816d9ed76cfd854ad#commitcomment-141193135\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6758b19ee11f48bbbefb6a729104991c66de11c98d696062c6002805d850ebeff45c9bbf643b386724f5f5be6b38c008035243d98cc87e342b4373df4e5c719c884109ed960e4f374fa2fe65141be0d5ecc80baaf63cd03740af18d08b428f71fcf7feb2ec21a52bfe31a7043ea11136755e063c3c6ac3e5b88273280e6a67f74f1db5ab9c91301d7acb69be1602d4bc1b61ac622caee0a0b275aa7738d7f9290a26edc35eab1faf896586f693db3ac30 -->",
+  "package_name": "Structs",
+  "closed_at": "2024-05-23T05:49:56Z",
+  "title": "New package: Structs v1.0.0"
+}

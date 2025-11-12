@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-03-03T20:53:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 78912,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85WrDpq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n- Package name similar to 1 existing package.\n  1. Similar to JutulDarcy. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-03T21:04:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78912#issuecomment-1454127722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85W8CeM",
+      "author": {
+        "login": "ziyiyin97"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, this package is intended to work as an extension to JutulDarcy.jl in order to better interoperate with other Julia packages via ChainRules.jl. Therefore, we explicitly name it as JutulDarcyAD. Hope this PR could be manually accepted. Thanks!!",
+      "createdAt": "2023-03-07T17:44:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78912#issuecomment-1458579340",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XPPPi",
+      "author": {
+        "login": "moyner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We discussed that we may rename this package slightly to clarify the link to chain rules so I guess merging can be postponed until @ziyiyin97 decides.",
+      "createdAt": "2023-03-10T10:41:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78912#issuecomment-1463612386",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XTgpA",
+      "author": {
+        "login": "ziyiyin97"
+      },
+      "authorAssociation": "NONE",
+      "body": "Deprecated. Renamed package is under this PR now https://github.com/JuliaRegistries/General/pull/79370",
+      "createdAt": "2023-03-11T00:56:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78912#issuecomment-1464732224",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JutulDarcyAD\n- Repository: https://github.com/slimgroup/JutulDarcyAD.jl\n- Created by: @ziyiyin97\n- Version: v0.2.0\n- Commit: ba2856ca91a0d60791f6f644eed3510e202c7b2b\n- Reviewed by: @ziyiyin97\n- Reference: https://github.com/slimgroup/JutulDarcyAD.jl/issues/9#issuecomment-1458504025\n- Description: JutulDarcyAD: auto-differentiable two-phase flow solvers based on Jutul and JutulDarcy\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835985f504752ce2835b926b5933060fe6fcf94f3b3f5fdaa2e9040e11735bad4c840bb4f618830e095d703738555bfb5233a16b965475c99f0e648c2a48155337164534aa14d11ef1d22d1dd50a32e6091dd856657cb6916634fb389e42071d39b84db810eb1e814c2351f51be3e083b9fd18b56fe52e01d44eb1bba54ce6bfd38fb -->",
+  "package_name": "JutulDarcyAD",
+  "closed_at": "2023-03-18T17:48:13Z",
+  "title": "New package: JutulDarcyAD v0.2.0"
+}

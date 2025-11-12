@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-08-21T14:23:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 113591,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86JOOlY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-21T14:35:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2302208344",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Jk58e",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’m confused about the documentation linked from the README being for TargetedEstimation.jl. `TmleCLI` seems like a questionable package name.",
+      "createdAt": "2024-08-24T06:36:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2308153118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JmPBu",
+      "author": {
+        "login": "olivierlabayle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I’m confused about the documentation linked from the README being for TargetedEstimation.jl. `TmleCLI` seems like a questionable package name.\r\n\r\nThank you for having a look, this is probably because you looked at the stable documentation. The latter should be updated by this release. The [dev](https://targene.github.io/TmleCLI.jl/dev/) contains the changed name TmleCLI.jl. TmleCLI stands for TMLE command line interface, it is a companion package to the [TMLE](https://github.com/TARGENE/TMLE.jl) package. It is a more acurate description of what the package actually does than TargetedEstimation.jl which is why I renamed it.",
+      "createdAt": "2024-08-24T19:10:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2308501614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JmcK_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I see… that makes sense. By today's standards, I'm not sure if we'd still merge a `TMLE.jl` package. As the number of packages in General has grown since 2021, we've tended to get stricter about package naming. But `TMLE.jl` exists, which in my book makes it fair game for \"addon\" packages using it as part of their name. Also, `CLI` is a ubiquitous abbreviation that, I think, is fine for package names. With that in mind, I would *strongly* prefer going back to https://github.com/JuliaRegistries/General/pull/113582 and naming this package `TMLECLI.jl`. The `TMLE` gives the context for the package, and it should remain in the original uppercase spelling. Yes, that makes the package fail the automatic checks, and it will have to be merged manually. But it's a better name than `TmleCLI`, and I would strongly support a manual merge (unfortunately I don't have permissions to merge myself). Changing upper/lower-case in a package name simply to make the automatic checks happy is never a good idea.\r\n\r\nAlternatively: Does this have to be an independent package? It might be better to make it a sub-package of `TMLE`, which would be loaded as `using TMLE.CLI`.\r\n\r\nJust to be clear: this is my opinion, but you have the last word on this. I can unblock the merge if you want me to.",
+      "createdAt": "2024-08-24T22:13:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2308555455",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JnXDG",
+      "author": {
+        "login": "olivierlabayle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The aim is to keep TMLE.jl lightweight and not import the whole MLJ universe in it. This is done in `TMLECLI.jl` as well as providing higher level routines that can be used either from Julia itself or as a standalone app. So the `TMLE.CLI` wouldn't work in this case I think.\r\n\r\nI agree with your point and will revert to `TMLECLI.jl`!",
+      "createdAt": "2024-08-25T11:45:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2308796614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JnotE",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/113802",
+      "createdAt": "2024-08-25T14:15:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113591#issuecomment-2308868932",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TmleCLI\n- Repository: https://github.com/TARGENE/TmleCLI.jl\n- Created by: @olivierlabayle\n- Version: v0.9.0\n- Commit: 7f01114dbec8826e78aa855b3610f5bf965116dc\n- Reviewed by: @olivierlabayle\n- Reference: https://github.com/TARGENE/TmleCLI.jl/commit/7f01114dbec8826e78aa855b3610f5bf965116dc#commitcomment-145606681\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd610541f166ac3d77a63312db5cd9db5043c779a1295681f93682a308017016d3f28e3ca607c8c22f500ad16340078717f01b3ea63b773cb6e5883944c069dc2e78df5c0ae718b31b7a6ea7b06b7697c42025f9b6e93c71e32fb6f864676972690a41644c8a602d246140638ba4b5567634271d12e829a2ee83d1154f9f7449d2b793b517da1b4ad0293eb6f532be64be51a3aca6c2d7399cc25a0af7b025025645895122705154ab16516817d64e9d4bf -->",
+  "package_name": "TmleCLI",
+  "closed_at": "2024-08-25T14:15:12Z",
+  "title": "New package: TmleCLI v0.9.0"
+}

@@ -1,0 +1,186 @@
+{
+  "created_at": "2024-09-23T17:01:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 115771,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86NMhlF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to IsApprox. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-23T17:04:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2368870725",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NMsx-",
+      "author": {
+        "login": "BenCichos"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello everyone,\r\n\r\nthe package provides a macro ```@approx``` and the function ```approx``` to allow for approximate comparisons beyond just the ```isapprox``` function. So I though that the Approx name would be suitable.",
+      "createdAt": "2024-09-23T17:27:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2368916606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NMyvM",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As the message says, there is another package with a very similar name. Can I suggest ApproximateRelations.jl for yours?",
+      "createdAt": "2024-09-23T17:38:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2368941004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NNFIL",
+      "author": {
+        "login": "BenCichos"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would really like to use Approx.jl if that is somehow possible. Otherwise, would maybe Approximate.jl be possible?",
+      "createdAt": "2024-09-23T18:10:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2369016331",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NNKJM",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I understand. However, this is a really small package with no documentation and no continuous integration or testing. In addition, it is a collection of personal utility functions, which raises the question of whether it [warrants registration at all](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now). All things being equal, you stand better chances of registration if you opt for a longer name. But can you maybe explain why you feel the need to register it at all?",
+      "createdAt": "2024-09-23T18:19:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2369036876",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NNW9p",
+      "author": {
+        "login": "BenCichos"
+      },
+      "authorAssociation": "NONE",
+      "body": "You are right! I think I might have been to hasty trying to register the package and will add documentation and testing before registration. Thank you for your advice, I think it will be best if I block the registration first and get started on doing that. I have added a short description of what the package thus and maybe you can say whether you think it is worth registering at all. I have been quite frustrated when doing comparisons up to some tolerance in Julia which currently only provides ```isapprox```.\r\n\r\n\r\nI realise that the package is very small, but I think there is a lot of benefit with being able to do comparisons with some approximations, especially for cases in geometry intersections, or general linear algebra with 3d dimensional vectors such as rotations, dot, and cross products that computationally sometimes do not exactly follow mathematics due to floating point precision. With the package you can check that the dot product is approximately zero for when they are parallel or check that a 3d point is approximately inside a three-dimensional box.\r\n\r\n```@approx 0 < 1e-10``` -> false\r\n\r\nIt also allows for chaining of comparisons which currently ```isapprox``` does not support so you can do something like\r\n\r\n```@approx 0 < 1e-10 < 2e-10 # -> false```\r\n\r\nThis is very convenient when you want to compare number upto some precision that is not possible with the ```isapprox``` function. You can set the global absolute tolerance of the ```approx``` using ```set_approx!``` but also individually set the tolerance for an ```approx``` call by doing\r\n\r\n```@approx 1e-11 0 < 1e-10 # -> true```\r\n\r\nYou can also prepend the macro in front of block definitions such as\r\n\r\n```\r\n@approx begin\r\n    0 < 1e-10\r\nend # -> false\r\n```\r\n\r\nand functions\r\n\r\n```\r\n@approx 1e-11 function approx_compare(v1::Real, v2::Real)\r\n    v1 < v2\r\nend\r\n```\r\nwhich is nice when you have a function specific approximation tolerance. You can still override comparisons within the block to have individual approximation tolerances, e.g.\r\n\r\n```\r\n@approx 1e-11 function approx_compare(v1::Real, v2::Real)\r\n    v1 < v2\r\n    @approx 1e-5 v1 < v2\r\nend\r\n```\r\n\r\nAlthough, the package is quite small I think it adds a lot of functionality for comparisons in general.",
+      "createdAt": "2024-09-23T18:44:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2369089385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NP6jb",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "+1 for something clear like ApproximateRelations.jl for the name: It's good for potential users to know what to expect from the name only. (When I saw Approx.jl, the first thing I thought was \"Approx what?\")",
+      "createdAt": "2024-09-23T23:22:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2369759451",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NRyrG",
+      "author": {
+        "login": "BenCichos"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, thank you for the feedback. I'll write the documentation and testing first and then will try to register the package again under ApproximateRelations.jl. Thank you everyone for their help.",
+      "createdAt": "2024-09-24T05:52:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2370251462",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Nps2T",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/116035",
+      "createdAt": "2024-09-26T10:08:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115771#issuecomment-2376519059",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Approx\n- Repository: https://github.com/BenCichos/Approx.jl\n- Created by: @BenCichos\n- Version: v0.1.0\n- Commit: 76e1dbb5cd4efbb9ee36c2cb699f433d8ae49a79\n- Reviewed by: @BenCichos\n- Reference: https://github.com/BenCichos/Approx.jl/issues/1#issuecomment-2368874301\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598766501346e4fc32312ba539ac0fa8016b4099e04df68661c668465afafcab2d3110028e9f6a147503c38711e22f0b79956a30224973ad6704ee39a47c782d48ef11344cccbeb54d4dceb13350bccac911831b3ad3035cdc212c6a41c97d74a7c2f64a25b0c002a28ea598bc4b819e427ea0357d4e1891436905bdc417b23cc05 -->",
+  "package_name": "Approx",
+  "closed_at": "2024-09-26T10:08:30Z",
+  "title": "New package: Approx v0.1.0"
+}

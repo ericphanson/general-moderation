@@ -1,0 +1,150 @@
+{
+  "created_at": "2024-09-16T14:06:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 115285,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86MQIUv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-16T14:10:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2353038639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MQxLp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package is currently empty and is thus [not ready for registration](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) yet. We do not allow for \"placeholder\" registration. If you are registering to make development workflows easier, please consider using a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl)",
+      "createdAt": "2024-09-16T15:12:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2353205993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QZpYC",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz [noblock] I'm not sure what the issue is here: I think that the problem is\r\n```julia\r\n┌ Error: Was not able to successfully `Pkg.add` the package\r\n└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/mNCS2/src/AutoMerge/guidelines.jl:836\r\n┌ Info: Version can be `Pkg.add`ed\r\n│   meets_this_guideline = false\r\n└   message = \"I was not able to install the package (i.e. `Pkg.add(\\\"BusInjectionModel\\\")` failed). See the AutoMerge logs for details.\"\r\n```\r\nBut I also see:\r\n```julia\r\n[ Info: IMPORTANT: If you see any messages of the form \"Error: Some registries failed to update\"or \"registry dirty\", please disregard those messages. Those messages are normal and do not indicate an error.\r\n```\r\nand all the errors seem to be related to errors that the `IMPORTANT` message says to ignore.\r\n",
+      "createdAt": "2024-10-18T14:42:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2422642178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QZzbU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nI don't see anything very obvious.\r\n\r\nThe logs to look at are in the \"Checks\" tab at the top of the page: https://github.com/JuliaRegistries/General/pull/115285/checks and specifically https://github.com/JuliaRegistries/General/actions/runs/11405524579/job/31737190398\r\n\r\nThe reported error is\r\n\r\n```\r\nERROR: Error building `OpenDSSDirect`: \r\nERROR: LoadError: ArgumentError: Package Downloads does not have NetworkOptions in its dependencies:\r\n- You may have a partially installed environment. Try `Pkg.instantiate()`\r\n  to ensure all packages in the environment are installed.\r\n- Or, if you have Downloads checked out for development and have\r\n  added NetworkOptions as a dependency but haven't updated your primary\r\n  environment's manifest file, try `Pkg.resolve()`.\r\n- Otherwise you may need to report an issue with Downloads\r\n```\r\n\r\nSeems a bit odd, but that would be the thing to investigate.\r\n\r\nOther logs for the registration CI can be a bit misleading, and are generally for internal use only\r\n\r\nThis is what\r\n\r\n```\r\n[ Info: IMPORTANT: If you see any messages of the form \"Error: Some registries failed to update\"or \"registry dirty\", please disregard those messages. Those messages are normal and do not indicate an error.\r\n```\r\n\r\nis trying to tell you. Those \"errors\" are not what is causing the failure.\r\n\r\n\r\nUsually, \"I was not able to install/load the package\" errors can be resolved by testing _locally_. In this case, I was able to clone and instantiate your package, so I (you) would have to look deeper.\r\n\r\nI did notice that trying to run your test suite fails:\r\n\r\n```\r\n  Got exception outside of a @test\r\n  OpenDSSDirect.Utils.OpenDSSDirectException(\"[ERROR 243] Redirect file not found: \\\"data/ieee13/IEEE13Nodeckt_no_trfxs.dss\\\"\")\r\n```\r\n\r\nYou definitely want to make sure that you can run your tests locally and on CI before registering. Note that red CI badge in your README. Make sure that is green, and then see if you are still getting errors when trying to register.\r\n\r\n\r\n",
+      "createdAt": "2024-10-18T15:03:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2422683348",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QZ1tV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Note that red CI badge in your README\r\n\r\nOh, never mind, that's for the \"pre\" version of Julia. I recommend not routinely testing against pre-releases/nightlies of Julia as part of your regular CI. This will give you a lot of false positives. Instead, test against the oldest Julia version you support, and the current release.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-18T15:07:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2422692693",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QZ2-h",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I should add, though: in order to be registered, your package will also need some documentation (in addition to passing the automatic checks). [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README",
+      "createdAt": "2024-10-18T15:10:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2422697889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RbKWv",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you @goerz all very helpful! \r\n\r\nI found an issue in the OpenDSSDirect dependency that was causing things to fail. I'll come back to this with more documentation.",
+      "createdAt": "2024-10-27T03:01:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2439816623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Y0LL8",
+      "author": {
+        "login": "NLaws"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed in favor of https://github.com/JuliaRegistries/General/pull/122048",
+      "createdAt": "2024-12-27T15:42:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115285#issuecomment-2563814140",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BusInjectionModel\n- Repository: https://github.com/NLaws/BusInjectionModel.jl\n- Created by: @NLaws\n- Version: v0.1.0\n- Commit: 31344f1c66c868539cce6a5b33bd2d89a557d87f\n- Reviewed by: @NLaws\n- Reference: https://github.com/NLaws/BusInjectionModel.jl/commit/31344f1c66c868539cce6a5b33bd2d89a557d87f#commitcomment-150683574\n- Description: Various forms of the Bus Injection Model (power flow equations) built on the CommonOPF.jl package\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6840317aa3862d9075e8fbe1b7f4b0372c0ada4c2111b72d482beda7bdcb7ce9afc47399df01db8236b42e5f0eb25414c6f7f3304a8e3eae6100f9abff56831993f50bb2688bf15860b8e78e1390a3ab2e0718bd048c8d338e76a28619fad3c53884458984ca62bec83dd785bd4e14d932dbe783ebb8c512069617fedd83a6162a087847e485366f6faf37c4bd4da50b05c9b3938a71a279350d7f66c26cfd76f5ebef3fc6e5998eb840a6a0354790d88 -->",
+  "package_name": "BusInjectionModel",
+  "closed_at": "2024-12-27T16:06:09Z",
+  "title": "New package: BusInjectionModel v0.1.0"
+}

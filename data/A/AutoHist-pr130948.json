@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-05-14T11:01:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 130948,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86rpfeh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-14T11:08:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130948#issuecomment-2879780769",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rtExU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From the README:\r\n\r\n> A detailed description of the supported methods will be added at a later point in time.\r\n\r\nIf you are following [semantic versioning](https://semver.org), that would be at odds with an initial version number >= 1.0. As a general rule, versions `<v1.0` are for initial development, when the API of the package isn't nailed down yet, the package does not have a lot of dependents, and \"backwards compatibility\" is not a major concern. For an initial registration, that's usually the situation your package is in. Thus, an initial `v0.1` is usually the way to go. The bar for registering an initial `v0.1` is not very high. Basically, just\r\n\r\n* Must have a name that is appropriate for the scope of the package\r\n* Must have some non-trivial functionality (no \"placeholder\" packages)\r\n* Must have a README that explains the purpose of the package and gives a basic usage example (or a link to documentation that is sufficient to figure out how to get started)\r\n\r\nFor a version `v1.0`, you're saying that the package already has a stable API. That has some implications for what one would expect from that package. Personally, I tend to apply the following guidelines:\r\n\r\n* Must _define_ the stable API. That generally means _complete_ documentation.\r\n* Should have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly, and no basis for figuring out whether a pull request is \"breaking\" or not, going forward.\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nEven if you think your package is fairly polished already, I always recommend registering with an initial `v0.1` anyway. That way, you have a chance to find out whether there are any major flaws in the package once people start to use it. Once it has a few dependents and you really should start to worry about maintaining backwards compatibility, you can always make a `v1.0` release. That doesn't mean you absolutely have to make significant changes to the `v0.1` version. Just make sure that your package is fully documented as \"stable\" at that point, has good test coverage, and all the other things people would expect from a \"stable\" package.\r\n\r\nUltimately this is your decision. If you want to lower the version number, you can just do another registration. You can also add a full API documentation while the registration is still pending, and then just retrigger the [`v1.0.0` registration](https://github.com/JuliaRegistries/General/pull/130936) or the `v1.0.1` registration here.\r\n\r\nRetriggering a registration to fix issues found while the registration is pending normal; you should generally not _change_ the version number to, e.g., `v1.0.2` while a registration is pending (unless the version number is inappropriate, of course). Retriggering while keeping the version number the same updates and existing PR, changing the version number creates a new PR.\r\n",
+      "createdAt": "2025-05-14T15:43:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130948#issuecomment-2880719956",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xMEmd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-14T12:23:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130948#issuecomment-2972731805",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ybgQv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-06-21T12:23:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130948#issuecomment-2993554479",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AutoHist\n- Repository: https://github.com/oskarhs/AutoHist.jl\n- Created by: @oskarhs\n- Version: v1.0.1\n- Commit: 751b1764f6e583f1c8ae04d0f509f132779894ba\n- Reviewed by: @oskarhs\n- Reference: https://github.com/oskarhs/AutoHist.jl/commit/751b1764f6e583f1c8ae04d0f509f132779894ba#commitcomment-156996980\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c6b05938152e4a3ef26b77c1d0fb497c13369ea5a94f8aaed1e79f19b8773283621a68eb956013cfd40be2d3d7b0d578a669976627b4baafbefe402b8b3cf6e187ac03c98872b517de7d9c53bc44b0f39e11a07340ac7b3fecf0de5762073c20b5a8cd319fe92bdc6d40d583278a48933b37ae68086b73933fdd19ba04b43d711e65ff9d4306cd2e71a25bd6b895f965d6097d498df49f1f6be5c5e0a5a5346bc99234adb5ac0da8fb65baa4a398bcc4 -->",
+  "package_name": "AutoHist",
+  "closed_at": "2025-06-21T12:24:00Z",
+  "title": "New package: AutoHist v1.0.1"
+}

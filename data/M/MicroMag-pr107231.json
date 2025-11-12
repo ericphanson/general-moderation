@@ -1,0 +1,276 @@
+{
+  "created_at": "2024-05-20T15:53:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 107231,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85-Z-p8",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The problem is the same as with your previous two registrations. Even if the automated checks pass, anyone from the community (like me) can object to a package registration. In this case, the name is once again too short and not precise enough. What about \"MicromagneticSimulations\"?\n\nSee also:\n- https://github.com/JuliaRegistries/General/pull/105307\n- https://github.com/JuliaRegistries/General/pull/107227\n",
+      "createdAt": "2024-05-20T15:57:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120739452",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-Z-9c",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-20T15:57:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120740700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-Z_jO",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sorry for what must feel like harassment at this point ^^ But the package namespace is limited, and it doesn't cost much to be more specific",
+      "createdAt": "2024-05-20T15:59:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120743118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aDZm",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I think MicroMag is better than MicromagneticSimulations, suppose we want to use a function from the package, it would be inconvenient to use MicromagneticSimulations.fun_name. ",
+      "createdAt": "2024-05-20T16:08:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120758886",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aGnn",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I think MicroMag is better than MicromagneticSimulations, suppose we want to use a function from the package, it would be inconvenient to use MicromagneticSimulations.fun_name.\r\n\r\nYou have plenty of options to avoid this, here are a few:\r\n\r\n```julia\r\nusing MicromagneticSimulations  # you can now call every exported name\r\nusing MicromagneticSimulations: fun_name  # you can now call fun_name\r\nimport MicromagneticSimulations as MS  # you can now call MS.fun_name\r\n```",
+      "createdAt": "2024-05-20T16:16:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120772071",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aIi2",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thanks for the suggestion, but I still think MicroMag is better. ",
+      "createdAt": "2024-05-20T16:20:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120779958",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aMiO",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz care to weigh in?",
+      "createdAt": "2024-05-20T16:31:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120796302",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aTJr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would strongly prefer `MicromagneticSimulations` to `MicroMag`. Shortness of a package name is not something I would generally put any weight on, as the full package name is not something that needs to be typed often. @gdalle already demonstrated all the ways in which members of the package would be used. I'd always optimize for clarity when choosing a package name. So, my 2 cents are to recommend for @ww1g11 to reconsider the package name.",
+      "createdAt": "2024-05-20T16:48:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120823403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-aXhq",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think we're often going overboard with `ExtremelyLongAndDetailedPackageName` in Julia, but seeing that `Mag` just isn't a common abbreviation for magnetic but actually a common abbreviation for magazine I think just expanding that might be a good compromise?\n\n@ww1g11 the others and already mentioned the sparsity of the namespace resource but from an author's perspective it's also useful to have a descriptive name for potential users and contributors to discover your package. ",
+      "createdAt": "2024-05-20T17:00:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2120841322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-cHqp",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "MicroMagnetic.jl or similar seems like a good enough name  to me.",
+      "createdAt": "2024-05-20T22:10:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2121300649",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-h56f",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@nilshg Thanks for the suggestions, for me MicroMag.jl is not an ideal name, so MicroMagnetic.jl is okay for me (I still think this kind of name is worse than JuMag.jl and NuMag.jl).\r\n\r\n@gdalle @goerz \r\nHowever, I would like to say that a long and descriptive name is not always a good strategy, sometimes this kind of name is too big. There could be many packages in the same area but only one descriptive name. For example, for the packages using finite element method, there is only one FEM.jl or FiniteElementMethod.jl, in such situations, actually one should choose this name carefully unless this package is expected to be better than similar packages. Suppose someone developed a package related to machine learning and the long and descriptive strategy will suggest the package name to be MachineLearning.jl, but how do you know this name is suitable for the package? Similarly, if I chose MicromagneticSimulations.jl, how should others name their micromagnetic packages?\r\n\r\nIn terms of limit space of package namespace, I believe it's not just Julia that has this problem, so how pip and debian solve this problem?  Long and descriptive naming is not the only solution.\r\n\r\nPS: I have measured the Damerau-Levenshtein distance between NuMag and NUMA, which gives 3. Since Julia is case-sensitive, why the automatic checking use the lower cases? I believe most people will not think NuMag is too close to NUMA. \r\n  ",
+      "createdAt": "2024-05-21T14:50:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2122817183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-iMmf",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Suppose someone developed a package related to machine learning and the long and descriptive strategy will suggest the package name to be MachineLearning.jl\r\n\r\nFor such a generic case, the people watching the general registry (like @goerz and I) would probably suggest either of the following options:\r\n- Try to merge the functionality into one of the big existing ecosystems, like MLJ.jl or Flux.jl\r\n- Pick a less generic name, like MachineLearningUtilities.jl or MachineLearningForBiology.jl\r\n- Avoid registering altogether, and use a local registry instead\r\n\r\n> Similarly, if I chose MicromagneticSimulations.jl, how should others name their micromagnetic packages?\r\n\r\nI am not qualified enough to say whether your package will be the \"reference\" package in micromagnetic simulations. However, I don't think this doubt is an argument for naming it MicroMag.jl either, because you claim generality both over the topic of magnetism and the topic of magazines ;)\r\n\r\n> how pip and debian solve this problem\r\n\r\nI have no clue.\r\n\r\n---\r\n\r\nYou obviously feel very strongly about this, and I don't have infinite energy to spend debating it. MicroMagnetic.jl is not ideal but it's much better and more explicit, so I suggest you register your package under that name.",
+      "createdAt": "2024-05-21T15:29:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2122893727",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-lJjn",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I will change the package name to MicroMagnetic.jl, but I believe that the descriptive naming will eventually become problematic because it significantly reduces the number of available names.",
+      "createdAt": "2024-05-22T00:40:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2123667687",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_FdLn",
+      "author": {
+        "login": "ww1g11"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Please close this PR since the package name is changed https://github.com/JuliaRegistries/General/pull/107408",
+      "createdAt": "2024-05-26T08:35:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2132136679",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_FoZO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> However, I would like to say that a long and descriptive name is not always a good strategy, sometimes this kind of name is too big.\r\n\r\nThere seems to be a little bit of a confusion between \"descriptive\" and \"general\".\r\n\r\n> Suppose someone developed a package related to machine learning and the long and descriptive strategy will suggest the package name to be MachineLearning.jl\r\n\r\nNo, \"MachineLearning\" would not be an appropriate name for a package just *related* to machine learning. The package name (if it follows the \"descriptive\" route) should describe which *aspect* of machine learning the package covers, as narrowly as possible. And yes, this may be a *long* name. But \"long\" is not a problem. Actually, registering a package with the name \"MachineLearning\" would be quite difficult: it would have to cover the entire field of machine learning (the way DifferentialEquations covers the entire world of differential equation solving). I would also insist that it is fairly well-developed at the time of registration, and has a team of maintainers with long-term funding that guarantees continuing maintenance and the resources to develop a package with such a wide scope. Similarly, (a little less so) for something like \"FiniteElementMethods.jl\": Registering such a package implies taking on the responsibility to maintain it appropriately for a wide scope. Anyone working in finite elements should generally be contributing to that package, not starting their own package. Of course, if they have a package with a narrower scope, that can still be an independent package (with a more specific name). Or, if it's a general framework just with a different philosophy, often \"less systematic\" names are a good way to go. Like how I'm maintaining the very general QuantumControl.jl, but there is also Piccolo.jl that covers a different approach to quantum control.\r\n\r\nThe one thing we want to avoid is abbreviations for the sake of shortness. Shortness is *not* a goal in Julia package naming. And, `MicroMag` and `MicroMagnetic` are the *same* package name, so these kinds of variations are not okay to differentiate packages in a crowded name space. For example, `MicroBio` would have decent chances of being registered (since \"Bio\" is an extremely recognizable abbreviation), but once it exists, I would definitely block `MicroBiology` as being \"taken\".\r\n\r\n> In terms of limit space of package namespace, I believe it's not just Julia that has this problem, so how pip and debian solve this problem?\r\n\r\nPyPI is almost completely unregulated, so package names are used up on a first-come-first-serve basis. There is no review of whether package names are appropriate or whether they are too similar to existing packages, or even whether there is malicious typo-squatting. That's now how we do things in Julia.\r\n\r\nIt is also important to note that many languages have a culture of \"short\" package names. This especially includes compiled languages because these are run from the command line. Same for Debian packages: these names need to be short (which is actually a much bigger constraint than in Julia: there are far fewer good short names than good long names). Also, Debian has a maintainer team that deals with naming conflicts by renaming packages as they see fit. \r\n\r\n> Long and descriptive naming is not the only solution\r\n\r\nThere's always the \"less systematic names\" (Makie, Zygote, etc.), which I'm actually a big fan of. But they require more creativity. IMO, these can also include pronounceable acronyms – we shouldn't have a strict rule against all-caps names. \r\n\r\n> I believe that the descriptive naming will eventually become problematic because it significantly reduces the number of available names.\r\n\r\nThis is a feature, not a bug. We would not want a dozen competing packages with the same scope and with names that are small variations of each other (as Python might have). It's much better if there is *one* authoritative package for a specific problem domain. Of course, that puts responsibilities of the maintainer, and is partly also why we have a review for registrations in General. Julia has a much stronger community aspect than any other language I've worked with. Up to the point where if the maintainer of package with a large scope were to disappear, the registry maintainers could appoint an authoritative fork of the package. We also encourage the development of \"large\" packages in organizations (with multiple owners), not personal accounts. In my opinion, this bodes well for the longevity of the Julia ecosystem.\r\n\r\n> Similarly, if I chose MicromagneticSimulations.jl, how should others name their micromagnetic packages?\r\n\r\nLike I said, whether you name it `MicroMag` or `MicromagneticSimulations.jl` has little to do with this – except that \"Simulations\" makes it more specific. So now there could be another package, e.g., \"MicromagneticModels\". But if someone wanted to work on micromagnetic simulations, they should be contributing to your existing packages.\r\n\r\n> PS: I have measured the Damerau-Levenshtein distance between NuMag and NUMA, which gives 3. Since Julia is case-sensitive, why the automatic checking use the lower cases? I believe most people will not think NuMag is too close to NUMA.\r\n\r\nThe \"name similarity check\" is 90% false positives. It's just that we haven't come up with any better automatic check, so this just puts a pause on the registration until a maintainer can review it. Most of the time, the name similarities get overridden without any discussion. And yes, `NuMag` is not something that would be confused with `NUMA`. So that name similarity is absolutely not the issue here.",
+      "createdAt": "2024-05-26T11:19:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107231#issuecomment-2132182606",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MicroMag\n- Repository: https://github.com/ww1g11/MicroMag.jl\n- Created by: @ww1g11\n- Version: v0.3.1\n- Commit: d52eda69f1a7685f0b0680d14b0bd40c13b49232\n- Reviewed by: @ww1g11\n- Reference: https://github.com/ww1g11/MicroMag.jl/issues/6#issuecomment-2120733686\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598385139f3545861e69b64e85daa943bf27cf2f1e1aac1144d341f2d0793d0a748eeac2db2c83caa3607a0726d35e5eeecb6655f2cc1ecfad8ff536f80349e8627cf9d827a0084bd485b2ce8205600c84fd05e0e7ef4507bc5ff7546cebbc4580ddd30144d99cb963fabbd19c09443d7445fadeefc834a50414b32b45e3e736e87 -->",
+  "package_name": "MicroMag",
+  "closed_at": "2024-05-26T11:19:05Z",
+  "title": "New package: MicroMag v0.3.1"
+}

@@ -1,0 +1,75 @@
+{
+  "created_at": "2021-02-17T21:07:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 30306,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MDg1NDY1Mg==",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is a test of the dependency confusion detection and not should not be merged.\r\n",
+      "createdAt": "2021-02-17T21:09:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30306#issuecomment-780854652",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MDg1NTI4OA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n- UUID 45426be3-ce3a-4f7b-a429-3e2aa7698a5f conflicts with the package PhaseOptimizedComponentAnalysis in registry HolyLabRegistry at https://github.com/HolyLab/HolyLabRegistry.\nThis could be a dependency confusion attack.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-17T21:10:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30306#issuecomment-780855288",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MDg1NjE0OQ==",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Detection successful, please close.",
+      "createdAt": "2021-02-17T21:12:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30306#issuecomment-780856149",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DependencyConfusionTest\n- Repository: https://github.com/GunnarFarneback/DependencyConfusionTest.jl\n- Created by: @GunnarFarneback\n- Version: v0.0.1\n- Commit: 3f9a39a625d8ba69bb192cbb3c5ebd87ca398f81\n- Git reference: master",
+  "package_name": "DependencyConfusionTest",
+  "closed_at": "2021-02-17T22:09:08Z",
+  "title": "New package: DependencyConfusionTest v0.0.1"
+}

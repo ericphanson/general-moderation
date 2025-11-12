@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-11-03T13:31:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 94698,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85q1zvF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to CUDD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to BED. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-03T14:00:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94698#issuecomment-1792490437",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tHTht",
+      "author": {
+        "login": "thevolatilebit"
+      },
+      "authorAssociation": "NONE",
+      "body": "Can be ignored. Package was renamed and registration submitted in a different PR.",
+      "createdAt": "2023-11-28T20:00:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94698#issuecomment-1830631533",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vlKol",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-12-29T12:22:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94698#issuecomment-1872013861",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v-Onb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-01-05T12:23:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94698#issuecomment-1878583771",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CEED\n- Repository: https://github.com/Merck/CEED.jl\n- Created by: @thevolatilebit\n- Version: v0.3.4\n- Commit: 6d932f6a69bdb7906ae8c1dd82c9a1008c336010\n- Reviewed by: @thevolatilebit\n- Reference: https://github.com/Merck/CEED.jl/issues/2#issuecomment-1822925710\n- Description: A decision-making framework for the cost-efficient design of experiments, balancing the value of acquired experimental evidence and incurred costs.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598371855f80b9f54417020b05eeb37dba6c519ae510cbfdb6cde607b20ee2390a4fff0095eb948d18da6882fbdb5af407620c9db1db78e336b57a0f5b6bc7b4d6507d5de9d6eb27326004ac4cad13328b2ff25c85d8253549d9a7403cc91e66b4a9de4f9544b1e8395cc515f2baf47a3bf -->",
+  "package_name": "CEED",
+  "closed_at": "2024-01-05T12:23:14Z",
+  "title": "New package: CEED v0.3.4"
+}

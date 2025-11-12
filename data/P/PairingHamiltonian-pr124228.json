@@ -1,0 +1,127 @@
+{
+  "created_at": "2025-02-03T06:24:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124228,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86cxzC9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-03T08:42:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2630299837",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c0Xa-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Could I suggest renaming this to `PairingHamiltonians`? That is, use the pluralized name, as is generally [recommended for Julia packages](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules) (point 3).\r\n\r\nYou would then also rename the main data structure in the package from `Pairing_Hamiltonian` to `PairingHamiltonian`. The almost universal convention for type names in Julia is to use CamelCase, not underscores (which, instead, are use for function names). In fact, the clash between `PairingHamiltonian` as a package name and a type name is exactly _why_ package/module names should be pluralized.",
+      "createdAt": "2025-02-03T13:12:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2630973118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c6NTM",
+      "author": {
+        "login": "SotaYoshida"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz I appreciate your help and suggestions.\r\nI will rename the package&module `PairingHamiltonian` => `PairngHamiltonians`, and the main function to `PairngHamiltonian`.",
+      "createdAt": "2025-02-04T00:44:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2632504524",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ddaTs",
+      "author": {
+        "login": "SotaYoshida"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have renamed the package and associated functions.\r\nIs this pull request still valid? Or should I ask you to close this pull request and recreate another one through the register bot?\r\n\r\nThanks.",
+      "createdAt": "2025-02-07T01:46:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2641732844",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ddell",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You have to do a new registration after renaming the package. We will then close this PR in favor of the new one.",
+      "createdAt": "2025-02-07T02:01:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2641750373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dd_Q2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124510",
+      "createdAt": "2025-02-07T03:51:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124228#issuecomment-2641884214",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PairingHamiltonian\n- Repository: https://github.com/SotaYoshida/PairingHamiltonian.jl\n- Created by: @SotaYoshida\n- Version: v0.1.0\n- Commit: 6ae852d440a5f69f3579cc51c5cc255ba457f6cb\n- Reviewed by: @SotaYoshida\n- Reference: https://github.com/SotaYoshida/PairingHamiltonian.jl/issues/7#issuecomment-2630516819\n- Description: Julia package to solve pairing hamiltonian\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359804dabc5c988094e2b70402fc6a577a6f543860592711ed74f435eea491f077709e8e6e0abd415deac8cb6839b2006dad380c2ccb2c18ac419becec78f321b1f2eada6a245413cd260bca621f62802942df3ecdb756cd4d8d3318fcb0a6ac9b2c93cc8ba926c748e997f6c8250dea56ec2a616c4d8b3834089fbc945dda2795e5 -->",
+  "package_name": "PairingHamiltonian",
+  "closed_at": "2025-02-07T03:51:11Z",
+  "title": "New package: PairingHamiltonian v0.1.0"
+}

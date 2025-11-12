@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-08-07T07:43:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 89178,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85jYfZy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to Mimi. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Kirei. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-07T07:47:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89178#issuecomment-1667364466",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jYi0O",
+      "author": {
+        "login": "kdheepak"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is a port of an algorithm by the same name, i.e. Kiwi: https://github.com/nucleic/kiwi/. I would like to keep the same name if possible.\r\n\r\n`[noblock]`",
+      "createdAt": "2023-08-07T07:57:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89178#issuecomment-1667378446",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jahH5",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "May I suggest the name KiwiSolver.jl? ",
+      "createdAt": "2023-08-07T13:49:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89178#issuecomment-1667895801",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jak3Z",
+      "author": {
+        "login": "kdheepak"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR should no longer be merged. This PR should be used instead: https://github.com/JuliaRegistries/General/pull/89202",
+      "createdAt": "2023-08-07T13:58:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89178#issuecomment-1667911129",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Kiwi\n- Repository: https://github.com/kdheepak/Kiwi.jl\n- Created by: @kdheepak\n- Version: v1.0.0\n- Commit: 21515940a1628dea878b0f9052485de403a52e9f\n- Reviewed by: @kdheepak\n- Reference: https://github.com/kdheepak/Kiwi.jl/commit/21515940a1628dea878b0f9052485de403a52e9f#commitcomment-123792723\n- Description: Kiwi.jl is a Julia port of the efficient C++ implementation of the Cassowary constraint solving algorithm\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62163d21796f208a273cb7bb6080bf9939a05db4ac188d8cb4050d87258779bca11629bba7b8f0cd4110a53ff9e69c16ccf3d80bb4a307f34e0785a2135a4eba0c259fcfb0a50081c7afd8ed822f46f45590b0f5471bea434d9150b266713a559056b498dbedca351e25b03cb90e1810f5e1cae92507b111c53af8465d0e978d227766178ec81dd4df811076cde247227e7ca6df68ef99004ecf7e54d621edad4e2d3795f5b51a69c5571798b6e6de04e -->",
+  "package_name": "Kiwi",
+  "closed_at": "2023-08-07T14:08:14Z",
+  "title": "New package: Kiwi v1.0.0"
+}

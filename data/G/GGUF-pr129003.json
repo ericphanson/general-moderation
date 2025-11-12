@@ -1,0 +1,91 @@
+{
+  "created_at": "2025-04-14T00:11:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 129003,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86m57T0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to GBIF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to GLTF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to CSDP. Normalized visual distance 2.45 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-14T00:17:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129003#issuecomment-2800202996",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86m6KhH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You could just name this `GGUFFiles`",
+      "createdAt": "2025-04-14T01:34:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129003#issuecomment-2800265287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86m-GWc",
+      "author": {
+        "login": "imohag9"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi . When i tried to register my previous package AvifSupport :this was your response \"although I actually think that Avif would be the better name\" .\r\n[https://github.com/JuliaRegistries/General/pull/125987#issuecomment-2691901983](url)\r\nNow you don't like GGUf and prefer a longer name ? I don't understand.",
+      "createdAt": "2025-04-14T10:47:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129003#issuecomment-2801296796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86m-Qeq",
+      "author": {
+        "login": "imohag9"
+      },
+      "authorAssociation": "NONE",
+      "body": "In addition , all the packages that handle binary files in the julia ecosystem are named after the file extension : JLD2,JSON,BSON and others ..\r\nI don't understand the need to add `files` to the name.",
+      "createdAt": "2025-04-14T11:04:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129003#issuecomment-2801338282",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86m_ubQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> When i tried to register my previous package AvifSupport :this was your response [\"although I actually think that Avif would be the better name\"](https://github.com/JuliaRegistries/General/pull/125980#issuecomment-2691902761).\r\n\r\nThe crucial difference is that the description of the `Avif`/`AvifSupport` package was [\"Julia interface to libavif\"](https://github.com/JuliaRegistries/General/pull/125980#issue-2885539063). We have special rules for Julia packages that wrap external libraries. I never saw the second part, [\"provides IO support for the AVIF image format\"](https://github.com/imohag9/AvifSupport.jl?tab=readme-ov-file#readme). So I had no idea that `.avif` was a file extension, or I would have recommended `AvifFiles` or `AfifFormat`.\r\n\r\n> all the packages that handle binary files in the julia ecosystem are named after the file extension : JLD2,JSON,BSON and others\r\n\r\nThose formats are _much_ more widely used than `GGUF`. But more importantly: these packages probably existed long before the naming rules were in place. Naming a Julia package after a file extension acronym is generally _not_ okay, and it would be very rare for such a name to get through the registration process nowadays. My usual recommendation for file-format packages is to append the suffix `Files` or `Format` to the acronym of the file extension (or to come up with an even better name).\r\n\r\nAnd it's not really what _I_ want: Even if I agreed that `GGUF` was fine, I don't have sufficient permissions to override the check, and I'm not sure you'll be able to convince any of the full registry maintainers to merge it manually. Package naming rules seem to be getting pretty strict, lately (not always with my support). In general, \"package X was registered\" is never an argument for \"new package Y should be registered\". All of the rules ultimately are guidelines, and it comes down to the judgement of the registry maintainers. So every package is handled on a case-by-case basis.\r\n\r\nClosing in favor of https://github.com/JuliaRegistries/General/pull/129027\r\n\r\nP.S.: Generally, when you rename GitHub repositories, please use [GitHub's official renaming feature](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository). That way, the link to https://github.com/imohag9/GGUF.jl would get forwarded to https://github.com/imohag9/GGUFFiles.jl, instead of resulting in a 404 error as it does now.",
+      "createdAt": "2025-04-14T13:30:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129003#issuecomment-2801723088",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GGUF\n- Repository: https://github.com/imohag9/GGUF.jl\n- Created by: @imohag9\n- Version: v0.1.0\n- Commit: 19041ef94e5edeca60af0f1f7d8dc8d5796f4fac\n- Git reference: HEAD\n- Description: Julia package for reading and writing GGUF files\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nfirst release\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "GGUF",
+  "closed_at": "2025-04-14T13:33:07Z",
+  "title": "New package: GGUF v0.1.0"
+}

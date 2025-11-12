@@ -1,0 +1,128 @@
+{
+  "created_at": "2022-06-21T22:31:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 62825,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85FSUUr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Combinatorics, JSON, JuliaFormatter, Revise, YAML\n- I was not able to install the package (i.e. `Pkg.add(\"Demes\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import Demes` failed). See the CI logs for details.\n- Package name similar to 5 existing packages.\n  1. Similar to Remez. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Dates. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Dices. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Vimes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Defer. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-21T22:34:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1162429739",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FSay_",
+      "author": {
+        "login": "apragsdale"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator register",
+      "createdAt": "2022-06-21T23:23:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1162456255",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FSazI",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Error while trying to register: **Register Failed**\n@apragsdale, it looks like you are not a publicly listed member/owner in the parent organization (JuliaRegistries).\nIf you are a member/owner, you will need to change your membership to public. See [GitHub Help](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership)",
+      "createdAt": "2022-06-21T23:23:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1162456264",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FSbpm",
+      "author": {
+        "login": "apragsdale"
+      },
+      "authorAssociation": "NONE",
+      "body": "This could just be deleted.. quite a bit to clean up.",
+      "createdAt": "2022-06-21T23:30:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1162459750",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Fd1Fv",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm going to close the PR as requested.  Feel free to submit a new registration whenever you want, however note that\r\n\r\n* the name is fine.  The check is there to prevent malicious typosquatting and require human intervention to judge whether that's the case or not\r\n* the missing compat bounds should be fixed\r\n* the fact that the package can't be actually installed and/or loaded should also be fixed: it isn't useful to have in the registry a package which fails to be installed from the onset",
+      "createdAt": "2022-06-24T10:42:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1165447535",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Felc3",
+      "author": {
+        "login": "apragsdale"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano. The compat bounds should be easy. The install issue seems to be due to including a submodule (which is only used in testing and not the package itself). I'll need to think a bit about the best way to work around that.",
+      "createdAt": "2022-06-24T14:44:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1165645623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FemmH",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Testing data can for example be a lazy artifact (in particular a tarball snapshot of the other repo) automatically downloaded on demand when running the tests.  This just published post can be useful: https://www.juliafordatascience.com/artifacts/.",
+      "createdAt": "2022-06-24T14:49:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/62825#issuecomment-1165650311",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Demes\n- Repository: https://github.com/apragsdale/Demes.jl\n- Created by: @apragsdale\n- Version: v0.0.1\n- Commit: 3499d245babc263b16c19a8677edda8c78f8ea4a\n- Git reference: v0.0.1",
+  "package_name": "Demes",
+  "closed_at": "2022-06-24T10:42:32Z",
+  "title": "New package: Demes v0.0.1"
+}

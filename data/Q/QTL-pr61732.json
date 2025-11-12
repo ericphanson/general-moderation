@@ -1,0 +1,136 @@
+{
+  "created_at": "2022-06-04T14:27:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 61732,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85EWBWs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- I was not able to install the package (i.e. `Pkg.add(\"QTL\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import QTL` failed). See the CI logs for details.\n- Package name similar to 13 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to QML. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to GSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to HSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to LSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to MKL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to QSM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to VSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to ISL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to QOI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to KML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to XML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to Tk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-04T14:30:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1146623404",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EWBfj",
+      "author": {
+        "login": "xijiang"
+      },
+      "authorAssociation": "NONE",
+      "body": "Now only the package name is an issue. I am wondering if this package can be manually pushed. Many thx.",
+      "createdAt": "2022-06-04T14:32:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1146623971",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EiK6E",
+      "author": {
+        "login": "xijiang"
+      },
+      "authorAssociation": "NONE",
+      "body": "Anything else that I can do to have this `QTL` package registered?",
+      "createdAt": "2022-06-08T11:43:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1149808260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EkR1B",
+      "author": {
+        "login": "sens"
+      },
+      "authorAssociation": "NONE",
+      "body": "To me, the name of your package (QTL) does not accurately describe what the package does (\"about quantitative genetics\").  As a quantitative geneticist myself, I would urge you to either rename the package or more precisely define what your package does. I am assuming QTL is a reference to Quantitative Trait Loci. \r\n\r\nThere are several Julia package performing QTL mapping including the OpenMendel project (which has several packages).  My group has three packages doing some kind of QTL mapping: FaSTLMM, LiteQTL, FlxQTL.",
+      "createdAt": "2022-06-08T20:13:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1150360897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EmtrV",
+      "author": {
+        "login": "xijiang"
+      },
+      "authorAssociation": "NONE",
+      "body": "The current plan is not to include QTL mapping. Instead, since QTL is also central for genomic selection and breeding, this package was intended to include as many breeding relevant algorithms as possible. For example, population simulation, G matrix construction, its approximate inverse, matrix I/O, breeding value evaluations, and various Bayesian method. It also include some functions that are used frequently in my group. Maybe it looks ambitious, but Julia is such a powerful language and young, it is worth a try.\r\n\r\nMaybe I can add my initials to the name, like `xyQTL`. \r\n\r\nAnyway, I have been using `qtl` as my penname for nearly 20 years, such as twitter, and one of oldest Chinese website. If `QTL` is not a go still, I will try a new name.\r\n",
+      "createdAt": "2022-06-09T11:22:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1150999253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EnIdq",
+      "author": {
+        "login": "sens"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for clarifying your long-term plans.  I agree that Julia is fantastic for your goals.\r\n\r\nTo better guide potential users such as myself, I suggest making your intentions clear from the package name.  Perhaps `GenomicSelection`, `GeneticBreeding`, or `GenomicSelectionBreeding`?",
+      "createdAt": "2022-06-09T13:18:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1151108970",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GUSO-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-07-10T12:48:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1179722686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GuKr3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-07-17T12:49:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/61732#issuecomment-1186507511",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QTL\n- Repository: https://github.com/xijiang/QTL.jl\n- Created by: @xijiang\n- Version: v0.1.6\n- Commit: bda19f7da1528fc1437e9e40fb998aa5f7de5ef8\n- Git reference: HEAD\n- Description: About quantitative genetics",
+  "package_name": "QTL",
+  "closed_at": "2022-07-17T12:49:08Z",
+  "title": "New package: QTL v0.1.6"
+}

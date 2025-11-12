@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-10-28T20:19:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 71257,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85NNq8A",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"PhyJL\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import PhyJL` failed). See the CI logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to Phylo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-28T20:22:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71257#issuecomment-1295429376",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NP43G",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Presumably superseded by #71262",
+      "createdAt": "2022-10-29T22:54:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71257#issuecomment-1296010694",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PhyJL\n- Repository: https://github.com/sigmap666/PhyJL.jl\n- Created by: @sigmap666\n- Version: v0.1.0\n- Commit: 1cff0f6f5319db4ee7ff870c9e09b71e61965180\n- Reviewed by: @sigmap666\n- Reference: https://github.com/sigmap666/PhyJL.jl/issues/6#issuecomment-1295424746\n- Description: Julia package for phylogenetics based off of NewickTree.jl and the R packages ape, phytools, and castor\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598bb0fda18425dc9e193edaf5bf9c91368a21948cd51f3faa53ccffca3860ce57e9c39341b9dc86028900aca006663ca87669ba351309fb33a0530e951ca73e36d822bbfbd9ec15b6877512d745fda1d1d17be8aef9d68c3cd373e0e4b521f0852918342c6b2ad17c27c2d9c53f3760bc6380043836d48090501a0a07ab268715c -->",
+  "package_name": "PhyJL",
+  "closed_at": "2022-10-29T22:54:22Z",
+  "title": "New package: PhyJL v0.1.0"
+}

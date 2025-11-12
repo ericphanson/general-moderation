@@ -1,0 +1,119 @@
+{
+  "created_at": "2024-04-30T13:53:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 105900,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858TM99",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-30T13:56:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105900#issuecomment-2085408637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858TYfw",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "IIUC this package provides access only to the header portion of the FITS file format. If that's the case, the name FITSHeaders.jl or FITSCards.jl would be more appropriate. Those names also hint to the users that the primary functionality is related to one of those structs.",
+      "createdAt": "2024-04-30T14:18:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105900#issuecomment-2085455856",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858dvLr",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You are right, I will rename the package as `FITSHeaders` as you suggested. Thanks for the advice. I just wonder how to do that correctly:\r\n- Shall I also change the package UUID?\r\n- Shall I cancel this package submission and submit the new one?",
+      "createdAt": "2024-05-01T08:51:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105900#issuecomment-2088170219",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858fjJt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2024-05-01T15:35:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105900#issuecomment-2088645229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858kTrt",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "OK I have [renamed the package as `FITSHeaders`](https://github.com/emmt/FITSHeaders.jl/commit/11f9af99a37f781ee5d7df735714e42273b7c1d3). This PR can be closed. Thanks for the help and advices.",
+      "createdAt": "2024-05-02T08:28:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105900#issuecomment-2089892589",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BaseFITS\n- Repository: https://github.com/emmt/BaseFITS.jl\n- Created by: @emmt\n- Version: v0.3.11\n- Commit: 337168ef6c7822976a413c39633c7c7f8c4d6b79\n- Reviewed by: @emmt\n- Reference: https://github.com/emmt/BaseFITS.jl/commit/337168ef6c7822976a413c39633c7c7f8c4d6b79#commitcomment-141520611\n- Description: A pure Julia package for managing FITS header records.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- Update doc.\r\n- Submitted as an official Julia package.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69399f8e261ce5d0b71d3088c3cfcad033302eea493593c9bb0922c01f0acf3ae8e92642a9af0d9c25382a2aabdb66eb3ade6b2ea2594b67b0846ba0fdb734f98bef1bb2a5de1248e86c244c2c84e8ffa55a93da4df986e335f9ced6c9733cdae4bd4a00c7bab4e033e680d9355c2bf6b7631fa97b6c017a13f821a96654d567aed5e4c8c3a4069dc4b236b61039839b03d18f01edf8cbfffbac60e87cd3856f28511226f21458199c368b627e5a55491 -->",
+  "package_name": "BaseFITS",
+  "closed_at": "2024-05-02T09:23:04Z",
+  "title": "New package: BaseFITS v0.3.11"
+}

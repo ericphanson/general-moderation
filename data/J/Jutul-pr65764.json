@@ -1,0 +1,68 @@
+{
+  "created_at": "2022-08-06T11:22:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 65764,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85H9GK5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 2 existing packages.\n  1. Similar to Jusdl. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.49 is at or below cutoff of 2.50.\n  2. Similar to Jute. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-08-06T11:28:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65764#issuecomment-1207198393",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H9Gcd",
+      "author": {
+        "login": "moyner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I apologize for the duplicate PR #65760 (I thought JuliaHub would just update the PR).\r\n\r\nRegarding the automerging issues, the name is not referencing Julia directly [as it is a form of a noun from old Norse](https://en.wiktionary.org/wiki/jutul). I do understand the reasoning for this rule to avoid e.g. JuStatistics.jl where the first letters are redundant. Other packages have been merged that start with Ju when it is a part of the full name, but please let me know and I can consider renaming it. The main reason for the short name is that a [second package that depends on Jutul uses that as a prefix](https://github.com/sintefmath/JutulDarcy.jl).\r\n\r\nI do not believe that there is reason to confuse the package with the other similar names.\r\n\r\nAs for the .git URL issue, I am somewhat confused as this is a standard git repository. I'd appreciate any pointers on what I did wrong here. 😅 \r\n\r\n[noblock]",
+      "createdAt": "2022-08-06T11:38:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65764#issuecomment-1207199517",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H9H1_",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> As for the .git URL issue, ...\r\n\r\nThe capitalization is different (which is probably why this PR was a new one instead of updating the other). I will close this one instead since I believe the other one is correct, and will be updated if you use the same URL.",
+      "createdAt": "2022-08-06T12:21:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65764#issuecomment-1207205247",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Jutul\n- Repository: https://github.com/sintefmath/Jutul.jl\n- Created by: @moyner\n- Version: v0.1.0\n- Commit: 0c72b87a8ff60b29f76a375434d62c70b11b1f04\n- Git reference: HEAD",
+  "package_name": "Jutul",
+  "closed_at": "2022-08-06T12:21:13Z",
+  "title": "New package: Jutul v0.1.0"
+}

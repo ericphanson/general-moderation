@@ -1,0 +1,164 @@
+{
+  "created_at": "2024-01-08T19:54:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 98486,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85wKP3K",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to ObjectStores. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.19 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-08T19:58:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1881734602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wK9Hk",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Well, I can hardly claim ObjectStore.jl isn't very silimar to ObjectStores.jl 😆 \r\n\r\nI'm not opposed to another name, but i don't particularly have one in mind. That said, i'm also happy enough to go with ObjectStore.jl if the conflict is deemed acceptable to others.\r\n\r\nThis new package is a Julia interface / wrapper around the Rust [object_store](https://docs.rs/object_store/latest/object_store/), hence wanting to call it \"ObjectStore\". It provides functionality for interacting with cloud object storage (Azure blob storage, AWS S3, etc), but doesn't provide a type (which is also why it can be the singluar \"ObjectStore.jl\" not plural).\r\n\r\nThe pre-existing ObjectStores.jl appears to have roughly the same use-case, but seems defunct: it has had no activity in over 4 years, and according to its [JuliaHub page](https://juliahub.com/ui/Packages/General/ObjectStores) there are no packages depending on its ecosystem of packages (ObjectStores.jl, LocalDiskObjectStores.jl, GoogleCloudObjectStores.jl). \r\n\r\nMore realistically, this new ObjectStore.jl package is an alternative to the still-active [CloudStore.jl](https://github.com/JuliaServices/CloudStore.jl), i.e. it is a completely different implementation for almost exactly the same use-case, so i  think not clashing with CloudStore.jl is more important.\r\n\r\nThis probably rules out a name like CloudObjectStore.jl or CloudObjectStorage.jl (there's also the near-name clash with the defunct GoogleCloudObjectStores.jl). Names like BlobStores.jl or BlobStorage.jl are also not ideal as it sounds specific to \"Azure Blob Storage\" rather than being generic across cloud object stores (S3, etc).\r\n\r\nPerhaps this is the bit of the naming guidance to lean in to?\r\n> - A less systematic name may suit a package that implements one of several possible approaches to its domain.\r\n>   - Julia does not have a single comprehensive plotting package. Instead, Gadfly, PyPlot, Winston and other packages each implement a unique approach based on a particular design philosophy.\r\n\r\nSo I think i'd be fine taking the near-name-colission risk, unless another good name can be suggested... but open-mind if others have name suggestions!\r\n\r\n[noblock]",
+      "createdAt": "2024-01-08T22:27:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1881919972",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wLJcI",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe author of those prior packages, @JockLawrie, last updated them on Jan 16, 2020:\r\nhttps://github.com/JockLawrie/ObjectStores.jl/commit/9ab7f43eb3cf4768b8552906bbd241bbc16412d7 . The author still seems to be active within the Julia community with an issue created in [October 2023](https://github.com/JuliaAI/CategoricalDistributions.jl/issues/64). If you really want the name, I suggest contacting and cooperating with the author on future development.\r\n\r\nAlternatively, my advice is to allude to the underlying Rust origins in order to distinguish the name. Perhaps the alliteration OxidizedObjectStores.jl would be appealing?\r\n",
+      "createdAt": "2024-01-08T23:16:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1881970440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wLNmH",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@JockLawrie, do you have an opinion here? No worries if not. i certainly don't wish to compromise your ObjectStores.jl package ",
+      "createdAt": "2024-01-08T23:36:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1881987463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wL4Gz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd consider `ObjectStore` \"taken\" as a package name. We should not allow different packages that only differ in a plural-S. IMO, this should be a hard rule without exceptions.",
+      "createdAt": "2024-01-09T01:58:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1882161587",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wMsXl",
+      "author": {
+        "login": "JockLawrie"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey @nickrobinson251, I no longer use `ObjectStores.jl`. The **object_store** crate appears to have the same aim I had with `ObjectStores.jl` (and its upstream packages `GoogleCloudObjectStores.jl` and `LocalDiskObjectStores.jl`), and it seems to do a better job of it.\r\n\r\nI'm happy to archive `ObjectStores.jl` and for you to have the name, singular or plural - perhaps the plural is more Julian?\r\nMy only hesitation is breaking users' code. Perhaps a way forward is to:\r\n1. Archive `ObjectStores.jl`\r\n2. Release `ObjectStore.jl`, together with some instruction on migrating from `ObjectStores.jl` to `ObjectStore.jl`\r\n\r\nSound ok?\r\n",
+      "createdAt": "2024-01-09T03:57:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1882375653",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wMvoG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Archiving doesn't really do anything in terms of the registry. If everybody is in agreement, though, @JockLawrie could transfer the repo to @nickrobinson251's org and make a manual PR to the registry for the new location. After that, the new package code could replace the existing code and be released as a new breaking version of `ObjectStores` (either `v0.5` or `v1.0`).\r\n\r\nI'm still a little skeptical that renaming to `ObjectStore` should be a possibility. My inclination would be that once `ObjectStores` is registered, that blocks `ObjectStore` in perpetuity. But ultimately, it's up to the registry maintainers to set the policy on this. Maybe there's a distinction to be made between \"new package\" and \"rename\".",
+      "createdAt": "2024-01-09T04:19:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1882388998",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wRK-s",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, all.\r\n\r\nI think going with a different name is simplest, and i'm happy to do that.\r\n\r\nThis PR can be closed in favour of https://github.com/JuliaRegistries/General/pull/98554",
+      "createdAt": "2024-01-09T18:11:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98486#issuecomment-1883549612",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ObjectStore\n- Repository: https://github.com/RelationalAI/ObjectStore.jl\n- Created by: @nickrobinson251\n- Version: v0.1.0\n- Commit: 9428f2d98d0c2790d5147a92cfe0c6cb2db597b8\n- Reviewed by: @nickrobinson251\n- Reference: https://github.com/RelationalAI/ObjectStore.jl/commit/9428f2d98d0c2790d5147a92cfe0c6cb2db597b8#commitcomment-136545648\n- Description: A Julia package to get and put data to cloud object stores (Azure Blob Storage, AWS S3, ...) using the Rust object_store crate.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60ccda77f06381dcd42c3d809bf7be2c1140cb9bd7d9b18b78e206d9b5600f12c92ef938869f3dc257444ee348f916cd02886633fb7af3dcd580558c2be5974a7882a1085c4f7d61c676024d3c874c8c97724df0e8c16d37f213632b7e335e838ea04fa2f648e4480ae2e62b64419bd4b0c0c781bd7fece74c75322902dfa35a7bd18745240da453c7dfa02338ea8d69ac93b603e6f880449603190dfc8b5e75e5dad64a934f33abc9bd9c6fa011d0d80 -->",
+  "package_name": "ObjectStore",
+  "closed_at": "2024-01-30T08:21:22Z",
+  "title": "New package: ObjectStore v0.1.0"
+}

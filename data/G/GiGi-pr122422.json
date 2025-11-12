@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-01-05T04:26:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 122422,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ZRfWD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-05T04:39:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122422#issuecomment-2571498883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZR-ui",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! Personally, I think the name `GiGi` isn't an automatic no-go, but you'll have to advocate for it as a \"less systematic name\", and find a registry maintainer on Slack willing to merge it. It might help if there's a story behind the name.\r\n\r\nI did notice that your About section on Github still references EDA, as well as an existing release. Generally, you should never make releases manually, once the package is registered. Always register a release first, and then let TagBot create the release on Github.\r\n\r\nA bigger concern is the initial version number of 1.0.0. This package does not appear to be at a \"stable\" stage yet, so probably 0.1.0 would be more appropriate.\r\n\r\n\r\nIn the Julia ecosystem, we try to encourage the proper use of [semantic versioning](https://semver.org/spec/v2.0.0-rc.1.html). As a general rule, versions `<v1.0` are for initial development, when the API of the package isn't nailed down yet, the package does not have a lot of dependents, and \"backwards compatibility\" is not a major concern. For an initial registration, that's usually the situation your package is in. Thus, an initial `v0.1` is usually the way to go. The bar for registering an initial `v0.1` is not very high. Basically, just\r\n\r\n* Must have a name that is appropriate for the scope of the package\r\n* Must have some non-trivial functionality (no \"placeholder\" packages)\r\n* Must have a README that explains the purpose of the package and gives a basic usage example (or a link to documentation that is sufficient to figure out how to get started)\r\n\r\nFor a version `v1.0`, you're saying that the package already has a stable API. That has some implications for what one would expect from that package\r\n\r\n* Must _define_ the stable API. That generally means _complete_ documentation.\r\n* Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly, and no basis for figuring out whether a pull request is \"breaking\" or not, going forward.\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nEven if you think your package is fairly polished already, I always recommend registering with an initial `v0.1` anyway. That way, you have a chance to find out whether there are any major flaws in the package once people start to use it. Once it has a few dependents and you really should start to worry about maintaining backwards compatibility, you can always make a `v1.0` release. That doesn't mean you absolutely have to make significant changes to the `v0.1` version. Just make sure that your package is fully documentated as \"stable\" at that point, has good test coverage, and all the other things people would expect from a \"stable\" package.\r\n\r\nIn this particular case, full documentation is still missing, the tests are still very minimal and failing, and there is no coverage data.\r\n",
+      "createdAt": "2025-01-05T13:29:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122422#issuecomment-2571627426",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dJx47",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-02-05T12:23:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122422#issuecomment-2636586555",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86eKihv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-02-12T12:23:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122422#issuecomment-2653562991",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GiGi\n- Repository: https://github.com/notGiGi/GiGi.jl\n- Created by: @notGiGi\n- Version: v1.0.0\n- Commit: 2a53993f994d9136a81977136f6a110b03cf3ff7\n- Reviewed by: @notGiGi\n- Reference: https://github.com/notGiGi/GiGi.jl/issues/11\n- Description: The EDA Pkg simplifies exploratory data analysis by offering tools for data visualization, cleaning, and preparation. It includes functions for handling missing values, detecting outliers, analyzing correlations, and generating insightful visualizations. Perfect for understanding and preparing datasets for advanced analysis or modeling.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nGiGi\r\n\r\n## Version 1.0.0\r\n\r\n### Highlights\r\n- Initial release of **GiGi*, a powerful and comprehensive Julia package for exploratory data analysis.\r\n\r\n### Features\r\n#### Data Cleaning and Handling\r\n- `threshold`: Remove columns with missing data exceeding a user-defined percentage.\r\n- `outlierswithiqr`: Detect outliers using the Interquartile Range (IQR) method.\r\n- `outlierhandle`: Handle outliers with configurable options for removal.\r\n\r\n#### Data Exploration\r\n- `visualize_data`: Preview the first `n` rows of a dataset.\r\n- `dataType`: Analyze and display data types for all columns.\r\n- `correlation`: Compute correlation matrices for numeric columns.\r\n- `heat`: Generate heatmaps of correlation matrices for easy interpretation.\r\n\r\n#### Visualization\r\n- `correlation_network`: Create an interactive graph of correlations between variables.\r\n- Real vs. predicted plots for regression analysis.\r\n\r\n#### Statistical Analysis\r\n- `linearregression`: Fit linear regression models with detailed output of coefficients and predictions.\r\n\r\n#### Efficiency\r\n- All functionalities are encapsulated in the `EDALoader` structure, allowing for efficient data manipulation with built-in caching.\r\n\r\n### Improvements and Fixes\r\n- Optimized correlation and visualization functions to handle missing data gracefully.\r\n- Added error handling and user-friendly messages for all major functions.\r\n- Improved plotting aesthetics for enhanced data visualization.\r\n\r\n### Planned Features for Future Releases\r\n- Advanced time-series analysis tools:\r\n  - Seasonal decomposition.\r\n  - Trend detection.\r\n  - Forecasting models (ARIMA, Prophet, etc.).\r\n- Integration with PlotlyJS for interactive visualizations.\r\n- Machine learning integration with Julia ML frameworks.\r\n\r\n### Known Issues\r\n- Large datasets may experience performance degradation in some visualization functions. Optimization is planned in upcoming versions.\r\n\r\n### How to Upgrade\r\n1. Open Julia's REPL.\r\n2. Run the following commands:\r\n   ```julia\r\n   using GiGi\r\n   Pkg.update(\"GiGi\")\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598caa3ffc4738324c77f3d5f735779b3bc35e1146d0e8ce8165435af9781ee0c7a140e78442aa66219ebc39cef58e91c4eb05651e01250cd6b1c47ae33c5bbc4e274e034438209a2ba218ca67dfcfccde401d36d8ef90a62c56bb266e076021fd6e08832c66e378c701f7a418abedb7682 -->",
+  "package_name": "GiGi",
+  "closed_at": "2025-02-12T12:23:48Z",
+  "title": "New package: GiGi v1.0.0"
+}

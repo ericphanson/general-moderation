@@ -1,0 +1,106 @@
+{
+  "created_at": "2025-06-25T00:18:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 133615,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86y8m0V",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-25T00:25:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3002232085",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86y8vlj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity is not a concern, but please try to fix\r\n\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n\r\nPlease avoid changing the version number when dealing with automerge issues",
+      "createdAt": "2025-06-25T00:54:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3002268003",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86y9ui3",
+      "author": {
+        "login": "jonmjonm"
+      },
+      "authorAssociation": "NONE",
+      "body": "I am very sorry. I did not see your comments via email. If possible, I would like to revert back to the name AtlasIO.jl if possible. Please advise. I added MapAtlasIO.jl\r\nI also now see the issue with not upping to version number.  I will not do this in the future. If you just clear everything if possible, I will start over with AtlasIO.jl at version 0.1 ",
+      "createdAt": "2025-06-25T02:38:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3002525879",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86zBKA6",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> If you just clear everything if possible, I will start over with AtlasIO.jl at version 0.1\r\n\r\nDone, please go ahead. (We will close this PR when the new one is up.)",
+      "createdAt": "2025-06-25T05:52:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3003424826",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86zFQBk",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I would like to revert back to the name AtlasIO.jl if possible. Please advise\r\n\r\nYou just rename back to `AtlasIO`, the same way you renamed `AtlasIO -> MapAtlasIO` last time. That is, rename the repo on GitHub, and change all references of the name inside the repo. After that, you just retrigger the registration.\r\n\r\nWe can then close the registration of `MapAtlasIO` in favor of `AtlasIO`.\r\n\r\n> I am very sorry. I did not see your comments via email.\r\n\r\nThat's okay. It's a learning experience. For next time, the idea is to avoid flooding the registry with too many registration pull requests for the same package if possible ;-) Most issues flagged by the bot can be fixed without opening a new PR, simply by re-doing the registration without changing the version number. For some issues, most notably \"Repo URL does not end with `/name.jl.git`\", a new PR is unavoidable, so that's something you always want to fix immediately. Basically, changing the package name, URL, or version results in a new PR. Anything else (especially fixing missing `compat` issues) can be done by updating the existing PR",
+      "createdAt": "2025-06-25T11:54:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3004498020",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86zFxnM",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #133651.",
+      "createdAt": "2025-06-25T12:42:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133615#issuecomment-3004635596",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AtlasIO\n- Repository: https://github.com/jonmjonm/atlasio.jl\n- Created by: @jonmjonm\n- Version: v0.1.2\n- Commit: e57ec730dfd4d481efd562dd54f445fa9cd070f4\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nSecond attempt to register the initial release\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "AtlasIO",
+  "closed_at": "2025-06-25T12:42:48Z",
+  "title": "New package: AtlasIO v0.1.2"
+}

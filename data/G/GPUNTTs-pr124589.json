@@ -1,0 +1,106 @@
+{
+  "created_at": "2025-02-08T10:24:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124589,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86dpUqG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-08T10:33:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2644855430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dpaPL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Ah, the `s` saved you. Well, fine by me. Although generally, acronyms like NNT are discouraged in Julia package names, hence the suggestion to write it out. ([Points 1 and 4 in the guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules))\r\n",
+      "createdAt": "2025-02-08T10:45:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2644878283",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dqgJr",
+      "author": {
+        "login": "alexp616"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] My bad for not reading the package naming guidelines - I thought the naming guidelines were only from the automatic merging guidelines. \r\n\r\n`NumberTheoreticTransforms` is already taken and `CudaNumberTheoreticTransforms` is a bit of a mouthful (and keyboard-ful), would `CudaNTTs` be a good middle ground? In the context of cuda, the meaning of NTTs has a \"minimal possibility of confusion.\" Whatever the answer is, I'll create a new PR and this one can be closed.",
+      "createdAt": "2025-02-08T11:45:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2645164651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86drAOU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] `CudaNTTs` definitely seems fine to me, but I'm also okay with just keeping `GPUNTTs`. If nobody objects to it, it will automerge. So it's up to you, whatever name you feel will be most clear to potential users.",
+      "createdAt": "2025-02-08T12:13:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2645296020",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dtefV",
+      "author": {
+        "login": "alexp616"
+      },
+      "authorAssociation": "NONE",
+      "body": "blocking automerge, personally prefer CudaNTTs in pr [124609](https://github.com/JuliaRegistries/General/pull/124609)",
+      "createdAt": "2025-02-08T21:15:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2645944277",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dtu6j",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124609",
+      "createdAt": "2025-02-09T01:20:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124589#issuecomment-2646011555",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GPUNTTs\n- Repository: https://github.com/alexp616/GPUNTTs.jl\n- Created by: @alexp616\n- Version: v1.0.0\n- Commit: af3a7c8c0e47785bbe84538dcf320e20a37c2101\n- Git reference: main",
+  "package_name": "GPUNTTs",
+  "closed_at": "2025-02-09T01:20:52Z",
+  "title": "New package: GPUNTTs v1.0.0"
+}

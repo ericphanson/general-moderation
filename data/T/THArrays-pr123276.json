@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-01-19T02:40:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 123276,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86bAOt-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The registry consistency tests failed\n- I was not able to install the package (i.e. `Pkg.add(\"THArrays\")` failed). See the AutoMerge logs for details.\n- I was not able to load the package (i.e. `import THArrays` failed). See the AutoMerge logs for details.\n- Package name matches existing package name ThArrays up-to-case.\n- Package name similar to 2 existing packages.\n  1. Similar to JLArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to CuArrays. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-19T02:46:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/123276#issuecomment-2600528766",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86bB4Qa",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity _might_ be okay (with some explanation of the name). However, this is also a forked repo. Generally, a fork shouldn’t be the basis of a registration ",
+      "createdAt": "2025-01-19T17:56:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/123276#issuecomment-2600961050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86bDOVZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh, I missed\r\n\r\n> Package name matches existing package name ThArrays up-to-case.\r\n\r\nThat is definitely a no-go",
+      "createdAt": "2025-01-20T04:33:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/123276#issuecomment-2601313625",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: THArrays\n- Repository: https://github.com/x66ccff/THArrays.jl\n- Created by: @x66ccff\n- Version: v0.2.3\n- Commit: f13200addda0fbcbe9dc419e3bf15382c44b3840\n- Reviewed by: @x66ccff\n- Reference: https://github.com/x66ccff/THArrays.jl/issues/1#issuecomment-2600577931\n- Description: Interface for PyTorch's C++ backend, focusing on ATen, AutoGrad, and JIT\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359800c48e2e840dc8ce0a506569cf95683d80e3f3d164d3c05c6906ff4bfc7a344f190bf983e4898dc6485844dd3f420764be697cc15c31b2d355479e4d1c4cb281d3008a8ac2090b72bdde6090674156900081a6d318f8fd3acaf6bade08414d681c03d60485e1b3fded54d7971533d2b7e0811d14cbc6b9c5581d017d2c082c99 -->",
+  "package_name": "THArrays",
+  "closed_at": "2025-01-20T04:33:43Z",
+  "title": "New package: THArrays v0.2.3"
+}

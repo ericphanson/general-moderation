@@ -1,0 +1,209 @@
+{
+  "created_at": "2024-10-17T12:49:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 117468,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86QNkMn",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n- Package name similar to 9 existing packages.\n  1. Similar to RoME. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.53 is at or below cutoff of 2.50.\n  2. Similar to ACME. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to FAME. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to DSGE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to DACE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Docx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Dojo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to ADCME. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-17T12:56:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2419475239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QNpEt",
+      "author": {
+        "login": "danielriveroc"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could this package be manually merged? Automatic merge fails because the name is too short, and very similar to others. However, this is tha name given to the algorithm in the original publication, as can be ssen at: https://www.sciencedirect.com/science/article/pii/S0957417422001889\r\nTherefore,it's best to keep the name of the package as the name of the algorithm.",
+      "createdAt": "2024-10-17T13:05:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2419495213",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QOF00",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! I _might_ come around to just `DoME`, but it might be better to have it as _part_ of a name, with a prefix or suffix that gives more context. Even something like `MLDoME` to put it in the context of machine learning.\r\n\r\nBut beyond the name, the package is also not ready for registration yet, since it is missing a README and other documentation. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README. In this case, it would have to include a link to the paper.\r\n\r\nFor an initial 1.0 release, the bar would be even higher. For a package with a stable version number, some of the requirements would be:\r\n\r\n* Must define the stable API. That generally means _complete_ documentation. Sometimes that can be done in the README, but otherwise, [Documenter](https://documenter.juliadocs.org/stable/) would be recommended.\r\n* Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality. If it's implementing a specific method from a paper, that would be the scope.\r\n",
+      "createdAt": "2024-10-17T13:51:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2419612980",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QPw9u",
+      "author": {
+        "login": "danielriveroc"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your comments. I have filled the README with a link to the paper, and a complete description of the API. Since, by now, it is only a single function that performs the whole work, I believe it is enough for now to leave the documentation in the README. However, I will use Documenter when the library grows and more functionalily is added.\r\nThe library has been extensively tested with over 100 datasets. Also, the tests in the tests folder should cover almost 100% of the source code, except those parts that were left for debugging/developing.\r\nI hope that, with this, this package now meets all the requeriments.\r\n",
+      "createdAt": "2024-10-17T16:58:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2420051822",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QQoyC",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems okay, in terms of documentation.\r\n\r\nIf you want to stick to the name, you would have to find a full registry maintainer on Slack and convince them to merge it manually. I don't have merge permissions.\r\n\r\nI would still recommend finding a suitable package name that meets the minimum length requirement. With a name that is longer than 5 characters, this package would be set to auto-merge.",
+      "createdAt": "2024-10-17T18:42:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2420280450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QaS_G",
+      "author": {
+        "login": "glwagner"
+      },
+      "authorAssociation": "NONE",
+      "body": "Another option that's consistent with the paper is `DevelopmentOfMathematicalExpressions.jl`.\r\n\r\nIt's common for package names to spell out acronyms, eg [`AlgebraicMultigrid.jl`](https://github.com/JuliaLinearAlgebra/AlgebraicMultigrid.jl) is usually shortened to \"AMG\" when writing papers. A more verbose package name will help you advertise it to new users who otherwise might skip over the more terse and obscure \"DOME\", so there's good reason to consider it.",
+      "createdAt": "2024-10-18T16:12:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2422812614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Qakf2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Even though I'm potentially in favor of writing out acronyms, I would agree in this case that `DevelopmentOfMathematicalExpressions` might be taking it a bit too far. There is a limit at which package names are just \"too long\".",
+      "createdAt": "2024-10-18T16:58:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2422884342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QauVu",
+      "author": {
+        "login": "glwagner"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] Even though I'm potentially in favor of writing out acronyms, I would agree in this case that `DevelopmentOfMathematicalExpressions` might be taking it a bit too far. There is a limit at which package names are just \"too long\".\r\n\r\n😂 that's fair (I blame the authors of that paper...) But, one can cheat a bit with `DevelopmentOfMathExpressions` or perhaps the actually nicer `ExpressionDeveloper` or something.",
+      "createdAt": "2024-10-18T17:24:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2422924654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Qazc4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I actually also see _some_ value in keeping acronyms in packages names, for recognizability. And, I also believe that \"pronounceable\" acronyms are perfectly fine as package names. They're basically in the \"less systematic names\" category, same as \"Makie\" etc. It's just that this name is particularly _short_ (a.k.a. \"nice\"), for a package that seems targeted at a pretty small niche.\r\n\r\nDid you not like the idea of `<Domain>DoME` for adding context, including `MLDoME` and `AIDoME`? Or something else you can combine with `DoME` to make the name longer and also more context-specific?",
+      "createdAt": "2024-10-18T17:38:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2422945592",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QbNHJ",
+      "author": {
+        "login": "danielriveroc"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your comments.\r\nThe name DoME seemed to be a good choice because it describes the algorithm, it is an easy to pronounce acronym, and it also refers to the dome shapes that this algorithm creates in space to solve the problem. For these reasons, we thought it would be best to keep the package name.\r\nAlso, I do not find other packages that implement ML algorithms with the ML prefix/suffix (Flux, Knet, DecisionTree, XGBoost, EvoTrees, SVM), only when it refers to a framework or other library, as in the case of LIBSVM.\r\nRegarding to be targeted at a pretty small niche, we believe it is just the opposite. This algorithm gives results, on average, better than those of the other ML techniques. In the paper we show the results for regression problems, and we are currently preparing a paper in which we show the results for classification problems, improving on the other algorithms. With the publication of this package, we hope to provide the community with this algorithm, which not only improves the results offered by the rest, but also offers as a model mathematical equations that are easily portable to any system. Our idea is, in the future, to adapt this algorithm to other paradigms such as Stream Learning, Reinforcement Learning or Image classification. We believe that these characteristics, together with its ease of use (only one function is needed, as can be seen in the example) can make it a widely downloaded and used package by the ML community.\r\n",
+      "createdAt": "2024-10-18T18:50:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2423050697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86SBowM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/118443",
+      "createdAt": "2024-10-31T13:55:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117468#issuecomment-2449902604",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DoME\n- Repository: https://github.com/danielriveroc/DoME.jl\n- Created by: @danielriveroc\n- Version: v1.0.0\n- Commit: cd31be106bb292210ff9693dafca7363a65f6c28\n- Git reference: HEAD",
+  "package_name": "DoME",
+  "closed_at": "2024-10-31T13:55:16Z",
+  "title": "New package: DoME v1.0.0"
+}

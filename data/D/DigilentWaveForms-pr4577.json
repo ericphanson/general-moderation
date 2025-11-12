@@ -1,0 +1,76 @@
+{
+  "created_at": "2019-10-21T14:50:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 4577,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NDU1MTk4Mw==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- The following dependencies do not have a compat entry that has an upper bound: CEnum\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-21T14:52:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4577#issuecomment-544551983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NDU1NzQ1MA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request does not meet all of the guidelines for automatic merging.\n\nSpecifically, your pull request does not meet the following guidelines:\n\n- I was not able to install and import the package. See the Travis logs for details.\n\n---\nIt is important to note that if your pull request does not meet the guidelines for automatic merging, this does not mean that your pull request will never be merged. It just means that your pull request will require manual review by a human.\n\n> These guidelines are intended not as requirements for packages but as very conservative guidelines, which, if your new package or new version of a package meets them, it may be automatically merged.\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-21T15:04:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4577#issuecomment-544557450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NDU3NzA3NQ==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package has the prerequisite of having the user install the (commercial) Digilent WaveForms SDK, and thus build fails on Travis (tests are guarded against CI too).\r\n\r\nCan it be manually approved?",
+      "createdAt": "2019-10-21T15:47:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4577#issuecomment-544577075",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NTkxNTIyMg==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I just released a newer version, assuming it would queue up behind this one as a `minor release` but it's created a new PR as a `new package` https://github.com/JuliaRegistries/General/pull/4686\r\n\r\n",
+      "createdAt": "2019-10-24T13:22:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4577#issuecomment-545915222",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DigilentWaveForms\n- Repository: https://github.com/ianshmean/DigilentWaveForms.jl\n- Created by: @ianshmean\n- Version: v0.1.0\n- Commit: 0c3c0d82d0d71a4b439ba67e88fec48bf249445b\n- Reviewed by: @ianshmean\n- Reference: https://github.com/ianshmean/DigilentWaveForms.jl/issues/1#issuecomment-544556132\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf0ebf3309713620fd49b30a8f122d4190a9ed6f3ac3cb9c09f184056c296cc3cb90307c2b5b0d13ea5ce27b1a8349357e4eb19832ec317e1c7bbff81dee8c7c867990f28dc3910aaf3d4aff7c3757bd74a7ef160613648415ec1731577dd32251713c1df485a5ecdbf5d574a8949e275f0ad1ef8461c32d141c458bf90cf48a832a20432e94c27047552d52c0e3f91e1e -->",
+  "package_name": "DigilentWaveForms",
+  "closed_at": "2019-10-28T09:35:19Z",
+  "title": "New package: DigilentWaveForms v0.1.0"
+}

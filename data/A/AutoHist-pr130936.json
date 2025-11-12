@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-05-14T09:32:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 130936,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86rogFM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Distributions, LoopVectorization, SpecialFunctions, StatsBase\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-14T09:39:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130936#issuecomment-2879521100",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rtRJZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Usually, I would be closing this in favor of https://github.com/JuliaRegistries/General/pull/130948, but as I explained in https://github.com/JuliaRegistries/General/pull/130948#issuecomment-2880719956, you might want to come back to this PR. So, let's keep it open for now.\r\n\r\nIn general, when fixing automerge issues like the `[compat]` flagged by the bot, you should not change the version number",
+      "createdAt": "2025-05-14T15:59:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130936#issuecomment-2880770649",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xMEmv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-14T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130936#issuecomment-2972731823",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ybgRL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-06-21T12:24:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130936#issuecomment-2993554507",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AutoHist\n- Repository: https://github.com/oskarhs/AutoHist.jl\n- Created by: @oskarhs\n- Version: v1.0.0\n- Commit: 0b1f3252219f3c9b39db5ee02b24b256aec4a38f\n- Reviewed by: @oskarhs\n- Reference: https://github.com/oskarhs/AutoHist.jl/commit/0b1f3252219f3c9b39db5ee02b24b256aec4a38f#commitcomment-156990183\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd678e4043554c88cda090389cb43035f94f4bc2d738e0759a4c9837e0dc2433341bdc4d74d99b6f66d8bceb50c172294cfc10f27e47e5663836f55b2a86a9ae6170d9b67a205f745933e6f0cbf269c0bcedad271660303cb331ba683ff2cab08d0264b47ebe065bc687d450ab4b2b24b6294e94a589a00af13b49fa4d5238fc26b1e2cefcab0114dff214c1989df893834fe78c74170f62dd92ab08313254747c0db44ccd586fabd423cc9199ac485ad8f -->",
+  "package_name": "AutoHist",
+  "closed_at": "2025-06-21T12:24:04Z",
+  "title": "New package: AutoHist v1.0.0"
+}

@@ -1,0 +1,199 @@
+{
+  "created_at": "2024-09-02T21:30:26Z",
+  "review_comments": [
+    {
+      "id": 2288642997,
+      "node_id": "PRR_kwDOBhF1q86Iaeu1",
+      "user": {
+        "login": "lego-yaw",
+        "id": 104263606,
+        "node_id": "U_kgDOBjbvtg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/104263606?u=e6d4af405269cb570e09626b02f76dbdc2bae31b&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lego-yaw",
+        "html_url": "https://github.com/lego-yaw",
+        "followers_url": "https://api.github.com/users/lego-yaw/followers",
+        "following_url": "https://api.github.com/users/lego-yaw/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lego-yaw/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lego-yaw/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lego-yaw/subscriptions",
+        "organizations_url": "https://api.github.com/users/lego-yaw/orgs",
+        "repos_url": "https://api.github.com/users/lego-yaw/repos",
+        "events_url": "https://api.github.com/users/lego-yaw/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lego-yaw/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/114385#pullrequestreview-2288642997",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/114385",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/114385#pullrequestreview-2288642997"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/114385"
+        }
+      },
+      "submitted_at": "2024-09-09T00:29:05Z",
+      "commit_id": "6967ce902cecd1d65f22fb41f8af5932c25b4e1b"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 114385,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86KmYq7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-02T21:34:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2325318331",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Kma62",
+      "author": {
+        "login": "lego-yaw"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator register",
+      "createdAt": "2024-09-02T21:51:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2325327542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Kmn7J",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package probably has to be managed with BinaryBuilder. A regular Julia package cannot contain a DLL file.\r\n\r\nI also noted in your README:\r\n\r\n> Please note that, this package only handles .dbc format used by DATASUS and is not in any way related to handling Microsoft Foxpro or CANdb DBC files.\r\n\r\nSince there are apparently other unrelated DBC file formats, that would indicate to me that `ReadDBC` is maybe not a good package name. Is there an alternative that would be more descriptive? Maybe `ReadDatasus` or something along those lines?",
+      "createdAt": "2024-09-02T23:32:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2325380809",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRI8h",
+      "author": {
+        "login": "lego-yaw"
+      },
+      "authorAssociation": "NONE",
+      "body": "@devmotion can you review the changes made so that i can merge ",
+      "createdAt": "2024-09-08T03:04:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2336526113",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRJDs",
+      "author": {
+        "login": "lego-yaw"
+      },
+      "authorAssociation": "NONE",
+      "body": "> This package probably has to be managed with BinaryBuilder. A regular Julia package cannot contain a DLL file.\r\n> \r\n> I also noted in your README:\r\n> \r\n> > Please note that, this package only handles .dbc format used by DATASUS and is not in any way related to handling Microsoft Foxpro or CANdb DBC files.\r\n> \r\n> Since there are apparently other unrelated DBC file formats, that would indicate to me that `ReadDBC` is maybe not a good package name. Is there an alternative that would be more descriptive? Maybe `ReadDatasus` or something along those lines?\r\n\r\n@devmotion  i have actually resolved this issue by creating a binarywrapper to handle the .dll issue",
+      "createdAt": "2024-09-08T03:05:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2336526572",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRRNr",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm not sure how I can contribute to this PR, I guess maybe you wanted to ping @goerz?",
+      "createdAt": "2024-09-08T06:03:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2336559979",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRhyF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Your `src` folder must only contain `.jl` files. And like I said: I think the package name should be more specific",
+      "createdAt": "2024-09-08T10:13:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2336627845",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LSeOB",
+      "author": {
+        "login": "lego-yaw"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I'm not sure how I can contribute to this PR, I guess maybe you wanted to ping @goerz?\r\n\r\nYeah, sorry ...",
+      "createdAt": "2024-09-09T00:06:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2336875393",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LVaS9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/114795",
+      "createdAt": "2024-09-09T09:46:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114385#issuecomment-2337645757",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ReadDBC\n- Repository: https://github.com/lego-yaw/ReadDBC.jl\n- Created by: @lego-yaw\n- Version: v1.0.0\n- Commit: b0b93096837e1e85e96eacd329cf7233159d8b62\n- Reviewed by: @lego-yaw\n- Reference: https://github.com/lego-yaw/ReadDBC.jl/issues/9\n- Description: Julia Package for reading DBC (.dbc) files from DATASUS into data frame tables \n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983c03ded15d833ca795d626205fd35e1f5683af419f8c554b81bfc5317dfe337fdb722871f8ca2cce5d7877ea11c6a4f27f16bff07448cc67e8420d58a4e3e128b0227ad68b9cf1a06b4d4a138c4ebb4ed544e29b1b58af10f28c1cf767a3056a1fc39bff51908c06fc262c624036e2df0bae67d92b64bbf53cf155fa992e55dc -->",
+  "package_name": "ReadDBC",
+  "closed_at": "2024-09-09T09:46:21Z",
+  "title": "New package: ReadDBC v1.0.0"
+}

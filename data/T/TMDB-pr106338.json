@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-05-07T14:21:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 106338,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q859FRsp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: TimeZones\n- Package name similar to 8 existing packages.\n  1. Similar to LMDB. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to TMLE. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.30 is at or below cutoff of 2.50.\n  3. Similar to TLDR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to QMDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to MDBM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to MD5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to BTrDB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-07T14:25:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106338#issuecomment-2098535209",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859FXjb",
+      "author": {
+        "login": "NeroBlackstone"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Sorry to bother you.\r\nPlease close this PR! Since I changed package name.",
+      "createdAt": "2024-05-07T14:35:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106338#issuecomment-2098559195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859FXmn",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/106340",
+      "createdAt": "2024-05-07T14:36:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/106338#issuecomment-2098559399",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TMDB\n- Repository: https://github.com/NeroBlackstone/TMDB.jl\n- Created by: @NeroBlackstone\n- Version: v0.1.0\n- Commit: ced6523b27422fb5ae2201edccf3bbaddfaa75fe\n- Reviewed by: @NeroBlackstone\n- Reference: https://github.com/NeroBlackstone/TMDB.jl/issues/1\n- Description: Julia wrapper for TMDB v3 API \n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980a242d630d0302fdf2e1c603f2816dde54081016a4e22b482df1abed8c1ad332db73028af7389f5812e3079f765ff9528333690e527185211a4a5b52685618fe46e6823d935d2e40c8c3b5b8e5d8b72b3833d3010ccac34829849c23bddb45eee1247a754dfcded96eb85b50e07264f66e9ce9ca6663c6ddb1e89aca821a548b -->",
+  "package_name": "TMDB",
+  "closed_at": "2024-05-07T16:25:57Z",
+  "title": "New package: TMDB v0.1.0"
+}

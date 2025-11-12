@@ -1,0 +1,83 @@
+{
+  "created_at": "2022-02-17T13:11:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 54828,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-Kg04",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, DrWatson, FillArrays, IJulia, LineSearches, Literate, NLsolve, Plots\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-17T13:21:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54828#issuecomment-1042943288",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-Khfc",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Also, if the tutorials are specific to Gridap, you should probably rename to GridapTutorials.jl\r\n\r\nThe name Tutorials.jl can be useful for a more general framework for writing tutorials in Julia.",
+      "createdAt": "2022-02-17T13:24:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/54828#issuecomment-1042946012",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-KjL9",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@juliohm it was a mistake. We dont use JuliaRegistrator to release the tutorials. We just manually push a tag to the repo. Please close this PR and sorry for the inconvenience!",
+      "createdAt": "2022-02-17T13:32:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54828#issuecomment-1042952957",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-Kk5F",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you for the clarification @fverdugo, I am not a maintainer of the registry myself, just saw the notification on Zulip about the new package :)",
+      "createdAt": "2022-02-17T13:40:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54828#issuecomment-1042959941",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Tutorials\n- Repository: https://github.com/gridap/Tutorials\n- Created by: @amartinhuertas\n- Version: v0.17.0\n- Commit: 1f5763610cd1bfd3678bf0e8aab6f90cc903984f\n- Reviewed by: @amartinhuertas\n- Reference: https://github.com/gridap/Tutorials/commit/1f5763610cd1bfd3678bf0e8aab6f90cc903984f#commitcomment-66888219\n- Description: Start solving PDEs in Julia with Gridap.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63591d1e232525d2eaab04c82b8e7f64f099d77d6a60a7b7b6276c52e4c8b04e3b229e8e569fef19e68ac5097ebec7c6d228e9652f7b8105d6ece65e5a62dcfc1a6e0195c9cd864f3c4b84c992ef6df20c6c4bc074d21b085b8955824959b1278781d6548c6c4ed9a285efb46c39b119dd14ae31d9351bed9f3f873bb98e2f216dfe989dbd101b7ffcd49113542596e0631919510c7f9a98ad4b72c3aec887b4ea0030e55d914d017f718cb6e39ed6bd9 -->",
+  "package_name": "Tutorials",
+  "closed_at": "2022-02-17T13:42:49Z",
+  "title": "New package: Tutorials v0.17.0"
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2022-11-27T06:09:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 72942,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85PKmkH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 1 existing package.\n  1. Similar to FreeType. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-27T06:13:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328179463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKnjM",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi \r\nI got this error while auto merge \r\n```\r\n┌ Info: Name is not too similar to existing package names\r\n│   meets_this_guideline = false\r\n└   message = \"Package name similar to 1 existing package.\\n  1. Similar to FreeType. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\"\r\n```\r\nI don't want to change the package's name as the package was there on GitHub with this name for the past 2 years.\r\nThe name suite well to the use case. \r\n`FreeType` is quite different from `FileType`",
+      "createdAt": "2022-11-27T06:52:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328183500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKrGy",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity is fine. You'll need to take care of the other issues, though.\r\n\r\n[noblock]",
+      "createdAt": "2022-11-27T08:46:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328198066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PK2pz",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": ">You'll need to take care of the other issues, though.\r\n\r\nfixed\r\n\r\n[noblock]",
+      "createdAt": "2022-11-27T13:19:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328245363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PMQHn",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps the name shoule be `FileTypes` instead, and then you can rename the internal type to `FileType`. (See point 3 in the guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines).\r\n\r\n<!-- [noblock] -->",
+      "createdAt": "2022-11-28T06:39:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328611815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PNLu0",
+      "author": {
+        "login": "Agent-Hellboy"
+      },
+      "authorAssociation": "NONE",
+      "body": ">Perhaps the name should be FileTypes instead, and then you can rename the internal type to FileType. (See point 3 in the guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines).\r\n\r\nThanks for the feedback, I will do the required changes. \r\n",
+      "createdAt": "2022-11-28T10:32:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72942#issuecomment-1328855988",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FileType\n- Repository: https://github.com/JuliaIO/FileTypes.jl\n- Created by: @Agent-Hellboy\n- Version: v0.1.0\n- Commit: 3efb87a6b53745e07ec18ac3a5300d1ebb840707\n- Reviewed by: @Agent-Hellboy\n- Reference: https://github.com/JuliaIO/FileTypes.jl/issues/2#issuecomment-1331749646\n- Description: Small and dependency-free Julia package to infer file and MIME type checking the magic numbers signature.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e76ddbce7603bd292dc82f67eaa62229c5973ba5b85468fc05720d549fe05bd6d9fe6622043aa02dea1ba0f0591fe89c6cb3041150471c8b65482609e95285135e208bdfb6afa75dad4ce6293717faf9f069b72465209ae80cfde7de6280bf8d640d0a144cb0e6e4c8f48a138011d2bf0400d83018a2b49c772665973ad4ab3e -->",
+  "package_name": "FileType",
+  "closed_at": "2022-11-30T08:31:53Z",
+  "title": "New package: FileType v0.1.0"
+}

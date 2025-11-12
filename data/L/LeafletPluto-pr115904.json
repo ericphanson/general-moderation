@@ -1,0 +1,104 @@
+{
+  "created_at": "2024-09-24T21:40:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 115904,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86NaJyQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-24T21:44:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115904#issuecomment-2372443280",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NaP4u",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nFor a 1.0 initial release, the bar would be a bit higher than that. A 1.0 release by definition defines a stable API, which is only possible if that API is fully documented.",
+      "createdAt": "2024-09-24T22:04:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115904#issuecomment-2372468270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NaR2P",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also strongly recommend adding some tests. Having a Pluto notebook as your actual implementation seems unusual. Does that actually work? It would be hard to tell, without having an actual test suite ;-)",
+      "createdAt": "2024-09-24T22:11:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115904#issuecomment-2372476303",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Nau5O",
+      "author": {
+        "login": "florianfmmartin"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz !\r\nI considered your comments and added documentation. As for the Pluto notebook implementation, it is what PlutoMapPicker does, and as this packages is meant for Pluto notebooks I think it makes sense. I'll update the PR via `@JuliaRegistrator register()`.",
+      "createdAt": "2024-09-24T23:58:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115904#issuecomment-2372595278",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Navcv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/115921",
+      "createdAt": "2024-09-25T00:00:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115904#issuecomment-2372597551",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LeafletPluto\n- Repository: https://github.com/florianfmmartin/LeafletPluto.jl\n- Created by: @florianfmmartin\n- Version: v1.0.0\n- Commit: 3da33200ee0933ffc7464771f7521451b0dae7f6\n- Reviewed by: @florianfmmartin\n- Reference: https://github.com/florianfmmartin/LeafletPluto.jl/issues/2#issuecomment-2372463664\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986254e8cf7fe550b1f0d52ca387db99875d5b6fd0165bcadaafe1cf29cc2c12e6eddb1620888dac981455090a4cdb3b626b83823b000143f59c43ba3f3cad6b0d0d19045a3c7fcf090c16f081f93b82e5dcad898c8eceee6eafaad711ab39bb351cd20fdd4d7ce68b899eea07e9f6c9d415ef7680b5c5e3fb9b59ac393a1fc34e -->",
+  "package_name": "LeafletPluto",
+  "closed_at": "2024-09-25T00:00:51Z",
+  "title": "New package: LeafletPluto v1.0.0"
+}

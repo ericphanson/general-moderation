@@ -1,0 +1,128 @@
+{
+  "created_at": "2025-09-25T13:34:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 139139,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87Gut5k",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-25T13:40:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3334135396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GxB5Z",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not sure I understand the scope of this package, or how it relates to the `unicode-math` LaTeX package. My understanding of that LaTeX package is that it allows to use e.g. `α` in an equation inside a `.tex` file instead of the normal `\\alpha`. That is not something that has an obvious Julia-equivalent. Does this package simply convert between the [different unicode font styles](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols#Tables_of_styled_letters_and_digits) as the examples in the README seems to suggest? What are the available options for `math_style_spec`?\r\n\r\nThe name `UnicodeMath` may be too general for this. Maybe `UnicodeMathStyles`?",
+      "createdAt": "2025-09-25T15:30:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3334741593",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G6DKq",
+      "author": {
+        "login": "manuelbb-upb"
+      },
+      "authorAssociation": "NONE",
+      "body": "yes, the package pretty much substitutes input glyphs with styled glyphs adhering to some styling convention.\r\nin that, it is similar to [UnicodeFun](https://github.com/SimonDanisch/UnicodeFun.jl), but with more compound styles and the configuration options.\r\nthe package is mainly meant as a companion for [MathTexEngine](https://github.com/Kolaru/MathTeXEngine.jl) to provide some of the commands that `unicode-math` has for LaTeX, e.g., `\\symbf`.\r\nin https://github.com/Kolaru/MathTeXEngine.jl/pull/141 some issues are linked that could be resolved.\r\nwe have also brainstormed ideas on how to integrate this functionality into `MathTexEngine`; a new package allows for more flexibility in testing things out, and also with licensing, should it turn out that `UnicodeMath` cannot be released under MIT (I am pretty sure MIT is ok though).\r\n\r\nthe available style specifications (`:iso`, `:tex`, `:french`, `:upright`, `:literal`) are not documented yet, at some point a little explanation will be added; the styles are very similar to the corresponding `unicode-math` styles.\r\n",
+      "createdAt": "2025-09-26T07:17:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3337106090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G-r7Z",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Right, that makes sense. I definitely tink the package needs a more descriptive name, though. What I would expect from a package named `UnicodeMath` would probably be somewhat similar to what is already provided by the `to_latex` function in [UnicodeFun](https://github.com/SimonDanisch/UnicodeFun.jl). On that note: Doesn't `UnicodeFun` already include the functionality you are implementing here (`to_caligraphic` etc.)? If some specific style is missing there, maybe it would make more sense to contribute to `UnicodeFun`? @SimonDanisch\r\n\r\nIf it does make sense to continue with this package, based on your opening statement in https://github.com/Kolaru/MathTeXEngine.jl/pull/141#issue-3359428353\r\n\r\n> This is a WIP with the goal of enabling a bit more control over character shapes\r\n\r\nI would suggest `UnicodeCharacterShapes` as a more descriptive package name.\r\n\r\n> the available style specifications (:iso, :tex, :french, :upright, :literal) are not documented yet, at some point a little explanation will be added; \r\n\r\nI would urge you to do that _now_. Registered packages must be sufficiently documented to be useable, and \"I'll add documentation later\" too often turns into \"never\"",
+      "createdAt": "2025-09-26T11:56:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3338321625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HDKnJ",
+      "author": {
+        "login": "manuelbb-upb"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your suggestions!\r\n\r\n> If some specific style is missing there, maybe it would make more sense to contribute to `UnicodeFun`?\r\n\r\nThat is actually how it started: https://github.com/SimonDanisch/UnicodeFun.jl/pull/24 :smile: \r\nBut `unicode-math` is a bit more complicated than the “simple” substitutions that are in `UnicodeFun`.\r\nFor example, Latin or Greek characters are normalized to adhere to a common (\"normal\") style and either all be upright or italic.\r\nIn `UnicodeMath` the same alphabets/scripts/glyph ranges as in `unicode-math` (`:latin`, `:Latin`, `:num`, `:greek`, `:Greek`, `:partial`, `:Nabla`) have style mapping dicts similar to `_default_font_modifiers` in `MathTexEngine` that should respect the expected styling configuration.\r\n\r\nI am not particular about having a separate `UnicodeMath` package however, and you are right about the naming.\r\nIt felt a bit off as part of `MathTeXEngine`, but maybe the code could/should become part of `UnicodeFun`.\r\nI'll wait for @SimonDanisch to give his opinion :)\r\n\r\n> I would urge you to do that *now*.\r\n\r\nRight, wherever the code ends up, I'll add a bit more explanation :+1: \r\n\r\nLet's keep the merge blocked for now.\r\n\r\n",
+      "createdAt": "2025-09-26T16:30:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3339495881",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Nsljq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-27T12:24:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3451017450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PcKV3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-11-03T12:24:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139139#issuecomment-3480266103",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: UnicodeMath\n- Repository: https://github.com/manuelbb-upb/UnicodeMath.jl\n- Created by: @manuelbb-upb\n- Version: v0.0.1\n- Commit: 6be3630dedb88b588a1b86a2abdd40bba2d31a9c\n- Reviewed by: @manuelbb-upb\n- Reference: https://github.com/manuelbb-upb/UnicodeMath.jl/commit/6be3630dedb88b588a1b86a2abdd40bba2d31a9c#commitcomment-166501226\n- Description: Unicode glyph mapping inspired by LaTeX package `unicode-math`\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## Initial Release\r\n\r\n- First registered version (`0.0.1`) of `UnicodeMath` package.\r\n- No exports, provides `apply_style`, `_sym` and other `sym` functions.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f7be3d109add8e0af0488eaf70b6e30ebd33078c9e7cc45ba3ab4e6fac14a61ef9ed5a8f1da4850c1d6b3514c662a2f3fce81c1efbade3f550d8bedc0a236c059c49a906295a86355d07189ee4ae7df069371a3837357bb59fdf0174933a101b8fda029558842e949de488aa792d8eb4d34e658a97fe865309dfb60c3611dbca00106f30b0ce9c29da402a41ccd98f1c04b2db28e55b0b6d6b4eb8557a6ef5c04e5f08a2d1f31160b9dd12a2865ea575 -->",
+  "package_name": "UnicodeMath",
+  "closed_at": "2025-11-03T12:24:53Z",
+  "title": "New package: UnicodeMath v0.0.1"
+}

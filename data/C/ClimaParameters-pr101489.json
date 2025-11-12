@@ -1,0 +1,53 @@
+{
+  "created_at": "2024-02-22T22:03:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101489,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8502Uih",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The registry consistency tests failed\n- Package name similar to 1 existing package.\n  1. Package name matches existing package name CLIMAParameters up to case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-22T22:07:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101489#issuecomment-1960396961",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8502pGH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It looks like you might be trying to rename an existing package `CLIMAParameters` to `ClimaParameters`? This is not possible, and would break the registry (it needs to be cloneable to case-insensitive file systems). Unfortunately, you are stuck with the capitalization of the existing package.",
+      "createdAt": "2024-02-22T23:03:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101489#issuecomment-1960481159",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ClimaParameters\n- Repository: https://github.com/CliMA/ClimaParameters.jl\n- Created by: @nefrathenrici\n- Version: v0.10.0\n- Commit: f23a27f551ea1bc58521c4ae20835b258fdee94c\n- Reviewed by: @nefrathenrici\n- Reference: https://github.com/CliMA/ClimaParameters.jl/commit/f23a27f551ea1bc58521c4ae20835b258fdee94c#commitcomment-138959682\n- Description: Contains all universal constant and physical parameters in CLIMA\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e4bbd1e12b42d3e0b95954164e76eeea6c8346fd1963d43795325b05b026f921e700233f686ad210408146cb07694b07da90bad89673d01178fed7807e9c308d912b8c72fbad0f215463a1afe2037f3931cd499ef9fd44201af4254a86ea9f427cc80e579eb988d8add7b016a152156eef4e13e011dfbbda9f9e522e411fa6fe2c904bec34d6dad4c93d535947f40572f5f9d36743148fec6cd5a2747f4b26a41485251af4bc40230a4530495a63be3f -->",
+  "package_name": "ClimaParameters",
+  "closed_at": "2024-02-22T23:03:22Z",
+  "title": "New package: ClimaParameters v0.10.0"
+}

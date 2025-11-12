@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-02-24T12:20:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 125719,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86fo0Jg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-24T12:28:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125719#issuecomment-2678276704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86fpuP2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! Could you add a little bit of documentation before registering? [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a small usage example in the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is no documentation.\r\n\r\nIn the longer term, I definitely recommend setting up a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation. Before a `v1.0` release, or for smaller packages that can be effectively described entirely with their `README`, that's not a requirement, though.\r\n\r\nBased on its apparent current state of development, I would also be concerned with the name `Processes`, which is extremely general and official-sounding. I'm not fundamentally opposed to a package `Processes`  \"for doing fast threaded loops\", but I would expect a package with such a name to be very mature and well-maintained (and have some buy-in from the community at large). So, if you want to stick to the name, my recommendation would actually be to develop the package outside the General registry for the time being, until it has reached a fairly mature state. It might also be good to post on [Discourse](https://discourse.julialang.org) to give people an introduction to the package and its design principles, and to get buy-in on any \"new approach to multi-threading\".\r\n\r\nIf you're registering this is a dependency for some other package only, I would consider developing it as a submodule of that package for the time being, or else, choose a less general name. If it turns into something that lives up to the expectations associated with a name such as `Processes`, it can always be spun out or renamed at some point in the future.\r\n",
+      "createdAt": "2025-02-24T14:05:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125719#issuecomment-2678514678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86kYYMn",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-03-27T12:24:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125719#issuecomment-2757853991",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lcJ8Z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-04-03T12:24:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125719#issuecomment-2775621401",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Processes\n- Repository: https://github.com/f-ij/Processes.jl\n- Created by: @f-ij\n- Version: v0.1.0\n- Commit: 3b898ce43d64a59bbddc7099b957b122c1725e09\n- Reviewed by: @f-ij\n- Reference: https://github.com/f-ij/Processes.jl/issues/1\n- Description: A module for doing fast threaded loops\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980a6fab20796a39fd4829229546ba78abb2b477550909414c5e30c55bc21d39f77b3b558707baba9f15cfcb1e0334db688d80e07e40abfd041bd7e050355cb61fa132774acc81b4538d7e5c958799c290923b26174c0a8bc3fd89bec040eee28e30549f7ce4f2da8b1f8409f023ed5892 -->",
+  "package_name": "Processes",
+  "closed_at": "2025-04-03T12:24:10Z",
+  "title": "New package: Processes v0.1.0"
+}

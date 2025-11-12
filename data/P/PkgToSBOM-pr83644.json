@@ -1,0 +1,120 @@
+{
+  "created_at": "2023-05-16T04:08:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 83644,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cU0Qk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-16T04:15:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1548960804",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85caiJY",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@SamuraiAku why not `SoftwareBOM.jl`?",
+      "createdAt": "2023-05-16T22:54:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1550459480",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cbUCl",
+      "author": {
+        "login": "SamuraiAku"
+      },
+      "authorAssociation": "NONE",
+      "body": "@kalmarek I wanted the `PkgTo` part in the name because I wanted to be clear about the scope of the package.  It uses Pkg to figure out the SBOM contents and that's it.  There is no scanning of random directories as in other tools, that would be another package entirely.\r\n\r\nPkgToSoftwareBOM.jl?  That's not a bad name, I guess I thought at the time it would be too wordy but I could be persuaded.",
+      "createdAt": "2023-05-17T04:00:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1550663845",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cc__Q",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] yeah, let me persuade you ;) SBOM rides against the first rule of of package naming guidelines which suggests avoiding unannotated acronyms in the names. There are examples where this is possible though, e.g. `GalacticCMAEvolutionStrategy.jl`. Pretty wordy, but unambiguous ;)\r\n\r\n`PkgToSoftwareBOM.jl` sounds good especially given the tradition of starting names with [Pkg](https://juliahub.com/ui/Search?q=Pkg&type=packages) (57 of them!) :D",
+      "createdAt": "2023-05-17T10:01:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1551106000",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cgcbc",
+      "author": {
+        "login": "SamuraiAku"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, I'm persuaded.  I'll rename to `PkgToSoftwareBOM.jl` and re-register",
+      "createdAt": "2023-05-17T20:18:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1552008924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85clOiX",
+      "author": {
+        "login": "SamuraiAku"
+      },
+      "authorAssociation": "NONE",
+      "body": "Re-registered as PkgToSoftwareBOM (#83844)",
+      "createdAt": "2023-05-18T15:51:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83644#issuecomment-1553262743",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PkgToSBOM\n- Repository: https://github.com/SamuraiAku/PkgToSBOM.jl\n- Created by: @SamuraiAku\n- Version: v0.1.0\n- Commit: 94d7c7b29202e6a782172463ed30aac9915ddf4a\n- Reviewed by: @SamuraiAku\n- Reference: https://github.com/SamuraiAku/PkgToSBOM.jl/commit/94d7c7b29202e6a782172463ed30aac9915ddf4a#commitcomment-113496257\n- Description: Produces a Software Bill of Materials (SBOM) describing your Julia Pkg environment. SBOM is in the SPDX format\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6aefcbd08bb01b031cfd5b9d057d5c1b0b572c1abd47617eb90b790b7413adbe83a1592954b81aaf5967a229ce5135aa3969e3286dd28a03313f9113fd5cd8293471b720dab0ca661884c05af49a1cd39cc9ede3585b6982951aea11836a214ce7c5e39fbcae9c936c627b9f02b5f24c260a82d1cf71b7d376c9caa3f5979c42ffdb21d8937d059d4a7504b9ca16f4dba77230ff21173181be0d0ee75ab51356f54753a5ad72cd6fa079877660e176555 -->",
+  "package_name": "PkgToSBOM",
+  "closed_at": "2023-05-21T16:52:15Z",
+  "title": "New package: PkgToSBOM v0.1.0"
+}

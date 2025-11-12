@@ -1,0 +1,173 @@
+{
+  "created_at": "2025-03-05T16:15:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 126358,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86hBPUs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Adapt, DataStructures, FerriteGmsh, GPUArraysCore, JLD2, OrderedCollections, Polyester, ReadVTK, Reexport, SparseMatricesCSR, StaticArrays, Tensors, TimerOutputs, Unrolled, WriteVTK\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-05T16:28:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2701456684",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hByls",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe it's too late to rename, but I'd be a little bit concerned that the term \"thunderbolt\" is very well-recognized in computing as the [name of the hardware interface](https://en.wikipedia.org/wiki/Thunderbolt_(interface)). My naive expectation for a package Thunderbolt.jl would be that it relates to I/O over Thunderbolt. Maybe `CardiacThunderbolt`?\r\n\r\nI definitely don't think `Thunderbolt` is an absolute no-go, if you want to stick to that, but it may be worth thinking about and to have some community discussion about the name.\r\n\r\nI'd also recommend against using `v0.0.1` as the initial version. Typically, in semantic versioning, `v0.0.x` indicates \"non-functional\", if it is used at all. That would not be suitable for registration, but of course, this package is not, in fact, non-functional. So you should probably start with `v0.1.0`. There are plans to prohibit the registration of `v0.0.x` altogether, as soon as someone gets around to implementing that. Note also that `Pkg` treats all `v0.0.x` versions as incompatible/\"breaking\".\r\n\r\n[noblock]",
+      "createdAt": "2025-03-05T17:24:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2701601132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hCANd",
+      "author": {
+        "login": "termi-official"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the feedback and raising the concern regarding the naming here Michael. I would lean towards keeping the name and think that this should not be in conflict with Intel's Thunderbolt trademark, as the name is slightly different and the domain is different (hardware controller vs simulation software). If I am wrong with this argument, then I am happy to be educated on that matter.\r\n\r\nI will discuss this concern on Friday, if the delay here does not pose any issue for you.\r\n\r\nThe package is technically functional, but far from feature-complete and I need to change some design decisions I made in the past. We decided for now to use 0.0.x to indicate that there is a series of breaking changes in the queue with essentially all planned PRs, but I need more time to write up the code and tests for them. The code is already used on JuliaHub's side and we wanted to register it for convenience in General, so we do not need to track the commits directly. If that should pose an issue, then I think it should be still possible to keep tracking the commits directly for now.",
+      "createdAt": "2025-03-05T17:48:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2701656925",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lQSD-",
+      "author": {
+        "login": "termi-official"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry for the long delay here @goerz , but we went a bit back and forth on this. After several discussion with different sides I think I would personally lean towards keeping the name. We have developed the framework actively since 2021 and advertised the framework with the name Thunderbolt.jl across many scientific conferences. Also for the full context, the motivation for the name was also not arbitrary, as we searched for something pregnant and descriptive for fast (Thunderbolt) electro- (Thunder) mechanical (Bolt)  simulations in cardiology.\r\n\r\nRegistration is not pressing from my side yet. How would you suggest to initiate the community discussion on that matter?",
+      "createdAt": "2025-04-02T13:06:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2772508926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lRcAW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] It's up to you. I think your own blocking comments are all that is holding back the registration. If you want to have a community discussion, I would recommend [posting on Discourse](https://discourse.julialang.org/c/package-announcements/60), see, e.g., the [discussion about `AutoForwards.jl`](https://discourse.julialang.org/t/ann-announcing-autoforward-jl/127599/1)",
+      "createdAt": "2025-04-02T14:49:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2772811798",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86obVPP",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I agree with the initial response from @goerz - one would think of the hardware interface and not some scientific niche name.\r\n\r\nJulia is a general purpose programming language - not a scientific/simulation niche thing.",
+      "createdAt": "2025-04-23T23:16:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2825737167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tQlb5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-05-24T12:24:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2906806009",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tjSh9",
+      "author": {
+        "login": "termi-official"
+      },
+      "authorAssociation": "NONE",
+      "body": "No worries @stemann , I will open a discussion thread in discourse as soon as I find some time, as suggested by @goerz . The registration is not urgent on my end and I unfortunately chase one deadline after another right now.",
+      "createdAt": "2025-05-27T08:49:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-2911709309",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86zlJla",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-27T12:24:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-3012860250",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8609gP6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-07-04T12:24:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126358#issuecomment-3036021754",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Thunderbolt\n- Repository: https://github.com/JuliaHealth/Thunderbolt.jl\n- Created by: @termi-official\n- Version: v0.0.1\n- Commit: 118686f672fa28acf978704f8dd3b0d0be1953ae\n- Git reference: HEAD\n- Description: A modular shared-memory high-performance framework for multiscale cardiac multiphysics simulations.",
+  "package_name": "Thunderbolt",
+  "closed_at": "2025-07-04T12:24:15Z",
+  "title": "New package: Thunderbolt v0.0.1"
+}

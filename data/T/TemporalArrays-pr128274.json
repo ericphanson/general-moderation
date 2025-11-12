@@ -1,0 +1,187 @@
+{
+  "created_at": "2025-04-02T13:15:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 128274,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86lQccy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-02T13:22:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2772551474",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lRXBp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm a little confused about the name. In what sense are the arrays \"temporal\" (\"relating to time\")?\r\n\r\nAlso, for consistency both with the package name and with the general conventions of the Julia ecosystem, `Temporalarray` should be spelled `TemporalArray`. It looks like `Temporalarray_fromvector` maybe should be a method of the `TemporalArray` constructor? That is, use multiple dispatch instead of a different function name.",
+      "createdAt": "2025-04-02T14:42:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2772791401",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lWTCf",
+      "author": {
+        "login": "cometscome"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I'm a little confused about the name. In what sense are the arrays \"temporal\" (\"relating to time\")?\r\n> \r\n> Also, for consistency both with the package name and with the general conventions of the Julia ecosystem, `Temporalarray` should be spelled `TemporalArray`. It looks like `Temporalarray_fromvector` maybe should be a method of the `TemporalArray` constructor? That is, use multiple dispatch instead of a different function name.\r\n\r\nThank you for giving me a comment. \r\nThis package allocates memories  before calculations to avoid unnecessary memory allocation in main code. \r\nI used a private version of this package to treat arrays for temporal use. But I realized that this package can be used for other purpose. So it might be better to change the package name. Maybe I think AllocatedArrays is better. I also think about the name change of \"Temporalarray_fromvector\". Thank you. ",
+      "createdAt": "2025-04-03T01:13:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774085791",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lWiFs",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I get the feeling that you might be using the word “temporal” when you mean “temporary”?\r\n\r\n> Maybe I think AllocatedArrays is better\r\n\r\nYeah, maybe. I get what the package is doing, but I also struggle to come up with a really good name… Perhaps I’ll see if someone has some more ideas on Slack.\r\n\r\nI definitely think TemporalArrays is misleading, as it would probably be understood to be about arrays of time data. TemporaryArrays wouldn’t really catch it, either\r\n\r\n[noblock]",
+      "createdAt": "2025-04-03T02:12:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774147436",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lWlYB",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For helping naming ideas an adjacent/similar package seems to be https://github.com/ericphanson/AllocArrays.jl\r\n\r\n[noblock]",
+      "createdAt": "2025-04-03T02:16:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774160897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lWw57",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, and `AllocatedArrays` might actually be too close to `AllocArrays` (depending on how @ericphanson feels about it)\r\n\r\n[noblock]",
+      "createdAt": "2025-04-03T02:27:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774208123",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lW1Hx",
+      "author": {
+        "login": "cometscome"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for comments. AllocatedArrays is close to AllocArrays. So PreallocatedArrays is better. Does it sound good?",
+      "createdAt": "2025-04-03T02:37:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774225393",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lW3Oi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, I was thinking about `PreallocatedArrays`, too. Let’s wait and see if someone still has other suggestions",
+      "createdAt": "2025-04-03T02:41:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2774234018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lc-P_",
+      "author": {
+        "login": "cometscome"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yeah, I was thinking about `PreallocatedArrays`, too. Let’s wait and see if someone still has other suggestions\r\n\r\nThere are two thumbs up so I submitted the pull request. \r\n\r\nhttps://github.com/JuliaRegistries/General/pull/128353",
+      "createdAt": "2025-04-03T13:42:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2775835647",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86leV5C",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/128353",
+      "createdAt": "2025-04-03T15:31:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128274#issuecomment-2776194626",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TemporalArrays\n- Repository: https://github.com/cometscome/TemporalArrays.jl\n- Created by: @cometscome\n- Version: v0.0.1\n- Commit: b0fa23eed9497582dbf195e3c7e4b0ae77f36352\n- Reviewed by: @cometscome\n- Reference: https://github.com/cometscome/TemporalArrays.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359857b33b8cb020f5d3cd20461e463464e20853bc64c639ba8cca9048d24a8702dab7a0bb1948c05dc859e130494bad0bf65d19da7d3db2f95b2ff43afd0b12ed78c9e18ada24928b897e8eec9e19d07dcf640c528a0694e20516bf942b1e20252c933d911e6e0fc4b72d46da76d58938f1416569103a1d619f62e413b166889365 -->",
+  "package_name": "TemporalArrays",
+  "closed_at": "2025-04-03T15:31:01Z",
+  "title": "New package: TemporalArrays v0.0.1"
+}

@@ -1,0 +1,106 @@
+{
+  "created_at": "2025-07-16T08:57:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 134862,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q863cRvw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-16T09:04:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3077643248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863jxPZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I was about to recommend `AdaptiveSparseGrid` as a better package name, when I saw in the README the link to the existing [AdaptiveSparseGrids.jl](https://github.com/jacobadenbaum/AdaptiveSparseGrids.jl). How does this new package compare to the existing package? Would it be possible to contribute to the existing package? If `AdaptiveSparseGrids.jl` is no longer actively maintained, maybe @jacobadenbaum can transfer it to some organization where then @Clpr could be added as a new maintainer, and the new code could replace the old code as a new (breaking) release – as long as there is some continuity in terms of features.\r\n\r\nIf at all possible, we should avoid having multiple registered implementations of the same method, with interchangeable package names",
+      "createdAt": "2025-07-16T17:41:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3079607257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863khdx",
+      "author": {
+        "login": "Clpr"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I was about to recommend `AdaptiveSparseGrid` as a better package name, when I saw in the README the link to the existing [AdaptiveSparseGrids.jl](https://github.com/jacobadenbaum/AdaptiveSparseGrids.jl). How does this new package compare to the existing package? Would it be possible to contribute to the existing package? If `AdaptiveSparseGrids.jl` is no longer actively maintained, maybe @jacobadenbaum can transfer it to some organization where then @Clpr could be added as a new maintainer, and the new code could replace the old code as a new (breaking) release – as long as there is some continuity in terms of features.\r\n> \r\n> If at all possible, we should avoid having multiple registered implementations of the same method, with interchangeable package names\r\n\r\nHi Michael,\r\n\r\nThe `AdaptiveSparseGrid.jl` would definitely be the best name. But it was already occupied when I came. The existing `AdaptiveSparseGrid.jl` by @jacobadenbaum is no longer maintained. The last commit was in 2022, 3 years ago.\r\n\r\nThe implementations of the existing `AdaptiveSparseGrid.jl` and `AdaptiveSG.jl` are different. The first one uses a recursive tree to represent the grid hierarchy. The second one, however, flattens everything to arrays. merging the two packages would almost rewrite everything. \r\n\r\nBut let's see how @jacobadenbaum thinks about this. I am glad to be a maintainer if such changes are acceptable to him. \r\n\r\nBest",
+      "createdAt": "2025-07-16T18:28:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3079804785",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863kz-g",
+      "author": {
+        "login": "jacobadenbaum"
+      },
+      "authorAssociation": "NONE",
+      "body": "I wouldn't quite say that `AdaptiveSparseGrids.jl` is \"unmaintained.\"  The maintenance status is: fixing bugs if people report them. I'm certainly not actively working on it, and haven't really looked at it for a while.  I'm open to moving the package or adding someone else as a maintainer if someone is interested in working on it.  I agree that it looks like the implementations are quite different under the hood, although as far as I can tell (from the README at least, haven't done a very deep dive here) the underlying functionality is quite similar.  ",
+      "createdAt": "2025-07-16T18:47:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3079880608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-WwRu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-08-16T12:24:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3193635950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86_vSb5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-08-23T12:24:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134862#issuecomment-3216844537",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AdaptiveSG\n- Repository: https://github.com/Clpr/AdaptiveSG.jl\n- Created by: @Clpr\n- Version: v0.3.0\n- Commit: e8dfcace681080a14085b72a05ed3705990be045\n- Git reference: HEAD\n- Description: Multi-linear adaptive sparse grid interpolation\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nInitial registration.\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "AdaptiveSG",
+  "closed_at": "2025-08-23T12:24:07Z",
+  "title": "New package: AdaptiveSG v0.3.0"
+}

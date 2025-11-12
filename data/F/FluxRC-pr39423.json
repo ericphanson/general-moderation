@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-06-22T19:12:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 39423,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2NjI2NzcxMA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to Flux3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.29 is at or below cutoff of 2.50.\n  2. Similar to FluxJS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Flux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-22T19:23:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39423#issuecomment-866267710",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2NjI3MDM0MQ==",
+      "author": {
+        "login": "vavrines"
+      },
+      "authorAssociation": "NONE",
+      "body": "FluxRC is a natural (and not too lengthy) name of the [flux reconstruction](https://arc.aiaa.org/doi/10.2514/6.2007-4079), i.e., the method name to be implemented. May I keep this name?",
+      "createdAt": "2021-06-22T19:27:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39423#issuecomment-866270341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2ODAxNTU0Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't think `FluxReconstruction` would be _that_ bad, it's definitely less ambiguous than `FluxRC` :wink: ",
+      "createdAt": "2021-06-24T23:03:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39423#issuecomment-868015546",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2ODM0MTQyMQ==",
+      "author": {
+        "login": "vavrines"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I don't think `FluxReconstruction` would be _that_ bad, it's definitely less ambiguous than `FluxRC`\r\n\r\nOk thx, I renamed the package. We can close this.",
+      "createdAt": "2021-06-25T08:59:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39423#issuecomment-868341421",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FluxRC\n- Repository: https://github.com/vavrines/FluxRC.jl\n- Created by: @vavrines\n- Version: v0.1.0\n- Commit: 856efbbbd18c0bad473d4b29ad777e10dccdc9ea\n- Reviewed by: @vavrines\n- Reference: https://github.com/vavrines/FluxRC.jl/commit/856efbbbd18c0bad473d4b29ad777e10dccdc9ea#commitcomment-52543102\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6937409221fc66476d79e4250d567ffe7c581f55156d29270c24c1db0bab4c618a10f456609bc838faef1ad7b5191fe984032ec4b2a8bc9ff788e0aa80f8cab48782ad04a3991959af238c8cca16b222ed152bdbd67575490cbdb7b9a434b31706f0c40c53729c35014ff93086c2b2e659aef91abab304745a174a188914e3d042fd77f1321676438e3bed2d1f3c66d2a697352d029997b9a422e263a7c8096e804d1c8a643663a69f8546efd91008a5f -->",
+  "package_name": "FluxRC",
+  "closed_at": "2021-06-25T08:59:48Z",
+  "title": "New package: FluxRC v0.1.0"
+}

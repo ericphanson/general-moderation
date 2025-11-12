@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-11-20T19:13:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 119851,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86UYMMq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-20T19:20:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119851#issuecomment-2489369386",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UYM5b",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] This looks great in principle, but is lacking tests. For a `v1.0.0` release, you're guaranteeing a stable API, which isn't really possible if there are no tests for that API. So please make sure to add tests and collect coverage data.",
+      "createdAt": "2024-11-20T19:21:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119851#issuecomment-2489372251",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UYP5o",
+      "author": {
+        "login": "hunhold"
+      },
+      "authorAssociation": "NONE",
+      "body": "> This looks great in principle, but is lacking tests. For a `v1.0.0` release, you're guaranteeing a stable API, which isn't really possible if there are no tests for that API. So please make sure to add tests and collect coverage data.\r\n\r\nOh, my mistake @goerz! I was intending to put version 0.1.0 on it, for exactly this reason. Tests are of course very important!\r\n\r\nEDIT: I found a similar case a while back. I opened a new PR for version 0.1.0 as back then, which is probably the best course of action. Or will we just proceed with 1.0.0 and I add tests on the next release?",
+      "createdAt": "2024-11-20T19:28:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119851#issuecomment-2489384552",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UYowa",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's always good when the version that is tagged as `v1.0.0` has full documentation and tests. So I'd say we register `v0.1.0` first, then you can work on the tests (and potentially more documentation, if you want to nail down what is part of the official API and what is not). Once you have that, you can submit a `v1.0` update at any point.\r\n\r\nWe just had a big discussion about this on Slack, but I'm a firm believer that this is a good way to do things for _any_ package: Start with `v0.1`, but then go to `v1.0` as soon as you can reasonably say that the API is \"stable\". It's not necessary that there are changes to the code between the last `v0.x` release and the `v1.0.0` release. It's not a \"breaking\" release in a SemVer sense.\r\n\r\nClosing in favor of https://github.com/JuliaRegistries/General/pull/119853",
+      "createdAt": "2024-11-20T20:29:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119851#issuecomment-2489486362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UYq0R",
+      "author": {
+        "login": "hunhold"
+      },
+      "authorAssociation": "NONE",
+      "body": "> It's always good when the version that is tagged as `v1.0.0` has full documentation and tests. So I'd say we register `v0.1.0` first, then you can work on the tests (and potentially more documentation, if you want to nail down what is part of the official API and what is not). Once you have that, you can submit a `v1.0` update at any point.\r\n> \r\n> We just had a big discussion about this on Slack, but I'm a firm believer that this is a good way to do things for _any_ package: Start with `v0.1`, but then go to `v1.0` as soon as you can reasonably say that the API is \"stable\". It's not necessary that there are changes to the code between the last `v0.x` release and the `v1.0.0` release. It's not a \"breaking\" release in a SemVer sense.\r\n> \r\n> Closing in favor of #119853\r\n\r\nThank you for your very quick and elaborate response, @goerz!\r\n\r\nYes, I will get to work right away on documentation and testing and release a 1.0.0 as soon as it's ready!\r\n\r\nSorry for the complications. I can only imagine how much work it is to manage the high volume of submissions, so I feel bad that I made your job harder than it should be by making this error. Thanks for your hard work on the great Julia package ecosystem!",
+      "createdAt": "2024-11-20T20:35:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119851#issuecomment-2489494801",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Posits\n- Repository: https://github.com/takum-arithmetic/Posits.jl\n- Created by: @hunhold\n- Version: v1.0.0\n- Commit: 23fa3a8f30656ca0eeabfc9b96f3748a3c76135c\n- Git reference: HEAD\n- Description: Julia bindings for libposit",
+  "package_name": "Posits",
+  "closed_at": "2024-11-20T20:29:53Z",
+  "title": "New package: Posits v1.0.0"
+}

@@ -1,0 +1,61 @@
+{
+  "created_at": "2024-10-15T01:28:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 117282,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86PzfbD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, Distributions, ProgressMeter\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 2 existing packages.\n  1. Similar to GPI2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-15T01:36:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117282#issuecomment-2412639939",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PzhB-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, in addition to `VPIN` not being a suitable name for a Julia package, you would also have to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nFor a version 1.0, there would be additional requirements:\r\n\r\n* Must define the stable API. That generally means _complete_ documentation.\r\n* Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nYou probably want to register at `v0.1`, not `v1.0`",
+      "createdAt": "2024-10-15T01:44:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117282#issuecomment-2412646526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P27-7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/117292",
+      "createdAt": "2024-10-15T10:46:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117282#issuecomment-2413543355",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: VPIN\n- Repository: https://github.com/jinyunfan/VPIN.jl\n- Created by: @jinyunfan\n- Version: v1.0.0\n- Commit: 5fc29e4382ead8577bf5795f48606a18fd819d6d\n- Reviewed by: @jinyunfan\n- Reference: https://github.com/jinyunfan/VPIN.jl/issues/1#issuecomment-2412677949\n- Description: With reference to Easley et al(2014), the volume synchronized probability of informed trading is estimated under high-frequency environment, and the index VPIN(volume synchronized probability of informed trading) is calculated.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835984ccec9b7f936055400f0cfc14ad7a430f3527b12cc653d3b25985aad13692ba6bf14d643f3d9be81b0392a3235bb4abb6d63c0b6bc1f5bc725a0a518d16c72a0c1a88cc9076d27e6a633f09e6985022e07b529aa0b3f947a1052df4935e7ef73671b2ddfb41996b11c83f2c92ce73157 -->",
+  "package_name": "VPIN",
+  "closed_at": "2024-10-15T10:46:45Z",
+  "title": "New package: VPIN v1.0.0"
+}

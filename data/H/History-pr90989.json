@@ -1,0 +1,173 @@
+{
+  "created_at": "2023-09-07T14:15:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 90989,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85l8Deo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Historic. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-07T14:20:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710241704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l8KWz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`History` is too general as a name. Maybe `REPLHistory`?",
+      "createdAt": "2023-09-07T14:37:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710269875",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l8LEW",
+      "author": {
+        "login": "GHTaarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have thought about the name a lot and would prefer to keep it. I really like that the name is the same as the bash command.\r\n The \"Historic\" package has very different functionality from this one, so I expect that any confusion would quickly become apparent. All exported symbols from the two packages have different names.",
+      "createdAt": "2023-09-07T14:38:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710272790",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l8Mmn",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don’t think the name similarity is any problem, but “History” is still too general.",
+      "createdAt": "2023-09-07T14:42:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710279079",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l8M4z",
+      "author": {
+        "login": "GHTaarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "REPLHistory is already registered by another package",
+      "createdAt": "2023-09-07T14:43:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710280243",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l9Dt2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe it would make sense to contribute to that package, then? It looks like it hasn't been touched in a while, so perhaps @PetrKryslUCSD would be open to adding you as a maintainer, and this code could be released as the next version of `REPLHistory`. You also have a `history` function, right? So the functionality of this package seems very much like a superset of the existing `REPLHistory`",
+      "createdAt": "2023-09-07T17:06:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710504822",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85l9Mxh",
+      "author": {
+        "login": "PetrKryslUCSD"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, I am open to that. I don't actually use the current REPLHistory as much as I thought I would. \r\n\r\nEdit: To clarify: I'd be open to @GHTaarn completely taking over the REPLHistory package. But, even as I don't think it is used much, totally changing the UI should be done with a bit of care.",
+      "createdAt": "2023-09-07T17:37:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1710541921",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mGB2k",
+      "author": {
+        "login": "GHTaarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you @PetrKryslUCSD that is very generous of you. I need some time to decide what I do from now. Your offer is certainly one of the options that I am considering and I will and I will contact you if I decide to go that way.",
+      "createdAt": "2023-09-10T16:22:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1712856484",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ownFk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-10-11T12:23:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1757573476",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pZrNa",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-10-18T12:23:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/90989#issuecomment-1768338266",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: History\n- Repository: https://github.com/GHTaarn/History.jl\n- Created by: @GHTaarn\n- Version: v0.2.0\n- Commit: fa20536385160bb563cfe2bded8d8236e1120b00\n- Reviewed by: @GHTaarn\n- Reference: https://github.com/GHTaarn/History.jl/commit/fa20536385160bb563cfe2bded8d8236e1120b00#commitcomment-126715360\n- Description: History functionality in the Julia REPL similar to what bash provides\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ef14ae534ca3e3e0ee4e8a437dff5855ee435ee7adc12d7be9bedea0fe783bd2550854cea5b124843a5bfd1ab79243cf93d8cd9aa8e84d86d64d96314af40652d9d200717a600f2b1396150e0cf1d44f58a9eb60364289da9f4f00bf827da7bd7eca6f451d2db5805b23476eef0b41f4bf104f788f3dd5c53e180b018e4e4c2d31421bf5a73eeb5859317ff0047fe3284ccdaa7fcb8510671f15895b9a48cfd1e2e346de5c970d3acbf642b686089eb5 -->",
+  "package_name": "History",
+  "closed_at": "2023-10-18T12:23:24Z",
+  "title": "New package: History v0.2.0"
+}

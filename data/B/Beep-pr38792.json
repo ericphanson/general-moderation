@@ -1,0 +1,121 @@
+{
+  "created_at": "2021-06-14T08:03:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 38792,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2MDQ3ODU4OQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 2 existing packages.\n  1. Similar to Grep. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.22 is at or below cutoff of 2.50.\n  2. Similar to Reel. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-14T08:06:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-860478589",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2OTA2NjY5NA==",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "this is at the moment a one-line package. What's the plan for next step?",
+      "createdAt": "2021-06-26T22:03:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-869066694",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3OTIwMDg4NQ==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I see no reason to not merge this package/PR (assume AutoMerge failing is a false alarm), it's not a \"one-line package\", just very small.\r\n\r\nI.e. it works for me, does make a sound.\r\n\r\n[noblock]\r\n\r\n@arubhardwaj I could see some possibly improvements done though.\r\n\r\nbeep(\"church\") for sure is a church, a very long sound. That's not the problem, rather you're blocked (from the REPL) while listening, so if running async, in the background, is possible, that would be great! Either as an option or even default? Changing the default later would be a change in API, possibly considered a breaking change (or not?), then would need an updated version number according to semver, but that's not a reason to not just merge as is.\r\n\r\n\"Presently this package supports 11 sounds:\" I then only saw 7 listed...\r\n\r\n",
+      "createdAt": "2021-07-13T15:47:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-879200885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3OTIxNDg3OQ==",
+      "author": {
+        "login": "arubhardwaj"
+      },
+      "authorAssociation": "NONE",
+      "body": "@PallHaraldsson actually, auto-merge failing is not a false alarm. The package name is 4 letters, whereas guidelines suggest that it should be 5 letters. \r\n\r\nRegarding sounds, I made some changes recently and removed some files because of copyright restrictions which I later found. I may add some more sounds later. \r\n\r\n[noblock]",
+      "createdAt": "2021-07-13T16:06:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-879214879",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3OTIzODcyOQ==",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">The package name is 4 letters\r\n\r\nOk, didn't look carefully at the cause. I'm ok with the name, but it's not up to me. @giordano seems ok with it too, adding a label that then \"JuliaRegistrator removed\". Not sure why. Just merge?\r\n\r\nEDIT, just added, that I forgot:\r\n\r\n[noblock]",
+      "createdAt": "2021-07-13T16:40:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-879238729",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841jQhh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-08-13T12:49:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-898435169",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8411GKn",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-08-21T12:43:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38792#issuecomment-903111335",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Beep\n- Repository: https://github.com/arubhardwaj/Beep.jl\n- Created by: @arubhardwaj\n- Version: v0.1.0\n- Commit: f9f6c108635539b3dfae7e6706cc2af12cebb9ef\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Julia package which will give sound notification. If you are running a script that takes some time and wish to be notified when it finishes just add beep() in the end!\n<!-- END RELEASE NOTES -->",
+  "package_name": "Beep",
+  "closed_at": "2021-08-21T12:43:43Z",
+  "title": "New package: Beep v0.1.0"
+}

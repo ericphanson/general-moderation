@@ -1,0 +1,179 @@
+{
+  "created_at": "2022-08-01T13:47:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 65420,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85HmXT3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 5 existing packages.\n  1. Similar to Atom. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.49 is at or below cutoff of 2.50.\n  2. Similar to Atomix. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Attrs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Actors. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Automa. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-08-01T13:54:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1201239287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HmqNI",
+      "author": {
+        "login": "jagot"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nRegarding the similarity of the package name to previous packages, I would like to argue that the problem is small since Atom.jl refers to Github's abandoned editor and Atomix.jl is for atomic operations, whereas this package deals with actual atoms.",
+      "createdAt": "2022-08-01T14:58:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1201316680",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H5yid",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Since the Atom editor is not being developed, Atom.jl is unlikely to be widely developed and used going forward. \r\n\r\nThat said, Atoms.jl feels like a very general name, but the package description feels like the package has a specific purpose. For example, there are other packages with names like https://github.com/Chemellia/AtomicGraphNets.jl (@DhairyaLGandhi). I think that a slightly longer and more descriptive name is preferable here.",
+      "createdAt": "2022-08-05T11:14:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1206331549",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H6eQg",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Maybe AtomicOrbitals.jl?",
+      "createdAt": "2022-08-05T14:18:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1206510624",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H8_p8",
+      "author": {
+        "login": "jagot"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the suggestion, @MasonProtter. For the moment, `Atoms.jl` provides a Hartree–Fock solver for the ground state of the atom, which indeed works with orbitals. In the future, however, I foresee adding capabilities going beyond the independent-particle model, e.g. a full two-electron wavefunction for helium, etc., where the concept of orbitals doesn't really apply. Hence, I would not want to lock-in on the orbitals aspect.\r\n\r\nFor the same reason (i.e. my future plans of extensions), I _do_ feel that the package will be general enough to warrant the name `Atoms.jl` (have you noticed I'm really fond of it? 😄), but I appreciate that other people may have differing ideas of what `Atoms.jl` would entail. How general do you think it should be @ViralBShah, for the name to be acceptable?\r\n\r\nI'm thinking of `AtomicSystems.jl` as an alternative, but I'm not completely happy about it, because it could be interpreted as systems made of atoms (molecules or crystals, I suppose, but those I would have named `Molecules.jl` and `Crystals.jl`, in the same vein), but for this package I am targeting the ground and excited states (in the future, I have code for this that needs clean-up) of single atoms, along with property calculations such as polarizability, perturbation theory, etc. Another name could be `AtomicStructure.jl`, but that is also a misnomer, since I do not consider the internal structure of the nucleus. `ElectronicStructure.jl` would be _correct_, but promising too much since again, I do not consider molecules or crystals.\r\n\r\nSoliciting some input from @antoine-levitt and @mortenpi.",
+      "createdAt": "2022-08-06T08:08:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1207171708",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H9NoK",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps @rkurchin @mfherbst have some thoughts as well. \r\n\r\nApart from my comment that the name should be somewhat more descriptive, since `Atoms` can mean so many things and is a short name, I don't have a strong view on how general it can be. It can be pretty general. If some of the folks pinged here feel Atoms.jl is a way to go, I am also happy to merge it. I just wanted to get a small discussion going on a potentially more descriptive name.",
+      "createdAt": "2022-08-06T14:56:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1207228938",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H9eOC",
+      "author": {
+        "login": "mortenpi"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have to agree that `Atoms` is a little too generic for something that calculates the electron structure of atoms (e.g. in the olden times it looks like there was an unregistered [Atoms.jl](https://github.com/libAtoms/Atoms.jl) that dealt with molecular dynamics).\r\n\r\nI think that `AtomicStructure` could be a good name for this -- in my experience, atomic structure refers specifically to the electronic structure theory of atoms, and not the nuclear structure theory.",
+      "createdAt": "2022-08-06T23:20:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1207296898",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H9y9t",
+      "author": {
+        "login": "jagot"
+      },
+      "authorAssociation": "NONE",
+      "body": "After discussing some more with @mortenpi, I think we are converging on `AtomicStructure.jl`, so if everybody would be happy with that name, I'll start the process of renaming the package in all places necessary 😅.",
+      "createdAt": "2022-08-07T10:59:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1207381869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85H-I0C",
+      "author": {
+        "login": "jagot"
+      },
+      "authorAssociation": "NONE",
+      "body": "New PR: https://github.com/JuliaRegistries/General/pull/65817 (I did not know if I could somehow update this one)",
+      "createdAt": "2022-08-07T19:32:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65420#issuecomment-1207471362",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Atoms\n- Repository: https://github.com/JuliaAtoms/Atoms.jl\n- Created by: @jagot\n- Version: v0.1.0\n- Commit: b03368b930a51d74bf70c7834ef9b438cfe73a5c\n- Reviewed by: @jagot\n- Reference: https://github.com/JuliaAtoms/Atoms.jl/commit/b03368b930a51d74bf70c7834ef9b438cfe73a5c#commitcomment-79950247\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65115defbb9b1a5314b075231de42e2f8a580ed2c0cc52e4ff20984a1a8cbc122ba533fae896958a687b96429a57c8a926d57fb1013cc881cfd3527f637d7dfcb061de9013abd7ef2d6f9ee11987cabe91ce17c234a976d3dc9272a83f4393e9202f3247d1c0785ab298036b0a8c1f822d2819cd06940200d9636bdd5aa9a06ac2bc65fdbe12af31d7883aa5216a54244d35329891c4ed6c38f95d426baf7de6a6d6fedbb77df982a0996e7900c6bdc47 -->",
+  "package_name": "Atoms",
+  "closed_at": "2022-08-07T20:20:52Z",
+  "title": "New package: Atoms v0.1.0"
+}

@@ -1,0 +1,128 @@
+{
+  "created_at": "2025-07-24T15:09:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 135347,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q865mpDv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-24T15:27:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3113914607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865vWda",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I hate to be negative here but I don't think this should be registered (yet?). Maybe I'm missing something, but it looks to fall into the \"personal package\" case, as per the General Registry [FAQ](https://github.com/JuliaRegistries/General/blob/master/README.md#should-i-register-my-package-now):\r\n\r\n> Some types of packages should not be registered, or are not yet ready for registration:\r\n>\r\n> * The General registry is not a place for \"personal packages\" that consist of\r\n> collections of \"utility functions\" nor for packages that are only useful for a closed group\r\n> (like a research group or a company). For that, it is easy to set up your own registry using\r\n> for example [LocalRegistry.jl](https://github.com/GunnarFarneback/LocalRegistry.jl). The\r\n> [Pkg documentation about registries](https://pkgdocs.julialang.org/v1/registries/) might be useful\r\n> if you decide to go this route.\r\n> \r\n> * \"Empty\" packages that do not yet have functionality are not ready to be registered.\r\n\r\nAs a side note, I see a number of macros defined in the code that seem like they should not be macros, but I'm a complete noob on metaprogramming so maybe I'm also missing something here.",
+      "createdAt": "2025-07-25T02:44:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3116197722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865z0NM",
+      "author": {
+        "login": "lcandiot"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your comment — it’s very much appreciated, and you raise valid concerns.\n\nTo clarify the motivation behind this PR: our community has a long-standing pattern of re-implementing and adapting similar functionality across different projects and in different programming languages. As more of our members begin adopting Julia, we’ve found ourselves repeating that same cycle within the Julia ecosystem. The intent of this package is to consolidate this shared functionality into a reusable, community-maintained Julia package — not for personal use, but to streamline development efforts across our broader group.\n\nThat said, we completely understand if this package is still considered too early for registration in the General registry. If that’s the case, we are happy to continue development independently and revisit registration when the package has matured further.\n\nThanks again for taking the time to review and share your thoughts!",
+      "createdAt": "2025-07-25T11:04:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3117368140",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q866CnxH",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would agree not to register this, it seems like a personal or small group project but the name reads like something for everyone. \n\nWe have a wide range of \"Geo\" tools in Julia and this doesn't integrate with any of them, so will likely confuse people more than it helps them.\n\nA more specific goal and name would improve the situation.",
+      "createdAt": "2025-07-26T04:42:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3121249351",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q866Ep4y",
+      "author": {
+        "login": "lcandiot"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you all for your thoughtful feedback — we appreciate your time and insights.\r\n\r\nBased on your comments, we’ve decided to continue development outside the General registry for now. We’ll revisit registration once the package is more mature and better aligned with community expectations.\r\n\r\nThanks again for your guidance!",
+      "createdAt": "2025-07-26T12:57:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3121782322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87AKb_i",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-08-26T12:24:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3223961570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BqD9O",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-09-03T12:24:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135347#issuecomment-3249028942",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GeoUtils\n- Repository: https://github.com/lcandiot/GeoUtils.jl\n- Created by: @lcandiot\n- Version: v0.1.0\n- Commit: ddd5ea571d3d9e5acb62ef357df589a8cad40d8d\n- Reviewed by: @lcandiot\n- Reference: https://github.com/lcandiot/GeoUtils.jl/commit/ddd5ea571d3d9e5acb62ef357df589a8cad40d8d#commitcomment-162803855\n- Description: A collection of functions that are hopefully useful for Earth Scientist\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd61efb15c6cb119dc1e7c55a9cff99f4a4d85a5fa7edbfcc8af0522f294012e0233a7218430f3b3054207e6da5ea7d71e3501691c80a03ee1eb31d2cf3c35db6c65f57ce0631a85281c1b04f21dfdb210a92d2a27276f9461f43900ca8156abc155a82020d8855d574b5af1e8ee56352b37cc7f31c1b6f0d3e68681896f31bc5cf1de27d1eaf44d0bfe8f51e433c2af6da864b9b5a173232e223fd6c27089b16125cecb03c61a4bca3efb68bf0ec06f569 -->",
+  "package_name": "GeoUtils",
+  "closed_at": "2025-09-03T12:24:08Z",
+  "title": "New package: GeoUtils v0.1.0"
+}

@@ -1,0 +1,157 @@
+{
+  "created_at": "2023-09-23T00:01:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 92046,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85nPlvy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-23T00:09:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1732140018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nQJSX",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I want to add a note about the name of this package, in case anyone raises an objection (or has feedback relating to it). This is the same as my package CIFTI.jl, but that package has been held up in a naming conflict and I haven't been able to make the case that CIFTI.jl is the right naming choice. My next choice in naming is Cifti2, which is the name of the present package. The \"2\" refers to version 2 of the [CIFTI specification](https://www.nitrc.org/projects/cifti/) that it supports -- which is in fact more accurate, though it's not a distinction people usually make or are aware of. As for the capitalization, technically it should be all caps but in practice people usually write it lowercase so I think the capatalization as it stands now is fine.",
+      "createdAt": "2023-09-23T11:16:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1732285591",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nTy6s",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Looking at your other PR I wouldn't say you \"weren't successful\" in making a case for the old name - it's just that people apparently missed this and so the PR wasn't manually merged. \r\n\r\nIf you still think CIFTI is a good name I'd encourage you to bump the old PR, and maybe also post in the #pkg-registration channel on the Julia Slack to get the attention of someone who can merge. Having an all caps package name is not unusual when it's a file reader (e.g. `CSV.jl`, `JSON.jl`...) so I don't think there's an issue here.",
+      "createdAt": "2023-09-25T09:13:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1733242540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nU4H9",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the advice, I'll do that today.",
+      "createdAt": "2023-09-25T12:00:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1733526013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nU4pv",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n@myersm0 I would argue not register this package for two reasons.\r\n\r\nCifti2.jl may only support the CIFTI-2 spec (which is fine), not some older 1 spec (I'm not up to speed on if that would be useful, or even if it's compatible).\r\n\r\nYour package name will get outdated if you would want to support a hypothetical CIFTI-2 spec etc. You know more than me if that's likely, and if it's better to actively signal the version in the name (is that usually done in Julia packages? HDF5.jl is one example).\r\n\r\nIf this isn't a good argument against, then there's the other about preferring upper case. CIFTI2.jl would be another option.\r\n\r\nYour package will become 10,000 if @nilshg unblocks here, or if you unblock the upper case PR. Unless someone beats you to unblocking their packages from the queue...\r\n\r\n\r\n\r\n",
+      "createdAt": "2023-09-25T12:01:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1733528175",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nVDfs",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "I agree, thanks, I'll close this one and return focusing on getting the older name CIFTI.jl approved.",
+      "createdAt": "2023-09-25T12:12:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1733572588",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qC8Vi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-10-25T12:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1779156322",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qn-vl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-01T12:23:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92046#issuecomment-1788865509",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Cifti2\n- Repository: https://github.com/myersm0/Cifti2.jl\n- Created by: @myersm0\n- Version: v0.1.0\n- Commit: adde246e44dae9383193ab0894efe822711c53d9\n- Reviewed by: @myersm0\n- Reference: https://github.com/myersm0/Cifti2.jl/issues/4\n- Description:  A Julia package for reading CIFTI files for surface-space neuroimaging data \n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598bc8419b29f5ff5140d89280bd0080d7f228016501f0967ad844e0fb35c606ae0e8307a65b4ef43b092d2fe2b1a9655d65c03d0a339ce4cedd43c81c0b9108671a2523b4e1312bd546f26ad6a44e81fe7d5130d3a21c566626669244c152ea367ba8974aa3896a4fb31be8ab96f0ffaff -->",
+  "package_name": "Cifti2",
+  "closed_at": "2023-11-01T12:23:13Z",
+  "title": "New package: Cifti2 v0.1.0"
+}

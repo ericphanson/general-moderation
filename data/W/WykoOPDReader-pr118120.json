@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-10-26T08:26:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 118120,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86RZs89",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-26T08:39:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118120#issuecomment-2439434045",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RZ545",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, could you extend the documentation in the README a little bit more? It would probably be good for \"Wyko OPD profilometer datasets\" to be a link to some page that explains the format and gives some context. Please also explain what the type of `data` is that results from `readopd`, and what one might be able to do with that object.",
+      "createdAt": "2024-10-26T10:46:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118120#issuecomment-2439487033",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RcAal",
+      "author": {
+        "login": "jaakkor2"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thank you @goerz for taking the time to review new package entries.  Now I found Matlab script many by Veeco https://mtl.mit.edu/pipermail/labnetwork/attachments/20110711/1f04a0e6/attachment.ksh that seems be the best available description of the OPD format.  I added a link to that to README.md. Also, docstring for `readopd` had already a plotting example.  Hopefully these answers your concerns.",
+      "createdAt": "2024-10-27T14:07:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118120#issuecomment-2440038053",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RcCoO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/118158\r\n\r\nIn the future, please do not change the version number when addressing issues with the registration.\r\n\r\n> Hopefully these answers your concerns\r\n\r\nMy question was about the type of `data`. It seems like it might be `Dict`. You'll want to document that, and which keys the dict has, and what information the dict values contain.",
+      "createdAt": "2024-10-27T14:30:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118120#issuecomment-2440047118",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: WykoOPDReader\n- Repository: https://github.com/jaakkor2/WykoOPDReader.jl\n- Created by: @jaakkor2\n- Version: v0.1.2\n- Commit: a55c4c1d3c6400b43c9cdbf01b077e77279d6647\n- Reviewed by: @jaakkor2\n- Reference: https://github.com/jaakkor2/WykoOPDReader.jl/issues/1#issuecomment-2439430523\n- Description: Reader for Wyko datasets (.opd)\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359827e2910c76c236493a461a985ccc4cd42abdccf3dbc4701eebe8817f529bc3a70541053ecfc2e3782f31ab3c5609ef8d93a895d5fd858edc18c173c05cde78a67c7b1a21ca2b3fee6c782d8c0728093842fd8d8039d1feca16efeab24cd8fd7692afc5744de1d028d5f4048cddf584e7081ccd4ba56c8315ed0b70bf1fe2690a -->",
+  "package_name": "WykoOPDReader",
+  "closed_at": "2024-10-27T14:30:58Z",
+  "title": "New package: WykoOPDReader v0.1.2"
+}

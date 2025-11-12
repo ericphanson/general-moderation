@@ -1,0 +1,158 @@
+{
+  "created_at": "2024-10-02T04:41:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 116443,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86OUCS8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-02T04:46:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2387616956",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OUQdG",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi @sumant-28, this seems to be only your second attempt to register a package in the General registry. For this reason, and also because you asked on Slack about unit tests, let me leave a few comments about how you could (and probably should) improve your package to make it more suitable for registration in General:\r\n\r\n1) Reusability: The idea behind registering packages is generally to share some reusable functionality that could be useful to (parts of) the Julia community (i.e. a certain `function`, for example). Scripts are generally not suitable for the General registry. Your package has a `main` function that isn't customizable at all - i.e. it take any arguments - and thus falls into the script category. For example, for your code to work, the input XML file must be named `export.xml` and must be located in the current directory. Typically, you would want to relax these constraints and also give `main` a more meaningful name, i.e. you might want to provide a clean function `readxml(filename)` as API instead.\r\n2) Documentation: From reading your README, one has no clue how to use your package. You also have badges at the bottom that are supposed to point to documentation, but don't. At least a minimal \"Usage\" section would be nice.\r\n3) Unit Tests: You don't have any. I recommend that you create a `export.xml` with \"reasonable\" dummy content, load it in your `runtests.jl` and test that you get the expected output.\r\n4) Dependencies: Your are depending on Revise but don't seem to use it in your package.\r\n5) Compat bounds: You are missing compatibility bounds for the versions of your package's dependencies. (This is why auto-merge failed, see above).\r\n\r\nThere is probably more to say but these are the most important points. Note that not all of them are mandatory for the registration to go through - we have few **strict** requirements for packages - but I strongly recommend that you try to implement these suggestions.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-02T05:44:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2387674950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OmbTp",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi @sumat-28, did you see my comments above? Especially point 1) would be important to improve to make your package suitable for registration in General, at least in my opinion.",
+      "createdAt": "2024-10-03T22:20:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2392437993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OmhXR",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "With some minor fixes, this should be totally fine to register… but it is definitely not yet at the level of maturity required for a 1.0 version. So I would ask to change the version number to 0.1 in addition to considering some of the other comments",
+      "createdAt": "2024-10-03T22:42:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2392462801",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P3A3x",
+      "author": {
+        "login": "sumant-28"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @carstenbauer and @goerz . Thanks for your patience and bearing with me. I should note if it isn't obvious that I am trying my best and a lot of this is not easy for me\r\n\r\n1. I agree with your point about reusability. I have added some more functions and now describe two example use cases. One more simple and one less simple. Both use cases are informed by earlier examples of people cleaning the data for export into a form suitable for analytics. I think this fits the minimum requirement for a package because it is not running a script.\r\n2. I have added some docs using Documenter.jl. However something is not right because the pages are not rendering. Ideally I would have waited a bit longer and tried to troubleshoot before committing but I have already taken up too much time since your initial message and intend on addressing why the documentation is not working. I also intend to build up the pages with a write up and detailed instructions but I want to get on top of the earlier mentioned problem first.\r\n3. I have added the bare minimum unit test. I had some trouble figuring out how to include an XML file for the tests but now I think it is possible. I hope to build on this just like for the earlier bullet point.\r\n4. I need to look into this further but I find it tricky because I feel I need to use Revise.jl for the functionality in the package testing. I tried removing it but then my package wouldn't work properly on my machine. I haven't had the time to figure out how to be effective and efficient here.\r\n5. These have been added. I am following online tutorials. If they do not mention certain implementation details then it is easy for me to make these omissions \r\n\r\nI have changed the version to 0.1.0 from the previous 1.0.0. Similar to the earlier point I was simply following a YouTube video which decided to dev packages at that version number",
+      "createdAt": "2024-10-15T10:56:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2413563377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P3OL9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That package seems fine for initial registration with as `v0.1`. You can work on more tests and documentation as you continue to develop the package.\r\n\r\n>  I need to use Revise.jl \r\n\r\n`Revise` should never be a dependency of the actual project. At most, it should be a test-dependency, see https://github.com/sumant-28/AppleHealthParser.jl/pull/1\r\n\r\nActually, I recommend installing `Revise` only into your base environment (the environment that's active when you just run `julia` without any `--project` flag). Since environments in Julia are stacked, that allows you to run `using Revise` in any REPL, even when another project has been activated (like the test environment for `AppleHealthParser`).\r\n\r\n> I have added some docs using Documenter.jl. However something is not right because the pages are not rendering.\r\n\r\nI tried compiling them locally, with\r\n\r\n```\r\njulia --project=docs\r\n] dev .\r\ninclude(\"docs/make.jl\")\r\n```\r\n\r\nand they compile just fine. They also seem to build and get deployed in your CI runs: https://github.com/sumant-28/AppleHealthParser.jl/actions/runs/11344011507\r\n\r\nYou may still have to activate Github Pages for your projects in the [project settings](https://github.com/sumant-28/AppleHealthParser.jl/settings).\r\n\r\nI also assume you have set up the deploy keys as described in https://documenter.juliadocs.org/stable/man/hosting/. Note that that guide is a little bit out of date: when it is talking about Travis, that information applies pretty much equally to Github Pages.",
+      "createdAt": "2024-10-15T11:22:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2413617917",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ROkT9",
+      "author": {
+        "login": "sumant-28"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could you let me know what is outstanding for me to register the package? I have made some adjustments but some of the checks in the list above do not make a lot of sense to me. It is also not finished from my perspective but I thought it could be registered as a rough 0.1 anyway",
+      "createdAt": "2024-10-24T23:32:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2436515069",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RO3g6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, should be fine. Just re-do the registration. Since you changed the version number to 0.1, it will create a new PR, and I’ll close this one in favor of the new one.",
+      "createdAt": "2024-10-25T00:57:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2436593722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RPEdd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/118023",
+      "createdAt": "2024-10-25T01:51:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116443#issuecomment-2436646749",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AppleHealthParser\n- Repository: https://github.com/sumant-28/AppleHealthParser.jl\n- Created by: @sumant-28\n- Version: v1.0.0\n- Commit: fe833a153c69d32c91d15384a913a4b5ef656e77\n- Reviewed by: @sumant-28\n- Reference: https://github.com/sumant-28/AppleHealthParser.jl/commit/fe833a153c69d32c91d15384a913a4b5ef656e77#commitcomment-147469311\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b566c20d501665bea422f6804cddc93283f4c65ec21bc25c756fadefc7992af18b8529a41a8d029d79bdeb53614b61e964b961a771b7f81c44432a64b025a6b66caedc9606314c57327f703f8038d75ea3f35cee885d42a41f9aed5f5b39e277524ae6613809ca571e323fb9cb2d77d66ad89ad51db91f107e5dd7fade7a831c3d4cdfe386d07b8b63f92dff86c39ac5431e0f964f73372cc6544a4cae2b400e096730b91193fd9669ef2d44e8ae8427 -->",
+  "package_name": "AppleHealthParser",
+  "closed_at": "2024-10-25T01:51:26Z",
+  "title": "New package: AppleHealthParser v1.0.0"
+}

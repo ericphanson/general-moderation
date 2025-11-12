@@ -1,0 +1,201 @@
+{
+  "created_at": "2024-06-01T19:35:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 108073,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_xC8F",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Conda, Scratch\n- Package name similar to 1 existing package.\n  1. Similar to Roots. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-01T19:46:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143563525",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xIuk",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "automerge/decision complains the package name, `ROOT2`, is too similar to the existing `Roots` package. In my opinion, there is no confusion possible and the name is fine.\r\n\r\nThe name has been chosen after the name of the C++ framework [ROOT](https://root.cern/) to which this package provides Julia bindings. The suffix '2' is there to distinguish it from [`ROOT.jl`](https://github.com/JuliaHEP/ROOT.jl), an earlier attempt to interface to this framework which supports Julia 1.1.x to 1.3.x only, due to discontinuation of `Cxx.jl` development.  \r\n\r\nLet me know if we can keep this name or if we need to invent a new one.",
+      "createdAt": "2024-06-01T20:56:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143587236",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xJut",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Agreed on `Roots` not being a problem…\r\n\r\nBut it's unfortunate to have `ROOT2`. It would be much preferable if this could be a continuation of the existing `ROOT` package (a breaking release 0.3). If @jpata is no longer actively maintaining `ROOT`, maybe they can add you as a new maintainer, and this package can just replace the existing code.",
+      "createdAt": "2024-06-01T21:12:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143591341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xQCZ",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "Latest ROOT.jl development were done by @oschulz. \r\n\r\nThe two packages use different approaches and have their own limitations: one is limited to some old Julia releases and this other is limited to a subset of the c++ framework classes. If Cxx.jl development is eventually resumed and support to recent Julia release added, then the ROOT.jl limitation will vanish.\r\n\r\nSo I think we should keep both packages, but I will be happy to hear @oschulz and @jpata's views.",
+      "createdAt": "2024-06-01T22:46:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143617177",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xq2a",
+      "author": {
+        "login": "jpata"
+      },
+      "authorAssociation": "NONE",
+      "body": "ROOT2.jl looks to be using a conceptually similar approach as the original ROOT.jl based on wrappers. Therefore, it could make sense as a new version of the old package to not confuse the ecosystem too much.\n\nI'm not maintaining ROOT.jl and would be happy to give it over to a group that's interested in maintaining it.\n\nFYI @moelf",
+      "createdAt": "2024-06-02T07:07:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143727002",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xrRh",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@grasph, I would also vote for replacing the old ROOT.jl (originally created by @jpata and later maintained by me) instead of creating a ROOT2.jl. ROOT.jl was based on Cxx.jl, which has been non-functional on maintained Julia versions for a long time. @grasph I'm giving you full admin rights on the ROOT.jl repo.",
+      "createdAt": "2024-06-02T07:14:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143728737",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xr3s",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Note: ROOT.jl is currently not registered anymore (it was in pre-Pkg3-times), but for continuity reasons we may still want to label the new version v0.3.0 instead of going back to v0.1.0 (@giordano , do you have any preferences here?). @grasph , please feel free to completely replace the current contents of the ROOT.jl repo with your CxxWrap-based version.",
+      "createdAt": "2024-06-02T07:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143731180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xvog",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK. Then, I will move the code to the ROOT.jl repository, change the version to 0.3.0, and trigger a new PR from there. Thanks @goerz to have made the suggestion.",
+      "createdAt": "2024-06-02T08:18:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143746592",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_xvpX",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, maybe ROOT.jl is slightly better: since there's currently no registered ROOT.jl, ROOT2.jl looks a bit surprising to users.\r\n\r\n> automerge/decision complains the package name\r\n\r\nSide note, it's complaining also about many other things, like missing compat bounds.",
+      "createdAt": "2024-06-02T08:19:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143746647",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_yf3B",
+      "author": {
+        "login": "grasph"
+      },
+      "authorAssociation": "NONE",
+      "body": "Replaced by #108095.",
+      "createdAt": "2024-06-02T17:02:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108073#issuecomment-2143944129",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ROOT2\n- Repository: https://github.com/JuliaHEP/ROOT2\n- Created by: @grasph\n- Version: v0.1.0\n- Commit: 9169d44f3b8e8e2334449b679d0b5949500e5f04\n- Reviewed by: @grasph\n- Reference: https://github.com/JuliaHEP/ROOT2/issues/1#issuecomment-2143561234\n- Description: Interface to the ROOT analysis framewok\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nFirst release of the ex002-ROOT example of [WrapIt](https://github.com/grasph/wrapit) as a standalone package.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980c1ed000dc8bc8d813f4f3b3c3a3fdc35e7f8dbefde3547719ad28204b4b9d9a2130a8ef3b8ed4808883d3d58500d48eff4ede9774e333a06ee7110aabb1040f5353ded7d6044c4a2cdaead384de7f5bea7039e90aa2aa9822ae64e38e423a05ff6af3d445391b553a2ec2b105059321 -->",
+  "package_name": "ROOT2",
+  "closed_at": "2024-06-02T17:05:16Z",
+  "title": "New package: ROOT2 v0.1.0"
+}

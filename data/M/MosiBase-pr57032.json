@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-03-21T20:23:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 57032,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ACdWe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: StaticArrays\n- Package name similar to 1 existing package.\n  1. Similar to ModiaBase. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-21T20:27:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57032#issuecomment-1074386334",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ACzJO",
+      "author": {
+        "login": "sunoru"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have changed the package name to meet the distance requirement. Can anyone help me close this PR? Thanks.",
+      "createdAt": "2022-03-21T22:17:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57032#issuecomment-1074475598",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MosiBase\n- Repository: https://github.com/sunoru/MosiBase.jl\n- Created by: @sunoru\n- Version: v0.1.0\n- Commit: 638d6d62749fbeed9d5508ef6c3336a05a3d0b42\n- Reviewed by: @sunoru\n- Reference: https://github.com/sunoru/MosiBase.jl/commit/638d6d62749fbeed9d5508ef6c3336a05a3d0b42#commitcomment-69206313\n- Description: Some basic and utility functions for molecular simulation.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b8983cecf4fc69b618072012d1a311e910188c086bdc16ac6c57700191a5545e3cdeafd89dd5efd4f4a90bcb553110c7d7a66de8ebe82de2ecea9c124b782aa635d0b897ebbd73d58b49025c64bdfbeb331ee7b7d3be9da1f7cc3ebe02590cc70dbfac7f48b61f9a730949844a2cf0822ea9a650e60ae0595a584982bdaeb5a8f8e7287ed91076a3e77d35aa629030ec998e302688e0d4bd0a73af06fe06ed2508abb6f2d415ad58bfb5ee819e591363 -->",
+  "package_name": "MosiBase",
+  "closed_at": "2022-03-22T01:48:59Z",
+  "title": "New package: MosiBase v0.1.0"
+}

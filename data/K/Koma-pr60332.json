@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-05-16T13:29:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 60332,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85DNy-v",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Reexport\n- Package name similar to 3 existing packages.\n  1. Similar to CoDa. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Korg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Yota. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-16T13:40:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60332#issuecomment-1127690159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EAlBi",
+      "author": {
+        "login": "cncastillo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi! I think I fixed the [compat] problems. \r\n\r\nRegarding the name, could you please accept Koma as is :pray:? (with four letters). The package was previously named MRIsim but was too similar to other simulators' names. The name Koma was chosen to be unique, simple, and has a very specific meaning :).",
+      "createdAt": "2022-05-30T10:46:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60332#issuecomment-1141002338",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EYsio",
+      "author": {
+        "login": "cncastillo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Changed the name to KomaMRI. Please close this pull request :).",
+      "createdAt": "2022-06-06T11:02:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60332#issuecomment-1147324584",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Koma\n- Repository: https://github.com/cncastillo/Koma.jl\n- Created by: @cncastillo\n- Version: v0.6.0\n- Commit: 92f38ee03b8295944cac49dddba4151610657f45\n- Reviewed by: @cncastillo\n- Reference: https://github.com/cncastillo/Koma.jl/commit/92f38ee03b8295944cac49dddba4151610657f45#commitcomment-74896884\n- Description: Koma.jl is a framework to efficiently simulate Magnetic Resonance Imaging (MRI) acquisitions. The main focus of this package is to simulate general scenarios that could arise in pulse sequence development.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd662a41e1d9150a4daff03cd4adcf2248e4739e50f46fb48943410853b3c589a8f823d623b29701b4cfa10dc64b11090cf674f5395d81b4bb638f5990092e6bc42f0516c2b1f0f23a8dcae8e4b05f6b625f0d568502be1c5780492e83f89928f5a3063ae22d48991d91e97251aaf2907038670c6a980213271b7eaaeb8dc442fe009ea488b3cffbfbaf6628766d11eda6d1480d17a3eb9dc50d525c25923440d42fc638bfadeb4d66f78ba088f88beaf6f -->",
+  "package_name": "Koma",
+  "closed_at": "2022-06-11T00:13:01Z",
+  "title": "New package: Koma v0.6.0"
+}

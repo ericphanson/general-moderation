@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-03-29T20:35:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 103884,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8543HwS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- Package name similar to 5 existing packages.\n  1. Similar to TSne. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to TSVD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to TSML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Tar. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Strs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-29T20:39:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103884#issuecomment-2027715602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8543L-b",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Shouldn’t the package name be `TimeStrings`?",
+      "createdAt": "2024-03-29T21:00:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103884#issuecomment-2027732891",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858Idac",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-04-29T12:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103884#issuecomment-2082592412",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859ET87",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-05-07T12:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103884#issuecomment-2098282299",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TStr\n- Repository: https://github.com/GHTaarn/TStr.jl\n- Created by: @GHTaarn\n- Version: v0.1.0\n- Commit: 69ad6a43ab031f6087ef1162ce32551eb2ba2f7f\n- Reviewed by: @GHTaarn\n- Reference: https://github.com/GHTaarn/TStr.jl/commit/69ad6a43ab031f6087ef1162ce32551eb2ba2f7f#commitcomment-140384617\n- Description: String macros for creating time constants\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6aa6a6f88f46cf2322454274b02c23cfe88c1cab4f76c7b6225b89d829ca3be32096202c28e7e9bee74253ba8c80ae11e47ab59106598c35c9a3e8a6792207f291a3d9e5c439732436219133c64f6225d90291b0e6502758f22dbe81606c2ef557da10c1078b3bb728a1b95b9557ad331bf8a28b8fab20b8fc7d4e7c6909821d0af775c5b08509af85f6d47d212466a4d202f9c22afe7fb71f5692603f9cf9ba8 -->",
+  "package_name": "TStr",
+  "closed_at": "2024-05-07T12:23:00Z",
+  "title": "New package: TStr v0.1.0"
+}

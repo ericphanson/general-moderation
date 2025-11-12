@@ -1,0 +1,136 @@
+{
+  "created_at": "2021-02-24T19:54:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 30767,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NTMzNjQ4NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: KernelAbstractions, Oceananigans, julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-24T20:01:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-785336484",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NTQzNjM2NA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@tomchor thanks for your contribution!  Besides the issues mentioned above, that must be addressed, the package must have an OSI-approved license.  Also, it'd be good to have tests, the package doesn't seem to have any at the moment.",
+      "createdAt": "2021-02-24T22:49:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-785436364",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NTUzOTc5NA==",
+      "author": {
+        "login": "tomchor"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Thanks for the feedback! One of the packages it depends on (Oceananigans.jl) actually gets a new release very often. So having an upper bound to it may actually make it a big burden for me to maintain this package. I might just keep it as a github repo for until Oceananigans.jl gets a little more stable maybe.\r\n\r\nI'll definitely add the license though!",
+      "createdAt": "2021-02-25T02:58:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-785539794",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MDc5NzA0OQ==",
+      "author": {
+        "login": "tomchor"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano I believe I fixed everything that was keeping this registration from happening. Tests and a license were added and we put a compat entry.\r\n\r\nHow do I give this another shot?\r\n\r\nThanks!",
+      "createdAt": "2021-03-04T17:36:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-790797049",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MDkzMzQzMw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just trigger registration again, like what you did before, without changing the version number: this will simply update this pull request ",
+      "createdAt": "2021-03-04T20:52:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-790933433",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MDk2MzcwMA==",
+      "author": {
+        "login": "tomchor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks. I did it again but I had since bumped the version so it opened a new PR [here](https://github.com/JuliaRegistries/General/pull/31318).",
+      "createdAt": "2021-03-04T21:38:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-790963700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MDk2NTQwMA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's exactly why I told you to not change the version number :slightly_smiling_face: ",
+      "createdAt": "2021-03-04T21:41:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-790965400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5MDk2NzA5Mg==",
+      "author": {
+        "login": "tomchor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, sorry! \r\n\r\nI had already changed it over the past week! Since another package was using a specific version as a dependency I couldn't change back to the original version...",
+      "createdAt": "2021-03-04T21:44:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30767#issuecomment-790967092",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Oceanostics\n- Repository: https://github.com/tomchor/Oceanostics.jl\n- Created by: @tomchor\n- Version: v0.1.0\n- Commit: aff7c301bb0186dd267a32dc4434fb2152ef9f92\n- Git reference: main",
+  "package_name": "Oceanostics",
+  "closed_at": "2021-03-04T21:41:49Z",
+  "title": "New package: Oceanostics v0.1.0"
+}

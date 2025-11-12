@@ -1,0 +1,180 @@
+{
+  "created_at": "2024-04-26T16:13:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105677,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8579avh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: HTTP, JSON, Serde, URIs\n- Package name similar to 2 existing packages.\n  1. Similar to XSteam. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Stan. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-26T16:17:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2079697889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857-f1j",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\"Steam\" is a trademarked name, so I'm not sure it should be used as a package name",
+      "createdAt": "2024-04-26T19:12:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2079980899",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857_yla",
+      "author": {
+        "login": "NeroBlackstone"
+      },
+      "authorAssociation": "NONE",
+      "body": "> \"Steam\" is a trademarked name, to I'm not sure it should be used as a package name\n\nBut... There is a Spotify.jl\nhttps://github.com/kwehmeyer/Spotify.jl",
+      "createdAt": "2024-04-27T02:08:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080319834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858ACFv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’m not a lawyer, but Spotify.jl seems unwise to me as well.\r\n\r\nI would maybe recommend `SteamWebAPIs.jl` with subpackages `ISteamNews` etc, following https://steamcommunity.com/dev. That’s assuming you are planning to implement the other APIs as well. Otherwise, just `ISteamNews.jl`",
+      "createdAt": "2024-04-27T06:17:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080383343",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858ACF8",
+      "author": {
+        "login": "longemen3000"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[no-block]\r\nIt would be if the package would offer a similar service than the steam marketplace, but in this case seems OK (I mean, as a chemical engineer, steam is just hot water, and valve is just an accessory to restrict and control flows)",
+      "createdAt": "2024-04-27T06:17:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080383356",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858AC0s",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Just to be clear: the trademark issue is not a particular strong objection to this package. I really have no idea what is considered permissible in different jurisdictions. That's between you, your lawyer, and Valve's lawyers. Personally, I wouldn't take the risk of a package name that directly matches a trademark.\r\n\r\nBut I also don't think that `Steam` is a particularly descriptive name for this package. Not only is it unclear how exactly it relates to Steam the gaming platform, it could also relate to \"steam\" in an engineering context (like that `XSteam` package that this has a naming conflict with). Hence, my suggestion for `SteamWebAPIs`, which makes it much clearer that this package is for talking to Steam's Web API.",
+      "createdAt": "2024-04-27T06:29:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080386348",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858AVVq",
+      "author": {
+        "login": "NeroBlackstone"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your review. I have changed the package name to `SteamWebAPIs.jl` and added more functions.\r\n\r\nShould I open a new pull request?",
+      "createdAt": "2024-04-27T11:39:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080462186",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858Be-U",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, just redo the registration, the same way as the original one",
+      "createdAt": "2024-04-27T14:17:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080763796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858CRCo",
+      "author": {
+        "login": "NeroBlackstone"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yes, just redo the registration, the same way as the original one\r\n\r\nThank you very much, I have opened another PR.\r\nYou may want to close this one.",
+      "createdAt": "2024-04-27T16:00:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2080968872",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858CrgO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/105728",
+      "createdAt": "2024-04-27T16:49:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105677#issuecomment-2081077262",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Steam\n- Repository: https://github.com/NeroBlackstone/Steam.jl\n- Created by: @NeroBlackstone\n- Version: v0.1.0\n- Commit: 790f6453f1762b0737dc89b6a2ae96fe290e999c\n- Reviewed by: @NeroBlackstone\n- Reference: https://github.com/NeroBlackstone/Steam.jl/issues/1#issuecomment-2079692441\n- Description: (WIP) Steam Web API wrapper for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b46b1695ee5818b1a2e2f2e04c28d439b384c9c9ef18ab44aebc92b6cc1ba7878fa2a4248308fce20acdbc920d99c952cf9780bbd91654c2513f6b3e2dedcd2cf39e59cdc49dc43d5e2e933d8c0a934ad7e55ad31623142f158e53517cd5cb7df27e39dec7bcea9dbbe86662c146eff5fb1b003c12ca28f11b90ec8c9f2ffd15 -->",
+  "package_name": "Steam",
+  "closed_at": "2024-04-27T16:49:32Z",
+  "title": "New package: Steam v0.1.0"
+}

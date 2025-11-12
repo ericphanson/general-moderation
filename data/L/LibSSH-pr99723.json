@@ -1,0 +1,252 @@
+{
+  "created_at": "2024-01-28T20:12:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 99723,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85yEOSp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to LibPSF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-28T20:16:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913709737",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEPuS",
+      "author": {
+        "login": "JamesWrigley"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nI would like to keep the name because this is a wrapper around a C library of the same name, and I think it's unlikely to be confused with LibPSF.",
+      "createdAt": "2024-01-28T20:39:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913715602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yESzJ",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nThe name similarity is fine but you want to edit your comment to include `[noblock]` so the registration PR is not blocked by your comment.",
+      "createdAt": "2024-01-28T21:31:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913728201",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEUQy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I have no fundamental objections to this package, but the name `LibSSH` implies a certain level of authoritativeness. Generally, I would put packages with a general name like that under a little bit more scrutiny, especially for something as high-profile as SSH. Looking at the documentation, this package already seems to be in pretty good shape, and to have the potential of living up to the expectations of being an \"authoritative\" package.\r\n\r\nThe one thing that I might be concerned about is having this package registered under a personal account. I'd feel much better if this was hosted by an existing organization with multiple owners (and owners that are close to the core Julia development team). [JuliaCrypto](https://github.com/JuliaCrypto) or [JuliaWeb](https://github.com/JuliaWeb) would both seem suitable. This would help in ensuring that the package does not become unmaintained, and lend a certain level of trust. Given how critical SSH is to the security of the internet, I'd be very cautious about adding an SSH implementation from an \"unknown\" source to any project.\r\n\r\nThis is not a strong objection, and certainly not a blocker to merging, since looking up @JamesWrigley's background would quickly pass my \"trustworthiness\" meter, but still.\r\n\r\n[noblock]",
+      "createdAt": "2024-01-28T21:55:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913734194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEXnJ",
+      "author": {
+        "login": "JamesWrigley"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nSure, moving it to an organization is fine with me. Maybe JuliaWeb? I don't know anyone from either organization though so I would need some help to move it :) And I would like to keep commit privs on the repo.",
+      "createdAt": "2024-01-28T22:50:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913747913",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEZiG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, you'll definitely need help from an admin (\"owner\") in one of those organizations (maybe @fredrikekre; I'm not a member of either so I can't see who has owner status). First, they have to add you to the organization as a member. Then, you have to transfer the repo to that organization (in the \"danger zone\" of your repo settings). And lastly, they have to give you back admin permissions just on that particular repo (you'd think the transfer would keep you as an admin, but it doesn't). Once you have your admin-status back for the repo, there shouldn't really be any difference for you compared to when it was hosted under your personal account. You'll still be the maintainer, and you can commit to it, manage PRs, make releases, etc., as you wish. The only difference is that if you get hit by a bus, or you suddenly get blackmailed into adding a backdoor into the code, the org admins could step in and give other people maintainer access as well.\r\n\r\n[noblock]",
+      "createdAt": "2024-01-28T23:19:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913755782",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEiRL",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm happy to facilitate moving the package to the JuliaWeb organization. In the past, the easiest route is for the repo owner (@JamesWrigley ) to add me as an admin for the personal repo and I can make the transfer, ensuring he maintains admin status over the repo once it's moved over.\r\n\r\nOnce I receive and invite as repo admin, I'll make the transfer and report back here.\r\n[noblock]",
+      "createdAt": "2024-01-29T00:53:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913791563",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEkeC",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ok, I was mistaken. There isn't a way for @JamesWrigley to add me as an admin to the personal repository. Instead, it sounds like the easiest way is for @JamesWrigley to initiate a transfer of the repository to my personal account (@quinnj), and then I can transfer to JuliaWeb (and then add @JamesWrigley as an admin).\r\n[noblock]",
+      "createdAt": "2024-01-29T01:10:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1913800578",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yGSv3",
+      "author": {
+        "login": "JamesWrigley"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nThanks @quinnj :heart: I just sent a transfer request. Am I correct in thinking that once it's moved to JuliaWeb I'll need to close this PR and request registration again?",
+      "createdAt": "2024-01-29T09:05:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1914252279",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yIdIV",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nI believe you can make a new registration request after the move and it will update this same PR (which should only make changes to the repo address).\r\n\r\nEdit: I no longer believe that. If either of name, uuid, version, or repo url changes, Registrator will use a different branch and create a new PR.",
+      "createdAt": "2024-01-29T14:34:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1914819093",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yIvLu",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nOk, the repo has been transferred to JuliaWeb and I believe @JamesWrigley should still have admin permissions. Let me know if there's anything else I need to do on my end.",
+      "createdAt": "2024-01-29T15:10:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1914893038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yI5ee",
+      "author": {
+        "login": "JamesWrigley"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yep, looks good :+1: I'll update a couple of links in the docs and then register it again.",
+      "createdAt": "2024-01-29T15:29:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1914935198",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yJA4r",
+      "author": {
+        "login": "JamesWrigley"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Superseded by https://github.com/JuliaRegistries/General/pull/99760, this PR can be closed now.",
+      "createdAt": "2024-01-29T15:42:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99723#issuecomment-1914965547",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LibSSH\n- Repository: https://github.com/JamesWrigley/LibSSH.jl\n- Created by: @JamesWrigley\n- Version: v0.1.0\n- Commit: 3c51f30cc04ffa38a3962543618bab207f29b1e7\n- Reviewed by: @JamesWrigley\n- Reference: https://github.com/JamesWrigley/LibSSH.jl/commit/3c51f30cc04ffa38a3962543618bab207f29b1e7#commitcomment-137955557\n- Description: A Julia wrapper for libssh.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd698fa1ea57539ac4fd4e5de0db1cd9bb23f632384294b19fff5007c207a220ed40c9f8f264b31206ccf11cb63437bb27c36317787640168ca0371ffc09bcf522c3fc2ce6f071c9db8b60d94b421fe0cf97e8ed10632a32a2a52f5162d8b911785cac349dea0c89facfad00df19b081c459cc263fba2d65a05b179c6420af35c4ef5b554e19dfc8b639574aadf6ca6ceebbe6dd573b2793e64ffb114b9c19ba49c582fccd5679f093fbf2a675882163f2d -->",
+  "package_name": "LibSSH",
+  "closed_at": "2024-01-29T15:43:29Z",
+  "title": "New package: LibSSH v0.1.0"
+}

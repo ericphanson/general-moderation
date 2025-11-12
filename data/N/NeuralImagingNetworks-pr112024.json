@@ -1,0 +1,61 @@
+{
+  "created_at": "2024-07-30T12:01:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 112024,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86GmT5c",
+      "author": {
+        "login": "atsanda"
+      },
+      "authorAssociation": "NONE",
+      "body": "please, close this one, w/o merging\r\nforgot to update the version, sorry",
+      "createdAt": "2024-07-30T12:05:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112024#issuecomment-2258189916",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86GmU_p",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CUDA, Distributions, Flux, JLD2, MLUtils\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-30T12:08:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112024#issuecomment-2258194409",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86GmnNX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@atsanda Thank you for submitting your package! I just wanted to mention that when fixing automerge issues, it is best not to touch the version number. That way, it will update the existing PR instead of creating a new one.\r\n\r\nApart from that, though, the package doesn't seem quite ready for registration yet, as it is still missing documentation. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), you would need a description of the package's purpose and a small usage example in the README",
+      "createdAt": "2024-07-30T12:47:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112024#issuecomment-2258269015",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NeuralImagingNetworks\n- Repository: https://github.com/JuliaImageRecon/NeuralImagingNetworks.jl\n- Created by: @atsanda\n- Version: v0.1.1\n- Commit: caa3cc673af0e383cd5fe95072fb13d6affd4e97\n- Reviewed by: @atsanda\n- Reference: https://github.com/JuliaImageRecon/NeuralImagingNetworks.jl/commit/caa3cc673af0e383cd5fe95072fb13d6affd4e97#commitcomment-144804322\n- Description: Julia package collecting neural network components for imaging applications\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64fa5e3a3186af8dca9cd2f1a58bd43f5e14f47e60e685d14c3dfe6da755a5986ba946ead05127409cacf2ca8677ffffc42e6163a1a017c34b8a11a5feff6b7742a05784aa1771abd19a4f67eb5e895c31c80d0a25ff25d84534ca4f295db2a6837e5294f97435609c3b11e8b4a587b6294ea455bcfd447b79731799f9e831db6f2f01385b2da479e616e7687cf7c73059608665cfcb3890f6d4d636d8e4b462990eda4c5fa40fbd29eadceee5abbf14fd2b6650ab6348cc537b3f00d205eb21d -->",
+  "package_name": "NeuralImagingNetworks",
+  "closed_at": "2024-07-30T12:32:29Z",
+  "title": "New package: NeuralImagingNetworks v0.1.1"
+}

@@ -1,0 +1,121 @@
+{
+  "created_at": "2021-09-17T01:36:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 45049,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8426y7s",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: TensorOperations, Zygote\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-09-17T01:41:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921382636",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8427-W5",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "https://github.com/chengzhengqian/VecDiff.jl/blob/6c1e3f3d8fd4ccf7aaab463965df63963c2f5361/src/VecDiff.jl#L716\r\n\r\nhmm. Is the vector subtraction not being handled in Zygote/Diffractor that we need a package for this?",
+      "createdAt": "2021-09-17T10:32:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921691577",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8428D9W",
+      "author": {
+        "login": "chengzhengqian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the question.\nThe basic provided (up to second order right now) a forward mode for\nfunction  R^N->R^M.\nmeaning, for example, y=f(x1,x2,x3,x4), where y, x1,x2,x3, are all vectors\nwith different sizes, the library could yields\n\\partial y/\\partial x1  as the first order (a matrix)\n\\partial y^2/\\partial x1/partial x2 as second-order (a 3-rank tensor) and\nothers.\nIn each step, it uses Zygote (backward mode) for general operation and uses\nhard-coded rules for simple operation.\nIn this sense, it is a mixed-mode auto differentiation. (i.e., globally\nforward and backward to each function operation)\nThe reason why I write this library is for a very special. The\nfunctionality, of course, can be implemented in Zygote easily (that is what\nI do first). But the problem for me is that the function I try to\ndifferentiate contained a very long list of operations (form Feynman\ndiagrams if you want to know, 10000 up), it simply impossible to perform\nZygote's source to source differentiation. (Part of the reason may be llvm\noverkill optimization too), as the scaling of Zygote (include llvm) in\nterms of source code length is far from O(N), (maybe O(N^3)?)\nLuckily, these operations are of simple categories, so I use Zygote for\neach step and use forward mode to combine them.\nTo get a feeling of what I say, try the following in Zygote (just to show\nthe idea)\nfunction f(x1,x2,x3,x4)\n  t1=x1+x2\n  t2=t1+x1\n  t3=t1+t2*x1\n.... (100000 similar simple expressions)\n  t100000=t9999+t1001+t1231+..\n  return t100000\nend\nxi and ti are small vectors for example\nI am pretty sure this will be out of memory for Zygote to actually perform\nthe differentiation.\n(For the simple case, the Zygote indeed has a performance lead than this\napproach, but the first time run is much longer for Zygote than this\napproach )\n\n\n\n\n\n\nOn Fri, Sep 17, 2021 at 6:33 AM Jerry Ling ***@***.***> wrote:\n\n>\n> https://github.com/chengzhengqian/VecDiff.jl/blob/6c1e3f3d8fd4ccf7aaab463965df63963c2f5361/src/VecDiff.jl#L716\n>\n> hmm. Is the vector subtraction not being handled in Zygote/Diffractor that\n> we need a package for this?\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921691577>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AIDKOKXHF3GUFJ6AE7BN5I3UCMKOJANCNFSM5EF6QO3Q>\n> .\n> Triage notifications on the go with GitHub Mobile for iOS\n> <https://apps.apple.com/app/apple-store/id1477376905?ct=notification-email&mt=8&pt=524675>\n> or Android\n> <https://play.google.com/store/apps/details?id=com.github.android&referrer=utm_campaign%3Dnotification-email%26utm_medium%3Demail%26utm_source%3Dgithub>.\n>\n>\n\n\n-- \nZhengqian Cheng\nColumbia University\n",
+      "createdAt": "2021-09-17T11:15:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921714518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8428E6G",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">I write this library is for a very special. The\r\nfunctionality, of course, can be implemented in Zygote easily (that is what\r\nI do first). But the problem for me is that the function I try to\r\ndifferentiate contained a very long list of operations (from Feynman\r\ndiagrams if you want to know, 10000 up\r\n\r\nif this is domain-specific (phenomenology? condense matter?), maybe you can make the package name more suggestive of the domain. Vector differentiation sounds like a very general operation that should be supported in many AD frameworks.\r\n\r\n[noblock]",
+      "createdAt": "2021-09-17T11:22:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921718406",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8428IMg",
+      "author": {
+        "login": "chengzhengqian"
+      },
+      "authorAssociation": "NONE",
+      "body": "The problem I try to solve comes from condensed matter, but the nature of\nthe problem is generic. i.e, we want to differentiation a long generic\nfunction consisted of basic vector operations ( but not limits to\ntrivial ones, for example, one can interpret a vector as a matrix, and\nperform as matrix inverse, and thus yields highly non-trivial vector to\nvector function).\nThe code (leveraged by Zygote) can perform a generic vector-to-vector\noperation (one can flatten matrix and tensor to vector, thus the vector is\ngeneric in this sense).\nThe main merit is that we use a mixed-mode, i.e perform forward mode\nglobally to ensure the cost is O(N), and locally use backward mode to allow\narbitrary operation can be differentiated (one can add the support for\nother AD libraries too), thus allowing for very long code to get\ndifferentiated with reasonable speed.\nI feel it is hard to capture this point in the package name. Maybe\nMixedModeDiff? (but I still like VecDiff as it indeed tries to\ndifferentiate general vector to vector map, as contrast the standard in ML\nas a vector to scalar.)\n\n\nOn Fri, Sep 17, 2021 at 7:22 AM Jerry Ling ***@***.***> wrote:\n\n> I write this library is for a very special. The\n> functionality, of course, can be implemented in Zygote easily (that is what\n> I do first). But the problem for me is that the function I try to\n> differentiate contained a very long list of operations (from Feynman\n> diagrams if you want to know, 10000 up\n>\n> if this is domain-specific (phenomenology? condense matter?), maybe you\n> can make the package name more suggestive of the domain. Vector\n> differentiation sounds like a very general operation that should be\n> supported in many AD frameworks.\n>\n> [noblock]\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921718406>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AIDKOKS4MU5Q2GPQJTAO46LUCMQGPANCNFSM5EF6QO3Q>\n> .\n> Triage notifications on the go with GitHub Mobile for iOS\n> <https://apps.apple.com/app/apple-store/id1477376905?ct=notification-email&mt=8&pt=524675>\n> or Android\n> <https://play.google.com/store/apps/details?id=com.github.android&referrer=utm_campaign%3Dnotification-email%26utm_medium%3Demail%26utm_source%3Dgithub>.\n>\n>\n\n\n-- \nZhengqian Cheng\nColumbia University\n",
+      "createdAt": "2021-09-17T11:44:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-921731872",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844VULO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-10-17T12:41:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-945111758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844pLcQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-10-24T12:42:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/45049#issuecomment-950318864",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: VecDiff\n- Repository: https://github.com/chengzhengqian/VecDiff.jl\n- Created by: @chengzhengqian\n- Version: v0.1.0\n- Commit: 6c1e3f3d8fd4ccf7aaab463965df63963c2f5361\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> the automatic forward differentiation for vector-based function\n<!-- END RELEASE NOTES -->",
+  "package_name": "VecDiff",
+  "closed_at": "2021-10-24T12:42:50Z",
+  "title": "New package: VecDiff v0.1.0"
+}

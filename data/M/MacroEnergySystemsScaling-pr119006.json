@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-11-08T20:35:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 119006,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86S99_K",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: JuMP, MathOptInterface, OrderedCollections\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-08T20:43:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119006#issuecomment-2465718218",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S-UoJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/119010\r\n\r\nPlease do not change the version number when addressing automerge issues. By keeping the version number the same, it will update the existing registration instead of creating a new one.",
+      "createdAt": "2024-11-08T21:55:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119006#issuecomment-2465810953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S-bqS",
+      "author": {
+        "login": "RuaridhMacd"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks very much. Registrator retuned this error when I tried to use the old version number:\r\n\r\n_Error while trying to register: \"Tag with name v0.0.1 already exists and points to a different commit\"_\r\n\r\nhttps://github.com/macroenergy/MacroEnergySystemsScaling.jl/commit/aa72d75c3785d9536438d67f06fb55bffc1acd88",
+      "createdAt": "2024-11-08T22:19:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119006#issuecomment-2465839762",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S-e9O",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's because you should not be tagging manually. Tags are created by [TagBot](https://github.com/JuliaRegistries/TagBot) automatically *after* the registration for a new version is merged into the Registry",
+      "createdAt": "2024-11-08T22:34:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119006#issuecomment-2465853262",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S-net",
+      "author": {
+        "login": "RuaridhMacd"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see. Thanks very much!",
+      "createdAt": "2024-11-08T23:16:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119006#issuecomment-2465888173",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MacroEnergySystemsScaling\n- Repository: https://github.com/macroenergy/MacroEnergySystemsScaling.jl\n- Created by: @RuaridhMacd\n- Version: v0.0.1\n- Commit: dfcb05ababec2676b34e26bc2c81821dcb53f3b3\n- Reviewed by: @RuaridhMacd\n- Reference: https://github.com/macroenergy/MacroEnergySystemsScaling.jl/commit/dfcb05ababec2676b34e26bc2c81821dcb53f3b3#commitcomment-148894595\n- Description: Package to rescale and improve the numerical stability of JuMP-based optimization models\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68f7d84dae65c06e2736fde87ceb50be6d4673504af15a2d0010c0907be4a85677226e61df1ac15be372f04acfa81e42fdae467b233e99e4a99475d197e18d5cf256500a5b38a74b97bc242b949e62a465fdda153dcdf27e64f34dc782ca8a9cbf6bca164dc5b89ccfc0f4b5a56b624c4af189b866c871049ad237d85483c63af89596953cba8853d64de4a3777e886d15d25316412056aac9b915b28961061e64068e97750808cb143bff8a64f7ba1ebf6e067412a451031e35712e1d296dc9f -->",
+  "package_name": "MacroEnergySystemsScaling",
+  "closed_at": "2024-11-08T21:55:54Z",
+  "title": "New package: MacroEnergySystemsScaling v0.0.1"
+}

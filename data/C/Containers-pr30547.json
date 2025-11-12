@@ -1,0 +1,151 @@
+{
+  "created_at": "2021-02-21T18:10:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 30547,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MjkwMDIyMw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-21T18:12:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-782900223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDAzMzcyMg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps `DataContainers` would be a more suitable/specific name? That is how you describe it in the README after all. `Containers` can mean a lot of different things, and for example I assumed it was similar or connected to (Docker) containers or the like.",
+      "createdAt": "2021-02-23T09:29:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784033722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDA0MTQwNA==",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre  This is a good idea, thanks for the suggestion. What is the best way to change the name of a package during this submission process?",
+      "createdAt": "2021-02-23T09:43:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784041404",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDA0MjkwNQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General/blob/master/README.md#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2021-02-23T09:46:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784042905",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDA1NzIwMg==",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre OK that's simple.  What do you think of `DataBags` for the name?  This is a bit shorter than `DataContainers` and is more like the name `Bags` that I would initially like to take.  BTW I have checked with `AutoMerge.meets_distance_check` that this name is not too close to any other package name.",
+      "createdAt": "2021-02-23T10:06:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784057202",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDA5NzU2Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure. I don't think `DataContainers` is very long though (it would be a pretty medium name, see below) but it is your package.\r\n\r\n```\r\njulia> histogram(map(length, names))\r\n                ┌                                        ┐ \r\n   [ 0.0,  5.0) ┤▇▇▇▇▇ 256                                 \r\n   [ 5.0, 10.0) ┤▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 1669   \r\n   [10.0, 15.0) ┤▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 1667   \r\n   [15.0, 20.0) ┤▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 995                  \r\n   [20.0, 25.0) ┤▇▇▇▇▇▇▇▇ 374                              \r\n   [25.0, 30.0) ┤▇▇ 115                                    \r\n   [30.0, 35.0) ┤ 24                                       \r\n   [35.0, 40.0) ┤ 9                                        \r\n   [40.0, 45.0) ┤ 1                                        \r\n   [45.0, 50.0) ┤ 1                                        \r\n                └                                        ┘ \r\n                                Frequency\r\n```",
+      "createdAt": "2021-02-23T10:26:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784097567",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDIwOTk2NQ==",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "OK that's done. Shall I re-submit to JuliaRegistrator? This is not indicated in https://github.com/JuliaRegistries/General/blob/master/README.md#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2021-02-23T13:39:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784209965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDIxMTM5OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes",
+      "createdAt": "2021-02-23T13:42:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784211398",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDIxMjQ0MQ==",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre I'll do that right now. Many thanks for your help!",
+      "createdAt": "2021-02-23T13:44:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30547#issuecomment-784212441",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Containers\n- Repository: https://github.com/emmt/Containers.jl\n- Created by: @emmt\n- Version: v0.1.0\n- Commit: 918e820215be19436d7b312857c69ed2ea0e41ee\n- Git reference: master",
+  "package_name": "Containers",
+  "closed_at": "2021-02-23T13:46:08Z",
+  "title": "New package: Containers v0.1.0"
+}

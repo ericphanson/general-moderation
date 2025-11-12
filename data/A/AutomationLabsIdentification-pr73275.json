@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-12-01T19:38:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 73275,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85PiDTk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CUDA, DataFrames, DiffEqFlux, DifferentialEquations, Flux, FluxOptTools, MLJ, MLJFlux, MLJMultivariateStatsInterface, MLJParticleSwarmOptimization, MLUtils, MultivariateStats, Optim, ProgressMeter, StableRNGs, StatsBase\n- I was not able to load the package (i.e. `import AutomationLabsIdentification` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-01T19:57:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73275#issuecomment-1334326500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Pi8x2",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@bienpierre\r\nplease see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-12-01T23:07:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73275#issuecomment-1334561910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85QARqY",
+      "author": {
+        "login": "cscontrol"
+      },
+      "authorAssociation": "NONE",
+      "body": "\r\nIt can be closed, because the it has opened a new one:\r\nhttps://github.com/JuliaRegistries/General/pull/73331\r\n\r\n[noblock]",
+      "createdAt": "2022-12-08T08:16:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/73275#issuecomment-1342249624",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AutomationLabsIdentification\n- Repository: https://github.com/AutomationLabs-sh/AutomationLabsIdentification.jl\n- Created by: @bienpierre\n- Version: v0.1.0\n- Commit: b0bbd29f9937d872e8f081b061268fa56730888c\n- Reviewed by: @bienpierre\n- Reference: https://github.com/AutomationLabs-sh/AutomationLabsIdentification.jl/issues/1#issuecomment-1334277990\n- Description: Dynamical systems identification\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835988a2ceda180e4e34ed75a3067b7a1c340bff12ec63e5febc0a394397dd33856217e5d294aaebb7b364ac62bfac50b049bffbaf9a7f42183c8a0dee90bf8e3a3ffced857d698a76df54f43be10ad4a4c3a6a359996380550e82cf5066b4160b46e2e4178210ea35b3b6e8c4cb316899f6e8b93ca56af2895c2ea5ab85c7ef002ff0e82abe04f1028741702631cb4c2ac9f -->",
+  "package_name": "AutomationLabsIdentification",
+  "closed_at": "2022-12-08T09:22:43Z",
+  "title": "New package: AutomationLabsIdentification v0.1.0"
+}

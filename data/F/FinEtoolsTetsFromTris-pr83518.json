@@ -1,0 +1,136 @@
+{
+  "created_at": "2023-05-13T15:09:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 83518,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cMJFE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-13T15:16:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1546686788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cNDXo",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Should this really be it's own package. It feels like you are going to need a combinatorial number of packages to get coverage. ",
+      "createdAt": "2023-05-14T15:31:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1546925544",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cNDiY",
+      "author": {
+        "login": "PetrKryslUCSD"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry: Coverage of what? I'm afraid I don't understand your point. Could you elaborate please?",
+      "createdAt": "2023-05-14T15:34:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1546926232",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cNEII",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I meant to go from lines to tri/quad mesh and quads to cube mesh for example. \r\n\r\nOut of curiosity, what role does FinEtools play here at all? It seems it only wraps the output arrays in some FinEtools specific types but couldn't that be done att the call site and then you can get rid of the dependency? ",
+      "createdAt": "2023-05-14T15:47:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1546928648",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cNX_W",
+      "author": {
+        "login": "PetrKryslUCSD"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't have any intention of making more of these packages. I think you misunderstand its purpose.\r\nIt is used purely as a front for tet generation for FinEtools. True, it could be made more general by pulling out the FinEtools-specific references, but then at the call site a lot more would have to happen. And then that would need to be packaged. This seems to me the path of least resistance, but I'm open to suggestions.",
+      "createdAt": "2023-05-14T21:57:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1547010006",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85casqz",
+      "author": {
+        "login": "PetrKryslUCSD"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]",
+      "createdAt": "2023-05-17T00:00:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1550502579",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fC5Ux",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-06-16T12:23:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1594594609",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fnkeH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-06-23T12:23:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83518#issuecomment-1604208519",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FinEtoolsTetsFromTris\n- Repository: https://github.com/PetrKryslUCSD/FinEtoolsTetsFromTris.jl\n- Created by: @PetrKryslUCSD\n- Version: v0.1.0\n- Commit: 9033946cc4d78e2842278bb7426720154ba7e91a\n- Reviewed by: @PetrKryslUCSD\n- Reference: https://github.com/PetrKryslUCSD/FinEtoolsTetsFromTris.jl/commit/9033946cc4d78e2842278bb7426720154ba7e91a#commitcomment-113275500\n- Description: Fill volume bounded by FinEtools triangle mesh with tetrahedra.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63ca35da94b457c1276323a530124b51d0f59260e4fa891f76dbd4e8d126185e47a162831f22df0823c0825f34972f33e277c3ee2a9e9114626490c8ff1f4c9110637ef9fe436625d494c7fbcf0fcc9cc0a28467dbd736e1293b91ec19628050f6aed5dad8b4899b5355e805193187706c6ad2d0b6cf9e6fc2ac6c39b8da749f5bf1810fd437751b0bf30451f2c2c025bee3c0564a240b807f1a031a936d2c4f0d2f09b9970c295d3fdf3430a0c60456243383099d05c16fe61fb061e8489771f -->",
+  "package_name": "FinEtoolsTetsFromTris",
+  "closed_at": "2023-06-23T12:23:57Z",
+  "title": "New package: FinEtoolsTetsFromTris v0.1.0"
+}

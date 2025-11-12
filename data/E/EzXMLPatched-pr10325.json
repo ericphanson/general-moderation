@@ -1,0 +1,267 @@
+{
+  "created_at": "2020-02-29T21:44:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "KristofferC",
+  "merged_at": null,
+  "pr_number": 10325,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5Mjk5NzkzNA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-02-29T21:47:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-592997934",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzAwMTA5OQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@KristofferC does this address all of your concerns in https://github.com/JuliaRegistries/General/pull/10277#issuecomment-592917565?",
+      "createdAt": "2020-02-29T22:29:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593001099",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA1MjIwNw==",
+      "author": {
+        "login": "felipenoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've been following the work of @bicycle1885 for around 2 years since I needed a package to handle XML files. I would argue that you have the right to create a fork of `EzXML.jl` since it is licensed under MIT License. But when it comes to register in the General registry, I would say I see a red flag here:\r\n\r\n* you claim in #10277 that bicycle1885 *may not want to maintain the package anymore*. But he has been looking at your issue (https://github.com/bicycle1885/EzXML.jl/pull/125) and even sent the correction upstream (https://github.com/JuliaLang/julia/pull/34941).\r\n\r\n* you created a fork with a broken CI. This makes me feel that maybe bicycle1885 is doing a better job in maintaining a community package.\r\n\r\n* you're really registering this for the wrong reason: you just disagree with bicycle1885 that it is Ok to show Ptr addresses in a `show` method.\r\n\r\nIn my opinion, this is the case for a fork: just fork the package, patch it as you please, and use it.\r\nBut it is not the case for registering a new package in the registry.",
+      "createdAt": "2020-03-01T04:26:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593052207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA1MzM5MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> In my opinion, this is the case for a fork: just fork the package, patch it as you please, and use it.\r\n\r\nJust to expand on this answer: You can make your own forks of packages (assuming that they have open-source licenses) and use your forks without needing to register your forks or maintain a registry. Simply use the `Manifest.toml` file to specify the forks and branches that you want to use, and then check your `Manifest.toml` file into source control. (You will need to make sure that you do not have any entries in your `.gitignore` file that match `Manifest.toml`.)\r\n\r\nFor example, you can take a look at what Keno has done with the manifest for his unregistered package [`ToyFHE.jl`](https://github.com/JuliaComputing/ToyFHE.jl):\r\n- Project file: https://github.com/JuliaComputing/ToyFHE.jl/blob/70acf5d5c14fc9249091e7cd07b57a0123ff8b7f/Project.toml\r\n- Manifest file: https://github.com/JuliaComputing/ToyFHE.jl/blob/70acf5d5c14fc9249091e7cd07b57a0123ff8b7f/Manifest.toml\r\n\r\nAs you can see in the manifest file, Keno has forked several of the repos, and `ToyFHE.jl` uses Keno's forks instead of the upstream repos. As one example, instead of using the upstream `BitIntegers.jl` repo (https://github.com/rfourquet/BitIntegers.jl), the manifest uses the `kf/div` branch inside Keno's fork (https://github.com/Keno/BitIntegers.jl).\r\n\r\nOf course, you should not create or edit `Manifest.toml` files by hand. So doing something like `]add https://github.com/Keno/BitIntegers.jl#kf/div` in the `Pkg` REPL mode is how you tell `Pkg` to use your fork and your branch.",
+      "createdAt": "2020-03-01T04:42:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593053391",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA1NjAyOA==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">  you claim in #10277 that bicycle1885 _may not want to maintain the package anymore_. But he has been looking at your issue ([bicycle1885/EzXML.jl#125](https://github.com/bicycle1885/EzXML.jl/pull/125)) and even sent the correction upstream ([JuliaLang/julia#34941](https://github.com/JuliaLang/julia/pull/34941)).\r\n> \r\n\r\nMy PR has been open since last year. \r\n\r\n>\r\n>   you created a fork with a broken CI. This makes me feel that maybe bicycle1885 is doing a better job in maintaining a community package.\r\n> \r\n\r\nI am using Github Actions.\r\n\r\n>\r\n>  you're really registering this for the wrong reason: you just disagree with bicycle1885 that it is Ok to show Ptr addresses in a `show` method.\r\n> \r\n> \r\n\r\nPtr.address causes errors + slows down showing. https://github.com/aminya/AcuteML.jl/blob/ec35bba2ae5ad86f9b0c1b1a8ee06d6563e9280c/benchmark/bench.jl#L88\r\n\r\n\r\n\r\n> In my opinion, this is the case for a fork: just fork the package, patch it as you please, and use it.\r\n> But it is not the case for registering a new package in the registry.\r\n\r\nThis is meant for the internal use of AcuteML.jl, you are not forced to use EzXMLPatched.jl. If Pkg could allow me to include a fork inside the Project.toml, I didn't need registering anymore.",
+      "createdAt": "2020-03-01T05:18:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593056028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA1NjYwNw==",
+      "author": {
+        "login": "felipenoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@aminya , I share your frustration when you find a community package that does not satisfy your needs. Your claim is based on a 4-month old PR that triggers an upstream error on an unreleased Julia version. You just reforce my argument that this is the case for a fork and not for a new registration.\r\n\r\nPlease, keep in mind that I care about your needs. It is just that tweaking your project's manifest file is a better solution in this case.",
+      "createdAt": "2020-03-01T05:25:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593056607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA1ODE0Mg==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> \r\n> \r\n> > In my opinion, this is the case for a fork: just fork the package, patch it as you please, and use it.\r\n> \r\n> Just to expand on this answer: You can make your own forks of packages (assuming that they have open-source licenses) and use your forks without needing to register your forks or maintain a registry. Simply use the `Manifest.toml` file to specify the forks and branches that you want to use, and then check your `Manifest.toml` file into source control. (You will need to make sure that you do not have any entries in your `.gitignore` file that match `Manifest.toml`.)\r\n> \r\n> For example, you can take a look at what Keno has done with the manifest for his unregistered package [`ToyFHE.jl`](https://github.com/JuliaComputing/ToyFHE.jl):\r\n> \r\n>     * Project file: [JuliaComputing/ToyFHE.jl:Project.toml@`70acf5d`](https://github.com/JuliaComputing/ToyFHE.jl/blob/70acf5d5c14fc9249091e7cd07b57a0123ff8b7f/Project.toml)\r\n> \r\n>     * Manifest file: [JuliaComputing/ToyFHE.jl:Manifest.toml@`70acf5d`](https://github.com/JuliaComputing/ToyFHE.jl/blob/70acf5d5c14fc9249091e7cd07b57a0123ff8b7f/Manifest.toml)\r\n> \r\n> \r\n> As you can see in the manifest file, Keno has forked several of the repos, and `ToyFHE.jl` uses Keno's forks instead of the upstream repos. As one example, instead of using the upstream `BitIntegers.jl` repo ([rfourquet/BitIntegers.jl](https://github.com/rfourquet/BitIntegers.jl)), the manifest uses the `kf/div` branch inside Keno's fork ([Keno/BitIntegers.jl](https://github.com/Keno/BitIntegers.jl)).\r\n> \r\n> Of course, you should not create or edit `Manifest.toml` files by hand. So doing something like `]add https://github.com/Keno/BitIntegers.jl#kf/div` in the `Pkg` REPL mode is how you tell `Pkg` to use your fork and your branch.\r\n\r\n\r\n\r\n> \r\n> Please, keep in mind that I care about your needs. It is just that tweaking your project's manifest file is a better solution in this case.\r\n\r\nBut Manifest isn't the same for different Julia versions. Especially, since EzXML uses jil for Julia 1.3. \r\n\r\nI am more than happy to get the original repository fixed, but I got forced to do this after having no luck in merging the PR, or overriding the method without warnings.",
+      "createdAt": "2020-03-01T05:43:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593058142",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2MDYyNw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> But Manifest isn't the same for different Julia versions.\r\n\r\nFor what it is worth, I think that people should be allowed to check in to source control different `Manifest.toml` files for each version of Julia. So, for example, if your package supports Julia 1.0 and later, you might use each different version of Julia to generate a different `Manifest.toml` file as follows:\r\n- Julia 1.0 -> `Manifest.1.0.toml` \r\n- Julia 1.1 -> `Manifest.1.1.toml` \r\n- Julia 1.2 -> `Manifest.1.2.toml` \r\n- Julia 1.3 -> `Manifest.1.3.toml` \r\n\r\nYou would check in all of those manifest files (`Manifest.1.0.toml`, `Manifest.1.1.toml` , `Manifest.1.2.toml`, and `Manifest.1.3.toml`) into source control.\r\n\r\nAnd then, if you want to e.g. load your package on Julia 1.2, you would do this:\r\n```bash\r\ncp Manifest.1.2.toml Manifest.toml\r\n```\r\nAnd then you would instantiate the manifest.\r\n\r\nDisclaimer: There are some people that agree with this approach, and some people that disagree. I don't know if we should necessarily encourage or advocate for this approach. But we should at minimum allow it and have support for it.",
+      "createdAt": "2020-03-01T06:06:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593060627",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2MDc4Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Especially, since EzXML uses jil for Julia 1.3.\r\n\r\nIf the biggest bifurcation is between Julia >= 1.3 and Julia < 1.3, then you might be able to get away with only generating two manifests:\r\n- Julia 1.0 -> `Manifest.1.0.toml`\r\n- Julia 1.3 -> `Manifest.1.3.toml`\r\n\r\nYou would check `Manifest.1.0.toml` and `Manifest.1.3.toml` into source control. Then, on Julia < 1.3, you would do this:\r\n```bash\r\ncp Manifest.1.0.toml Manifest.toml\r\n```\r\n\r\nOn Julia >= 1.3, you would instead do this:\r\n```bash\r\ncp Manifest.1.3.toml Manifest.toml\r\n```",
+      "createdAt": "2020-03-01T06:09:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593060783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2MDg3Nw==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> > Especially, since EzXML uses jil for Julia 1.3.\r\n> \r\n> If the biggest bifurcation is between Julia >= 1.3 and Julia < 1.3, then you might be able to get away with only generating two manifests:\r\n> \r\n> * Julia 1.0 -> `Manifest.1.0.toml`\r\n> * Julia 1.3 -> `Manifest.1.3.toml`\r\n> \r\n> You would check `Manifest.1.0.toml` and `Manifest.1.3.toml` into source control. Then, on Julia < 1.3, you would `cp Manifest.1.0.toml Manifest.toml`. On Julia >= 1.3, you would `cp Manifest.1.3.toml Manifest.toml`.\r\n\r\nThanks a lot for the answer. I will try this.",
+      "createdAt": "2020-03-01T06:10:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593060877",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2MjAzMg==",
+      "author": {
+        "login": "bicycle1885"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sometimes I'm too busy to maintain all my packages. That's why I've transferred my five packages to JuliaIO (e.g. https://github.com/JuliaIO/TranscodingStreams.jl) following Stefan's invitation. In fact, I do not check issues and pull requests so often, but I do check my email box so please feel fee to ping me or directly email me when you think your pull requests are overlooked. ",
+      "createdAt": "2020-03-01T06:29:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593062032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2NzYzMQ==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There is no need at this point to register a fork since it is explicitly stated that is only for internal  use in a package and that has better solutions. \r\n\r\n> This is meant for the internal use of AcuteML.jl, you are not forced to use EzXMLPatched.jl. If Pkg could allow me to include a fork inside the Project.toml, I didn't need registering anymore.\r\n\r\nJust copy paste the module into your package. Look at the `ext` folder in Pkg for an example. \r\n",
+      "createdAt": "2020-03-01T07:52:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593067631",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU5MzA2ODU4NQ==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alternatively, put\r\n\r\n```\r\nBase.unsigned(x::Ptr) = UInt(x)\r\nBase.signed(x::Ptr) = Int(x)\r\n```\r\n\r\nin your package on 1.4 to fix the Julia bug, and the package is automatically fixed. I will close this since it seems like there are better workarounds for the problem at hand.",
+      "createdAt": "2020-03-01T08:05:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/10325#issuecomment-593068585",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: EzXMLPatched\n- Repository: https://github.com/aminya/EzXMLPatched.jl\n- Created by: @aminya\n- Version: v1.0.0\n- Commit: 5ee163c80784770736b283b9267b7547128df284\n- Reviewed by: @aminya\n- Reference: https://github.com/aminya/EzXMLPatched.jl/commit/5ee163c80784770736b283b9267b7547128df284#commitcomment-37563130\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4d86a495264e3955f8bb02de739ab3806737c04e58ad73897f0ba7b4c5012c9602e64f831bbb808c1056594bfc56043393b7c6ab119808ea7909a11f76f16aab43d325ea9bd83996c299275d00f4d80c9fee6e14f45f792f151610bd30cfae7c2eb13e89c32502443c3b7ab0c811a74aa5f53055d3b11635853b33eb880b17bd85cadbe3d01cc48542f597ca48c34acbc1ddf2528849599db22e78d8335087a411d468217f82d245e1e1361a0dbcf4cc7 -->",
+  "package_name": "EzXMLPatched",
+  "closed_at": "2020-03-01T08:05:09Z",
+  "title": "New package: EzXMLPatched v1.0.0"
+}

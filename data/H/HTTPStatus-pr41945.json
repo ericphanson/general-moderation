@@ -1,0 +1,121 @@
+{
+  "created_at": "2021-08-01T15:53:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 41945,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841FK1T",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Why not using `HTTP.jl` which provides [the same feature](https://github.com/JuliaWeb/HTTP.jl/blob/2a03ca76376162ffc3423ba7f15bd6d966edff9b/src/status_messages.jl) already?",
+      "createdAt": "2021-08-01T16:15:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890547539",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FK-6",
+      "author": {
+        "login": "kracekumar"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano thanks for the reply.\r\n1. it's similar and exhaustive no doubt about it. This package is a small and tiny project for personal learning.\r\n2. I'm trying out Julia and Julia packaging, hence the new repository. ",
+      "createdAt": "2021-08-01T16:18:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890548154",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FLFY",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If this is a personal project just for learning, then there is no need to register it, please see https://github.com/JuliaRegistries/General/blob/6df5c03f6546755624a8ea2aa43427d8c461c86f/README.md#do-i-need-to-register-a-package-to-install-it",
+      "createdAt": "2021-08-01T16:20:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890548568",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FLVG",
+      "author": {
+        "login": "kracekumar"
+      },
+      "authorAssociation": "NONE",
+      "body": "Learning - I mean going through the flow of registering the packaging, updating it, and figuring out how Julia's packaging works. I'd like to go through the process to know it and understand it for future usecases.",
+      "createdAt": "2021-08-01T16:25:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890549574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FLcr",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What I'm trying to say is that registering a package is useful if that can be used by others.  If this is a personal project you want to experiment with, there is no need to register it (and we discourage it), you can still use it for yourself.  Registering a package isn't necessary in order to use it.",
+      "createdAt": "2021-08-01T16:29:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890550059",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FLro",
+      "author": {
+        "login": "kracekumar"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks, I totally get it. But I'd like to register packages to see how the packaging system works(publish, install, update, reinstall, upgrade, etc) through the registry. I get one can maintain the project and install it without registering through the official process. \r\n\r\nI understand, if the package doesn't meet the guidelines and requirements for publishing, please feel free to close.",
+      "createdAt": "2021-08-01T16:36:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890551016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FL44",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can use a local registry if you want to do that, [`LocalRegistry.jl`](https://github.com/GunnarFarneback/LocalRegistry.jl) makes it easy to maintain one.  But the General registry isn't meant to be a test playground, it's instead a shared resource.  I'm going to close this pull request and #41943.\r\n\r\nOf course you're welcome to register at any point new packages that the community can benefit from.",
+      "createdAt": "2021-08-01T16:44:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41945#issuecomment-890551864",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HTTPStatus.jl\n- Repository: https://github.com/kracekumar/HTTPStatus.jl\n- Created by: @kracekumar\n- Version: v0.1.1\n- Commit: 70e1932e8cfc2336429afe222bb4727ec62b1376\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Added license and updated the version\n<!-- END RELEASE NOTES -->",
+  "package_name": "HTTPStatus",
+  "closed_at": "2021-08-01T16:44:21Z",
+  "title": "New package: HTTPStatus.jl v0.1.1"
+}

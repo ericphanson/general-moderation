@@ -1,0 +1,83 @@
+{
+  "created_at": "2024-01-24T09:23:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 99425,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xtZlO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: HTTP, JSON3, Preferences, URIs\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-24T09:27:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99425#issuecomment-1907726670",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xtuTQ",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "forget about it",
+      "createdAt": "2024-01-24T10:09:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99425#issuecomment-1907811536",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zVYb0",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nLooks like there is a merge conflict.\r\n\r\n@oliviermilla Can you re-trigger Registrator? This will fix the merge conflict.",
+      "createdAt": "2024-02-08T21:47:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99425#issuecomment-1934984948",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zXadH",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n@DilumAluthge thank you for the ping. Is it still required to trigger the registrator given that https://github.com/JuliaRegistries/General/pull/99427 was merged?\r\n\r\nThx\r\n\r\n",
+      "createdAt": "2024-02-09T08:31:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99425#issuecomment-1935517511",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DydxV3\n- Repository: https://github.com/oliviermilla/DydxV3.jl\n- Created by: @oliviermilla\n- Version: v0.7.1\n- Commit: 4a081dbef4ab78dfcc3d8ed452b4da8068017067\n- Reviewed by: @oliviermilla\n- Reference: https://github.com/oliviermilla/DydxV3.jl/issues/1\n- Description: DydxV3\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359844d8625d950174a776196210066340ee329ac59a4160b257e3f79d4d5286bfda5d4fffcd77d088208c58fe61cab68a773ce7d8964c14e05212fce6257139489a5c49a4d31a5d767ca494064e5b83b7eff182f9ccba1d03e53d6e18e9342d42e9db7a9cbdff74680357944f35f7ea9ce54dc75ebda32f195222d9bd924faf82ad -->",
+  "package_name": "DydxV3",
+  "closed_at": "2024-02-09T20:56:39Z",
+  "title": "New package: DydxV3 v0.7.1"
+}

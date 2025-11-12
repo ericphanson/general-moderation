@@ -1,0 +1,180 @@
+{
+  "created_at": "2023-09-24T23:28:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 92134,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85nRt2B",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-24T23:32:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1732697473",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nRuqk",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] This may be violating \"collections of \"utility functions\"\" clause of packages. It is a collection of \"useful numerical tools for daily scientific research\" according to the package, as well as a fairly generic name. ",
+      "createdAt": "2023-09-24T23:47:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1732700836",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nR0Dd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I agree: even though it looks like a very nicely organized and well-documented package, this doesn’t really seem suitable for the General registry; at least not under such a general name",
+      "createdAt": "2023-09-25T00:32:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1732722909",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nSgS-",
+      "author": {
+        "login": "physcxia"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] The \"utility functions\" in this package are quite general. For example, the `geomspace` which generates a linear sequence in log scale is very useful when drawing log scale plots. I think this kind of function should be implemented into the Base ;)\r\nIf the package name is improper, could you please suggest a suitable name?",
+      "createdAt": "2023-09-25T04:50:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1732904126",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nStlM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The \"utility functions\" in this package are quite general [and] should be implemented into the Base\r\n\r\nThat’s the problem, actually. I don’t see that the functions in the package are very connected, which makes it hard to find a name.\r\n\r\nIs this package a dependency for some other package you’re developing and planning to register? If not, there is little reason to register it at this point. If yes, you could add the functions from this package into that other package (maybe in a `Utils` submodule). Or register the package as `NameOfOtherPackageUtils` or `NameOfOrganizationUtils`.\r\n\r\nYou could also consider contributing these functions to some other existing package where they would fit thematically (potentially even Base/the standard library).\r\n\r\nWhat is your motivation for wanting to register this package? That might allow us to suggest the most suitable way forward.",
+      "createdAt": "2023-09-25T05:44:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1732958540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nU9qu",
+      "author": {
+        "login": "physcxia"
+      },
+      "authorAssociation": "NONE",
+      "body": "I’m writing more than one physics-related package which use `NumericalTools`, so I can’t copy it everywhere or rename it to follow a specific package. I didn’t find a suitable package to contribute to, and it’s simpler to create a new package.\r\n\r\nMy motivation for wanting to register this package includes:\r\n\r\n1. Accessibility for my other packages. My other packages may be registered in the future. For development, the CI on GitHub needs registered packages as dependencies.\r\n2. Share with others. Use cases of these tools are common in my research. Other researchers, at least my colleagues, can simply add and use it without writing their own if it is registered.\r\n\r\nSince my research field is high energy physics (HEP), how about rename it to `HEPNumericalUtils`?\r\n[noblock]",
+      "createdAt": "2023-09-25T12:06:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1733548718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nVvCd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> 1. Accessibility for my other packages. My other packages may be registered in the future. For development, the CI on GitHub needs registered packages as dependencies.\r\n\r\nThat makes sense, but is best solved by setting up a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) and registering the package there. Even then, I would still rename it to something more specific, though (see below)\r\n\r\n> 2. Share with others. Use cases of these tools are common in my research. Other researchers, at least my colleagues, can simply add and use it without writing their own if it is registered.\r\n\r\nFor use by your colleagues (within your research group), [using a `LocalRegistry` again is the recommended approach](https://github.com/JuliaRegistries/General#should-i-register-my-package-now). For a wider audience, I would urge you to consider how people would be able to find your package: How would someone looking for the functionality of `geomspace` be able to find your package? There is nothing in the name `NumericalTools` that would give them any hint that that's where to look for such a function. Moreover, there are thousands of people who have their own little helper functions that would have just as much reasoning to create a `NumericalTools` package.\r\n\r\nFor `geomspace`, `linspace`, `logspace`, something like `NumericalSequenceConstructors` might be suitable, but `sqrtm1` and `loginterpolator` do not fit with that. I don't really see how these function can be released in a single coherent package.\r\n\r\n> Since my research field is high energy physics (HEP), how about rename it to `HEPNumericalUtils`?\r\n\r\nThat's hardly any better. There's nothing about this package that really connects it to HEP. You could rename it to something `PhysCXiaNumericalUtils` and put it in a `LocalRegistry`. Or, personally, I wouldn't object to having it in General under that name (although it still violates the guidelines against \"personal collection of utility functions\", so maybe others would object, but I don't see the harm in having packages with such highly distinctive names in General)",
+      "createdAt": "2023-09-25T13:48:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1733750941",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nZSll",
+      "author": {
+        "login": "physcxia"
+      },
+      "authorAssociation": "NONE",
+      "body": "Well, I'll consider setting up a `LocalRegistry`.\r\nThe name `NumericalSequenceConstructors` looks good, but it's not necessary to split this simple package at this stage. \r\nThank you for your consideration.",
+      "createdAt": "2023-09-26T01:14:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1734682981",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qKCin",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-10-26T12:23:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1781016743",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qutet",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-02T12:23:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92134#issuecomment-1790629805",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NumericalTools\n- Repository: https://github.com/physcxia/NumericalTools.jl\n- Created by: @physcxia\n- Version: v0.1.0\n- Commit: 7f2cb3bdee63cc1ef43b711484faab05c5f37d69\n- Reviewed by: @physcxia\n- Reference: https://github.com/physcxia/NumericalTools.jl/issues/1#issuecomment-1732703122\n- Description: A Julia package offering some handy numerical tools, e.g. geomspace.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983b7d15563e527e338964c5d9ef4f184053f03b398c82120762f926707e69ad63eabf32663ab343011fb2b9710cd2a229fd4cd9ae549648866070c9c163e65ec1235fccfaf5f1f27e58e7dd3eb699fbe9ce1a6eb0b761c813e19f2afd2fff24e16ac8dd97fd722fd1ba74629367109801b7db20ca6ae6256a9af9c759f3c1a3b0 -->",
+  "package_name": "NumericalTools",
+  "closed_at": "2023-11-02T12:23:21Z",
+  "title": "New package: NumericalTools v0.1.0"
+}

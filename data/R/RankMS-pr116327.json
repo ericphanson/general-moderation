@@ -1,0 +1,188 @@
+{
+  "created_at": "2024-09-30T13:26:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 116327,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ODO8T",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import RankMS` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-30T13:34:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383212307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ODW0k",
+      "author": {
+        "login": "yanjer"
+      },
+      "authorAssociation": "NONE",
+      "body": "There is no problem, why still can't merge, please help merge.[noblock]",
+      "createdAt": "2024-09-30T13:46:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383244580",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ODgcy",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Please stop spamming the registry with repeated registration requests which all fail for the same reason, and read the results of the automerge action:\r\n\r\n> I was not able to load the package (i.e. import RankMS failed). See the AutoMerge logs for details.\r\n\r\nI.e. your package is not working. You should make sure that it actually works (you can check for yourself by adding it from GitHub and then `using RankMS` in a fresh Julia session) before registering a package.\r\n\r\nApart from that as @goerz said in one of your earlier attempts, long and descriptive package names are favoured in the Julia General registry. `RankMS` is not a particularly informative name, especially given that `MS` is not a widely used, unambiguous acronym. ",
+      "createdAt": "2024-09-30T13:59:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383284018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ODsS9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please make sure to test your package locally before registration. One thing that stands out as a potential issue is that you have a `Manifest.toml` file in the root of your repo. You have to delete that file.\r\n\r\nYour `src` folder is quite a mess. You should really clean that up. You should only be using `include` statements in the main `src/RankMS.jl` file. In `src/RankCompV3/RankCompV3.jl`, you are unnecessarily using `Pkg`. You are also using dependencies that are not listed in your main `Project.toml` file. Please make sure your package only uses the absolute minimum dependencies. Remove any kind of \"debugging\" code. All dependencies must be listed in the `[deps]` section of your `Project.toml`, and *every* entry in `[deps]` (even standard libraries) must also have an entry in `[compat]` as well.\r\n\r\nAfter you commit the fixes, retrigger the registration by commenting `@JuliaRegistrator register` on the commit in the GitHub UI. Do not change the UUID, package name, or version number. That should *update* this existing PR instead of creating a new one. Actually, I'm not sure how you managed to create so many registration PRs with your earlier attempts. Exactly how do you trigger these registrations?\r\n\r\nTo be honest, this package needs a major clean-up before you should try re-registering. While you're at it, I would also recommend fixing the Markdown formatting in your README. You should be using \"```\"  for multiline code blocks.",
+      "createdAt": "2024-09-30T14:14:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383332541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ODuwt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> See the AutoMerge logs for details.\r\n\r\n@nilshg One small detail in @yanjer's favor: the \"AutoMerge\" step was \"skipped\" (presumably due to some more severe underlying issue like the presence of a `Manifest.toml` file). So there's not much to go on, based on the logs. That's not an ideal UX on our end. \r\n\r\nDownloading the package and just trying to instantiate it reveals a lot of issues, though. So @yanjer should be able to sort this problems out by testing the package locally.\r\n\r\n",
+      "createdAt": "2024-09-30T14:17:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383342637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OD_FB",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I believe it's more of a GitHub presentation issue. If you go to the `Checks` tab (at the top, together with `Conversation`, `Commits`, and `Files changed`) you can find the automerge job and the log saying that it failed to import the package because it tried to use `Pkg` without being a dependency.\r\n\r\nBtw, having a `Manifest.toml` checked in is not an error. It's just not very useful.\r\n",
+      "createdAt": "2024-09-30T14:43:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383409473",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OECCm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Btw, having a Manifest.toml checked in is not an error.\r\n\r\nGood to know! I came across this because I tried to instantiate the package after cloning it, and that gave me errors about dependencies not being in the Manifest. So at the very least, the Manifest is outdated, which seems like a bad idea ;-)",
+      "createdAt": "2024-09-30T14:47:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383421606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OEFIy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> f you go to the Checks tab (at the top, together with Conversation, Commits, and Files changed) you can find the automerge job\r\n\r\nI was not aware of this! It would probably be good to put those instructions into the bot message, where it says \"See the AutoMerge logs for details.\" I always assumed that was referring to the list of checks at the bottom of page, but the Checks tab is much more informative!\r\n",
+      "createdAt": "2024-09-30T14:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383434290",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OEGzX",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The list at the bottom has been useful in the past, but when I look at the current set of PRs it seems somewhat random how well it correlates with the `Checks` tab.\r\n",
+      "createdAt": "2024-09-30T14:53:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2383441111",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z7z0S",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-10T12:24:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2582592786",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86a9DYA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-18T12:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116327#issuecomment-2599695872",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RankMS\n- Repository: https://github.com/yanjer/RankMS.jl\n- Created by: @yanjer\n- Version: v0.1.0\n- Commit: a8038995cf5423e3cb0394a0a41d8ac82046bec9\n- Git reference: HEAD",
+  "package_name": "RankMS",
+  "closed_at": "2025-01-18T12:23:43Z",
+  "title": "New package: RankMS v0.1.0"
+}

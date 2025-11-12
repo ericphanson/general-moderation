@@ -1,0 +1,61 @@
+{
+  "created_at": "2024-08-23T17:56:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 113737,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Jiqj7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BenchmarkTools, CSV, Coverage, DataFrames, Distributions, ForwardDiff, Optim, Plots, PlutoUI, ProgressMeter, Revise, SpecialFunctions, StatsBase, StatsFuns, TimerOutputs\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 24 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to SOM. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.82 is at or below cutoff of 2.50.\n  2. Similar to QSM. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.45 is at or below cutoff of 2.50.\n  3. Similar to SMM. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.11 is at or below cutoff of 2.50.\n  4. Similar to SPH. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.26 is at or below cutoff of 2.50.\n  5. Similar to GLM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to SSHT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to SBML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to SHA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to FDM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to DSP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to GSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to SVR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  15. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  16. Similar to ASE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  17. Similar to SDMX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  18. Similar to TSML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  19. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  20. Similar to HSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  21. Similar to LSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  22. Similar to ISL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  23. Similar to VSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  24. Similar to SIMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-23T18:03:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113737#issuecomment-2307565819",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Jjv6p",
+      "author": {
+        "login": "briandepasquale"
+      },
+      "authorAssociation": "NONE",
+      "body": "Stop",
+      "createdAt": "2024-08-23T21:45:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113737#issuecomment-2307849897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Jj0CI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/113748",
+      "createdAt": "2024-08-23T22:05:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113737#issuecomment-2307866760",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SSM\n- Repository: https://github.com/depasquale-lab/SSM.jl\n- Created by: @briandepasquale\n- Version: v0.1.0\n- Commit: 0819d440848439e3b558edbd19377a4dbf1e3a3d\n- Reviewed by: @briandepasquale\n- Reference: https://github.com/depasquale-lab/SSM.jl/commit/0819d440848439e3b558edbd19377a4dbf1e3a3d#commitcomment-145763864\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67247a9534f4927acc504023bdbb87b5b3b897803fbd86c014b80ec7cf13fc142d764a63c7d5cbc18fd31568a5584c7d58c50f09f7442797f967a4cad4f97375206349bfca15557fa6c43d84614abf96617bf2379bca7331efdac3d368d471c726b1b20d29f9b652676c877b1910f70e9b9969a5720a3e987b496dd1cacc398a996a0a863c36251beed27390499fdeba96d6e9422048f1d2efc19b3617d7335c5c078c86c8cefc854f1a0cdfadca5606e -->",
+  "package_name": "SSM",
+  "closed_at": "2024-08-23T22:05:00Z",
+  "title": "New package: SSM v0.1.0"
+}

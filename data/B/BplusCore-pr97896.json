@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-12-29T04:36:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 97896,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vkD0V",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BitFlags, JSON3, MacroTools, NamedTupleTools, Setfield, StaticArrays, StructTypes, TupleTools\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-29T04:40:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97896#issuecomment-1871723797",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yDuO8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-28T12:22:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97896#issuecomment-1913578428",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEByP",
+      "author": {
+        "login": "heyx3"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm confused, I thought this was already merged?",
+      "createdAt": "2024-01-28T16:53:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97896#issuecomment-1913658511",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yItw3",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "#97897 was merged. (Usually the same PR would have been updated after the compat fixes but since you also needed to update the repo URL, a new PR was created.)\r\n",
+      "createdAt": "2024-01-29T15:07:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97896#issuecomment-1914887223",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BplusCore\n- Repository: https://github.com/heyx3/BplusCore\n- Created by: @heyx3\n- Version: v0.1.0\n- Commit: 2c0f01a6c9c7cab094283aa104d71c64bc9cbbfd\n- Reviewed by: @heyx3\n- Reference: https://github.com/heyx3/BplusCore/issues/1\n- Description: The Math and Utilities for the Julia B+ library\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359854577c87686ebec4e5fcf5102468ac7b0d13c278d22aa1978ac897ecd87c6492c4ed55914be84ad4175b96c92a32e1544e7e7ff83cce56ca8839974acb7a7ea08ea0f08131db47403880edc117cd5b8ed51f2cc533519ebff69af29917478a68d978936565d97f4af0bf8192af226120 -->",
+  "package_name": "BplusCore",
+  "closed_at": "2024-01-29T15:07:27Z",
+  "title": "New package: BplusCore v0.1.0"
+}

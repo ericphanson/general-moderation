@@ -1,0 +1,83 @@
+{
+  "created_at": "2024-04-12T15:39:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 104804,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q856T3WQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Catalyst, Combinatorics, DiffEqParamEstim, DifferentialEquations, GraphViz, JLD2, LatinHypercubeSampling, ModelingToolkit, Plots, RecursiveArrayTools, SimpleDiffEq, StaticArrays, Symbolics\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-12T15:56:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/104804#issuecomment-2052027792",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q856VC55",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\"remastered: This branch is [8 commits ahead of](https://github.com/redsnic/SynthEvo/compare/main...remastered), [3 commits behind](https://github.com/redsnic/SynthEvo/compare/remastered...main) main.\"\r\n\r\nThat does not seem suitable for making a release/registration. You should make your releases from `main` (or a release branch directly off `main`, depending on your workflow)",
+      "createdAt": "2024-04-12T18:58:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/104804#issuecomment-2052337273",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859nOgT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-05-13T12:23:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/104804#issuecomment-2107435027",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-Yg4w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-05-20T12:23:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/104804#issuecomment-2120355376",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SynthEvo\n- Repository: https://github.com/redsnic/SynthEvo\n- Created by: @redsnic\n- Version: v0.9.9\n- Commit: eb1202cee2640703c4dae8640e0bf124de4e8265\n- Reviewed by: @redsnic\n- Reference: https://github.com/redsnic/SynthEvo/commit/eb1202cee2640703c4dae8640e0bf124de4e8265#commitcomment-140913079\n- Description: A tool for finding CRN topologies under user-defined constraint \n<!-- b42825e8f1133026832b1a3cfb6fe6cfbfda5860657aa710ee2df9609deb10121227a6dc24ea29c31ff683f8fbde7fc59198e35ebab570419df68d527924a87a25efaf87dabd99541bca07576aa5ab19e154e673370c0e83b3e59543c6ab63e432a5902c79e671136385b93b9f74ce907b015270002e86da84a15346914fbdc0f1b86835c3a8b6622a9679340d06a05117152477e1fd5a6a539527048e3ab2745f436acb80224167446bbcf10578afbdd78de192d39aa5ceb9d4db1efdb5e67a7fae3ec0f76623fc0023e0535cdf6f00b243b0517e63ed7a825bdf5905eaadfe -->",
+  "package_name": "SynthEvo",
+  "closed_at": "2024-05-20T12:23:26Z",
+  "title": "New package: SynthEvo v0.9.9"
+}

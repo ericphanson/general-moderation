@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-04-23T04:43:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 35106,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyNTM4MzE2Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n- Package name similar to 2 existing packages.\n  1. Similar to MCTS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MPSGE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-04-23T04:48:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35106#issuecomment-825383166",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyNTk5MDc2NQ==",
+      "author": {
+        "login": "BoundaryValueProblems"
+      },
+      "authorAssociation": "NONE",
+      "body": "I renamed my package following the guideline and tried to retrigger Registrator using the new URL. I didn't change the tag/version number. Then, I got the following error:\r\n`Tag with a different commit already exists for the version mentioned in (Julia)Project.toml`\r\nSo after all, do I need to use a new tag/version number, in my case instead of v1.3.5, should I change it to v1.3.6 in Project.toml?\r\nThanks!",
+      "createdAt": "2021-04-23T23:26:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35106#issuecomment-825990765",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyNjE2MzQ0Nw==",
+      "author": {
+        "login": "BoundaryValueProblems"
+      },
+      "authorAssociation": "NONE",
+      "body": "Apparently, a new tag is required after the package name change. I'll do this now.",
+      "createdAt": "2021-04-24T22:51:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35106#issuecomment-826163447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyNjE2NjQ3Mg==",
+      "author": {
+        "login": "BoundaryValueProblems"
+      },
+      "authorAssociation": "NONE",
+      "body": "Since my PR with the new package name was successfully processed and is now listed in the PR list, please close/delete this particular PR. Thanks!",
+      "createdAt": "2021-04-24T23:26:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35106#issuecomment-826166472",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MTSG\n- Repository: https://github.com/UCD4IDS/MTSG.jl\n- Created by: @BoundaryValueProblems\n- Version: v1.3.5\n- Commit: 51186d5c98b6ba0d4011f3dadc4fd79de113ebf4\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Added CompatHelper.yml in .github/workflow. Pull request to replace Arpack = \"0.4.0\" by Arpack = \"0.4.0, 0.5\".\n<!-- END RELEASE NOTES -->",
+  "package_name": "MTSG",
+  "closed_at": "2021-04-24T23:35:32Z",
+  "title": "New package: MTSG v1.3.5"
+}

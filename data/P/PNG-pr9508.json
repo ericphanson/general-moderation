@@ -1,0 +1,187 @@
+{
+  "created_at": "2020-02-15T15:38:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 9508,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4NjYxMDAzMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-02-15T15:41:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586610032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4NjYxMTI4Mg==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The plan is to create `JuliaIO/PNG.j`, `JuliaIO/JPEG.jl` etc. interfaces for FileIO",
+      "createdAt": "2020-02-15T15:51:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586611282",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4NjY1ODQ1NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would prefer PNGImages.jl or PNGFiles.jl. I really don’t like three letter package names.",
+      "createdAt": "2020-02-16T01:25:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586658455",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4NjcyNzIzNQ==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, it does feel a bit against the system and could easily clash in namespace with wrapped lib objects.\r\n\r\nOptions that have come up so far\r\n\r\n1. PNG, JPEG,  TIFF\r\n2. Png, Jpeg, Tiff\r\n3. PNGFiles, JPEGFiles, TIFFFiles\r\n4. PngFiles, JpegFiles, TiffFiles\r\n5. PNGImageIO, JPEGImageIO, TIFFImageIO\r\n6. PNGIO, JPEGIO, TIFFIO\r\n7. PngIO, JpegIO, TiffIO\r\n8. PortableNetworkGraphicsFiles, JointPhotographicExpertsGroupFiles, TaggedImageFileFormatFiles\r\n9.  PNGImages, JPEGImages, TIFFImages\r\n10. LibPNG, LibJPEG, LibTIFF\r\n\r\nThere is some precedence and logic for PNGFiles given CSVFiles. I don't love how that looks though.\r\nI'm torn between PNGFiles, PngFiles, PngIO\r\n\r\ncc. @Drvi @timholy",
+      "createdAt": "2020-02-16T16:45:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586727235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4NjczMDU5NA==",
+      "author": {
+        "login": "Tokazama"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I like the names \"PNGFiles\" or \"PortableNetworkGraphics\"",
+      "createdAt": "2020-02-16T17:19:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586730594",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Njc0MDY1Nw==",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not picky but PNGFiles sounds good to me.",
+      "createdAt": "2020-02-16T19:01:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586740657",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Njc0MTA1OA==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, I've been coming to the same conclusion. When we get there, `TIFFFiles` is a little awkward, but I doubt it will spoil anyones fun.\r\n\r\nI'll rename. thanks",
+      "createdAt": "2020-02-16T19:05:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586741058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Njc0MjU1MQ==",
+      "author": {
+        "login": "johnnychen94"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> When we get there, TIFFFiles is a little awkward, but I doubt it will spoil anyones fun.\r\n\r\nI thought there will be a wrapper package `ImageIO` for all of these so that users don't need to install each one individually.  If so the slightly lengthy name won't cause any inconvenience for general users. ",
+      "createdAt": "2020-02-16T19:21:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586742551",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Njc0Mjk5OQ==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Where we settled was to not have the `ImageIO` wrapper, because it would've negatively impacted load time as it grew in format support, which seems counter to the FileIO architecture and unhelpful given that typical usage is to use one image format at a time. Also, we're keeping ImageMagick and QuartzImageIO as backup, so this would be opt-in, at least initially.\r\n\r\nI've now renamed to https://github.com/JuliaIO/PNGFiles.jl ",
+      "createdAt": "2020-02-16T19:26:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586742999",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Njc0MzMxOA==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "But then again, the ImageIO layer could be a lazy-loader, and just handle the installation of the deps.. That hadn't occurred to me",
+      "createdAt": "2020-02-16T19:29:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/9508#issuecomment-586743318",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PNG\n- Repository: https://github.com/JuliaIO/PNG.jl\n- Created by: @ianshmean\n- Version: v0.1.0\n- Commit: 88ca35d004dfed4fcdcc349bf7a86b398ea44c9e\n- Reviewed by: @ianshmean\n- Reference: https://github.com/JuliaIO/PNG.jl/commit/88ca35d004dfed4fcdcc349bf7a86b398ea44c9e#commitcomment-37310932\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4dd0af249819c8d6a448d02403bbd0ec53d932fb539741b83d86043311f01bf87e703c8b6f86bc62f389997e4c051bfb9b3eb42bd68aabf9d2fe4c2c9ae9757071499e78007443969b63e050cce83be995d9b45e5faeade262bf838b3c5dd3c68e50f8e449d427e66b7767847f4e986caafa3b89d0485f574c601b8526c8971cade49b468a8c3c6cbb3fabc1cccac506bae097816560a5114294ff100a3170e41c0d792ace9bf693d945ceffb13d0e5ae -->",
+  "package_name": "PNG",
+  "closed_at": "2020-02-16T22:28:19Z",
+  "title": "New package: PNG v0.1.0"
+}

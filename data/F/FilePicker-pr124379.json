@@ -1,0 +1,105 @@
+{
+  "created_at": "2025-02-05T14:37:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 124379,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86dLhhI",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] FYI there is https://github.com/JuliaGraphics/NativeFileDialog.jl which wraps a C library for cross-platform support",
+      "createdAt": "2025-02-05T14:41:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124379#issuecomment-2637043784",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q86dLjPL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import FilePicker` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-05T14:43:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124379#issuecomment-2637050827",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dRzff",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] @ericphanson I did see that.  I wanted something more lightweight (NativeFileDialog has 94 indirect dependencies, including 65 jll packages ).  I'm often working in air-gapped environments where adding dependencies can be a headache.",
+      "createdAt": "2025-02-06T02:44:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124379#issuecomment-2638690271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dVFRU",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nOk, makes sense. Could a name like LightFilePicker or similar help reflect that tradeoff? Since it looks like it requires external deps, just doesn't bundle them.\r\n\r\nAlso, it would be good if the package was loadable even if unusable, in order for automerge to work, but also if FilePicker ends up deep in the dependency tree of some package, it will make that package unloadable even if FilePicker's functionality is never used by users of that package. To do that I'd suggest making the check occur at function-call time rather than load-time. See also https://github.com/JuliaRegistries/General?tab=readme-ov-file#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do",
+      "createdAt": "2025-02-06T11:22:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124379#issuecomment-2639549524",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q86ddxud",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I am good on a rename and I will make the change to the checks to function-call time.  I think this can be closed then since when I rename the package, registrator will open a new PR.",
+      "createdAt": "2025-02-07T03:08:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124379#issuecomment-2641828765",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FilePicker\n- Repository: https://github.com/joshday/FilePicker.jl\n- Created by: @joshday\n- Version: v0.0.1\n- Commit: d2c10f711be8147ece8758e2d041f59133e44544\n- Reviewed by: @joshday\n- Reference: https://github.com/joshday/FilePicker.jl/commit/d2c10f711be8147ece8758e2d041f59133e44544#commitcomment-152178891\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e8ba76f63fe11cde45829d6042af2673fc607b62a56feb896d31eb04ea30e9aac4b4467999a8cc51937209e07eecb94f0f8bb8bc58eff3cb9fa747b37677f813844e3d9e4839c5b1ff670c085a3994f2dbd103869851e94ea5139884d73b1bf09990cbfe2498f41bd82e050996b138e862282b807fda902a95735ee5f339752151e275f71388f6e68e9b0a4db3d722235c7a63ef88ca1b57b052250dc619d537e3d153fe41d492bb857fb12e77649269 -->",
+  "package_name": "FilePicker",
+  "closed_at": "2025-02-07T09:43:38Z",
+  "title": "New package: FilePicker v0.0.1"
+}

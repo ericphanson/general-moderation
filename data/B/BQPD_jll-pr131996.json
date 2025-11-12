@@ -1,0 +1,121 @@
+{
+  "created_at": "2025-05-29T20:50:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 131996,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86uFE4E",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Version number is not allowed to contain build data\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-29T20:56:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2920566276",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uFR1y",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] This PR is to register a \"manual JLL\" and Auto-registrator fails because of the _ in the name.\r\n\r\nThe JLL are generated from closed source but we have permission to distribute the precompiled artifacts.\r\nSee the license in the tarballs.",
+      "createdAt": "2025-05-29T21:22:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2920619378",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uGEQ1",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nFrom slack: I'd like some changes to the README first:\r\n\r\n<img width=\"524\" alt=\"image\" src=\"https://github.com/user-attachments/assets/04124050-2870-4cc6-943f-2f4ba8b514d0\" />\r\n",
+      "createdAt": "2025-05-29T23:47:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2920825909",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uGvTR",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe pull request https://github.com/leyffer/BQPD_jll.jl/pull/1 aims to address the comments of @odow.",
+      "createdAt": "2025-05-30T01:46:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2921002193",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uHjDB",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] @amontoison I think you can also remove the `+0` from the build number. If this PR is merged, then future updates will go through automatically. If we keep the build number, then I think they have to be manually merged every time (this happened to Gurobi_jll and Xpress_jll, so I removed the build number).",
+      "createdAt": "2025-05-30T04:44:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2921214145",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uHnOq",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thanks @odow ! I was not aware of that. I removed the `+0` from the build number.",
+      "createdAt": "2025-05-30T04:57:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2921231274",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uHn34",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] A different PR #132004 was opened after removing the `+0`.\r\nIt should supersede this PR.",
+      "createdAt": "2025-05-30T04:59:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131996#issuecomment-2921233912",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BQPD_jll\n- Repository: https://github.com/leyffer/BQPD_jll.jl\n- Created by: @amontoison\n- Version: v1.0.0+0\n- Commit: 28ade38cfa0a567339b5feb33e8b5ed6d3524b51\n- Reviewed by: @amontoison\n- Reference: https://github.com/leyffer/BQPD_jll.jl/commit/28ade38cfa0a567339b5feb33e8b5ed6d3524b51#commitcomment-158469509\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6893c7d069b86ae542f5aeb3934dbc81523015b72814aa132db23f43a13906eee4c14a98a342192ba0c65d8cabf9c511878e4cd4e5fed07cf286e00ae8db8aecb288c8c98cc097c38a99b998bab9d14579c4aa306e8e2bc11bba992fcb5d5d2cff1b0eb754d3624647443c8889618dbfbbde90e055c694fa28fe8e51669e4b1306c1169460b3dd6ed27e1efa6e20edd2db34c786af8a313798c69b977f9daad9ab39026d46b100b41564b633925e88bb2 -->",
+  "package_name": "BQPD_jll",
+  "closed_at": "2025-05-30T17:12:56Z",
+  "title": "New package: BQPD_jll v1.0.0+0"
+}

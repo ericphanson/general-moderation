@@ -1,0 +1,202 @@
+{
+  "created_at": "2022-09-08T15:16:01Z",
+  "review_comments": [
+    {
+      "id": 1101405157,
+      "node_id": "PRR_kwDOBhF1q85Bphvl",
+      "user": {
+        "login": "kerguler",
+        "id": 14839751,
+        "node_id": "MDQ6VXNlcjE0ODM5NzUx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/14839751?u=9c5940bb6c9198f1636ae2fdf74ebcf1295a24a6&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/kerguler",
+        "html_url": "https://github.com/kerguler",
+        "followers_url": "https://api.github.com/users/kerguler/followers",
+        "following_url": "https://api.github.com/users/kerguler/following{/other_user}",
+        "gists_url": "https://api.github.com/users/kerguler/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/kerguler/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/kerguler/subscriptions",
+        "organizations_url": "https://api.github.com/users/kerguler/orgs",
+        "repos_url": "https://api.github.com/users/kerguler/repos",
+        "events_url": "https://api.github.com/users/kerguler/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/kerguler/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/67929#pullrequestreview-1101405157",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/67929",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/67929#pullrequestreview-1101405157"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/67929"
+        }
+      },
+      "submitted_at": "2022-09-08T20:55:40Z",
+      "commit_id": "0ded6b39330efbbda6d0734deb751a20b2c43c07"
+    },
+    {
+      "id": 1102815907,
+      "node_id": "PRR_kwDOBhF1q85Bu6Kj",
+      "user": {
+        "login": "kerguler",
+        "id": 14839751,
+        "node_id": "MDQ6VXNlcjE0ODM5NzUx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/14839751?u=9c5940bb6c9198f1636ae2fdf74ebcf1295a24a6&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/kerguler",
+        "html_url": "https://github.com/kerguler",
+        "followers_url": "https://api.github.com/users/kerguler/followers",
+        "following_url": "https://api.github.com/users/kerguler/following{/other_user}",
+        "gists_url": "https://api.github.com/users/kerguler/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/kerguler/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/kerguler/subscriptions",
+        "organizations_url": "https://api.github.com/users/kerguler/orgs",
+        "repos_url": "https://api.github.com/users/kerguler/repos",
+        "events_url": "https://api.github.com/users/kerguler/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/kerguler/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "I understand the naming guidelines for auto merging packages; however, I would like to keep the name sPop2.jl if possible. This package implements a mathematical model, which is already published with the same name [sPop](https://doi.org/10.12688/f1000research.15824.3) and [sPop2](https://doi.org/10.1038/s41598-022-15806-2).",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/67929#pullrequestreview-1102815907",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/67929",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/67929#pullrequestreview-1102815907"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/67929"
+        }
+      },
+      "submitted_at": "2022-09-09T19:42:34Z",
+      "commit_id": "cd16fa256f904156cb36dcfee9898e5aa73bdc6a"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 67929,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85J9kaB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-09-08T15:29:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1240876673",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KI_Hj",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I believe this is a bit on the general side. Pop can mean population in so many different fields. I would like to recommend adding something like Matrix-sPop2 or something along those lines. ",
+      "createdAt": "2022-09-12T14:58:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1243869667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KJBhq",
+      "author": {
+        "login": "kerguler"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I believe this is a bit on the general side. Pop can mean population in so many different fields. I would like to recommend adding something like Matrix-sPop2 or something along those lines.\r\n\r\nMany thanks for your advise @ViralBShah . sPop originally referred to structured population model, and anyone reading the publications will be looking for this specific acronym. I would be grateful to keep it as is. But, is this the only obstacle in the path?",
+      "createdAt": "2022-09-12T15:05:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1243879530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85KJEIQ",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, the name is the only obstacle. Note that people looking for it will still find it so long as sPop2 is in the package name. Basically my suggestion is name it with `<discipline name>-sPop2` or something along those lines (assuming - is allowed in package names).",
+      "createdAt": "2022-09-12T15:13:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1243890192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MJnyJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-10-13T13:14:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1277590665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MJ2cs",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@kerguler Should we close this and you'll have a new registration?",
+      "createdAt": "2022-10-13T13:52:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1277650732",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MKEZD",
+      "author": {
+        "login": "kerguler"
+      },
+      "authorAssociation": "NONE",
+      "body": "@ViralBShah yes please",
+      "createdAt": "2022-10-13T14:30:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/67929#issuecomment-1277707843",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: sPop2\n- Repository: https://github.com/kerguler/sPop2.jl\n- Created by: @kerguler\n- Version: v1.1.0\n- Commit: c5f13aac0f215821f7d53518a3f6ae51e4d04d46\n- Reviewed by: @kerguler\n- Reference: https://github.com/kerguler/sPop2.jl/issues/1#issuecomment-1241774158\n- Description: a dynamically-structured matrix population model\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359886f7ed7b7995433cd16c609d23b7c8b2b4ddb3afceb791f735583bff7e076eb884619d519aa2005fa30bdfb1fd2a311d58035dc1607cfce3c0b3ac857435c50d5523805bf1023ed5cede5a3cc77b69a82e092ab4cb980fdd42b70d8eb4089386b41b03a99581efd264ea7b9c3973b2da -->",
+  "package_name": "sPop2",
+  "closed_at": "2022-10-13T15:40:18Z",
+  "title": "New package: sPop2 v1.1.0"
+}

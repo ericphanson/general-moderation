@@ -1,0 +1,239 @@
+{
+  "created_at": "2024-03-19T17:25:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 103191,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q853q95O",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-19T17:27:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2007752270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853rA_d",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nThe LICENSE text should be in a file LICENSE, and does not belong in the README.\r\n\r\n[noblock]",
+      "createdAt": "2024-03-19T17:34:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2007764957",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853rOsL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for extending the README! The package looks like a pretty loose grab bag of personal utilities, though, which usually [isn't suitable for General](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now). Or maybe it's just a matter of explaining the scope of the package a bit more. Although the name `MeltingPot` also seems like an indicator that this is a \"personal package\" without a well-defined scope, and thus shouldn't be in General.\r\n\r\nThe main problem with personal packages is that everyone has their own `MeltingPot`, and we can't accommodate a particular person taking up a general name like that.\r\n\r\n[noblock]",
+      "createdAt": "2024-03-19T18:04:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2007821067",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853txPE",
+      "author": {
+        "login": "paulxshen"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thanks for your feedback but this isn't a personal package. \"Melting pot\" refers to miscegeny of types as the principal purpose of my package is to define arithmetic operations between previously incompatible types by automatically applying broadcasting. For example, you can now add a vector of arrays to a named tuple of arrays or a constant which can represent scalar or vector fields in an application. Compiler transforms like AD in Zygote.jl mutate types a lot, and my package eliminates many AD errors and would benefit users of Zygote.jl and Flux.jl",
+      "createdAt": "2024-03-20T01:16:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2008486852",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853t83V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Alright, that sounds reasonable. I'm not sure that idea really comes out in the README, so you might want to expand that a little, adding that explanation. Assuming nobody else has an issue with it, I'll unblock.\r\n\r\nYou'll have to edit your own comment to add `[noblock]` as well",
+      "createdAt": "2024-03-20T01:33:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2008534485",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853ujAK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would definitely recommend extending the documentation of this package a bit. In its current state I’m not sure how someone coming across it would be able figure how to use it (or what to use it for).\r\n\r\nAs a more serious concern, though: I had a brief look at the code, and all the definitions are type piracy, redefining the behavior of built-in types. That seems like a very dangerous thing to do. I don’t know that we have a specific policy in General against type piracy, but it certainly gives me pause. I’m going to see if I can get some more eyes on this.",
+      "createdAt": "2024-03-20T05:38:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2008690698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853ukHD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "~~Like, maybe these should be contributed to Base?~~",
+      "createdAt": "2024-03-20T05:45:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2008695235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853urLD",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd vote against merging this package, since definitions like\r\n\r\n```julia\r\nBase.round(x::AbstractFloat) = Base.round(Int, x)\r\nBase.size(x) = (length(x),)\r\n```\r\n\r\nhave VERY far reaching consequences, even for code that isn't using Zygote. This changes the results of e.g.\r\n\r\n```julia\r\njulia> size([1 2; 3 4])\r\n(2, 2)\r\n\r\njulia> my_size(x) = (length(x),)\r\nmy_size (generic function with 1 method)\r\n\r\njulia> my_size([1 2; 3 4])\r\n(4,)\r\n```\r\n\r\ncompletely, for _every user_. You're basically erasing dimensionality of arrays. Pretty much the same goes for the other definitions.",
+      "createdAt": "2024-03-20T06:21:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 6
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2008724163",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8530rFc",
+      "author": {
+        "login": "paulxshen"
+      },
+      "authorAssociation": "NONE",
+      "body": "@Seelengrab `Base.size(x) = (length(x),)` is a fallback. It doesn't actually overwrite Base.size methods because anything with a specific type definition would take precedence over `Base.size(x::Any)` . It fixes some Zygote errors when size is undefined for that type. \r\n\r\nOther methods define operations for type combinations that wouldn't match any existing dispatch rules and thus wouldn't override existing behavior - but can't guarantee it without thorough tests\r\n\r\nSo I don't think it's correct to say \"You're basically erasing dimensionality of arrays.\" but I can see why you'd be uncomfortable with it",
+      "createdAt": "2024-03-20T18:14:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2010296668",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8530wwl",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> It fixes some Zygote errors when size is undefined for that type.\r\n\r\nIt would be better to provide an appropriate implementation of `size` for that type instead of trying to fix the errors it produces in such an overly generic way. Not everything has a `size`, and not everything has to be differentiable.\r\n\r\n> Other methods define operations for type combinations that wouldn't match any existing dispatch rules and thus wouldn't override existing behavior - but can't guarantee it without thorough tests\r\n\r\nThe issue isn't that there currently aren't any such methods, but that Base is free to add any such methods as it pleases (it owns all of the involved types & functions) and that there's no safeguard for that from your end, because it's full-on type piracy. Additionally, such an overly generic fallback is likely going to introduce invalidations for badly inferred code once your package is loaded.\r\n\r\nThere's also the issue of broadcasting over `Dict`s and `NamedTuple` being an explicitly reserved operation, so you defining it here for `AbstractDict` even is certainly breaking what Base wants to communicate:\r\n\r\n```julia\r\njulia> Dict(:a => 1) .+ 1\r\nERROR: ArgumentError: broadcasting over dictionaries and `NamedTuple`s is reserved\r\nStacktrace:\r\n```",
+      "createdAt": "2024-03-20T18:27:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2010319909",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85302S-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> It would be better to provide an appropriate implementation of `size`\r\n\r\nIt seems to me like this package would also be okay if it didn't override methods in `Base`. It would be fine if it was `MeltingPot.size`, and then @paulxshen could write AD-centric code using that instead of the `Base.size`. Similarly for `*`, that would have to be `MeltingPot.mul` or something, but of course, it could be used with a custom infix operator like `*ₘ`.\r\n\r\nThis would be something to discuss in the community, but I feel like we should have an explicit rule in General against at least the egregious use of type piracy (whatever \"egregious\" is, ~~maybe even *all* type piracy~~). It's probably not something that can be enforced automatically, but it seems like a good reason to say \"No\" to a registration when it pops out, like in this case.",
+      "createdAt": "2024-03-20T18:41:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2010342590",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85307hf",
+      "author": {
+        "login": "paulxshen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for all the feedback. No worries a lot of this is research code that enables clean concise upstream code in my applications but may produce unsafe behaviors for others. I put it in General to see if other folks find it useful but I respect your judgement of it being too hackish and unsafe  ",
+      "createdAt": "2024-03-20T18:52:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2010363999",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8531L89",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's not that this cannot be registered in some form, but you should find some way to do this without type piracy.\r\n\r\nEven if it's not registered, just for your own safety: altering the behavior of Base types and functions can have some very unforeseen consequences. You get the modified behavior anytime `MeltingPot` is loaded (even as an indirect dependency), and you have no idea if some other package you might be using might rely on the standard definition (and they might very well rely on properties of `size(x::Any)`, so it is not safe to override the default). You could very easily get silently wrong results and really screw yourself over. Don't do it.\r\n\r\nI think I'm going to close this now, but definitely feel free to re-register a \"safer\" version of this.",
+      "createdAt": "2024-03-20T19:21:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103191#issuecomment-2010431293",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MeltingPot\n- Repository: https://github.com/paulxshen/MeltingPot.jl\n- Created by: @paulxshen\n- Version: v0.1.0\n- Commit: 9bc629441e6e8e01e433868a86a762ad37960496\n- Git reference: HEAD",
+  "package_name": "MeltingPot",
+  "closed_at": "2024-03-20T19:21:23Z",
+  "title": "New package: MeltingPot v0.1.0"
+}

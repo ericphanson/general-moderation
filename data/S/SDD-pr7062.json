@@ -1,0 +1,166 @@
+{
+  "created_at": "2019-12-22T21:36:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 7062,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMwNDkxMA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2019-12-22T21:38:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-568304910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMwNjc3MA==",
+      "author": {
+        "login": "pedrozudo"
+      },
+      "authorAssociation": "NONE",
+      "body": "this is a julia wrapper for a library written in C:\r\nhttp://reasoning.cs.ucla.edu/sdd/\r\n\r\nthis is why the name of the package does not pass the auto-merge guideline checks.",
+      "createdAt": "2019-12-22T22:07:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-568306770",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMwOTcyNA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://julialang.github.io/Pkg.jl/v1/creating-packages/index.html#Package-naming-guidelines-1\r\n\r\nGuideline 1:\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\nGuideline 4:\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nThat being said, I do acknowledge that the guideline 6 says the following:\r\n> CPLEX.jl wraps the CPLEX library, which can be identified easily in a web search.\r\n> MATLAB.jl provides an interface to call the MATLAB engine from within Julia.\r\n\r\nBut I think that naming the Julia package after the library really only makes sense if the library is one of the first search results. For example, if you search for `CPLEX`, then the IBM web page for the CPLEX Optimizer is the first result. And if you search for `MATLAB`, then the Mathworks web page for MATLAB is the first result.\r\n\r\nBut if you search for `SDD`, then the C library doesn't show up in the first few pages.\r\n\r\nSo I think that guidelines 1 and 4 are important here.\r\n\r\nHow about one of the following:\r\n- `SententialDecisionDiagrams.jl`\r\n- `SDDiagrams.jl`",
+      "createdAt": "2019-12-22T22:51:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-568309724",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMTA0OA==",
+      "author": {
+        "login": "pedrozudo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for having a look at this!\r\n\r\nI am not sure I can agree with the point you are making about the search results.\r\n\r\nIf I look at point six of the guidelines, it says:\r\n\r\n> 6. Packages that wrap external libraries or programs should be named after those libraries or programs.\r\n\r\nIt does not really say anything about being easily identifiable in a web search, this is only mentioned in one of the examples. Moreover, if I google (in an anonymous session) \"sdd.jl\" the first hit is the github repo.",
+      "createdAt": "2019-12-22T23:12:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-568311048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMTI3Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My main point is that when it comes to naming Julia packages, we should prioritize clarity. By which I mean, the name alone should give you some sense of what the package is about.\r\n\r\nIf you ask the average Julia user what `SDD` is, I doubt they will say \"Sentential Decision Diagrams\".\r\n\r\ncc: @StefanKarpinski @fredrikekre @KristofferC and the other registry maintainers.",
+      "createdAt": "2019-12-22T23:15:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-568311276",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MDc2OTcxNA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It doesn't seem like there is a lot of support for this name. I would highly recommend a more descriptive name.\r\n\r\nPersonally, I can't merge this PR with the current name of `SDD`.",
+      "createdAt": "2020-01-04T09:15:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-570769714",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MDc2OTkyMA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Again, here are some ideas:\r\n- `SententialDecisionDiagrams.jl`\r\n- `SDDiagrams.jl`\r\n- `SDDReasoning.jl`",
+      "createdAt": "2020-01-04T09:18:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-570769920",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MTg0OTkwNg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Bump.\r\n\r\nI cannot merge this pull request with the current name `SDD`.\r\n\r\nI’ll leave this open for two more weeks. If another registry maintainer has not merged it by then, I’ll close this.",
+      "createdAt": "2020-01-08T01:26:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-571849906",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Mzk4MDUyMA==",
+      "author": {
+        "login": "pedrozudo"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, no worries. I changed the name to SententialDecisionDiagrams in the Project.toml file. Is there anything else that I should change? Also, I accidentally made a new pull request.\r\n\r\nThanks for taking care of this! ",
+      "createdAt": "2020-01-14T03:19:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-573980520",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Mzk5ODY1Nw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of #7877 ",
+      "createdAt": "2020-01-14T04:46:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7062#issuecomment-573998657",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SDD\n- Repository: https://github.com/pedrozudo/SDD.jl\n- Created by: @pedrozudo\n- Version: v0.1.0\n- Commit: 3d4e323ed542d8ef08e6ba4cedeb7f63153019bb\n- Git reference: master",
+  "package_name": "SDD",
+  "closed_at": "2020-01-14T04:46:21Z",
+  "title": "New package: SDD v0.1.0"
+}

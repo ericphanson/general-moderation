@@ -1,0 +1,416 @@
+{
+  "created_at": "2020-01-08T19:23:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 7661,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjIyMTE1OQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Name is not at least five characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-01-08T19:31:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572221159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjIyNDE4NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think it would be better to have a more descriptive name.",
+      "createdAt": "2020-01-08T19:38:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572224185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjIyNjI5Mw==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yep, however this time we’re following a naming tradition from MLJ.jl to indicate this is a package for Gaussian processes. https://github.com/alan-turing-institute/MLJ.jl",
+      "createdAt": "2020-01-08T19:44:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572226293",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjIyODM1OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, in hindsight, `MLJ` probably wasn’t the best name either.\r\n\r\nI’d like us to move away from short inscrutable initialisms. In particular, I don’t think that we should add any new three letter packages except in the most painfully obvious circumstances.\r\n\r\nHow about `GaussianProcesses2.jl`, `GaussianProcessesX.jl`, or `GaussianProcessModels.jl`?",
+      "createdAt": "2020-01-08T19:49:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572228358",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjIyOTg3Mw==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> How about GaussianProcesses2.jl, GaussianProcessesX.jl, or GaussianProcessModels.jl?\r\n\r\nI'm not sure about these names. Personally, I think `GPJ` is short and meaningful. However, this is subjective I agree.  \r\n",
+      "createdAt": "2020-01-08T19:53:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572229873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjI3Njg2Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From the naming guidelines: https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1\r\n\r\n> In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.",
+      "createdAt": "2020-01-08T21:58:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572276863",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjUyMzk2Ng==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I want to suggest `GaussianML` or `GaussianProcessML` or `GaussianAI` too.",
+      "createdAt": "2020-01-09T11:39:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572523966",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjgyMjE0MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I want to suggest `GaussianML` or `GaussianProcessML` or `GaussianAI` too.\r\n\r\nThose all look good to me. Technically the automerge bot will complain that it ends in a capital letter, but I will manually approve and merge any of those names.",
+      "createdAt": "2020-01-10T00:42:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572822141",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Mjg0MTY4Mg==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "A quick Google search with the word \"GPJ.jl\" suggests that GPJ is ranked as the top result. \r\n\r\nIn my humble opinion, package developers should be rewarded by at least the flexibility of naming their own packages (as long as it is respectful and considerate), for the hard work they put in.",
+      "createdAt": "2020-01-10T02:11:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-572841682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzMzNzIzNQ==",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "fwiw, i work with gaussian processes -- so \"GP\" usually mean gaussian process to me -- and I didn't know from the name \"GPJ\" that this was a package for gaussian processes",
+      "createdAt": "2020-01-11T17:35:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-573337235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MzM2MjU2NA==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The name `GPJ` comes from a combination of `GP` and `J`ulia, with a similar spirit to other GP packages, e.g. [`GPy`](https://github.com/SheffieldML/GPy), [`GPflow`](https://github.com/GPflow/GPflow), and [`GPyTorch`](https://github.com/cornellius-gp/gpytorch).  \r\n\r\nI would like to highlight again package names are always subjective: different developers have different technical backgrounds and aesthetic preferences, so I would humbly suggest Julia package managers respect package developers' naming preferences as much as possible, and keep their personal recommendations as suggestions, instead of \"decisions\".  \r\n",
+      "createdAt": "2020-01-11T23:06:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-573362564",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NDczMzA0MQ==",
+      "author": {
+        "login": "jonathanBieler"
+      },
+      "authorAssociation": "NONE",
+      "body": "The guidelines are pretty clear when it comes to avoiding acronyms, it's not just personal recommendations. That part is also important :\r\n\r\n>Package names should be sensible to most Julia users, **even to those who are not domain experts**. \r\n\r\nNote that all Julia packages indicates that they are written in Julia with the `.jl` at the end, so the equivalent of GPy would be `GP.jl` not `GPJ.jl`.\r\n\r\nAnother thing to note is that it's easy to define a shorthand for your package when using it (e.g. `const GP = GaussianProcessModels`) so there's really no downside to having an explicit name. For example I made bindings for SDL that got renamed to `SimpleDirectMediaLayer.jl`, which I found a bit long at the time (since everybody is using the SDL acronym), but was clearly the better choice.\r\n\r\nJust my 2¢",
+      "createdAt": "2020-01-15T16:14:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 6
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-574733041",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NzY4NTE1MA==",
+      "author": {
+        "login": "mcabbott"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "One nice idea from the VML.jl renaming is that you can export a short alias, so that docs & users all write the same short things like `IVM.exp(...` after one long-and-really-explicit `using` command. \r\n\r\n https://github.com/JuliaMath/IntelVectorMath.jl/commit/a6dc769355d3ab00411ce2da5d5078b28399be3c ",
+      "createdAt": "2020-01-23T13:39:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-577685150",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3ODcyMDI5OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I will leave this open for two more weeks. If another registry maintainer has not merged it by then, I will close it as stale.",
+      "createdAt": "2020-01-27T12:14:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-578720298",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTE0MDY2NQ==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I will leave this open for two more weeks. If another registry maintainer has not merged it by then, I will close it as stale.\r\n\r\nIt would be unfortunate if we have to keep this package unregistered, since this project is part of a bigger effort for creating a full-featured well-tested GP package in Julia, which would mirror the influential [GPML](http://www.gaussianprocess.org/gpml/code/matlab/doc/) Matlab library, but in pure Julia. \r\n\r\nI hope Julia package registry maintainers can reconsider their decision (of not merging this PR). Rejecting a package on the ground of disagreed package name sounds strange to us (the [Turing](https://github.com/TuringLang/Turing.jl) team).",
+      "createdAt": "2020-02-02T14:25:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-581140665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTE0ODMwMg==",
+      "author": {
+        "login": "Tokazama"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> It would be unfortunate if we have to keep this package unregistered\r\n\r\nWhy would you hav to keep it unregistered? You can always change the name. Something like GuassianProcessesML seems like a clearer way of tying it to the original package.",
+      "createdAt": "2020-02-02T15:51:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-581148302",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTE4NDc1MA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We would be happy to have your package in the General registry.\r\n\r\nWhile your package belongs to you, the General registry is a shared resource that belongs to the entire Julia community.\r\n\r\nI personally cannot merge with the name `GPJ.jl`. You are welcome to see if there is another General maintainer that is willing to merge this pull request with the current name. You can always ask on the `#pkg-registration` channel in the official Julia Slack (https://julialang.org/community/#chat).\r\n\r\nHowever, I would recommend that you instead rename the package to something longer and more descriptive. Here are the names that have been suggested in this thread; I would be happy to merge the package with any of the following names:\r\n- `GPFlow.jl`\r\n- `GaussianAI.jl`\r\n- `GaussianML.jl`\r\n- `GaussianProcesses2.jl`\r\n- `GaussianProcessesX.jl`\r\n- `GaussianProcessAI.jl`\r\n- `GaussianProcessML.jl`\r\n- `GaussianProcessModels.jl`\r\n- `GuassianProcessesAI.jl`\r\n- `GuassianProcessesML.jl`\r\n\r\nYou are also welcome to come up with another name that is not on the above list.\r\n\r\nAs others have pointed out, even with a longer package name, you can still use the short name in scripts as follows:\r\n```julia\r\nimport GaussianML\r\nconst GPJ = GaussianML\r\n```\r\n\r\nNow `GPJ` is an alias for `GaussianML`.",
+      "createdAt": "2020-02-02T22:30:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-581184750",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTMzNDcxMg==",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I get what you are saying that the J in GPJ represents  Julia, to match GPFlow.\r\nBut we already have that covered with the **.jl** in  *Package.jl* part of the name.\r\n\r\nOn the basis that this is (AFAICT) a wrapper of GPFlow, you might like to look at other wrapper libraries for their naming conventions.\r\nExamples of the top of my head:\r\n\r\n- SymPy.jl\r\n- PyPlot.jl (matplotlib)\r\n- TensorFlow.jl\r\n- Pandas.jl\r\n\r\n\r\nSeems like maybe \"GPFlow.jl\" might be good?\r\n\r\nAlso might help people what already know about GPFlow find it?\r\n\r\nDisregard if I have misread the code and it isn't a faithful wrapper.",
+      "createdAt": "2020-02-03T10:08:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-581334712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Mjc5NjE1Mg==",
+      "author": {
+        "login": "aminya"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Since a new package, named `GPFlux.jl`, is going to be registered, the best name for this would probably be `GPFlow.jl`\r\nhttps://github.com/JuliaRegistries/General/pull/8807",
+      "createdAt": "2020-02-06T08:44:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-582796152",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MjgyNTQ3Mw==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The plan for `GPJ` is to create a pure Julia implementation of GPML, utilising modern features in Julia like AD and multi-dispatching etc. The current GPFlow wrapper is merely to create a useful GP module first, before other parts are developed. \r\n\r\nSince there is a lot of in common between `GPFlux`, `Stheno`, `GPJ`, and `GaussianProcesses`, it might be worth to create a new umbrella for all GP related efforts and minimise duplicated work. \r\n",
+      "createdAt": "2020-02-06T09:59:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-582825473",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MzY5NzA4Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The plan for `GPJ` is to create a pure Julia implementation of GPML, utilising modern features in Julia like AD and multi-dispatching etc. The current GPFlow wrapper is merely to create a useful GP module first, before other parts are developed.\r\n> \r\n> Since there is a lot of in common between `GPFlux`, `Stheno`, `GPJ`, and `GaussianProcesses`, it might be worth to create a new umbrella for all GP related efforts and minimise duplicated work.\r\n\r\nIf I understand correctly, `GPML` is a package for Gaussian processes in machine learning.\r\n\r\nIf that is your long-term goal, then I think any of these would be great names:\r\n- `GaussianML.jl`\r\n- `GaussianLearning.jl`\r\n- `GaussianMachineLearning.jl`\r\n- `GaussianProcessML.jl`\r\n- `GaussianProcessLearning.jl`\r\n- `GaussianProcessMachineLearning.jl`\r\n- `GaussianProcessesML.jl`\r\n- `GaussianProcessesLearning.jl`\r\n- `GaussianProcessesMachineLearning.jl`\r\n- `MLGaussian.jl`\r\n- `LearningGaussian.jl`\r\n- `MachineLearningGaussian.jl`\r\n- `MLGaussianProcess.jl`\r\n- `LearningGaussianProcess.jl`\r\n- `MachineLearningGaussianProcess.jl`\r\n- `MLGaussianProcesses.jl`\r\n- `LearningGaussianProcesses.jl`\r\n- `MachineLearningGaussianProcesses.jl`",
+      "createdAt": "2020-02-08T03:15:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-583697086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4Mzg3Mjg3NA==",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks all for the comments. This PR has been replaced by https://github.com/JuliaRegistries/General/pull/9179.",
+      "createdAt": "2020-02-09T17:46:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/7661#issuecomment-583872874",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GPJ\n- Repository: https://github.com/TuringLang/GPnet.jl\n- Created by: @yebai\n- Version: v0.0.1\n- Commit: f8ac74ba4c5288588a01d36b42891aa849601f1e\n- Reviewed by: @yebai\n- Reference: https://github.com/TuringLang/GPnet.jl/issues/4#issuecomment-583871463\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf6f80abda724c882cf982e702d51316155043c603e70a425bdb5dc08e9e35d9994e9368d9fecdbcb1f0840e2023cd7014b4f288f1af3419833d040b0ca9f3e00981d29bb136696d661ccb2825931d850f3c0e379be5b5341a3ed8ddcf11af273f096b8bd2b044d2eba3b4b47131ac7c1ad49647bd9089c52cd8f91c19ad75d6d9 -->",
+  "package_name": "GPJ",
+  "closed_at": "2020-02-09T18:21:12Z",
+  "title": "New package: GPJ v0.0.1"
+}

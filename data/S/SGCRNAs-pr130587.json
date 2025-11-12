@@ -1,0 +1,173 @@
+{
+  "created_at": "2025-05-09T01:33:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130587,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86qwlMp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-09T01:47:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2864861993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qw6YK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Could you make sure that the README includes a brief description of what the package does, to have some context? Also, I noticed that the links to the documentation currently do not work.\r\n\r\nWithout context, it’s hard to give more specific feedback, but the [package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules) generally frown upon “random-letter” acronyms as package names.",
+      "createdAt": "2025-05-09T03:00:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2864948746",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qzi-y",
+      "author": {
+        "login": "C37H41N2O6"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz \r\nThank you for your comment. I'm currently making revisions, including the points you mentioned.",
+      "createdAt": "2025-05-09T08:28:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2865639346",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86q6b93",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You may also want to consider what the appropriate initial version number should be. If you are following [semantic versioning](https://semver.org), a version number of 1.0 would indicate that the API is \"stable\" and that you will track breaking and non-breaking changes according to what is documented to be the public API of the package. That generally requires full documentation and, ideally, reasonable test coverage, in order to really be able to track those breaking vs non-breaking changes. There's nothing to say that an initial registration shouldn't be at v1.0, if you feel that it is ready for to be labeled \"stable\". However, if you are still tweaking things, it maybe be better to start with, e.g., v0.1 and then switch to `v1.0` when you feel the package is in good shape. There's no problem with moving from `v0.x` to `v1.0`, just to mark the API stable.",
+      "createdAt": "2025-05-09T17:43:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2867445623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ragBi",
+      "author": {
+        "login": "C37H41N2O6"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz \r\nThank you for your suggestion regarding the version number. Except for addressing errors that I didn’t notice during verification or responding to feature requests from users, this is intended to be the final version, so I’m planning to keep it as v1.0.0.\r\n\r\nI’ve also addressed the comments you provided a few days ago.\r\nAs I’m not very familiar with systems like Git, I would greatly appreciate it if you could advise me on what steps I should take next.",
+      "createdAt": "2025-05-13T10:05:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2875850850",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86raz1k",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You have to fix\r\n\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n\r\nby [renaming the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository). After that, create a new registration (the same way you created this one).\r\n\r\n> As I’m not very familiar with systems like Git\r\n\r\nThat’s probably not sustainable in the long run 😉. I recommend https://git-scm.com/book/en/v2",
+      "createdAt": "2025-05-13T10:26:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2875932004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rnzJE",
+      "author": {
+        "login": "C37H41N2O6"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much for your guidance.\r\nI will resend it via JuliaHub. Also, thank you for recommending the reference book.\r\nRegarding the repository name, it is correctly set as `SGCRNAs.git`, not `SGCRNAs.jl.git`.\r\nI also searched the contents of the files, and apart from the `sitename` and `canonical` in `docs/make.jl`, I couldn't find any instance of the latter string.\r\nAlthough I don’t recall making any changes, I’ll try submitting it again in its current state.",
+      "createdAt": "2025-05-14T08:43:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2879337028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rqYY9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Regarding the repository name, it is correctly set as SGCRNAs.git, not SGCRNAs.jl.git.\r\n\r\nNo: it is a _requirement_ for Julia packages that the repository name includes the `.jl` suffix. You have to rename the repository on GitHub and add `.jl` ",
+      "createdAt": "2025-05-14T12:21:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2880013885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86sCevU",
+      "author": {
+        "login": "C37H41N2O6"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm sorry for the trouble caused by my poor understanding of English. I've changed the name to include the .jl extension.",
+      "createdAt": "2025-05-16T10:30:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2886331348",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86sDkw8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/131130",
+      "createdAt": "2025-05-16T12:43:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130587#issuecomment-2886618172",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SGCRNAs\n- Repository: https://github.com/C37H41N2O6/SGCRNAs\n- Created by: @C37H41N2O6\n- Version: v1.0.0\n- Commit: 58b5aaeba6c4116bc214dfa8dfb5d99f546bf0ca\n- Git reference: HEAD",
+  "package_name": "SGCRNAs",
+  "closed_at": "2025-05-16T12:43:41Z",
+  "title": "New package: SGCRNAs v1.0.0"
+}

@@ -1,0 +1,158 @@
+{
+  "created_at": "2024-06-30T20:52:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 110106,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86DDlVS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to SimpleArgParse. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.44 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-30T20:55:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2198754642",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DDlli",
+      "author": {
+        "login": "Eben60"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] This package is a fork of `SimpleArgParse.jl`, which is at v1.1.0. Breaking API changes not expected, and I'd like to register my package as v1.0.0 right from the start.",
+      "createdAt": "2024-06-30T20:59:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2198755682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DLTxw",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is there any chance that this could be contributed to the original `SimpleArgParse` and be released as `v2.0.0`? Could @admercs add @Eben60 as a co-maintainer?\r\n\r\nGenerally, we'd like to avoid registering forks, although there are circumstances where a `SimpleArgParse2` could be okay. Most notably, if `@admercs` considers `SimpleArgParse` feature-complete and/or would like to continue development independent of the breaking changes in `SimpleArgParse2`.\r\n\r\nIn any case, I'd say the name similarity here can only be overridden with explicit consent from @admercs.\r\n\r\n[noblock]",
+      "createdAt": "2024-07-01T18:35:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2200779888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DMn4i",
+      "author": {
+        "login": "Eben60"
+      },
+      "authorAssociation": "NONE",
+      "body": "I had a friendly e-mail exchange with @admercs , and I would have definitely preferred to join the efforts. However that's his last mail:\r\n\r\n>Hi Eben60\r\n>\r\n> I apologize for the very slow reply. As you can probably imagine, I do not have time for this project at the moment. I apologize for that.\r\n> \r\n> Feel free to develop your fork however you wish. If you would still like my advice, I would be more than happy to offer it.\r\n\r\nTo which I suggested various possibilities to continue to work on the package jointly, however got (yet) no reply. Based on it, and on the previous mail, I estimate the chances of my work being merged into the original package being slim.\r\n\r\nSurely I could change the name to something neutral, however I would, if possible, prefer a name clearly referring to the original package.\r\n[noblock]",
+      "createdAt": "2024-07-01T21:43:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2201124386",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DM9LH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This absolutely seems like a situation where @admercs should add you as a co-maintainer to drive the continuing development of the package.\r\n\r\nIn the past, when packages become unmaintained, we have moved them to an organization and added new maintainers. This is something we would only do if @admercs is unreachable over a very extended period of time, which I don't think is the case yet.\r\n\r\nLet's wait for @admercs to chime in here.",
+      "createdAt": "2024-07-01T22:31:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2201211591",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86D3n1b",
+      "author": {
+        "login": "Eben60"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz, I've in the meanwhile changed my mind and herewith I block the registration.\r\n\r\n> This absolutely seems like a situation where @admercs should add you as a co-maintainer to drive the continuing development of the package.\r\n\r\nFrom my side that would be OK (provided I get full merge rights), however @admercs in his mail which I cited above stated pretty clear his position - which is absolutely understandable, i.e. complete lack of spare time. Note, I didn't also yet get any response from him onto my mail from June 19, wherein I suggested taking me as co-maintainer.\r\n\r\nI'd still wait for another week, then register the package under a sufficiently different name, e.g. `YAArguParser`. \r\n\r\nI also think, the package is sufficiently different from the original one, and maybe not that \"simple\" any more to deserve the **Simple**ArgParse name. Actually here is some statistics - you see, my fork has 4x larger line count:\r\n\r\n(original) \r\n```\r\nSimpleArgParse.jl % scc -x yml,toml \r\n───────────────────────────────────────────────────────────────────────────────\r\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\r\n───────────────────────────────────────────────────────────────────────────────\r\nJulia                        3       428       48        31      349         33\r\nLicense                      1        21        4         0       17          0\r\nMarkdown                     1       140       45         0       95          0\r\n───────────────────────────────────────────────────────────────────────────────\r\nTotal                        5       589       97        31      461         33\r\n───────────────────────────────────────────────────────\r\n\r\n```\r\n\r\n(fork) \r\n```\r\nSimpleArgParse2.jl % scc -x yml,toml\r\n───────────────────────────────────────────────────────────────────────────────\r\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\r\n───────────────────────────────────────────────────────────────────────────────\r\nJulia                       21      1975      399       124     1452        137\r\nMarkdown                     5       449      110         0      339          0\r\nLicense                      1        24        5         0       19          0\r\n───────────────────────────────────────────────────────────────────────────────\r\nTotal                       27      2448      514       124     1810        137\r\n────────────────────────────────────────────────────────\r\n```",
+      "createdAt": "2024-07-07T10:10:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2212396379",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86D3qd1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> however @admercs in his mail which I cited above stated pretty clear his position - which is absolutely understandable, i.e. complete lack of spare time.\r\n\r\nA lack of spare time is definitely justification for not continuing the development of a package. I understand the realities of changing jobs, starting a family, or also just open-source burnout. Nobody owes anyone the indefinite continuation of an open-source project.\r\n\r\nHowever, Julia / the General registry is a bit unique in that we encourage nice, descriptive package names. I think that puts a responsibility on any maintainer registering in General to at least be available to hand the project over to a new maintainer if they can no longer continue maintenance. The more \"canonical\" the package name, the more important that there is a path towards a new maintainer. That's why I often push for very canonical names to be hosted by a GitHub organization with multiple owners.\r\n\r\nThere is precedent for the registry maintainers changing the URL for a registered package to point to a new, maintained fork. But this form of \"eminent domain\" is (and should be) an absolute last resort, for when the maintainer is completely unresponsive over a period of months. Basically, the \"got hit by a bus\" factor. It's much better if the original maintainer can be involved in the transfer and handover. But I do feel pretty strongly that  any package for which there is community interest should be under more or less active maintenance, and that we should avoid the `<PackageName>2` as a forking solution. (There are situations where `<PackageName>2` is the right thing to do, but those generally require the explicit consent of the `<PackageName>` maintainer)\r\n\r\n> I'd still wait for another week, then register the package under a sufficiently different name, e.g. YAArguParser.\r\n\r\nThat's fine, too, and probably the easiest solution.\r\n\r\nIt still leaves the problem that `SimpleArgParse` appears to be unmaintained, based on @admercs's email. I don't know how popular `SimpleArgParse` is in the wild, but if it could be considered one of the canonical arg-parsing solutions for Julia, that's something we should do something about, eventually.",
+      "createdAt": "2024-07-07T10:54:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2212407157",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86D3r4W",
+      "author": {
+        "login": "Eben60"
+      },
+      "authorAssociation": "NONE",
+      "body": "> but if it could be considered one of the canonical arg-parsing solutions for Julia, \r\n\r\n\"The\" canonical arg-parsing solution for Julia (225 Stars on GitHub) is [ArgParse.jl](https://github.com/carlobaldassi/ArgParse.jl) anyway.",
+      "createdAt": "2024-07-07T11:16:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2212412950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Euzpj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/110984\r\n\r\nHowever, I would still urge @admercs to think of a succession plan for the continued maintenance of `SimpleArgParse`",
+      "createdAt": "2024-07-13T11:27:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110106#issuecomment-2226862691",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SimpleArgParse2\n- Repository: https://github.com/Eben60/SimpleArgParse2.jl\n- Created by: @Eben60\n- Version: v1.0.0\n- Commit: cc94d830cacc57213502ca754981e874d40934d5\n- Git reference: HEAD",
+  "package_name": "SimpleArgParse2",
+  "closed_at": "2024-07-13T11:27:01Z",
+  "title": "New package: SimpleArgParse2 v1.0.0"
+}

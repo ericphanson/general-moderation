@@ -1,0 +1,46 @@
+{
+  "created_at": "2023-10-20T04:51:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "nkottary",
+  "merged_at": null,
+  "pr_number": 93754,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pn9Fk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Dash, DashTable\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-20T04:56:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93754#issuecomment-1772081508",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85poFf5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you give some context for this, and extend the README and/or documentation? “Example” sounds like maybe this is not something that should be registered…",
+      "createdAt": "2023-10-20T05:41:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93754#issuecomment-1772115961",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SampleDash\n- Repository: https://github.com/nkottary/SampleDash.jl\n- Created by: @nkottary\n- Version: v0.1.0\n- Commit: b0438c2a18b34ef8228f12b93fe4d2cbab0d1775\n- Reviewed by: @nkottary\n- Reference: https://github.com/nkottary/SampleDash.jl/commit/b0438c2a18b34ef8228f12b93fe4d2cbab0d1775#commitcomment-130487350\n- Description: Example Dash application on JuliaHub\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6028e5143e81ab36c8c7f3518adbbd46074af9a6c31440a49783e1f72a16ac4cc31e006bf53921e1260633a898206e3c12f3b7b0db8b409b75cc2812d638def047078427ac5d9ed9ac91d8bc1a0e64a41e17bdd0257ec90bd5697c4d587e74ca037eb19c982e78536547c2ccc8c18110dc3952fa99bc20e31e988fb6a9a1adedf2d3ae0e13058c4a1ba8a1299dcdef4ac82bab817d26324f30e01d9ac00edaa24f81a7334f54684b4459474b33096239a -->",
+  "package_name": "SampleDash",
+  "closed_at": "2023-10-20T07:46:36Z",
+  "title": "New package: SampleDash v0.1.0"
+}

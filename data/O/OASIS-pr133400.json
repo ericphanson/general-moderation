@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-06-21T18:26:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 133400,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ycHFp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CodecZlib, GeometryBasics\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 2 existing packages.\n  1. Similar to ONSAS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to PSIS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-21T18:32:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133400#issuecomment-2993713513",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ycJHE",
+      "author": {
+        "login": "Jeroen-van-der-Meer"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you Mr. Registrator, will comply.",
+      "createdAt": "2025-06-21T18:53:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133400#issuecomment-2993721796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ycJPz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/133401",
+      "createdAt": "2025-06-21T18:54:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133400#issuecomment-2993722355",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OASIS\n- Repository: https://github.com/Jeroen-van-der-Meer/OASIS.jl\n- Created by: @Jeroen-van-der-Meer\n- Version: v0.1.0\n- Commit: 7be70306f059c7274303702d5e5434260ffa9b54\n- Reviewed by: @Jeroen-van-der-Meer\n- Reference: https://github.com/Jeroen-van-der-Meer/OASIS.jl/commit/7be70306f059c7274303702d5e5434260ffa9b54#commitcomment-160575539\n- Description: Open Artwork System Interchange Standard (OASIS) file parser\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b55fba06d911f2d80bda094767a2b5b98e5bbc1a093bc16ac190a66ad822880f6bc55a92a9e7a621b57fb92bc2bff7cb2837511ee050502c2775320391a3b3ee7224454e9cdd1caccadb98065fbfd75b7ac7062c487954be7f10690d60822039923fb02266543c586f8624321134ac79e3945cb07abb1ff3d08dae6fecbe8c602ac2ca67cd3de2acef17f31f09929cc75dacdf4f6e2329a96150edd554446ff644cf0d53ce33fe5ffab4ee4f6e0c8ebe -->",
+  "package_name": "OASIS",
+  "closed_at": "2025-06-21T18:54:58Z",
+  "title": "New package: OASIS v0.1.0"
+}

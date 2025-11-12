@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-09-22T13:17:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 115673,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86NEksG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-22T13:20:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2366786310",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NEysQ",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Any difference from UnicodeFun.jl's functions? Would be nice to have a comparison or at least a mention in the README :)",
+      "createdAt": "2024-09-22T15:40:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2366843664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NSRzH",
+      "author": {
+        "login": "sonosole"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Any difference from UnicodeFun.jl's functions? Would be nice to have a comparison or at least a mention in the README :)\r\n\r\nI didn't know this pkg before you mentioned it.  **UnicodeFun** is a nice pkg providing latex to string convertion👍.  And **SuperSubScripts** aims only at converting things to sub/superscript. This is useful when generating internal functions or define  `show` function for a specific struct. \r\n[noblock]",
+      "createdAt": "2024-09-24T07:12:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2370378951",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NT0nO",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "UnicodeFun provides subscript/superscript conversion:\r\n```julia\r\njulia> using UnicodeFun\r\n\r\njulia> to_subscript(\"ax123\")\r\n\"ₐₓ₁₂₃\"\r\n```\r\nThat's why I wonder what the differences are...\r\nDepending on how big the differences are, would be nice to either contribute to UnicodeFun, or at least to mention it as a more mature package with somewhat less functionality.",
+      "createdAt": "2024-09-24T09:40:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2370783694",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NbEHG",
+      "author": {
+        "login": "sonosole"
+      },
+      "authorAssociation": "NONE",
+      "body": "> UnicodeFun provides subscript/superscript conversion:\r\n> ```julia\r\n> julia> using UnicodeFun\r\n> \r\n> julia> to_subscript(\"ax123\")\r\n> \"ₐₓ₁₂₃\"\r\n> ```\r\n> That's why I wonder what the differences are...\r\n\r\nyeah it supports subscript, but i found that it doesn't support **base** kwarg and floating data types.  [noblock]\r\n\r\ncould you @aplavin add [noblock] to your comments, so that this pkg could be auto-merged, thanks :)\r\n",
+      "createdAt": "2024-09-25T01:24:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2372682182",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aHtmV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-12T12:23:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2585713045",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86bG8aN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-20T12:23:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115673#issuecomment-2602288781",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SuperSubScripts\n- Repository: https://github.com/sonosole/SuperSubScripts.jl\n- Created by: @sonosole\n- Version: v0.1.0\n- Commit: 553e550f12462ba4f140c230252e557bc23ab239\n- Git reference: master\n- Description: convert real numbers or strings to superscripts and subscripts\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nconvert real numbers or strings to superscripts and subscripts\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "SuperSubScripts",
+  "closed_at": "2025-01-20T12:23:45Z",
+  "title": "New package: SuperSubScripts v0.1.0"
+}

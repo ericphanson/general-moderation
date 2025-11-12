@@ -1,0 +1,297 @@
+{
+  "created_at": "2024-03-08T22:31:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102561,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q852Z91z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-08T22:34:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986518387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aCM8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I'm not entirely sure \"micropackages\" like this are a good idea… but OK.",
+      "createdAt": "2024-03-08T22:55:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986536252",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aDBo",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Isn't this just `>=(0)` and `<(0)` respectively? What benefit does having this in a package bring? ",
+      "createdAt": "2024-03-08T22:58:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986539624",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aGLH",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Isn't this just `>=(0)` and `<(0)` respectively? What benefit does having this in a package bring?\r\n\r\n[noblock] Comparing against 0 requires promotion which is harder to implement than `signbit`. Some custom types may not support comparing against general values.",
+      "createdAt": "2024-03-08T23:14:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986552519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aHPA",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I'm not entirely sure \"micropackages\" like this are a good idea\r\n\r\n[noblock] It does seem like an overkill, but I suppose the package name wouldn't collide with a \"more normal\" package and hence doesn't occupy the public resource.",
+      "createdAt": "2024-03-08T23:20:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986556864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aKYH",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> [noblock] Comparing against 0 requires promotion which is harder to implement than signbit. Some custom types may not support comparing against general values.\r\n\r\nIt's just an example, you can do `>=(zero(T))` and `<(zero(T))` just as well to skip promotion. I don't think such personal utility functions are a good fit for General.",
+      "createdAt": "2024-03-08T23:39:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986569735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aLr0",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> It's just an example, you can do `>=(zero(T))` and `<(zero(T))` just as well to skip promotion. I don't think such personal utility functions are a good fit for General.\r\n\r\n[noblock]\r\n```julia\r\njulia> x=BigFloat(1)\r\n1.0\r\n\r\njulia> @btime !(signbit(x) || iszero(x))\r\n  65.884 ns (0 allocations: 0 bytes)\r\ntrue\r\n\r\njulia> @btime x>=zero(BigFloat)\r\n  97.904 ns (4 allocations: 144 bytes)\r\ntrue\r\n```\r\n(explaining my second point) Some types support general comparison but there is shortcut when they encode the sign and zero information in their data structures.\r\n\r\nOn your second point, it's not a personal package. It's motivated by a request by someone else from the main Julia repository.",
+      "createdAt": "2024-03-08T23:48:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986575092",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852aPse",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your benchmarks are a good case for a PR to the main Julia repository, so that every user of BigFloat can take advantage of this when they use `>=` and not just those using this package. Would you like to open one?\r\n\r\n> On your second point, it's not a personal package. It's motivated by a request by someone else from the main Julia repository.\r\n\r\nOh, I wasn't aware - could you share a link to that conversation?",
+      "createdAt": "2024-03-09T00:17:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986591518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852atZc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Oh, I wasn't aware - could you share a link to that conversation?\r\n\r\nI'm assuming the https://github.com/JuliaLang/julia/issues/35067 linked in the README",
+      "createdAt": "2024-03-09T03:32:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986713180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852a1Wv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> It does seem like an overkill, but I suppose the package name wouldn't collide with a \"more normal\" package and hence doesn't occupy the public resource.\r\n\r\n“Polluting the namespace” isn’t really what concerns me about micropackages. The problem is the cost of adding a dependency to a project, see, e.g. https://lucumr.pocoo.org/2019/7/29/dependency-scaling/ and the earlier post linked therein.\r\n\r\nIn Julia, the problem is even worse because a project cannot contain multiple versions of the same dependency. Thus, the more dependencies there are, the higher the risk of non-instantiable projects due to dependency conflicts. That’s why we should avoid normalizing micropackages in General.\r\n\r\n",
+      "createdAt": "2024-03-09T06:10:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986745775",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852bDgT",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> a PR to the main Julia repository\r\n\r\nPractically, getting a PR to be merged to the Julia base is much harder than package registration. I had a few attempts before but they mostly don't work.\r\n- The proposal is harder to go through. If they feel unnecessary then the PR would be put aside forever. Example: https://github.com/JuliaLang/julia/pull/48894\r\n- The workflow tests there are more strict, and since they involve building the binary from scratch, chances are that some errors are not what a package developer can handle. Example: https://github.com/JuliaLang/julia/pull/49150\r\n- When it does get merged, the update only takes effect on the next Julia version, which for a tiny change is too long.\r\n\r\n> due to dependency conflicts\r\n\r\nAre there cases when the dependabot can't handle? Micropackages wouldn't have many versions thus the version conflict is less likely. If you had a package which is basically a collection of micropackages, then the frequency of updating it is much higher and thus it's easier to have a version conflict. I think it's also why large projects tend to build on a family of small packages.\r\n\r\n> when they use `>=`\r\n\r\nIt's going off-topic, but the problem is that `>=` is just more general and thus slower. I don't know how to add a method to operate on a special value rather than a type.",
+      "createdAt": "2024-03-09T09:16:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986803731",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852bEMy",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I'm assuming the https://github.com/JuliaLang/julia/issues/35067 linked in the README\r\n\r\nThanks, I missed that. I don't see anyone asking for this to be a package; the only mention of \"General\" is the phrase \"in general\", which is an [idiom](https://idioms.thefreedictionary.com/in+general). In this case, it's referring to having constant propagation working for all types, which is not possible for all `BigFloat` due to its dependence on `ccall`.\r\n\r\n> It's going off-topic, but the problem is that >= is just more general and thus slower. I don't know how to add a method to operate on a special value rather than a type.\r\n\r\nFor Julia types that don't have to interface with an external library like GMP (as `BigFloat` does), `>=` is already just as fast:\r\n\r\n```julia\r\njulia> f(x) = x >= zero(typeof(x))\r\nf (generic function with 2 methods)\r\n\r\njulia> g(x) = !(signbit(x) || iszero(x))\r\ng (generic function with 2 methods)\r\n\r\njulia> @benchmark g(x) setup=(x=rand())\r\nBenchmarkTools.Trial: 10000 samples with 1000 evaluations.\r\n Range (min … max):  1.889 ns … 9.610 ns  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     1.910 ns             ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   1.915 ns ± 0.144 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n            ▄        █                                       \r\n  ▃▁▁▁▁▁▁▁▁▃█▁▁▁▁▁▁▁▃█▁▁▁▁▁▁▁▁▅▁▁▁▁▁▁▁▁▂▃▁▁▁▁▁▁▁▂▃▁▁▁▁▁▁▁▁▂ ▂\r\n  1.89 ns        Histogram: frequency by time       1.95 ns <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> @benchmark f(x) setup=(x=rand())\r\nBenchmarkTools.Trial: 10000 samples with 1000 evaluations.\r\n Range (min … max):  1.719 ns … 13.040 ns  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     1.740 ns              ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   1.742 ns ±  0.173 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n                      ▆                  █                    \r\n  ▂▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▃▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▃▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▄ ▂\r\n  1.72 ns        Histogram: frequency by time        1.75 ns <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n```\r\n\r\nSo the \"performance problem\" seems exclusive to the GMP backed types. Considering that these types are quite often used in calculations that are vastly more complicated and take orders of magnitude longer than 30ns (or 2ns on my machine, as timed by your benchmark above), I don't think this is worth it.",
+      "createdAt": "2024-03-09T09:30:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986806578",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852bLWr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I just think it would be a bad idea for any package to pull this in as a dependency. I'd definitely flag it in any code review.\r\n\r\nYou could *try* to get these functions into `Base`. If they don't get accepted, there'd probably be a good reason. In fact, I'm a little confused as to how general these definitions are. The `signbit` function this is based on feels a bit obscure. So if I had `MyNumberType`, I would have to define a method for `signbit` before I could use this, right?\r\n\r\nOr if not in `Base`, they might have a place in some other package like `Unitful`. Something where the performance-benefit of these definitions is relevant, and that's already a core dependency of packages in a particular relevant domain.\r\n\r\nBut beyond that, these definitions should be copied into projects instead of loaded from a dependency. So the right approach would be a \"blog post\" that is easily findable for people googling `ispositive` or other related keywords. The \"blog post\" could very well be the README of an unregistered package (with \"copy these functions\" in the instructions), maybe with an accompanying post on Discourse, and/or linked from relevant discussions like https://github.com/JuliaLang/julia/issues/35067.",
+      "createdAt": "2024-03-09T11:54:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986835883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852bMDe",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I would have to define a method for `signbit` before I could use this, right?\r\n\r\nInterestingly Julia has the fallback\r\nhttps://github.com/JuliaLang/julia/blob/53048b2ab1eb8ce412ef884a2431ca57da4dc4e6/base/number.jl#L137\r\n\r\nso if you define a comparison operator, you can also use it.",
+      "createdAt": "2024-03-09T12:05:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986838750",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852bMuk",
+      "author": {
+        "login": "putianyi889"
+      },
+      "authorAssociation": "NONE",
+      "body": "> _try_ to get these functions into `Base`\r\n\r\nhttps://github.com/JuliaLang/julia/pull/53677\r\nhopefully it works",
+      "createdAt": "2024-03-09T12:17:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1986841508",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852b1Kr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing at @putianyi889's request. The plan is to pursue https://github.com/JuliaLang/julia/pull/53677",
+      "createdAt": "2024-03-09T23:18:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102561#issuecomment-1987007147",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IsPositive\n- Repository: https://github.com/putianyi889/IsPositive.jl\n- Created by: @putianyi889\n- Version: v1.0.0\n- Commit: 4f7158517988ea3453e4da1800c0c1550e203927\n- Reviewed by: @putianyi889\n- Reference: https://github.com/putianyi889/IsPositive.jl/commit/4f7158517988ea3453e4da1800c0c1550e203927#commitcomment-139572433\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69c347791eb7b80e48664f1b503024e95ecf65d846665f43e4b11fc69dbd13457de70d2ab88134d25a12e609066f166b6e9c597f7f25dbc4292adf21b9c427bc27aae00989a94ebc6415f170c25716005d2a0495e0ecc2a5a46f4ed2f1d128217118fd211d61a4a7ab3a3e8fe20d0b5ba29eb58b7a67002842be70778b69f63b4c081013f69c428da5e5da6206c623efb7d1272aef77d60902b0f099b050b994113ed2ecad2d713a1542d129bf11b54b2 -->",
+  "package_name": "IsPositive",
+  "closed_at": "2024-03-09T23:18:33Z",
+  "title": "New package: IsPositive v1.0.0"
+}

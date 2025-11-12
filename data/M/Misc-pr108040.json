@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-05-31T18:10:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 108040,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_t-lJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to Mice. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.46 is at or below cutoff of 2.50.\n  2. Similar to Mimi. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Mill. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Minc2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-31T18:15:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108040#issuecomment-2142759241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_uDdq",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "the package content doesn't look like it would be useful for general Julia user, and the package name is too generic",
+      "createdAt": "2024-05-31T18:27:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108040#issuecomment-2142779242",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_u4ZN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, `Misc` is not a possible package name, apart from the fact that “personal utility packages” should not be registered in the General registry.",
+      "createdAt": "2024-05-31T21:24:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108040#issuecomment-2142996045",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Misc\n- Repository: https://github.com/xuestrange/Misc.jl\n- Created by: @xuestrange\n- Version: v1.0.0\n- Commit: 94efccb285404969ff790210aa18e518ebc308f7\n- Reviewed by: @xuestrange\n- Reference: https://github.com/xuestrange/Misc.jl/issues/1#issuecomment-2142751381\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359859b7984d757e8d21a7b1ff51b39053e7772aa1733b909aa030002ec5ea4e76899c8503e3497ee66afe8d8c108aaa359e2d3663a573879c1b2cd342522d27bed8240c10a2d8ae978de5771ad7a200e196b88153576da67c0c585f2b96c04e84ec5897144084403b2a556726ea3357c0bccdb175fe5890dd7e90426ece06e43975 -->",
+  "package_name": "Misc",
+  "closed_at": "2024-05-31T21:24:01Z",
+  "title": "New package: Misc v1.0.0"
+}

@@ -1,0 +1,113 @@
+{
+  "created_at": "2021-09-02T18:31:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 44084,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q842W0Xn",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@nkottary @ericphanson The GitHub repository (https://github.com/DilumAluthge/ExampleForTheNewPackageFeeds.jl) has a description (\"This is the GitHub repository description for my repo.\"), but Registrator did not include that description in the PR.",
+      "createdAt": "2021-09-02T18:32:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-911951335",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842W0qf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-09-02T18:34:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-911952543",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842W0to",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hm, we might be in this situation:\r\n\r\n> From the WebUI or CommentBot we seem to have a repo object with this field, so we can get the description without an additional API call. However, I'm not sure if it is always populated or not; if it is not populated, then we'd need to make an API call to fill out the fields (repo in the comment bot to use GitHub.jl, or get_repo in the WebUI to use GitForge.jl).\r\n\r\n(from https://github.com/JuliaRegistries/Registrator.jl/pull/349#issue-722931064). Or maybe the new version isn't deployed yet?",
+      "createdAt": "2021-09-02T18:34:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-911952744",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q842bmka",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@nkottary Can you check which version of Registrator.jl is deployed?",
+      "createdAt": "2021-09-05T18:48:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-913205530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q842bmuZ",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think it’s an older version since Registrator is still removing labels: https://github.com/JuliaRegistries/General/pull/44014. Or else my fix for that doesn’t work right.",
+      "createdAt": "2021-09-05T18:53:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-913206169",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q843zMDY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-10-06T12:43:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/44084#issuecomment-936165592",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ExampleForTheNewPackageFeeds\n- Repository: https://github.com/DilumAluthge/ExampleForTheNewPackageFeeds.jl\n- Created by: @DilumAluthge\n- Version: v0.1.0\n- Commit: 8284cd20829ca1194ff9d0b079924fcf1d80e36b\n- Reviewed by: @DilumAluthge\n- Reference: https://github.com/DilumAluthge/ExampleForTheNewPackageFeeds.jl/commit/8284cd20829ca1194ff9d0b079924fcf1d80e36b#commitcomment-55850783\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60e9e38047b76c52995184cf278e6ab16bb785df1975d99876e67a6215cd2beb48a3123020171f0b43180ea277816fb6db24372fa6e20f070d4d0c4e862e3d920d21020c16775b959279255090b9f879f39f9e02b2e3e63ef29f7985ba68bee416a9a6337c82b245c9394e7e07033c017da3172d96c209859c551546d3ce82ed119e1af48e0708443e5d6d28d0d72327a3a1b93dff5d9d19e14205473bdf5abfb0762ba8468c49366e4f820367ea45ff4f2d51c35bdb24b7801e107f67b62973c -->",
+  "package_name": "ExampleForTheNewPackageFeeds",
+  "closed_at": "2021-10-16T23:55:16Z",
+  "title": "New package: ExampleForTheNewPackageFeeds v0.1.0"
+}

@@ -1,0 +1,254 @@
+{
+  "created_at": "2024-11-22T23:36:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 120021,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86UuE7i",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-22T23:45:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495106786",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UvZ7C",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nIt's not clear to me whether the name of the package is appropriate. I was not able to find the `PRAS.jl` referenced in the documentation. If it exists, `PRASInterface` seems like and unusual name (why would a Julia package need another Julia \"Interface\")?\r\n",
+      "createdAt": "2024-11-23T11:59:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495454914",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Uvaos",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Update: I was now able to guess at the URL for the documentation https://nrel-sienna.github.io/PRASInterface.jl/dev/\r\n\r\nPlease note that the docs badge in the README is currently broken. That will probably resolve itself once this registration goes through and there is a tagged version, but please confirm that it works at that point.\r\n\r\nYou'll also want to add the \"About\" info from the documentation to the main README.\r\n\r\nNow that I've seen the documentation, I would recommend the package name `PowerSystemsPRAS.jl`. The current name `PRASInterface` only makes sense from the perspective of a `PowerSystems` user. It would be appropriate in an [org-specific registry](https://github.com/GunnarFarneback/LocalRegistry.jl), or as a submodule name, but not for the wider audience of the General registry. There might be other orgs or packages that might want to interface with PRAS, after all. Moreover, since you already have `PowerSystems`, it is common practice and encouraged to use `PowerSystemsSomething` for \"add-ons\", where there is little scrutiny on the package name. You basically \"own\" that namespace.",
+      "createdAt": "2024-11-23T12:09:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495457836",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UvlKl",
+      "author": {
+        "login": "jd-lara"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Update: I was now able to guess at the URL for the documentation https://nrel-sienna.github.io/PRASInterface.jl/dev/\r\n> \r\n> Please note that the docs badge in the README is currently broken. That will probably resolve itself once this registration goes through and there is a tagged version, but please confirm that it works at that point.\r\n> \r\n> You'll also want to add the \"About\" info from the documentation to the main README.\r\n> \r\n> Now that I've seen the documentation, I would recommend the package name `PowerSystemsPRAS.jl`. The current name `PRASInterface` only makes sense from the perspective of a `PowerSystems` user. It would be appropriate in an [org-specific registry](https://github.com/GunnarFarneback/LocalRegistry.jl), or as a submodule name, but not for the wider audience of the General registry. There might be other orgs or packages that might want to interface with PRAS, after all. Moreover, since you already have `PowerSystems`, it is common practice and encouraged to use `PowerSystemsSomething` for \"add-ons\", where there is little scrutiny on the package name. You basically \"own\" that namespace.\r\n\r\nThanks for the comments @goerz, on the name we would like to keep the existing one since it is an interface to this package https://github.com/NREL/PRAS that isn't own directly by us. This package is an interface between our data library PowerSystems.jl and PRAS that's where the names comes from. The difference is that the authors of PRAS decided not to register it in the general Julia registry. \r\n\r\nI will update the README and the registration request. ",
+      "createdAt": "2024-11-23T14:41:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495500965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ux4xV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for updating the README!\r\n\r\n> on the name we would like to keep the existing one\r\n\r\n[Like I said](https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495457836), I don't think the name `PRASInterface` is appropriate in the context of General. Is there something that you find objectionable about `PowerSystemsPRAS`?\r\n\r\nOf course, I don't have any special authority, so you could also ask for other people's opinion on Slack. If there's a broad consensus in the community that the name is okay, I'll be happy to unblock.",
+      "createdAt": "2024-11-24T16:53:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2496105557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UziTn",
+      "author": {
+        "login": "jd-lara"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Thanks for updating the README!\r\n> \r\n> > on the name we would like to keep the existing one\r\n> \r\n> [Like I said](https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495457836), I don't think the name `PRASInterface` is appropriate in the context of General. Is there something that you find objectionable about `PowerSystemsPRAS`?\r\n> \r\n> Of course, I don't have any special authority, so you could also ask for other people's opinion on Slack. If there's a broad consensus in the community that the name is okay, I'll be happy to unblock.\r\n\r\nThe objection is that PowerSystemsPRAS doesn't reflect the true usage of this library, if we develop our own Probabilistic Resource Adequacy capability then there will be name confusion. This is not the correct package convention in our organization. \r\n\r\nThe name we want to use is reflective of what the package actually does: an interface to PRAS.jl, similarly we registered in the past PowerModelsInterface.jl. It's an interface between our data model and another Julia modeling library period.  The difference is that in the case of PRAS.jl, a common library for users in the Resource Adequacy space, our team doesn't have the mechanism to make the authors register it to General. \r\n\r\nI don't understand the need to request community feedback for the registration of this package that follows the conventions of our organization that already have plenty of registered packages in the power systems modeling space. ",
+      "createdAt": "2024-11-25T02:17:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2496537831",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U07_c",
+      "author": {
+        "login": "adienes"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think it is important to note that the name `PRAS.jl` would also likely be rejected from General. Recall rule 1 on the naming guidelines:\r\n\r\n> 1. Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\nso the fact that PRASInterface.jl is related to PRAS.jl is kind of irrelevant because PRAS.jl only exists in a private registry.\r\n\r\nOn another note, I'm wondering if this should be a [package extension](https://pkgdocs.julialang.org/v1/creating-packages/#Conditional-loading-of-code-in-packages-(Extensions)) rather than a standalone? it seems like the functionality here only exists in the context of PowerSystem.jl and PRAS.jl together, and it does not have any function as an independent package.",
+      "createdAt": "2024-11-25T05:36:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2496905180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U4ic-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The name we want to use is reflective of what the package actually does: an interface to PRAS.jl\r\n\r\nMaybe I'm confused. An interface between PRAS and what else? Whatever that \"what else\" is should be part of the package name. I thought this package was an Interface between `PowerSystems` and `PRAS`, hence the suggestions.\r\n\r\n> similarly we registered in the past PowerModelsInterface.jl\r\n\r\nAt the time that was registered, there weren't as many volunteers reviewing package submissions. Thus, things slipped through the cracks. The name `PowerModelsInterface` has the same issue as `PRASInterface`: an interface is between two things, and the name does not indicate what those two things are. That package would probably not have been merged by today's standards.\r\n\r\n> I don't understand the need to request community feedback\r\n\r\nThe General registry is a community resource, so all registrations will be reviewed\r\n\r\n> for the registration of this package that follows the conventions of our organization\r\n\r\nYou are moving a package from the context of a specific organization to the General registry that addresses the entire community. For people *internal* to NREL-Sienna the name `PRASInterface` makes perfect sense. Someone in the general public does not have that context, so it is not clear what is interfacing with `PRAS` here. This wouldn't be a problem if packages in `Pkg` included the org name. That's something I'd love to have in Julia 2.0, but it's not what we have now. If this package is an interface between PRAS and general code inside your organization (rather than between a particular package like `PowerSystems` and `PRAS`), then probably `SiennaPRASInterface` would be the appropriate name.\r\n\r\nP.S.: Just reread [your original response](https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2495500965)\r\n\r\n> This package is an interface between our data library PowerSystems.jl and PRAS that's where the names comes from.\r\n\r\nSo I didn't just make this up. If what you say is true, there is no question that `PowerSystemsPRAS` is pretty much the only correct name for the package.",
+      "createdAt": "2024-11-25T12:12:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2497849150",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U4thF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> PRAS.jl would also likely be rejected from General\r\n\r\nYes, or at least it would receive some pushback. I'm actually not sure how exactly `PRASInterface` manages to avoid an explicit dependency on `PRAS`. There appears to be some vendored code…\r\n\r\nIt does seem like a problem to have a registered package interfacing with `PRAS` when `PRAS` is not registered. There's a reason that dependencies of registered packages also have to be registered. If PRAS ever were to be registered, I can't guarantee that it would manage to get an exception from the naming guidelines, even though I'm open to it. If `PRAS` had to change names, `PRASInterface` would have a problem.\r\n\r\nIt would be good for @GordStephen to clarify what kind of plans there might be for a registration of `PRAS`, and/or whether NREL can guarantee that `PRAS` will exist as a permanent name.\r\n\r\nSide node: if PRAS ever were registered, even if we make an exception for the name (which we very well might), the repository URL has to be changed to end with `.jl`. I'd recommend doing that anyway, as early as possible",
+      "createdAt": "2024-11-25T12:31:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2497894469",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U6ZbH",
+      "author": {
+        "login": "jd-lara"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> > PRAS.jl would also likely be rejected from General\r\n> \r\n> Yes, or at least it would receive some pushback. I'm actually not sure how exactly `PRASInterface` manages to avoid an explicit dependency on `PRAS`. There appears to be some vendored code…\r\n> \r\n> It does seem like a problem to have a registered package interfacing with `PRAS` when `PRAS` is not registered. There's a reason that dependencies of registered packages also have to be registered. If PRAS ever were to be registered, I can't guarantee that it would manage to get an exception from the naming guidelines, even though I'm open to it. If `PRAS` had to change names, `PRASInterface` would have a problem.\r\n> \r\n> It would be good for @GordStephen to clarify what kind of plans there might be for a registration of `PRAS`, and/or whether NREL can guarantee that `PRAS` will exist as a permanent name.\r\n> \r\n> Side node: if PRAS ever were registered, even if we make an exception for the name (which we very well might), the repository URL has to be changed to end with `.jl`. I'd recommend doing that anyway, as early as possible\r\n\r\nI can get behind using `SiennaPRASInterface` if it moves the conversation forward. Please just confirm so I can change the name. \r\n\r\nBTW, reading your reponse I have to feedback that comments like \"So I didn't just make this up. If what you say is true, there is no question that PowerSystemsPRAS is pretty much the only correct name for the package.\" aren't really a suggestion. ",
+      "createdAt": "2024-11-25T15:29:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2498336455",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U6iTR",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz please avoid statements like:\r\n\r\n> So I didn't just make this up. If what you say is true, there is no question that PowerSystemsPRAS is pretty much the only correct name for the package.\r\n\r\nYou do not decide the \"only correct name\" for a package. While you correctly state that you are not the final arbiter of names here, your tone and frequency of activity often suggests otherwise. Statements like this are far too aggressive, and factually incorrect. Please maintain a more conciliatory and suggesting rather than demanding tone. \r\n\r\nThe registry is an initial point of contact for many users and groups in the Julia community, and the **tone of naming disputes like this one is a source of frequent complaints** directed to me and other folks in community facing roles. Remember that by helping to maintain our naming guidelines you are representing the Julia community which we want to be a welcoming, kind place.\r\n\r\nSince the author has agreed to a potential alternative name I will not rebut any of the other statements, and support their bid to use that name.\r\n\r\n[noblock]",
+      "createdAt": "2024-11-25T15:44:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2498372817",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U63ku",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@rayegun Point taken. That phrasing was indeed out of line. I apologize.",
+      "createdAt": "2024-11-25T16:17:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2498459950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U7pIS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We talked this out on Slack. @jd-lara will check to see if renaming to `SierraPRASInterface` is easy to do. If the internal procedures within NREL make a rename too cumbersome (we're talking about a government agency, after all), we'll just stick to `PRASInterface` and I'll unblock.",
+      "createdAt": "2024-11-25T17:46:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2498662930",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U9S_b",
+      "author": {
+        "login": "jd-lara"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This PR can be closed given https://github.com/JuliaRegistries/General/pull/120172 ",
+      "createdAt": "2024-11-25T21:43:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120021#issuecomment-2499096539",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PRASInterface\n- Repository: https://github.com/NREL-Sienna/PRASInterface.jl\n- Created by: @jd-lara\n- Version: v0.1.0\n- Commit: dcb927a69268e3a776172e4c1c5d8bc83bfadaf2\n- Reviewed by: @jd-lara\n- Reference: https://github.com/NREL-Sienna/PRASInterface.jl/commit/dcb927a69268e3a776172e4c1c5d8bc83bfadaf2#commitcomment-149447558\n- Description: Interface to PRAS.jl maintained by Sienna\\Ops\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd634d97cf51ab4d406eaeaef64696c3629214c62e428fce9033960f5ee6be5906a358728c08f6542f9827ec9bce36ae11c16331f19046829d23e2804a3ca8f5286dee9d8c76a2de9a5b34a571cf4d963696d9e9f07b9d92c3385044dd4068cacdad2411217a08ffc9829527d0b877959f6f184edbf3b571118b79dd2e6dfae3eae371af8cb6aa6870f92014f3714e41ddba13ad681d31a39a432af65174271e8adbaf41797945555209d342d72c671f27b -->",
+  "package_name": "PRASInterface",
+  "closed_at": "2024-11-25T22:04:26Z",
+  "title": "New package: PRASInterface v0.1.0"
+}

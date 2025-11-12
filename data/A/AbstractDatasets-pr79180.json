@@ -1,0 +1,201 @@
+{
+  "created_at": "2023-03-08T16:13:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 79180,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85XDJ7S",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-08T16:18:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1460444882",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XDpjD",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Name is too general ",
+      "createdAt": "2023-03-08T17:44:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1460574403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XQOd4",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "There are quite a few packages with quite general names:\r\nAbstractNumbers\r\nAbstractTensors\r\nAbstractTrees\r\nAbstractOperators\r\nAbstractInstances\r\n...\r\n\r\n\r\n",
+      "createdAt": "2023-03-10T14:19:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1463871352",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XQcqG",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "this is Geo specific no?",
+      "createdAt": "2023-03-10T15:01:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1463929478",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XVpAU",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The NetCDF format is indeed widely used in geosciences, but is a container format like XML or JSON (but optimized for multidimensional arrays). NetCDF is closely related to HDF5 which has many applications beyond geosciences (e.g. in [keras](https://www.tensorflow.org/tutorials/keras/save_and_load#hdf5_format)).  AbstractDatasets would be a collection of named multi-dimensional arrays with a list of metadata (like a Dict{String,Any}). AbstractDatasets would not require that the arrays are geo-referenced for example or that the arrays represent parameters related to the earth. There would not be a problem to store for example the MNIST dataset from Machine learning (a series of photos of  hand-written digits) in such an AbstractDatasets or a movie clip as a 4D array (color / x / y / time). Another example would be an audio file where the data arrays is the sound data and the metadata are the typical information, like artist and genre. \r\n\r\nInitially we focus on  NetCDF and GRIB data, but it would not be complicated to treat HDF5 files also as AbstractDatasets or other formats.",
+      "createdAt": "2023-03-12T20:20:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1465290772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XVqtP",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "AbstractGeoData?",
+      "createdAt": "2023-03-12T20:57:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1465297743",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Xo1gc",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The data does not have to be georeferenced or related to geoscience. ",
+      "createdAt": "2023-03-15T16:08:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1470322716",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XpCSu",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I see, since everything seems to be related to [Common Data Model](https://docs.unidata.ucar.edu/netcdf-c/current/netcdf_data_model.html) maybe name around that?\r\n\r\njust naively speaking, AsbtractDatasets is way too general to be useful for people who just saw the name:\r\n- does it provide example data sets?\r\n- does it support Apache Parquet/Arrow stuff?\r\n- what about ASDF format? (plug in anything you like)\r\n- does it have something to do with loading datasets for ML application?\r\n- etc.\r\n\r\nif it's impossible to rename, I don't have further objection",
+      "createdAt": "2023-03-15T16:39:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1470375086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YFbyV",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I see, since everything seems to be related to [Common Data Model](https://docs.unidata.ucar.edu/netcdf-c/current/netcdf_data_model.html) maybe name around that?\r\n\r\nOK, I will try to register CommonDataModel.jl (or somthing like that), hoping that it does not generate confusion too.\r\n\r\n(this PR can be closed)",
+      "createdAt": "2023-03-21T13:15:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1477819541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85adw-U",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-04-21T12:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1517752212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bH0bb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-04-29T12:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79180#issuecomment-1528776411",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AbstractDatasets\n- Repository: https://github.com/JuliaGeo/AbstractDatasets.jl\n- Created by: @Alexander-Barth\n- Version: v0.1.0\n- Commit: e51cd870f9365dc2d2222db4197f90338c340e16\n- Reviewed by: @Alexander-Barth\n- Reference: https://github.com/JuliaGeo/AbstractDatasets.jl/commit/e51cd870f9365dc2d2222db4197f90338c340e16#commitcomment-103573882\n- Description: AbstractDatasets is a module that defines types common to NetCDF and GRIB data\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd650ecb52c5d111ea0af5e827560b7520832e0ac61d954233fe9b8f7e51c2d19c20d39f80797847b889e0cdbad30f6faa877093f5aab8940be81e3d83cc6347454d72fb55de732fbffb0aed04c17f50f5f535348d792ba9a46c795f42f83d39de78466e3d04e2a37695e1fdb9b01ee099ad4c4d7d5511537e046e965df78399f6b9dc4c39460fe6fc7f1e1f1ba0b9effa90bbc7262a9aaf96166c9b52f42a10b95a9b233f13d538f8c328fae9ff27ba025 -->",
+  "package_name": "AbstractDatasets",
+  "closed_at": "2023-04-29T12:23:06Z",
+  "title": "New package: AbstractDatasets v0.1.0"
+}

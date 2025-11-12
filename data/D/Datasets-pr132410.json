@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-06-06T02:46:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 132410,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86vtWEg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The registry consistency tests failed\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- Package name matches existing package name DataSets up-to-case.\n- Package name similar to 6 existing packages.\n  1. Similar to RDatasets. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to DataDeps. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to DatasetsCF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MDDatasets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NCDatasets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to MLDatasets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-06T02:52:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132410#issuecomment-2947899680",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vtlGG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/132411\r\n\r\nIn General, when fixing automerge issues, please try to keep the version number the same. \r\n\r\nFor this particular package, please note that one of the issues is\r\n\r\n> Package name matches existing package name DataSets up-to-case.\r\n\r\nThat makes the package name a no-go. You will have to choose a different, more descriptive name. Maybe something like `RepositoryDatasets`",
+      "createdAt": "2025-06-06T03:22:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132410#issuecomment-2947961222",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vtmb-",
+      "author": {
+        "login": "perrette"
+      },
+      "authorAssociation": "NONE",
+      "body": "ok, thanks, I see now",
+      "createdAt": "2025-06-06T03:28:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132410#issuecomment-2947966718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86v90-1",
+      "author": {
+        "login": "perrette"
+      },
+      "authorAssociation": "NONE",
+      "body": "I oversaw your suggestion of `RepositoryDatasets`. That is a good idea actually. I went for `DataManisfest` after a chat with an AI, though perhaps it's not as descriptive. In fact it's already prompting me to make some modifs to the code to behave more like a manifest. It's surprising how the naming can matter.",
+      "createdAt": "2025-06-07T09:20:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/132410#issuecomment-2952220597",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Datasets\n- Repository: https://github.com/awi-esc/Datasets.jl\n- Created by: @perrette\n- Version: v0.2.4\n- Commit: 5bdff6756a4bbb15fe667d2611e1a85582f0a63d\n- Git reference: HEAD\n- Description: Keep track of datasets used in a project",
+  "package_name": "Datasets",
+  "closed_at": "2025-06-06T03:22:32Z",
+  "title": "New package: Datasets v0.2.4"
+}

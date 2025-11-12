@@ -1,0 +1,105 @@
+{
+  "created_at": "2025-04-15T18:49:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 129139,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86nUk1g",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BenchmarkTools, Documenter, StaticArrays, StructArrays\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 1 existing package.\n  1. Similar to IdealGas. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-15T18:57:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807188832",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86nXMB3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would indeed lean towards the name similarity with `IdealGas` being a blocker, unfortunately. @vinodjanardhanan \r\n\r\nOtherwise, the package looks great. It may just need a different name. 😕",
+      "createdAt": "2025-04-16T00:39:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807873655",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86nXNcU",
+      "author": {
+        "login": "askprash"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the response! I thought so, wasn’t aware of the other package.\r\nPerhaps IdealGasThermodynamics or something. Was planning on adjusting name\r\nand taking care of the compat issues in the morning.\r\n\r\nOn Tue, Apr 15, 2025 at 8:39 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> I would indeed lean towards the name similarity with IdealGas being a\r\n> blocker, unfortunately. @vinodjanardhanan\r\n> <https://github.com/vinodjanardhanan>\r\n>\r\n> Otherwise, the package looks great. It may just need a different name. 😕\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807873655>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AOSVXEXGWWZ4XD64SMIMVZT2ZWRD3AVCNFSM6AAAAAB3GMCSTGVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDQMBXHA3TGNRVGU>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n> *goerz* left a comment (JuliaRegistries/General#129139)\r\n> <https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807873655>\r\n>\r\n> I would indeed lean towards the name similarity with IdealGas being a\r\n> blocker, unfortunately. @vinodjanardhanan\r\n> <https://github.com/vinodjanardhanan>\r\n>\r\n> Otherwise, the package looks great. It may just need a different name. 😕\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807873655>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AOSVXEXGWWZ4XD64SMIMVZT2ZWRD3AVCNFSM6AAAAAB3GMCSTGVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDQMBXHA3TGNRVGU>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-04-16T00:43:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2807879444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86nYt_M",
+      "author": {
+        "login": "vinodjanardhanan"
+      },
+      "authorAssociation": "NONE",
+      "body": "IdealGas.jl does the same thing. It also calculates the thermodynamic properties using NASA polynomials. ",
+      "createdAt": "2025-04-16T04:41:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2808274892",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86nevTu",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of  #129197.",
+      "createdAt": "2025-04-16T14:55:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129139#issuecomment-2809853166",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IdealGases\n- Repository: https://github.com/MIT-LAE/IdealGases.jl\n- Created by: @askprash\n- Version: v1.0.0\n- Commit: 3584cd92b41dc8034a2b3b7452d27923ba7f84aa\n- Reviewed by: @askprash\n- Reference: https://github.com/MIT-LAE/IdealGases.jl/commit/3584cd92b41dc8034a2b3b7452d27923ba7f84aa#commitcomment-155431512\n- Description: Julia package to model thermodynamics of ideal gas mixtures.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b1bc94ab4af7534d50b9dab8a6564875f2e953e0009e77349238e89c1c4ab90e1be2746240d957848d50a62a5b8bfa752e7a0c2d8fed135f727b07422b994cbc2a41918dc94ae31a3090b8d137c31410a7716bb5d46e2e0687e8c625ea05b9341f3b0b73e33ff15cb80881e06f4d5955f16babbcdb17b66e95edd53805e6b9304fd6a609ef61b32cc98e025837b3e79995db95cc70ed5be8c9755dcc6eff3bf00a5cf2f5a0fd71592148fb65adf99c88 -->",
+  "package_name": "IdealGases",
+  "closed_at": "2025-04-16T14:55:13Z",
+  "title": "New package: IdealGases v1.0.0"
+}

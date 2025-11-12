@@ -1,0 +1,91 @@
+{
+  "created_at": "2022-03-29T05:08:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 57522,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85AdQrz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The compat entry for `julia` is unbounded.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-29T05:14:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57522#issuecomment-1081412339",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AdZSS",
+      "author": {
+        "login": "laurentbartholdi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi! I don't understand the failed test, is it just a way of saying the package is on hold till a human looks at it?",
+      "createdAt": "2022-03-29T06:18:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57522#issuecomment-1081447570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AdZ66",
+      "author": {
+        "login": "laurentbartholdi"
+      },
+      "authorAssociation": "NONE",
+      "body": "In fact I see a weird error message:\r\n```\r\n[ Info: Attempting to `Pkg.add` package...\r\n    Updating registry at `/tmp/jl_ORnSsn/registries/General`\r\n┌ Error: Some registries failed to update:\r\n│     — `/tmp/jl_ORnSsn/registries/General` — registry dirty\r\n└ @ Pkg.Registry /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.7/Pkg/src/Registry/Registry.jl:450\r\n```",
+      "createdAt": "2022-03-29T06:22:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57522#issuecomment-1081450170",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AdkJT",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That's not the reason it wasn't merged - it's just the regular update of the registry in the julia install in the CI that failed, which is unrelated. It fails to automerge because the automerge guidelines weren't met:\r\n\r\n> ERROR: LoadError: RegistryCI.AutoMerge.AutoMergeGuidelinesNotMet(\"The automerge guidelines were not met.\")\r\n\r\nand as the bot explains above:\r\n\r\n> The following guidelines were not met:\r\n>\r\n> * The compat entry for julia is unbounded.\r\n\r\n[noblock]",
+      "createdAt": "2022-03-29T07:07:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57522#issuecomment-1081492051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AgDOL",
+      "author": {
+        "login": "laurentbartholdi"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would like to close/delete this PR; I submitted a new one with version 0.2.0. However, I don't see how to close it.",
+      "createdAt": "2022-03-29T17:09:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57522#issuecomment-1082143627",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CryptoMiniSat\n- Repository: https://github.com/laurentbartholdi/CryptoMiniSat.jl\n- Created by: @laurentbartholdi\n- Version: v0.1.0\n- Commit: 99fdec9bf60c1bb1735713d4e5e0e738c252042b\n- Git reference: HEAD\n- Description: Julia binding for the CryptoMiniSat solver",
+  "package_name": "CryptoMiniSat",
+  "closed_at": "2022-03-31T22:32:44Z",
+  "title": "New package: CryptoMiniSat v0.1.0"
+}

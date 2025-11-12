@@ -1,0 +1,91 @@
+{
+  "created_at": "2022-03-13T08:14:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 56510,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84_iqNe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name juliacgutils contains the string \"julia\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-13T08:17:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/56510#issuecomment-1066050398",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_iqhe",
+      "author": {
+        "login": "Gnimuc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think it's fine to have \"Julia\" in the package name because this package provides some unexported Julia internal utilities. For now, the only user is Cxx.jl. \r\n\r\ncc @DilumAluthge",
+      "createdAt": "2022-03-13T08:25:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/56510#issuecomment-1066051678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_iqpJ",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think something like `CodegenUtilities.jl` or `CodeGenerationUtilities.jl` would be a better name.",
+      "createdAt": "2022-03-13T08:29:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/56510#issuecomment-1066052169",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_iq4F",
+      "author": {
+        "login": "Gnimuc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package doesn't provide general LLVM code generation utilities. It only implements a couple of helper functions from Julia's [cgutils.cpp](https://github.com/JuliaLang/julia/blob/master/src/cgutils.cpp) on top of LLVM.jl. The current name simply means:\r\n\"Julia\" => This package is derived from `julia` source code\r\n\"CGUtils.jl\" => `cgutils.cpp` \r\n",
+      "createdAt": "2022-03-13T08:36:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/56510#issuecomment-1066053125",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Azo6H",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #57067",
+      "createdAt": "2022-04-04T08:41:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/56510#issuecomment-1087278727",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuliaCGUtils\n- Repository: https://github.com/Gnimuc/JuliaCGUtils.jl\n- Created by: @Gnimuc\n- Version: v0.1.0\n- Commit: 89c32862fd81ad52701f53438ef4fe868b002934\n- Reviewed by: @Gnimuc\n- Reference: https://github.com/Gnimuc/JuliaCGUtils.jl/commit/89c32862fd81ad52701f53438ef4fe868b002934#commitcomment-68568229\n- Description: Utility procedures for Julia code generation\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6600d97349f7446610e18066b56cf3e96320ba1a74596f8b90cfc751617d712b536b146c20cdf956c66d94c555a2127565ce038a727fb739163ffeaba3d4ff7f9b6e15bfe7039e62c690df5fc664f61e940a423ecaef695eff5c2b66f51a68da5b1de9cab9bd2b6a9abb933106c606f76ee2af4d76a10fd64fdbf070ea5c9afaef50c2c33983f1e7d4cb0c31dfcc2c9eae7fb5d300e35bdeae8a21b000e49c1604a8be0b5362fdbc660eee6eb027ec9ec -->",
+  "package_name": "JuliaCGUtils",
+  "closed_at": "2022-04-04T08:41:52Z",
+  "title": "New package: JuliaCGUtils v0.1.0"
+}

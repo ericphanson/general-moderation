@@ -1,0 +1,195 @@
+{
+  "created_at": "2023-07-04T22:12:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 86858,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85gm1KZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-04T22:16:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1620791961",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gpBkQ",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nHi @cscherrer! Judging by the name I was expecting some Quasi Monte-Carlo scheme, but looking at the code it's just a fixed number every time, so I was a bit surprised :rofl: \r\nCan I suggest a renaming to `FixedNumberGenerators`? The `R` really doesn't belong here IMHO",
+      "createdAt": "2023-07-05T09:22:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1621367056",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85grF9l",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nThanks @gdalle . I agree the name can be improved, but I think the name should either indicate that it's `<:AbstractRNG`, or something about the main use case.  `FixedNumberGenerators` doens't meet either of these IMO. How about either\r\n- `TrivialRNGs` or `ConstantRNGs`, or\r\n- `TestValues`. Our main use case is the `testvalue` function, providing an arbitrary point in the support of a measure. The name is taken from PyMC, so it's maybe a little more familiar. In this case we'd bring the `testvalue` function here (currently it's in MeasureBase).\r\n\r\n@oschulz any thoughts on this?",
+      "createdAt": "2023-07-05T14:44:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1621909349",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85grGlj",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] \r\n\r\nHow about `FakeRNGs`? ",
+      "createdAt": "2023-07-05T14:46:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1621911907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85grMY8",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "> How about `FakeRNGs`?\r\n\r\n...maybe? Let's wait for input from @oschulz. There's no rush on this, just a small component of MeausureBase we realized could be independent, so we've talked about factoring it out for wider use.\r\n\r\n[noblock]",
+      "createdAt": "2023-07-05T14:56:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1621935676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gsfoF",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hmmm there *are* fixed, but also not random, but they are (and have to be) subtypes of `AbstractRNG`. Maybe something like \"DummyRNGS\"?\r\n\r\n[noblock]",
+      "createdAt": "2023-07-05T18:36:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622276613",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gtQeK",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "DummyRNGs works for me. What do you think @gdalle ?\r\n\r\n[noblock]",
+      "createdAt": "2023-07-05T20:45:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622476682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gtwe8",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\n\nI agree that it fits, but I must say I don't like the connotations.\n\nhttps://github.com/pandas-dev/pandas/issues/35724\n\nPerhaps ConstantRNGs.jl?",
+      "createdAt": "2023-07-05T22:21:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622607804",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gt0UK",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nOof, good point. Ok, let's go with ConstantRNGs, I think that captures everything we need. Thanks for the discussion @gdalle ",
+      "createdAt": "2023-07-05T22:38:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622623498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gt5e1",
+      "author": {
+        "login": "cscherrer"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle I re-registered as ConstantRNGs (https://github.com/JuliaRegistries/General/pull/86926). Does that mean we should kill this one? Or keep this and kill the new one?\r\n[noblock]",
+      "createdAt": "2023-07-05T22:57:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622644661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85guP9v",
+      "author": {
+        "login": "oschulz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I like ConstantRNGs too.\r\n\r\n[noblock]",
+      "createdAt": "2023-07-06T00:32:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/86858#issuecomment-1622736751",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FixedRNGs\n- Repository: https://github.com/cscherrer/FixedRNGs.jl\n- Created by: @cscherrer\n- Version: v0.0.1\n- Commit: 167a785e19492d5799b3f16cfece27dd6fbfd372\n- Reviewed by: @cscherrer\n- Reference: https://github.com/cscherrer/FixedRNGs.jl/commit/167a785e19492d5799b3f16cfece27dd6fbfd372#commitcomment-120649593\n- Description: A simple deterministic RNG, for cases when you need high efficiency and don't care about randomness\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f4ea70be39003757a2e7e1d5f851fc0757d8289cb0cba346166f046398b8aa2da04f88bc575bd606e919ca3b78df783d97087dbc7886aae8fc51b8124d1503e4b54fa95c31e0a23c5a0a0c50fa846b31bb1aa7d64396c357b0dc9a8fbf9d04653f5c3acf9c62e35f73dc7e3c8590f2ebd22c341d06e6b0c13c838e1cf27f6e40709fc222a4bdff6cb3e2eb586511ba0408f75c250c89d317c6d53ef824ba22afd443933ff4628dce35c779fc638e3132 -->",
+  "package_name": "FixedRNGs",
+  "closed_at": "2023-07-06T00:16:41Z",
+  "title": "New package: FixedRNGs v0.0.1"
+}

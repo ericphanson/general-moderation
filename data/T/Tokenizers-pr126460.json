@@ -1,0 +1,113 @@
+{
+  "created_at": "2025-03-06T20:11:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 126460,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86hOL1B",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to Tokenize. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-06T20:17:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2704850241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hOVmn",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think the Tokenizers.jl name is most appropriate for what its functionality is.  \r\n\r\n[noblock]",
+      "createdAt": "2025-03-06T20:39:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2704890279",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hOruy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe, but I would consider `Tokenizer`/`Tokenizers` to be taken as a name. `Tokenize` and `Tokenizers` are legitimately \"too close\". These two packages would almost surely be confused by users. Although I suppose we should leave the question up to the main developers of `Tokenize`, @KristofferC @ZacLN @pfitzseb\r\n\r\n[noblock]",
+      "createdAt": "2025-03-06T21:27:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2704980914",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hOs04",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My knee-jerk recommendation for an alternative would probably be `Tokenize(r(s))Builder`, `BuildTokenizers`, or something like that.\r\n\r\n[noblock]",
+      "createdAt": "2025-03-06T21:29:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2704985400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hPEYN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I could also see `AbstractTokenizers` working, since the `Tokenizer` is an abstract type",
+      "createdAt": "2025-03-06T22:27:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2705081869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hPdrz",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've opted for TokenIterators.jl (https://github.com/JuliaRegistries/General/pull/126476)\r\n\r\nThis can be closed",
+      "createdAt": "2025-03-06T23:44:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126460#issuecomment-2705185523",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Tokenizers\n- Repository: https://github.com/joshday/Tokenizers.jl\n- Created by: @joshday\n- Version: v0.0.1\n- Commit: ad3033abc6a3a262e9a0caa934f525d658b356aa\n- Reviewed by: @joshday\n- Reference: https://github.com/joshday/Tokenizers.jl/commit/ad3033abc6a3a262e9a0caa934f525d658b356aa#commitcomment-153390219\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f12e87d38c4c51597935977ed70e2c4a8e07ba72df466f5d4ccfb35f4736dbb5ec0ccebb0140bb436960d47f71aa9af64671ad25e65796d9170fe2da2e56c4c5a692aedb54f2245309a226402f761fc84481e6a70617aa59db9bbf8460d49a1a07b3b74ce1683f148367eb73bd0a1a8cab25ea0545ba91dbece1c218d3b68f573772315f0bf7f6978b675b5418c7bf1b5d6eec4ccb80d534cb42ffc54dfb76eba893829b0efead261e0e52ada5b6e6a3 -->",
+  "package_name": "Tokenizers",
+  "closed_at": "2025-03-06T23:53:50Z",
+  "title": "New package: Tokenizers v0.0.1"
+}

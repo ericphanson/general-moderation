@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-11-20T00:25:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 72526,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85OvN2G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- Package name similar to 2 existing packages.\n  1. Similar to Dolang. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to MatLang. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.32 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-20T00:28:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72526#issuecomment-1321000326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OvorF",
+      "author": {
+        "login": "jhidding"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed, as it is superseded by #72538 after a name change.",
+      "createdAt": "2022-11-20T11:44:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72526#issuecomment-1321110213",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DotLang\n- Repository: https://github.com/jhidding/DotLang.jl\n- Created by: @jhidding\n- Version: v0.1.0\n- Commit: 807efd95ef7648540cdee71206d2a4eea9ada666\n- Reviewed by: @jhidding\n- Reference: https://github.com/jhidding/DotLang.jl/commit/807efd95ef7648540cdee71206d2a4eea9ada666#commitcomment-90471552\n- Description: Module for generating graphs in the Dot language (aka GraphViz)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd680cca3b3fcba0054f95aeda64f44c8d159206cec739c805a6943156eec90d3dc44ea185788e706396250be14b219f07983fd87f75df242fd5c9e78dddcc6748e2dcc605a977770cb646d4cfd214b87ce9bcbe03f8832225d3c18d7e0adad1546eb7dfddb4205f8e1c4210a256310e0aaa614f7fd47c9dbcbd7660884c80c1b96ca459e7968a1ef3ec254fc7f069e16dcdb5a5c2a40641cdd547ee425df0af4aaf9a1bf8946320461dc2adb7eb49e1191 -->",
+  "package_name": "DotLang",
+  "closed_at": "2022-11-20T12:14:03Z",
+  "title": "New package: DotLang v0.1.0"
+}

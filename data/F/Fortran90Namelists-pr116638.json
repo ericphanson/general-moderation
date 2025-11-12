@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-10-05T00:51:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 116638,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Ovj1k",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to PyFortran90Namelists. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-05T00:54:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2394832228",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OvlJF",
+      "author": {
+        "login": "anchal-physics"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Requesting override of package name similarity. This package is indeed supposed to provide same functionality as `PyFortran90Namelists` but without using the python modules in the backend. This is a pure julia implementation and thus it makes sense for it to have same name without the `Py` suffix.",
+      "createdAt": "2024-10-05T00:57:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2394837573",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OxWJk",
+      "author": {
+        "login": "singularitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @anchal-physics, I really appreciate the work you've done in forking and modifying `Fortran90Namelists.jl`. It's great to see that others find the package useful and are contributing to the ecosystem.\r\n\r\nI wanted to ask if you'd consider giving your fork a different name. The main reason is that I may implement a new version of the parser with some structural changes in the future, and I’d like to keep the original name available for that. Additionally, since your package is intended to be minimally maintained, a new name would help distinguish between our versions and avoid any potential confusion for users.\r\n\r\nOne suggestion could be `FortranNamelistsParser.jl`, which reflects the purpose of the package while differentiating it from the original. Let me know your thoughts, and thanks again for your contributions!\r\n[noblock]",
+      "createdAt": "2024-10-06T05:28:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2395300452",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86O6-kf",
+      "author": {
+        "login": "anchal-physics"
+      },
+      "authorAssociation": "NONE",
+      "body": "@singularitti Thanks for your comment and suggestion. I agree with you and will wait for your improved `Fortran90Namelists.jl` package. For now, I've renamed this package to `FortranNamelistParser.jl` and it has been accepted as new package in Julia Registry on this pull request: https://github.com/JuliaRegistries/General/pull/116786 . This merge request can be ignored and closed now without merging. Thanks.",
+      "createdAt": "2024-10-07T20:25:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2397825311",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86O7GCG",
+      "author": {
+        "login": "singularitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That's great! Thank you! @anchal-physics ",
+      "createdAt": "2024-10-07T20:42:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2397855878",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Fortran90Namelists\n- Repository: https://github.com/anchal-physics/Fortran90Namelists.jl\n- Created by: @anchal-physics\n- Version: v0.1.0\n- Commit: cd0bbfd96a4bab8230259ee310766838f05eb701\n- Reviewed by: @anchal-physics\n- Reference: https://github.com/anchal-physics/Fortran90Namelists.jl/commit/cd0bbfd96a4bab8230259ee310766838f05eb701#commitcomment-147598934\n- Description: A pure Julia implementation of Python f90nml package.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64ec26241421d53a398a32b4b4acba5cdf03939a5b7b95a8c1cf945190862c41aef0ebda2ee413a5b6a3773581fbc194aa2b38bf7a536a8eb09bb07d414726709067d810634e356f21d20933d19d23823eb06a0b3d9e4acfc41d39a11598d35ceee13f24e2b885038abe51ecf5835f6c588a95b637f39e494aaa020e150752cd4568cf5ed266756dc0dfd681ea7921f0112121846e8254563656597abe3bc3a484805d708a4a19756043a528a4320c86ebe20773f1423e658b847dc85130dde32 -->",
+  "package_name": "Fortran90Namelists",
+  "closed_at": "2024-10-08T02:58:56Z",
+  "title": "New package: Fortran90Namelists v0.1.0"
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-06-14T13:16:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 85582,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85e18dQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to SDDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to SPDX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to SVR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to TSVD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-14T13:21:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85582#issuecomment-1591199568",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e198A",
+      "author": {
+        "login": "stevenlele"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please close. I'll redo the registration.",
+      "createdAt": "2023-06-14T13:24:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85582#issuecomment-1591205632",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e2YUD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You don’t necessarily have to bump the version number to resubmit a failed registration",
+      "createdAt": "2023-06-14T14:19:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85582#issuecomment-1591313667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85e2f8K",
+      "author": {
+        "login": "stevenlele"
+      },
+      "authorAssociation": "NONE",
+      "body": "I was just trying to update the code and description and it turned out I can't update the original pull request.",
+      "createdAt": "2023-06-14T14:33:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85582#issuecomment-1591344906",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SVDS\n- Repository: https://github.com/stevenlele/SVDS.jl\n- Created by: @stevenlele\n- Version: v0.0.2\n- Commit: 2184aa9e58d310c8f4a41d2089f21a54900f914d\n- Reviewed by: @stevenlele\n- Reference: https://github.com/stevenlele/SVDS.jl/commit/2184aa9e58d310c8f4a41d2089f21a54900f914d#commitcomment-118007188\n- Description: Fast and memory-efficient Julia implementation of svds algorithm in MATLAB\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd613ae3ac07cca30cd7ea0eddf4bd1bc3dea4ecb1a0a7759322362e37ae51da146f150ef70d4b2069a93e600fdca4484b83085d7deb9149227b3b90392edde4eee869e15fb4446570f6001360d5bcc3a79193e14e93c3463ea680f09822f3bc16d38acf5397118475319033de4001744bd79f22cc402d2246db6bbfc41b1d877c4a075a316fd56c820e4f5e3552c9e4fd62250a33c4ac5dc9b63723bae9f2bc6ccd568ef8c0428dd66dd207fbcde841d31 -->",
+  "package_name": "SVDS",
+  "closed_at": "2023-06-24T17:59:27Z",
+  "title": "New package: SVDS v0.0.2"
+}

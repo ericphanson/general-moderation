@@ -1,0 +1,157 @@
+{
+  "created_at": "2024-09-25T12:54:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 115954,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86NgKN-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to Pythia. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-25T12:58:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374017918",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NgNZQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I actually think the bot got it right on this one. The existing `Pythia` rules out `Pythia8` as a name, IMO. It would probably be best to change this to `<Something>Pythia8`, where `Something` clarifies the context. Maybe `HEPPythia8`, but perhaps there's something better than `HEP`.",
+      "createdAt": "2024-09-25T13:03:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374030928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NgOtL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Or something like `Pythia8Collisions` could work, too",
+      "createdAt": "2024-09-25T13:05:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374036299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NhTw7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ababii Hypothetically, would you have a problem with `PYTHIA8`? If you have no interest in developing `Pythia2`, `Pythia3`, etc. in the future, `PYTHIA8` would not be in conflict, and the change in case would make it pretty clear to a human that `PYTHIA8` and `Pythia` are not connected.",
+      "createdAt": "2024-09-25T14:49:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374319163",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NhbPv",
+      "author": {
+        "login": "ababii"
+      },
+      "authorAssociation": "NONE",
+      "body": "No, I do not plan to have Pythia2, etc.",
+      "createdAt": "2024-09-25T15:00:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374349807",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NhfxE",
+      "author": {
+        "login": "peremato"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank-you. This is great. I can then rename to `PYTHIA8` which is very convenient for the people used to this name. ",
+      "createdAt": "2024-09-25T15:08:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374368324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NhlOG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Great! I don't know if the bot is going to flag `PYTHIA8` as an all-caps name. If it does, we'll need a manual merge from a full registry maintainer (but it should be okay). Beyond that, the bot will definitely still flag the name similarity, but that check is something I can override.",
+      "createdAt": "2024-09-25T15:16:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374390662",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86NiWs0",
+      "author": {
+        "login": "peremato"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "PR superseded by https://github.com/JuliaRegistries/General/pull/115979",
+      "createdAt": "2024-09-25T16:39:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115954#issuecomment-2374593332",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Pythia8\n- Repository: https://github.com/JuliaHEP/Pythia8.jl\n- Created by: @peremato\n- Version: v0.1.0\n- Commit: 9e9a69ff07a1d50d013e634c78af9caef62030ec\n- Reviewed by: @peremato\n- Reference: https://github.com/JuliaHEP/Pythia8.jl/commit/9e9a69ff07a1d50d013e634c78af9caef62030ec#commitcomment-147184476\n- Description: Pythia8 Julia interface\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ff49980cd6a955d8cee143a5a1ae65d05ea7a8b96b8541f5ae8e8b5b4af5a8a5bd86a0dd95efd76fffab5a013cd555729fcc0a687d65613eab4a5377addf644dd0653d3a24bec50ff2ab7a347d3c8f82511e50a8e0ab946a7aed96331a11e8eaf06cd45e93631fdf0d83e3251847934a705c712d0dbb51c6f1006cb387670fc0d1f0620e7c41d64c6642377ffd30d52c40edd60b59dbb744c17b760ca9379f2e632d262601fe24d1c49e4bde6c8ec8bf -->",
+  "package_name": "Pythia8",
+  "closed_at": "2024-09-25T17:19:23Z",
+  "title": "New package: Pythia8 v0.1.0"
+}

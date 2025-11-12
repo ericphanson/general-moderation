@@ -1,0 +1,98 @@
+{
+  "created_at": "2021-05-21T06:13:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 37175,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NTY4NjExNA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least 5 characters long\n- The compat entry for `julia` is unbounded.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: PyCall\n- I was not able to load the package (i.e. `import EE` failed). See the CI logs for details.\n- Package name similar to 13 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to GR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Z3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to H3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to EDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Tk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to BED. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to JET. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to AES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to NES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to ODE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to ASE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-21T06:17:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37175#issuecomment-845686114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NjExNjk1Mw==",
+      "author": {
+        "login": "KMarkert"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package, EE, wraps the Python earthengine-api package (https://github.com/google/earthengine-api/tree/master/python). \r\n\r\nHere is info to address the auto merge issues:\r\n* I  added in the compat entries to the Project.toml file with the latest pull request.\r\n* The common way the community abbreviates the package is `ee`. This Julia package uses the short name \"EE\" as the abbreviation and capitalized to differentiate from the Python API.\r\n* I think the package failed to load because it depends on the Python package and I am not sure how to do an automated install through Julia package manager. I provide documentation on how to install the Python dependency [here](https://github.com/KMarkert/EE.jl#installation)\r\n\r\nPlease let me know if more information is need to have this package registered.",
+      "createdAt": "2021-05-21T17:21:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37175#issuecomment-846116953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NjIwNzg2NA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can we have a less cryptic name though?  It's hard to guess what EE stands for",
+      "createdAt": "2021-05-21T19:43:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37175#issuecomment-846207864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NjI1ODAwOA==",
+      "author": {
+        "login": "KMarkert"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, I understand how that may be confusion.  I renamed the package to \"EarthEngine\" (https://github.com/KMarkert/EarthEngine.jl/blob/main/src/EarthEngine.jl#L3). \r\n\r\nHow should we proceed? Do I trigger a new registry pull request?",
+      "createdAt": "2021-05-21T21:02:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/37175#issuecomment-846258008",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0NjI2MDQ2MQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> How should we proceed? Do I trigger a new registry pull request?\r\n\r\nYes please!",
+      "createdAt": "2021-05-21T21:07:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/37175#issuecomment-846260461",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: EE\n- Repository: https://github.com/KMarkert/EE.jl\n- Created by: @KMarkert\n- Version: v0.1.0\n- Commit: 7e666e9aadb49439f63f0c1dc5d59013e75052f5\n- Reviewed by: @KMarkert\n- Reference: https://github.com/KMarkert/EE.jl/commit/7e666e9aadb49439f63f0c1dc5d59013e75052f5#commitcomment-51135021\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cc30207a74ffd0c46b845bd41ed10d569f03a6f6b85e67832ba1d24f59a47a18267df31356e840493351f0882ad04aec55360d22838ee213eb8b7f557d30df43ae97ac9306bcd5a02311388b3bf70721ddf9dd6ed756372ab52ab896a5f08bbde4a9c1a27ff05cb30898160aafc75dda840c0bf74daa0a84fc224ef1db48dc70e537a95aeca3b5cec09bcb43e00b38221fb5b800aebbe8cef678a5e5f60cb9af -->",
+  "package_name": "EE",
+  "closed_at": "2021-05-21T21:07:56Z",
+  "title": "New package: EE v0.1.0"
+}

@@ -1,0 +1,68 @@
+{
+  "created_at": "2021-08-09T18:26:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 42494,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841X2ID",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- I was not able to load the package (i.e. `import MaxwellGuide` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-09T18:29:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42494#issuecomment-895443459",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841YSde",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@wsshin please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2021-08-09T21:23:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42494#issuecomment-895559518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Ymv6",
+      "author": {
+        "login": "wsshin"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano, the problem was that I used an old package name in `Project.toml`.  I already fixed this error and registered again.  However, because the package name was updated, a new PR was created; see https://github.com/JuliaRegistries/General/pull/42496.  Therefore, I think we can close the present PR.",
+      "createdAt": "2021-08-10T00:35:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/42494#issuecomment-895642618",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MaxwellGuide\n- Repository: https://github.com/wsshin/MaxwellGuidedMode.jl\n- Created by: @wsshin\n- Version: v0.1.0\n- Commit: a26897582e053df9a2ddb29cc2344d867004f63f\n- Reviewed by: @wsshin\n- Reference: https://github.com/wsshin/MaxwellGuidedMode.jl/commit/a26897582e053df9a2ddb29cc2344d867004f63f#commitcomment-54637609\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> MaxwellGuidedMode.jl is becoming a registered package.\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b17ea5a88a215d581e6f042f66381d204b7b4fc5a33bb76c6c62abb139e8c9d82c4cd745109d47953fcfa3aaf320777f132f7f3070fd02d7d25ee9824a4cb6b9a27584388c5f6ce674de0cc570618c2d773af687d539c039b2fca609f43c78997d8a747eb0a73a9fe32df1b0e850cd8773558b3cdf8722a4be35da8a196d7ba34a90887f0aaa386c9de465d62a69f501dbf705a77591d31d553c62698f0a1d2cd73aa1b96410ed6a1a9bbf674e4c557e -->",
+  "package_name": "MaxwellGuide",
+  "closed_at": "2021-08-10T08:03:22Z",
+  "title": "New package: MaxwellGuide v0.1.0"
+}

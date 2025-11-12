@@ -1,0 +1,180 @@
+{
+  "created_at": "2025-01-06T15:48:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 122478,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ZYx5T",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-06T16:00:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2573409875",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZZ54_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! Please make sure the package is fully documented before registering. Especially for an initial version `v1.0`, you're indicating that the package has a stable API. That has some implications for the expectations for the package:\r\n\r\n* Must _define_ the stable API. That generally means _complete_ documentation.\r\n* Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly, and no basis for figuring out whether a pull request is \"breaking\" or not, going forward.\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nFor an initial version v0.1, the bar would be lower:\r\n\r\n* Must have a name that is appropriate for the scope of the package\r\n* Must have some non-trivial functionality (no \"placeholder\" packages)\r\n* Must have a README that explains the purpose of the package and gives a basic usage example.\r\n\r\n[noblock]",
+      "createdAt": "2025-01-06T18:46:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2573704767",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZZ8dR",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If these are the official rules of General @goerz, please consider adding them to the README or to some other place in the docs – _before_ asking to follow that from all users. Otherwise, the first part (specific to v1.0) sounds like a subjective set of preferences, not a registration requirement.\r\n\r\nMeanwhile, I of course agree with the remainder: name, non-trivialness, docs are the actual rules, already mentioned in the docs.\r\n\r\n[noblock]",
+      "createdAt": "2025-01-06T18:53:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2573715281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Za4oL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@aplavin They are not official rules, but I feel perfectly fine with leaving a blocking comment on registrations that do not meet what I consider reasonable standards. Any member of the community is free to do the same.\r\n\r\nNone of it is a registration _requirement_. Any registry maintainer can override blocking comments. We really have almost no absolute, hard requirements for registration. Only guidelines, and I believe that all of my points are in the spirit of those guidelines.\r\n\r\n[noblock]",
+      "createdAt": "2025-01-06T21:31:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2573961739",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZbO6C",
+      "author": {
+        "login": "tobydriscoll"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think I had not previously set up the repo to have its Pages site active.\r\nThe dev version of the docs is up now, and I have updated the README to\r\npoint to it and give some guidance.\r\n\r\nThis is an unusual package. It's purely meant for pedagogy, not scientific\r\nwork, as stated now in the README. The book is 95% complete and also found\r\nvia the README. It serves as the real documentation, which is why the\r\nformal docs are pretty spartan. I hope that makes sense.\r\n\r\nI'm not familiar with the code coverage tools, but all the functions are\r\ntested and not too complex. Also, the textbook has 100+ demos that\r\nthoroughly exercise them. It's been out for a few years now, too.\r\n\r\nThanks,\r\nToby\r\n\r\n---\r\nTobin Driscoll\r\nUnidel Chaired Professor of Mathematical Sciences\r\nDirector, Master of Science program in Data Science\r\nUniversity of Delaware,  Newark, DE 19716\r\n\r\n\r\n\r\nOn Mon, Jan 6, 2025 at 4:31 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> @aplavin <https://github.com/aplavin> They are not official rules, but I\r\n> feel perfectly fine with leaving a blocking comment on registrations that\r\n> do not meet what I consider reasonable standards. Any member of the\r\n> community is free to do the same.\r\n>\r\n> None of it is a registration *requirement*. Any registry maintainer can\r\n> override blocking comments. We really have almost no absolute, hard\r\n> requirements for registration. Only guidelines, and I believe that all of\r\n> my points are in the spirit of those guidelines.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2573961739>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AA3JNLVWHEEYUWLVSDHEUFL2JLY2VAVCNFSM6AAAAABUV3TK42VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDKNZTHE3DCNZTHE>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-01-06T22:41:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2574052994",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZbVh3",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz it would be counterproductive if everyone wrote blocking comments with their personal preferences on how Julia packages are supposed to look. Say, I prefer package names consisting of no more than two words, and I leave a comment in every new registration that has 3 or more. IMO that is an unreasonable thing to do, and same with your 1.0 \"rules\". If you think they are actual widely-applicable recommendations, add them to General / AutoMerge guidelines!\r\n\r\nFollowing others' advice, I was considering starting all my new packages at 1.0 so that to have an extra version number just in case. The version number doesn't say anything universal really, aside from having 2 vs 3 numbers to play with. At least now I know that you intend to block all 1.0 registrations, and will just do 2.0.0 if I decide I need 3 numbers :)\r\n\r\nTo @tobydriscoll: assuming you fix all other issues and the name is ok, you can either ask at Slack#pkg-registration to merge this, or register 0.1 and immediately bump to 1.0 after registration.\r\n\r\n[noblock]",
+      "createdAt": "2025-01-06T23:03:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2574080119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zb6Uv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n@tobydriscoll Thanks for the updates and the explanation, that looks totally fine to me! I'll be happy to unblock my comment.\r\n\r\n> I'm not familiar with the code coverage tools\r\n\r\nIn general, \"code coverage\" is just keeping track of which lines get run during the tests (via a command line flag to Julia), and uploading it to [Codecov](https://about.codecov.io) (what most Julia packages use). The main reason to aim for a reasonably high percentage of covered lines in a v1.0 is that it provides a way to track if future changes are breaking. Without tests, it's very easy to accidentally introduce a breaking change inadvertently.\r\n\r\n@aplavin \r\n\r\n>  it would be counterproductive if everyone wrote blocking comments with their personal preferences on how Julia packages are supposed to look.\r\n\r\nThat depends on how unusual their personal preferences are. Insisting that v1.0 packages must _define_ their API doesn't seem like something that should be overly controversial. As for the specific details of my \"requirements\", you should see those as a \"working definition\" that is absolutely open to negotiation. Which is also why I would be reluctant to nail that down in any official guidelines.\r\n\r\n> Following others' advice, I was considering starting all my new packages at 1.0 so that to have an extra version number just in case.\r\n\r\nAs far as your existing packages go, as far as I've seen, they _have_ documentation and make SemVer guarantees about their API, so I think you _should_ register a v1.0. For new registrations, I don't necessarily object to starting with v1.0, as long as they fully document their API.\r\n\r\n> The version number doesn't say anything universal really, aside from having 2 vs 3 numbers to play with.\r\n\r\nI know you believe that, but it's just not true (if you're following the [SemVer spec](https://semver.org/spec/v2.0.0-rc.2.html)). But it's also beside the point: You like to treat v0.x versions as stable, which I don't think is a great idea, but it's not a violation of SemVer, and it's not that big of a deal. But in any case, that doesn't affect the semantics of a v1.0 version, which SemVer defines as the version that specifies the stable API. I'm just asking that packages tagged as v1.0 actually do that.\r\n\r\n> At least now I know that you intend to block all 1.0 registrations\r\n\r\nI have no such intention!\r\n\r\n> will just do 2.0.0 if I decide I need 3 numbers\r\n\r\nThat's just being silly, and, of course, v2.0 has the same requirements as v1.0\r\n\r\n> assuming you fix all other issues and the name is ok, you can either ask at Slack#pkg-registration to merge this,\r\n\r\nOr, just engage with my comment, assuming good faith. These \"requirements\" are in no way hard rules. I'm more than happy to unblock after reaching common ground, as happened here. Asking on Slack from someone to override my (or anyone's) objections would only be necessary if the discussion does not reach a consensus.\r\n\r\n> or register 0.1 and immediately bump to 1.0 after registration.\r\n\r\nTechnically, yes, but that doesn't change the semantics of a v1.0 release. It's a bit unfortunate that there's no waiting period for v1.0 releases (something I might advocate for in the future). But yeah, if you're hell-bent on going out of your way to avoid defining an API for your v1.0 packages, or otherwise ignore the requirements of SemVer, that's ultimately between you and your users. There's only so much I can do to push people in the right direction.\r\n\r\n",
+      "createdAt": "2025-01-07T01:40:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2574230831",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zgok-",
+      "author": {
+        "login": "tobydriscoll"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz I know what code coverage is in general. I just don't know how to feel about a badge that says 65% coverage versus one that says 85%. \r\n\r\nFor this application, it's not worth the hassle to me, so I am downgrading to v0.1.0. ",
+      "createdAt": "2025-01-07T14:42:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2575468862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zg51V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> For this application, it's not worth the hassle to me, so I am downgrading to v0.1.0.\r\n\r\nThat wasn't really a strict requirement. If you are confident that you'll be able to know whether any future PR on your package will be breaking or not, I'm totally fine if you want to tag the initial version as `v0.1.0`.\r\n\r\n[noblock]",
+      "createdAt": "2025-01-07T15:11:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2575539541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZpKDC",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/122529\r\n\r\nYou still have to fix the Julia compat issue, though",
+      "createdAt": "2025-01-08T13:42:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122478#issuecomment-2577703106",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FNCFunctions\n- Repository: https://github.com/fncbook/FNCFunctions.jl\n- Created by: @tobydriscoll\n- Version: v1.0.0\n- Commit: 0806d384614cfe717f683a3bea0adc3f7551660d\n- Reviewed by: @tobydriscoll\n- Reference: https://github.com/fncbook/FNCFunctions.jl/commit/0806d384614cfe717f683a3bea0adc3f7551660d#commitcomment-150962510\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThese have been split from the original FundamentalsNumericalComputation.jl package in order to remove the excessive dependencies. They are also improved in appearance and updated to avoid some deprecation warnings.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f01982cb2f196b90afac5b022387e780deb31a80f5f6de92ed0c57cec9c01b032a09f13c2f591bbb7ac50345cf08d4246499e42503f71fef90b9c067532b04c68649a2eb269fa11e7ca64909d0aa1fae6b686672211aaae40dc3a1e366c22a88443efba9d720b3ea39fbd7f496f9c6371d02605a02a4798d86ce9a3eafd6209680d265e20d2eee3d28a76af3f9c294db3b9fbe2494a4a0a6cbfa4ba6b314bc8742c4641370a36ae6507b3080878e6bba -->",
+  "package_name": "FNCFunctions",
+  "closed_at": "2025-01-08T13:42:37Z",
+  "title": "New package: FNCFunctions v1.0.0"
+}

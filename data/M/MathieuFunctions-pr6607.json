@@ -1,0 +1,121 @@
+{
+  "created_at": "2019-12-12T16:47:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 6607,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NTA4OTIyNA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: julia\n\nNote: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versionsyour package is compatible with. See [https://julialang.github.io/Pkg.jl/v1/compatibility/.] for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-12T16:49:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-565089224",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NTYzOTgzNg==",
+      "author": {
+        "login": "matthewware"
+      },
+      "authorAssociation": "NONE",
+      "body": "Could I ask for this PR to be deleted so I can register a fixed version of the package?  Thanks",
+      "createdAt": "2019-12-13T22:55:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-565639836",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NjA4MDk5Nw==",
+      "author": {
+        "login": "matthewware"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator delete()",
+      "createdAt": "2019-12-16T14:19:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-566080997",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NjA4MjIxNA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just retrigger the bot and this PR will be updated.",
+      "createdAt": "2019-12-16T14:22:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-566082214",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NjA4ODg5NQ==",
+      "author": {
+        "login": "matthewware"
+      },
+      "authorAssociation": "NONE",
+      "body": "The issue is this PR is tied to a specific commit.  The bot is unhappy because there's no bound on the julia version.  I fixed that but any changes are tied to new commits and not a branch.  So re triggering the bot doesn't work unless I also update the version number.  Maybe it would be best to do that.",
+      "createdAt": "2019-12-16T14:39:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-566088895",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NjA5MDcyNQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can retrigger on the fixes commit (with the same version number)",
+      "createdAt": "2019-12-16T14:43:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-566090725",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NjIyMzA5NA==",
+      "author": {
+        "login": "matthewware"
+      },
+      "authorAssociation": "NONE",
+      "body": "I haven't been able to.  On any commits since I always get:\r\n\"Error while trying to register: \"Tag with name 1.0.0 already exists and points to a different commit\"\"\r\n\r\nThis is what lead me to believe I needed to delete this PR.",
+      "createdAt": "2019-12-16T20:11:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6607#issuecomment-566223094",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MathieuFunctions\n- Repository: https://github.com/BBN-Q/MathieuFunctions.jl\n- Created by: @matthewware\n- Version: v1.0.0\n- Commit: f49549f2079b7c8f4de5d1c286b2727155b9cf28\n- Git reference: master",
+  "package_name": "MathieuFunctions",
+  "closed_at": "2019-12-22T13:21:55Z",
+  "title": "New package: MathieuFunctions v1.0.0"
+}

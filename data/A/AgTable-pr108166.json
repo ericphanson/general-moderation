@@ -1,0 +1,158 @@
+{
+  "created_at": "2024-06-03T20:04:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 108166,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_6cZC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to MDTable. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-03T20:08:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2146027074",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_7Mqe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`AGGridTable`?",
+      "createdAt": "2024-06-03T22:20:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2146224798",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_9Buj",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz, I would not like to take the name `AgGridTable` because the wrapper isn't going to match the AgGrid API exactly. If the name doesn't fit the standard, feel free to close the PR. Thanks!",
+      "createdAt": "2024-06-04T06:22:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2146704291",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_-8vV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm just going by the description\r\n\r\n> AgTable is an easy-to-use wrapper for the [AG Grid](https://www.ag-grid.com/) library, designed for quick visualization and easy sharing of tabular data.\r\n\r\nIf that description is at all accurate, then `AGGridTable` (or probably the plural `AGGridTables`) is the obvious good package name. I don't think there's any implication that it has to match the AG Grid API exactly. Actually, if it was a full wrapper around that API, `AGGrid` could be an appropriate name (potential trademark issues notwithstanding).\r\n\r\nThere is no way in which `AgTable` communicates \"This is about AG Grid Tables, but only a subset of the API\". Apart from that, `AG` should definitely be capitalized. `AgTable` would be misleading: I would assume the package to be related to chemistry (silver table).",
+      "createdAt": "2024-06-04T10:41:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147208149",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__m64",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "IMHO, if there is a good README and description, no one will confuse Ag with silver. If the AgTable does not match the description, it can be corrected.",
+      "createdAt": "2024-06-04T12:12:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147380920",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__oFZ",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Overall, \"AgGridTable\" is a fine name if you make the letter 'g' lowercase.",
+      "createdAt": "2024-06-04T12:14:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147385689",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__sd8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name of the library you're wrapping is \"AG Grid\", not \"Ag Grid\". It's not that bad to have an acronym connect to a word. I understand where you're coming from, in terms of general readability, but I would value consistency with the existing name over optimal readability.\r\n\r\nBut ok, I'm not going to stand in the way of `AgGridTable`. It's up to you. I agree that the connection to \"silver\" is less of an issue as soon as the word \"Grid\" is in there.",
+      "createdAt": "2024-06-04T12:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147403644",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__0yG",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "The only thing that bothers me about renaming it to \"AgGridTable\" is that it sounds a bit redundant since 'Grid' generally implies a 'Table' in this context. It might be clearer to stick with \"AgTable\" or just \"AgGrid\" to keep things simple and straightforward. That's why I suggested \"AgTable,\" to avoid infringing on the trademark.",
+      "createdAt": "2024-06-04T12:40:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147437702",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__5Jc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, but \"AG Grid\" is a proper noun, and is pretty integral to the context of this library. You really want that to be part of the name, or you would completely lose that connection. Nobody will make an association from just \"AG\" to \"AG Grid\". If this library is (or may become) a reasonably complete wrapper around \"AG Grid\", then `AGGrid`/`AgGrid` should be okay. I don't know about the trademark issue. My recommendation would be to check in with someone from the AG Grid company. Other than that, any kind of legal issues would be for you to determine. I'm not a lawyer, but my understanding is that you can \"fair use\" trademarks if you're actually referring to the trademarked product. Whether that extends to using the name verbatim, I don't know.\r\n\r\nIf you wanted to replace `Table` with some other word that might be a better fit, that's totally fine, too. But definitely keep `AGGrid`/`AgGrid` in there.",
+      "createdAt": "2024-06-04T12:49:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108166#issuecomment-2147455580",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AgTable\n- Repository: https://github.com/bhftbootcamp/AgTable.jl\n- Created by: @gryumov\n- Version: v1.0.0\n- Commit: d512f03af2d24a942795bcddfd407c1eb67ef22e\n- Reviewed by: @gryumov\n- Reference: https://github.com/bhftbootcamp/AgTable.jl/commit/d512f03af2d24a942795bcddfd407c1eb67ef22e#commitcomment-142684443\n- Description: AgTable is an easy-to-use wrapper for the AG Grid library, designed for quick visualization and easy sharing of tabular data\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nRelease AgTable v1.0.0\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6169dbd52f4ce52e2b022e7aeb2d89dc308cfe4e251cddfc0f319963283f5daa3ef8b81180f3a687db94dee2ab81a852297cf5c96b69dcc116a399600359b61fd29c43a715528ea46092bec44ea41fcddf8128627cd973e959390606f3b3ffcaa143f3dd32a3e9cf2ed53aa13b149cd9c1979909f4a350fa430bd3473bb2ad084e5c41d88eb531cb78df4070656d8f32305bf1184ffcc7a8649b06ffc0bc72eb83a484e7d887ec3b8e13ed6422bc981dd -->",
+  "package_name": "AgTable",
+  "closed_at": "2024-06-04T10:41:14Z",
+  "title": "New package: AgTable v1.0.0"
+}

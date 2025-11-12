@@ -1,0 +1,158 @@
+{
+  "created_at": "2023-12-24T02:20:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "LilithHafner",
+  "merged_at": null,
+  "pr_number": 97687,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vXcSE",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@mcabbott, does this seem like a reasonable package to you?\r\n\r\n[I'm going to block for at least 7 days (instead of the usual 3) so there is plenty of time to respond]",
+      "createdAt": "2023-12-24T02:22:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1868416132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vXcVG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-24T02:24:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1868416326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vX5xm",
+      "author": {
+        "login": "hyrodium"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nIs it intended that the package has the GPL-3.0 license? I think most Julia users tend to like the MIT license.",
+      "createdAt": "2023-12-24T15:03:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1868536934",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vX_L3",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I use GPL by default intentionally, though I'd defer to @mcabbott who is the author of the technical implementation (I just packaged it and helped with compat)\r\n[noblock]",
+      "createdAt": "2023-12-24T17:03:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1868559095",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vniii",
+      "author": {
+        "login": "mcabbott"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm opposed to this move. The intent here seems to be to discourage an approved PR which you don't want. (Apparently this package was begun after one more person who does want the PR was brave enough to say so, a few weeks ago.)\r\n\r\nThis package seems to assume that unmerged PRs to julia are under MIT license. And that this allows re-use under GPL without even linking to the origin of the code. I have not had time to check either of these.",
+      "createdAt": "2023-12-31T00:32:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1872636066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85voy0j",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I was planning on proceeding with your permission. If you oppose the existence of this package, then we shouldn't register it and if you would like, I will also take down the package.\r\n\r\nThat said, whether or not the Julia PR merges, it will be impossible to access this construct in Julia 1.10- without a package. If we have both the package and the Base PR, then I'll add an `if VERSION >= v1.11.0-DEV-123 const logrange = Base.logrange else` to the package so that users can use this package exclusively for compat reasons.",
+      "createdAt": "2023-12-31T14:40:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1872964899",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xHSC2",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@mcabbott how would you feel if this functionality were a stdlib? (as [suggested](https://github.com/JuliaLang/julia/pull/39071#issuecomment-1876217919) by @JeffBezanson)",
+      "createdAt": "2024-01-18T03:40:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1897734326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xKkWR",
+      "author": {
+        "login": "mcabbott"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Apologies if my reply above was more combative than was deserved.\r\n\r\nIf I'm thinking correctly about the standard lib proposal, I don't much like it. Seems like a lot of hassle for very little code.\r\n\r\nIf the blocker is too many lines of code, they we can think about ways to trim it. Many possible smaller versions exist as earlier commits. I can write up a summary but am reluctant to drive the PR in circles. (Sorry I didn't make a separate issue first, as that might be cleaner.)\r\n\r\n> it will be impossible to access this construct in Julia 1.10- without a package.\r\n\r\nThe obvious solution here is https://github.com/JuliaLang/Compat.jl . The work done for this file https://github.com/JuliaCollections/LogRanges.jl/blob/main/src/compat.jl  would be useful there. ",
+      "createdAt": "2024-01-18T14:33:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1898595729",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852gRY_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-11T11:00:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97687#issuecomment-1988171327",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LogRanges\n- Repository: https://github.com/JuliaCollections/LogRanges.jl\n- Created by: @LilithHafner\n- Version: v1.0.0\n- Commit: 354fad6135366fa184ff6f1a137070883628f8f0\n- Reviewed by: @LilithHafner\n- Reference: https://github.com/JuliaCollections/LogRanges.jl/commit/354fad6135366fa184ff6f1a137070883628f8f0#commitcomment-135647508\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60de4f62b245bebd3ccdaf39ce7951c30f7172d20687ac4d65f5fcd473c7115942dc82d2eb1e479fe6365153cb5b5a12156922f598f3e2452407606b1f7c556f4be3590f329c06339513b8be155bd335580bff455457e0c56f2ba5a25a0e8c8e1671c33975ca76ad896584eb0e17c48f8e6c6e44d2e7f4200ec5f21a79451ee6584cea9442bc993fb88e72a28d2b02f1e7ce052d0b3f9457246dcdbab85ebb03e321a6f72c645751778a60af27f260ca6 -->",
+  "package_name": "LogRanges",
+  "closed_at": "2024-03-11T14:22:51Z",
+  "title": "New package: LogRanges v1.0.0"
+}

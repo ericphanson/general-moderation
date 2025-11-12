@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-09-20T08:27:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 115546,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86M20zQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-20T08:39:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115546#issuecomment-2363182288",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86M4fRj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you comment on why you would like to register the supplementary information from a paper as a package in General? Supplementary information typically doesn't meet the bar of being useful beyond the immediate context of the underlying paper, which does not make it a good candidate for General according to the [guidelines in the README](https://github.com/JuliaRegistries/General/?tab=readme-ov-file#faq). It's certainly possible that some supplementary material could take the form of a package that other packages could use as a dependency, but the usage information in your README doesn't really hint at that. Note that packages do not need to be registered in order to be installed. Anyone can pull it from GitHub to verify the paper. The only thing that would make registration an absolute necessity is if other packages in General need it as a dependency, and then it might be better to structure and describe it independently from the paper.\r\n\r\nI also don't see the connection between the package name and the paper, so it doesn't seem like the name is really descriptive of the package, which would be a requirement for registration.",
+      "createdAt": "2024-09-20T12:29:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115546#issuecomment-2363618403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86M42yY",
+      "author": {
+        "login": "matthiashimmelmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Can you comment on why you would like to register the supplementary information from a paper as a package in General? Supplementary information typically doesn't meet the bar of being useful beyond the immediate context of the underlying paper, which does not make it a good candidate for General according to the [guidelines in the README](https://github.com/JuliaRegistries/General/?tab=readme-ov-file#faq). It's certainly possible that some supplementary material could take the form of a package that other packages could use as a dependency, but the usage information in your README doesn't really hint at that. Note that packages do not need to be registered in order to be installed. Anyone can pull it from GitHub to verify the paper. The only thing that would make registration an absolute necessity is if other packages in General need it as a dependency, and then it might be better to structure and describe it independently from the paper.\r\n> \r\n> I also don't see the connection between the package name and the paper, so it doesn't seem like the name is really descriptive of the package, which would be a requirement for registration.\r\n\r\nTaking your reply into consideration, I do not think that adding the package to the General Julia repository is a useful thing to do. It is not intended to use the package as a dependency for other packages, as it is highly specialized for the solved problem. I retract the merging request and instead offer installation via Github in the README. Thanks for your help!",
+      "createdAt": "2024-09-20T13:15:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115546#issuecomment-2363714712",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CRNHexagon\n- Repository: https://github.com/matthiashimmelmann/CRNHexagon.jl\n- Created by: @matthiashimmelmann\n- Version: v0.1.0\n- Commit: fa313300849fa64330621abdf1535c4ae93bc70b\n- Reviewed by: @matthiashimmelmann\n- Reference: https://github.com/matthiashimmelmann/CRNHexagon.jl/commit/fa313300849fa64330621abdf1535c4ae93bc70b#commitcomment-146967966\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e83e4358dfb401995c500ed77686ea44af00ac27044bc62d560d1f80d7b095a00c6f62e4d4410759f498ba0fa35adee6b032e47f471659c3a109a5102e11d7cfe05d776f33f5a43dd518afd1a3161ef82e28bdd9533be843cc210c489b93321ee7cc399c81cf2bbfe17bbb2376294d7d42d7f08e15df0fd38885416ac5f5efd067146a99082a7a21c8d7c8540b786a1a2d32d0ce3b84a7e0f9754339eda68b5a7c820072a990983718e90447880d56ef726171d65e9bc69c716a71e7ba54abe9 -->",
+  "package_name": "CRNHexagon",
+  "closed_at": "2024-09-20T13:16:27Z",
+  "title": "New package: CRNHexagon v0.1.0"
+}

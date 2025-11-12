@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-01-28T09:58:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 99704,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85yDlOF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BlackBoxOptim, CSV, Cairo, ColorSchemes, Colors, Conda, CovarianceMatrices, DataFrames, Distributions, Documenter, Fontconfig, Gadfly, JLD2, LaTeXStrings, Plots, ProgressMeter, Roots, SpecialFunctions, StatsBase, StatsPlots, XLSX\n- I was not able to load the package (i.e. `import GDTSM` failed). See the AutoMerge logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to AD4SM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-28T10:06:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99704#issuecomment-1913541509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEDpK",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Because package names are a shared global namespace, we try to name packages so that the names are at least identifiable to folks who are not working in the fields the packages are for. For this reason we try to avoid using acronyms for package names unless they are well known even to those working in a different field. \r\n\r\nIt might be worth including the phrase \"BondModels\" in this package name so folks from other fields know at least a bit of what this package is for, though I don't know what the proper nomenclature is here.",
+      "createdAt": "2024-01-28T17:19:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99704#issuecomment-1913666122",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yEYwL",
+      "author": {
+        "login": "econPreference"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ah, I understand. Currently, I'm considering the name \"TermStructureModels.jl\" for it. I will address the unmet guidelines and attempt to register it again later. Thank you for your comment.",
+      "createdAt": "2024-01-28T23:07:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99704#issuecomment-1913752587",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852cmbs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-10T12:22:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99704#issuecomment-1987208940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853WsrU",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-03-17T12:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99704#issuecomment-2002438868",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GDTSM\n- Repository: https://github.com/econPreference/GDTSM.jl\n- Created by: @econPreference\n- Version: v0.1.0\n- Commit: ca569dd884944079e07b46652527bd3bbf85ca49\n- Reviewed by: @econPreference\n- Reference: https://github.com/econPreference/GDTSM.jl/commit/ca569dd884944079e07b46652527bd3bbf85ca49#commitcomment-137943262\n- Description: Bayesian Treatments for the Gaussian Dynamic Term Structure Model\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69f63569e554bdbd989dd4341dc7bc6fd4293bb16a734aa55c04b145108950f3b1a935bd932babe0709dc28d5ea248876fd26285b66a53a5ac90cdc18876bdf1ec6f6066512ba034e71daf1946efbc2a53150f1f4e3f8dd9ae0c15aaba654922d1590a5c83fd4fbaa60e3614eef32975cc6bac61f89ea1642c5dbc7e84d1644391ec6ab88dc57f35161f600407e2dcca724ee8cad33016030c22d77e8d8e6941e7b33f3ebfa108c9dffb694d36a35a5ac -->",
+  "package_name": "GDTSM",
+  "closed_at": "2024-03-17T12:23:06Z",
+  "title": "New package: GDTSM v0.1.0"
+}

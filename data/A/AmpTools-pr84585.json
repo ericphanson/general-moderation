@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-05-31T05:17:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 84585,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85djOvd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: AbstractAlgebra, Combinatorics, Groebner, SymEngine\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 2 existing packages.\n  1. Similar to ArgTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to AWSTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-31T05:23:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84585#issuecomment-1569516509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eIgJr",
+      "author": {
+        "login": "mikeingold"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Package has since been renamed a few times, Ref: #84588, #84591, and #84592.",
+      "createdAt": "2023-06-06T18:52:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84585#issuecomment-1579287147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85g4LKP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-07-07T12:23:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84585#issuecomment-1625338511",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hgCb_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-07-14T12:24:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84585#issuecomment-1635788543",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AmpTools\n- Repository: https://github.com/zhaoli-IHEP/AmpTools.jl\n- Created by: @zhaoli-IHEP\n- Version: v0.1.0\n- Commit: 9bb0e65b235de42737d1b477eff457f67c54ff10\n- Reviewed by: @zhaoli-IHEP\n- Reference: https://github.com/zhaoli-IHEP/AmpTools.jl/issues/7\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598622035fadc1deb4e4a8193fa0037b55741c6f9419d1b4a8ca7f96bcc02e01e5bf84197ca30bf0f563a76660dc1ea17b74c328105ebecc38a5aea09fd4815d3e54e29806cc1ae32606b53c9364c02a175a19553e27c70736a19f9cbe08b50616add3610244fb1d197a1dbd6c496c2f6f195dc16354fe9ec06acda3d91e87d0855 -->",
+  "package_name": "AmpTools",
+  "closed_at": "2023-07-14T12:24:27Z",
+  "title": "New package: AmpTools v0.1.0"
+}

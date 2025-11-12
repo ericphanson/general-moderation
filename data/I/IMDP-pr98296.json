@@ -1,0 +1,202 @@
+{
+  "created_at": "2024-01-05T15:55:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 98296,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85v_aNx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 11 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to QMDP. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to LMDB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to SDDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to CSDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to UMAP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to RDDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to DSDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to SIMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to MD5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to MIDI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-05T15:59:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878893425",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_gyR",
+      "author": {
+        "login": "Zinoex"
+      },
+      "authorAssociation": "NONE",
+      "body": "The naming follows from the standard abbreviation in literature on Interval Markov Decision Processes, which are Markov decision processes where the transition probability is only known within an interval.",
+      "createdAt": "2024-01-05T16:14:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878920337",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_pTi",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think this is unlikely to be accepted - a quick google doesn't yield any results related to Markov processes for me, so this isn't an especially widely known acronym it appears. \r\n\r\nI would suggest a more descriptive name - `IntervalMDPs` maybe, or even just `IntervalMarkovDecisionProcesses`. Keep in mind that (a) package names autocomplete in the Pkg REPL (so `IntervalMar<tab>` would expand to the full name and (b) you can always do `import IntervalMDPs as IMPD` if that's desired on the user end.",
+      "createdAt": "2024-01-05T16:38:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 6
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878955234",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_u1G",
+      "author": {
+        "login": "Zinoex"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the feedback @nilshg. I see your point and do take that into consideration. But I would really prefer to keep the name if at all possible for two reasons: (a) for people working with IMDPs, we rarely ever say the full name, but rather the abbreviation and (b) I have a `cu` function that I deliberately don't export as it clashes with CUDA.jl (and I want to keep that function name as they do almost the same thing). Thus, either the user would need to write `IntervalMDP.cu`, which I find needlessly verbose, or write both `using IntervalMDP` and `import IntervalMDP as IMDP` to keep `IMDP.cu`, which may confuse a new user of the library. ",
+      "createdAt": "2024-01-05T16:54:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878977862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_yys",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "While for people _in_ the field that might be a common name, people discovering it might struggle. I agree with Nils and would even favour `IntervalMarkovDecisionProcesses` – it is much more readable and we have editors with autocomplete these days. If an expert wants the abbreviation, they can still use the `as` syntax.\r\n(still a [nobreak] comment if the above points are clarified)",
+      "createdAt": "2024-01-05T17:07:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878994092",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_zYq",
+      "author": {
+        "login": "Zinoex"
+      },
+      "authorAssociation": "NONE",
+      "body": "It is not possible to use an `as` syntax for `using`. If that was possible, I would be happy with the longer `IntervalMarkovDecisionProcesses`. However, I wouldn't impose on the users either to frequently write `IntervalMarkovDecisionProcesses.cu` or to need both a `using` and an `import` to use the library. The shorter `IntervalMDP` I can accept if necessary, but I would still prefer `IMDP`. ",
+      "createdAt": "2024-01-05T17:08:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1878996522",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_8ug",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> It is not possible to use an `as` syntax for `using`.\r\n\r\nWhat do you mean?\r\n\r\n```julia\r\njulia> using Statistics: Statistics as Stat\r\n```\r\n\r\nworks just fine, and presumably so would\r\n\r\n```julia\r\njulia> using IntervalMarkovDecisionProcesses: IntervalMarkovDecisionProcesses as IMDP\r\n```",
+      "createdAt": "2024-01-05T17:38:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1879034784",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v_-Rh",
+      "author": {
+        "login": "Zinoex"
+      },
+      "authorAssociation": "NONE",
+      "body": "> ```julia\r\n> julia> using IntervalMarkovDecisionProcesses: IntervalMarkovDecisionProcesses as IMDP\r\n> ```\r\n\r\nHuh, I have never seen this. Interesting! Thanks for showing me this. Not a nice syntax though IMO - it looks as if you are using a type named `IntervalMarkovDecisionProcesses` within the `IntervalMarkovDecisionProcesses` module. I would personally prefer a syntax like \r\n```julia\r\njulia> using IntervalMarkovDecisionProcesses as IMDP\r\n```\r\n\r\nBut I digress. Considering the sentiment of this discussion, I will change the name of the package to `IntervalMDP`.\r\n",
+      "createdAt": "2024-01-05T17:43:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1879041121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wAfrp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I will change the name of the package to IntervalMDP\r\n\r\nSounds good to me!\r\n\r\n> Huh, I have never seen this. Interesting! \r\n\r\nI would point to the manual section on [Standalone `using` and `import`](https://docs.julialang.org/en/v1/manual/modules/#Standalone-using-and-import):\r\n\r\n> Possibly the most common way of loading a module is `using ModuleName`. This [loads](https://docs.julialang.org/en/v1/manual/code-loading/#code-loading) the code associated with `ModuleName`, and brings\r\n>\r\n> 1. **the module name**\r\n> 2. and the elements of the export list into the surrounding global namespace.\r\n\r\n(emphasis mine)\r\n\r\nSo the module name can be renamed just like any element of the export list.\r\n\r\nAlthough I actually agree with you that `using IntervalMarkovDecisionProcesses as IMDP` would have been much nicer, and IMO Julia's `using`/`import` was a bit of a blunder, failing to learn the lessons of Python (don't do \"star imports\"). But now *I* digress ;-)\r\n\r\n\r\n\r\n",
+      "createdAt": "2024-01-05T19:45:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1879177961",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wfvr6",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Since the most recent linked PR indicates this package is now registered under a new name, I think this PR can be closed?",
+      "createdAt": "2024-01-11T15:02:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1887369978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wfwx6",
+      "author": {
+        "login": "Zinoex"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, indeed. Thanks @kellertuer.",
+      "createdAt": "2024-01-11T15:05:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98296#issuecomment-1887374458",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IMDP\n- Repository: https://github.com/Zinoex/IMDP.jl\n- Created by: @Zinoex\n- Version: v0.1.0\n- Commit: ab54eaf6fdbdaa3db0d6bc0b7187bb631d8aff6e\n- Reviewed by: @Zinoex\n- Reference: https://github.com/Zinoex/IMDP.jl/commit/ab54eaf6fdbdaa3db0d6bc0b7187bb631d8aff6e#commitcomment-136319947\n- Description: GPU-accelerated value iteration for Interval Markov Decision Processes\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62a6e6b9686fd9e0f22b7cba899175c5eb363409ecf00a940da0e48d84808c1c4a9ca86d2df52036fc0d568e650ff0661962e0fa2ae55bb723180aebc7a007185763898f185f91f7da0d1479e640fb45833cd5191ec45d092725f605ff52171cc496d5a9538e25a12657235b870fc6699e1ee4bd6598973f8a0f6a35879a845feb09c04d7fb92d7f3e68db05a5ab943903e6d4cf7a605fd5f94bcc6aa595fd9c7 -->",
+  "package_name": "IMDP",
+  "closed_at": "2024-01-30T08:13:14Z",
+  "title": "New package: IMDP v0.1.0"
+}

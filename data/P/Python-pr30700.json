@@ -1,0 +1,196 @@
+{
+  "created_at": "2021-02-23T17:45:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 30700,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDM4NDQwMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n1. Similar to IPython. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n2. Similar to Pythia. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-23T17:49:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-784384402",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDQxMTkxMQ==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I believe an exception can be made for \"Python\" being similar to \"IPython\", since they are well-understood to be different outside the context of Julia. Also it is consistent with naming guideline 6: \"Packages that wrap external libraries or programs should be named after those libraries or programs. e.g. MATLAB.jl provides an interface to call the MATLAB engine from within Julia.\"",
+      "createdAt": "2021-02-23T18:22:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-784411911",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDQ3MDYwOQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@cjdoris hi!  That looks like a lot of work, which is great!  I must say that the name seems ok in principle, but.... isn't there a way to integrate your work in [`PyCall.jl`](https://github.com/JuliaPy/PyCall.jl)?",
+      "createdAt": "2021-02-23T19:56:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-784470609",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NDkzOTAxMw==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano Thanks! Certainly the ideas could be in PyCall instead, but some of the ways things are done are so different that in the end it would take rewriting half of PyCall to do so - plus the changes would be breaking and PyCall has many dependents. I think it's worth having a new package to see what works and what doesn't, then regroup the ideas down the line.",
+      "createdAt": "2021-02-24T09:29:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-784939013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NjM1NjM1OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not going to insist, but have you considered different names for the package?  Frankly, I'd like users aren't misled into believing this package is somewhat \"official\" or \"endorsed\" by anything.  Also, \"Python\" is a [registered trademark](https://www.python.org/psf/trademarks/), even though its usage here would likely be fair use (_**this isn't a legal advice**_)",
+      "createdAt": "2021-02-26T01:59:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-786356358",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NjU0NjAzMg==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, you make good points.\r\n\r\nThe package naming guidelines state that wrapper packages should be named after the thing they wrap, with no mention of how \"official\" the package must be. I could rename it \"PythonBindings.jl\", but in my opinion that implies no more or less officialdom than simply \"Python.jl\".\r\n\r\nI have read the Python Trademark Usage Policy and think this is OK usage, but I'll email them to check.",
+      "createdAt": "2021-02-26T10:05:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-786546032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NjYxMzQ5OQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The package naming guidelines state that wrapper packages should be named after the thing they wrap\r\n\r\nSure, but Python is a particularly visible project :wink:  And packages interfacing with other languages used to be called \"XCall\" (just by convention, no real rule).   It isn't clear `Matlab.jl` was a good idea, but we can't do much about that at this point.",
+      "createdAt": "2021-02-26T12:17:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-786613499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NjYzMjMzNQ==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As the trademark holder, it's PSF's job to determine if the term \"Python\" is being used confusingly. So if they are OK with it, I don't see a problem? (I have emailed them. EDIT: and don't have a response yet.)\r\n\r\nOf course it's not my registry, and you're free to implement whatever naming policy you like, so if you want the package to have a different name then I'll happily change it.",
+      "createdAt": "2021-02-26T12:57:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-786632335",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4Njk5NTQyNQ==",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just my two cents as an observer. `MATLAB.jl` does seem like an outlier of a convention that has formed. \r\nGiven `PyCall.jl`, `RCall.jl`, `JavaCall.jl`, and the internal `ccall`,  have you considered `PythonCall.jl`?\r\n\r\nIt would sit nicely beside `PyCall` as an alternative.",
+      "createdAt": "2021-02-27T03:23:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-786995425",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NzA1MjUwMw==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "At it happens, this project was called `PythonCall` in it's infancy. I was a bit worried it clashed a bit with `PyCall` but perhaps it is the best fit.",
+      "createdAt": "2021-02-27T10:43:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-787052503",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NzEwMjYxMQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I was a bit worried it clashed a bit with PyCall but perhaps it is the best fit.\r\n\r\nSounds good",
+      "createdAt": "2021-02-27T17:00:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-787102611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NzgwMzY2Mw==",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ok, please cancel this PR then.",
+      "createdAt": "2021-03-01T09:31:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30700#issuecomment-787803663",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Python\n- Repository: https://github.com/cjdoris/Python.jl\n- Created by: @github-actions[bot]\n- Version: v0.1.0\n- Commit: 12530a487961f921d217a2c4b481baecf37a61ab\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/cjdoris/Python.jl/commit/12530a487961f921d217a2c4b481baecf37a61ab#commitcomment-47470108\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67aaeff17764d604fd3a9a0e86a539835789e2c14632aa152bb6b999ed0d8e7aff7587e3f0f9db2a8dc4b43fcfb757209aab7f27bf45cd6b909cda83b9045afaf8520d2cfcb5d99ee4b663a6254d8bf815c15ec685e0d1d7d8da993f9a5c2d097e47b490a7d2d382854ed06e5d28e33815a48328d26fdee89e88f3a8250a8b099223528e59be5532990ed6220dd4528eb8210189d9f67c1650bc0d986966a4de2eb702b55eefa53f7be40178e5c8e5f7e -->",
+  "package_name": "Python",
+  "closed_at": "2021-03-01T10:47:59Z",
+  "title": "New package: Python v0.1.0"
+}

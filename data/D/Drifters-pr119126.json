@@ -1,0 +1,165 @@
+{
+  "created_at": "2024-11-10T23:36:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 119126,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86TC0JY",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "this is a rename\r\n\r\n[noblock]",
+      "createdAt": "2024-11-10T23:37:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2466988632",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86TC1Qh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-10T23:51:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2466993185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Tz95T",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]",
+      "createdAt": "2024-11-15T20:34:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479873619",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0CNR",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do not understand this : \r\n\r\n`Repo URL does not end with /name.jl.git, where name is the package name`\r\n\r\nGiven that [Drifters/Package.toml](https://github.com/JuliaRegistries/General/pull/119126#diff-dbc4dc76d03a422cde7fbd77b5b7e455e82a357bcb0b994c85f5f509aef23994) has \r\n\r\n`repo = \"https://github.com/JuliaClimate/IndividualDisplacements.jl.git\"`\r\n\r\nAnd https://github.com/JuliaRegistries/General/pull/119150 has \r\n\r\n`repo = \"https://github.com/JuliaClimate/Drifters.jl.git\"`\r\n\r\nWhat am I expected to do here?\r\n\r\n[noblock]",
+      "createdAt": "2024-11-15T20:42:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479891281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0JX4",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I looked for a recent example and found this (not yet merged)\r\n\r\nhttps://github.com/JuliaRegistries/General/pull/119402\r\n\r\nthen \r\n\r\nhttps://github.com/JuliaRegistries/General/pull/119407\r\n\r\nwhere \r\n\r\n`repo = \"https://github.com/Elijah-Phifer/PlanetSim.jl.git\"`\r\n\r\nso I would have tried modifying this PR with\r\n\r\n`repo = \"https://github.com/JuliaClimate/Drifters.jl.git\"`\r\n\r\nbut I think only someone with `write` permission will be able to do this\r\n\r\n[noblock]",
+      "createdAt": "2024-11-15T21:04:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479920632",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0SD9",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "renamed repo back to IndividualDisplacements.jl [noblock]",
+      "createdAt": "2024-11-15T21:27:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479956221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0Yj_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/119538",
+      "createdAt": "2024-11-15T21:45:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479982847",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0YpI",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nGiven that the PR description says\r\n> `Registering package: Drifters`\r\n> `Repository: https://github.com/JuliaClimate/IndividualDisplacements.jl`\r\n\r\nit appears that when the registration was triggered, the repository was still called `IndividualDisplacements.jl`, or at least that is the name of the repository picked up by Registrator. AutoMerge reacts to the disparity between then package name and the repository name.\r\n\r\nMy best suggestion is to again rename the repository to `Drifters.jl` and afterwards retrigger the registration. (It will open a different PR in this case, but that is unavoidable since the repository name is part of the branch naming done by Registrator.)\r\n",
+      "createdAt": "2024-11-15T21:45:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2479983176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T0dF4",
+      "author": {
+        "login": "gaelforget"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> [noblock] Given that the PR description says\r\n> \r\n> > `Registering package: Drifters`\r\n> > `Repository: https://github.com/JuliaClimate/IndividualDisplacements.jl`\r\n> \r\n> it appears that when the registration was triggered, the repository was still called `IndividualDisplacements.jl`, or at least that is the name of the repository picked up by Registrator. AutoMerge reacts to the disparity between then package name and the repository name.\r\n> \r\n> My best suggestion is to again rename the repository to `Drifters.jl` and afterwards retrigger the registration. (It will open a different PR in this case, but that is unavoidable since the repository name is part of the branch naming done by Registrator.)\r\n\r\nI remember that the `if` in \r\n\r\n`if you rename the repository so it has a new URL, make a PR to edit the URL stored in the registry for the old package name to point to the new URL ([example](https://github.com/JuliaRegistries/General/pull/40190/files)). This allows the old versions of the package under the previous name to continue to work.`\r\n\r\nconfused me when I did this. I think at first I did not rename the repo, then I thought maybe I actually needed to, so I did, and then I opened https://github.com/JuliaRegistries/General/pull/119150",
+      "createdAt": "2024-11-15T21:57:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119126#issuecomment-2480001400",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Drifters\n- Repository: https://github.com/JuliaClimate/IndividualDisplacements.jl\n- Created by: @gaelforget\n- Version: v0.6.0\n- Commit: 53db417bb3415c0962dc600a52e2697e0e28afb7\n- Reviewed by: @gaelforget\n- Reference: https://github.com/JuliaClimate/IndividualDisplacements.jl/issues/3#issuecomment-2479960204\n- Description: Trajectory simulations for point particles in the Ocean & Atmosphere\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598753748b4892485ca904ec8050f8e2ca77c1a8db8199bd444ac54c91ceef2ade8e63cb8118491c30ed4fb5e17b2677a67539be48b6686ceaeca33f85c833de123beaf7e1a8b82e5a4ddd4517e537d188c063d5149ceb0ee6142d89cb36d6e8dfb94df6196331b824778fb11d0f2b02b09e4038bdbcddc76e88fdabe3ac8d6f5d435691633b3370edb7e222252460bca62 -->",
+  "package_name": "Drifters",
+  "closed_at": "2024-11-15T21:45:43Z",
+  "title": "New package: Drifters v0.6.0"
+}

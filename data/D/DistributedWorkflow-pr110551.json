@@ -1,0 +1,232 @@
+{
+  "created_at": "2024-07-06T10:26:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 110551,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86D1Fme",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-06T10:29:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2211731870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EjXUG",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "DistributedWorkflow is a very generic name - for something which sounds non generic.",
+      "createdAt": "2024-07-11T20:26:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2223863046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EjiZf",
+      "author": {
+        "login": "FiroozehDastur"
+      },
+      "authorAssociation": "NONE",
+      "body": "> DistributedWorkflow is a very generic name - for something which sounds non generic.\r\n\r\nHi... DistributedWorkflow is a generic package for doing distributed workflows. Hence the name.\r\n\r\nAs a note, this package is not specific to any scientific or non-scientific domain. In principle, any Julia package/user can use this to create distributed workflows.",
+      "createdAt": "2024-07-11T20:43:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2223908447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ejnbb",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Which interpretation of a distributed workflow is implied?\r\n\r\nI get the impression, that this (only) covers batch processing workflows, e.g. in a HPC context. And not something like workflows executed by a distributed group of people or whatever else you might imagine.\r\n\r\n... and, in addition, it sounds like it's implemented via a specific workflow manager:\r\n> The underlying workflow management system is called [GPI-Space](https://www.gpi-space.de/) which is a task-based workflow management system for parallel applications developed at Fraunhofer ITWM by the CC-HPC group.",
+      "createdAt": "2024-07-11T20:58:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2223929051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EjrB4",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "GPISpaceWorkflowManagementSystem might be a more apt name, in my humble opinion.",
+      "createdAt": "2024-07-11T21:09:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2223943800",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EjwUS",
+      "author": {
+        "login": "FiroozehDastur"
+      },
+      "authorAssociation": "NONE",
+      "body": "> GPISpaceWorkflowManagementSystem might be a more apt name, in my humble opinion.\r\n\r\nI fail to understand, why is the underlying workflow manager a problem in naming criteria.\r\n\r\nSecondly, as mentioned in the README, there is more to it than just the underlying workflow manager. This package is not married to GPI-Space and the underlying system can be replaced.",
+      "createdAt": "2024-07-11T21:25:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2223965458",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EodEU",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "With `Distributed` being an established name in the community, I would expect `DistributedWorkflows`(*) to define a generic notion of a workflow in the context of distributed computing - whatever that notion might be (I don't have an answer).\r\n\r\nI would also expect such a package to have very few dependencies (e.g. mostly just standard libraries).\r\n\r\n(*): Note the suggested plural \"S\" in the project/module name, to allow for defining the type/name `DistributedWorkflow`.",
+      "createdAt": "2024-07-12T09:34:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225197332",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EokvM",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "The reason the underlying workflow manager is an issue wrt. registration of a generic name is that it is the opposite of something generic.\r\n\r\nI understand that GPI-Space can be replaced at some point in the future, but given that it is currently not, it might be too early to claim a generic name.",
+      "createdAt": "2024-07-12T09:53:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225228748",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Epmdi",
+      "author": {
+        "login": "FiroozehDastur"
+      },
+      "authorAssociation": "NONE",
+      "body": "I appreciate your comments. However, we would stay with the design choice we made during the creation of the package.\r\n\r\nAnd after talking to the potential users and doing an informal poll, I received the response from them to keep the name. \r\n\r\nI would kindly recommend again to please read the entire README and not cherry pick parts of the documentation and use it out of context.",
+      "createdAt": "2024-07-12T12:41:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225497954",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EqPQp",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name DistributedWorkflows would be great for this package. We asked someone who didn't know what the package does to guess what it does using the name alone and she accurately described almost exactly how it works and what it does.\r\n\r\nI do recommend adding an `s` and possibly renaming `PetriNet` to `DistributedWorkflow`, because the key bit of information for the user is that it's a distributed workflow (that's what they are doing), not that it's a PetriNet (that's what the package authors are going behind the scenes to make the user get what they want/need).\r\n\r\nTBH, I think DistributedWorkflows is a better name than Dagger was.",
+      "createdAt": "2024-07-12T14:07:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225665065",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Eq6qd",
+      "author": {
+        "login": "FiroozehDastur"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I think the name DistributedWorkflows would be great for this package. We asked someone who didn't know what the package does to guess what it does using the name alone and she accurately described almost exactly how it works and what it does.\r\n> \r\n> I do recommend adding an `s` and possibly renaming `PetriNet` to `DistributedWorkflow`, because the key bit of information for the user is that it's a distributed workflow (that's what they are doing), not that it's a PetriNet (that's what the package authors are going behind the scenes to make the user get what they want/need).\r\n> \r\n> TBH, I think DistributedWorkflows is a better name than Dagger was.\r\n\r\nThank you for your comment. I will add the s to the name and update the PR as soon as possible. ",
+      "createdAt": "2024-07-12T15:36:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225842845",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ErGok",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You might need a new registration PR if you rename the package.\r\n\r\nI fully support DistributedWorkflows.jl as a name. This is standard software terminology for the application area and perfectly describes what the package does.",
+      "createdAt": "2024-07-12T16:04:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2225891876",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ExLnU",
+      "author": {
+        "login": "FiroozehDastur"
+      },
+      "authorAssociation": "NONE",
+      "body": "Initiated a new package PR at [PR #111073](https://github.com/JuliaRegistries/General/pull/111073). I would like to close this one but I don't see a `Close PR` option anywhere.",
+      "createdAt": "2024-07-14T21:16:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110551#issuecomment-2227485140",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DistributedWorkflow\n- Repository: https://github.com/FiroozehDastur/DistributedWorkflow.jl\n- Created by: @FiroozehDastur\n- Version: v0.1.0\n- Commit: ac5c3adb9c08830b1ea034e016c15c1955b8ed06\n- Git reference: v0.1.0\n- Description: A Julia interface to a distributed task-based workflow management system",
+  "package_name": "DistributedWorkflow",
+  "closed_at": "2024-07-15T05:52:17Z",
+  "title": "New package: DistributedWorkflow v0.1.0"
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2020-05-15T17:52:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 14815,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyOTM5NzQwNw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Version number is not 0.0.1, 0.1.0, 1.0.0, or X.0.0\n- The following dependencies do not have a compat entry that has an upper bound: Suppressor. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-05-15T17:55:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14815#issuecomment-629397407",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyOTY2NDc0Mw==",
+      "author": {
+        "login": "bdoolittle"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've got to resolve the namespace issue with the pre-existing Porta.jl package on the registry. I'll fix the issue in a new pull request. This pull request can be scrapped.",
+      "createdAt": "2020-05-16T15:38:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14815#issuecomment-629664743",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PORTA\n- Repository: https://github.com/JuliaPolyhedra/PORTA.jl\n- Created by: @bdoolittle\n- Version: v0.1.1\n- Commit: 4dc41b28f4fb9da5029356f37e71d2108a1e1632\n- Reviewed by: @bdoolittle\n- Reference: https://github.com/JuliaPolyhedra/PORTA.jl/commit/4dc41b28f4fb9da5029356f37e71d2108a1e1632#commitcomment-39207975\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63e70e4c401c098f9a666f5e52b12d7a3083f0d61da8f3367516f3554f378b73f863edb2ec8cd1bb6314208f8c789426589206660e9959b2be6bc714d5d4242b16e297d3797c2e5fc2d32fc7aa3b89bffef41bdcd2385cf5794e3f0345ea9079deee16cd68ebc32fdc0402db7c6fe039022b340885521b0686b703c1a494bca260517850180dbf9dfa6474656ff023299c8a65d073c9be8e50c8f2a6171693e133be73959f27fd4cc748a345627550c3b -->",
+  "package_name": "PORTA",
+  "closed_at": "2020-05-20T12:13:09Z",
+  "title": "New package: PORTA v0.1.1"
+}

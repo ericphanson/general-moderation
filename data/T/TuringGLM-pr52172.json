@@ -1,0 +1,106 @@
+{
+  "created_at": "2022-01-11T20:38:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 52172,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q848OJtm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"TuringGLM\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import TuringGLM` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-11T20:40:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1010342758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848OKL9",
+      "author": {
+        "login": "storopoli"
+      },
+      "authorAssociation": "NONE",
+      "body": "@yebai How do I register a package that uses `Turing.jl` under the hood and is not supported on Julia 1.7?",
+      "createdAt": "2022-01-11T20:43:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1010344701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848OK5I",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm not quite sure how to do that. But I'm aiming to merge the Julia 1.7 support PR by this weekend. Would it be possible to wait for a few days? ",
+      "createdAt": "2022-01-11T20:48:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1010347592",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848OOEv",
+      "author": {
+        "login": "storopoli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, how do I do this? I just let this PR open and wait? Or I close and open a new one once Turing supports Julia 1.7?",
+      "createdAt": "2022-01-11T21:08:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1010360623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849THTh",
+      "author": {
+        "login": "storopoli"
+      },
+      "authorAssociation": "NONE",
+      "body": "@rikhuijzer, after we launch version 1.0.0 since https://github.com/TuringLang/TuringGLM.jl/pull/33 is merged. We need to retrigger this.",
+      "createdAt": "2022-02-02T22:32:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1028420833",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849ZcUW",
+      "author": {
+        "login": "storopoli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please close this.",
+      "createdAt": "2022-02-04T15:15:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52172#issuecomment-1030079766",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TuringGLM\n- Repository: https://github.com/TuringLang/TuringGLM.jl\n- Created by: @storopoli\n- Version: v0.1.0\n- Commit: 5ab0001d8ae3e3d102b04c5a030ac434c9f136a8\n- Reviewed by: @storopoli\n- Reference: https://github.com/TuringLang/TuringGLM.jl/commit/5ab0001d8ae3e3d102b04c5a030ac434c9f136a8#commitcomment-63650266\n- Description: Bayesian Generalized Linear models using @formula syntax.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6675bc56b8c39923a633524aa7b2e8a3d1cd43ccdfffa68d3f07f2529ad2a4f3b4654af3228bf3730dcedbd6ea2a192fb1eac5b2bf0c92c41e7b683c35ad011e5352f4f2553fe1d8b2a2a855cdd488f1b0086e22f6799b61c6fc170a93fe3a3c880786945067a2a8dae364683dcd884c9b6421f0b9a6f42046e44d82f5576f566c06cb7d1be2710d001f726e8692bc8d09493c680e9a1fa23a3409458992c50e038499ede88c91ba1fa38cd84b6231256 -->",
+  "package_name": "TuringGLM",
+  "closed_at": "2022-02-04T18:52:57Z",
+  "title": "New package: TuringGLM v0.1.0"
+}

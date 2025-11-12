@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-03-17T18:33:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 103049,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q853XNgP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/JuliaRegistries/General/pull/103042#issuecomment-2002516943 still applies. Also, the `Ext` suffix has the connotation of extension modules, which might be problematic.\r\n\r\nP.S.: on that note: the code in this package might actually be suited for an extension module inside one of your existing packages.",
+      "createdAt": "2024-03-17T18:38:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2002573327",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853XNiq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-17T18:39:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2002573482",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853XN1i",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If this package has a sufficiently wide scope to warrant being an independent package, a name like `ControllerDesignPyPlots` might be suitable. ",
+      "createdAt": "2024-03-17T18:43:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2002574690",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853XRrI",
+      "author": {
+        "login": "ufechner7"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> [#103042 (comment)](https://github.com/JuliaRegistries/General/pull/103042#issuecomment-2002516943) still applies. Also, the `Ext` suffix has the connotation of extension modules, which might be problematic.\r\n> \r\n> P.S.: on that note: the code in this package might actually be suited for an extension module inside one of your existing packages.\r\n\r\nNo. I do not have any other plotting package and also no general control package where this could be added.\r\n\r\nI don't think it is possible to add this code to PyPlot because I overwrite the display() function, and my plot functions return a different type compared to PyPlot. So while I understand your concerns, I think I need to create a new package to achieve the following feature:\r\n- possibility to store plots in an high-level format (with the possibility to zoom in, change the header etc) on disk and to display these plots after loading from disk automatically\r\n\r\nI intend to to add a package extension for Bode plots etc, because they would need ControlSystemsBase as dependency which a a huge dependency and not needed otherwise.\r\n\r\nI need this package to make plotting easy for students, and I think it can be useful for others. \r\n\r\nAnd a name like \"ControllerDesignPyPlots\" is too limiting, because plots for people who migrate from Simulink to Julia can also be very useful for people who are not doing control design.\r\n\r\nOK, I could consider a name like `EditablePlots` if you think that better matches the key new idea of this package...\r\n[noblock]",
+      "createdAt": "2024-03-17T19:32:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2002590408",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853X0Vd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> OK, I could consider a name like `EditablePlots` if you think that better matches the key new idea of this package…\r\n\r\nYes, I think a more descriptive name would be good. If the package is specific to `PyPlot`, I'd include that in the name (`EditablePyPlots`). If it might extend to other backends in the future, something like `EditablePlots` would be fine.\r\n\r\nI'm not actually quite sure what the idea of the package is, though. Looking at the README, the example\r\n\r\n> ```\r\n> p = plot(X, Y, xlabel=\"X\", ylabel=\"sin\", fig=\"basic\")\r\n> ```\r\n> \r\n> You can now close the plot window. You can re-display the plot by typing:\r\n>\r\n> ```\r\n> p\r\n> ```\r\n\r\nalready works with standard `Plots.jl`. Likewise, dumping and reloading `p` to a file via JLD2. If the goal is, as you say,\r\n\r\n> possibility to store plots in an high-level format (with the possibility to zoom in, change the header etc) on disk and to display these plots after loading from disk automatically\r\n\r\nthat's already built-in, and then I don't understand then mae `EditablePlots` .\r\n\r\nI couldn't try out `PyPlotExt` directly because `PyPlot` just segfaults on my machine (I find [`PythonCall`](https://github.com/JuliaPy/PythonCall.jl) to be a much more robust way of calling `matplotlib`). Based on the proposed name `EditablePlots` I'm assuming that in your package, `p` is some kind of mutable object that can be \"edited\" to modify the plot, not just a  `Plots.Plot` object? If that's the case, `EditablePlots`/`EditablePyPlots` seems like a good name, but you'd want to update the README to show the actual feature of the package.\r\n",
+      "createdAt": "2024-03-18T01:45:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2002732381",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853lh7T",
+      "author": {
+        "login": "ufechner7"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I couldn't try out `PyPlotExt` directly because `PyPlot` just segfaults on my machine (I find [`PythonCall`](https://github.com/JuliaPy/PythonCall.jl) to be a much more robust way of calling `matplotlib`). Based on the proposed name `EditablePlots` I'm assuming that in your package, `p` is some kind of mutable object that can be \"edited\" to modify the plot, not just a `Plots.Plot` object? If that's the case, `EditablePlots`/`EditablePyPlots` seems like a good name, but you'd want to update the README to show the actual feature of the package.\r\n\r\nI will rename the package again, but I don't know to which name, could be EditiablePlots or ControlPlots...\r\n\r\nDon't merge this one.\r\n\r\n",
+      "createdAt": "2024-03-19T08:41:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2006326995",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854MsGc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/103490",
+      "createdAt": "2024-03-23T20:14:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103049#issuecomment-2016592284",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PyPlotExt\n- Repository: https://github.com/aenarete/PyPlotExt.jl\n- Created by: @ufechner7\n- Version: v0.0.1\n- Commit: 81957b903ed4dd3d506ffadb293eb5b82cdbad3d\n- Reviewed by: @ufechner7\n- Reference: https://github.com/aenarete/PyPlotExt.jl/issues/3#issuecomment-2002567904\n- Description: Plot functions for controller design\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986fd9aa6dd5ce0b3fe41b223645a9bf1cb5d0fdf63d76ebb7d7b004330047e041055234be1e577c721f31da373164c2d9d8d9948814328ab1e3e3c28b43c9e49f8011cec30c722f63e0bdbef70100e6e461e0fe5c040c2a6b6546c4d86ab6be4bb2f3d8b38d5ea59f3741511af067a9bef750f2e69813f3ffd1bcb0e8b8ff4e4f -->",
+  "package_name": "PyPlotExt",
+  "closed_at": "2024-03-23T20:14:50Z",
+  "title": "New package: PyPlotExt v0.0.1"
+}

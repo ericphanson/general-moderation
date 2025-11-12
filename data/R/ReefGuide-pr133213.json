@@ -1,0 +1,106 @@
+{
+  "created_at": "2025-06-19T03:20:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 133213,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86yAepM",
+      "author": {
+        "login": "PeterBaker0"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi moderators - this package is a work in progress but wanting to utilise it in some operational workloads as soon as possible through standard registry channels. \r\n\r\nFlagging that the tests are just a stub at the moment - let me know if its unacceptable. We will work on tests soon. \r\n\r\nRegards, Peter.",
+      "createdAt": "2025-06-19T03:25:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2986469964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yAh_l",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArchGDAL, CSV, CoordinateTransformations, DataFrames, Distances, FLoops, GeoDataFrames, GeoFormatTypes, GeoInterface, GeoJSON, GeoParquet, GeometryBasics, GeometryOps, Glob, ImageIO, Images, Interpolations, LibGEOS, Memoization, OrderedCollections, Proj, Rasters, StaticArrays, StatsBase, StructTypes, ThreadsX\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-19T03:35:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2986483685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yHGFU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I understand the need for packages to be registered for workflow reasons, but usually, they should be registered in a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl/tree/master/src) in that case. The `General` registry is for when a package is sufficiently mature to be shared with a wide audience. That doesn't preclude it from being \"work in progress\", but it should have a somewhat complete set of features, with sufficient documentation, and, ideally, sufficient testing.\r\n\r\nI don't think I would have flagged this PR as problematic based on my standard 15-second review of new registrations, so it's pretty much up to you if you want to proceed (i.e., add `[noblock]` to your own comment). Just know that `LocalRegistry` is a (very easy to use!) option.",
+      "createdAt": "2025-06-19T13:59:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2988204372",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yMDZi",
+      "author": {
+        "login": "PeterBaker0"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks Goerz - local registry sounds helpful and will keep in mind for future use cases. \r\n\r\nWill work on the compat on main!",
+      "createdAt": "2025-06-20T00:53:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2989504098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yNOZq",
+      "author": {
+        "login": "PeterBaker0"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz  could you close this - replaced by #133295  apologies for the duplicate",
+      "createdAt": "2025-06-20T05:08:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2989811306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yNQ_a",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure! Generally, please avoid changing the version number when fixing automerge issues ",
+      "createdAt": "2025-06-20T05:15:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133213#issuecomment-2989821914",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ReefGuide\n- Repository: https://github.com/open-AIMS/ReefGuide.jl\n- Created by: @PeterBaker0\n- Version: v0.1.0\n- Commit: 434a3bfec720bad4c56fa6010fe4c67aa8624858\n- Reviewed by: @PeterBaker0\n- Reference: https://github.com/open-AIMS/ReefGuide.jl/issues/1#issuecomment-2986463423\n- Description: ReefGuide Julia library functions. Supports regional and suitability assessment operations. Currently utilised by the ReefGuideWorker.jl job worker to asynchronously compute user tasks.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598fc1260c5477f56457391e84b718f82030dace191cb6fd266ee3bba227d65013da69e38fc3d8fc1999958286ce65cd143f7e20280bc399d9f03146bfc37fe7460a1ae5a603ae472b35f1c936361cbc98302f7dd5117c8e132a84663971d1c7ca47c9bd920cb1c3738f7124e4cdca3857f75ef702d7b9c3182413cca8b406e8ff5 -->",
+  "package_name": "ReefGuide",
+  "closed_at": "2025-06-20T05:15:36Z",
+  "title": "New package: ReefGuide v0.1.0"
+}

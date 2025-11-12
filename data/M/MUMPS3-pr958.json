@@ -1,0 +1,203 @@
+{
+  "created_at": "2019-05-24T04:41:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 958,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NTQ3MTE3NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What is the difference from https://github.com/JuliaSparse/MUMPS.jl or https://github.com/JuliaSmoothOptimizers/MUMPS.jl? And where is `MUMPS2.jl`?",
+      "createdAt": "2019-05-24T04:49:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-495471174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NTQ3NDI5Mw==",
+      "author": {
+        "login": "wrs28"
+      },
+      "authorAssociation": "NONE",
+      "body": "The main difference between this `MUMPS3` and the other two MUMPS packages is 1) the API, and 2) a more full-featured interface with the MUMPS sparse direct solver.\r\n\r\nIt appears that [https://github.com/JuliaSparse/MUMPS.jl](https://github.com/JuliaSparse/MUMPS.jl) interfaces with MUMPS 5.0.1 which is several versions out of date (current is 5.2.0), and furthermore it's not clear to me that it is being actively maintained. I'm not sure how many of the MUMPS features it accessed, as the documentation doesn't describe it.\r\n\r\nAs for the other,  [https://github.com/JuliaSmoothOptimizers/MUMPS.jl](https://github.com/JuliaSmoothOptimizers/MUMPS.jl), that is actively maintained and up to date but uses a very different API, and does not currently use some of the features of MUMPS. `MUMPS3` (proposed package) relies on the same Homebrew recipe to build the MUMPS dynamic libraries as the JuliaSmoothOptimizers/MUMPS package.\r\n\r\nI built this package to use the Schur-complement methods of MUMPS, which were not, and are not yet at the time of writing, part of JuliaSmoothOptimizers/MUMPS.  It was not clear to me how to extend either JuliaSmoothOptimizers/MUMPS or JuliaSparse/MUMPS for my own purposes, so I tried something new. Even though I was only trying to get the Schur capabilities, the structure of the new API made it possible to access all of the MUMPS features essentially in one go, which I thought made it worth publishing.\r\n\r\nAs for the name, you are correct in noting that there is no `MUMPS2`. There are, however, the two packages you listed with the same name, which suggested the \"3\". I am not happy with the name `MUMPS3`, and am open to any suggestions or changes.",
+      "createdAt": "2019-05-24T05:09:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-495474293",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NTkyNTAxNw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I see. Would you be interested in reviving e.g. https://github.com/JuliaSparse/MUMPS.jl with your implementation?",
+      "createdAt": "2019-05-25T15:03:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-495925017",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NTkzMDY0NA==",
+      "author": {
+        "login": "wrs28"
+      },
+      "authorAssociation": "NONE",
+      "body": "I’m not sure what you have in mind for that, but I have absolutely no problem with that as long as It won’t require a lot of extra work.\r\n\r\nWhat would I need to do?",
+      "createdAt": "2019-05-25T16:24:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-495930644",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5OTk5MDA0Ng==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Since there don't seemt to be much activity in https://github.com/JuliaSparse/MUMPS.jl/issues/21 do you want to just register this one?",
+      "createdAt": "2019-06-07T18:24:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-499990046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTM0NDkyMQ==",
+      "author": {
+        "login": "dpo"
+      },
+      "authorAssociation": "NONE",
+      "body": "We're in the process of merging JuliaSmoothOptimizers/MUMPS.jl and MUMPS3.jl. Any chance you could help rename JuliaSparse/MUMPS.jl to something else?",
+      "createdAt": "2019-06-12T16:11:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501344921",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTM5NjE3Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Unless there is any interest in reviving JuliaSparse/MUMPS, maybe your new merged package can just take its place.",
+      "createdAt": "2019-06-12T18:21:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501396173",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTM5OTg4OQ==",
+      "author": {
+        "login": "wrs28"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think it's more or less established that JuliaSparse/MUMPS is not actively maintained and that the current maintainers have not shown any interest in reviving.\r\n\r\nIs there any way to have JSO take over the name MUMPS.jl as a breaking release requiring Julia 1? That way current JuliaSparse/MUMPS should be unaffected?",
+      "createdAt": "2019-06-12T18:30:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501399889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTQwMjA0Mg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, maybe your package can just replace that one then, e.g. do something like https://github.com/JuliaSparse/Metis.jl/pull/29",
+      "createdAt": "2019-06-12T18:35:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501402042",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTQxMTg2MQ==",
+      "author": {
+        "login": "wrs28"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sounds good to me.",
+      "createdAt": "2019-06-12T19:00:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501411861",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTg5ODI3MQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Let us know what you want us to do here? Close the PR?",
+      "createdAt": "2019-06-13T22:15:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501898271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUwMTg5ODYzNA==",
+      "author": {
+        "login": "wrs28"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, close the PR while we work out merging MUMPS3 into JSO/MUMPS.\r\nAt that point we will attempt to register again.",
+      "createdAt": "2019-06-13T22:16:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/958#issuecomment-501898634",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MUMPS3\n- Repository: https://github.com/wrs28/MUMPS3.jl\n- Created by: @wrs28\n- Version: v1.0.0\n- Commit: d9ad9e65831cdcbcbe3176326879d3346f2372c2\n- Reviewed by: @wrs28\n- Reference: https://github.com/wrs28/MUMPS3.jl/commit/d9ad9e65831cdcbcbe3176326879d3346f2372c2#commitcomment-33661228\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4ffaa4db5b076c92e07e30ab315d976c6c28f533ef815f845e10c0a21def5084e3addf27304de10a155331e95f659fd2a0887d30d9fcd16ae6c39c0d6c7fe9a837382a2ef43e445d55333b3042297808e6521ddf69fb32cc66a42f4e7b0c2e71319665510cba4f8a3c4897bf201f6a71794d5ff22ae26563f920796fbc4a06bd1edc9d9a7aa96aee78d7fa03ceefc7493fba3c215160140c6ad44ef699c14382fe5ec6c03c5b28ecfe9e793a2eeaf3552 -->",
+  "package_name": "MUMPS3",
+  "closed_at": "2019-06-14T00:24:23Z",
+  "title": "New package: MUMPS3 v1.0.0"
+}

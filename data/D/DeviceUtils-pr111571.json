@@ -1,0 +1,165 @@
+{
+  "created_at": "2024-07-23T01:55:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 111571,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Fwldh",
+      "author": {
+        "login": "avik-pal"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Package rename from `LuxDeviceUtils.jl` to `DeviceUtils.jl` dropping the \"Lux\" to allow more packages to use the centralized functionality.\r\n\r\ncc @CarloLucibello \r\n\r\nPR to change installation link: https://github.com/JuliaRegistries/General/pull/111570\r\n\r\n",
+      "createdAt": "2024-07-23T01:57:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2244106081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86FwlfP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-23T01:57:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2244106191",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86FzY6X",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is there any chance we could come up with a more descriptive name? In `LuxDeviceUtils.jl`, `Lux` was the descriptive part of the package name, and the name was okay for an *internal* dependency of `Lux.jl`. But without the `Lux`, neither `Device` nor `Utils` really have any meaning. It's not clear that \"Device\" refers to GPU/CPU devices, and \"Utils\" only makes sense in relation to another package that utilizes those utils. So, maybe something like `GPUDataDevices`?",
+      "createdAt": "2024-07-23T10:28:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2244841111",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86FzaQl",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Before looking at the package, my guess for what a package `DeviceUtils` would do might have been something similar to [SysInfo.jl](https://github.com/carstenbauer/SysInfo.jl)",
+      "createdAt": "2024-07-23T10:31:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2244846629",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F1-Dx",
+      "author": {
+        "login": "avik-pal"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That's fair. `GPUDataDevices` suggests it only handles GPUs; currently, it does so because we can't run on other accelerators. But the idea is to add support for all accelerators where we can train models.\r\n\r\nHow about prefixing with \"ML\" to `MLDeviceUtils`? While the scope has been broadened from Lux, certain conversion semantics makes more sense in the machine learning context.",
+      "createdAt": "2024-07-23T15:09:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2245517553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F2cBc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`MLDeviceUtils` seems okay… even though \"Utils\" is never great in a package name except in the narrow context of \"dependency for a specific user-facing package\". So `MLDataDevices` might be another suggestion, but it's totally up to you.",
+      "createdAt": "2024-07-23T16:00:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2245640284",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F3HnF",
+      "author": {
+        "login": "avik-pal"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think I like `MLDataDevices`. @CarloLucibello any final thoughts here?",
+      "createdAt": "2024-07-23T17:22:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2245818821",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F6ygE",
+      "author": {
+        "login": "avik-pal"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This PR can be closed in favor of https://github.com/JuliaRegistries/General/pull/111642",
+      "createdAt": "2024-07-24T03:14:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2246780932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F71SS",
+      "author": {
+        "login": "CarloLucibello"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@avik-pal maybe just `MLDevices`? `MLDataDevices` is fine though",
+      "createdAt": "2024-07-24T06:59:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111571#issuecomment-2247054482",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DeviceUtils\n- Repository: https://github.com/LuxDL/DeviceUtils.jl\n- Created by: @avik-pal\n- Version: v1.0.0\n- Commit: c3151e73a1305eaeabc2f81c948d9ceb689dcbc2\n- Reviewed by: @avik-pal\n- Reference: https://github.com/LuxDL/DeviceUtils.jl/commit/c3151e73a1305eaeabc2f81c948d9ceb689dcbc2#commitcomment-144522344\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6205d17bc60f3e9d8a763161cdd521d115ffaa5a3adafb662c21612305834af48fa2102d065bc284b34562008ab995387d3dccffb912410c5a983b965ede44431328b6d33ab822a46c67efbc7f3fa50179ace0b5f3681f68a47989554b98b65652f07416902e39ef5d817857d96da05c1fccb434adad78cd04bd03c059fe08a34bd0c4dccdf3ad7a240b506186f2aa89ef9698de8e6d5c59563920e36bdfe2bbe937d2e71ff92ec09ee63cce219135441 -->",
+  "package_name": "DeviceUtils",
+  "closed_at": "2024-07-24T10:07:04Z",
+  "title": "New package: DeviceUtils v1.0.0"
+}

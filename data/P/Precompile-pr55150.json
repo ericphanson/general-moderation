@@ -1,0 +1,165 @@
+{
+  "created_at": "2022-02-21T18:59:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 55150,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-aluO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-21T19:02:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047157646",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-a8f_",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I feel this name has the chance to create confusion. The word `Precompile` widely used almost as a reserved word in the community, people talk about \"precompile this\" and \"precompile that\". A package with the same name would confuse newer users, IMO. ",
+      "createdAt": "2022-02-21T21:50:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047250943",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-bA2t",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems far-fetched that someone would be confused, IMO. Also, that argument has not been used in the past for package names.",
+      "createdAt": "2022-02-21T22:25:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047268781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-b7BJ",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, Fredrik.\r\n\r\n@aviks That's a fair point. For what it's worth, I've briefly talked about this package with Shuhei Kadowaki and Tim Holy and they both responded positively. The idea started with a PR at Pluto where **one** precompile statement reduces the time for first X from 11 to 8 seconds (https://github.com/fonsp/Pluto.jl/pull/1934) while only introducing 0.2 seconds to `@time using Pluto`.\r\n\r\n",
+      "createdAt": "2022-02-22T07:39:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047507017",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-c2uX",
+      "author": {
+        "login": "fonsp"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I also think the name Precompile.jl is fine, but an alternative could be something like: *`PrecompileMarkers.jl`* or *`PrecompileHints.jl`*. It's more verbose, but perhaps closer to what the package does: Precompile.jl does not precompile, it marks something as precompilable.",
+      "createdAt": "2022-02-22T12:34:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047751575",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-dBzn",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm a bit torn here. Yes, the name is very generic and therefore I understand that is an issue. On the other hand, I cannot think of any other use-case for this name and also  `Memoize.jl` which exports `@memoize` is also not called `MemoizeMacro` or whatever.\r\n\r\nIt would also be a bit sad having to type \"using PrecompileMacro: @precompile\" or something. Preferably, this macro would have been in Julia base since 1.6, but having a package Precompile is quite reasonable too, I think.\r\n\r\nAs a compromise, I've now added Tim and Fredrik as a collaborator to the package. This mitigates the issue where I disappear or whatever and people cannot get hold of the name anymore. I'm also happy to move the repo into an organisation if that's preferred.",
+      "createdAt": "2022-02-22T13:28:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047796967",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-dDW3",
+      "author": {
+        "login": "rikhuijzer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Whatever. I’ll change the name. \r\n\r\nThis PR can be closed",
+      "createdAt": "2022-02-22T13:34:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047803319",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-dI-o",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems like a useful tool!\n\nIt might also be worth proposing adding it to Base and if successful adding it to Compat.jl for <1.9 support.",
+      "createdAt": "2022-02-22T14:01:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1047826344",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-3EEu",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks @rikhuijzer for agreeing to change the name. I have no doubt this is a very useful package. But I feel strongly, based on personal experience, that this kind of name clashes are confusing to beginners. ",
+      "createdAt": "2022-02-28T20:12:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55150#issuecomment-1054621998",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Precompile\n- Repository: https://github.com/rikhuijzer/Precompile.jl\n- Created by: @rikhuijzer\n- Version: v1.0.0\n- Commit: fdbee217221f19866f0f5b8a8e20a09099612afb\n- Reviewed by: @rikhuijzer\n- Reference: https://github.com/rikhuijzer/Precompile.jl/commit/fdbee217221f19866f0f5b8a8e20a09099612afb#commitcomment-67171054\n- Description: A `@precompile` decorator to trigger precompilation\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd602fd15ed62368fd75725dd21257f5768e3028595678a037e541a723de7b00d1b54cfe064be0e6c3635f545001cfe453c8d31b8cbbb6da4a230dcb7b474db20200904ed3d42d802232438b1d1f01f523fa32621fd7ea31b1a1f0e88bead80866d380b86ed13e3fd8b87ec5f890155309f69be6b93bc08f21d485d9b72f943b52a199583ebb0bc5b1722bc0426f17bafd4580f033abdb54474ef489d58897c1d06d5edcb4d458b75d05c65cbd91a8e41a6 -->",
+  "package_name": "Precompile",
+  "closed_at": "2022-02-25T14:09:46Z",
+  "title": "New package: Precompile v1.0.0"
+}

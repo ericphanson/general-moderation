@@ -1,0 +1,61 @@
+{
+  "created_at": "2023-01-06T18:03:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 75249,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85R5V7b",
+      "author": {
+        "login": "HillaryKchao"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have exceeded my Git-LFS bandwidth capacity. Might that be the cause of this error? If so, is there any way this commit can be merged into the registry without having to wait for the bandwidth to reset since every other test passed?\r\n\r\n<img width=\"605\" alt=\"image\" src=\"https://user-images.githubusercontent.com/65726134/211075035-2908b70b-42ba-4886-8577-8b0844e23f24.png\">\r\n",
+      "createdAt": "2023-01-06T18:28:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75249#issuecomment-1373986523",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R8vIX",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If people can't clone your package, that's not going to be useful for many users.  You should rather not store binary blobs inside the repository, and download them as needed.  Putting binary data, especially large one, in git repositories is never a good idea.  If you can upload it to a tarball hosted somewhere else, you can create an artifact with [`ArtifactUtils.jl`](https://github.com/simeonschaub/ArtifactUtils.jl) (this package can for example automatically create a tarball and upload it to github gist, read the README file).\r\n\r\n[noblock]",
+      "createdAt": "2023-01-08T16:34:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75249#issuecomment-1374876183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Uyj1P",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-02-08T12:46:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75249#issuecomment-1422540111",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ItuRecommendations\n- Repository: https://github.com/HillaryKchao/ItuRecommendations\n- Created by: @HillaryKchao\n- Version: v0.1.0\n- Commit: 4a6018a12cfc7be2222c0d32c6f75dae896fc169\n- Git reference: HEAD\n- Description: A Julia implementation of the ITU-Recommendations for space links covering cloud, gaseous, rain, and scintillation attenuations.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> v0.1.0 for studying impact due to climate change\n<!-- END RELEASE NOTES -->",
+  "package_name": "ItuRecommendations",
+  "closed_at": "2023-02-25T00:13:36Z",
+  "title": "New package: ItuRecommendations v0.1.0"
+}

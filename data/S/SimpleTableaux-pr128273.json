@@ -1,0 +1,143 @@
+{
+  "created_at": "2025-04-02T13:15:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 128273,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86lQdQf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-02T13:23:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2772554783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lRKM6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is there a typo in the package name? Shouldn’t it be `SimplexTableau`?\r\n\r\n[noblock]",
+      "createdAt": "2025-04-02T14:25:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2772738874",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lRpWi",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Is there a typo in the package name? Shouldn’t it be `SimplexTableau`?\r\n\r\nGreat question! No, it's not a typo. Julia packages are often named by pluralizing their main objects. So the `Graphs` package defines `Graph` as the main data type. For this one, the main data type is `Tableau` and the proper plural is `Tableaux`. I added `Simple` because it's really a demonstration project for understanding how linear programs can be solved. It is not at all competitive with `HiGHS` or other optimization packages. ",
+      "createdAt": "2025-04-02T15:00:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2772866466",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lRw2P",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sorry, I had a typo in my question… LOL. What I meant to ask is about `Simplex` vs `Simple`, not `Tableau` vs `Tablaux`. It's up to you, in principle, but people might get confused, since the description says \"using the simplex method by pivoting tableaux\".\r\n\r\nPersonally, I also have a bit of a dislike for \"Simple\" in package names. It's one of those meaningless words. What if someone makes a `Tableaux`-related package that's even \"simpler\"? But it's not enough of an objection to go up in arms about it. I just want to make sure you're choosing the name deliberately.\r\n\r\nIf you want to keep the name as-is, you can just edit your comment to contain [noblock]",
+      "createdAt": "2025-04-02T15:07:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2772897167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lm26m",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Sorry, I had a typo in my question… LOL. What I meant to ask is about `Simplex` vs `Simple`, not `Tableau` vs `Tablaux`. It's up to you, in principle, but people might get confused, since the description says \"using the simplex method by pivoting tableaux\".\r\n> \r\n> Personally, I also have a bit of a dislike for \"Simple\" in package names. It's one of those meaningless words. What if someone makes a `Tableaux`-related package that's even \"simpler\"? But it's not enough of an objection to go up in arms about it. I just want to make sure you're choosing the name deliberately.\r\n> \r\n> If you want to keep the name as-is, you can just edit your comment to contain [noblock]\r\n\r\n@goerz : I have thought some more about your suggestion and I rather like `SimplexTableaux` as a name for this module. Is there a way I can cancel this attempted registration (or can you do it for me) and I'll resubmit under the new name?",
+      "createdAt": "2025-04-04T11:31:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2778427046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lnsU-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, you just rename the package and re-register it, see the [instructions in the FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name). Then, I can close this PR in favor of the new one.",
+      "createdAt": "2025-04-04T12:49:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2778645822",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lnuk_",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yes, you just rename the package and re-register it, see the [instructions in the FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name). Then, I can close this PR in favor of the new one.\r\n\r\nGreat! Please \"kill\" this version and I'll re-register under the new name later today. Thanks the suggestion and your help.",
+      "createdAt": "2025-04-04T12:53:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2778655039",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86loADh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/128446",
+      "createdAt": "2025-04-04T13:24:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128273#issuecomment-2778726625",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SimpleTableaux\n- Repository: https://github.com/scheinerman/SimpleTableaux.jl\n- Created by: @scheinerman\n- Version: v0.0.1\n- Commit: 0095c49150fb1d92ba97c0a21b302c98cce50b5a\n- Reviewed by: @scheinerman\n- Reference: https://github.com/scheinerman/SimpleTableaux.jl/issues/1#issuecomment-2772679013\n- Description: Tableaux for solving LPs by the simplex method\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359827c86925f753c7f743d02383ca5fc1a2503a52c0753b2ee232d452e7beca286028c36c4ea2a7594be368d4fea82d413b4efc46de1c38aa93cae256b9b4fb3479b2268decc8d571dff4fa55742a9975a128f7121b88a4859556a46ca72fb9ca5e02acd6c0d072de1ead591e6ae94c4ea0332f49d956ee0779aadd4bb2fd171d8c -->",
+  "package_name": "SimpleTableaux",
+  "closed_at": "2025-04-04T13:24:09Z",
+  "title": "New package: SimpleTableaux v0.0.1"
+}

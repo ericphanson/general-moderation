@@ -1,0 +1,143 @@
+{
+  "created_at": "2022-03-04T07:00:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 55948,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84_HW9o",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import Jieba` failed). See the CI logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to Jinja. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-04T07:06:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1058893672",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_Hz3Q",
+      "author": {
+        "login": "lotcher"
+      },
+      "authorAssociation": "NONE",
+      "body": "1. It is not clear how to deal with the dependency of Python library. Whether it is necessary to check whether there is a corresponding library before, and then call Conda to help users install, it is not very reasonable.\r\n\r\n2. As for the name, because the corresponding Python package is called this name, it has not been modified\r\n\r\nI hope I can get your help. Thank you very much",
+      "createdAt": "2022-03-04T09:56:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1059012048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_IcTo",
+      "author": {
+        "login": "Roger-luo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think the recent progress on CondaPkg kinda resolved the python dependency issue, and maybe could also have a look at the new PythonCall.jl package to work with it. \n\nAlso a side comment on this package, as the python package is actually quite powerful it would be nice to actually have more serious Julia wrapper, and think about the Julia interface and handle those dependency issues before taking the name Jieba in the registry otherwise this would just block whoever wants to work on it in the future. Or I don't see much difference from just PyCall/PythonCall it. \n\n[no block]",
+      "createdAt": "2022-03-04T13:49:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1059177704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_KNOD",
+      "author": {
+        "login": "lotcher"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much for your reply. I am a novice of Julia. I will follow your suggestions and make improvements. Thanks again",
+      "createdAt": "2022-03-05T01:24:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1059640195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85A0jUc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-04-04T12:54:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1087517980",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85A0lV9",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@lotcher FYI: I'm not sure if the \"2 failing\" checks alone would have blocked registration, but since you didn't add [noblock] you did it yourself. There's some way to restart the registration, but I'm not up-to-speed on that.",
+      "createdAt": "2022-04-04T13:01:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1087526269",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Cq0da",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-05T13:02:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1118521178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DHgYq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-05-13T13:10:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55948#issuecomment-1126041130",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Jieba\n- Repository: https://github.com/lotcher/Jieba.jl\n- Created by: @lotcher\n- Version: v0.1.0\n- Commit: 39a7d2bad454b66d551f04fd26dcf946cf852876\n- Reviewed by: @lotcher\n- Reference: https://github.com/lotcher/Jieba.jl/commit/39a7d2bad454b66d551f04fd26dcf946cf852876#commitcomment-67946119\n- Description: Jieba participle called with PyCall\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6997b717ace312fcf6ce6c2219d289cbc044cac9903e011696cb541b2e5de2ba1eed78823982a9fbc5f984174bff9a7f1eef1bb42a70bc90c1751e871752b9d8c5e6eb578abdfbb80c7b00d4258829c053917bea2f58dcbd3cb3f32fb7455ded07522c0ea206ad652feb6b49cae828dacdc4f141a47341983663e32b8c47412431fcbb0b4e15626d4411713a6675c31478ee7b863fc37509447bc88986c4bc4d96c486cad4b9e4cd50a85d6f6c1dc7d44 -->",
+  "package_name": "Jieba",
+  "closed_at": "2022-05-13T13:10:47Z",
+  "title": "New package: Jieba v0.1.0"
+}

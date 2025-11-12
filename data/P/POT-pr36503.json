@@ -1,0 +1,121 @@
+{
+  "created_at": "2021-05-11T11:33:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 36503,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzODMyMTI1Mg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 10 existing packages.\n  1. Similar to BAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to ROS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to GMT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to JET. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to SOM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Pkg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to BBI. Normalized visual distance 2.37 is at or below cutoff of 2.50.\n  10. Similar to Spot. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-11T11:38:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-838321252",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MTY4MjI3NQ==",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThe package is a wrapper of the Python Optimal Transport library whose name is POT. @giordano, what's  the general policy regarding such wrappers, is the name POT.jl OK?",
+      "createdAt": "2021-05-15T15:46:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-841682275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MjkyODIxMA==",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Bump :slightly_smiling_face: \r\n\r\nAnyone who could comment on the name? Maybe @DilumAluthge? Since it's the name of the Python package that is wrapped here it seems reasonable to me. I don't mind renaming the package though if there is a better suggestion or standard. Overall it would just be nice to make it available since it will allow us to remove an optional PyCall-dependent submodule in OptimalTransport that caused me some trouble lately :slightly_smiling_face: ",
+      "createdAt": "2021-05-18T07:28:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-842928210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MzAzNjgzNA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ooops, sorry, this slipped my mind this weekend.  Usually for wrappers we're ok with having the same name as usptream, but in this case the upstream name is particularly bad.  What about expanding the acronym to `PythonOptimalTransport`?",
+      "createdAt": "2021-05-18T10:05:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-843036834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MzAzOTQ0NA==",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Or maybe `PythonOT`? That's also the name of the Github organization (https://github.com/PythonOT) and the webpage (https://pythonot.github.io) I just noticed, so maybe it would be easier to discover.",
+      "createdAt": "2021-05-18T10:09:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-843039444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MzA0MDY2Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, that's a bit more clear.  I guess name will still conflict, but we can deal with it",
+      "createdAt": "2021-05-18T10:11:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-843040666",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MzQ2NDYwOA==",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I renamed the package and started a new registration process: https://github.com/JuliaRegistries/General/pull/36995",
+      "createdAt": "2021-05-18T19:16:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36503#issuecomment-843464608",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: POT\n- Repository: https://github.com/devmotion/POT.jl\n- Created by: @devmotion\n- Version: v0.1.0\n- Commit: aa937a9184e95255b1c113428edeb5586a05353a\n- Reviewed by: @devmotion\n- Reference: https://github.com/devmotion/POT.jl/commit/aa937a9184e95255b1c113428edeb5586a05353a#commitcomment-50661346\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6eca96eeb7985fffe63c42520232a7e4d817b1f0f4f4d93716fd05cb8eea63a1512279dc453339c49f14f5b121902db30bc07da93b0456a05fda4b5bf98d11bfc6d6c4e183572e63f1df88e0ae5faa739a6685d465df39c7d16a1cf6c20967fa8f76bb73917fe22299c3aef7c24a38d37f07ddd0e1d7cb54b95481b17b74f2c4e4a30de31ae0d855338fa1ce86026f82afed0fe69054dee4ae7efde6c5a2d1bdc27468b7566062c7b5d8a359852da3840 -->",
+  "package_name": "POT",
+  "closed_at": "2021-05-18T19:16:46Z",
+  "title": "New package: POT v0.1.0"
+}

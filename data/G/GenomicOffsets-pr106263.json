@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-05-06T15:23:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 106263,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8588v9I",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: NumericalIntegration\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-06T15:27:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106263#issuecomment-2096299848",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8589HdT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/106265\r\n\r\n@currocam I'm assuming you opened a new PR because the version `v1.0.1` was accidental, and you wanted `v0.0.1` instead (although IMO, the package seems mature enough for the standard `v0.1.0`). But just in case: To fix the compat issue for `NumericalIntegration`, you don't need a new registration. Simply update your `Project.toml` to fix the issue, but leave the version the same. If you then retrigger the registration, the bot will update the existing PR instead of creating a new one.",
+      "createdAt": "2024-05-06T16:02:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106263#issuecomment-2096396115",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GenomicOffsets\n- Repository: https://github.com/currocam/GenomicOffsets.jl\n- Created by: @currocam\n- Version: v1.0.1\n- Commit: 104b479fb0c8414cdae14a93e6befe2d9a88c0cd\n- Reviewed by: @currocam\n- Reference: https://github.com/currocam/GenomicOffsets.jl/commit/104b479fb0c8414cdae14a93e6befe2d9a88c0cd#commitcomment-141720296\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68398539d59a1715761f88dc19ba3f48be90b0d8d510d430d2cfcf5856818e0174587fcf08c1540f8006c6ecd1576686b3c864d2729ee980e1d9640e77db682af8aa4b109b2374e7e37dde8cb271bfe0c6957d130b73e7014caa5d9d11877c73c006609d984d7f0a08e6d497b2c77bfd4affc805e3ab11fb505cd20c3996f70085d544f3e1e1933fe327d5692f9f076037b643581780724af204c4ddf5f1085538bf63da041e5558b081675a93eb140bb -->",
+  "package_name": "GenomicOffsets",
+  "closed_at": "2024-05-06T16:02:46Z",
+  "title": "New package: GenomicOffsets v1.0.1"
+}

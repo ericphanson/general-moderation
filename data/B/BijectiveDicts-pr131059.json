@@ -1,0 +1,216 @@
+{
+  "created_at": "2025-05-15T14:18:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 131059,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86r5jaf",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "blocking comment\r\n\r\ndiscussion on registration of this package is in #130944 \r\nthis version applies some of the suggestions there, but discussion still continues",
+      "createdAt": "2025-05-15T14:19:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2883991199",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r5oXb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-15T14:24:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2884011483",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tGLd9",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @mofeing ! Here's what I understand so far. In the data structure I created for a `Bijection` there are four fields: `domain`, `range`, `f`, and `finv`. I believe that the first concern is that the `domain` and `range` fields are redundant. That seems right to me and I can work on fixing that. I'm sure that can be done in a way that doesn't change the user interface so *technically* it's not breaking, but it's my understanding that changes to how data is stored is considered to be breaking, so the version number should go to 0.2.0.\r\n\r\nBut I have a sense there is something else you'd like to see changed, and I'm not understanding that. Can you elaborate? \r\n\r\nCaveat: I'm a mathematician, not a software engineer. So some concepts might elude me!",
+      "createdAt": "2025-05-23T11:05:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2904078205",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tUZs0",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "hi @scheinerman \r\n\r\n>  I believe that the first concern is that the domain and range fields are redundant. That seems right to me and I can work on fixing that. I'm sure that can be done in a way that doesn't change the user interface so technically it's not breaking, but it's my understanding that changes to how data is stored is considered to be breaking, so the version number should go to 0.2.0.\r\n\r\nexactly. also that `Base.keys` and `Base.values` already fulfill the same functionality. IMO `keys` and `values` should return iterators (i.e. `keys` should return a `Base.KeySet` and `values` should return a `Base.ValueIterator`) and if users want a `Set`, then they could just call something like `Set(keys(bd))`. While a `domain` function can be added, there is already a `range` function in Base whose semantics can clash a lil bit.\r\n\r\n> But I have a sense there is something else you'd like to see changed, and I'm not understanding that. Can you elaborate?\r\n> \r\n> Caveat: I'm a mathematician, not a software engineer. So some concepts might elude me!\r\n\r\njajaj don't worry. i'm engineer doing a phd in physics so i hope we can communicate. i will try to be a lil bit more verbose.\r\n\r\nIn my case, I need to be able to change the `Dict` type inside a `Bijection`. Specifically I need that one of the mappings is a `IdDict`.\r\n\r\nA Julia `Set` / `Dict` is not directly using equality (i.e. `==` operator), but it's using `hash(key)` to check that no \"same\" 2 elements are present in the set. In a `IdSet` or `IdDict`, the `hash` function is replaced for `objectid`. This is different to the mathematical notion of equality  and that's where \"egality\" (`Base.:(===)`) comes in. Mathematically, `[1]` is equal to `[1]` (`[1] == [1]`) but programmatically, they are 2 different instances (`[1] !== [1]`). Think like 2 people named the same are still 2 different people.\r\n\r\nI would dare to say that this is mandatory when the key object type is mutable. For example, check out the following code where we use `Vector` as the key type:\r\n\r\n```julia\r\njulia> k1 = [1]\r\n1-element Vector{Int64}:\r\n 1\r\n\r\njulia> k2 = [1]\r\n1-element Vector{Int64}:\r\n 1\r\n\r\njulia> d = Dict(k1 => :a, k2 => :b)\r\nDict{Vector{Int64}, Symbol} with 1 entry:\r\n  [1] => :b\r\n\r\njulia> d2 = IdDict(k1 => :a, k2 => :b)\r\nIdDict{Vector{Int64}, Symbol} with 2 entries:\r\n  [1] => :b\r\n  [1] => :a\r\n```\r\n\r\nCheckout that for `Dict`, due to \"equality\", the second entry overrides the first. But for `IdDict`, they are treated as different entries.\r\n\r\nNote that with a `IdDict` I'll be able to mutate the keys without affecting the dictionary:\r\n\r\n```julia\r\njulia> k2\r\n1-element Vector{Int64}:\r\n 2\r\n\r\njulia> d2\r\nIdDict{Vector{Int64}, Symbol} with 2 entries:\r\n  [2] => :b\r\n  [1] => :a\r\n\r\njulia> d2[k2]\r\n:b\r\n```\r\n\r\nBut that in the case of the `Dict`, the dictionary will break:\r\n\r\n```julia\r\njulia> d\r\nDict{Vector{Int64}, Symbol} with 1 entry:\r\n  [2] => :b\r\n\r\njulia> d[[2]]\r\nERROR: KeyError: key [2] not found\r\nStacktrace:\r\n [1] getindex(h::Dict{Vector{Int64}, Symbol}, key::Vector{Int64})\r\n   @ Base ./dict.jl:477\r\n [2] top-level scope\r\n   @ REPL[98]:1\r\n\r\njulia> d[[1]]\r\nERROR: KeyError: key [1] not found\r\nStacktrace:\r\n [1] getindex(h::Dict{Vector{Int64}, Symbol}, key::Vector{Int64})\r\n   @ Base ./dict.jl:477\r\n [2] top-level scope\r\n   @ REPL[99]:1\r\n\r\njulia> d[k2]\r\nERROR: KeyError: key [2] not found\r\nStacktrace:\r\n [1] getindex(h::Dict{Vector{Int64}, Symbol}, key::Vector{Int64})\r\n   @ Base ./dict.jl:477\r\n [2] top-level scope\r\n   @ REPL[100]:1\r\n```\r\n\r\nI can foresee more cases where a user may want to user other `AbstractDict` types like a `ImmutableDict`, a `ThreadSafeDict`, a `DiskBackedDict`, ... for different features.\r\n\r\nSummarizing, instead of the current implementation of `Bijection`...\r\n```julia\r\nstruct Bijection{S,T} <: AbstractDict{S,T}\r\n...\r\n    f::Dict{S,T}       # map from domain to range\r\n    finv::Dict{T,S}    # inverse map from range to domain\r\n...\r\nend\r\n```\r\n\r\n... I need something like this:\r\n```julia\r\nstruct Bijection{S,T,Dst,Dts} <: AbstractDict{S,T}\r\n    f::Dst      # map from domain to range\r\n    finv::Dts   # map from range to domain\r\nend\r\n```\r\n\r\nps: We could even enforce that `Dst <: AbstractDict{S,T}` and `Dts <: AbstractDict{T,S}`, but my general experience is that enforcing too much results in less user customization which leads to issues, so I would leave it like this.",
+      "createdAt": "2025-05-25T12:47:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2907806516",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tUh98",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "@mofeing Thanks for the extensive answer! I need to digest, but here are some quick reactions:\r\n\r\n- Removing redundancy in the data structure for a `Bijection` is a great idea. \r\n- I suggest keeping the `domain` and `range` *functions* but, as you suggest, have them return iterators. (This is definitely a breaking change.)\r\n\r\nNow the issue of `IdDict` vs `Dict`. I need to read over your material carefully, but my concern is that we could have a bijection `b` from `Int` to `Set{Int}` and the following would *not* cause an error:\r\n```julia\r\nb[1] = Set([1,2,3])\r\nb[2] = Set([1,2,3])\r\n```\r\nBut, if I understand you correctly, you would make it possible for the user to specify what sort of dictionaries do the mapping. I think that's ok, but need to mull it over. There probably should be a way to have the default dictionary types be `Dict`, but a sophisticated user (you!) can override the default. Does that make sense?\r\n\r\n\r\n\r\nAnd let me say again: Thank you! I really appreciate your taking the time to explain all this. \r\n",
+      "createdAt": "2025-05-25T13:52:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2907840380",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tUikZ",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "@mofeing Actually, I think deprecating/eliminating `domain` as a *function* is the right way to go. It's redundant with `keys(b)`. And I don't think I have a `range` function at all! That would be done with `values(b)`. ",
+      "createdAt": "2025-05-25T13:58:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2907842841",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tUy1C",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Now the issue of `IdDict` vs `Dict`. I need to read over your material carefully, but my concern is that we could have a bijection `b` from `Int` to `Set{Int}` and the following would _not_ cause an error:\r\n> \r\n> ```julia\r\n> b[1] = Set([1,2,3])\r\n> b[2] = Set([1,2,3])\r\n> ```\r\n\r\nBijections.jl errors for this code:\r\n\r\n```julia\r\njulia> using Bijections\r\n\r\njulia> b = Bijection{Int,Set{Int}}()\r\nBijection{Int64,Set{Int64}} (with 0 pairs)\r\n\r\njulia> b[1] = Set([1,2,3])\r\nSet{Int64} with 3 elements:\r\n  2\r\n  3\r\n  1\r\n\r\njulia> b[2] = Set([1,2,3])\r\nERROR: One of x or y already in this Bijection\r\nStacktrace:\r\n [1] error(s::String)\r\n   @ Base ./error.jl:35\r\n [2] setindex!(b::Bijection{Int64, Set{Int64}}, y::Set{Int64}, x::Int64)\r\n   @ Bijections ~/.julia/packages/Bijections/H21dz/src/Bijections.jl:106\r\n [3] top-level scope\r\n   @ REPL[6]:1\r\n```\r\n\r\nand BijectiveDicts.jl with `Dict`s also errors\r\n\r\n```julia\r\njulia> using BijectiveDicts\r\n\r\njulia> bd = BijectiveDict{Int,Set{Int}}()\r\nBijectiveDict{Int64, Set{Int64}, Dict{Int64, Set{Int64}}, Dict{Set{Int64}, Int64}}()\r\n\r\njulia> bd[1] = Set([1,2,3])\r\nSet{Int64} with 3 elements:\r\n  2\r\n  3\r\n  1\r\n\r\njulia> bd[2] = Set([1,2,3])\r\nERROR: ArgumentError: inserting 2 => Set([2, 3, 1]) would break bijectiveness\r\nStacktrace:\r\n [1] setindex!(bd::BijectiveDict{Int64, Set{Int64}, Dict{Int64, Set{Int64}}, Dict{Set{Int64}, Int64}}, value::Set{Int64}, key::Int64)\r\n   @ BijectiveDicts ~/.julia/packages/BijectiveDicts/O86TR/src/BijectiveDicts.jl:53\r\n [2] top-level scope\r\n   @ REPL[11]:1\r\n```\r\n\r\nBut with a `IdDict` for the inverse mapping, everything works\r\n\r\n```julia\r\njulia> bid = BijectiveDict{Int, Set{Int}, Dict{Int,Set{Int}}, IdDict{Set{Int}, Int}}()\r\nBijectiveDict{Int64, Set{Int64}, Dict{Int64, Set{Int64}}, IdDict{Set{Int64}, Int64}}()\r\n\r\njulia> bid = BijectiveDict{Int,Set{Int}}()^C\r\n\r\njulia> bid[1] = Set([1,2,3])\r\nSet{Int64} with 3 elements:\r\n  2\r\n  3\r\n  1\r\n\r\njulia> bid[2] = Set([1,2,3])\r\nSet{Int64} with 3 elements:\r\n  2\r\n  3\r\n  1\r\n\r\njulia> bid\r\nBijectiveDict{Int64,Set{Int64}} with 2 entries:\r\n  2 => Set([2, 3, 1])\r\n  1 => Set([2, 3, 1])\r\n```\r\n\r\nThe reason is that using `Dict`s, the example you give effectively breaks bijectiveness and in both packages, this is detected and an exception is thrown. Using a `IdDict`, the notion of what an element or key is changes and thus the behavior changes too.\r\n\r\n> But, if I understand you correctly, you would make it possible for the user to specify what sort of dictionaries do the mapping. I think that's ok, but need to mull it over. There probably should be a way to have the default dictionary types be `Dict`, but a sophisticated user (you!) can override the default. Does that make sense?\r\n\r\nExactly what BijectiveDicts.jl does here ;) https://github.com/bsc-quantic/BijectiveDicts.jl/blob/e35f6a8248b7f7d8c75e75a2752362a98f7a7ddc/src/BijectiveDicts.jl#L20-L21\r\n\r\nIf you don't specify the dictionary types, it will default to `Dict`.\r\n\r\n> And let me say again: Thank you! I really appreciate your taking the time to explain all this.\r\n\r\nYou're welcome!\r\n\r\n---\r\n\r\nOne last point about the name: I _feel_ like the name BijectiveDicts.jl is more correct because mathematically a bijection can be more things that a bijective mapping between 2 discrete sets. Like, what about invertible continuous functions or invertible matrices? They are also bijections. Anyway, this is a lil detail that we can ignore.",
+      "createdAt": "2025-05-25T15:54:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2907909442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tav6Q",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "@mofeing Hi! Step one is completed. I have revised the code for `Bijections` to remove the redundant fields. I've kept the `domain` and `image` *functions*, but now they return iterators instead of `Set` objects. I have not released this new version, so only available by downloading from github. \r\n\r\nNext: I'll start looking into making the two dictionary fields be more flexible in the way you suggest. ",
+      "createdAt": "2025-05-26T11:54:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2909470352",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tcGmD",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "great! mention me in any issue if you have any doubt\r\n\r\nif not, i don't mind doing a PR to Bijections. it should mostly be a copy-paste from BijectiveDicts.jl",
+      "createdAt": "2025-05-26T13:48:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2909825411",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tcRti",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> great! mention me in any issue if you have any doubt\r\n> \r\n> if not, i don't mind doing a PR to Bijections. it should mostly be a copy-paste from BijectiveDicts.jl\r\n\r\n@mofeing OK, gracias! Please do the PR. I'll then work on updating documentation and tests.",
+      "createdAt": "2025-05-26T14:05:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2909870946",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86te3xy",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Closing in favor of upcoming Bijections.jl release.\r\n\r\n@goerz mind closing it? I don't have the permissions to do it.",
+      "createdAt": "2025-05-26T19:59:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2910551154",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BijectiveDicts\n- Repository: https://github.com/bsc-quantic/BijectiveDicts.jl\n- Created by: @mofeing\n- Version: v0.3.0\n- Commit: 942889d12a6d2c40bc7dee6dae8991fea7682e5e\n- Git reference: HEAD\n- Description: Bijective Dictionaries, aka Bijections",
+  "package_name": "BijectiveDicts",
+  "closed_at": "2025-05-26T20:08:45Z",
+  "title": "New package: BijectiveDicts v0.3.0"
+}

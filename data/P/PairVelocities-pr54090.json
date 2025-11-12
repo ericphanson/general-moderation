@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-02-07T13:13:16Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 54090,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849etPY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArgParse, BenchmarkTools, CellListMap, Distances, HDF5, PyCall, StaticArrays\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-07T13:17:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54090#issuecomment-1031459800",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849yF-A",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@florpi please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-02-11T19:25:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54090#issuecomment-1036541824",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849zTyp",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually, I think this is superseded by #54343",
+      "createdAt": "2022-02-12T00:43:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54090#issuecomment-1036860585",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PairVelocities\n- Repository: https://github.com/florpi/PairVelocities.jl\n- Created by: @florpi\n- Version: v0.1.0\n- Commit: f8bc842f313d31471a921d2266adc0d33b3b8e6c\n- Reviewed by: @florpi\n- Reference: https://github.com/florpi/PairVelocities.jl/issues/2\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ffbd947e19fb6e3a2d8beecba9f6925253aeb3165316e208cd1f2bec3d47916836508110456556372231b1cea82b12c1c043dbe945eee1e213f981778646940cff8158d1abe5899301077f157e34b8727ea4d20876e44538a0405c088ef6595b970cd13f302724d4868e17c24cf4c6eff2aaf8f5eacbe26fe0ae1ff8d9773c2d -->",
+  "package_name": "PairVelocities",
+  "closed_at": "2022-02-12T00:43:25Z",
+  "title": "New package: PairVelocities v0.1.0"
+}

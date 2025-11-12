@@ -1,0 +1,143 @@
+{
+  "created_at": "2023-01-30T00:58:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 76636,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85T6d6g",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-30T01:01:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1407835808",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85T62YM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I feel like `InputFiles` is too general a name for something that’s almost a “personal” package. Maybe `<orgname>InputFiles` if all the packages you’re using this with belong to one organization, or else some “cute” name that’s less descriptive.",
+      "createdAt": "2023-01-30T03:21:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1407936012",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85T7Dob",
+      "author": {
+        "login": "OmegaLambda1998"
+      },
+      "authorAssociation": "NONE",
+      "body": "Fair enough @goerz, I can see that. Given that this prepares input files for users to interact with julia scripts, how about `ScriptInputPrep`? A bit more specific to what it does.",
+      "createdAt": "2023-01-30T04:41:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1407990299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85T8hC8",
+      "author": {
+        "login": "OmegaLambda1998"
+      },
+      "authorAssociation": "NONE",
+      "body": "Alternatively, I could simply preface it with OL (OLInputFiles), which is just my username initials - however this doesn't feel as clean to me as a descriptive name for the package",
+      "createdAt": "2023-01-30T10:32:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1408372924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85T-1sV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I tried to have a look at your documentation, but I'm not sure I quite understand what exactly the package does. *If* you want others to use this, you may want to give more context and examples. What does `setup_input` return? (seems like a dict?). What problem does it solve? How or why would I use this in my own scripts? This is not necessarily relevant to registering the package, but it might help with finding a good name.\r\n\r\nIf there's a distinctive core *idea* that can be expressed in one or two words, that would make a good prefix. If it's just \"input handling the way I like it\" (which is fine!), then I actually think `OLInputFiles` would make a great name.\r\n\r\nIn general, descriptive package names are great, but the more \"personal\" a package is, the more specific / long the package name should be, IMO. So `InputFiles` would be totally fine for a package managed by the [JuliaIO organization](https://github.com/JuliaIO). On the other hand, for a package that's \"just\" a dependency for a PhD project package, there's a high chance that the author will eventually move on, so then you want something that's really specific and won't possibly conflict with something other people might write in the future.\r\n\r\nFor the record, as far as I'm concerned, `ScriptInputPrep` is *probably* also long enough to not be a problem, but `OLInputFiles` is definitely safer. You could also ask in the [Julia Slack](https://julialang.org/slack/) (the `#pkg-registration` channel) what other people think. I'm not exactly in a position of authority on any of this, really.",
+      "createdAt": "2023-01-30T16:57:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1408981781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UAupT",
+      "author": {
+        "login": "OmegaLambda1998"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your input! I've added an example to my docs to be more verbose about what this package actually does. I've also asked `#pkg-registration` as suggested. ",
+      "createdAt": "2023-01-30T22:47:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1409477203",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UA0Ts",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Alright, I'll leave it up to you 😉\r\n\r\nIf you edit all your comments here and prefix them with `[noblock]`, the automatic merging after the three-day period should still work. If for some reason it doesn't, just ask on Slack in `#pkg-registration` again for someone to merge it manually.",
+      "createdAt": "2023-01-30T23:12:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1409500396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85UA-TQ",
+      "author": {
+        "login": "OmegaLambda1998"
+      },
+      "authorAssociation": "NONE",
+      "body": "Following the above discussion, this package has been renamed to `BetterInputFiles.jl` (https://github.com/JuliaRegistries/General/pull/76710). This PR can be closed",
+      "createdAt": "2023-01-31T00:01:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/76636#issuecomment-1409541328",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: InputFiles\n- Repository: https://github.com/OmegaLambda1998/InputFiles.jl\n- Created by: @OmegaLambda1998\n- Version: v1.1.4\n- Commit: 5c692ed161fe38277b50c8798d2f350821c3008e\n- Reviewed by: @OmegaLambda1998\n- Reference: https://github.com/OmegaLambda1998/InputFiles.jl/commit/5c692ed161fe38277b50c8798d2f350821c3008e#commitcomment-98535460\n- Description: Consistent and powerful input files for julia projects\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f316a98f0f9dce7aafe74b201616f40fddf7fee32857410c32977a5a79401711060140356ff5cde7db7d0c138081d9a3a4c32ee01725be80b5e237752aa2fd23e7630029be65e997e29a169d18da26b01be4bd00e93c626ad0830b663a72686e04c9d2bdb57f9b541900abdf86989ad6ef169882d9ee0082545de1f9b23408e7ac84084c1e99823243054a2da3b26e2e3f5844a1f00c7e35cf1027adce8716bd365e8afbe5a4f0c0c83315da830db28f -->",
+  "package_name": "InputFiles",
+  "closed_at": "2023-02-24T23:29:31Z",
+  "title": "New package: InputFiles v1.1.4"
+}

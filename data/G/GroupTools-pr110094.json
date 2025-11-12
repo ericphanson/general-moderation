@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-06-30T12:00:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 110094,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86DCwrd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-30T12:03:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2198538973",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DIkje",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This package name strikes me as a little generic. Since it’s related to Manifolds.jl, maybe `ManifoldGroupTools`?\r\n\r\nOtherwise (or probably in any case), I would ask for substantially more documentation. Right now, there is no way to tell what functionality the package provides.",
+      "createdAt": "2024-07-01T12:51:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2200062174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DQoir",
+      "author": {
+        "login": "olivierverdier"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your comments!\r\n\r\nThis package has a narrow usefulness for people working with groups. It is a dependency of other packages of mine (those are of general usefulness) that I wish to publish. So:\r\n1. If it were possible to keep this package on GitHub and have it as a dependency, I would do that, but I understand this is not possible?\r\n2. I really don't care about the name (as this is only ever going to be used as a dependency, I guess). `ManifoldGroupTools` is as good as any other name. **Do I have to re-register with that other name?**",
+      "createdAt": "2024-07-02T07:33:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2202175659",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DSl9A",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> This package has a narrow usefulness for people working with groups. It is a dependency of other packages of mine (those are of general usefulness) that I wish to publish.\r\n\r\nYes, that was exactly my impression, and that's totally fine.\r\n\r\n> 1. If it were possible to keep this package on GitHub and have it as a dependency, I would do that, but I understand this is not possible?\r\n\r\nYes, a dependency of a registered package also has to be registered, which makes this absolutely fine to register.\r\n\r\n> 2. I really don't care about the name (as this is only ever going to be used as a dependency, I guess). `ManifoldGroupTools` is as good as any other name.\r\n\r\nFrom the description \"Useful functions to work with groups defined in `Manifolds.jl`\" I got the impression that this was going to be an internal dependency mainly for `Manifolds`. Hence the suggestion for the name `ManifoldGroupTools`. In general, `<NameOfMainDependentOrOrg>GroupTools` seems like the most appropriate name. As the maintainer of `Manifolds`, you can use that as sort of a name space that you own (just like many packages have `Base` packages).\r\n\r\nAlso, for packages that aren't user facing but merely serve as a dependency, having a long and descriptive name is a good idea. That leaves `GroupTools` still open for a more general, user-facing package related to group theory.\r\n\r\nThe longer and more descriptive the package name (and especially for \"internal\" packages), the less scrutiny I would put on it for registration, e.g., in terms of how much documentation there should be at the time of registration. In general, I think there should always be a paragraph in the README that explains the context and scope of the package and links to the main dependent.\r\n\r\nIt's also never a bad idea to set up a very basic online documentation with Documenter that just shows all the docstrings (or, I suppose you could rely on JuliaHub doing that for you automatically and link to their documentation from the README). That's definitely more optional for an internal package.\r\n\r\n> Do I have to re-register with that other name?\r\n\r\nYes, unfortunately. See the FAQ on [What to do when asked to reconsider/update the package name?](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name)\r\n",
+      "createdAt": "2024-07-02T10:34:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2202689344",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DX_JY",
+      "author": {
+        "login": "olivierverdier"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much for the very clear and detailed explanation. I will choose a more appropriate name and re-register.",
+      "createdAt": "2024-07-02T19:11:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2204103256",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ewwl_",
+      "author": {
+        "login": "olivierverdier"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed, as it is superseded by #111048",
+      "createdAt": "2024-07-14T14:46:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110094#issuecomment-2227374463",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GroupTools\n- Repository: https://github.com/olivierverdier/GroupTools.jl\n- Created by: @olivierverdier\n- Version: v0.1.0\n- Commit: 9096963c0b46213f9605d3dd8e9c511778e8a189\n- Reviewed by: @olivierverdier\n- Reference: https://github.com/olivierverdier/GroupTools.jl/commit/9096963c0b46213f9605d3dd8e9c511778e8a189#commitcomment-143694262\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64cd44b31ca02b854672eab1108bc88d155e6c40639ad19fb61e732026745d4f3367b29f84b093c8f9af49ba94fbeaef38fb42bf25a96120756af0190b1f5fde6eed627d4ee13695b8d14729433b441a461639ffe7e2e135e7ed1cf70af3edc409ca7ef53ecdb386dfe193dc2c4756e6f7474fcf72123ae53b9434b73d6b9b858bd44446b558aa97d19da90bf315ce69f9312174749fb7c45f05d0f8d92814bfd457df2f1a54f4aeef9abeb236597f1d1 -->",
+  "package_name": "GroupTools",
+  "closed_at": "2024-07-14T17:56:50Z",
+  "title": "New package: GroupTools v0.1.0"
+}

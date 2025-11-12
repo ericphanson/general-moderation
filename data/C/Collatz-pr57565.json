@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-03-29T16:04:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 57565,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85AfyAo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-29T16:08:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57565#issuecomment-1082073128",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AnVQ9",
+      "author": {
+        "login": "Skenvy"
+      },
+      "authorAssociation": "NONE",
+      "body": "Howdy Julia registry; this PR was generated as the result of running a test to verify a new package to automate the registrator action. No need to merge this one as the actual project I tested it on is currently empty (although will plan to submit it soon once it's started).\r\n\r\nI see that the auto merge picked up that there's no license in the folder that was submitted, not sure if you'd consider this a \"bug\" or intentional, but my project structure means that the license is one folder down from the project that was submitted, i.e. my repo [Skenvy/Collatz](https://github.com/Skenvy/Collatz) contains the [LICENSE](https://github.com/Skenvy/Collatz/blob/main/LICENSE) at the repo root (and it applies to any sub-dir) but the julia package, and thus the subdir passed to registrator, was `~/julia/` -- so I imagine that the auto-merge only looked for the license _there_, rather than escaping down to the root and searching for a license in a superset of folders.",
+      "createdAt": "2022-03-31T04:09:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57565#issuecomment-1084052541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AnYcX",
+      "author": {
+        "login": "Skenvy"
+      },
+      "authorAssociation": "NONE",
+      "body": "I can see this open issue https://github.com/JuliaRegistries/RegistryCI.jl/issues/352 on whether LICENSE files could be specified in the Project toml, but it seems referencing a superset license is not a favoured option.",
+      "createdAt": "2022-03-31T04:36:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57565#issuecomment-1084065559",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ArtNU",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> so I imagine that the auto-merge only looked for the license there, rather than escaping down to the root and searching for a license in a superset of folders.\r\n\r\nThe fact is the package will not be installed on user's machine as the entire repo, but only the relevant subdirectory, which doesn't contain the license file, so whatever is in the top-level directory of your repo will never reach the users, who won't have a license file.  That's why we require a copy of the license to sit next to the `Project.toml` file.\r\n\r\nI'm going to close the PR as per request.",
+      "createdAt": "2022-03-31T22:41:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57565#issuecomment-1085199188",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Collatz\n- Repository: https://github.com/Skenvy/Collatz\n- Created by: @github-actions[bot]\n- Version: v0.1.3\n- Commit: fafc054858fc86055e7a8441adf91c2ddd500413\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/Skenvy/Collatz/commit/fafc054858fc86055e7a8441adf91c2ddd500413#commitcomment-69821500\n- Description: Functions related to the Collatz/Syracuse/3N+1 problem.\n<!-- daf33ad5e6d085e55119bc06703763cec7c0b68dd6e421de144489cbdea59452f02bd83fe8a184914156eaf513823d4d1295c41faca4a6e0f6a51e0152bcdb840d314a0cdafc251014a5f9b652eedb0dae9e79600e2e003f7cd5c92abec4e1a5027779e6597c196516edfd052a2b064e4b9c5e0bd17d454ac53776f5d1d58273d56a80b7f680704092ed79c8db96e1d00c3bccf8a862332f46a339d65f3da4168cb60e3b91e93ed0887c15e62bff1e5244411de201df21e100748c6c6fb3034c09ecc15bd7397a1702ea562da93c64a3c237c74c3ffe18ccc605c1662e6fe017 -->",
+  "package_name": "Collatz",
+  "closed_at": "2022-03-31T22:41:23Z",
+  "title": "New package: Collatz v0.1.3"
+}

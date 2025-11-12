@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-08-17T14:19:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 43037,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841qilv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name dsjulia contains the string \"julia\".\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Colors, Images, Pluto, PlutoUI, RecipesBase\n- Package name similar to 2 existing packages.\n  1. Similar to OMJulia. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.34 is at or below cutoff of 2.50.\n  2. Similar to IJulia. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-17T14:24:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43037#issuecomment-900344175",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841qjjh",
+      "author": {
+        "login": "Beramos"
+      },
+      "authorAssociation": "NONE",
+      "body": "@MichielStock apparently there are still some requirements to be fulfilled, see above. We need to fix some stuff first but I don't think we can avoid a human intervention",
+      "createdAt": "2021-08-17T14:28:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43037#issuecomment-900348129",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8428Q_B",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-09-17T12:44:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43037#issuecomment-921767873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q843Qqq5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-09-25T12:42:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43037#issuecomment-927115961",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DSJulia\n- Repository: https://github.com/Beramos/DS-Julia2925\n- Created by: @Beramos\n- Version: v0.1.0\n- Commit: c8c98496e3fa48ac942a349b6295e1d1fd42342b\n- Reviewed by: @Beramos\n- Reference: https://github.com/Beramos/DS-Julia2925/issues/107#issuecomment-900340277\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598367fe0168a2365d762d70ae8e21f0f3e2c2d7d31cb243559f485ce8bccce466f667f0861585625dc73b036f1d8b2de813a7617c4372fb9ec055cd92bfbf99153471c7a11d1cba3cf6bdacc5a2feb95efa7bf72f5af3dd51d7d14a61aa6666e98380f095a4622b4fda4a03816ec04339dbbb2504780215f66eb1f365c4ec93671 -->",
+  "package_name": "DSJulia",
+  "closed_at": "2021-09-25T12:42:44Z",
+  "title": "New package: DSJulia v0.1.0"
+}

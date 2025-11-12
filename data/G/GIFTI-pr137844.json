@@ -1,0 +1,150 @@
+{
+  "created_at": "2025-09-03T00:15:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 137844,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87BjLff",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 2 existing packages.\n  1. Similar to CIFTI. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.65 is at or below cutoff of 2.50.\n  2. Similar to NIfTI. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-03T00:22:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3247224799",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BkFQs",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What’s the difference between [NIfTI ](https://github.com/JuliaNeuroscience/NIfTI.jl) and GIFTI?… And CIFTI, for that matter",
+      "createdAt": "2025-09-03T02:25:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3247461420",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BkJ54",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh, CIFTI is _your_ package! That probably makes this alright, following the existing pattern, even though we seem to collectively become pretty allergic to these types of package names. You’d have to try on Slack to get a full registry maintainer on board, for a manual merge.\r\n\r\nIn principle, it would seem preferable to have all these very closely related (?) formats supported in a single package with a broader, more descriptive name. Not that I have any strong objections to this package, personally ",
+      "createdAt": "2025-09-03T02:37:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3247480440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BkeG1",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks, I'll try to make the case on Slack tomorrow. Yeah, [NIfTI](https://github.com/JuliaNeuroscience/NIfTI.jl), [CIFTI](https://github.com/myersm0/CIFTI.jl), and GIFTI are three quite different neuroimaging filetypes but are similarly named because they were developed by the same group. Of the three, NIfTI is vastly different from the other two (deals with volumes rather than surfaces), but CIFTI and GIFTI have a little bit of overlap and similarity, and they could conceivably fit together. I do think it's best to keep them separate and I'll try to make that case.\r\n\r\nNIfTI: Volumetric brain images (3d and 4d arrays)\r\nGIFTI: Brain surface meshes and data (point-based coordinates and triangle faces in 3d space, etc)\r\nCIFTI: Mixed surface-volume data (aligns with both GIFTI and NIFTI representations but are quite separate in form and/or purpose, e.g. not concerned with geometry)",
+      "createdAt": "2025-09-03T03:31:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3247563189",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87EAcwX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Based on the discussion on Slack, I'd put a pin in this particular PR for now, see https://github.com/JuliaNeuroscience/GIFTI.jl/issues/4#issuecomment-3288449713",
+      "createdAt": "2025-09-13T14:22:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3288452119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87EU7Un",
+      "author": {
+        "login": "Tokazama"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Based on the discussion on Slack, I'd put a pin in this particular PR for now, see [JuliaNeuroscience/GIFTI.jl#4 (comment)](https://github.com/JuliaNeuroscience/GIFTI.jl/issues/4#issuecomment-3288449713)\r\n\r\nLet's keep the discussion going there, if all parties are amenable to it.",
+      "createdAt": "2025-09-15T20:27:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3293820199",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87LSnS_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-16T12:24:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3410654399",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87NNemW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-10-24T12:24:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137844#issuecomment-3442862486",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GIFTI\n- Repository: https://github.com/myersm0/GIFTI.jl\n- Created by: @myersm0\n- Version: v0.1.0\n- Commit: cb85590906c03c9d9e865b6647d48a84e3bccc0c\n- Reviewed by: @myersm0\n- Reference: https://github.com/myersm0/GIFTI.jl/commit/cb85590906c03c9d9e865b6647d48a84e3bccc0c#commitcomment-165035940\n- Description: A Julia package for reading gifti (.gii) neuroimaging surface files\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66c3bc49b45eb259655d21c31a6bcdc49870f232eb0633d404d22daaff604c3e3a47792e0b90d8bfe5eb04be6132a3564c6a49ad07998dad393507120212c6de995209a8a917e8ad845c7f9a4516eecefd4f1662e517a3619cb0afebdd22d32c5f907478bf5ef84f5179ab196e86beaf0fafbd678acf8f7ec4b7524a34d0b63b6441e05173a7b5bb82caf05b33ea2c6d2442015696c5f7af55f5ada9db76cde539259a154b3d8dcb9a0acb969c12451a3 -->",
+  "package_name": "GIFTI",
+  "closed_at": "2025-10-24T12:24:47Z",
+  "title": "New package: GIFTI v0.1.0"
+}

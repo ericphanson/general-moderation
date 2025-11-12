@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-06-16T06:59:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 62441,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85E-x8c",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to BGEN. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.03 is at or below cutoff of 2.50.\n  2. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Gen. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-16T07:02:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62441#issuecomment-1157308188",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85E-zHJ",
+      "author": {
+        "login": "kose-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package is a reader package for [the PLINK 2 binary format for genetic variants, PGEN](https://www.cog-genomics.org/plink/2.0/input#pgen). It is referred to as all-uppercase PGEN in its [specification](https://github.com/chrchang/plink-ng/blob/master/pgen_spec/pgen_spec.pdf). To our knowledge, this is the first Julia package that works with this file format, thus we hope we can keep this name.",
+      "createdAt": "2022-06-16T07:08:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62441#issuecomment-1157312969",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85E_cZD",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I feek like PGENFiles.jl would be a better name.\n If you type `PGEN` into Google you get nothing relevant.\nIf you type in `PGEN files` the results are all relevant.",
+      "createdAt": "2022-06-16T10:09:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62441#issuecomment-1157482051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FFTw2",
+      "author": {
+        "login": "kose-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, we are renaming it to PGENFiles.jl.",
+      "createdAt": "2022-06-17T16:00:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62441#issuecomment-1159019574",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PGEN\n- Repository: https://github.com/OpenMendel/PGEN.jl\n- Created by: @kose-y\n- Version: v0.1.0\n- Commit: 97a069470fd96c3799525c5399224d90d5371cc4\n- Reviewed by: @kose-y\n- Reference: https://github.com/OpenMendel/PGEN.jl/commit/97a069470fd96c3799525c5399224d90d5371cc4#commitcomment-76231205\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6771245cab75fe6b563f3ff6c87b20294be17e250277fe08729790277096e3798c0c758b4024b9a8bcdb95d256c7fc454f5dc2a6a08151238e6d87ed0842a2bc48a83046b343dd4e55d8e82ed3a89ada9272f46ebe8015bd5a0e11f1c4b2b9f9602fb1af9be0b3586abf92e5e68aea21020e4eb90af44da880dca15471704cb0c4a22b7a5c0119af420204483c92bd459cb897b549ffba3beb175d04629a2721f640b8d18e523236310a256a81efb2ddb -->",
+  "package_name": "PGEN",
+  "closed_at": "2022-06-24T20:15:59Z",
+  "title": "New package: PGEN v0.1.0"
+}

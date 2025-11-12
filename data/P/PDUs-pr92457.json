@@ -1,0 +1,143 @@
+{
+  "created_at": "2023-09-29T14:27:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 92457,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85nxWm5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 1 existing package.\n  1. Similar to PDDL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-29T14:32:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1740990905",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nxffJ",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'd like to retain the proposed name `PDUs.jl`.\r\n\r\nThis package addresses the need to encode/decode Protocol Data Units, rarely known by their full name, but simply called [PDUs](https://en.wikipedia.org/wiki/Protocol_data_unit). The name is short, but well known in the field, and descriptive.\r\n\r\nWhile the hamming distance from `PDDL` is small, there is no confusion between the two. Given a short name, small hamming distance is unavoidable.",
+      "createdAt": "2023-09-29T14:57:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741027273",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nxn4X",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I mean, the Wikipedia page you liked called it Protocol Data Units and only later defined the initialism PDU. When I search on DuckDuckGo or google for \"PDU\", every single result I see on the front page is for Power Distribution Units. Wikipedia has a list of different meanings for PDU here: https://en.wikipedia.org/wiki/PDU,  so there's a lot of space for ambiguity in the name.\r\n\r\nFrom that pov, I think the heuristic against acronomys here is on somewhat good grounds, and maybe the package should be named ProtocolDataUnits.jl or something like that.\r\n\r\n__________\r\n\r\nDisclaimer: I'm not a major decision maker, just offering my personal opinion",
+      "createdAt": "2023-09-29T15:21:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741061655",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nxvWZ",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the thoughts @MasonProtter.\r\n\r\nIf you look at the Wikipedia list (https://en.wikipedia.org/wiki/PDU), none of the entries except Protocol Data Units is related to software concepts. So IMHO, there is very little ambiguity.\r\n\r\nThe only conceivable ambiguity is with Power Distribution Units, but in the computing world (computer networks), I believe PDUs is a very well known acronym with little ambiguity. Some examples:\r\n- https://www.techopedia.com/definition/25292/protocol-data-unit-pdu\r\n- https://www.geeksforgeeks.org/protocol-data-unit-pdu/\r\n- https://www.techtarget.com/searchnetworking/definition/protocol-data-unit-PDU\r\n- https://techterms.com/definition/pdu\r\n\r\nMy reluctance to name it with a longer name comes from two considerations:\r\n1. Developers interested in PDUs are more likely to search for this term.\r\n2. The API is declarative and designed to use `PDUs.` as a prefix in many declarations. `ProtocolDataUnits.` as a prefix does not work well. Of course the developer can always fix that with `import ProtocolDataUnits as PDUs`, but it adds friction to the API.",
+      "createdAt": "2023-09-29T15:39:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741092249",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nx1ak",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Using `PDU` as a prefix inside the package is totally fine, but the package itself should definitely be named `ProtocolDataUnits`",
+      "createdAt": "2023-09-29T15:58:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741117092",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nx3tu",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I guess I'd just say that for a 3-letter initialism like PDU there's a significant chance that the term becomes more ambiguous as time goes on, e.g. who knows the next big LLM might be called PDU for all we know. When I clicked on this topic, I actually expected the package to have something to do with a whacky form of Partial Differential Equation or something. \r\n\r\nThe general policy is that we're not completely against initialisms, but we generally avoid them when possible because it raises the possibility of confusion and future collisions, and makes it easier to look at lists of packages as a non-insider and get a bit of an idea for what it might be about.  \r\n\r\n> Developers interested in PDUs are more likely to search for this term.\r\n\r\nThe main way to alleiviate this is by putting it in the docs / README, and making use of [github topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) which should help the search engine visibility of your package and help people figure out what it's for. \r\n\r\n\r\n> The API is declarative and designed to use PDUs. as a prefix in many declarations. ProtocolDataUnits. as a prefix does not work well. Of course the developer can always fix that with import ProtocolDataUnits as PDUs, but it adds friction to the API.\r\n\r\nOne potential thing you can do here is just define inside the package\r\n```julia\r\nmodule ProtocolDataUnits\r\nconst PDUs = ProtocolDataUnits\r\nexport PDUs\r\n\r\n[...]\r\nend\r\n```\r\nand then users simply do\r\n```julia\r\nusing ProtocolDataUnits\r\nPDUs.foo(bar)\r\n```",
+      "createdAt": "2023-09-29T16:04:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741126510",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nx9wg",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, will rename. Thanks for the consideration and feedback.",
+      "createdAt": "2023-09-29T16:13:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741151264",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nyE2v",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "New PR https://github.com/JuliaRegistries/General/pull/92467 supersedes this one. This one can be closed without merging.",
+      "createdAt": "2023-09-29T16:31:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92457#issuecomment-1741180335",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PDUs\n- Repository: https://github.com/org-arl/PDUs.jl\n- Created by: @mchitre\n- Version: v0.1.0\n- Commit: 7dab16603980a0efdfc103044a400b557a64c541\n- Reviewed by: @mchitre\n- Reference: https://github.com/org-arl/PDUs.jl/commit/7dab16603980a0efdfc103044a400b557a64c541#commitcomment-128733221\n- Description: Encoders and decoders for Protocol Data Units\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd646873135aa89f5effa5deeb270264a25fd555ad84ca4f44fe1d1539206fd4947457432e11470df184b8132ef5aecdcf5a51d2a5c109e20d3cc7630384b93da0cdd4ea30a620c398cd3bdbcd06805e5afc64381dc4882ab0784be395a96cabfdb815e66b19ca1f43ada3699ebca496d470ae3fe9bf5c45d9ffa2577a3dbe3b6b8c63d43ec6ff457a3f224781cea7574d52f16a538f56b82f3df3d3d1b23b92fb6 -->",
+  "package_name": "PDUs",
+  "closed_at": "2023-10-01T09:07:48Z",
+  "title": "New package: PDUs v0.1.0"
+}

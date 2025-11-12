@@ -1,0 +1,91 @@
+{
+  "created_at": "2023-04-28T11:27:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 82492,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85bCq9u",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Codecs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-04-28T11:31:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82492#issuecomment-1527426926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bC1sj",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "name seems super general, but the content is specific to OpenAI, can we somehow represent that in the name?\r\n\r\n[noblock]",
+      "createdAt": "2023-04-28T12:08:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82492#issuecomment-1527470883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bD1As",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "@Moelf I'd like to add support for other models in the future, as we experiment with them (both via APIs and self hosted). \r\n\r\n[noblock]",
+      "createdAt": "2023-04-28T15:23:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82492#issuecomment-1527730220",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dZ6cX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-05-29T12:23:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82492#issuecomment-1567074071",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85d-lxA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-06-05T12:24:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/82492#issuecomment-1576688704",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CodeAI\n- Repository: https://github.com/GenieFramework/CodeAI.jl\n- Created by: @essenciary\n- Version: v1.1.1\n- Commit: 6f1ac86cbc0b933d6fa763c304dce1f57c42aac8\n- Reviewed by: @essenciary\n- Reference: https://github.com/GenieFramework/CodeAI.jl/commit/6f1ac86cbc0b933d6fa763c304dce1f57c42aac8#commitcomment-110981907\n- Description: AI code generator based on OpenAI\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65c2def18854a852004cb4b9a217f4c1a365ac321c0ad5ee9bc4c4020c10eaec2427bd755628740e64adbf5b96144aa58f214e89e89c4f4593d8982d80cf83ef99ee03d129222de97d05dcd550f64d4da20048c8061554f094fc9b9241bb0dbe638d10ae4be900b40e3835bfc038a5aea69bea0247d3298eeef3d32cdad497ca0f17527333f19f1e7f41797290e5264a552380e163f599fb78e197693415552055a942463194cbcc52992059e0a1b7cba -->",
+  "package_name": "CodeAI",
+  "closed_at": "2023-06-05T12:24:16Z",
+  "title": "New package: CodeAI v1.1.1"
+}

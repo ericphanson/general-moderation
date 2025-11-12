@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-03-16T05:15:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "vchuravy",
+  "merged_at": null,
+  "pr_number": 79689,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Xssca",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 3 existing packages.\n  1. Similar to Hose. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.19 is at or below cutoff of 2.50.\n  2. Similar to Hive. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Hurst. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-16T05:19:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1471334170",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Xssv-",
+      "author": {
+        "login": "lukebemish"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've since realized that I forgot to get my tests working on the repo, so I'll re-release it once those are functional. My apologies.",
+      "createdAt": "2023-03-16T05:21:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1471335422",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XySHH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`HumanReadableSExpressions` or `HRSExpressions` would both seem like good package names that would be compatible with the guidelines ",
+      "createdAt": "2023-03-16T21:54:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1472799175",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XySj1",
+      "author": {
+        "login": "lukebemish"
+      },
+      "authorAssociation": "NONE",
+      "body": "Alright, thank you. If I am renaming the package (and so source repository), is there any odd behavior with Registrator I should be aware of?",
+      "createdAt": "2023-03-16T21:56:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1472801013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XyZW6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Not that I'm aware of… but maybe check on `#pkg-registration` on Slack",
+      "createdAt": "2023-03-16T22:15:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1472828858",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Xya71",
+      "author": {
+        "login": "lukebemish"
+      },
+      "authorAssociation": "NONE",
+      "body": "Using JuliaRegistrator after a name change seems to create a new PR, as the package name has changed, which makes sense, so this one can now be closed",
+      "createdAt": "2023-03-16T22:22:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79689#issuecomment-1472835317",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Hrse\n- Repository: https://github.com/lukebemish/Hrse.jl\n- Created by: @lukebemish\n- Version: v0.1.0\n- Commit: 6a4db6c930471939c5d1eccbf882c0f54f3b1dbe\n- Reviewed by: @lukebemish\n- Reference: https://github.com/lukebemish/Hrse.jl/commit/6a4db6c930471939c5d1eccbf882c0f54f3b1dbe#commitcomment-104777324\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd636878c38d485d12cc8e23a75cf8d3c59d399814e745c24eebefa7671b6c168a2380d4ffc2785ceaead594a82e17a2fe9b4fa1d0aaa8b1e91a98a40c675e0dd6e89642aa5c5ed77d393af2d65c756c5866fc835378f0e4b5acd4f0d551c3b427d6a31a59afce16c3b4bcfe3fe3c9fb0eb9fe97d5ec9d9a359ceb14c5574273682400085bab21f779c8383fad6b2401f5f6de51e1ca7bfa90a52282d01301417c07fcd6e5099bd29b1d3eb3e0e7da686b4 -->",
+  "package_name": "Hrse",
+  "closed_at": "2023-03-16T22:51:23Z",
+  "title": "New package: Hrse v0.1.0"
+}

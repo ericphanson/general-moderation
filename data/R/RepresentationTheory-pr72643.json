@@ -1,0 +1,195 @@
+{
+  "created_at": "2022-11-22T11:35:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 72643,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85O45QJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-22T11:41:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1323537417",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O9YNA",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@dlfivefifty I'd suggest a less generic name. How about `YoungTableaus.jl`? `RepresentationTheory.jl` suggests it's about characters, etc. here you're dealing almost exclusively with operations on Partitions and Young(Tableau|Matrix). `ForeverYoung.jl` could also work ;D",
+      "createdAt": "2022-11-23T08:42:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1324712768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O9146",
+      "author": {
+        "login": "dlfivefifty"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It's about reducing representations of the symmetric group to irreducibles. So YoungTableaus.jl is definitely not a good name.",
+      "createdAt": "2022-11-23T10:22:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1324834362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85O_wCe",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I raised this \"objection\" (maybe a question ;) to naming since I have also written a package like this: https://github.com/kalmarek/SymbolicWedderburn.jl which allows you to decompose into irreducibles and block-diagonalize orthogonal representations of arbitrary finite groups.\r\n\r\nThere I implemented \"large chunk\" (or rather bare necessities :D ) of representation theory based on characters: \r\nhttps://github.com/kalmarek/SymbolicWedderburn.jl/tree/master/src/Characters\r\n\r\nBut I felt this is not serious enough attempt to\r\n  a) publish independently,\r\n  b) name it `(Group)Characters.jl`\r\nsince the latter feels like name squatting due to its generality (and I'm guilty of such general name squatting with registering `Groups.jl` myself ;/ )\r\n\r\nIf you're aiming at providing a general package for computations within representation theory (and this is just the first attempt), I'm happy to unblock (and contribute my code to it!).\r\nIf you're however interested solely in representations of symmetric groups, I'd ask you to pick a less generic name.\r\n\r\nTo quote the guidelines:\r\n> A less systematic name may suit a package that implements one of several possible approaches to its domain.\r\n> * Julia does not have a single comprehensive plotting package. Instead, `Gadfly`, `PyPlot`, `Winston` and other packages each implement a unique approach based on a particular design philosophy.\r\n> * In contrast, `SortingAlgorithms` provides a consistent interface to use many well-established sorting algorithms.\r\n\r\n`RepresentationTheory` feels precisely like `SortingAlgorithms` to me.\r\n\r\n[noblock] \r\n",
+      "createdAt": "2022-11-23T16:21:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1325334686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PBOw2",
+      "author": {
+        "login": "dlfivefifty"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would say this is a first attempt and I'm happy to accept other contributions. In particular I'm planning to support other groups like D_8 and hopefully some compact Lie groups.\r\n\r\nThat said, your package seems very different in nature. For example, adding \"support\" for characters would be a one line addition in my package: `character(ρ::Representation, g) = tr(ρ(g))`. But that's probably not actually what you have in mind. Further, my representations are all over the reals (or more accurately, `Float64`) which seems different from anything with the name \"Symbolic\". \r\n\r\nSo I'm more than happy to rename the package. That said, I don't have a good name! Maybe RepresentationTheoryLinearAlgebra.jl to emphasise this is a linear algebra-based approach? Or NumericalRepresentationTheory.jl?",
+      "createdAt": "2022-11-23T22:20:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1325722678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PDqCR",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "maybe (Numerical)MatrixRepresentations.jl?\r\n\r\nI'd be very happy to meet (maybe next week) and discuss the intersection of the packages ;)\r\n\r\n[noblock]",
+      "createdAt": "2022-11-24T12:04:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1326358673",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PEDd-",
+      "author": {
+        "login": "dlfivefifty"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "\"Representations\" on its own is too vague I think.... maybe GroupMatrixRepresentations.jl ?",
+      "createdAt": "2022-11-24T13:33:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1326462846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PE5Tf",
+      "author": {
+        "login": "kalmarek"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "sounds good to me ;) btw. I PMed you on slack, but I'm not sure if You're using it actively ;)",
+      "createdAt": "2022-11-24T16:57:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1326683359",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PPCxg",
+      "author": {
+        "login": "dlfivefifty"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "https://github.com/JuliaRegistries/General/pull/73013\r\n\r\nReplaces this PR. I decided to rename it NumericalRepresentationTheory.jl as its the clearest description of what I'm trying to do (tackle RepTheory using numerical linear algebra)",
+      "createdAt": "2022-11-28T16:00:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1329343584",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Rfz8d",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-12-29T12:43:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1367293725",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RyanL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-01-05T12:45:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72643#issuecomment-1372170699",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RepresentationTheory\n- Repository: https://github.com/dlfivefifty/RepresentationTheory.jl\n- Created by: @dlfivefifty\n- Version: v0.1.0\n- Commit: 3c35a986841b3161265f89c1f66b7974ab99ee6f\n- Reviewed by: @dlfivefifty\n- Reference: https://github.com/dlfivefifty/RepresentationTheory.jl/commit/3c35a986841b3161265f89c1f66b7974ab99ee6f#commitcomment-90739561\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6abffee95b29e07d2962b8f7c79324d34e747033d8ea129a1c9f6d73bfdc8c02179f500a9d332bf569aedac3fb83861bbdd42c08d7c8a2a950e1d939270701ebb9cbd5fb9c1567fc6fcc21437d3ba6211f2d53052444bc81d40662f355daeefe9a1fb06c75e48fa309f482ad8ab43ca084c0f6151b42dbbcf5f37715e313de837443c12f18b04cd95fa5c716291a1f4de02c8589e58a8c9ce1e5edf0ee555374fff3682edff450bda5253e7729b1c4e3cdd92b31a1f7acb55f517941845d8efe4 -->",
+  "package_name": "RepresentationTheory",
+  "closed_at": "2023-01-05T12:45:45Z",
+  "title": "New package: RepresentationTheory v0.1.0"
+}

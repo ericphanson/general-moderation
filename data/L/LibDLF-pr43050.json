@@ -1,0 +1,143 @@
+{
+  "created_at": "2021-08-17T16:13:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 43050,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841q5aT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- Found no OSI-approved licenses. Found non-OSI license(s): CC-BY-4.0 license in LICENSE, and CC-BY-4.0 license in README.md.\n- Package name similar to 2 existing packages.\n  1. Similar to LibPSF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Libdl. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-17T16:16:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900437651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841rdrG",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@kerrykey please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\nI should note that this package seems to have a rather... unconventional organisation.\r\n\r\n[noblock]",
+      "createdAt": "2021-08-17T19:52:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900586182",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841sKv7",
+      "author": {
+        "login": "kerrykey"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano thanks. First package registration for me and yeah not the easiest package for learning. The libdlf repo is being setup to build and deploy python, Julia and soon Fortran packages for the same set of filter data files. Based on the issues above, we're changing the Julia deploy to copy the built package files into an independent repo  that should satisfy the auto merge requirements in https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900437651",
+      "createdAt": "2021-08-18T02:47:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900770811",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841sL0o",
+      "author": {
+        "login": "kerrykey"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please close this pull request as project is now renamed to DLFlib.",
+      "createdAt": "2021-08-18T03:00:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900775208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841tBvr",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To be clear: we allow repositories that don't have the name like \"PackageName.jl.git\", if the Julia package is a subdirectory, see for example [`libCEED`](https://github.com/CEED/libCEED), which has the Julia package in the [`julia/LibCEED.jl`](https://github.com/CEED/libCEED/tree/cd3003229e5325bdf31f9e102d9fa328f6582fc1/julia/LibCEED.jl).  However in your setup you had the Julia package in the top-level directory, but of a separate branch, this screwed up all the logic.",
+      "createdAt": "2021-08-18T10:18:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-900996075",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841tDCG",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, the name similarity check is only to prevent typo-squatting (and this is done only when registering a new package): if you prefer to keep the name `LibDLF` that's ok, it's only that someone will need to manually merge the pull request",
+      "createdAt": "2021-08-18T10:27:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-901001350",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841t0BV",
+      "author": {
+        "login": "kerrykey"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks, that's really helpful and the  libCEED example is a good one to follow. We will revise and resubmit with our package in subdirectory `/packages/julia/LibDLF.jl`.\r\n",
+      "createdAt": "2021-08-18T15:17:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-901202005",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841xf5M",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favour of #43149",
+      "createdAt": "2021-08-19T19:06:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/43050#issuecomment-902168140",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LibDLF\n- Repository: https://github.com/emsig/libdlf\n- Created by: @kerrykey\n- Version: v0.0.9\n- Commit: 3d84ec7aa018570519931feeeccf090fd80c6f11\n- Reviewed by: @kerrykey\n- Reference: https://github.com/emsig/libdlf/commit/3d84ec7aa018570519931feeeccf090fd80c6f11#commitcomment-55094252\n<!-- b6773dd5469382edf93528742e9b6ef27cff364c94b554581710f8d11e1ff4c3bacef8eaaced990a01f3fa94c7bd7726d8bb54cc93fb7f1cb7b4d282f05d880783b3adcb96b3e368b909fb026a3942f2ec29b337575a83732fdca17f0f3d180a08e25859df607deb2f09290d0e7faee7395cf93feaa064bf1506bd6ac7ad618e9f5bddc237d84dcc752100bbc000dd7026f590bab7e978a9243fe7a204881a543de0c466747763aaed750b3cc8abdc4833397be49fec2f22614b90476a9b7b856780f2a756e022eee040f9e4f728bc158cdc6413cbf970a4f804ef67c02414030afb3c8b55208b7ba2a91c4e14ad6c07 -->",
+  "package_name": "LibDLF",
+  "closed_at": "2021-08-19T19:06:17Z",
+  "title": "New package: LibDLF v0.0.9"
+}

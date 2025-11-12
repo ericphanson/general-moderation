@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-05-26T15:13:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 107686,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_F6qK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Distances, Distributions, KernelFunctions, LambertW, LazySets, MLDataUtils, NearestNeighbors, Parameters, PersistenceDiagrams, PersistenceDiagramsBase, Pipe, Plots, ProgressMeter, Ripserer\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-26T15:21:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2132257418",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_F7sz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Congratulations on the new package!\r\n\r\nSince \"TDA\" is not a recognizable acronym, can I suggest that you name the package `RobustTopologicalDataAnalysis`? It may seem long, but length isn't really an important factor for Julia package names. Or, if you want to shorten it a little, \"Analysis\" might be redundant. So, maybe `RobustTopologicalData` could work, too?\r\n\r\nIf you want to keep the short \"RobustTDA\" in the \"logo\" in the documentation, you could recommend that people load the package as\r\n\r\n```julia\r\nimport RobustTopologicalDataAnalysis as RobustTDA\r\n```",
+      "createdAt": "2024-05-26T15:35:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2132261683",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_GF0Q",
+      "author": {
+        "login": "sidv23"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thank you for your suggestion. In the Applied Math and some parts of the ML community, TDA has sort of become the [_de facto_ acronym](https://en.wikipedia.org/wiki/Topological_data_analysis) for \"Topological Data Analysis\", and it's interesting to hear the perspective from a wider audience. For instance, the two most popular packages for TDA in Python and R also bear the same acronym:\r\n* [Scikit-TDA](https://docs.scikit-tda.org/)\r\n* [R TDA](https://cran.r-project.org/web/packages/TDA/)\r\n\r\nI will definitely reconsider this. Thanks for your comment! ",
+      "createdAt": "2024-05-26T18:09:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2132303120",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_GJVp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, Python enforces absolutely no rules on package naming, whereas in the Julia General Registry, we make a conscious effort to address the wider community of Julia users. This specifically includes [avoiding domain-specific acronyms in package names](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines). A good rule of thumb is whether typing an acronym into Google gives the intended meaning as the first hit. For \"TDA\" this is not the case: Google only finds \"tax deferred annuity\". Even on Wikipedia, [\"topological data analysis\" pretty far down the list](https://en.wikipedia.org/wiki/TDA).",
+      "createdAt": "2024-05-26T18:26:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2132317545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CoIJI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-06-26T12:23:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2191557192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DqFER",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-07-04T12:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107686#issuecomment-2208846097",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RobustTDA\n- Repository: https://github.com/sidv23/RobustTDA.jl\n- Created by: @sidv23\n- Version: v0.0.1\n- Commit: 4bcf054ab4d0ab3c7fdafbd809792ef1e585273b\n- Reviewed by: @sidv23\n- Reference: https://github.com/sidv23/RobustTDA.jl/commit/4bcf054ab4d0ab3c7fdafbd809792ef1e585273b#commitcomment-142407780\n- Description: A collection of tools for robust topological data analysis\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63914cced82a967499d0017f61948dccd4fdb2939da795c3240070991f035ad1b6ef2a4c36100fafad6c3a58d85d513722758a7a311df6dd8c624ec95dce4e5440db24b8f83f89fa85ead51bbb31eb72702d3b2a19ec19151702f753f05efa5b03c3d72f096f84f60a1dd79182e621069d11f5b1f6d01735ac7b8e4d619ffef31472cd385e0e469e1fe507e907cf174bed0d77573adb5f71d5671a12218c25629b59d8333f6badee30a0969977c6a5262 -->",
+  "package_name": "RobustTDA",
+  "closed_at": "2024-07-04T12:23:26Z",
+  "title": "New package: RobustTDA v0.0.1"
+}

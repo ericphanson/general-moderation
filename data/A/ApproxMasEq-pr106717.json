@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-05-13T20:09:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 106717,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q859sJlW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DiffEqCallbacks, OrdinaryDiffEq, Sundials\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-13T20:16:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106717#issuecomment-2108725590",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859sq0N",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi and congrats on the new package! Usually abbreviations are discouraged in package names. Could you suggest a different name, perhaps one that makes the connection to statistical physics more explicit?",
+      "createdAt": "2024-05-13T21:50:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/106717#issuecomment-2108861709",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8599T_4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/106881",
+      "createdAt": "2024-05-15T18:44:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106717#issuecomment-2113224696",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ApproxMasEq\n- Repository: https://github.com/d4v1d-cub/ApproxMasEq.jl\n- Created by: @d4v1d-cub\n- Version: v1.0.0\n- Commit: 872570396e39e08acabc40852d6ccc8c614d9dd3\n- Reviewed by: @d4v1d-cub\n- Reference: https://github.com/d4v1d-cub/ApproxMasEq.jl/issues/4\n- Description:  This Julia package performs the numerical integration of two Approximated Master Equations on networks: the Cavity Master Equation and the Conditional Dynamic Approximation\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835985dc02ef2cb8f9f49e2a55ac05be8bbeca0918d5bea6748056fc84e74ce903ac66496648c5859c8592f29cfb2696fa172c182729a8e989cba98ba9945173e81b8004c15dbafb93ce2727cecdcecc0b0b5876d09f56c9c4cd28504abc9ee754ba8131267f775ccef674ef096edb3920ec3f73a6a0fa2c6e819631b9fdfb048735f -->",
+  "package_name": "ApproxMasEq",
+  "closed_at": "2024-05-15T18:44:41Z",
+  "title": "New package: ApproxMasEq v1.0.0"
+}

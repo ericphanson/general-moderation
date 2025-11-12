@@ -1,0 +1,165 @@
+{
+  "created_at": "2024-02-14T06:15:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 100827,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85z0jvB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DifferentialEquations, Distributions, Integrals, Roots\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-14T06:28:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1943157697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z1dVA",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on the new package! Could I suggest a more specific name, perhaps related to survival analysis? The current one is very broad",
+      "createdAt": "2024-02-14T09:39:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1943393600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z8xSb",
+      "author": {
+        "login": "ya0"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Hi, congrats on the new package! Could I suggest a more specific name, perhaps related to survival analysis? The current one is very broad\r\n\r\nSure.\r\nSome background: It exports the type `JointModel` which scientist would interact with. So the plural was just the naming convention given by the Julia. \r\nThere is also the abstract type `HazardBasedDistribution` which contains some computations and provides the basis for joint models. I dont see any applications for this besides joint models thus i did not like it as the title of the package.",
+      "createdAt": "2024-02-15T03:32:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1945310363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z9kA7",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> It exports the type JointModel which scientist would interact with. So the plural was just the naming convention given by the Julia.\r\n\r\nIndeed but when people `import` your package, they know what they're doing with the types inside it. The package name on the other hand can be misleading if someone is looking for a specific functionality outside of your domain.\r\n\r\nMaybe `JointSurvivalModels.jl`?",
+      "createdAt": "2024-02-15T07:43:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1945518139",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z-fQT",
+      "author": {
+        "login": "ya0"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Indeed but when people `import` your package, they know what they're doing with the types inside it. The package name on the other hand can be misleading if someone is looking for a specific functionality outside of your domain.\r\n\r\n> Maybe JointSurvivalModels.jl?\r\n\r\nWhat do you think @danielinteractive ? It looks a bit strange to split the term `joint model` but somehow also makes scence and sounds okey.\r\n\r\nWould you @gdalle  then also want to change the type name and along that the docs, tests, comments etc.? I understand your concern, but it seems like quite a bit of work.",
+      "createdAt": "2024-02-15T10:13:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1945760787",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z-4uG",
+      "author": {
+        "login": "danielinteractive"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think the term \"joint model\" is indeed a bit general. In our domain people might understand it but outside I don't think so. So yeah the proposal makes sense",
+      "createdAt": "2024-02-15T11:06:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1945865094",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850eUT-",
+      "author": {
+        "login": "ya0"
+      },
+      "authorAssociation": "NONE",
+      "body": "can be closed in favor of #101247 ",
+      "createdAt": "2024-02-20T12:23:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1954104574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850ns63",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Would you @gdalle then also want to change the type name and along that the docs, tests, comments etc.? I understand your concern, but it seems like quite a bit of work.\r\n\r\nI think a find-and-replace of `JointModels` => `JointSurvivalModels` in the entire repo should do the trick!",
+      "createdAt": "2024-02-21T12:40:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1956564663",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850ns-n",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "thank you for taking my remark into account ;)",
+      "createdAt": "2024-02-21T12:40:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100827#issuecomment-1956564903",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JointModels\n- Repository: https://github.com/insightsengineering/JointModels.jl\n- Created by: @ya0\n- Version: v0.3.0\n- Commit: d4b3fac0735b20fd377e96b48f8d0db2525087a6\n- Reviewed by: @ya0\n- Reference: https://github.com/insightsengineering/JointModels.jl/commit/d4b3fac0735b20fd377e96b48f8d0db2525087a6#commitcomment-138605758\n- Description: Julia implementation of joint models combining longitudinal and survival endpoints\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd667a575654ed423650d0d5744271e5012df4ddcb4f3d85b13bff68f8f1a9453e4507b880d5c0827b352991ab09906d924c2ad196f13bd890d2e03876d4adbd1a45ead3382e26a4ca318b4b103653f20001b3467c52377f0a139057f979728ec9799b9db7a575b646edc4d3369e40554f7a8309b29d0344743a81ce724446e27b5101c52b1132fc29782660a1c25a1ff9eb9fae86dd115c390a2848be1ded609bfa7c431271b393f6bfcbf441c6e1856fe501fa3c212db6d14401cdc55a142c361 -->",
+  "package_name": "JointModels",
+  "closed_at": "2024-02-20T22:28:05Z",
+  "title": "New package: JointModels v0.3.0"
+}

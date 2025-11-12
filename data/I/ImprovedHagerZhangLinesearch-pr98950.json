@@ -1,0 +1,515 @@
+{
+  "created_at": "2024-01-16T11:10:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "timholy",
+  "merged_at": null,
+  "pr_number": 98950,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85w3RYd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-16T11:14:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893537309",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w3WQk",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Usually, you would open a pull request to LineSearches.jl with the fix, not register a new package",
+      "createdAt": "2024-01-16T11:28:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893557284",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w3YKF",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've opened an issue two weeks ago, with no response: https://github.com/JuliaNLSolvers/LineSearches.jl/issues/173 , which to me indicates that no one would review such PR. I would be happy to make such PR if a maintainer expresses interest in reviewing it. In the meantime, a separate package makes sense to me, even more so because this package has some additional changes on top of that fix which wouldn't fit the original package.",
+      "createdAt": "2024-01-16T11:33:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893565061",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w3m3b",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] No. Registering a fork for an existing package would be an absolute last resort. Please make a pull request.",
+      "createdAt": "2024-01-16T12:14:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893625307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w3pYe",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Why would a maintainer consider my PR if they don't respond to an issue?",
+      "createdAt": "2024-01-16T12:21:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893635614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w46o8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Why wouldn't they? What response exactly were you expecting on the issue? It is very routine for issues not to receive comments. They primarily exist as a TODO list of pull requests. Whoever is affected by the issue and motivated enough to provide a solution should open a PR. In this case, you.\r\n\r\nIf your PR doesn't receive any response, that's a different matter, but even then, you haven't nearly exhausted all your options. First, ping the maintainers on the issue. Remember that people might be busy/on holiday/travelling, so give it a couple of weeks. If the package turns out to be unmaintained, go on [Slack](https://julialang.org/slack/) and reach out to other members or owners of the JuliaNLSolvers organization and see if someone can merge your PR. Or, if the package is truly unmaintained, maybe they can add you as a maintainer, and you can merge and release your own PR.\r\n\r\nOnly after all of those things have failed would it be okay to register it as a new package. In the meantime, you can [dev-install your fix from the PR branch](https://discourse.julialang.org/t/github-how-to-clone-install-specific-branch/23572).",
+      "createdAt": "2024-01-16T15:24:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1893968444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w5Lu9",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "JuliaNLSolvers is know to be barely maintained. PRs are either not reviewed at all or it takes months to get a response -- I've submitted some myself in the past. I've been in contact with Patrick (the main maintainer) before (about different issues) and posted about my issue on the relevant Slack channel. So I'm not sure why you think it would be different for me now.\r\n\r\n> If your PR doesn't receive any response, that's a different matter, but even then, you haven't nearly exhausted all your options. First, ping the maintainers on the issue. Remember that people might be busy/on holiday/travelling, so give it a couple of weeks. If the package turns out to be unmaintained, go on [Slack](https://julialang.org/slack/) and reach out to other members or owners of the JuliaNLSolvers organization and see if someone can merge your PR. Or, if the package is truly unmaintained, maybe they can add you as a maintainer, and you can merge and release your own PR.\r\n\r\nI'm not new to this community, I maintain a few packages myself. If `ImprovedHagerZhangLinesearch` is against the rules of general registry, just don't merge it, I don't care enough about it. Feel free to close this PR. By registering this package I just wanted to make life easier for people who would like to get the best performance from Manopt.jl. Anyway, they can `dev` the unregistered package too.",
+      "createdAt": "2024-01-16T16:00:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894038461",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w52RD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] It's not that it's \"against the rules\", although I'm not sure if the package name is the ideal choice. But if JuliaNLSolvers has a lack of maintainers, it would seem like the best way forward is to add more maintainers. Have you talked to the org owners about giving you maintainer access to LineSearches?\r\n\r\n@pkofod Can you comment on the maintenance status of LineSearches?\r\n\r\nMaybe @timholy and @KristofferC, as high-level members who have contributed to the repo?\r\n\r\n@kellertuer You seem to indirectly have been involved in discussions about the underlying issue. Any insights?",
+      "createdAt": "2024-01-16T17:41:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894212675",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w53w_",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] \r\nI am slightly involved in this, yes.\r\nOne reason for a separate package is, that in style, form, but especially documentation I would prefer to not have this in Manopt.jl. It is still great as a weak dependency (the same way LIneSearches.jl is).\r\nThe other reason is, as far as I understand, that this is even slightly more general than the LineSearches.jl ones concerning allocations, but on that I am not an expert but @mateuszbaran is ;)\r\n\r\nSo that is the two reasons I see. Sure this _could_ in principle be included in LineSearches.jl – but I am not an expert in that package either, so I leave that evaluation to other people.\r\n",
+      "createdAt": "2024-01-16T17:45:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894218815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w56zM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Is there any chance we can come up with a better package name? I'm not going to stand in its way if others think it's okay, but \"Improved\" seems very unspecific for a package.\r\n\r\nDoes this package *only* include the HZ-method from LineSearches? If so, and if it's just a general continuation of the previous implementation in LineSearches, I see no reason why this couldn't be named `HagerZhangLinesearch.jl`. Even as a separate package, I also still think this is better as part of the JuliaNLSolvers org, with @mateuszbaran as the official maintainer of this new package. It's just better to have packages in org accounts with multiple owners, rather than a personal account, exactly to avoid these kinds of \"unmaintained\" issues.",
+      "createdAt": "2024-01-16T17:53:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894231244",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w57uE",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[nobock] \r\nI can not tell more than I was told – I am quite happy that Mateusz works on improving performance for a package I do care about, though; your naming suggestions would hence also be fine with me.",
+      "createdAt": "2024-01-16T17:56:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894235012",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w590I",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] If the org owners are unresponsive, this can also be moved from a personal account to an org at some later point (although that will require a manual PR to the registry). So again, I'm not going to stand in the way of this registration based on that.",
+      "createdAt": "2024-01-16T18:02:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894243592",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w5_pV",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Have you talked to the org owners about giving you maintainer access to LineSearches?\r\n\r\nNo, I have not, but I don't think I'm the right person to maintain LineSearch. I feel like I'm already not doing a good enough job maintaining the packages I already do any my knowledge of line search algorithms is quite rudimentary.\r\n\r\n> The other reason is, as far as I understand, that this is even slightly more general than the LineSearches.jl ones concerning allocations, but on that I am not an expert but @mateuszbaran is ;)\r\n\r\nYes, on top of the fix I've changed the interface from LineSearches.jl style to Manopt.jl style because it allowed me to do some additional optimizations. Maybe they could also be achieved with LineSearches.jl interface but since I decided to fork, this was not a concern to me.\r\n\r\n> Is there any chance we can come up with a better package name? I'm not going to stand in its way if others think it's okay, but \"Improved\" seems very unspecific for a package.\r\n\r\n> Does this package _only_ include the HZ-method from LineSearches? If so, and if it's just a general continuation of the previous implementation in LineSearches, I see no reason why this couldn't be named `HagerZhangLinesearch.jl`. Even as a separate package, I also still think this is better as part of the JuliaNLSolvers org, with @mateuszbaran as the official maintainer of this new package. It's just better to have packages in org accounts with multiple owners, rather than a personal account, exactly to avoid these kinds of \"unmaintained\" issues.\r\n\r\nI'm open to using a different package name. Yes, it's just Hager-Zhang, though maybe I could also try the improved backtracking from https://github.com/JuliaNLSolvers/LineSearches.jl/pull/172 . So I'm not even sure if restricting to HZ was the correct move. I started my work in a PR to Manopt but as Ronny wrote, we decided that it's better to put it in a separate package.\r\n\r\nLet's keep this registration blocked for now and get some more input first.",
+      "createdAt": "2024-01-16T18:07:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894251093",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w6DJm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That sounds good! Sorry that I started out a bit dismissive on this submission. At this point, at least with a revised name, I have absolutely no objections to this being registered as an independent package. [noblock]",
+      "createdAt": "2024-01-16T18:15:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894265446",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w6myD",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No problem, I'm also sometimes disappointed by people registering packages similar to existing ones without considering cooperation (though I don't comment on such submissions). I should've been more clear about my reasoning for registering this package.",
+      "createdAt": "2024-01-16T19:51:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894411395",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w6m34",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Oh, no, thanks for all the questions and critically asking, I feel such discussions are super valuable, here it improved the name, and we could discuss why the rest is reasonable :)",
+      "createdAt": "2024-01-16T19:52:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894411768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w7Kqs",
+      "author": {
+        "login": "pkofod"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I've opened an issue two weeks ago, with no response: [JuliaNLSolvers/LineSearches.jl#173](https://github.com/JuliaNLSolvers/LineSearches.jl/issues/173) , which to me indicates that no one would review such PR. I would be happy to make such PR if a maintainer expresses interest in reviewing it. In the meantime, a separate package makes sense to me, even more so because this package has some additional changes on top of that fix which wouldn't fit the original package.\r\n\r\nI think that's a little harsh. Not everyone with an open source project has time daily to respond to issues. Two weeks may seem like a long time to some people. To others, the start of the year is a busy time at work :) I can read above you have also had other bad experiences to which I can only apologize, but many other people who find my response time to be too slow simply ping me on slack. I have written my slack tag in the Optim.jl readme a long time ago, but maybe I should do the same in the other repositories as well.",
+      "createdAt": "2024-01-16T21:40:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894558380",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w7NHV",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "To be honest, having that fix in Linesearches.jl would also be my preferred way, but I currently do not have the capacity to help, that is why I only loosely followed with here.\r\n\r\n_edit:_ and for example I was not aware of the slack-ping-remark.",
+      "createdAt": "2024-01-16T21:47:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1894568405",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85w-Sj4",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I think that's a little harsh. Not everyone with an open source project has time daily to respond to issues. Two weeks may seem like a long time to some people.\r\n\r\nI really appreciate your work on JuliaNLSolvers and I know that people are busy with other work (I'm falling behind in maintenance myself). You have no obligation to work as a maintainer. I just wanted to finally finish the Manopt improvements that I started working on a long time ago and that LineSearches issue was holding me back.\r\n\r\nI think it's perfectly fine that people in a widely-used library need time to properly consider changes but if it takes months, it should be acceptable that people are looking for ways around it. For example the SciML ecosystem either already has or will soon have its own copy of most of the basic numerical ecosystem (including nonlinear solvers and optimization algorithms).",
+      "createdAt": "2024-01-17T09:04:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1895377144",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdLp0",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not a fan of this either. If it's hard to maintain the packages we have, it will be even harder to maintain `n` times as many that are near duplicates of one another. In other words, fixing a problem this way today causes much bigger problems tomorrow.\r\n\r\nCan we close this and get the fix in LineSolvers?",
+      "createdAt": "2024-01-22T08:23:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903475316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdN8u",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We can close this PR but upstreaming all my improvements to LineSearches is quite unrealistic, so the duplication will happen in some form anyway.",
+      "createdAt": "2024-01-22T08:30:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903484718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdWMB",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If it's a review/merge bottleneck (and that's a common problem), then perhaps the solution is to give more people commit rights.",
+      "createdAt": "2024-01-22T08:52:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903518465",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdaN0",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Review bottleneck is one issue, another one is that at least one change would be breaking, and breaking changes in established packages are usually not well received unless it's a big improvement. Here it's a relatively minor optimization. I can easily do it in a fork but in LineSearches it would likely cause more annoyance than appreciation.",
+      "createdAt": "2024-01-22T09:01:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903534964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdfjg",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is there a PR to LineSearches we can look at? Or a brief description?",
+      "createdAt": "2024-01-22T09:14:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903556832",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdmN8",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No, there is no PR. The breaking part is adding some caches to `HagerZhang` struct and making its construction dependent on the manifold we optimize on. I'm still working on these improvements.",
+      "createdAt": "2024-01-22T09:28:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903584124",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdnOd",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Funnily enough, Manopt.jl with this improved HZ linesearch is now faster than Optim.jl in Euclidean optimization (tested on Rosenbrock function, optimized using L-BFGS).",
+      "createdAt": "2024-01-22T09:31:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903588253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdyau",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sounds like good stuff. Without seeing the changes, obviously I can't say, but often something like adding caches can be done in a non-breaking manner. Anyway, I'd like to propose we close this and get it done in LineSearches.jl.",
+      "createdAt": "2024-01-22T09:57:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1903634094",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xl7kv",
+      "author": {
+        "login": "pkofod"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Sounds like good stuff. Without seeing the changes, obviously I can't say, but often something like adding caches can be done in a non-breaking manner. Anyway, I'd like to propose we close this and get it done in LineSearches.jl.\r\n\r\nI agree and I believe my answers here and on slack reflect that Optim and other packages should not be seen as stale or deprecated. I have changed my notification settings on GitHub and added automation in my inbox such that I'll get to issues and PRs faster. Let me know if you would want to submit your changes to LineSearches.jl anyway. \r\n\r\nWrt the euclidean benchmarks, well. If it's across many problems I'm of course curious to have a look, but I'm wondering if it's overhead or algorithmic reasons. Optim.jl has quite some overhead which is part of why I wrote NLSolvers.jl. If it's because of the bug fix here, surely it would be nice if Optim.jl users could benefit as well :) ",
+      "createdAt": "2024-01-23T10:42:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1905768751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xoRdF",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I interpret from the various thumbs-up that we have consensus. I'll close this.",
+      "createdAt": "2024-01-23T16:02:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1906382661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xpdjW",
+      "author": {
+        "login": "mateuszbaran"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I agree and I believe my answers here and on slack reflect that Optim and other packages should not be seen as stale or deprecated. I have changed my notification settings on GitHub and added automation in my inbox such that I'll get to issues and PRs faster. Let me know if you would want to submit your changes to LineSearches.jl anyway.\r\n\r\nRight now I'm not sure what to submit, for now I'd just prefer to keep working in a separate repository. I can experiment with improvements more easily this way and later we can discuss what to backport to LineSearches.jl.\r\n\r\n> Wrt the euclidean benchmarks, well. If it's across many problems I'm of course curious to have a look, but I'm wondering if it's overhead or algorithmic reasons. Optim.jl has quite some overhead which is part of why I wrote NLSolvers.jl. If it's because of the bug fix here, surely it would be nice if Optim.jl users could benefit as well :)\r\n\r\nL-BFGS in Manopt doesn't have any algorithmic improvements relative to Optim.jl for euclidean optimization. I've just lowered some overhead. It is significant if a function can be evaluated as quickly as Rosenbrock -- right now it's about 10% faster but with some improvements it could a bit better.\r\n\r\nI have a general idea of investigating applications of Riemannian optimization to various problems. We (me and Ronny) recently managed to remove Manopt.jl's overhead compared to Optim.jl. I've started a hyperparameter tuning example for Manopt/Optim and I'm currently looking for some students to test it on some problems from multivariate data analysis. We will see how it works out. Removing small overhead from line search isn't particularly significant for this goal and my time is divided between multiple different projects so I'm not sure how far I will go in this direction. Picking initial and max alpha could be significant though.",
+      "createdAt": "2024-01-23T18:39:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98950#issuecomment-1906694358",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ImprovedHagerZhangLinesearch\n- Repository: https://github.com/mateuszbaran/ImprovedHagerZhangLinesearch.jl\n- Created by: @mateuszbaran\n- Version: v0.1.0\n- Commit: fae85e2beff3d620eafebf7d8abdef2ef6ec1429\n- Reviewed by: @mateuszbaran\n- Reference: https://github.com/mateuszbaran/ImprovedHagerZhangLinesearch.jl/commit/fae85e2beff3d620eafebf7d8abdef2ef6ec1429#commitcomment-137159621\n- Description: Clone of Hager-Zhang linesearch from LineSearches.jl, adapted to Manopt.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f095a1a231ceb7afa00995bc60a632c3e03d56e5aa1425701016ba325ce00243eca93df404d1215153057b6384982325e36d3926c7ba1b27af2c4088254259b39c87f7a9509c63ae5a1f8c187ae8cb6e9e0e9251b1d8d4dfb8c6f2efc69b763f49440500726d8bd9208931cabd7d540ddc3e2843980ac4ac22e40b5f648a828d92fe1d4728eb3eec19ca8e06dbb107dd0268d1447959757140881dc78c2b7c505e5fdeae8633282cc051c21f7d06cdf38b3657595dc59140aac95c7bca1b0f79 -->",
+  "package_name": "ImprovedHagerZhangLinesearch",
+  "closed_at": "2024-01-23T16:02:36Z",
+  "title": "New package: ImprovedHagerZhangLinesearch v0.1.0"
+}

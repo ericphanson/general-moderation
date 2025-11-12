@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-04-28T12:15:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 105759,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858EKlA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n- I was not able to load the package (i.e. `import Ipf` failed). See the AutoMerge logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to ISL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-28T12:18:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105759#issuecomment-2081466688",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858EK7X",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm sorry, forgot to update Project, this PR can be closed.",
+      "createdAt": "2024-04-28T12:24:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105759#issuecomment-2081468119",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Ipf\n- Repository: https://github.com/andreapasquale94/IPFFiles.jl\n- Created by: @andreapasquale94\n- Version: v0.1.0\n- Commit: 26f4d46e0f3b6a4830a004889cbd96de144def1f\n- Reviewed by: @andreapasquale94\n- Reference: https://github.com/andreapasquale94/IPFFiles.jl/commit/26f4d46e0f3b6a4830a004889cbd96de144def1f#commitcomment-141441200\n- Description: ESA Intepolation Files made easy.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- initial release of IPFFiles.ij, a lightweight package for providing allocation-free access to binary ESA interpolation files.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd654d2212cacb62d314e0d4fef97f632930280992b82dc28592ea63cc885e511b05ad9bf60fd253d4046766f08c5ff117b525a26fe3ca7faa66b77c98f8cfc6d9e2074ae772b81be43e07a9ef4e95396d225b308583f5a84fb323a2d449b0511c1a06bbcb40c26505708f99fd42475812394d6750676c961b8d1ddfb1bd6a358279fd4c8e17fc2ee79fd4688753bf1cc559bd7972cd6f4671651b7aa03c471b2f6087d83ccec0bbcad371eeaed6a8e33d1 -->",
+  "package_name": "Ipf",
+  "closed_at": "2024-04-28T13:48:16Z",
+  "title": "New package: Ipf v0.1.0"
+}

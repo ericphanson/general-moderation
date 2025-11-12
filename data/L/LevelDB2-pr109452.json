@@ -1,0 +1,351 @@
+{
+  "created_at": "2024-06-20T17:44:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 109452,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86CAtB2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-20T17:47:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2181222518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CBSBq",
+      "author": {
+        "login": "sadit"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, this package is a fork + several commits from `LevelDB.jl`. The name of this package is intentionally similar, in the spirit of other packages that are variants of similar ones like JSON and JSON2, JSON3; or Parquet.jl and Parquet2. In particular, this new package is in response that the original one, LevelDB, is almost unmaintained and we added several features that are desirable for Julia 1.x packages plus other functional features \r\n\r\n[noblock]",
+      "createdAt": "2024-06-20T19:22:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2181374058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CFTgo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This kind of fork is something we'd like to avoid if at all possible. It would be much preferable to contribute your changes to the original `LevelDB.jl` package.\r\n\r\n@jerryzhenleicai: Can you comment on the maintenance status of `LevelDB.jl`? If you don't have the capacity to maintain the package any longer, maybe you could move it to an organization and add @sadit as a maintainer?\r\n\r\n@sadit: Have you previously reached out to @jerryzhenleicai? If so, when? In situations where the original maintainer of a package is completely unreachable over a long period (typically at least three months), there is precedent for a \"hard fork\". In this case, the package is copied (not moved) to an organization with a new maintainer, and the registry is changed to point to this new repository. But this is not something we would do lightly, and there should be a documented sustained effort to contact @jerryzhenleicai through multiple channels.\r\n\r\nIn the meantime, I would recommend keeping `LevelDB2` in a LocalRegistry, until we can figure how to contribute these changes back to `LevelDB`.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T09:59:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182428712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CFVDG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For the record: https://github.com/jerryzhenleicai/LevelDB.jl/pull/21 was the attempt to get these changes into LevelDB. It shows @jerryzhenleicai going off the map in December. They also haven't been active on GitHub at all, since then. Let's see if they respond here, though. If not, we should also reach out via email. And give them at least a month to respond (with a reminder every two weeks) before we should consider copying this repo to an org.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T10:03:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182435014",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CFY3P",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It would also be good to figure out what might be a good home for this package. @sadit Are you a member of any GitHub orgs (with multiple owners!) that might be suitable? Otherwise, maybe [JuliaDatabases](https://github.com/JuliaDatabases). Not sure who is an owner there, but @quinnj seems to be active.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T10:13:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182450639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CFenp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, @gdkrmr seems to have been a more recent maintainer. At least they registered the 2.1.0 release at https://github.com/JuliaRegistries/General/pull/3113. They also seem to be still active on Github, so maybe they can clarify the maintenance status of LevelDB and assist in getting these changes merged or the repo moved.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T10:25:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182474217",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CGZ1Z",
+      "author": {
+        "login": "jerryzhenleicai"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Also, @gdkrmr seems to have been a more recent maintainer. At least they registered the 2.1.0 release at #3113. They also seem to be still active on Github, so maybe they can clarify the maintenance status of LevelDB and assist in getting these changes merged or the repo moved.\r\n\r\n@goerz  @gdkrmr I apologize for not having the time and capacity to review and accept new contributions to LevelDB except periodically ensuring it's tracking the C++ LevelDB library. IMO LevelDB's API in its current form is at an optimal balance of simplicity and functionality and I do not intend to accept any further PRs except bug fixes. Of course being open source I  do not object to extending or maybe even a hard forking of the project. @gdkrmr  is a significant co-contributor so if @gdkrmr  wants to weigh in on this issue I'd love to hear his opinion too. \r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T13:04:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182716761",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CGkcy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I apologize for not having the time and capacity to review and accept new contributions\r\n\r\nNo need to apologize! That is perfectly alright! Thank you for jumping into the conversation here to clarify things.\r\n\r\n> IMO LevelDB's API in its current form is at an optimal balance of simplicity and functionality and I do not intend to accept any further PRs except bug fixes.\r\n\r\nIn that case, it is probably fine to register this fork as `LevelDB2`. It should clearly explain in the README that is the \"next generation\" for `LevelDB`, and explain what it adds on top of the original package.\r\n\r\nI'm going to tentatively override the name similarity. There are still a bunch of blocking comments, so it won't auto-merge unless everyone (myself included) adds `[noblock]` to every comment. But let's see where this goes, first.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T13:30:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182760242",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CHIRI",
+      "author": {
+        "login": "sadit"
+      },
+      "authorAssociation": "NONE",
+      "body": "> It would also be good to figure out what might be a good home for this package. @sadit Are you a member of any GitHub orgs (with multiple owners!) that might be suitable? Otherwise, maybe [JuliaDatabases](https://github.com/JuliaDatabases). Not sure who is an owner there, but @quinnj seems to be active.\r\n> \r\n> [noblock]\r\n\r\nIt is ok for me to transfer `LevelDB2` to _JuliaDatabases_\r\n\r\n[noblock]",
+      "createdAt": "2024-06-21T14:52:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2182906952",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLJCv",
+      "author": {
+        "login": "gdkrmr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry but at the moment I just don't have the capacity to maintain a package I am not using. I used it for my Bitcoin Blockchain parser back then which was a learning exercise. IIRC, the package was broken back then and I fixed it. At the moment the package needs some more things I would have to learn, such as distributing binary builds.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-22T09:26:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2183958703",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLLBS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alright, then my vote is to just let `LevelDB2` merge.\r\n\r\n@gdkrmr @jerryzhenleicai Can you edit your comments to contain `[noblock]`?\r\n\r\n[noblock]",
+      "createdAt": "2024-06-22T10:02:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2183966802",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLdpb",
+      "author": {
+        "login": "jerryzhenleicai"
+      },
+      "authorAssociation": "NONE",
+      "body": "added [noblock] in my first comment",
+      "createdAt": "2024-06-22T13:49:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2184043099",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLgPC",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I'm happy to facilitate transferring the repo (or it sounds like forking the repo) to JuliaDatabases org. If someone wants to give me a set of instructions, I can do that quickly, including any repo creation/transfer/forking + adding necessary permissions.",
+      "createdAt": "2024-06-22T14:27:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2184053698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLpJS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I might be a little fuzzy on the details myself. The first step would definitely be to add @sadit to the organization.\r\n\r\nBeyond that, let @sadit move the repo to the org. From my experience, when a non-owner creates/moves a repo to an org, they don't automatically have full maintainer permissions to set up (for setting up CI/access to repo secrets, etc), so @quinnj (as an owner, presumably), should go into the settings of the repo and give @sadi admin access.\r\n\r\nThere might also be some confusion with Github treating forks as special, which might affect CI settings. I think my recommendation would be is to create a new repository for `LevelDB2` (so that Github doesn't see any connection to the original `LevelDB`), and then push the current branch to that repo.\r\n\r\nSo, I think what I would do if I was @quinnj:\r\n\r\n* Invite @sadit to the `JuliaDatabases` org\r\n* Create a new (empty) repo `JuliaDatabases/LevelDB2`\r\n* Give @sadit full Admin access to that specific repo\r\n* Let @sadit push the current branch to the repo and set up CI/etc.\r\n* Have @sadit trigger a new registration for `JuliaDatabases/LevelDB2`\r\n\r\nBut maybe someone on Slack has more expertise in this and can give better instructions. I'll ask.\r\n\r\nI'm making this comment blocking because if the repo is moved, it'll need a new registration, and I'll close this PR in favor of whatever the new PR will be.",
+      "createdAt": "2024-06-22T16:29:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2184090194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CcY8f",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Let me know if you want to go ahead with the move, or if I should unblock this registration and let it merge. It’s also possible to move a package after registration, although that involves a manual PR and having to bother a maintainer for a merge.",
+      "createdAt": "2024-06-25T09:57:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2188480287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CeEMG",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I think it's usually much easier to just do a direct transfer of the repo. When I've done this before, @sadit would just need to add me as an admin to his repo and then I can facilitate the transfer to the JuliaDatabases organization and ensure he has full admin access after the transfer; either directly or as a member of the JuliaDatabases organization.",
+      "createdAt": "2024-06-25T13:12:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2188919558",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CpnAW",
+      "author": {
+        "login": "sadit"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] I think it's usually much easier to just do a direct transfer of the repo. When I've done this before, @sadit would just need to add me as an admin to his repo and then I can facilitate the transfer to the JuliaDatabases organization and ensure he has full admin access after the transfer; either directly or as a member of the JuliaDatabases organization.\r\n\r\n[noblock] Done. However, I cannot grant you admin access; only the collaborator profile exists; maybe admin is available only for organizations. Could you make the transfer as it is?\r\n",
+      "createdAt": "2024-06-26T15:05:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2191945750",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Cp4nC",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I don't see an option for that. I've sent you an invitation to the JuliaDatabases org; let me know if you need additional permissions to transfer the repo.",
+      "createdAt": "2024-06-26T15:37:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2192017858",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CsLmT",
+      "author": {
+        "login": "sadit"
+      },
+      "authorAssociation": "NONE",
+      "body": "We finished to transfering the repo to JuliaDatabases org, however, now we have another LevelDB2 merge request https://github.com/JuliaRegistries/General/pull/109850 for the registry. What I can we do now?",
+      "createdAt": "2024-06-26T21:01:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2192619923",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CsWN4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Wonderful! You’re good to go. https://github.com/JuliaRegistries/General/pull/109850 should auto merge in three days (if I had merge permission, I’d merge it immediately, but I don’t, and the extra three days are probably not worth bothering a maintainer for)",
+      "createdAt": "2024-06-26T21:34:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109452#issuecomment-2192663416",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LevelDB2\n- Repository: https://github.com/sadit/LevelDB2.jl\n- Created by: @sadit\n- Version: v1.0.0\n- Commit: a315c5c37ee84f79d4b0592232bbb5989389a286\n- Reviewed by: @sadit\n- Reference: https://github.com/sadit/LevelDB2.jl/commit/a315c5c37ee84f79d4b0592232bbb5989389a286#commitcomment-143358329\n- Description: Julia interface to Google's LevelDB key value database\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e37bd193beaa5df76ab9b4667955b8064abb11f84de8bb6cce50d3f98d04cfe9433c835a3a09111d61eee925c4836f06c9d789dfc1cf82d0099e5f290a2d3379e48e21d16511fa7cd42851620b1976876de5f4170e3ebed09894740b3874750c9d49924c3ef3ab8963917d1c7087507a71692a7a7859dc7bce96e54b04e8a3bdb0205452a53fb1032de0a0efcfeb16c4be4cbb23d71ef46ad37cd6bdea0868b068778c8b92871590d95489ccf7bf83ce -->",
+  "package_name": "LevelDB2",
+  "closed_at": "2024-06-26T21:34:52Z",
+  "title": "New package: LevelDB2 v1.0.0"
+}

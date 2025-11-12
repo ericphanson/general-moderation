@@ -1,0 +1,225 @@
+{
+  "created_at": "2025-06-20T08:47:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 133313,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86yPPvG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-20T08:56:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2990341062",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yT-rc",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Could you please add a comparison with https://github.com/JuliaAstro/SAOImageDS9.jl? How these packages differ?",
+      "createdAt": "2025-06-20T13:12:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991581916",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yUcoC",
+      "author": {
+        "login": "astrozot"
+      },
+      "authorAssociation": "NONE",
+      "body": "The package SAOImageDS9.jl implements a relatively low-level interface to SAOImage DS9, and essentially is limited to the `set` and `get` XPA commands. My package aims at developing a higher-level interface, including, for example, interactions with DS9 to measure objects' properties or extractions of masks' boundaries. Additionally, I see that SAOImageDS9.jl has not received any significant update in the last 5 years, so I am uncertain if there is any room for a significant further development of that package: an open issue regarding a proposal for further development of the SAOImageDS9 package is \"frozen\" to January 2021.",
+      "createdAt": "2025-06-20T13:44:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991704578",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yUgAN",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can you add the functionality comparison to your readme?\r\n\r\nRegarding\r\n\r\n> Additionally, I see that SAOImageDS9.jl has not received any significant update in the last 5 years, so I am uncertain if there is any room for a significant further development of that package: an open issue regarding a proposal for further development of the SAOImageDS9 package is \"frozen\" to January 2021.\r\n\r\nYou (or anyone else) can become a maintainer :) It's more convenient for everyone to have a single DS9 interaction package...",
+      "createdAt": "2025-06-20T13:48:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991718413",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yUiv9",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "pinging SAOImageDS9 devs: @emmt @abhro @icweaver @sefffal",
+      "createdAt": "2025-06-20T13:53:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991729661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yU1b4",
+      "author": {
+        "login": "astrozot"
+      },
+      "authorAssociation": "NONE",
+      "body": "> You (or anyone else) can become a maintainer :) It's more convenient for everyone to have a single DS9 interaction package...\r\n\r\nI see your point, and I will be happy to contribute to the SAOImageDS9 package, provided the timescale for this kind of contribution is reasonable and the maintaner(s) agree.\r\n\r\nAs a side (vaguely related) point, there are fundamental and widely used packages (StaticArrays, to name one) that have tens of unanswered open issues and tens of open pull requests. Some of these issues (or pull requests) raise (and fix) critical bugs. I know that maintaining a package requires a lot of effort, but I am not sure how to deal with these situations (in the case of StaticArrays I made a fork that fixes a critical bug I found, but does it for me only...).",
+      "createdAt": "2025-06-20T14:19:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991806200",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yU_iW",
+      "author": {
+        "login": "abhro"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, I would highly recommend merging functionalities into the existing SAOImageDS9.jl package, where we can provide both the low-level and high-level interfaces (as is done with HDF5.jl for example)",
+      "createdAt": "2025-06-20T14:32:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991847574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yVBMz",
+      "author": {
+        "login": "astrozot"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your prompt reply @abhro , I will make a pull request to SAOImageDS9.jl then.",
+      "createdAt": "2025-06-20T14:34:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2991854387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yXTT1",
+      "author": {
+        "login": "icweaver"
+      },
+      "authorAssociation": "NONE",
+      "body": "Happy Friday all! Love to see this, thanks for sharing such a cool package @astrozot. I opened up tracking issues here:\r\n\r\n* https://github.com/JuliaAstro/SAOImageDS9.jl/issues/13\r\n* https://github.com/astrozot/DS9ui.jl/issues/3\r\n\r\nand would be happy to help support merging things on the JuliaAstro side",
+      "createdAt": "2025-06-20T18:18:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2992452853",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ybixp",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> > You (or anyone else) can become a maintainer :) It's more convenient for everyone to have a single DS9 interaction package...\r\n> \r\n> I see your point, and I will be happy to contribute to the SAOImageDS9 package, provided the timescale for this kind of contribution is reasonable and the maintaner(s) agree.\r\n> \r\n> As a side (vaguely related) point, there are fundamental and widely used packages (StaticArrays, to name one) that have tens of unanswered open issues and tens of open pull requests. Some of these issues (or pull requests) raise (and fix) critical bugs. I know that maintaining a package requires a lot of effort, but I am not sure how to deal with these situations (in the case of StaticArrays I made a fork that fixes a critical bug I found, but does it for me only...).\r\n\r\nI agree that having a single package for this kind of thing is preferable for the end users. I would totally agree to upgrade/change/etc. `SAOImageDS9`. One of my inital objective was to have something to start with and which contributors could improve. But I must say that there were not many such contributors even though some come with many ideas. For examples, see [Additional features](https://github.com/JuliaAstro/SAOImageDS9.jl/issues/4) or [DS9 REPL mode](https://github.com/JuliaAstro/SAOImageDS9.jl/issues/3).",
+      "createdAt": "2025-06-21T12:50:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2993564777",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ybi2e",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> SAOImageDS9.jl has not received any significant update in the last 5 years, so I am uncertain if there is any room for a significant further development of that package: an open issue regarding a proposal for further development of the SAOImageDS9 package is \"frozen\" to January 2021.\r\n\r\nI did not use this package a lot myself (which may explain the timeline of the commits) but recently fixed a few bugs.\r\n",
+      "createdAt": "2025-06-21T12:51:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-2993565086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8647DlJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-07-22T12:24:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-3102488905",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q866sncK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-07-29T12:24:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133313#issuecomment-3132258058",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DS9ui\n- Repository: https://github.com/astrozot/DS9ui.jl\n- Created by: @astrozot\n- Version: v1.0.0\n- Commit: bcbc75a077cd1baf0b67b48eaf69655e7aab0b8b\n- Reviewed by: @astrozot\n- Reference: https://github.com/astrozot/DS9ui.jl/issues/2\n- Description: SAOImage DS9 User Interface\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a3a573694abb66207473d8afbc5db64e890e6c8ecd16d7004992f6ecb6388ac7a49125ea6bdf972934b1adb261ef94b2228d4832e68271f65ba1b2e7f684eef4c656ee340dc6a2911d0a7752bf12d2852f7b3b3dcab27b051df2c0085cf92d562b39b6a8e2bfdb5c2ce21d41a8e8de01 -->",
+  "package_name": "DS9ui",
+  "closed_at": "2025-07-29T12:24:44Z",
+  "title": "New package: DS9ui v1.0.0"
+}

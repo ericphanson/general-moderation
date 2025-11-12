@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-08-04T04:04:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 112370,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86HJCLf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-04T04:07:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2267292383",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HKZin",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd recommend using https://binarybuilder.org instead of vendoring the DLLs directly in the package, so that the SHA hashes provided by the upstream repository (https://www.wintun.net) can be verified.",
+      "createdAt": "2024-08-04T19:51:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2267650215",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HKZp9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity is not a problem. However, the package is not suitable for registration in its current form. For one, it is missing documentation. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nMoreover, distributing binary DLL files as part of the package is a no-go:\r\n\r\n* It violates the [license of the Wintun binary releases](https://github.com/WireGuard/wintun/blob/master/prebuilt-binaries-license.txt)\r\n* A raw DLL file cannot be audited by the user and thus is a security issue (especially when used with root permissions, as the package mandates)\r\n\r\nAs https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2267650215 mentions, the usual way of writing Julia packages that rely on non-Julia code or binary artifacts is via [BinaryBuilder](https://binarybuilder.org/). If that is done properly, I don't see that this package couldn't be merged under the name `Wintun`.\r\n",
+      "createdAt": "2024-08-04T19:53:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2267650685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Kz0lp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-09-04T12:23:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2328840553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Lr1Xp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-09-11T12:23:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112370#issuecomment-2343523817",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Wintun\n- Repository: https://github.com/shuaixing86/Wintun.jl\n- Created by: @shuaixing86\n- Version: v0.1.0\n- Commit: 32e5101a3f3edabaeaa8eb87aca48363404f9f2a\n- Git reference: main\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nIn the windows system, Julia drives the TUN/TAP driver for Wireguard - wintun\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "Wintun",
+  "closed_at": "2024-09-11T12:23:43Z",
+  "title": "New package: Wintun v0.1.0"
+}

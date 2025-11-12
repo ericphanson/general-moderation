@@ -1,0 +1,143 @@
+{
+  "created_at": "2024-04-24T03:22:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 105504,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857ndqe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Distributions\n- Package name similar to 1 existing package.\n  1. Similar to Microgrids. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-24T03:25:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2073942686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857n002",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.",
+      "createdAt": "2024-04-24T05:06:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2074037558",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857n1WL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, there is already https://github.com/ajloza/Micrograd.jl by @ajloza, although I guess it is not registered?",
+      "createdAt": "2024-04-24T05:09:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2074039691",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-Uw3z",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Agree that this should probably be renamed.",
+      "createdAt": "2024-05-19T21:59:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2119372275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-WgNz",
+      "author": {
+        "login": "Huvinesh-Rajendran-12"
+      },
+      "authorAssociation": "NONE",
+      "body": "@ViralBShah okay noted, will change it soon. ",
+      "createdAt": "2024-05-20T07:18:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2119828339",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-Y521",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Huvinesh-Rajendran-12 This also doesn't seem like a package that necessarily needs registration at this stage. It looks like a nice utility. Could you share some of the motivation behind registering it? And it may just be that perhaps it needs to be better developed before re-registering. ",
+      "createdAt": "2024-05-20T13:24:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2120457653",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_CkyY",
+      "author": {
+        "login": "Huvinesh-Rajendran-12"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay noted, then I would like un-register it ? May I know the procedures for it ?",
+      "createdAt": "2024-05-25T18:10:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2131381400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_CmCc",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Since we did not merge this PR, it is not registered. Hence we do not need to unregister it.",
+      "createdAt": "2024-05-25T18:32:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105504#issuecomment-2131386524",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Micrograd\n- Repository: https://github.com/Huvinesh-Rajendran-12/Micrograd.jl\n- Created by: @Huvinesh-Rajendran-12\n- Version: v0.1.0\n- Commit: 6b780a4376c9b96fc2b7dc02eba9ef25de096b15\n- Reviewed by: @Huvinesh-Rajendran-12\n- Reference: https://github.com/Huvinesh-Rajendran-12/Micrograd.jl/commit/6b780a4376c9b96fc2b7dc02eba9ef25de096b15#commitcomment-141294591\n- Description: Micrograd library in julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67ddc4651e1edc3a059d8917894bc4d3dbe8370667aeeb793d3c24bf788caf8e3db24cb3b5e3d27b9df62a81960fbd308d1f4d99715222716d32d039e763f389a8fb863646c6361e59d604cb29dc5c0b6b5f8a57099e53a8e11c941959419518ac9e680593d2c1f5d58b21cf538c4e468206fe0f2e78b63031bb7a7d5b47cb9ab5073616ad783990360798c96dbb242c4f3124260398aa34ac7e3d20e069da655725df530774ae78bc9630f2bb2f40d8928af91e0463ecdcde4b2e915a29167cb -->",
+  "package_name": "Micrograd",
+  "closed_at": "2024-05-20T13:22:30Z",
+  "title": "New package: Micrograd v0.1.0"
+}

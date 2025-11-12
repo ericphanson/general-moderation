@@ -1,0 +1,405 @@
+{
+  "created_at": "2025-05-01T20:48:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 130145,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86pnsk2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-01T20:55:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2845755702",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86poJVl",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry I wasn’t fast enough to comment on the other PR: I think the same logic regarding the MCP acronym applies as what was mentioned in https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504234430 - and https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504254812\r\n\r\nChanging the name to ModelContextProtocolClients would also make it match up with ModelContextProtocol.jl .",
+      "createdAt": "2025-05-01T21:59:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2845873509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86psoIe",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "XD\r\nok... 4th try :D \r\n\r\nBy the way in my mind MCP was like flowing from the tap in this space and looked so evident XD But... true. There are 4 different MCP meaning based on the chatGPT and all of them is sort of standard...",
+      "createdAt": "2025-05-02T12:03:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847048222",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86psp75",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Then just one last question:\r\nModelContextProtocolClients.jl\r\nor \r\nModelContextProtocolClient.jl\r\nas then I think we could use the Client without plural.",
+      "createdAt": "2025-05-02T12:07:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847055609",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ptfB3",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, sorry (4th try).\r\n\r\nI would strongly suggest the plural, `ModelContextProtocolClients` (since the main functionality is offered via a `*Client` type).",
+      "createdAt": "2025-05-02T13:56:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847273079",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ptr-v",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Definitely plural. But whether or not to keep the MCP acronym is up to you. It's not a _requirement_ that _every_ acronym in a package name needs to be written out. One good criterion for whether an acronym is \"common\": does Google return the correct hit as the first (and first few) results? In the case of MCP: definitely. I would say that in many cases, combining an acronym with a non-acronym word is sufficient in a package name. `MCPClients` tells me the package provides a client for something called the MCP protocol. That's good enough for me to give me an idea for what the package is about without any prior knowledge. Beyond that, if I don't know what MCP is (and, in fact, I don't), I'm probably not in the market for that package.\r\n\r\nIf you want to go with a long name like `ModelContextProtocolClients`, that's ok, but you shouldn't feel obligated to. At least I would be 100% comfortable with the name `MCPClients`. And it does have the benefit of following the guideline that \"`MCPClients` provides the `MCPClient` type\", which `ModelContextProtocolClients` does not. So, actually, I would slightly _prefer_ `MCPClients`.\r\n\r\nSo, you would definitely have the last word on this question. Choose the name you are most comfortable with.",
+      "createdAt": "2025-05-02T14:18:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847326127",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pu62d",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz That advice seems to ignore the existence of https://github.com/JuliaSMLM/ModelContextProtocol.jl - A little consistency would be nice also in the LLM AI space.\r\n\r\nI’m in the target audience for this package (even though I am a bit of an LLM skeptic).",
+      "createdAt": "2025-05-02T16:36:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847649181",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pvHBu",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> That advice seems to ignore the existence o https://github.com/JuliaSMLM/ModelContextProtocol.jl\r\n\r\nWell, it can go either way… Consistency with `ModelContextProtocol`, or consistency with the `MCPClient` type it provides. This is entirely within the package author's authority to decide.\r\n\r\nAnd, just to be clear: I don't think `MCP.jl` would have been acceptable (even ignoring the other guidelines, such as minimum length), and indeed would have recommended `ModelContextProtocol.jl`. But a somewhat widely used acronym in its dominant meaning (according to the first page on Google) _combined_ with other words that provide additional context should generally be fair game for package name. Without that, you quickly end up with _absurdly_ long package names. Plus, acronyms _can_ be useful to provide recognizability. If the context is clear, then using an acronym makes it obvious I'm talking about the widely understood concept behind that acronym. Whereas writing out the acronym, it's not always clear whether that's actually referring to the same concept, or is just a \"coincidence\".\r\n\r\nI'm just not nearly as opposed to acronyms as package names as some others, and definitely not to acronyms as _part_ of package names. What we don't want is indecipherable domain-specific three-letter acronyms as package names, like the recent [JAC](https://github.com/JuliaRegistries/General/pull/129915). But otherwise, we should maybe loosen up a bit and decide on a case-by-case basis.",
+      "createdAt": "2025-05-02T17:04:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2847699054",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pwfDX",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Due to the Google results are like this: \r\n![image](https://github.com/user-attachments/assets/2454aced-b24d-4057-a5b0-bd7bcbb6c7d2)\r\nAnd the ModelContextProvider is really not serached explicitely by this community I think it would be better idea to stick with the MCPClients.\r\n\r\nI am thinking about this some more... I totally feel the ModelContextProtocol consistency. But... really Even me who is working with MCPs all day long for 2 months already never types Model Context Protocol to search for this package. And I got the ModelContextProtocol modules by typing MCP  actually into the searchbar. \r\n\r\nI thank you fro the advice stemann. I would prefer to go with @goerz  advice for now.\r\n\r\nAlso I won't settle till I don't know is there a chance to rename a package or remove a package from the registry?  \r\n\r\n ",
+      "createdAt": "2025-05-02T20:26:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848059607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pwoN6",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "By the way @stemann I see you are LLM skeptik a bit. \r\nI think what is coming is so unimaginable that it is just sick. \r\n\r\nJarvis will be EXACTLY available in months. Literally. And for everyone. \r\nThere will be many accuracy/autonomy/cost improvments as the limits are extramly high. \r\n\r\nBut instead of words I think I will show you. I will post about it in the slack maybe in June.",
+      "createdAt": "2025-05-02T20:50:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848097146",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pw7JI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> is there a chance to rename a package or remove a package from the registry?\r\n\r\nThere is not. Once a package is registered, it's permanent. See also the [FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#how-do-i-remove-a-package-or-version-from-the-registry).\r\n\r\nAlso, I didn't actually realize until earlier today that this is the \"MCP\" that's been all the rage on the internet during last couple of months. From that perspective, and with the package naming tradition of descriptive package names that we've ended up with in the General registry, registering a package implies a bit of a responsibility. For general names, there is implication that a package should live up to the expectation of its name. So for a name like `MCPClients` (or `ModelContextProtocolClients`), there's the implication that it should handle everything in the scope of \"MCP clients\". When \"MCP clients\" are a hot topic, that means you should expect to be around to manage contributions to the package. Or, ultimately, if you ever move on, hand off the package to a new maintainer.\r\n\r\nThis is just a general comment, I'm not familiar enough with the subject matter to say anything about whether your package is broad enough in scope to fit the name.\r\n\r\n> I am thinking about this some more...\r\n\r\nLet me know what you decide. There's a fair number of comments now on this PR, and it might be a bit of a hassle to mark everything as [noblock]. But I can apply an override tag for that, if you tell me to and nobody has any strong objection.",
+      "createdAt": "2025-05-02T21:48:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848174664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pxz9b",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "IIUC, this package was only coined a couple of days ago (cf. mentions in the generative AI slack channel).\r\n\r\nWhile I do very much appreciate quick development, I have tingling sense that things might be moving a bit too quickly wrt. registration in this case - perhaps leave a bit more time for things to gel, a bit more time for API to stabilize? I, for one, would like to take a peek at the API - just have not had the time yet.",
+      "createdAt": "2025-05-03T03:45:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848407387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86px0tr",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Please only pull out the “override gun” when it’s absolutely necessary, or, preferably, unanimously requested. I have no trouble finding the button to mark my messages with noblock.\r\n\r\n[noblock]",
+      "createdAt": "2025-05-03T03:53:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848410475",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pyRuo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh, I didn’t mean to override anyone’s concerns. This would be merely be for convenience, mainly if @Cvikli doesn’t want to go through the entire thread to find all comments that need editing (or I, for that matter).\r\n\r\nI have yet to encounter a situation where I would override a blocking comment against the explicit wishes of the commenter, and I would probably get a second opinion from another maintainer or triage member before doing that. We generally strive for consensus, if at all possible.",
+      "createdAt": "2025-05-03T08:59:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848529320",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pyTJK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I, for one, would like to take a peek at the API - just have not had the time yet.\r\n\r\nThat’s fair, and a different concern from the name of the package. We can certainly wait a few extra days, I think.\r\n\r\nUsually, we don’t scrutinize new registrations quite this much, but\r\n\r\n> perhaps leave a bit more time for things to gel, a bit more time for API to stabilize?\r\n\r\nis a good recommendation as long as @Cvikli doesn’t feel unfairly treated. There’s rarely a rush to get packages into General: it’s only absolutely necessary to register a package when it is a dependency for another package that should be registered. Until then, using direct installation or a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) should be perfectly sufficient. I’m always in favor of packages being on a good path to “stable” before registration. And of course, the more general the name or the bigger the scope of the package, the more important the quality and the continuing maintenance of the package.\r\n\r\nSo if @Cvikli wants to develop this a bit further before continuing with the registration, that’s fine.",
+      "createdAt": "2025-05-03T09:15:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848535114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pyvI2",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, I think we will wait for it and totally understand your opinions.\r\n \r\nAlso I am starting to feel the `ModelContextProviderClients` to be maybe better fit all in all. We will see. \r\n\r\nFor now I think I will use the [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) as I also feel I am rushing a little bit.",
+      "createdAt": "2025-05-03T14:25:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848649782",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pywiZ",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "OK, sounds good.\r\n\r\nOne last (for now) suggestion from my side is to consider if the client library could be integrated into ModelContextProtocol.jl with, e.g., the server library in an HTTP package extension (or vice versa). Just a thought.",
+      "createdAt": "2025-05-03T14:39:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2848655513",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p4Iqq",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, I think the ModelContextProtocol.jl is very nice library but for me I always force simpler code architect and pursue the simplest possible form of each algorithm (relying mostly on Base structs and so), so I am too much opinionated on that side and I don't want to write my code in that lengthy way. \r\n\r\nSo I think this package will be for \"reaching the MCP logic with the simplest way and with low LOC\" and it just wouldn't be cool to merge them. \r\n\r\nAs during my career I always realized too structured or overgeneralized stuffs/code were always dropped as time went by (for many reason) and I am always trying to make in its minimal form and the simplest way (sometimes even sacrificing LOC for understandability) to in general when it comes to using the code I want to minimize the cognitive load for everyone to work with it. \r\nAlso I totally feel that the python cannot succeed due to the burden of their boilerpates and complexity as the pacakges mature there. (It sounds good till you don't come back to the same package after 5 years passed... then you realize that you don't want to touch those code :D , and usually I write pretty clean code... so I don't even want to talk about when you have to work with someone else code XD )",
+      "createdAt": "2025-05-05T06:48:50Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2850065066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vOlrL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-04T12:24:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2939837131",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86w0Rax",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-06-12T12:24:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130145#issuecomment-2966492849",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MCPClients\n- Repository: https://github.com/Cvikli/MCPClients.jl\n- Created by: @Cvikli\n- Version: v0.8.0\n- Commit: 3e02bd6ce19accff5efc2d776241e437ddf3bcd7\n- Git reference: HEAD\n- Description: Simplest MCP layer. \n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nJulia MCP Client to reach everything with your AI\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "MCPClients",
+  "closed_at": "2025-06-12T12:24:20Z",
+  "title": "New package: MCPClients v0.8.0"
+}

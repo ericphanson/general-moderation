@@ -1,0 +1,46 @@
+{
+  "created_at": "2025-06-06T04:42:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 132414,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86vuAvm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, DocumenterCitations, Interpolations, Literate, OffsetArrays, Optim, PartialWaveFunctions, QuadGK, Reexport, Roots, SpecialFunctions, StaticArrays, WignerSymbols\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-06T04:51:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132414#issuecomment-2948074470",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86v0jNx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/132417\r\n\r\nWhen fixing automerge issues, please try to avoid changing the version number. That way, it updates the existing registration PR.",
+      "createdAt": "2025-06-06T16:20:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132414#issuecomment-2949788529",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FewBodyToolkit\n- Repository: https://github.com/lhapp27/FewBodyToolkit.jl\n- Created by: @lhapp27\n- Version: v0.3.0\n- Commit: 6cf875e3fe86aec9c35425141ced7bce4460194f\n- Reviewed by: @lhapp27\n- Reference: https://github.com/lhapp27/FewBodyToolkit.jl/issues/10#issuecomment-2948109558\n- Description: Julia package for solving 2- and 3-body quantum systems in 1D–3D with general potentials\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e021f47b2d4bef148d711f0a0e45c35a9f9b1947432765397258191bf2aa7400a8f62cd7c4343fb6d2b3b8fb08632856b72bce2409f8a78277e9c8f8fa8b0fb374b58379d9c5f7200b8b180c8884c006e0d783059247799a7d588aa310465f9df4765a92244115c4557c7fa632d128431e6ab800202e6617eafae3c4f3a6a962 -->",
+  "package_name": "FewBodyToolkit",
+  "closed_at": "2025-06-06T16:20:23Z",
+  "title": "New package: FewBodyToolkit v0.3.0"
+}

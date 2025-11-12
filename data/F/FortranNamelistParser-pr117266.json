@@ -1,0 +1,231 @@
+{
+  "created_at": "2024-10-14T17:46:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 117266,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86PwqAH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-14T17:53:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2411896839",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PykzU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just to clarify: This is re-registering https://github.com/JuliaRegistries/General/pull/117175, but with a new UUID? Cf. https://discourse.julialang.org/t/remove-package-from-general-registry/71668/5\r\n\r\nI'm still pretty confused between this and https://github.com/JuliaRegistries/General/pull/117210\r\n\r\nAlso, this being a fork of https://github.com/singularitti/Fortran90Namelists.jl and the comment at https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2395300452\r\n\r\nUsually, we don't allow for the registration of forks.\r\n\r\nThe statement in the README\r\n\r\n> This repository is forked from original [repo](https://github.com/singularitti/FortranNamelistParser.jl) from [@singularitti](https://github.com/singularitti). [@singularitti](https://github.com/singularitti) is the major author of this package and the owner and mainter of this repository [@anchal-physics](https://github.com/anchal-physics) is only taking care of julia registration and minimal maintainence.\r\n\r\nseems very strange. How is that compatible with https://github.com/JuliaRegistries/General/pull/116638#issuecomment-2395300452? I don't understand why this package exists under multiple names.\r\n\r\nCan you clarify the relationship of all these packages and put that explanation in the README or documentation as well?\r\n\r\n[noblock]",
+      "createdAt": "2024-10-14T21:52:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2412399828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PyvuV",
+      "author": {
+        "login": "anchal-physics"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz I was unaware of the existence of https://github.com/JuliaRegistries/General/pull/117210 . We can test it with our packages to see if it takes care of all that we need. If that's the case, there is no need for this PR (FortranNamelistParser.jl).\r\n\r\nIf https://github.com/JuliaRegistries/General/pull/117210 does not support our project repos, we would like to get this PR merged so that we can register other packages that rely on this functionality.\r\n\r\nThe situation is this: \r\n\r\n* @singularitti started the project https://github.com/singularitti/Fortran90Namelists.jl\r\n* We have been working on our packages in private repos earlier and we needed the base functionality of https://github.com/singularitti/Fortran90Namelists.jl and 2 additional functions, so this repo was forked in our org and we added the two functions.\r\n* Meanwhile, @singularitti updated their repo bit more and made it better.\r\n\r\nNow, we wanted to publish our packages and register with Julia but @singularitti wants to work more on their package before registering it with Julia (probably because they have a much larger application scope in mind). So with permission form @singularitti we are publishing a fork of his latest repo with the additional two functions.\r\n\r\nI added the strange statement in README because I did not want anyone to misconstrue this as me stealing @singularitti's contribution. @singularitti is the major contributor of all the code in the package. But since it is under MIT license, we wanted to register it ourselves so that we can register our other packages.\r\n\r\nSo, I'll definitely put this relationship between packages in README and docs soon. I'll also see if https://github.com/JuliaRegistries/General/pull/117210 is good enough for our purposes, in which case, we'll abandon this package.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-14T22:29:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2412444565",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PzniW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Are you sure that you and @singularitti (and [@seamsay](https://gitlab.com/seamsay)) can't agree on having everything in *one* package? From a community perspective, it's not ideal to have multiple variants of more or less the same package, all with basically interchangeable names.\r\n\r\nIf your version of the package is not identical to the original one from @singularitti, you'd definitely have to rephrase that paragraph in the README and documentation,\r\n\r\n> This repository is forked from original [repo](https://github.com/singularitti/FortranNamelistParser.jl) from [@singularitti](https://github.com/singularitti). [@singularitti](https://github.com/singularitti) is the major author of this package and the owner and mainter of this repository [@anchal-physics](https://github.com/anchal-physics) is only taking care of julia registration and minimal maintainence.\r\n\r\nIn any case, it seems to me that parsing Fortran namelists is a pretty limited problem domain, and a single well-maintained and documented package should probably be enough to cover it.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-15T02:15:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2412673174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P0iOE",
+      "author": {
+        "login": "singularitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @goerz @anchal-physics, thanks for the heads-up! I’ve been pretty busy lately and wasn’t aware that there’s a new package [`FortranNamelists.jl`](https://gitlab.com/seamsay/FortranNamelists.jl). After a quick review, it seems that `FortranNamelists.jl` is quite different from my design and has its own merits. @anchal-physics, could you test whether it meets your needs? If so, we could potentially collaborate to make this package the state-of-the-art Fortran namelist parser.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-15T05:11:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2412913540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P7U7o",
+      "author": {
+        "login": "anchal-physics"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz @singularitti , I tried using FortranNamelist for my purpose, but it seems to have been written for a different usecase. It emulates reading and writing of namelist as is done in Fortran, while we simply want to parse Fortran namelists written or read by other Fortran based softwares and use the information, ideally as a dictionary. So I don't think it meets our needs.\r\n\r\nAgain, I would emphasize that I simply want a working dependency registered here as soon as possible so that we can release our other packages. We'll be more than happy to change dependency to a better working and up to date solution when it comes up in the registry next.\r\n\r\nHowever, @goerz if this seems unreasonable from the community point of view, which I understand, then I'll try to trim our packages so that we don't use FortranNamelistParser anymore which reduce our functionality only slightly but we would definitely require it in future to expand further as we are reading Fortran based simulation outputs. Let me know what you think is the best solution here.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-15T18:11:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2414694120",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P7oV8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe there's room for two packages, `FortranNamelist` as a reader and writer, and `FortranNamelistParser` here as a second approach. But IMO, I don't think there's then also room for `Fortran90Namelists` as a fork/variant for `FortranNamelistParser`. If we're merging `FortranNameListParser` now, I would be fairly opposed to having a registration of `Fortran90Namelists` at some later point in time. Instead, @singularitti would have to contribute any further development to the `FortranNameListParser` repository – which would probably be best anyway. Why do you want to keep two separate forks of the same project under active development? I can't imagine that the plans for the two forks are so divergent that these future developments would be incompatible.\r\n\r\nI don't know. Maybe I'll have to solicit some opinions on this. If there's some consensus in the community that having all three of these packages registered is fine, I certainly won't stand in the way.\r\n\r\nIf this registration of `FortranNamelistParser` is only there as a dependency for the packages in a specific org, it might also be possible to just have the code in some `Base`/`Core` package of that org. Something that's a dependency of all the other packages, without specifically being about Fortran namelist parsing. Or, use a package name that makes it really clear that this package is specific to the context of a specific org, like `TorreyPinesFortranNamelistParser`. For a pure dependency that's not user-facing, a super long package name like that isn't really a problem, and it would make it clear to people that this package isn't intended for public use.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-15T18:52:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2414773628",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QNlNb",
+      "author": {
+        "login": "Sean1708"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @anchal-physics, I don't have time to look over your package or this PR properly until the weekend but specifically regarding\r\n\r\n> It emulates reading and writing of namelist as is done in Fortran, while we simply want to parse Fortran namelists written or read by other Fortran based softwares and use the information, ideally as a dictionary.\r\n\r\nWould the `Namelist` type as [documented here](https://seamsay.gitlab.io/FortranNamelists.jl/stable/#Dynamic-Usage) not fit your use case? And if not, do you have an idea of what would need to change for you to be able to use it?",
+      "createdAt": "2024-10-17T12:58:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2419479387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QNtvU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Just for the record: I think my ideal outcome would be if it's somehow possible for @Sean1708 to implement whatever features @anchal-physics is missing in order to use `FortranNamelists` as the dependency for all their packages (or for @anchal-physics to contribute these features to `FortranNamelists`). Then, we can just move ahead with the registration of `FortranNamelists and `FortranNamelists` would be the \"go to\" package for Fortran namelists in Julia. Since you all have a stake in this package, maybe you can even all have co-maintainer status and commit access. It's always best if registered packages have a [bus factor](https://en.wikipedia.org/wiki/Bus_factor) greater than one. But, whatever you guys decide is best.",
+      "createdAt": "2024-10-17T13:13:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2419514324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RY4Fl",
+      "author": {
+        "login": "singularitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi guys, sorry for the late reply. I was pretty busy recently. I'm fine with whatever decisions you made in the end. I'd love to see Sean's code registered. If not, I could contribute to Anchal's repo later.",
+      "createdAt": "2024-10-26T03:20:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2439217509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z7zu-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-10T12:24:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2582592446",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86a9DXj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-18T12:23:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117266#issuecomment-2599695843",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FortranNamelistParser\n- Repository: https://github.com/anchal-physics/FortranNamelistParser.jl\n- Created by: @anchal-physics\n- Version: v0.1.0\n- Commit: 11bfa8fef52e7d9b310f4beb6717820e9cf5fc5d\n- Reviewed by: @anchal-physics\n- Reference: https://github.com/anchal-physics/FortranNamelistParser.jl/commit/11bfa8fef52e7d9b310f4beb6717820e9cf5fc5d#commitcomment-147970367\n- Description: A pure Julia implementation of Python f90nml package.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6eac40f10f29d64ee360c6371679178ef6b0bd387737bcb023956d5e15e3654c26bdd48ac8a3261d5ae42c9b691ee36555d4f9a19e0c176017085263c13ebef4c9ada728c0f43b7f53d11564317bc630d11d2de5f5aeb5ea9749b7831bcb338650aea911a29268e703594673130f09689cc7e7ce915b1eb2b857c8dfb2c0f2d3f828914d69d2e3831b883d7e0c44f0ff9d4307ef51fbf8540fb48de0642ae710d686886fe1c75e96bd3cf625984b10338e3184b54b8362b79057b5ce8e0e3744d -->",
+  "package_name": "FortranNamelistParser",
+  "closed_at": "2025-01-18T12:23:37Z",
+  "title": "New package: FortranNamelistParser v0.1.0"
+}

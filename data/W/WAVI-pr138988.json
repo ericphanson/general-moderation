@@ -1,0 +1,106 @@
+{
+  "created_at": "2025-09-23T11:17:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 138988,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87GGpem",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BenchmarkTools, Dierckx, ImageFiltering, InplaceOps, Interpolations, IterativeSolvers, JLD2, LinearMaps, MAT, NCDatasets, NonlinearSolve, Parameters, Reexport, SciMLNLSolve, Setfield\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 6 existing packages.\n  1. Similar to WAV. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to MGVI. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.09 is at or below cutoff of 2.50.\n  3. Similar to MCVI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to PAPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to RAI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to ADI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-23T11:38:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3323631526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GH1R0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would probably suggest `WAVIIceSheetModel`",
+      "createdAt": "2025-09-23T13:06:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3323942004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GKJHa",
+      "author": {
+        "login": "thomaszwagerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @goerz - that is a good suggestion.\r\n\r\nHowever, if at all possible I think we'd be quite keen to maintain the current name. This model was ported into Julia from an original model written in Matlab, and so has been called WAVI and been referred to as such in publications since 2015 (for example in [#1](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2014JF003239), [#2](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017GL072514)), including in [JOSS](https://joss.theoj.org/papers/10.21105/joss.05584). As software engineer I understand the naming guidelines and that they are there for good reason, but in this particular case would potentially be disruptive for the ice sheet modellers that use this.\r\n\r\nI will update the `compat` entries.",
+      "createdAt": "2025-09-23T15:35:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3324547546",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GKa-h",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can try to find a full registry maintainer on Slack to merge it manually (after the three-day waiting period ends and you have resolved the compat issues), but my impression is that basically all maintainers consider 4-letter acronyms a no-go at this point. Realistically, I think your best bet is to keep `WAVI` only as _part_ of the package name, but combine it with some explanatory prefix or suffix. That way, you can still use `WAVI` as part of the \"branding\"... That might include telling users to use the package with\r\n\r\n```julia\r\nimport WAVIIceSheetModel #= or whatever more Julian name you choose =# as WAVI\r\nusing WAVIIceSheetModel: WAVIIceSheetModel as WAVI\r\n```",
+      "createdAt": "2025-09-23T15:54:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3324620705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87NNecr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-24T12:24:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3442861867",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PNLNr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-11-01T12:24:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138988#issuecomment-3476337515",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: WAVI\n- Repository: https://github.com/WAVI-ice-sheet-model/WAVI.jl\n- Created by: @thomaszwagerman\n- Version: v0.0.3\n- Commit: 75b1cadbabaa09f9866cf7b8f68801301f891fc2\n- Reviewed by: @thomaszwagerman\n- Reference: https://github.com/WAVI-ice-sheet-model/WAVI.jl/issues/90#issuecomment-3323594995\n- Description: WAVI ice sheet model\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## What's Changed\n* Fix typos in MISMIP+ docs by @alextbradley in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/80\n* Update governing_equations.md by @alextbradley in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/83\n* Update paper.md by @alextbradley in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/79\n* Reduce pre-compile time by @thomaszwagerman in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/101\n* Fix failing paper and documentation actions by @thomaszwagerman in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/99\n* Trivial updates by @JimCircadian in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/86\n* Release Branch: v0.0.3 by @thomaszwagerman in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/103\n\n## New Contributors\n* @thomaszwagerman made their first contribution in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/101\n* @JimCircadian made their first contribution in https://github.com/WAVI-ice-sheet-model/WAVI.jl/pull/86\n\n**Full Changelog**: https://github.com/WAVI-ice-sheet-model/WAVI.jl/compare/v0.0.02...v0.0.3\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359811bb16cf6767805ccfdec4ce890a82208abe42618a774e8ad211911dfc62bbc8eaf59a7cdfe4c219ce11075656b45ead1ae24fc353c4c78fdaad45d3911b8281d7f84aef25c9ff4e236a7473788cb88bf157f2e4776a23f8ea7f873721b7dab039a234baa4b983c9745c96221f0454a4aeeca9241e4f09831be93036e6ceceea -->",
+  "package_name": "WAVI",
+  "closed_at": "2025-11-01T12:24:04Z",
+  "title": "New package: WAVI v0.0.3"
+}

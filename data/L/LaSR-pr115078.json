@@ -1,0 +1,253 @@
+{
+  "created_at": "2024-09-12T18:35:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 115078,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86L5EFX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ConstructionBase, JSON, PromptingTools\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 4 existing packages.\n  1. Similar to Lale. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Lazy. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to LNR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to LSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-12T18:40:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2346991959",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L5Na_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think `LanguageAidedSymbolicRegression` is just about a package name that doesn’t cross the boundary to “too long”",
+      "createdAt": "2024-09-12T19:01:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347030207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L5OHX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`LaSymbolicRegression` could also work, especially given the connection to an existing `SymbolicRegression` package",
+      "createdAt": "2024-09-12T19:02:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347033047",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L6Tj-",
+      "author": {
+        "login": "atharvas"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the suggestions! We decided to go with a modification of your suggestion: `LibraryAugmentedSymbolicRegression`. \r\n\r\nQuestion: After changing the repo name, the package name, and any internal references, Do I need to open a new PR or can I reuse this thread? ",
+      "createdAt": "2024-09-12T21:58:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347317502",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L6ZWO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You just redo the registration. It will create a new PR.",
+      "createdAt": "2024-09-12T22:19:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347341198",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L6aFi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm a little confused, though, since your About line still says \"Language aided Symbolic Regression in Julia\".\r\n\r\nIt's also unusual that the repo is a *fork* of https://github.com/MilesCranmer/SymbolicRegression.jl. Usually, new packages shouldn't be forks of existing packages. It might be good to loop in @MilesCranmer on this.",
+      "createdAt": "2024-09-12T22:22:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347344226",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L7Tf3",
+      "author": {
+        "login": "atharvas"
+      },
+      "authorAssociation": "NONE",
+      "body": "> new PR\r\n\r\ngot it. Thanks!\r\n\r\n> Language aided Symbolic Regression vs Library Augmented Symbolic Regression\r\n\r\nBoth are descriptive of our method, actually. \r\n\r\n> Fork of existing packages\r\n\r\nThe methods are very similar structurally (since they are both symbolic regression libraries), but have different implementations. We decided to keep the LaSR development separate from SymbolicRegression.jl development, which is why we're adding this package. LaSR.jl will contain the implementation for all the LLM guided features. This also allows all LLM inference strong dependencies like `PromptingTools.jl` to be separate from the SymbolicRegression.jl repo. \r\n\r\nAlways open to talking more about how to separate LaSR.jl development from SymbolicRegression.jl development while allowing a common interface.",
+      "createdAt": "2024-09-13T00:27:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2347579383",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L9JWb",
+      "author": {
+        "login": "tomaklutfu"
+      },
+      "authorAssociation": "NONE",
+      "body": "This seems just blind copy of SymbolicRegression.jl plus name chnages. Nothing I saw in this repository is related to LLMs at this moment. This just seems fishy and should not be merged/added to repository.",
+      "createdAt": "2024-09-13T05:28:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348062107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L9c60",
+      "author": {
+        "login": "atharvas"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi!\r\nAll our LLM integrations commits are squashed together, so they are pretty easy to miss! Look at these pull requests for more information about the internal workings of LaSR: \r\n\r\n* https://github.com/trishullab/LibraryAugmentedSymbolicRegression.jl/pull/1\r\n* https://github.com/trishullab/LibraryAugmentedSymbolicRegression.jl/pull/2\r\n\r\nThis repository is based on a research preprint available here: https://atharvas.net/static/lasr.pdf . I have a “blog post” which summarizes the work here: https://trishullab.github.io/lasr-web/ . Happy to answer any questions about the novelty/provenance of our work, but I think we have a pretty cool algorithm here, which I hope is useful for the Machine Learning community and the Julia community.",
+      "createdAt": "2024-09-13T06:35:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348142260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L9-zA",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "See #115117",
+      "createdAt": "2024-09-13T07:55:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348281024",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L_XUd",
+      "author": {
+        "login": "MilesCranmer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Just for posterity, I completely approve of this – see my comment here: https://github.com/JuliaRegistries/General/pull/115117#issuecomment-2348632584",
+      "createdAt": "2024-09-13T10:49:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348643613",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86L_cmI",
+      "author": {
+        "login": "tomaklutfu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry for my tone then, it seemed too much copy-paste.",
+      "createdAt": "2024-09-13T11:02:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348665224",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MAJGs",
+      "author": {
+        "login": "MilesCranmer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No worries! Thanks for looking out for the ecosystem :)",
+      "createdAt": "2024-09-13T12:33:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115078#issuecomment-2348847532",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LaSR\n- Repository: https://github.com/trishullab/LaSR.jl\n- Created by: @atharvas\n- Version: v0.0.1\n- Commit: f7516aeb6190dd4653934bbb1a2cba2298e67550\n- Reviewed by: @atharvas\n- Reference: https://github.com/trishullab/LaSR.jl/issues/3#issuecomment-2346983112\n- Description: Language aided Symbolic Regression in Julia\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n# Initial code release for LaSR\r\n\r\nThis version contains the base code to allow SymbolicRegression.jl to induce programs with LLMs in a way that accelerates search. I want to have up-to-date documentation before releasing `v0.1.0`\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a9c34d0433e5d84473f4004249c215886cac21e2d7f3b078fc1c6ccf9385675de3b1a8f4d22eb4210379608ec30642f92f4e9fdf607689a9412c5a1cd0d8bbea7d0f126de4a29601fb4a54adea2a266dff1c12bd8e0ccfbd94f331420815f68d6b0c704eb7cac9a43614b62012bc06f32094832c4526e2305d78f01b5d30331d -->",
+  "package_name": "LaSR",
+  "closed_at": "2024-09-13T10:38:19Z",
+  "title": "New package: LaSR v0.0.1"
+}

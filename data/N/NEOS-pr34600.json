@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-04-18T03:44:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 34600,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMTkyNjQ0NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 8 existing packages.\n  1. Similar to NES. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to NExOS. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  3. Similar to AEMS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to ECOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to CAOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to AES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to ROS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to RHEOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-04-18T03:48:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34600#issuecomment-821926445",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMTkyNzI1OQ==",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "So NEOS.jl actually used to be a registered package: https://github.com/JuliaLang/METADATA.jl/tree/metadata-v2/NEOS\r\nbut I didn't update it to 1.0 in time, so it missed the switch to the modern world.\r\n\r\nI guess I should rename it to `NEOSServer.jl`...\r\n\r\n[noblock]",
+      "createdAt": "2021-04-18T03:55:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34600#issuecomment-821927259",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMTkyODg3Nw==",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Oops. What did I do wrong. It opened a new PR: https://github.com/JuliaRegistries/General/pull/34602. I guess this one can be closed.",
+      "createdAt": "2021-04-18T04:10:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34600#issuecomment-821928877",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NEOS\n- Repository: https://github.com/odow/NEOS.jl\n- Created by: @odow\n- Version: v0.4.0\n- Commit: 791cb9d029cbc1cda14b8310760f2c20f2e3d7bc\n- Reviewed by: @odow\n- Reference: https://github.com/odow/NEOS.jl/commit/791cb9d029cbc1cda14b8310760f2c20f2e3d7bc#commitcomment-49654537\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6aeb9853f1c9efce76700075bf37aca7b7201d8a044cf3e7fbdd4461bd03a3deefd5d7eecad51c05a466f39e504d2f070f59d2c17745681549346a356e7a2fc77dc503cd62989c4c2da84a0a53658b2094c6e657846c75d86acd331c302aa506a4ed27876bbe992baa97a6ced02f225bd4e51f06fe208a8d45b341d5fb58579a6cabfcbd93a0dae9c5cb48822c0abb8bb87ed8b7ee66311e8457c3d95abe39f2c -->",
+  "package_name": "NEOS",
+  "closed_at": "2021-04-18T17:45:44Z",
+  "title": "New package: NEOS v0.4.0"
+}

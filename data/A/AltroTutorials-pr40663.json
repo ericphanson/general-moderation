@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-07-10T22:09:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 40663,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NzcxMDY5MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BenchmarkTools, Colors, CoordinateTransformations, GR, MeshCat, Plots, PyPlot, Rotations, StaticArrays, TrajOptPlots\n- I was not able to install the package (i.e. `Pkg.add(\"AltroTutorials\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import AltroTutorials` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-07-10T22:11:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/40663#issuecomment-877710691",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NzcxMzMxNg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@bjack205 please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2021-07-10T22:43:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/40663#issuecomment-877713316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Z-OL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-08-10T12:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/40663#issuecomment-896000907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841tYIA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-08-18T12:50:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/40663#issuecomment-901087744",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AltroTutorials\n- Repository: https://github.com/RoboticExplorationLab/AltroTutorials.jl\n- Created by: @bjack205\n- Version: v0.1.0\n- Commit: 284c62bbc2895fdea304af6b33a6d412d982a1f9\n- Reviewed by: @bjack205\n- Reference: https://github.com/RoboticExplorationLab/AltroTutorials.jl/commit/284c62bbc2895fdea304af6b33a6d412d982a1f9#commitcomment-53315431\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd61818a372d461768e01e7ca1a09dada8ab68105ca9867e261c61cbe5c79a90df2a9987869c64151f57b86b169003a9303d1218f3b94afb20a0f1dea2141d7c6d8819f3a3249161684753f0a13ac7ac7ac2798bb20fca74983e467dd1d16a3788fcb527e87795ce84a2a7159b409c621c38d9f557f7a5c7f8ed7160ad65ed83cff16b01cb14a43d89b5a2b581612138cf53591a49d4207bbcf9ac392dfd2cbd4987aa0b179ccefc4709ec4c3224ae0a69bde1892430c642d2a5545508da9a2aae5 -->",
+  "package_name": "AltroTutorials",
+  "closed_at": "2021-08-18T12:50:18Z",
+  "title": "New package: AltroTutorials v0.1.0"
+}

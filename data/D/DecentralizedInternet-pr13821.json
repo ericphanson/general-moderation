@@ -1,0 +1,136 @@
+{
+  "created_at": "2020-04-29T03:40:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 13821,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3MzE4NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Mentors4EDU Once all of CI is passing (green), this is good to merge immediately.",
+      "createdAt": "2020-04-29T03:40:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-620973185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3MzU0NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- I was not able to load the package (i.e. `import DecentralizedInternet` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-04-29T03:42:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-620973545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3MzkwNA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hmm okay it seems like there is a bug in the \"register packages in subdirectories\" feature.",
+      "createdAt": "2020-04-29T03:44:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-620973904",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3MzkzMg==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey, it is still doing that thing for subdirectories, could that be a ci error given now subdirectories are supported @DilumAluthge",
+      "createdAt": "2020-04-29T03:44:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-620973932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMDk3NDA1Nw==",
+      "author": {
+        "login": "Mentors4EDU"
+      },
+      "authorAssociation": "NONE",
+      "body": "So do we need to wait it out @DiliumAluthge",
+      "createdAt": "2020-04-29T03:45:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-620974057",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMTA1ODc0Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah it might take some time to debug this.",
+      "createdAt": "2020-04-29T08:19:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-621058746",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMTA1OTAwMQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't think it's a problem with CI. I think there is a bug in the sub directory support somewhere.",
+      "createdAt": "2020-04-29T08:20:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-621059001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMTEwNTU0Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think we just need to re-deploy the registrator application. Hang tight, we will get that done soon.",
+      "createdAt": "2020-04-29T10:03:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13821#issuecomment-621105543",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DecentralizedInternet\n- Repository: https://github.com/Lonero-Team/Decentralized-Internet\n- Created by: @Mentors4EDU\n- Version: v0.1.0\n- Commit: 3c0a39a7a15c5c02ad1055f1eb504da2bbe56ebd\n- Reviewed by: @Mentors4EDU\n- Reference: https://github.com/Lonero-Team/Decentralized-Internet/commit/3c0a39a7a15c5c02ad1055f1eb504da2bbe56ebd#commitcomment-38815645\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae41b89c3c1321b2a37a4b5006ecc25ab5795068c0f3f35ef98bc087eb22b2b9e54ab376972dad29b3e9feecf3a0d85c468434c377d1d3b9e8fdbbf4eb80bf7082eabaf695c7a4f38d695734044dfc4f748d4d40fb7cb0b72cbdbb4661bd080520c2c6a37db2f49de7aabc45601caa617a50d976c78c16aa0911f93a7cf5fc672d4466f85e2a4912efb431a149bc7d83178fa3f1eee74f3b27be06d4c73997b8dd8b029350e6f4ef4998497b18dde0d780b8c0cbd456f759182655f9c1998b8b393 -->",
+  "package_name": "DecentralizedInternet",
+  "closed_at": "2020-04-29T14:28:25Z",
+  "title": "New package: DecentralizedInternet v0.1.0"
+}

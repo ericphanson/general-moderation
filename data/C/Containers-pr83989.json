@@ -1,0 +1,171 @@
+{
+  "created_at": "2023-05-21T16:32:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 83989,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cwg8g",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The name seems really good for a package, usable for all in the ecosystem. That may apply actually here, at first I thought might be only for space, but I think I'm wrong on that. Is the rule just first-come-first-serve on claiming a name?\r\n\r\n[noblock]",
+      "createdAt": "2023-05-21T16:40:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1556221728",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cwhPC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-21T16:47:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1556222914",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cz_AW",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah judging from the README - functionality seems way too specific for such a generic name.\r\nFor example, https://github.com/SciML/RecursiveArrayTools.jl `ArrayPartition` is also a way to handle mixed-type containers performantly and conveniently.\r\n\r\nAlso, aren't your types basically the same as plain namedtuples?",
+      "createdAt": "2023-05-22T12:25:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1557131286",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85c-vuT",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yeah judging from the README - functionality seems way too specific for such a generic name. For example, https://github.com/SciML/RecursiveArrayTools.jl `ArrayPartition` is also a way to handle mixed-type containers performantly and conveniently.\r\n> \r\n> Also, aren't your types basically the same as plain namedtuples?\r\n\r\nYes, this package is meant to be constructing and efficiently **iterating** over heterogeneous types \"containers\", not only for space applications. This is the reason for such a \"generic\" name. Anyway, I was already thinking about the fact that such a name could be used within the `Base` or `Core` packages for something else, but there there where no guidelines on that, so I open the request with `Containers`! :)\r\n\r\nThe point here is actually to have a method to iterate a user-defined `Tuple` without any allocation not exploiting the _function barrier_ approach as it leads to poor performances w.r.t. the proposed one. The \"containers\" are actually built on top of `NamedTuples`, and shortly I'll push a major update with all the _zero-allocating_ interfaces/methods for the iteration over this type.  \r\n\r\n[noblock]\r\n",
+      "createdAt": "2023-05-23T18:36:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1559952275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dCdhj",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "My point that the name is way too generic for the functionality stands even stronger :)\r\nMay I suggest something like HeterogeneousContainers or MixtypeIteration or even TupleLike or TupleIteration?",
+      "createdAt": "2023-05-24T11:12:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1560926307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dUfW7",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would say I can change the name of the package to `MixedTypesContainers`! \r\nI think this can be closed: open already another PR #84381.\r\n",
+      "createdAt": "2023-05-27T18:58:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1565652411",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85f7XSq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-06-27T12:23:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1609397418",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gkZOD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-07-04T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83989#issuecomment-1620153219",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Containers\n- Repository: https://github.com/JuliaSpaceMissionDesign/Containers.jl\n- Created by: @andreapasquale94\n- Version: v1.0.1\n- Commit: 50527199bc0a2d82966a049d9f0f3174445af23a\n- Reviewed by: @andreapasquale94\n- Reference: https://github.com/JuliaSpaceMissionDesign/Containers.jl/commit/50527199bc0a2d82966a049d9f0f3174445af23a#commitcomment-114315356\n- Description: An efficient library for mixed-types containers.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> - Efficiently creating mixed/heterogeneous types containers at execution time\r\n> - @container macro release\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69fa087c7a370de7a43d5ddffaf0b1daa813a3cb9f04b17ff4dae05fe88d8df7ed3607a082ebb05157b4751c2cf9ba606726bf9a8e8dbe81dcba567e47d3818a2553205a7bcbfc4669f21662b68a11dca528d3184a1cab18981e6b3a730e9f4bb801faa4ff2ce01a7dc827faf277e4c0251bd5fd775b549519802e5a3e1d6aea96197377e0f9fc435d4cb1a60e2a201df71f405e18d2947217ab7e85e31543c8a66da71642807445e0ef7b0a62186065827c4683e3ff0467ad1bc60c4beb0dcc2 -->",
+  "package_name": "Containers",
+  "closed_at": "2023-07-04T12:23:54Z",
+  "title": "New package: Containers v1.0.1"
+}

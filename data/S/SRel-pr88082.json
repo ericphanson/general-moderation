@@ -1,0 +1,151 @@
+{
+  "created_at": "2023-07-22T16:16:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 88082,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85iJXpC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to Reel. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Shell. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Spec. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Sole. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Sixel. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-22T16:23:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646623298",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iJYXS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would consider `SRel` a far worse name than `STRELA`",
+      "createdAt": "2023-07-22T16:38:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646626258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iJYi_",
+      "author": {
+        "login": "akchurinda"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz\r\nYou are right; I have tried SRel, and not only did it not pass the AutoMerge, but the name itself is bad after I gave it a second-thought. I have decided to keep STRELA. Do you know if I can contact someone specifically after the three-day wait period?",
+      "createdAt": "2023-07-22T16:42:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646627007",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iJZBn",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, just post a message in the `#pgk-registration` channel on the [Julia Slack](https://julialang.org/slack/) with a link to https://github.com/JuliaRegistries/General/pull/88081\r\n\r\nThis PR will be automatically closed after 30 days",
+      "createdAt": "2023-07-22T16:54:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646628967",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iJZO4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "And, just for the record, even `Strela` or any other variation on the capitalization that might get around the all-caps rule would likely still (incorrectly) trigger the \"name similarity\" check and require someone to merge the package manually. This always happens with short package names. Probably the only name that would be auto-merged without having to go on Slack is `StructuralReliabilityAnalysis`, which would be a somewhat uninspired name.",
+      "createdAt": "2023-07-22T16:59:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646629816",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iJZdb",
+      "author": {
+        "login": "akchurinda"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you for you help, @goerz. I appreciate it. ",
+      "createdAt": "2023-07-22T17:03:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1646630747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85in3gV",
+      "author": {
+        "login": "akchurinda"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Please disregard this pull request. The package was renamed to `Fortuna.jl` (https://github.com/JuliaRegistries/General/pull/88485).",
+      "createdAt": "2023-07-27T21:36:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1654618133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lAl_N",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-27T12:22:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1694654413",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85llW21",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-09-03T12:22:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/88082#issuecomment-1704291765",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SRel\n- Repository: https://github.com/AkchurinDA/SRel.jl\n- Created by: @AkchurinDA\n- Version: v0.1.0\n- Commit: 3f9854950cb8e2126c7ed4b3c6b9d235e0e7b46e\n- Reviewed by: @AkchurinDA\n- Reference: https://github.com/AkchurinDA/SRel.jl/commit/3f9854950cb8e2126c7ed4b3c6b9d235e0e7b46e#commitcomment-122383919\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd624cdc2bc1630de5aeae01575e467c28345b7abb1495741625ea01ac057687e2b16dcc3e645c9f8121d4e818f31f6b47cef86cfbf6333e2adcd29c4dbd601bd0b91bfd7a97adf2bc7f2fca189b4bf9f3e72efcd0d299e5d319e0e0327e84c54572accd8c02e25be5fa9febc3947ed166d89b42e887e165305e6a88399d6fad4e2e7021079d229027525723ac06833a62aa11c4c3270b189da2ed74e03bdd58c5db55b6441c726a5811a6d0996d027148b -->",
+  "package_name": "SRel",
+  "closed_at": "2023-09-03T12:22:59Z",
+  "title": "New package: SRel v0.1.0"
+}

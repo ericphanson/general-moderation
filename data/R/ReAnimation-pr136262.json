@@ -1,0 +1,246 @@
+{
+  "created_at": "2025-08-08T17:17:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 136262,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8683-6E",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-08T17:23:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3168792196",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q868_Jxr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Since you've been registering a number of packages with version numbers >= 1.0 in the last few days: If you are following [semantic versioning](https://semver.org) (which we generally encourage in the ecosystem, and which `Pkg`, more or less assumes), then according the specification:\r\n\r\n> 1. Software using Semantic Versioning MUST declare a public API.\r\n> […]\r\n> 5. Version 1.0.0 defines the public API\r\n\r\nIt doesn't seem to me like this package (and some of the other 1.0 registrations) really specifies the API in a way that makes it clear what \"contract\" the package provides according to SemVer. My usual recommendation for \"fixing\" this is to add a full [Documenter-based documentation](https://documenter.juliadocs.org/stable/) that includes a formal \"API\" section with the complete docstrings for all public functions/types/macros.",
+      "createdAt": "2025-08-09T12:23:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3170671723",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q868_WKo",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> My usual recommendation for \"fixing\" this is to <...>\r\n\r\nNote that there's nothing to \"fix\" really. @goerz opinion about Julia package versioning is just one of many.\r\nIt's totally fine to register version 1 from the start, depending on the personal preferences.\r\n\r\nThere's been a lot of discussions earlier, and the only definite outcome is that people's preferences differ. See eg [1](https://github.com/JuliaRegistries/General/issues/111019) and [2](https://discourse.julialang.org/t/encouraging-1-x-versions-for-registered-packages/97171).\r\n\r\n[noblock]",
+      "createdAt": "2025-08-09T13:34:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3170722472",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q868_ds-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm quoting the SemVer spec. It's not ambiguous. A version v1.0 \r\nMUST specify an API. Of course, people can choose not to follow SemVer. And, you can have whatever opinions you want to have, pre-1.0, or about `Pkg` \"breaking versions\", all of that. But a v1.0.0 release that does not have an API documentation violates SemVer. That's not an opinion. [noblock]",
+      "createdAt": "2025-08-09T13:49:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3170753342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q868_xcC",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "These arguments were rehashed billions of times in previous discussions, and the only definite outcome is people's opinions differ. Yours is perfectly valid as well (but not the only one).\r\n\r\nJulia packages follow semver _with the exception of 0.x versions treatment_.\r\n\r\n> Julia uses [Semantic Versioning](https://semver.org/) (SemVer) <...>\r\n> Note that Pkg.jl deviates from the SemVer specification when it comes to versions pre-1.0.0.\r\n\r\n---\r\n\r\nThe takeaway for the users who register packages is that any initial version is fine. There are perfectly valid reasons to register at 0.1 or 0.2 or 1.0 or whatever other version number, and package stability in the Julia ecosystem is not tied to version number in any way – neither in practice, nor by design.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-09T13:58:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3170834178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869An3K",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> These arguments were rehashed billions of times in previous discussions, and the only definite outcome is people's opinions differ. \r\n\r\nYou are misrepresenting the consensus, or rather, what the debate is about. There are differences in opinion about pre-1.0 versions. You have the opinion that `v0.x.0` and `v1.0.0` are treated as equivalent. Since SemVer says \"pre-1.0, anything goes\", that's fine. I agree that `Pkg` treats `v0.x.0` as \"breaking\" and that the General registry requires tracking breaking changes even pre-1.0.  I think that potentially diminishes the role of the pre-stable development cycle, but so be it.\r\n\r\nThe point is: your opinion is _stricter_ than mine: You consider `v0.x.0` versions bound by a SemVer contract, so those versions should also specify a public API (and _your own_ packages do!). That's fine (except that I think you should just bump to v1.0). What is _not_ fine is a v1.0.0 version not having an API documentation. That is, unless someone tells me explicitly \"I don't care about SemVer\".\r\n\r\n> The takeaway for the users who register packages is that any initial version is fine. There are perfectly valid reasons to register at 0.1 or 0.2 or 1.0 or whatever other version number, and package stability in the Julia ecosystem is not tied to version number in any way – neither in practice, nor by design.\r\n\r\nThat is not under dispute. Of course it's fine to register any version. What I ask is that packages that register with v1.0.0 have an API documentation, as is _required_ by SemVer. If I were to follow your logic (which is definitely shared by a non-negligible number of people), then I should be blocking _all_ registrations that do not provide an API documentation, not just `>=v1.0` versions. I'm giving people a little more leeway when they register with an initial version `<1.0`, because I subscribe to the idea that pre-1.0, the public API of a package does not need to be fully specified; Yes, that violates `Pkg` behavior and the General-registry auto-merge rules, but it's pretty explicitly the spirit of SemVer. But, that's the only part where opinions in the community differ.\r\n\r\nNone of these differences in opinion should sanction Julia packages that have insufficient documentation. At a minimum, pre-1.0 packages must have enough documentation to be useable (and _may_ give full API documentation), and 1.0 packages must have an API documentation, i.e., something that allows to track breaking vs non-breaking changes. I would hope that we agree on that.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-09T14:21:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171057098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869BR6M",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> You are misrepresenting the consensus, or rather, what the debate is about.\r\n\r\n> The point is: your opinion is stricter than mine\r\n\r\nSorry, I'm unable to continue this discussion when you twist my opinion and arguments this way.\r\n\r\nNo, my interpretation of Julia package versioning is not stricter than yours.\r\nNo, I don't see how it's a requirement for packages in General to have full API documentation, no matter what the version is.\r\nIf you feel that should be the rule, feel free to advocate for changing General rules. Currently, they are much more relaxed than your reading of them:\r\n\r\n> If your package is at a stage where it might be useful to others, or provide functionality other packages in General might want to rely on, go for it!\r\n\r\n[noblock]",
+      "createdAt": "2025-08-09T14:40:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171229324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869D5bf",
+      "author": {
+        "login": "Gesee-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand\r\nThe package does the job.\r\nI registered the v1 because the main API is done, there won't real changes\r\non it\r\nAnyways I understand @goerz points\r\nHe just want me to clearly specify a contract API with the users and I\r\nguess I will do that with the next version.\r\nI would happily use documenter.jl just that internet is not free in my\r\ncountry, and not cheap and not even stable\r\nSo all these packages installation process is a real pain.\r\nBut I will try adding the API documentation\r\n\r\nOn Sat, 9 Aug 2025, 15:40 Alexander Plavin, ***@***.***>\r\nwrote:\r\n\r\n> *aplavin* left a comment (JuliaRegistries/General#136262)\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171229324>\r\n>\r\n> You are misrepresenting the consensus, or rather, what the debate is about.\r\n>\r\n> The point is: your opinion is stricter than mine\r\n>\r\n> Sorry, I'm unable to continue this discussion when you twist my opinion\r\n> and arguments this way.\r\n>\r\n> No, my interpretation of Julia package versioning is not stricter than\r\n> yours.\r\n> No, I don't see how it's a requirement for packages in General to have\r\n> full API documentation, no matter what the version is.\r\n> If you feel that should be the rule, feel free to advocate for changing\r\n> General rules. Currently, they are much more relaxed than your reading of\r\n> them:\r\n>\r\n> If your package is at a stage where it might be useful to others, or\r\n> provide functionality other packages in General might want to rely on, go\r\n> for it!\r\n>\r\n> [noblock]\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171229324>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BONNE2ZIIQ6UP2L5JIAND7T3MYB7HAVCNFSM6AAAAACDONUSUWVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTCNZRGIZDSMZSGQ>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-08-09T16:49:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171915487",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869D5iE",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> you twist my opinion and arguments this way.\r\n\r\nSorry for the misunderstanding… I thought I was giving you the benefit of the doubt, under the assumption that you were on board with Julia packages generally following SemVer, and we merely disagreed about some of the more debatable aspects of what SemVer entails for versions <1.0. But it seems what you are saying instead (correct me if I'm still misunderstanding) is that the SemVer requirements should have no relevance for Julia packages. Which is technically true, but…\r\n\r\n> If you feel that should be the rule, feel free to advocate for changing General rules. Currently, they are much more relaxed than your reading of them\r\n\r\nWe are deliberately vague in the rules, as there are almost no completely hard rules apart from the license requirements. But that's not particularly helpful, since there are definitely cultural norms with wide consensus in the community and the registry maintainers in particular. These include package naming, as well as a general recommendation towards semantic versioning, and good documentation. If anything, the consensus is moving towards stricter quality control for newly registered packages.\r\n\r\n> I don't see how it's a requirement for packages in General to have full API documentation, no matter what the version is\r\n\r\nThere is no hard requirement that registered packages use SemVer. It’s encouraged, and my comments in registration PRs are part of that encouragement. But it’s not a requirement. E.g., CalVer should be totally fine; so is \"I understand the requirements of SemVer, but I disagree with them and refuse to follow them\". You will note that I generally preface my comments with \"If you are following semantic versioning\". So all this is is a nudge towards better documentation.\r\n\r\nThere is complete consensus among registry maintainers that the “it might be useful to others” guideline implies _some_ amount of documentation. No documentation at all is a no-go. Beyond that, _API documentation_ is a hard requirement of SemVer, but not a requirement for registration. Although there is now also a hard requirement for release notes in “breaking” versions, which doesn’t really make sense without API docs.\r\n\r\nIf I'm still misunderstanding you and you're saying that API documentation is not a requirement of SemVer, then, sorry, you're wrong. \"Software using Semantic Versioning MUST declare a public API\" is not an ambiguous part of the specification. We might be able to argue about what exactly constitutes a \"declaration of a public API\". It clearly doesn't have to be a `@autodocs` block in a Documenter-based documentation in all circumstances, but that's a detail I'm perfectly willing to have a discussion about for a specific package. But it's more than appropriate to raise the question of API docs for any package with a version number >= 1.0, during initial registration, or afterwards.\r\n\r\n> Note that there's nothing to \"fix\" really.\r\n\r\nMy (non-blocking!) comment was a nudge towards better documentation. There is definitely something to \"fix\": _If_ @Gesee-y wants to follow the Semantic Versioning specification, then they MUST extend the documentation to specify the API. Whether they want to do that, or what form exactly such an API documentation should have, is up to them.\r\n\r\n@aplavin Isn't it a _good_ thing to have API documentation? I don't know why you would go out of your way to contradict a nudge towards better documentation.",
+      "createdAt": "2025-08-09T16:50:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171915908",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869EfDC",
+      "author": {
+        "login": "Gesee-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok\r\nI will start making that API documentation\r\nI will manually write the webpage because I love when things are\r\nsenselessly hard\r\nGotta challenge myself\r\n\r\nOn Sat, 9 Aug 2025, 17:50 Michael Goerz, ***@***.***> wrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#136262)\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171915908>\r\n>\r\n> [noblock]\r\n>\r\n> you twist my opinion and arguments this way.\r\n>\r\n> Sorry for the misunderstanding… I thought I was giving you the benefit of\r\n> the doubt, under the assumption that you were on board with Julia packages\r\n> generally following SemVer, and we merely disagreed about some of the more\r\n> debatable aspects of what SemVer entails for versions <1.0. But it seems\r\n> what you are saying instead (correct me if I'm still misunderstanding) is\r\n> that the SemVer requirements should have no relevance for Julia packages.\r\n> Which is technically true, but…\r\n>\r\n> If you feel that should be the rule, feel free to advocate for changing\r\n> General rules. Currently, they are much more relaxed than your reading of\r\n> them\r\n>\r\n> We are deliberately vague in the rules, as there are almost no completely\r\n> hard rules apart from the license requirements. But that's not particularly\r\n> helpful, since there are definitely cultural norms with wide consensus in\r\n> the community and the registry maintainers in particular. These include\r\n> package naming, as well as a general recommendation towards semantic\r\n> versioning, and good documentation. If anything, the consensus is moving\r\n> towards stricter quality control for newly registered packages.\r\n>\r\n> I don't see how it's a requirement for packages in General to have full\r\n> API documentation, no matter what the version is\r\n>\r\n> There is no hard requirement that registered packages use SemVer. It’s\r\n> encouraged, and my comments in registration PRs are part of that\r\n> encouragement. But it’s not a requirement. E.g., CalVer should be totally\r\n> fine; so is \"I understand the requirements of SemVer, but I disagree with\r\n> them and refuse to follow them\". You will note that I generally preface my\r\n> comments with \"If you are following semantic versioning\". So all this is is\r\n> a nudge towards better documentation.\r\n>\r\n> There is complete consensus among registry maintainers that the “it might\r\n> be useful to others” guideline implies *some* amount of documentation. No\r\n> documentation at all is a no-go. Beyond that, *API documentation* is a\r\n> hard requirement of SemVer, but not a requirement for registration.\r\n> Although there is now also a hard requirement for release notes in\r\n> “breaking” versions, which doesn’t really make sense without API docs.\r\n>\r\n> If I'm still misunderstanding you and you're saying that API documentation\r\n> is not a requirement of SemVer, then, sorry, you're wrong. \"Software using\r\n> Semantic Versioning MUST declare a public API\" is not an ambiguous part of\r\n> the specification. We might be able to argue about what exactly constitutes\r\n> a \"declaration of a public API\". It clearly doesn't have to be a @autodocs\r\n> block in a Documenter-based documentation in all circumstances, but that's\r\n> a detail I'm perfectly willing to have a discussion about for a specific\r\n> package. But it's more than appropriate to raise the question of API docs\r\n> for any package with a version number >= 1.0, during initial registration,\r\n> or afterwards.\r\n>\r\n> Note that there's nothing to \"fix\" really.\r\n>\r\n> My (non-blocking!) comment was a nudge towards better documentation. There\r\n> is definitely something to \"fix\": *If* @Gesee-y\r\n> <https://github.com/Gesee-y> wants to follow the Semantic Versioning\r\n> specification, then they MUST extend the documentation to specify the API.\r\n> Whether they want to do that, or what form exactly such an API\r\n> documentation should have, is up to them.\r\n>\r\n> @aplavin <https://github.com/aplavin> Isn't it a *good* thing to have API\r\n> documentation? I don't know why you would go out of your way to contradict\r\n> a nudge towards better documentation.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3171915908>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BONNE2ZYHK7LTGGLKZFTPH33MYRFJAVCNFSM6AAAAACDONUSUWVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTCNZRHEYTKOJQHA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-08-09T20:08:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3172069570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869EjtX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would still recommend including the docstrings from package in some automated way. Otherwise, it's extremely hard to keep the code and the documentation in sync",
+      "createdAt": "2025-08-09T20:47:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3172088663",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q869EpQy",
+      "author": {
+        "login": "Gesee-y"
+      },
+      "authorAssociation": "NONE",
+      "body": "True\r\nI already encountered that\r\nBut for this time I just want to experiment\r\n\r\nOn Sat, 9 Aug 2025, 21:47 Michael Goerz, ***@***.***> wrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#136262)\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3172088663>\r\n>\r\n> I would still recommend including the docstrings from package in some\r\n> automated way. Otherwise, it's extremely hard to keep the code and the\r\n> documentation in sync\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3172088663>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BONNE22DR7OPVD4DXWXRHHD3MZM77AVCNFSM6AAAAACDONUSUWVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTCNZSGA4DQNRWGM>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-08-09T21:34:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3172111410",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87C73xx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-09-09T12:24:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3270474865",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Emjkq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-09-16T12:24:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136262#issuecomment-3298441514",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ReAnimation\n- Repository: https://github.com/Gesee-y/ReAnimation.jl\n- Created by: @Gesee-y\n- Version: v1.1.0\n- Commit: d4ee35e97240985493e740868ef7253f0c196f1c\n- Git reference: HEAD\n- Description: Complete animation system.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n[Changelog]\nfully tested and production ready\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "ReAnimation",
+  "closed_at": "2025-09-16T12:24:13Z",
+  "title": "New package: ReAnimation v1.1.0"
+}

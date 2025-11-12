@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-11-20T12:03:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 119806,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86UUkQ5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- There is no compat entry for `julia`.\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 1 existing package.\n  1. Similar to PRISMA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-20T12:09:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119806#issuecomment-2488419385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UUz07",
+      "author": {
+        "login": "ricboer0"
+      },
+      "authorAssociation": "NONE",
+      "body": "Close this request, I have changed package name etc. to comply with automerge requirements and resubmitted.",
+      "createdAt": "2024-11-20T12:40:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119806#issuecomment-2488483131",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UU8zd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would recommend the name `PrismAId`. That’s appropriate and passes the guidelines (I can override the name similarity, which is bogus)",
+      "createdAt": "2024-11-20T12:58:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119806#issuecomment-2488519901",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UU-jJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/119811",
+      "createdAt": "2024-11-20T13:01:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119806#issuecomment-2488527049",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PRISMAID\n- Repository: https://github.com/open-and-sustainable/prismaid\n- Created by: @ricboer0\n- Version: v0.6.3\n- Commit: b3af9ae48b321393ad32f82f885ae924870c65ce\n- Reviewed by: @ricboer0\n- Reference: https://github.com/open-and-sustainable/prismaid/issues/85#issuecomment-2488406236\n- Description: Open Science AI Tools for Systematic, Protocol-Based Literature Reviews\n<!-- daf33ad5e6d085e55119bc06703763ce6abb83c5461dfc031479bf3ef38740ff05529f143b10eb697df6843b9b3c7361e74eaa97ed643f7e3502daf2bb377b1afb522e4727cc0afcbd97721311560ed7e521cd519a729c319d5d492d86ec00a9d7cdbd83ccd9acf40435ddafe1afae0d092249320195dcc760aea906b421d79bdc2a889327892114ee12fdd4e0391d6772475ec8b370e0424bd4de16246f0279d6d5effa74a729459af85c793fba3b5698ace545234bc2da1a959cb56563edb7 -->",
+  "package_name": "PRISMAID",
+  "closed_at": "2024-11-20T13:01:35Z",
+  "title": "New package: PRISMAID v0.6.3"
+}

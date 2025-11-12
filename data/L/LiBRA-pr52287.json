@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-01-13T08:40:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 52287,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q848UKvZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DifferentialEquations\n- I was not able to load the package (i.e. `import LiBRA` failed). See the CI logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to LiBr. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to COBRA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-13T08:46:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52287#issuecomment-1011919833",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848UxWD",
+      "author": {
+        "login": "BradyPlanden"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Hi Maintainers!\r\n\r\nJust to comment on the naming convention, LiBr is the closest but hasn't been maintained in >2 years. I'm hopefully LiBRA is distinct enough to move forward.",
+      "createdAt": "2022-01-13T12:08:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52287#issuecomment-1012077955",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848h8ww",
+      "author": {
+        "login": "BradyPlanden"
+      },
+      "authorAssociation": "NONE",
+      "body": "I believe this PR should be closed now that I have updated the package name to fit the auto-merge guidelines.",
+      "createdAt": "2022-01-18T15:36:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52287#issuecomment-1015532592",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LiBRA\n- Repository: https://github.com/BradyPlanden/LiiBRA.jl\n- Created by: @BradyPlanden\n- Version: v0.1.0\n- Commit: 45ecbdde076a3bc92e0e2a684d8ee92f8417fa2d\n- Reviewed by: @BradyPlanden\n- Reference: https://github.com/BradyPlanden/LiiBRA.jl/issues/12\n- Description: Create reduced-order state-space models for lithium-ion batteries utilising realisation algorithms.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a98c389370cccaf52142a56d01f6b2302a368714762eb75121073550cda1362d263b3436b01fd8d17d3f0a7fd4347e7ef973177cc8fe5f3adf03f1bbc035a440d09535c891b2c2dc532ef12212a07b5692e19d634691ada89c1e1cfd87ea09e3812dd2546fbdc066caea46cf3040b084a07913a56adcec3335765eac67c5c71b -->",
+  "package_name": "LiBRA",
+  "closed_at": "2022-01-18T17:14:05Z",
+  "title": "New package: LiBRA v0.1.0"
+}

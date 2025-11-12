@@ -1,0 +1,166 @@
+{
+  "created_at": "2019-08-29T10:08:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 3047,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjYwNzkyOA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Needs a `[compat]` section in `Project.toml` with at least an entry for `julia` itself, e.g.:\r\n```toml\r\n[compat]\r\njulia = \"1\"\r\n```\r\nwould mean that the package is compatible with Julia versions `[1.0.0, 2.0.0)`.",
+      "createdAt": "2019-08-30T13:47:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526607928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjYxNjUzMA==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "@StefanKarpinski Sorry, I always forget about this. Could it be automatically added when the `Project.toml` is created, set to the current major Julia version? \r\n\r\nWhat do I do now?",
+      "createdAt": "2019-08-30T14:11:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526616530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjYyNzI5NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> What do I do now?\r\n\r\nMake the requested changes, and retrigger the bot.",
+      "createdAt": "2019-08-30T14:40:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526627294",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjg1ODQ4OA==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks, done!",
+      "createdAt": "2019-08-31T19:17:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526858488",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjg1ODUzMg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You don't have to change the version number, just keep the same and this PR will be updated.",
+      "createdAt": "2019-08-31T19:17:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526858532",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjg1ODk3MA==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "I didn't change the version number on purpose - meanwhile, the package has reached v0.2.1 naturally. Can we scrap this and register 0.2.1 instead?",
+      "createdAt": "2019-08-31T19:24:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526858970",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjg1OTQ2Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I didn't change the version number on purpose - meanwhile, the package has reached v0.2.1 \r\n\r\nWhat do you mean? You never released 0.2.0?\r\n\r\n> Can we scrap this and register 0.2.1 instead?\r\n\r\nSure I guess...",
+      "createdAt": "2019-08-31T19:32:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526859467",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjg2MTg2NQ==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "I pushed 0.2.0 to master and triggered the bot. A few days have passed. Meanwhile, I've done more work and pushed 0.2.1 on master. \r\n\r\nIt wouldn't be a big deal now, as this package is very new and most likely not used by anybody yet, but in a different scenario, there would be users on 0.2.1#master. So I couldn't just downgrade the codebase from master to 0.2.0. \r\n\r\nBut for now, If it helps, sure, I can edit the version number and downgrade the codebase from 0.2.1. to 0.2.0 and retrigger the bot. ",
+      "createdAt": "2019-08-31T20:09:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526861865",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjkxNjM4MQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay. I think a better workflow might be to increment the version when you are actually releasing. You can update this, or make it 0.2.1 and then we can merge.",
+      "createdAt": "2019-09-01T12:50:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526916381",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyNjk0NzE3OQ==",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks - let's kill this and I'll retrigger the bot in 0.2.1",
+      "createdAt": "2019-09-01T19:39:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3047#issuecomment-526947179",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GenieAuthentication\n- Repository: https://github.com/GenieFramework/GenieAuthentication.jl\n- Created by: @essenciary\n- Version: v0.2.0\n- Commit: 6070e41bf3d4144ef92aed7bf15a1a464f6c6120\n- Reviewed by: @essenciary\n- Reference: https://github.com/GenieFramework/GenieAuthentication.jl/commit/6070e41bf3d4144ef92aed7bf15a1a464f6c6120#commitcomment-34879234\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae459000849dedbcebcb252990900c472287168aad13594f071c9cf5c3ccdf3ee2dabfe057ce9ed1a35b217a8f94b9d241303f895e16f3639dba88a4b2ca964e32859f88417403ddfa6b1e2c82a75134fe7159a703e2f6df0a16d4767570f774857c824f5be6facb4ceae4d5c07bdb727950c06a2e7056e3b65f9b361ed2d4217b96bbc9dc1a69a291b26e03a22392a32986b9e063b949576787c0b193527007683af1ce76baad42438142d9e95f3efd7aa292c8bc45724bde38842cd59d6c2ab89 -->",
+  "package_name": "GenieAuthentication",
+  "closed_at": "2019-09-01T19:40:27Z",
+  "title": "New package: GenieAuthentication v0.2.0"
+}

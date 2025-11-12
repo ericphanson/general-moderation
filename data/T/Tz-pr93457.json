@@ -1,0 +1,318 @@
+{
+  "created_at": "2023-10-16T00:14:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 93457,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pHanv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter\n- Package name similar to 9 existing packages.\n  1. Similar to Tk. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.36 is at or below cutoff of 2.50.\n  2. Similar to Tar. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Z3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Tau. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Try. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to H3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to GR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-16T00:20:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763551727",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHb1r",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package is **not ready** for registration: \r\n\r\n> \"Empty\" packages that do not yet have functionality are not ready to be registered.\r\n\r\nAlso, the new name \"Tz.jl\" is arguably worse than the previous one, \"Carbon.jl\". ",
+      "createdAt": "2023-10-16T00:30:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 8
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763556715",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHuFF",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "If an individual doesn't like \"Tz.jl\" it doesn't mean that is worse.",
+      "createdAt": "2023-10-16T02:31:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763631429",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHyLX",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[\"Arguably\"](https://www.merriam-webster.com/dictionary/arguably): as may be [argued](https://www.merriam-webster.com/dictionary/argued) or shown by [argument](https://www.merriam-webster.com/dictionary/argument)\r\n\r\nWhat does \"Tz\" stand for? How is it clearer or more meaningful than \"Carbon\"? I would argue that \"Tz\" is worse because it is 2 letters only but just as obscure as \"Carbon\". \r\n\r\nWhat is the package's intended purpose? You are trying to register an empty package with an obscure name. I am just pointing it out. ",
+      "createdAt": "2023-10-16T02:55:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763648215",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pH21-",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package exports three functions, getting the version info, prepending \"greet\" to a string and getting the current timestamp.\r\n\r\nSeems like the main purpose is to simplify `Dates.format(Dates.now(), \"Y-m-d HH:MM:SS\")`.",
+      "createdAt": "2023-10-16T03:25:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763667326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pH_lq",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> This package exports three functions, getting the version info, prepending \"greet\" to a string and getting the current timestamp.\r\n\r\nI know, I had already listed erverything [here](https://github.com/JuliaRegistries/General/issues/93438#issuecomment-1763640100_). All of which are not useful at best and potentially harmful:\r\n\r\n```julia\r\nWARNING: using Dates.now in module Main conflicts with an existing identifier.\r\n```\r\n\r\n> Seems like the main purpose is to simplify `Dates.format(Dates.now(), \"Y-m-d HH:MM:SS\")`.\r\n\r\nExactly. This package is virtually one line away from being \"empty\", with \"empty\" in quotes as per the Pkg [FAQ](https://github.com/JuliaRegistries/General#faq):\r\n\r\n> \"Empty\" packages that do not yet have functionality are not ready to be registered.\r\n\r\nSurely that's not enough. Registering this package would only clutter the registry at this stage.",
+      "createdAt": "2023-10-16T04:23:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763703146",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pIBmR",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "> empty\r\n\r\n\r\n\r\n> > This package exports three functions, getting the version info, prepending \"greet\" to a string and getting the current timestamp.\r\n> \r\n> I know, I had already listed erverything [here](https://github.com/JuliaRegistries/General/issues/93438#issuecomment-1763640100_). All of which are not useful at best and potentially harmful:\r\n> \r\n> ```julia\r\n> WARNING: using Dates.now in module Main conflicts with an existing identifier.\r\n> ```\r\n> \r\n> > Seems like the main purpose is to simplify `Dates.format(Dates.now(), \"Y-m-d HH:MM:SS\")`.\r\n> \r\n> Exactly. This package is virtually one line away from being \"empty\", with \"empty\" in quotes as per the Pkg [FAQ](https://github.com/JuliaRegistries/General#faq):\r\n> \r\n> > \"Empty\" packages that do not yet have functionality are not ready to be registered.\r\n> \r\n> Surely that's not enough. Registering this package would only clutter the registry at this stage.\r\n\r\n\r\nThanks for the information. I found this peace of information might help other to understand as well.\r\n\r\n\r\n![image](https://github.com/JuliaRegistries/General/assets/12006483/3af22c0f-488b-4d16-aea9-2810d376a06f)\r\n",
+      "createdAt": "2023-10-16T04:35:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763711377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pIY80",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Indeed @vrkansagara this is no official review / endorsement process, just random people giving their opinions voluntarily. However there is a reason why any member of the community can weigh in on package registrations. The namespace is limited, and registering tons of near-empty packages with limited scope makes it harder for users to recognize the really useful and central ones. For instance it's a good thing Optimization.jl wasn't already taken when the big SciML wrapper emerged, otherwise it would be named something like OptimizationSolverUnifiedInterface.jl.\n\nIn its current state, your package mostly seems useful to yourself.\nYou're more than welcome to expand its functionalities, clearly justify its existence and pick a longer, more explicit name. Then your registration might succeed without being blocked by the bot and community members.",
+      "createdAt": "2023-10-16T06:24:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1763807028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pJ_PW",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "https://github.com/vrkansagara/Tz.jl/blob/49b437f4d8556ad93e2f3e61758713c8d15f1988/src/functions.jl#L3-L9\r\n\r\nplease do not submit personal toy packages to general registry. Note, others can work with your package even without the general registry, you can use `]add <github URL>` or `]dev <github URL>` from Julia REPL",
+      "createdAt": "2023-10-16T11:00:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1764226006",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pKc_t",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Thanks for the information. I found this peace of information might help other to understand as well.\r\n\r\nTo understand what other people are complaining about, you may additionally want to read, on the same page, the last part of the section [\"Should I register my package now?\"](https://github.com/JuliaRegistries/General#should-i-register-my-package-now):\r\n\r\n> Some types of packages should not be registered, or are not yet ready for registration:\r\n> \r\n> * The General registry is not a place for \"personal packages\" that consist of collections of \"utility functions\" nor for packages that are only useful for a closed group (like a research group or a company). For that, it is easy to set up your own registry using for example [LocalRegistry.jl](https://github.com/GunnarFarneback/LocalRegistry.jl). The [Pkg documentation about registries](https://pkgdocs.julialang.org/v1/registries/) might be useful if you decide to go this route.\r\n > * \"Empty\" packages that do not yet have functionality are not ready to be registered.",
+      "createdAt": "2023-10-16T12:15:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 6
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1764347885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pQ1mx",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I thought this package had to do with timezones, then I checked the very small amount of code.\r\n\r\nI think we might want to reserve good short names like Tz.jl to packages many would like to use.  It takes 3 days to register precisely because people might object/comment/block; to at least names.",
+      "createdAt": "2023-10-17T09:23:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1766021553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pQ6qn",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I thought this package had to do with timezones, then I checked the very small amount of code.\n\nFYI there is [TimeZones.jl](https://github.com/JuliaTime/TimeZones.jl) in case you didn't know.",
+      "createdAt": "2023-10-17T09:35:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1766042279",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pZQlk",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator  Give up this PR and close it",
+      "createdAt": "2023-10-18T11:13:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1768229220",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pfC2a",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It will be closed automatically after 30 days of inactivity ",
+      "createdAt": "2023-10-19T01:27:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1769745818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sVMSu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-11-18T12:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1817494702",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85s2xCM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-25T12:23:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93457#issuecomment-1826295948",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Tz\n- Repository: https://github.com/vrkansagara/Tz.jl\n- Created by: @vrkansagara\n- Version: v1.0.0\n- Commit: 49b437f4d8556ad93e2f3e61758713c8d15f1988\n- Git reference: master\n- Description: A simple Julia API extension for DateTime.",
+  "package_name": "Tz",
+  "closed_at": "2023-11-25T12:23:00Z",
+  "title": "New package: Tz v1.0.0"
+}

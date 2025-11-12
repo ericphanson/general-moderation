@@ -1,0 +1,232 @@
+{
+  "created_at": "2021-03-29T21:28:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 33139,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwOTcyODY2NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-29T21:31:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-809728665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDA0ODAxNg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Some overlap with #33050? CC @charleskawczynski\r\n\r\n[noblock]",
+      "createdAt": "2021-03-30T09:00:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810048016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDQ2ODgwNQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd be happy to try to merge these two packages, but I do have a few downstream packages ([HoldemHandEvaluator.jl](https://github.com/charleskawczynski/HoldemHandEvaluator.jl) and [NoLimitHoldem.jl](https://github.com/charleskawczynski/NoLimitHoldem.jl)) which depend on `HoldemCards.jl`. The problem with merging that I see is that the evaluator package currently leverages the suit types, and using Symbols may require work-arounds that I'd prefer to avoid (e.g., using defining methods with `::Val{:Hearts}`). There's also [Cards.jl](https://github.com/StefanKarpinski/Cards.jl) (unregistered), but that also doesn't use types for suits.\r\n\r\nI'm not in a hurry to register `HoldemCards.jl`, so I'd be fine taking some time to discuss further.\r\n\r\n[noblock]",
+      "createdAt": "2021-03-30T18:08:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810468805",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDQ5NjQ5Mg==",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi Charles,\r\n\r\nI'm registering `PlayingCards` because I'm also working on another package that relies them. To get Travis to run tests, the dependents have to be registered. Maybe there's a work around, but I don't know.\r\n\r\nLet's think about this. I'm not sure it's a bad thing to have more than one package with more-or-less the same functionality. I suspect your package has better coding (because I'm an amateur!) but the name `HoldemCards`??? What if I want to play Hearts :-)? \r\n\r\nThe `Cards` package looks like it's not been maintained ... and I didn't know about it. Any sense?\r\n\r\nThanks,\r\nEd\r\n\r\n[noblock]\r\n\r\n",
+      "createdAt": "2021-03-30T18:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810496492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDUzNzU1MA==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @scheinerman,\r\n\r\n> To get Travis to run tests, the dependents have to be registered.\r\n\r\nI don't think the package needs to be registered to run CI (e.g., Travis).\r\n\r\n> The Cards package looks like it's not been maintained ... and I didn't know about it. Any sense?\r\n\r\nYeah, it seems like the last commit was quite a while ago.\r\n\r\n> but the name HoldemCards??? What if I want to play Hearts :-)?\r\n\r\nHaha yeah, I'm not married to the name-- I just wanted to distinguish from `Cards.jl` since I don't need Jokers (and I need types for suits). But I don't think it would be a problem to include Jokers to make the package more general and add different deck constructors for different games (`deck(Holdem()), deck(Hearts())` etc.).\r\n\r\nI do like the name `PlayingCards.jl`. I'd be happy to change the name of HoldemCards.jl to PlayingCards.jl and adding some functionality for supporting other card games if you'd be interested in switching over. There are a few things in PlayingCards.jl which I think might need to be moved to a separate package (specifically related to ordering / evaluation) and some things that can be improved (e.g., avoiding globals), but it looks like there's a decent amount of shared code/logic between the two. Can you share which package(s) depend on PlayingCards.jl? I see [FreeCell.jl](https://github.com/scheinerman/FreeCell.jl) 🙂, any others? It'd be helpful to know how much work would be involved.\r\n\r\n> I'm not sure it's a bad thing to have more than one package with more-or-less the same functionality.\r\n\r\nI'm fine either way. This is really just a hobby project for me, so I don't mind a little extra work if it helps the community :)\r\n\r\n[noblock]\r\n",
+      "createdAt": "2021-03-30T19:57:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810537550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0MDkyMg==",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Is there a way for me to \"give\" `PlayingCards.jl` to you? I'd be OK with that if you want to put your functionality into the more natural name. I can stop this registration I suppose. This would allow you to rename your package. I may then ask for some features :-).\r\n\r\n[noblock]",
+      "createdAt": "2021-03-30T20:03:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810540922",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0MTgyNQ==",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "By the way: Adding jokers seems tricky. I'm ok if you don't. \r\n\r\n[noblock]",
+      "createdAt": "2021-03-30T20:04:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810541825",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0Mjk2Nw==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I can stop this registration I suppose. his would allow you to rename your package.\r\n\r\nI think that's all that's needed.\r\n\r\n> I may then ask for some features :-)\r\n\r\nI'll keep an eye out!",
+      "createdAt": "2021-03-30T20:06:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810542967",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0MzYwNw==",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "How do I withdraw this?? Do you know?\r\n",
+      "createdAt": "2021-03-30T20:07:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810543607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0NDUzOA==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Oops, I may have in my last comment (without the `[noblock]`). @giordano Do you mind closing this PR and #33050? I'll rename HoldemCards.jl and we can re-register under the new name.",
+      "createdAt": "2021-03-30T20:09:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810544538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU0NzUxOQ==",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi Charles: OK. The name is yours! When you've got your working, I'll delete mine from my github. If you have a chance, can point me to your documentation? I have another project using cards and I'll need to fix my function calls as needed.",
+      "createdAt": "2021-03-30T20:14:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810547519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU1MTAyNg==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "My documentation is a bit sparse at the moment 😬, but we can add some 🙂. Also, the doc page is now broken (since I've just renamed it). But here is the repo: https://github.com/charleskawczynski/PlayingCards.jl",
+      "createdAt": "2021-03-30T20:20:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810551026",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMDU1MjM0NQ==",
+      "author": {
+        "login": "charleskawczynski"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'll try to get the infrastructure and things up and running again tonight (looks like the PR I just opened is working, maybe I'll take a pass at the docs tonight)-- my lunch break is just about to end soon.",
+      "createdAt": "2021-03-30T20:22:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33139#issuecomment-810552345",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PlayingCards\n- Repository: https://github.com/scheinerman/PlayingCards.jl\n- Created by: @scheinerman\n- Version: v0.1.0\n- Commit: 925cc89b127e3cadeaee83e7f255a292cfefd520\n- Git reference: master",
+  "package_name": "PlayingCards",
+  "closed_at": "2021-03-30T20:12:15Z",
+  "title": "New package: PlayingCards v0.1.0"
+}

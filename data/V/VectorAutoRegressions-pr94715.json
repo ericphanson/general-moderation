@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-11-03T19:43:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 94715,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85q3yXE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Distributions, LazilyInitializedFields, LinearAlgebra, Missings, OrderedCollections, RecipesBase, Reexport, ShiftedArrays, StatsAPI, StatsBase, StatsModels\n- I was not able to load the package (i.e. `import VectorAutoRegressions` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-03T19:47:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94715#issuecomment-1793009092",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85q5GTV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, please make sure to add some documentation before registering, at least some context and a usage example in the README",
+      "createdAt": "2023-11-04T05:52:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94715#issuecomment-1793352917",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tlbEZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-12-04T12:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94715#issuecomment-1838526745",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uRF6x",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-12-11T12:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94715#issuecomment-1849974449",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: VectorAutoRegressions\n- Repository: https://github.com/loganhotz/VectorAutoRegressions.jl\n- Created by: @loganhotz\n- Version: v0.1.0\n- Commit: afbd134f90b49f29d97f4ed75488d6b44fac2d4a\n- Reviewed by: @loganhotz\n- Reference: https://github.com/loganhotz/VectorAutoRegressions.jl/issues/1#issuecomment-1793004598\n- Description: Estimating reduced-form and structural VARs\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359898899bbb7b40e2ef64e5f56bd2936f3ca03d903da6b3c576d7fccdfe1dfae1bdc4797bd9bcf9c0a31fa1cf397a22a98dae607226fb21fbb48bded930a41fea37b82156264c324a1859d7412892cc51081f092fd2e46dc3c423d18e2af75549864b9291920f60cdcb4f750a38a7058ed4f7dd938b17ba6bc2bfcfbd148784314d4d07ddc68d335c2404391ce190774945 -->",
+  "package_name": "VectorAutoRegressions",
+  "closed_at": "2023-12-11T12:23:29Z",
+  "title": "New package: VectorAutoRegressions v0.1.0"
+}

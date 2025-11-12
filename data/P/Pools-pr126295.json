@@ -1,0 +1,89 @@
+{
+  "created_at": "2025-03-04T17:16:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 126295,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86g1kcH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 6 existing packages.\n  1. Similar to Roots. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.32 is at or below cutoff of 2.50.\n  2. Similar to Books. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Coils. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Plots. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Redis. Normalized visual distance 2.11 is at or below cutoff of 2.50.\n  6. Similar to Fable. Normalized visual distance 2.47 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-04T17:22:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126295#issuecomment-2698397447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86g12z8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `RedisPools`?\r\n\r\nCould you add a few sentences to your README to give a high-level overview of what the _purpose_ and scope of the package is?",
+      "createdAt": "2025-03-04T17:56:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126295#issuecomment-2698472700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86g2Jmc",
+      "author": {
+        "login": "AbrJA"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yep, sure @goerz, thank you for the suggestion. \r\n\r\nIt's done [42734a8](https://github.com/AbrJA/Pools.jl/commit/42734a8f7d2872c37a026e5a44aba8ae80496369). The purpose is to be very general and able to manage Pool of objects of any Type (Numbers, Structs, Connections, etc)\r\n",
+      "createdAt": "2025-03-04T18:31:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126295#issuecomment-2698549660",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86g4d_w",
+      "author": {
+        "login": "AbrJA"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can be closed in favor of #126310 ",
+      "createdAt": "2025-03-04T22:50:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126295#issuecomment-2699157488",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Pools\n- Repository: https://github.com/AbrJA/Pools.jl\n- Created by: @AbrJA\n- Version: v0.1.0\n- Commit: 1b6e0a70d01fcc60af6fb3f69aa78c6d0600fdda\n- Reviewed by: @AbrJA\n- Reference: https://github.com/AbrJA/Pools.jl/issues/1#issuecomment-2698383020\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f4e3d85e3ad58e3c53facc0c6872009281b201d7b107ae37dd6a5b796c5c4107a0562c61111e12b6e87ba627a3471cf661af1c6b1bc39ded645e727e0f6f3997bdb97e799301e9cc072905743eca63d8e70b6994b7bde5ee7f3b226ed86ba5dc48843cc065319b1a75c161698d84f692 -->",
+  "package_name": "Pools",
+  "closed_at": "2025-03-04T23:14:32Z",
+  "title": "New package: Pools v0.1.0"
+}

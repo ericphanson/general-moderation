@@ -1,0 +1,224 @@
+{
+  "created_at": "2024-08-02T17:55:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 112309,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86HDqQp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-02T17:58:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2265883689",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HDrKW",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, thank you for your persistence. Again, I think this would really belong in Distributions.jl.\r\nDo you need to register urgently? I know @devmotion (the maintainer of Distributions.jl) is very busy and may not answer right away.\r\n",
+      "createdAt": "2024-08-02T18:01:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2265887382",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HDta3",
+      "author": {
+        "login": "Santymax98"
+      },
+      "authorAssociation": "NONE",
+      "body": "Wow, I just wanted to change the name following your recommendation. I\r\nagree that it should be in Distributions.jl\r\n\r\nHowever, I realized that devotion is quite busy, I don't know how much he\r\nagrees with this work.\r\n\r\n\r\n\r\nEl El vie, 2 ago. 2024 a la(s) 13:01, Guillaume Dalle <\r\n***@***.***> escribió:\r\n\r\n> Hi, thank you for your persistence. Again, I think this would really\r\n> belong in Distributions.jl.\r\n> Do you need to register urgently? I know @devmotion\r\n> <https://github.com/devmotion> (the maintainer of Distributions.jl) is\r\n> very busy and may not answer right away.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2265887382>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/A7PTWNXV342JFJIQ5ZTM6GTZPPCP7AVCNFSM6AAAAABL466CL2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDENRVHA4DOMZYGI>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2024-08-02T18:07:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2265896631",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HGyfb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would definitely like for @devmotion to weigh in on this before we proceed.\r\n\r\nI'm not actually fundamentally opposed to `ExtraDistributions`. It can make sense to have the standard distributions in `Distributions.jl` and then have `ExtraDistributions` for more exotic ones. I would still put extra scrutiny on this package, though:\r\n\r\n* There should be a clear delineation of what standard distributions are and what more exotic ones are, and why. It seems `Distributions.jl` already contains *a lot* of distributions, this might not be an easy case to make. And of course, it depends on the maintainers of `Distributions` to decide whether they want *all* distributions or might want to outsource some of them.\r\n* There needs to be good documentation (similar to Distributions itself). Currently, the README is almost empty and the documentation badges produce a 404\r\n* Given the general name, it should be a well-maintained destination for anyone to contribute distributions to that are too exotic for the main Distributions. Is @Santymax98 in a position to serve as maintainer in the long term?\r\n* Relatedly, to ensure that the package cannot easily become abandoned: This should be hosted by the [JuliaStats organization](https://github.com/JuliaStats), not an individual user account.\r\n",
+      "createdAt": "2024-08-03T12:53:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2266703835",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HG3r5",
+      "author": {
+        "login": "Santymax98"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for taking the time to review the `ExtraDistributions.jl` package and for providing such thoughtful feedback. I appreciate the insights and suggestions provided.\r\n\r\n* I agree that there should be a clear delineation between standard and more exotic distributions. The goal of `ExtraDistributions.jl` is to house distributions that are either less commonly used or not yet included in `Distributions.jl` due to their specialized nature. I'll make sure this distinction is clearly documented in the package's README and other relevant documentation.\r\n\r\n* I recognize the importance of comprehensive documentation. I'll prioritize updating the README and ensuring that all documentation links are functional. In addition, I plan to include detailed usage examples and explanations to make it easier for users to adopt these distributions.\r\n\r\n* I understand the concerns about long-term maintenance. I am committed to ensuring the ongoing development and support of `ExtraDistributions.jl`, and I will actively seek contributions from the community to help sustain it. It's essential to me that this package does not become abandoned, as it fills a crucial gap for both academic and scientific fields where an interface containing these extra distributions is often required. Additionally, several Julia packages need these extra distributions, making it even more important to maintain this resource.\r\n\r\n* Regarding the suggestion to host this package under the `JuliaStats` organization, I am open to exploring this option. Hosting it under an established organization like `JuliaStats` could provide additional visibility and support, and I'd be happy to discuss this further with the community.\r\n\r\nThanks again for the feedback. I look forward to refining `ExtraDistributions.jl` further and welcome any additional input from the community as we move forward.\r\n\r\n",
+      "createdAt": "2024-08-03T14:14:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2266725113",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IJ82E",
+      "author": {
+        "login": "Santymax98"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello @goerz  and @gdalle, I hope you are feeling very well, I would like to know what happened to my package because 10 days passed and in the end there was no news. I tried to correct the things they requested.",
+      "createdAt": "2024-08-12T15:38:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2284309892",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IKSfd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I think we're just waiting for @devmotion.\r\n\r\nBut at some point I have to agree. If @devmotion isn't available to respond over a period of several weeks in a situation like this, at some point I would be open to just letting this registration go through…\r\n\r\nI understand maintainers having limited bandwidth, but it's a problem when a package like Distributions becomes unmaintained to an extent where registrations like this one become necessary. I'm not quite sure what to do about it.\r\n\r\nIdeally, big important packages would have multiple maintainers and maybe should be quicker at onboarding new contributors with commit access.\r\n\r\n",
+      "createdAt": "2024-08-12T16:18:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2284398557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IKv76",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I agree with @goerz. To make this registration completely undisputable, you could lengthen the name in order to make it sound less standard and minimize collisions. Like `AdditionalDistributions` or `LessCommonDistributions` maybe?",
+      "createdAt": "2024-08-12T17:06:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2284519162",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Iy0Bx",
+      "author": {
+        "login": "devmotion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I was away the last weeks and I'm still working through my backlog of issues and PRs. My impression is that Distributions is actively maintained but sometimes responses to eg PRs might not be immediate because everyone in JuliaStats is also involved somewhere else.\n\nSince obviously I don't own any rights on Distributions.jl (also only joined the party a bit later), I won't prevent anyone from publishing any packages that contain the name Distributions (I'm also not too familiar with the registration process and the naming guidelines since I think I've never had any issues).\n\nMy personal opinion is that a name such as ExtraDistributions is not very descriptive. I assume packages with additional distributions would be much easier to discover if they would focus on a specific subset of distributions that is clear from the name of the package.\n\nSo far, the general policy has been to contribute distributions of general interest to Distributions. Typically, in the review process we also try to ensure that the distributions follow the Distributions.jl conventions and implement the interface correctly, and are appropriately tested. Of course, going through the review process takes time and might require additional work for a contributor if changes are requested. Nevertheless, I think most downstream packages with custom distributions, extensions or workarounds (including eg Turing) usually try or at least plan to move these upstream to Distributions because this makes them easily available to a larger group of users.",
+      "createdAt": "2024-08-17T23:08:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2295021681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JPke6",
+      "author": {
+        "login": "Santymax98"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Hello, everything okay? With the comments of devmotion, what happens now or what decision was made?",
+      "createdAt": "2024-08-21T16:59:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2302560186",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86M-Zog",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-09-21T12:23:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2365168160",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N5W6J",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-09-28T12:23:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112309#issuecomment-2380623497",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ExtraDistributions\n- Repository: https://github.com/Santymax98/ExtraDistributions.jl\n- Created by: @Santymax98\n- Version: v0.1.0\n- Commit: 30c3de43f210271bcd6f34be607056501863bd55\n- Reviewed by: @Santymax98\n- Reference: https://github.com/Santymax98/ExtraDistributions.jl/issues/1#issuecomment-2265879074\n- Description: We added some Miscellaneous distributions to extend the repertoire of distributions in Julia implemented by Distributions.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598be03b02fff205618cf7638a1e7b92ac36b1da60148c31321e0ed6b15c5cf63758f52f3af76201540235ab891985fb77b08683066aca9260861711b0077bbdc41068476e7287c87fac40df7ae5e1102502b0d4a39e252a7f27f0fa50b473d2881981d8171e008b40dc97674bf1f733583c951f6e3dc7c5d0dfc7476f34c7335ec -->",
+  "package_name": "ExtraDistributions",
+  "closed_at": "2024-09-28T12:23:29Z",
+  "title": "New package: ExtraDistributions v0.1.0"
+}

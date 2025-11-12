@@ -1,0 +1,250 @@
+{
+  "created_at": "2021-03-20T11:28:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 32416,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMzI5NDc4Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to DotEnv. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-20T11:31:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-803294787",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMzI5NTc2OA==",
+      "author": {
+        "login": "Arkoniak"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is an updated fork of https://github.com/vmari/DotEnv.jl \r\n\r\nUnfortunately, DotEnv.jl maintenance is too slow: https://github.com/vmari/DotEnv.jl/issues/10, so I had to fork it. I am not sure, what are the rules on such close forks, it looked like it was ok to add a number on the end.\r\n\r\nI can rename it, but unfortunately, DotEnv is the best name for this kind of package.",
+      "createdAt": "2021-03-20T11:40:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-803295768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMzMxNzU1Mg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thats unfortunate. @vmari if you don’t have time/resources to maintain this package would you be willing to give @Arkoniak some elevated permissions to help you out ? Alrernatively if you would be willing to transfer the repo to a GitHub organisation where more people can help out with maintenance? I don't know which org would fit though. ",
+      "createdAt": "2021-03-20T13:17:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-803317552",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMzM3MDc1Mw==",
+      "author": {
+        "login": "Arkoniak"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can I recommend [JuliaWeb](https://github.com/JuliaWeb) organization? The most common use case I've encountered was related to the usage of some web services.",
+      "createdAt": "2021-03-20T15:00:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-803370753",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjU2NDk0Nw==",
+      "author": {
+        "login": "Arkoniak"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It's been almost a week (and more than 3 weeks from the initial PR to `DotEnv.jl`). `@vmari` is not responding either here or in direct mail. Can we proceed with registering this package? Or should I change the package name?",
+      "createdAt": "2021-03-25T11:11:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806564947",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjU3MTg1Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@vmari  was at least active when merging  https://github.com/vmari/DotEnv.jl/pull/9 so not completely MIA. I just think it is unfortunate to merge this package, and then if @vmari answers in a week it will be deprecated.\r\n\r\nAre you in a hurry to get this registered? It does not seem like a package you would have other packages depend on and thus can just add by URL for the time being?\r\n\r\nWe don't have a formal process for things like this yet, see https://github.com/JuliaRegistries/General/issues/25367 for example.",
+      "createdAt": "2021-03-25T11:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806571857",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjU3NzE4Ng==",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My personal feeling is that we need to wait a few months rather than a few weeks before deprecating or transferring packages with missing maintainers. I feel that a few weeks is too strict for open source, volunteer maintained packages. \r\n\r\nHowever, once again, this is open source, and we, of course, cannot, and should not prevent forking. But in the general case of forking, we should insist on much more differentiation in package names, to prevent confusion. My $0.02. ",
+      "createdAt": "2021-03-25T11:32:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 7
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806577186",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjc2Njg0Ng==",
+      "author": {
+        "login": "Arkoniak"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I cannot completely agree with this statement. We have packages like `JSON.jl`, `JSON2.jl` and `JSON3.jl` in Julia ecosystem, so it's not quite clear why `DotEnv2.jl` is not allowed. If the policy of forbidding number suffixes in package names is accepted, then all such packages should be renamed, otherwise it seems that package authors are divided in first- and second- class citizens, where first has more privileges than the others.\r\n\r\nAnyway, this current package is not worth the time, that was spent already. I have opened a new PR with another package name.\r\n\r\nSo\r\n\r\n1) Can we close this PR.\r\n2) Can somebody merge https://github.com/JuliaRegistries/General/pull/32797? I know, that it will be merged automatically after 3 days, but can I have at least this small favor?",
+      "createdAt": "2021-03-25T13:43:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806766846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjg1NTI1NQ==",
+      "author": {
+        "login": "vmari"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi guys. Sorry for missing this. I've been working nonstop and just now have time to take this. \r\nI'm open to add you @Arkoniak as mantainer if you agree. I'm on it.",
+      "createdAt": "2021-03-25T14:30:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806855255",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjkwMzg4Nw==",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Arkoniak JSON2 was developed by the explicit goal of replacing JSON2,  (I know, since I was the original author of JSON). JSON3 was done by the same person who did JSON3. But even then, in retrospect, we shouldnt have done that. Today, that would have been caught by our new automated checks. \r\n\r\nHowever, I'll say it again, forking is fine, and a fundamental right in open source. However, as our community grows, we have to be stricter, not more linient, when it comes to naming issues.",
+      "createdAt": "2021-03-25T14:59:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806903887",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjkxMDg2MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks like this has been resolved (https://github.com/JuliaRegistries/General/pull/32806, https://github.com/JuliaRegistries/General/pull/32811).",
+      "createdAt": "2021-03-25T15:03:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806910860",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwNjkzOTc0Mg==",
+      "author": {
+        "login": "Arkoniak"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sorry, at this point I have to decline the offer. I rewrote original package two times already, I am kind of attached to a new name and I already changed some of my applications to use it. I will open a new PR, please do not close it. I am ready to wait 3 days, just don't do anything.",
+      "createdAt": "2021-03-25T15:21:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32416#issuecomment-806939742",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DotEnv2\n- Repository: https://github.com/Arkoniak/DotEnv2.jl\n- Created by: @Arkoniak\n- Version: v0.1.0\n- Commit: 3d91c92016fbb1a0680203dac3d9b32cd0df9c01\n- Reviewed by: @Arkoniak\n- Reference: https://github.com/Arkoniak/DotEnv2.jl/commit/3d91c92016fbb1a0680203dac3d9b32cd0df9c01#commitcomment-48481253\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6959c3d41cd21573eea60e49a206abda6d23edbd7bdf86fe86f533982c2229f24c3717efdc809b34c8332b81bd993e691c2818ba408023491021468eab3c19ca4b3da9e8d8b4e24b4f92ee90bd485beb62c6b470a190bfacdb98f7ded5bb1060bea829baa0c0cdc53e4d27ecabe37cafeebc9421dd58929248f9e006bb825771ac013b5da3f0abd4a35f1194fc62ba41664b1d53696460797873e000784b7cbbbdd2db335e80a9d65015a72b151c31157 -->",
+  "package_name": "DotEnv2",
+  "closed_at": "2021-03-25T15:03:45Z",
+  "title": "New package: DotEnv2 v0.1.0"
+}

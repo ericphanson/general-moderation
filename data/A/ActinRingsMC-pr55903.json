@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-03-03T18:43:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 55903,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84_FYM0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-03T18:47:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55903#issuecomment-1058374452",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_GKDC",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@cumberworth  please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-03-03T22:36:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55903#issuecomment-1058578626",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_KmCq",
+      "author": {
+        "login": "cumberworth"
+      },
+      "authorAssociation": "NONE",
+      "body": "I already made a tag for v1.0.0 in order to create a DOI for publication, which now causes JuliaRegistrator to raise an error as it attempts to create the same tag. I have therefore incremented the patch version and rerun the registrator, which has created a new pull request for that version.",
+      "createdAt": "2022-03-05T10:52:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55903#issuecomment-1059741866",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84_Kma6",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As a general remark, you should **_not_** create git tags _manually_ (in particular not _**before**_ registration), and use instead [TagBot](https://github.com/JuliaRegistries/TagBot), which will _automatically_ create the tags for you _**after**_ successful registration, to avoid mismatches between the tags and what's actually registered, which is precisely what's happening now. Not that the package manager cares at all about git tags (it only knows about what's in the registry), but this kinds of mismatches can occasionally confuse people ",
+      "createdAt": "2022-03-05T11:04:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/55903#issuecomment-1059743418",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ActinRingsMC\n- Repository: https://github.com/cumberworth/ActinRingsMC.jl\n- Created by: @github-actions[bot]\n- Version: v1.0.0\n- Commit: 69e53a4907cdc064dc19baa5f11fc0eb265cceae\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/cumberworth/ActinRingsMC.jl/commit/69e53a4907cdc064dc19baa5f11fc0eb265cceae#commitcomment-67906556\n- Description: A Julia simulation package with functions for running adaptive umbrella sampling Monte Carlo simulations of crosslinked actin rings.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6074869e193584909ba8cf428b904f053d7602d82459dd3791ec3d3ae51521d164716a32d2d9640d594893e943670684b55bc501fd2d83b0cb87709cdad3a4f20f889f4867ca7e5b7bde394ef28450dcccfc2ac647d195866b68468f895678b37c5e3e18490f9ba6d49e5c92b7f583981cc510bdb9e59ab5004f1bac7c6554e239497dce9c9cf9782dd1cf15f385dd6bd8bd18679448f8a530178c7817ddd4f7d4babd12e438d83f7441a6392be45788d -->",
+  "package_name": "ActinRingsMC",
+  "closed_at": "2022-03-05T11:04:23Z",
+  "title": "New package: ActinRingsMC v1.0.0"
+}

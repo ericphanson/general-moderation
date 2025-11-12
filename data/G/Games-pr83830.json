@@ -1,0 +1,136 @@
+{
+  "created_at": "2023-05-18T11:13:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 83830,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85cj5Yt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 8 existing packages.\n  1. Similar to Demes. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.39 is at or below cutoff of 2.50.\n  2. Similar to Ramps. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.36 is at or below cutoff of 2.50.\n  3. Similar to Dates. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Gaius. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Mazes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Pages. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Vimes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to GAMS. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-18T11:23:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1552913965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ckA2a",
+      "author": {
+        "login": "davide-f"
+      },
+      "authorAssociation": "NONE",
+      "body": "I believe the similarity of the name is only artificial and due to the specific algorithm for comparing the names.\r\nThe proposed name is easily differentiable from those from a human perspective, therefore I think the name of the package does not require changes",
+      "createdAt": "2023-05-18T11:53:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1552944538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ck4_T",
+      "author": {
+        "login": "shayandavoodii"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name is misleading. Please consider changing it since the community is comprised of people with various fields of expertise and study, and naturally everyone doesn't know about the \"Game Theory\". This is unrealistic if you expect the community (with various individual backgrounds) to imply \"Game Theory\" from `Games.jl`.",
+      "createdAt": "2023-05-18T14:45:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1553174483",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cmOZK",
+      "author": {
+        "login": "davide-f"
+      },
+      "authorAssociation": "NONE",
+      "body": "@shayandavoodii many thanks and I understand and it is concistent to history: I googled, the original developers of GameTheory.jl proposed Games.jl as name but you suggested GameTheory instead (though they mostly do Nash-like using an interface to a library).\r\n\r\nAre there suggestions on names? Because I believe we both would like to avoid a ping-pong on PRs to find the name.\r\nI drop some options though I don't like them...\r\n\r\nSharingGames, StrategyGames?\r\n\r\nWhat do you think? Some better ideas?\r\n",
+      "createdAt": "2023-05-18T19:16:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1553524298",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cmpMq",
+      "author": {
+        "login": "shayandavoodii"
+      },
+      "authorAssociation": "NONE",
+      "body": "TheoryOfGames maybe? \nhttps://en.m.wikipedia.org/wiki/Theory_of_Games_and_Economic_Behavior\nClear, straightforward, and to the point.",
+      "createdAt": "2023-05-18T20:57:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1553634090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cozOP",
+      "author": {
+        "login": "davide-f"
+      },
+      "authorAssociation": "NONE",
+      "body": "I like it! many thanks.\r\nI close this PR and reopen as I am ready. Many thanks!",
+      "createdAt": "2023-05-19T08:04:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1554199439",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fIvYA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-06-18T12:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1596126720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fupia",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-06-25T12:23:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83830#issuecomment-1606064282",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Games\n- Repository: https://github.com/SPSUnipi/Games.jl\n- Created by: @davide-f\n- Version: v0.1.0\n- Commit: 3aa586145f3b12a0b35081c1a545d7f3f90aeea6\n- Reviewed by: @davide-f\n- Reference: https://github.com/SPSUnipi/Games.jl/commit/3aa586145f3b12a0b35081c1a545d7f3f90aeea6#commitcomment-113892983\n- Description: A package for game theory\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f6d66b7fc7a09a89e2a9e58eeb3b5a2904aa9764509f1da1f3f71847b0799783a62746d49b3c002b18c75d866d3748e3ab709e61f3c441d119f278ecf0a770f4a5521d5bb016f9d75a6f2e1ffdadc1f9c849a165f8f1914e70aa60faf478331700c793016cbc4b867f23d46606151f7755f323b5f3376b98267299952f0c3ec15dd259a058b2c95c3d309053d77159b24b74a6fe675cfd0c130f4ed71e6e3d7bdbbdcaa8f715b045c853712f6546464f -->",
+  "package_name": "Games",
+  "closed_at": "2023-06-25T12:23:46Z",
+  "title": "New package: Games v0.1.0"
+}

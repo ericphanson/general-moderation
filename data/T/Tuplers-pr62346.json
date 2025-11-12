@@ -1,0 +1,113 @@
+{
+  "created_at": "2022-06-14T13:15:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 62346,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85E2p1a",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-14T13:19:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1155177818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85E5HW2",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hey @alkan, I have some concerns about the implementation of the package.  The way this package seems to work is that a `Tupler` stores an `Expr(:tuple)` and then `push!`ing to it pushes to that expression's arguments and then `build(::Tupler)` will `eval` the  expression. Because of this, some surprising things can happen for instance if someone `push!`es a `Symbol` or an `Expr` to a `Tupler`. For instance:\r\n```julia\r\njulia> let t = Tupler()\r\n           push!(t, :hi)\r\n           build(t)\r\n       end\r\nERROR: UndefVarError: hi not defined\r\n[...]\r\n\r\njulia> let t = Tupler()\r\n           push!(t, :(1 + 1))\r\n           build(t)\r\n       end\r\n(2,)\r\n\r\njulia> let t = Tupler()\r\n           push!(t, Expr(:call, :pwd))\r\n           build(t)\r\n       end\r\n(\"/Users/mason\",)\r\n```\r\nwhich I would say is not good behaviour, and potentially dangerous. Besides this, using eval in this way is going to be quite slow. \r\n\r\nInstead, I'd probably just have the `Tupler` store an `Array{Any}` and `push!` to that array and then convert it to a `Tuple` at the end. E.g.\r\n```julia\r\njulia> let a = Any[]\r\n           push!(a, :hi)\r\n           push!(a, :(1 + 1))\r\n           push!(a, Expr(:call, :pwd))\r\n           Tuple(a)\r\n       end\r\n(:hi, :(1 + 1), :(pwd()))\r\n```\r\nThis will also be pretty slow due to the array, and the dynamic dispatch, but it'll be strictly faster than the current implementation, and more correct / safe.",
+      "createdAt": "2022-06-15T00:05:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1155823030",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FH8zD",
+      "author": {
+        "login": "alkan"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you Mason, very helpful review.  I realised yor concerns, and I \nadmit.  The simple Tuple construction method you depicted makes \nunnecessary such a utility.  Then what about named Tuples?  Would you \nplease shaw me a way to represent a named Tuple element w/o using Expr?\n",
+      "createdAt": "2022-06-19T12:28:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1159711939",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FL_fG",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "There's a constructor `NamedTuple{names}(values)` where `names` is tuple of symbols for the names, so one could do something like\r\n```julia\r\njulia> let names = Symbol[], values = Any[]\r\n           push!(names, :a); push!(values, 1)\r\n           push!(names, :b); push!(values, \"hi\")\r\n           push!(names, :c); push!(values, [1,2,3])\r\n\r\n           NamedTuple{Tuple(names)}(Tuple(values))\r\n       end\r\n(a = 1, b = \"hi\", c = [1, 2, 3])\r\n```",
+      "createdAt": "2022-06-20T19:20:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1160771526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HBCnu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-07-21T12:59:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1191455214",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HabPW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-07-28T13:00:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/62346#issuecomment-1198109654",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Tuplers\n- Repository: https://github.com/alkan/Tuplers.jl\n- Created by: @alkan\n- Version: v0.5.3\n- Commit: 66d6404248f1ec19b318f2ab61b2937554865061\n- Git reference: 0.5.3\n- Description: A tiny utility to build tuples incrementally\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> https://github.com/alkan/Tuplers.jl/README.md\n<!-- END RELEASE NOTES -->",
+  "package_name": "Tuplers",
+  "closed_at": "2022-07-28T13:00:50Z",
+  "title": "New package: Tuplers v0.5.3"
+}

@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-02-13T16:18:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 100775,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85zv89K",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BenchmarkTools, CSV, ClusterValidityIndices, Clustering, ColorSchemes, Colors, DataFrames, Debugger, Distances, Distributions, FileIO, Flux, Gnuplot, HDF5, HypothesisTests, JLD2, JSON, JSON3, LaTeXStrings, LoggingExtras, MultivariateStats, Optim, OrderedCollections, PProf, PrettyTables, SpecialFunctions, StaticArrays, StatsBase, StatsFuns, StatsModels, StatsPlots, TSne, TypedTables\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-13T16:27:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1941950282",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zymDu",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm just going to close this, since this PR is not salvageable. \"Starts with an upper-case letter\" is a pretty hard rule for Julia packages.\r\n\r\nThe name `NCLUSION` would still trigger the all-caps check, but I could imagine that it might be acceptable for a manual merge.",
+      "createdAt": "2024-02-13T21:34:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1942642926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zyrnn",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There are around 20 non-jll packages starting with a lower case letter.",
+      "createdAt": "2024-02-13T21:42:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1942665703",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zy35y",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Well, I'll reopen, then :-)\r\n\r\nAlthough I still think `NCLUSION` would be preferable (and actually more in line with the project README). I'm also not quite sure if \"Repo URL does not end with /name.jl.git\" is fixable without opening a new registration. But, I'll leave this open for now until the `compat` issues are fixed and this can be merged manually or until there is a followup PR for the registration of a renamed package.",
+      "createdAt": "2024-02-13T22:03:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1942716018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z5k4h",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of #100891",
+      "createdAt": "2024-02-14T19:39:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1944473121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z5s40",
+      "author": {
+        "login": "lorinanthony"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks so much for the help and insight!",
+      "createdAt": "2024-02-14T20:03:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100775#issuecomment-1944505908",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: nclusion\n- Repository: https://github.com/microsoft/nclusion\n- Created by: @lorinanthony\n- Version: v1.0.1\n- Commit: 0f70155f7a7966d27b27e7506bb5fa8438349405\n- Reviewed by: @lorinanthony\n- Reference: https://github.com/microsoft/nclusion/issues/5#issuecomment-1941931798\n- Description: Scalable nonparametric clustering with unified marker gene selection for single-cell RNA-seq data\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359879ae468f7d5f3d777a2dbe235384b913488ed9647ba57dffe8275700b103a3b939052d0880d5937971e34bfc5e6782a756b8fdbf1d54e9c3502be9f7677d303d06cd5a2a8ec5bf4a89918d1cbfba3b98466e014e1895d15f5b1d15d79c56ff5532211dc6a892e3d8f3f1a43819c37fb6fee21db4ad974e0f8079dc5c97ddbceb -->",
+  "package_name": "nclusion",
+  "closed_at": "2024-02-14T19:39:22Z",
+  "title": "New package: nclusion v1.0.1"
+}

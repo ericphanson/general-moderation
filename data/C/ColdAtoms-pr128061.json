@@ -1,0 +1,105 @@
+{
+  "created_at": "2025-03-31T10:10:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 128061,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86k2oqa",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Version number is not allowed to contain prerelease data\n- I was not able to load the package (i.e. `import ColdAtoms` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-31T10:16:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128061#issuecomment-2765785754",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86k210E",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi! To be useful for others, this should have some documentation- and/or a Readme. (And perhaps some tests as well ? 😀).",
+      "createdAt": "2025-03-31T10:39:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128061#issuecomment-2765839620",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86k3qjy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, adding a little bit of documentation before registering would be essential. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is no documentation.\r\n\r\nI would also recommend registering with an initial version `0.1`, not `1.0`. In the Julia ecosystem, we try to encourage the proper use of [semantic versioning](https://semver.org/spec/v2.0.0-rc.1.html). As a general rule, versions `<v1.0` are for initial development, when the API of the package isn't nailed down yet, the package does not have a lot of dependents, and \"backwards compatibility\" is not a major concern. For an initial registration, that's usually the situation your package is in. The bar for registering an initial `v0.1` is not very high. Basically, just\r\n\r\n* Must have a name that is appropriate for the scope of the package\r\n* Must have some non-trivial functionality (no \"placeholder\" packages)\r\n* Must have a README that explains the purpose of the package and gives a basic usage example (or a link to documentation that is sufficient to figure out how to get started)\r\n\r\nFor a version `v1.0`, you're saying that the package already has a stable API. That has some implications for what one would expect from that package. Personally, I tend to apply the following guidelines:\r\n\r\n* Must _define_ the stable API. That generally means _complete_ documentation. I would strongly recommend setting up a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation.\r\n* Should have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly, and no basis for figuring out whether a pull request is \"breaking\" or not, going forward.\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nEven in cases where a packages is fairly polished already, I always recommend registering with an initial `v0.1` anyway. That way, you have a chance to find out whether there are any major flaws in the package once people start to use it. Once it has a few dependents and you really should start to worry about maintaining backwards compatibility, you can always make a `v1.0` release. That doesn't mean you absolutely have to make significant changes to the `v0.1` version. Just make sure that your package is fully documented as \"stable\" at that point, has good test coverage, and all the other things people would expect from a \"stable\" package.\r\n",
+      "createdAt": "2025-03-31T12:19:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/128061#issuecomment-2766055666",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pYoHW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-04-30T12:23:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128061#issuecomment-2841805270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qX3oO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-05-07T12:24:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/128061#issuecomment-2858383886",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ColdAtoms\n- Repository: https://github.com/mgoloshchapov/ColdAtoms.jl\n- Created by: @mgoloshchapov\n- Version: v1.0.0-DEV\n- Commit: a1a031e49cf5ec8c94377fb61a9453cd37afc7af\n- Git reference: HEAD",
+  "package_name": "ColdAtoms",
+  "closed_at": "2025-05-07T12:24:11Z",
+  "title": "New package: ColdAtoms v1.0.0-DEV"
+}

@@ -1,0 +1,342 @@
+{
+  "created_at": "2024-02-25T15:28:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101621,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851AKLA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-25T15:32:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1962975936",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AQAg",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is a vague name, especially as the package has no documentation or readme.\n\nConsider spelling out MS as full words and adding at least a readme describing what the packages is before registering it.\n\n",
+      "createdAt": "2024-02-25T17:00:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1962999840",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851ASTg",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Doesn't look ready for registration yet - no tests or docs...",
+      "createdAt": "2024-02-25T17:37:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963009248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851ATh5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Indeed…\r\n\r\n@cormullion: don't hesitate to make comments like that blocking, on any registration. A certain minimum amount of documentation (\"what's this package for and how might I get started with using it?\") is a hard requirement for registration. It's also something that's typically easy to fix for the author: a basic README is enough to pass the bar for the original registration.",
+      "createdAt": "2024-02-25T17:59:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963014265",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AVhh",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much for your feedbacks!  \n\nSorry, I did misunderstand the requirements for registration, and registered it too early. I will update the package soon. Thanks!",
+      "createdAt": "2024-02-25T18:29:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963022433",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AV8P",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'll keep this open for now. I agree with @rafaqz that the name is probably not ideal (no way to say for sure without knowing more about the package). If you change the name, you'll have to open a new registration, and leave a comment here pointing to that new registration.\r\n\r\nHowever, if you add some documentation that makes it clear what this package is for, it could still turn out that `UniMS` is an acceptable name. Updates to the README/documentation do not require a new registration. So, if you do add documentation and feel like you want to argue for the existing package name, just leave another comment here.\r\n\r\nOtherwise, this PR will be closed automatically after 30 days of inactivity.",
+      "createdAt": "2024-02-25T18:36:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963024143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AY8x",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you!\n\nWe are developing a framework for mass spectrometry research, and to help people to analyze MS data and create MS apps more easily.\n\nMass spectrometry is usually termed as `MS`. The framework will also be a scholarly work, and we think `UniMS` is a better option than names such as `UniMassSpectrometry`.\n\nPersonally I have been using Julia in my research for about three years, and also developed some private packages and published MS apps (e.g., [PepPre.jl](https://github.com/ctarn/PepPre.jl)). In my practice, I don't need to use extra tools such as Python to smoothly analyze data, or C/C++ to develop high performance applications.\n\nWe believe Julia is a great choice for MS research, and decided to develop the framework `UniMS` to attract more people to build a shared computational MS community. `UniMS` or `UniMSHub` will also be the name of the community.\n\nThe package will be updated soon to meet the requirements for initial registration.\n\nMay I ask if the sha signature of the latest commit of the package will be updated? Can I withdraw the existing commits? Or only able to append commits? Thanks!",
+      "createdAt": "2024-02-25T19:25:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963036465",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AaRf",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Mass spectrometry is usually termed as MS.\r\n\r\nThat's a very domain-specific usage. If I google \"MS\", the first hit is not \"Mass spectroscopy\", which to me would be the lowest bar to cross for considering \"MS\" to be common enough to be in a package name (at least not without other parts of the package name giving context).\r\n\r\nI'm a physicist, and my first association for \"MS\" would not be \"mass spectroscopy\".\r\n\r\n> The framework will also be a scholarly work\r\n\r\nThat applies to probably 90% of Julia packages ;-)\r\n\r\n> and we think UniMS is a better option than names such as UniMassSpectrometry.\r\n\r\nThis is very explicitly contrary to the [general guidelines of the Julia community](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines). In fact, this is the exact case that point 1 \"avoid jargon\" advises against.\r\n\r\n`UniMassSpectrometry` is absolutely what would be expected as a package name by the Julia community (although: what does `Uni` stand for?)\r\n\r\n> UniMS or UniMSHub will also be the name of the community.\r\n\r\nI would likewise recommend expanding \"MS\" to \"MassSpectroscopy\" there, even though organization names aren't really subject to review, for registration\r\n\r\n> Python [...] or C/C++ \r\n\r\nIf you've used Python or C/C++, that might have colored your expectations. The naming conventions in these languages are very different from the conventions in the Julia community. Typically, they encourage terse names (often to the point of being cryptic), whereas Julia embraces very long and descriptive package names.\r\n\r\n> May I ask if the sha signature of the latest commit of the package will be updated? Can I withdraw the existing commits? Or only able to append commits?\r\n\r\nYou can add more commits, or even rewrite history, and just retrigger the registrator the same way you did when registering the first time. If the package name, UUID, and version number didn't change, the registrator will update this existing PR. Otherwise, it will create a new PR, and we should close this one.\r\n\r\nAt this point, with the clarification that \"MS\" just stands for \"Mass Spectroscopy\", I'm going to say that `UniMS` is not a suitable package name. When you decide on a new package name (and maybe also rethink the org name), follow the instructions at https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2024-02-25T19:47:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963041887",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AeM-",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry, I can't totally agree with the conventions. In fact, many famous packages did not follow them.\n\nSee the [package list](https://juliahub.com/ui/Packages), most well known packages are not named in that way:\n- Pluto is not called as ReactiveNotebook\n- Flux is not called as MachineLearning\n- IJulia is not called as JupyterJuliaKernel...\n\nYes, some packages follow the conventions, and their names did help users to understand its usage. However, the descriptive name is actually greatly exclusive:\n\n- Many users prefer `Makie`, instead of the plotting package named as `Plots`; Makie is not informative at all.\n\n- It was shown that PyCall have many critical limitations, and thus PythonCall was released. What's the next descriptive name for calling Python?\n\nTo us, `UniMS` is also just a name consisting of five letters and easy to use and remember for its users. It will not be the perfect package for mass spectrometry or the only mass spectrometry framework. If the package is called as `MassSpectrometry`, what should the next MS package be named as?\nWe don't want to claim that we are the only _rightful_ （_orthodox_) package.\n\nThanks for your work!",
+      "createdAt": "2024-02-25T20:53:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963057982",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851AgPd",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If your packapge is for some specific subset of MassSpectrometry, find a word that describes that, and add it to MassSpectrometry as a prefix or suffix. Easy.\n\nThe registry is a shared namespace with rules to keep it consistent and comprehensible to everyone, not just your field.\n\n\n(Also feel free to think of a fun, memorable name like Pluto or Makie! Just not ancronyms noone knows)",
+      "createdAt": "2024-02-25T21:25:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963066333",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Amym",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Sorry, I can't totally agree with the conventions. In fact, many famous packages did not follow them.\r\n\r\nI didn't mean to imply that \"long, descriptive\" names are the only acceptable package names. Those are just the most common \"default\", as they don't require too much creativity. But there are other categories of names (like, \"less systematic\"), and in fact, all the packages you mention do follow the [guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines) perfectly. I'm actually a big fan of the \"less systematic names\", if properly used. I'm even up for pronounceable acronyms.\r\n\r\n> To us, UniMS is also just a name consisting of five letters and easy to use and remember for its users. \r\n\r\nYeah, but it absolutely does not pass the guidelines (\"It's not ok to say PMA, even if you're talking about 'positive mental attitude'\"), and doesn't fall into any of the categories for the \"exceptions\" (like, \"wraps a Fortran library of an existing name\"). I'm sorry, but `UniMS` is a no-go.\r\n\r\n> It will not be the perfect package for mass spectrometry or the only mass spectrometry framework. If the package is called as MassSpectrometry, what should the next MS package be named as? We don't want to claim that we are the only rightful （orthodox) package.\r\n\r\nIndeed, you probably don't want to call it `MassSpectrometry`. A package *could* register with that name, but that would come with some scrutiny: as you say, such a package should be authoritative in the field, and have long-term maintenance guarantees (to the extent that anyone can guarantee any such thing). For a package with a smaller scope, `<Something>MassSpectrometry` would be quite appropriate.",
+      "createdAt": "2024-02-25T23:04:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963093158",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851A5xG",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Disappointed. The package name is not an acronyms --- it is not called as `MS` but `UniMS`.\nWill `Unims` be a proper name? And if `Unims` does, why `UniMS` doesn't? Users can not name any mass spectrometry related package using `MS`? It is not reasonable.",
+      "createdAt": "2024-02-26T01:37:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963170886",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851BAiN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Users can not name any mass spectrometry related package using MS\r\n\r\nTo a first approximation, yes. `MS` is not an acronym that is understandable by the general public, so it is not suitable as part of a package name.\r\n\r\n> Will `Unims` be a proper name\r\n\r\nNo",
+      "createdAt": "2024-02-26T02:10:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963198605",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851BL34",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Fwiw, the only hard rule for package names in General is whether any maintainer considers it fine and merges.\r\nI'm not a maintainer here, but don't see any major issues with `Unims`: that's definitely better than `MassSpectrometry`, if authors don't plan it to be the complete package for the topic. `<something>MassSpectrometry` would be more descriptive indeed, but \"being descriptive\" is not a requirement as you noted.",
+      "createdAt": "2024-02-26T03:14:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963245048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851BTte",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I don't see any major issues with `Unims`: that's definitely better than `MassSpectrometry`\r\n\r\nIt's absolutely not \"better\". The name `Unims` is a no-go (unless you can find another maintainer to override me, but I don't see on what basis). Changing the capitalization of `UniMS` does not magically turn it into an acceptable package name. `Unims` is not an example for a \"less systematic name\". `MassSpectrometry` is a perfectly good package name, just not for this particular package, as it would misrepresent the scope.\r\n\r\nJust change the name to something more descriptive! This should not be controversial.\r\n\r\nBTW, what is the `Uni` in the name intended to indicate?",
+      "createdAt": "2024-02-26T04:00:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963277150",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Bu6b",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I'm sorry, but UniMS is a no-go.\r\n\r\nLet me qualify that: If you insist long enough, you might be able to find a maintainer who will merge it on the grounds that the author should have the last word, especially when it does not impinge on any other package.\r\n\r\nBut it's still not a good idea, and I strongly urge you to choose a package name more in line with the expectations of the Julia community.",
+      "createdAt": "2024-02-26T06:11:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963388571",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Bx2z",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you. `Uni` indicates `United`, `Unified`, and `Universal`. It is also inspired by wonderful works like [UniMod](https://unimod.org) and [UniProt](https://www.uniprot.org). Many labs will join the project to create a framework for MS researchers.\n\nActually, we will concurrently implement the framework for multiple language interfaces, including Julia, Python, and maybe C/C++ and Rust. Thus, we need to name the framework in a consistent way. Sorry but `MassSpectrometry` or something like it is not suitable for us.",
+      "createdAt": "2024-02-26T06:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963400627",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Bzra",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">  Sorry but MassSpectrometry or something like it is not suitable for us.\r\n\r\nThen the General registry might not be the right place for your packages. In situations where you want to run your own organization that does not integrate with the Julia community at large, the recommended solution is to set up a `LocalRegistry`.\r\n\r\nSee the information in the [FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#faq)\r\n\r\n> The General registry is not a place for \"personal packages\" that consist of collections of \"utility functions\" **nor for packages that are only useful for a closed group (like a research group or a company)**. For that, it is easy to set up your own registry using for example [LocalRegistry.jl](https://github.com/GunnarFarneback/LocalRegistry.jl). The [Pkg documentation about registries](https://pkgdocs.julialang.org/v1/registries/) might be useful if you decide to go this route.\r\n\r\nOnce the entire framework is mature, there's always the possibility to move it back to `General`. If there are fully developed C/C++/Rust/Python packages, all of the same name, then the argument for having a matching `UniMS` as the name of the Julia package becomes much stronger. But I don't think we should make such an exception to the naming rules for the vague possibility that the framework might extend to other languages at some point in the future.",
+      "createdAt": "2024-02-26T06:30:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963408090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851CAKP",
+      "author": {
+        "login": "ctarn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks. We agree that currently, the package is at a very early stage. It's ok to not register the package right now.",
+      "createdAt": "2024-02-26T07:17:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101621#issuecomment-1963459215",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: UniMS\n- Repository: https://github.com/UniMSHub/UniMS.jl\n- Created by: @ctarn\n- Version: v0.0.1\n- Commit: 641103e2d95b2bb8c1854b0303360beee33c122f\n- Git reference: HEAD",
+  "package_name": "UniMS",
+  "closed_at": "2024-02-25T23:04:53Z",
+  "title": "New package: UniMS v0.0.1"
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2019-11-24T08:01:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 5808,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1Nzk0NDMzNA==",
+      "author": {
+        "login": "MUsmanZahid"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry I'm kinda new to creating packages. The build step is failing because it cannot find a 'Package.toml' file however I have checked other people's approved packages and they do not seem to have the file either. Am I missing something?",
+      "createdAt": "2019-11-25T00:12:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-557944334",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg1NjMyNg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is a bug in automerge that was fixed in this PR: https://github.com/JuliaRegistries/RegistryCI.jl/pull/115\r\n\r\nThat being said, the convention in the Julia community is to start package names with an uppercase letter.\r\n\r\n[noblock]",
+      "createdAt": "2019-11-26T23:08:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-558856326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg2MzgyMw==",
+      "author": {
+        "login": "MUsmanZahid"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks! I guess I'll change the name and submit a new PR :)",
+      "createdAt": "2019-11-26T23:40:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-558863823",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3Mzc5MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "GIven that we have LaTeXStrings.jl, maybe TeXTables would be a good name?",
+      "createdAt": "2019-11-27T00:24:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-558873790",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3NTI2MA==",
+      "author": {
+        "login": "MUsmanZahid"
+      },
+      "authorAssociation": "NONE",
+      "body": "That sounds good! I was also considering XTable since the package aims to implement similar functionality as the 'xtable' R package but I don't know if that would cause problems with the original xtable authors.",
+      "createdAt": "2019-11-27T00:30:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-558875260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3NTU1NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I doubt it would cause any problems.",
+      "createdAt": "2019-11-27T00:31:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5808#issuecomment-558875554",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: textable\n- Repository: https://github.com/MUsmanZahid/textable.jl\n- Created by: @MUsmanZahid\n- Version: v0.1.0\n- Commit: 325a5a84c3315c67082457438bcedf17c09fde11\n- Reviewed by: @MUsmanZahid\n- Reference: https://github.com/MUsmanZahid/textable.jl/issues/1\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf246b3e8d1082f18974f13a6a9a7204f015a3459a6edf5c523767f99d35b44b6aa1ebece70075279607b2f576dfc7b0176f26d62c7e24879b38a21c5f8437cda3c61bcbad6da78683a359cf7588d8fad530c8db34eddc0330c981b166323b997201215dc385a9e2b582815e303ad055d5e2ff38c0e02107b5c0911d899b569dcb -->",
+  "package_name": "textable",
+  "closed_at": "2019-11-26T23:45:37Z",
+  "title": "New package: textable v0.1.0"
+}

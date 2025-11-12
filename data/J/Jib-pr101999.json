@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-02-29T15:53:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101999,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851gdnu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames\n- Package name similar to 11 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to Jin. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.84 is at or below cutoff of 2.50.\n  2. Similar to Bio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to JLD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Air. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Git. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Amb. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Jive. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Libz. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to JDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to JET. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to FIB. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-29T15:57:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971444206",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851gmux",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This should probably be named `InteractiveBrokers`",
+      "createdAt": "2024-02-29T16:15:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971481521",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851hueF",
+      "author": {
+        "login": "lbilli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Though unregistered, the package has been around for quite some time and I'd find it rather inconvenient to change the name at this stage.",
+      "createdAt": "2024-02-29T18:58:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971775365",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851hw0J",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I'd find it rather inconvenient to change the name at this stage\r\n\r\nSorry, but that's not a convincing argument. `Jib` really isn't a suitable name for a Julia package. Not only is \"IB\" jargon, the \"J\" is also for \"Julia\", and we strongly discourage the \"Julia\" prefix/suffix for Julia packages (except for some very special cases).\r\n\r\nNote that you can write\r\n\r\n```\r\nusing InteractiveBrokers: InteractiveBrokers as Jib\r\n```\r\n\r\nin any existing code (and yes, it would be nice if in some future version of Julia that could be written as `using InteractiveBrokers as Jib`)",
+      "createdAt": "2024-02-29T19:05:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971784969",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851h0-8",
+      "author": {
+        "login": "lbilli"
+      },
+      "authorAssociation": "NONE",
+      "body": "That's fair.\r\nI'm not trying to convince anybody or build a case.\r\n\r\nRegistration has not been a priority of mine but since some user suggested it I thought I'd give it a try.\r\n\r\nFeel free to disregard this request.\r\n",
+      "createdAt": "2024-02-29T19:17:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971802044",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851h8EN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There is also the option of putting it in a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl), which will alleviate most of the problems with unregistered packages, except for \"packages in General can only have dependencies that are also in General\". If that ever becomes the problem, I think you'll have to rename, unfortunately.\r\n\r\n> that's not a convincing argument\r\n\r\nIf you wanted to try a slightly more convincing argument, it would be \"I also have `rib` for the R-version of this package, and I'd like to keep a consistent name\". But a 3-letter package name is just going to be an extremely tough sell.\r\n\r\n> Feel free to disregard this request.\r\n\r\nAlright, I'm going to close this here, but don't hesitate to try again in the future. At least with a more suitable name, this package would be more than welcome in General.\r\n\r\n\r\n",
+      "createdAt": "2024-02-29T19:37:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101999#issuecomment-1971831053",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Jib\n- Repository: https://github.com/lbilli/Jib.jl\n- Created by: @lbilli\n- Version: v0.20.4\n- Commit: 89c8533c1805f6fab8e36779418e319fc80849c9\n- Git reference: HEAD\n- Description: A Julia implementation of Interactive Brokers API",
+  "package_name": "Jib",
+  "closed_at": "2024-02-29T19:37:38Z",
+  "title": "New package: Jib v0.20.4"
+}

@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-04-20T19:03:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105297,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857P3vM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 6 existing packages.\n  1. Similar to JLSO. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.44 is at or below cutoff of 2.50.\n  2. Similar to JLD2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to JLD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to JACC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NCCL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to LSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-20T19:06:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2067758028",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QQCw",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Unfortunately, I don't think this package is suitable for registration.\r\n\r\n* As it stands, the name is not descriptive of the package. Something like `InModule.jl` might work\r\n* \"Some utilities and macros to help Julia programming\" is indicative of a personal package, [which are not accepted in the General registry](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now)\r\n* The package does not contain sufficient functionality to be described as \"things missing from a Common Lisp perspective\". With a well-defined scope, there might be suitable name for such a package, but `JLCL` is not okay. It's too short, non-descriptive (jargony acronym), and has the JL prefix, all of which are disallowed.\r\n* The license is not suitable for registration. The note in the README\r\n \r\n  > I ask you to consider plain old \"cooperation\" by asking me to become a developer.\r\n\r\n  is very unusual. Do you mean to ask people to submit pull requests to your package?",
+      "createdAt": "2024-04-21T02:08:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2067857584",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857Qu3U",
+      "author": {
+        "login": "marcoxa"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi Michael\r\n\r\nI understand and you are right about the scope (very minimal FTTB) of the\r\npackage.  For me it was, above, all an exercise in following the process.\r\n\r\nI am an old (very old) priest of the parenthetical cult and I am planning\r\nto build some more extensions to make me (and other old geezers) more at\r\nhome in Julia; plus we are a bunch of lazy cats, but I digress.\r\n\r\nI will keep the package \"personal\" for the time being and rename it if I\r\nwill try to resubmit.\r\n\r\nJust two things: the package does have a BSD license (I did my postdoc in\r\nBerkeley; I cannot use an MIT license!) and the \"unusual\" note in the\r\nREADME is there in all my libraries, but I can move it to a NOTES.md file.\r\n\r\nThanks\r\n\r\nAll the best\r\n\r\nMarco\r\n\r\n\r\nOn Sun, Apr 21, 2024 at 4:09 AM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> Unfortunately, I don't think this package is suitable for registration.\r\n>\r\n>    -\r\n>\r\n>    As it stands, the name is not descriptive of the package. Something\r\n>    like InModule.jl might work\r\n>    -\r\n>\r\n>    \"Some utilities and macros to help Julia programming\" is indicative of\r\n>    a personal package, which are not accepted in the General registry\r\n>    <https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now>\r\n>    -\r\n>\r\n>    The package does not contain sufficient functionality to be described\r\n>    as \"things missing from a Common Lisp perspective\". With a well-defined\r\n>    scope, there might be suitable name for such a package, but JLCL is\r\n>    not okay. It's too short, non-descriptive (jargony acronym), and has the JL\r\n>    prefix, all of which are disallowed.\r\n>    -\r\n>\r\n>    The license is not suitable for registration. The note in the README\r\n>\r\n>    I ask you to consider plain old \"cooperation\" by asking me to become a\r\n>    developer.\r\n>\r\n>    is very unusual. Do you mean to ask people to submit pull requests to\r\n>    your package?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2067857584>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAD5SWXZJZVOCFXWBA4NCBTY6MNVFAVCNFSM6AAAAABGQWRJM2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDANRXHA2TONJYGQ>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n\r\n\r\n-- \r\nMarco Antoniotti\r\nSomewhere over the Rainbow\r\n",
+      "createdAt": "2024-04-21T09:50:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2067983828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RGW5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I am an old (very old) priest of the parenthetical cult and I am planning\r\nto build some more extensions to make me (and other old geezers) more at\r\nhome in Julia; plus we are a bunch of lazy cats, but I digress.\r\n\r\nThat's totally fine. What would make such a package uncontroversial would be to have a sort of an essay in the README/documentation that identifies common concepts for package writing in CL and compares them to Julia. That would give the package a scope of \"macros/functions to bringer over the CL mindset of package development to Julia\". As long as the package has substantial functionality to fill that scope (more than a single macro), it would be fine to register under an appropriate general name.\r\n\r\n> the package does have a BSD license\r\n\r\nThe BSD license if fine, of course, but GitHub (and the JuliaRegistrator bot) do not recognize the `LICENSE` file as BSD. You have to use the standard BSD `LICENSE` file (as GitHub would generate it for you), without modifications. There's no need to have two different license files. Use either `LICENSE` or `COPYING`.\r\n\r\n> the \"unusual\" note in the README is there in all my libraries\r\n\r\nYou can put in whatever you want (and you don't have to move it from the `README` to some other file). It's not a blocker for registration. But I'm not sure what development model you have in mind. Usually, people would contribute to your package with pull requests. Real forks — where people fork the project to take it in a different direction, as opposed to the \"fork\" one has to do on GitHub to prepare a pull requests – are strongly discouraged, at least in the Julia community. When you register a package, you become responsible for maintaining it. We do not generally accept forks of existing packages for registration (at least not if they have substantially diverged and have a new name).\r\n\r\nThere might be packages that prefer \"fork to adapt to your own needs\" (I have [one of those](https://github.com/goerz/getbibtex) myself, in Python), but such a package would be a personal package by definition and not suitable for registration.\r\n\r\nThere are almost no circumstances I can think of where I would add an original maintainer to a fork as a contributor. Unless you are talking about the \"Allow edits by maintainer\" checkmark on a pull request. So yeah, you can put a note like that in your README, but it will most likely just confuse people and be ignored.\r\n\r\nAnyway, I'll close here for now, but you are definitely welcome to resubmit with a different name, and/or once the package has grown a bit more.",
+      "createdAt": "2024-04-21T15:14:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2068080057",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RHLI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "In the meantime (or in general, for \"personal packages\"), I would recommend using a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl)",
+      "createdAt": "2024-04-21T15:23:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105297#issuecomment-2068083400",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JLCL\n- Repository: https://github.com/marcoxa/JLCL.jl\n- Created by: @marcoxa\n- Version: v0.1.0\n- Commit: afecfb2faac0e240a8b2b6fbe8aab9d4f3694ed6\n- Reviewed by: @marcoxa\n- Reference: https://github.com/marcoxa/JLCL.jl/commit/afecfb2faac0e240a8b2b6fbe8aab9d4f3694ed6#commitcomment-141187416\n- Description: Some utilities and macros to help Julia programming.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ee6e13bbb82bf28e9e42bcdd4fb04461b5dd4aaf2207271632ae9ea94d443e32cd587c948ab150980c7aadbfd708d1347b5db1d983caf9f6458c247eb661795ae8aed906d7017d2c9e5a08f59d60dd56376a212b88e177183de9de48b7096da43cc4d73a0682fcd3f7c0b765f1e758d505231be74942a85460feb2a2846e99ad895dbe0cfd9cf3e848635d2c92b7b3ca261105f41577272f0c1a705a01ec2125 -->",
+  "package_name": "JLCL",
+  "closed_at": "2024-04-21T15:14:48Z",
+  "title": "New package: JLCL v0.1.0"
+}

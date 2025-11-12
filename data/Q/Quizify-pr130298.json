@@ -1,0 +1,194 @@
+{
+  "created_at": "2025-05-04T22:09:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 130298,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86p13Cd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-04T22:16:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2849468573",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p4wSF",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm not sure I think a single function (that does some random HTML formatting of something from JSON) is enough for registering a name in General: https://github.com/berrli/Quizify.jl/commits/f58695673888cc913fd941478071d13b1d2bf415/src/Quizify.jl",
+      "createdAt": "2025-05-05T08:09:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2850227333",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86p4zyy",
+      "author": {
+        "login": "liamjberrisford"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @stemann , thanks for taking the time to review! Quizify.jl is meant to bring into Julia the same interactive‐quiz functionality you get from [jmshea/jupyterquiz](https://github.com/jmshea/jupyterquiz) in Python, so you can build rich educational resources right in your notebook. This initial commit exposes a single top‐level function as you mentioned.\r\n\r\nIt’s just a starting point. There’s plenty more we can add later (custom styling hooks, richer embedding options, analytics, etc.). Centralizing this in Quizify.jl will also clean up the work we’re doing elsewhere, since we’ve been copy-pasting the same function across multiple projects, and so felt it would be beneficial to use in just the projects we are working on and so imagine it would be for other working on similar projects for Julia education resources. `[noblock]`\r\n\r\nEdit: \r\n@stemann @aplavin I appreciate that registering a package, in General, implies a certain level of maturity, and that level is currently not being met. Could you help me understand what baseline feature set you would normally consider sufficient for an initial registration? The development will, of course, continue on the main repository regardless, but I was keen for the work to go onto the registry at some point for discoverability and stability. Alongside making the Julia projects that use the package neater. I guess it felt a little like the chicken and the egg situation where I was hoping it would be open source, making deriving functionality easier. Any guidance you can share would be most welcome. My potentially naive understanding was that it would be clear that development was still accruing given the version being < 1.",
+      "createdAt": "2025-05-05T08:16:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2850241714",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qAOmu",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "It’s a bit hard to say, but I would suggest to define some form of minimal viable prototype - you could also plan what v1.0 should be to help define the MVP - and then register when the MVP (pre v1.0) has been implemented - it could be similar to an early version of the Python project, e.g., https://github.com/jmshea/jupyterquiz/tree/v1.2\r\n\r\nAnother reason for registering is if there is some non-trivial downstream application/project which _require_ the package to be registered.",
+      "createdAt": "2025-05-05T19:56:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2852186542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qATUo",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Did you see https://github.com/jverzani/QuizQuestions.jl ?\r\n\r\n[noblock]",
+      "createdAt": "2025-05-05T20:04:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2852205864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qAgZk",
+      "author": {
+        "login": "liamjberrisford"
+      },
+      "authorAssociation": "NONE",
+      "body": "I did; however, I felt they were sufficiently different to warrant separate use cases and having a less Julia-centric package, but I can see the point of view that they are similar. The initial intention was for Quizify.jl to be a straightforward, JSON-based multiple-choice quiz generator you can drop into any webpage with only JSON.jl and a browser. While they both let you create interactive quizzes, they serve slightly different audiences and workflows, so it can be helpful to have both options. I do, however, acknowledge this is a very niche situation! [noblock]",
+      "createdAt": "2025-05-05T20:30:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2852259428",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qJY0h",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I only meant to mention it - I have not dived deep into this domain; don't let that comment hold you back.\r\n\r\n[noblock]",
+      "createdAt": "2025-05-06T13:28:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2854587681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86qdsDf",
+      "author": {
+        "login": "liamjberrisford"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I only meant to mention it - I have not dived deep into this domain; don't let that comment hold you back.\r\n> \r\n> [noblock]\r\n\r\nHello @stemann I noticed you added the [noblock] to this comment but was wondering if you are able to add it to your previous comments so that AutoMerge can continue?",
+      "createdAt": "2025-05-07T19:01:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2859909343",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86v-nNP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-07T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2952426319",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xMEnE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-06-14T12:23:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130298#issuecomment-2972731844",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Quizify\n- Repository: https://github.com/berrli/Quizify.jl\n- Created by: @berrli\n- Version: v0.4.0\n- Commit: c0e2d4e85910808da1058be33845fc6929dbbe39\n- Reviewed by: @berrli\n- Reference: https://github.com/berrli/Quizify.jl/issues/1#issuecomment-2849465790\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598c604c67201650ddccdf49a18837755fc55cb0bf3b75669b582a7905c9eccd74e3a431fc03790846663704d14fb2fbe7c72ebadcb665b88041daeac7f81ee08ae61fc73cf954bc0741f68837795884d851c766f872d31920c1cf696e6e850957e11649e861c55ff282149a0ea00bebd7f -->",
+  "package_name": "Quizify",
+  "closed_at": "2025-06-14T12:23:59Z",
+  "title": "New package: Quizify v0.4.0"
+}

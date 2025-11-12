@@ -1,0 +1,76 @@
+{
+  "created_at": "2020-05-02T12:37:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 14044,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMjk0Nzc0NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Version number is not 0.0.1, 0.1.0, 1.0.0, or X.0.0\n- The following dependencies do not have a compat entry that has an upper bound: DomainSets, FastGaussQuadrature, GaussQuadrature, HCubature, IntervalSets, QuadGK, StaticArrays, julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-05-02T12:41:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14044#issuecomment-622947745",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyMjk1MjEwNQ==",
+      "author": {
+        "login": "daanhb"
+      },
+      "authorAssociation": "NONE",
+      "body": "Meanwhile I've added Compat entries. I have left the version to 0.1.2 (it lived as an unregistered package before).\r\n[noblock]",
+      "createdAt": "2020-05-02T13:15:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14044#issuecomment-622952105",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyNDM3NjgyNg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@daanhb the version number is fine, but you should still fix the compat entries in the Project.toml, and retrigger registration in the same way you did before, this PR will be automatically updated\r\n\r\n[noblock]",
+      "createdAt": "2020-05-06T00:25:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14044#issuecomment-624376826",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYyNTc1NjU1MA==",
+      "author": {
+        "login": "daanhb"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano - I've updated Compat but meanwhile the version number has changed, so the changes went into a new pull request (#14392). This one can be closed now.",
+      "createdAt": "2020-05-08T10:45:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/14044#issuecomment-625756550",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DomainIntegrals\n- Repository: https://github.com/JuliaApproximation/DomainIntegrals.jl\n- Created by: @daanhb\n- Version: v0.1.2\n- Commit: 62d6216e31fa3dd598d7c803fb8b25deab14c300\n- Reviewed by: @daanhb\n- Reference: https://github.com/JuliaApproximation/DomainIntegrals.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986fabb8000405388f066d3fd7507f534e843dca480c2c08389295a1ee9a4f240b52e19ad2e5129e0c370eff0cee4bfbb913cdbc501355df340ed320d16fcaf6504b7698aa86bc10ddb77ed63a511d24d04e7a30fdce66511ca449dad321105b27cb09a577c4c6e666ae5bf9bdfa51f289f0617e221fd6a69e267aa8199018edfb9436774ffe52886449d35eb72c32ebad -->",
+  "package_name": "DomainIntegrals",
+  "closed_at": "2020-05-08T11:03:43Z",
+  "title": "New package: DomainIntegrals v0.1.2"
+}

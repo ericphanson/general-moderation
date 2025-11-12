@@ -1,0 +1,196 @@
+{
+  "created_at": "2022-12-28T21:32:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 74747,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ReafV",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nThis is a package rename.\r\nRelated PR:\r\n- https://github.com/JuliaRegistries/General/pull/74746",
+      "createdAt": "2022-12-28T21:33:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1366927317",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Reauw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to PkgGraph. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.32 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-12-28T21:36:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1366928304",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Rebcr",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nI am renaming my (new) package.\r\n\r\n> Package name similar to 1 existing package.\r\n>     - Similar to PkgGraph.\r\n\r\nThat's the old name.\r\n",
+      "createdAt": "2022-12-28T21:43:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1366931243",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiBDG",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "While `PkgGraphs` follows the naming convention, is the renaming really worth the churn?\r\n\r\n[noblock]",
+      "createdAt": "2022-12-30T11:33:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367871686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiDpn",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It's a minor change, granted.\n\nWhat's the churn?\n(This is my first published package, I have no idea)\n\nFor the record, I don't think anyone (?) installed v0.1 / PkgGraph\nHas a package ever been deleted?\n\n[noblock]",
+      "createdAt": "2022-12-30T12:01:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367882343",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiEH5",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I promise to sleep on the final package name more before I publish my next one 😄\n\n[noblock]",
+      "createdAt": "2022-12-30T12:05:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367884281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiFS2",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> What's the churn?\r\n> (This is my first published package, I have no idea)\r\n\r\nHaving a duplicate package for no good reason.\r\n\r\n\r\n> Has a package ever been deleted?\r\n\r\n[No](https://github.com/JuliaRegistries/General/blob/ac1c157b96743609ee86b907533714dbebeb40b8/README.md#can-my-package-in-this-registry-depend-on-unregistered-packages).",
+      "createdAt": "2022-12-30T12:16:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367889078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiGjJ",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ok but nothing in General depends on PkgGraph so that FAQ doesn't apply no?\r\n\r\nIn any case I'm totally fine with renaming back again. Will do one day when I'm back at a laptop",
+      "createdAt": "2022-12-30T12:28:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367894217",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RiG4m",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If the argument is \"we don't want to set a bad precedent (even if the reasoning behind the rules doesn't apply here)\", then I agree with not deleting or renaming.\r\n\r\nIt might be good to add it to the docs that renaming is not possible if the new name is too similar to the old. (And emphasize that you shouldn't publish before you are absolutely sure about the final package name)\r\n",
+      "createdAt": "2022-12-30T12:32:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1367895590",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Rkh3g",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@giordano I renamed my package back, this PR can be closed (I can't do it)\r\n\r\nRe\r\n- #74889",
+      "createdAt": "2023-01-01T20:37:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1368530400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85RkkrD",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Btw, the problem isn’t just registered packages but there could be a Manifest.toml somewhere that relies on it and we don’t want to break that- even if it’s unlikely.",
+      "createdAt": "2023-01-01T21:35:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1368541891",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q85RkoEo",
+      "author": {
+        "login": "tfiers"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ah gotcha that makes sense. Thanks!",
+      "createdAt": "2023-01-01T22:51:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/74747#issuecomment-1368555816",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PkgGraphs\n- Repository: https://github.com/tfiers/PkgGraphs.jl\n- Created by: @github-actions[bot]\n- Version: v0.2.0\n- Commit: 903e8df71a4e67ec1f561c04859664885f353d93\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/tfiers/PkgGraphs.jl/commit/903e8df71a4e67ec1f561c04859664885f353d93#commitcomment-94458045\n- Description: Visualize the dependency graph of a Julia package\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69e967d74347e622c5726fe4b5b259583ea21202141324f6fff4bd4cd554086814c92b7a09ea5395df63bca061a04d93f78962410e5274cba3cc68215f8a062b5f8d943c507b4b0ad6f549a0cdc8187e8aba498f170c43918d5584f77a3f40ddc468cbec2cff6619c129cb25a3cbf1ed0e3d2698ff678bd4a8a22d8f883ad8376032b47505e61e4eaf368eec70ea67b6a29e9c7e4e95d5f882fc08cfc8108f7dbead3ecac2148496355d1dc55f25dc7bc -->",
+  "package_name": "PkgGraphs",
+  "closed_at": "2023-01-01T21:35:50Z",
+  "title": "New package: PkgGraphs v0.2.0"
+}

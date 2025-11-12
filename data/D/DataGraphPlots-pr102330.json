@@ -1,0 +1,149 @@
+{
+  "created_at": "2024-03-05T18:20:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102330,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851-x3g",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I wonder if this shouldn't be called `PlasmoDataPlots`. I understand `PlasmoData` has a `DataGraph`, but `DataGraphPlots` makes it seem like the package would more generally plot graphs of data.",
+      "createdAt": "2024-03-05T18:29:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1979391456",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851-y3H",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-05T18:31:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1979395527",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851_Yvx",
+      "author": {
+        "login": "asinghvi17"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Agreed - the package would probably be better called `PlasmoGraphsMakie` or something similar.  Ending with `Plots` usually implies a relation to `Plots.jl` which is probably not wanted.\r\n\r\nAs an aside, @dlcole3 have you looked into the monorepo pattern (https://github.com/JuliaLang/Pkg.jl/issues/1251)?  It would probably make it easier for you to centralize development as well.  Having this in its own repo and making changes to the underlying data structure is pretty painful - we had that same issue in Makie before Pkg started supporting monorepos.",
+      "createdAt": "2024-03-05T20:12:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1979550705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851_puX",
+      "author": {
+        "login": "dlcole3"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz @asinghvi17  I like the idea of calling it `PlasmoDataPlots.jl` rather than `DataGraphPlots.jl`. Since it has a dependency on both `Plots.jl` and `Makie.jl` (`Plots.jl` is used for undirected graphs and `Makie.jl` is used for directed graphs), I am inclined to keep the `Plots` ending rather than `Makie` ending since I think I want it to be clear that it is a plotting package. This would also be somewhat consistent with `Plasmo.jl` which has an accompanying plotting package called `PlasmoPlots.jl` (see [here](https://github.com/plasmo-dev)). ",
+      "createdAt": "2024-03-05T20:54:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1979620247",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852BGga",
+      "author": {
+        "login": "dlcole3"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz @asinghvi17 What is the proper method for renaming a repository? Should I create a new repo and create a new PR through the registrator under the new name? Or is it sufficient to rename the exisiting repository (and its accompanying files)? ",
+      "createdAt": "2024-03-06T03:13:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1980000282",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852BTGL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Rename the existing repository, and then re-register (which will create a new PR). See https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2024-03-06T04:06:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1980051851",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852FoAh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102400",
+      "createdAt": "2024-03-06T15:50:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102330#issuecomment-1981186081",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DataGraphPlots\n- Repository: https://github.com/zavalab/DataGraphPlots.jl\n- Created by: @dlcole3\n- Version: v0.1.0\n- Commit: ebe7feea4b7cdc13a2b60185f0103206d3ba0d45\n- Reviewed by: @dlcole3\n- Reference: https://github.com/zavalab/DataGraphPlots.jl/issues/2#issuecomment-1979375122\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359870a15563619b30100f61d68a4b6e352c2ca0e47af50bc5c245b17e5b59385e0f3918977d417424547cbbef6bd5a366834a5f5fa4f9650dcfb34904085aa5577333059f8390ea7c56e65ea8eaa4e1a1d3b6e9f3930dae5bc313d00daab232455a4cf02e32314ca3b6580e996a5399a5e2719437f28e7558c46624437236cda201 -->",
+  "package_name": "DataGraphPlots",
+  "closed_at": "2024-03-06T15:51:02Z",
+  "title": "New package: DataGraphPlots v0.1.0"
+}

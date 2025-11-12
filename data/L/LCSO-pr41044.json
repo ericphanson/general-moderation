@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-07-17T02:54:38Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 41044,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q840j0nq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: PiecewiseQuadratics\n- Package name similar to 8 existing packages.\n  1. Similar to LCIO. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.92 is at or below cutoff of 2.50.\n  2. Similar to ECOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to uCSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to JLSO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to LSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-07-17T02:57:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41044#issuecomment-881805802",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q840j04r",
+      "author": {
+        "login": "ellisbrown"
+      },
+      "authorAssociation": "NONE",
+      "body": "@mykelk @moehle it looks like we might have a problem calling this package \"LCSO.jl\"... do you have any preferences on alternatives?\r\n\r\n\"LinearlyConstrainedSeparableOptimization\" seems far too long... \"LinConSepOpt\" maybe?",
+      "createdAt": "2021-07-17T03:06:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41044#issuecomment-881806891",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q840j9HL",
+      "author": {
+        "login": "ellisbrown"
+      },
+      "authorAssociation": "NONE",
+      "body": "this PR can be closed.  we have renamed to \"SeparableOptimization.jl\" and opened another PR #41051 ",
+      "createdAt": "2021-07-17T06:25:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41044#issuecomment-881840587",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LCSO\n- Repository: https://github.com/JuliaFirstOrder/LCSO.jl\n- Created by: @ellisbrown\n- Version: v0.1.0\n- Commit: 85db62260e9cb03110c3607ee5385b66378d2e29\n- Reviewed by: @ellisbrown\n- Reference: https://github.com/JuliaFirstOrder/LCSO.jl/issues/5\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> initial release\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359865590fb7f5a98aba4fffbdfccaefa4fb7911f6b7fa743488439376dcc192e7d63a233729bc169f11b61741fbc7abfefbf585315d14ab9b56ffefc8ccc7811666818ecbc25a7c0356e60ac6725c3428d010038d836b98e6ce032c2f74e57676c53a8f719bf2a43f158fdce9b003b6c7dfb383eec580237ede190d226316e4033b -->",
+  "package_name": "LCSO",
+  "closed_at": "2021-07-17T08:34:55Z",
+  "title": "New package: LCSO v0.1.0"
+}

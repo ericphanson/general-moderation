@@ -1,0 +1,210 @@
+{
+  "created_at": "2020-01-31T14:06:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 8702,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc0NzU4MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name is not at least five characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-01-31T14:08:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580747580",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc0ODM5NA==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n`Rx` is a sort of common abbreviation for the Reactive Extensions frameworks/libraries. We would like to use this naming for this package.",
+      "createdAt": "2020-01-31T14:11:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580748394",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc3MTc1NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Unfortunately, Rx can also mean many other things. For example, it is a very common abbreviation for prescription.\r\n\r\nHow about `ReactiveX.jl`?",
+      "createdAt": "2020-01-31T15:09:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580771754",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc4NDIzNQ==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge That's a good point, but `ReactiveX` name will also lead to confusion with existing [JuliaGizmos/Reactive.jl](https://github.com/JuliaGizmos/Reactive.jl) package (which looks abandoned and provides less functionality).\r\n\r\n[ReactiveX](https://github.com/ReactiveX) is a collection of repositories with reactive extensions for several languages. They use the same naming convention: `Rx` + language name, which in case  of Julia results in exactly `Rx.jl`.\r\n\r\nReactive community is quite big nowadays and in my opinion it is better to follow the established naming convention. Abbreviation `Rx` can also mean medical prescription, but in the context of  software development `Rx` is commonly used for reactive frameworks. As an example, google query \"rx github\" results in only reactive extension frameworks.",
+      "createdAt": "2020-01-31T15:40:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580784235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc5MTE3OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would recommend you read the naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\r\n\r\nIn particular:\r\n\r\n> Package names should be sensible to most Julia users, even to those who are not domain experts. \r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.",
+      "createdAt": "2020-01-31T15:57:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580791178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDc5MTY1NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I understand the desire to be consistent with the package names that other programming languages have chosen. But in the Julia community, we prioritize clarity of package names, even if it means that the Julia package name is not the same as the package names chosen by other languages.",
+      "createdAt": "2020-01-31T15:58:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580791654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDgxMzcwMA==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes, I agree. \r\n\r\n> Package names should be sensible to most Julia users, even to those who are not domain experts.\r\n\r\nBut in my opinion this means that it is hard to satisfy these requirements. We can use something like `ReactiveX` but this will lead to confusion between `ReactiveX`, `Reactive`, `React` packages so it is not sensible anymore for the most of the users. \r\n\r\nWe can use the name without 'reactive' in it (like [Akka](https://akka.io) does), but it also may confuse developers who are familiar with this paradigm, because it is a common naming convention in this field of software developing. \r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\nThis part of the Julia package naming convention is controversial and subjective. From my point of view there is zero possibility of confusion with `Rx.jl` while others may have different opinion. \r\n\r\nThank you for your comments, we will consider other name next week and we can continue this conversation to find a good solution.",
+      "createdAt": "2020-01-31T16:47:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580813700",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MDgyMTAyNw==",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For what it’s worth, when I saw the name I thought it was for prescriptions too. There’s a lot of pharmacology in Julia (eg https://github.com/PumasAI/Pumas.jl). Not that they own “Rx” or anything— just that it seems legitimately confusable.\r\n\r\nWhat about ReactiveExtensions.jl or something like that?",
+      "createdAt": "2020-01-31T17:05:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-580821027",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTEyMDUxOQ==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Dear @DilumAluthge, can we use `Rocket.jl` as a package name? As I can see it should be free to use as no one registered the package with the same name.",
+      "createdAt": "2020-02-02T10:15:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-581120519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTE4Mzc5NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`Rocket.jl` seems fine. It will be automerged after 3 days.",
+      "createdAt": "2020-02-02T22:19:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-581183795",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTIxNTg5NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually, since you have already gone through the waiting period on this PR, if you register `Rocket.jl` and ping me, I can merge it immediately.",
+      "createdAt": "2020-02-03T02:52:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-581215894",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU4MTM3ODIwNg==",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge Can be closed in favor of [Rocket.jl](https://github.com/JuliaRegistries/General/pull/8803). Thank you.",
+      "createdAt": "2020-02-03T11:52:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/8702#issuecomment-581378206",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Rx\n- Repository: https://github.com/biaslab/Rx.jl\n- Created by: @bvdmitri\n- Version: v1.0.0\n- Commit: ac2885b5958df28000e950765e43155715aba57d\n- Reviewed by: @bvdmitri\n- Reference: https://github.com/biaslab/Rx.jl/commit/ac2885b5958df28000e950765e43155715aba57d#commitcomment-37059729\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4b0fc21d269e70dfb5ac802aa3edc2c05061608c7039f6cb2b1f4273013259ccf480402f3fcc6ef5526a59143e2d16398e8ccfbbe1b0fab643c2ba624ff0ed6f1a056afbefa1a136fb10cc46d068c769c8e74c6076d72aacf15ec2e26f2b29225e1324d54f54c0b7edcec5df26f0a63c36e6a3045b43bc4c62948990edd9c539f688457bf0de5a7fdba92d84b4a1ce3edc48f03b06f014b0e5776c9402a26fc40a9c73b361415cf721da65e5e5df11d6f -->",
+  "package_name": "Rx",
+  "closed_at": "2020-02-03T13:03:04Z",
+  "title": "New package: Rx v1.0.0"
+}

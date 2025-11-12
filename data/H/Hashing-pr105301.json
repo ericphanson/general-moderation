@@ -1,0 +1,186 @@
+{
+  "created_at": "2024-04-20T21:51:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 105301,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857QAOJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 3 existing packages.\n  1. Similar to Meshing. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.03 is at or below cutoff of 2.50.\n  2. Similar to Caching. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.36 is at or below cutoff of 2.50.\n  3. Similar to Hashids. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-20T21:54:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2067792777",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857QExl",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for the package! It would be much easier to tell what this package is for and how to use it if it had documentation.\r\n\r\n[noblock]",
+      "createdAt": "2024-04-20T23:15:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2067811429",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857Qexk",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Congrats on the registration! I agree with Lilith, and I would also suggest changing the name to something more specific. A package as generic as Hashing.jl might make people believe it is related to hash tables, and therefore possibly part of Julia's standard library.",
+      "createdAt": "2024-04-21T05:57:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2067917924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RRn6",
+      "author": {
+        "login": "erich-9"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the comments!\r\n\r\nThe package is intended to be usable in place of [SHA.jl](https://github.com/JuliaCrypto/SHA.jl) where performance matters. It also extends the functionality.\r\n\r\nI just finished writing the first version of the [documentation](https://erich-9.github.io/Hashing.jl).  I hope it clarifies why I believe the name to be well chosen.\r\n\r\n[noblock]",
+      "createdAt": "2024-04-21T16:29:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2068126202",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RZeX",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nIndeed the documentation is a welcome addition. To someone like me, unfamiliar with cryptography, Hashing.jl still sounds too closely related to standard library objects like sets or dicts, implemented with hash tables. How about CryptographicHashing.jl? Longer package names are almost never a bad thing",
+      "createdAt": "2024-04-21T18:33:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2068158359",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RjnL",
+      "author": {
+        "login": "erich-9"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, I also considered this name before registration. But in my opinion it's too bulky for such a basic package (just think of collecting the [non-cryptographic hash functions](https://en.wikipedia.org/wiki/Non-cryptographic_hash_function) you mentioned in a package named NonCryptographicHashing.jl).\r\n\r\nAnyway, I think you have a point and maybe there's a less ambiguous name (choosing the current one, I was in particular influenced by the name of the comparable Python package [hashlib](https://docs.python.org/3/library/hashlib.html)).\r\n\r\nTaking the Rust crate [hashes](https://crates.io/crates/hashes) as an inspiration for the name Hashes.jl would probably not resolve ambiguities... But then there's the closely related crate [digest](https://crates.io/crates/digest), which defines the traits implemented by the (cryptographic) hash algorithms. So what do you think of Digests.jl? It'll  probably make the package somewhat harder to find, since people nowadays speak of hashes instead of digests. But that's fine with me.",
+      "createdAt": "2024-04-21T21:07:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2068199883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857RnTt",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If it were up to me (which it's not) I would call it CryptographicHashFunctions.jl or CryptographicHashing.jl, both of which would autocomplete after \"]add Cryptog\", whereas Hasing.jl would autocomplete after \"]add Hashin\".\r\n\r\nI like packages that, when possible, tell me a pretty complete story about themselves from the name alone.\r\n\r\nThe story I would tell about this package is\r\n\r\n> It provides pretty much all the cryptographic hash functions you could want, and does so at high performance using _jll libraries that link to external libraries that use platform dependent hardware acceleration. \r\n\r\nFrom that, \"high performance\" is not something that should imo be included in the name, otherwise every other package would be HighPerforamnceBlah.jl (though well done, this is much faster than SHA.jl on my hardware). The fact that it uses _jll libraries is an implementation detail. In theory someone could contribute faster or similarly performant implementations written in Julia and it would not be breaking to switch to thoes, hence that should not belong in the name. That leaves \"cryptographic hash functions\", so I would call it `CryptographicHashFunctions.jl` and only ever type `Cryptog[tab]` because I'm lazy and my editors and Pkg both autocomplete.\r\n\r\nSeparately, this is a pretty nice package (from the very limited poking at it that I've done) and when folks search for \"cryptographic hash functions in Julia\", I want this to come up. The name CryptographicHashFunctions.jl is a great match for that search query. Searching \"hashing in julia\" on Brave, the top seven answers are related to the `Base.hash` function, which is understandable because that is a much more common usage of the word \"hash\" than cryptographic usage (most programming is not in adversarial contexts). The fact that the this package's hash functions have nice cryptographic properties (except for MD4/MD5/etc.) is a key feature of this package that sets it apart from `Base.hash`. I think that should be reflected in the name.\r\n\r\n(I don't think Digests.jl is an improvement.)\r\n\r\n[noblock]",
+      "createdAt": "2024-04-21T21:57:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2068215021",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857R0zU",
+      "author": {
+        "login": "erich-9"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the detailed and helpful opinion. You convinced me and I'll call it `CryptographicHashFunctions.jl` after all. As it happens, it'll then be a direct descendant of `SHA.jl` via the following chain of Wikipedia quasi-synonyms (which I'm not going to follow to the end): [SHA](https://en.wikipedia.org/wiki/SHA) ➔ [SecureHashAlgorithms](https://en.wikipedia.org/wiki/Secure_Hash_Algorithms) ➔ [SecureHashFunctions](https://en.wikipedia.org/wiki/Secure_hash_function) ➔ [CryptographicHashFunctions](https://en.wikipedia.org/wiki/Cryptographic_hash_function) ➔ [CHF](https://en.wikipedia.org/wiki/CHF)\r\n\r\nThis pull request can thus be closed. I'll open a new one for the renamed package.",
+      "createdAt": "2024-04-21T23:52:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2068270292",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857YUt7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of https://github.com/erich-9/CryptographicHashFunctions.jl",
+      "createdAt": "2024-04-22T15:49:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105301#issuecomment-2069973883",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Hashing\n- Repository: https://github.com/erich-9/Hashing.jl\n- Created by: @erich-9\n- Version: v0.0.1\n- Commit: feefd6606b9ecec4942db98afccfcea163da3e42\n- Reviewed by: @erich-9\n- Reference: https://github.com/erich-9/Hashing.jl/commit/feefd6606b9ecec4942db98afccfcea163da3e42#commitcomment-141188686\n- Description: Fast cryptographic hash functions for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bb3d4fce4f672cefc3c6e1274a320de7bca3914eec32ffd4ce9d6556c4fe63d75953234a3856d2af6b5ce2a1ee9f2d45e078d4eb563c4717a33e0cb0b80774905214b0273ffbc9a4dd7dc6f47c39c06cbe4e8a5ff06a8234f7f73788a94ea9f298869bbd3d2b16d51f646e9af571b92d04c7ca83aaea597d0a17593a4df79e7f2d96695d217f12bc120c761242bf51038b59dd6dae2b9b8c6b5d60e8ccd07f796be87e8ac9b48d43b348ce72ef11e648 -->",
+  "package_name": "Hashing",
+  "closed_at": "2024-04-22T07:56:15Z",
+  "title": "New package: Hashing v0.0.1"
+}

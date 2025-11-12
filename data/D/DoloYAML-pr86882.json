@@ -1,0 +1,128 @@
+{
+  "created_at": "2023-07-05T10:44:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 86882,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85gplzN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataStructures, Distributions, Dolang, Formatting, HTTP, IterTools, MacroTools, QuantEcon, StaticArrays, StringDistances, YAML\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-05T10:53:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1621515469",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gsOlN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm assuming this is superseded by https://github.com/JuliaRegistries/General/pull/86886",
+      "createdAt": "2023-07-05T17:42:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1622206797",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gsO4q",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, please add some minimal documentation, like a basic usage example in the README, before registering",
+      "createdAt": "2023-07-05T17:43:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1622208042",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gtLwm",
+      "author": {
+        "login": "albop"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes indeed, superseded by #86886 . I did the original submission through JuliaHub and confess I didn´t know what it meant to \"retrigger the registrator\" so I used JuliaHub again, which created another PR instead of updating that one. Sorry for that.\r\n",
+      "createdAt": "2023-07-05T20:30:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1622457382",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gtL6x",
+      "author": {
+        "login": "albop"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, I'll add a README file",
+      "createdAt": "2023-07-05T20:30:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1622458033",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jVKOt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-05T12:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1666491309",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j6vtR",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-13T12:22:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86882#issuecomment-1676344145",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DoloYAML\n- Repository: https://github.com/EconForge/DoloYAML\n- Created by: @albop\n- Version: v0.1.0\n- Commit: ff6158b0735144c5c33da2c59361669ac6a8021d\n- Git reference: HEAD\n- Description: Import Dolo models from a YAML file.",
+  "package_name": "DoloYAML",
+  "closed_at": "2023-08-13T12:22:43Z",
+  "title": "New package: DoloYAML v0.1.0"
+}

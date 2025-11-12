@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-05-29T12:08:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 107868,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_ZAWX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, SafeTestsets\n- Package name similar to 2 existing packages.\n  1. Similar to Flick. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.19 is at or below cutoff of 2.50.\n  2. Similar to Slack. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.21 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-29T12:12:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107868#issuecomment-2137261463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_bVd3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/107888",
+      "createdAt": "2024-05-29T16:57:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107868#issuecomment-2137872247",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Fleck\n- Repository: https://github.com/adolgert/Fleck.jl\n- Created by: @adolgert\n- Version: v0.1.0\n- Commit: 8fdd30b834321458a40e73ba2cc0ac9465a320d2\n- Reviewed by: @adolgert\n- Reference: https://github.com/adolgert/Fleck.jl/issues/63#issuecomment-2137253853\n- Description: Simplest simulation to use non-Exponential transitions\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nFleck provides samplers that choose the next event and next time for continuous-time discrete event simulation (DES). It supports simulation by providing exact stochastic simulation algorithms (SSA) for non-Exponential distributions. Whereas SimJulia is process-oriented, Fleck is event-oriented. The goal of Fleck is to enable correct and efficient simulation of chemical processes, disease processes, queueing models, generalized stochastic Petri nets, and other frameworks for continuous-time discrete event simulation.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359876e7936c55b32aaa23810f80d60abe46a1c01c0656866c23258186c5f3168bdfb2020dc95f8ca282e69c4e7c522a066b1e61e796b37e896b54ca7779ee66c3431a7c1244294b695a807a7ee2b0ab8bc3a2e1e69cf5939b44715bf983a13b104d57ea9f049908d560a95a7c416a7fb7c4e341c8bea84177d218b3c97ce7583c3b -->",
+  "package_name": "Fleck",
+  "closed_at": "2024-05-29T16:57:07Z",
+  "title": "New package: Fleck v0.1.0"
+}

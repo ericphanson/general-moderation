@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-04-18T18:07:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105181,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857EmHz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: PreallocationTools\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 2 existing packages.\n  1. Similar to ISL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-18T18:10:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105181#issuecomment-2064802291",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857Etna",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd actually recommend just naming this package `ESAInterpolationFiles`. You might be able to get away with something like `IPFFiles`, but there really isn't any reason not to go for a maximally descriptive package name. It would still export `IPF`, so your example would just be \r\n\r\n```julia\r\nusing ESAInterpolationFiles\r\n# or (I think unqualified imports are a bad idea in general):\r\n# using ESAInterpolationFiles: IDF, compute, compute_derivative\r\n\r\n# Load an IPF file\r\nfile = IPF(\"example.ipf\")\r\n\r\n# Compute interpolated value for a given key\r\nvalue = compute(file, 10.5)\r\n\r\n# Compute derivative for a given key\r\nderivative = compute_derivative(file, 10.5)\r\n```\r\n\r\nwhich seems perfectly nice and readable.",
+      "createdAt": "2024-04-18T18:20:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105181#issuecomment-2064832986",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857cCVL",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the suggestions, I would rather not use ``ESA`` in the package name as this is not affiliated with the Agency.\r\nI will go ahead and apply the required changes by the auto-merge and change the name to ``IPFiles.jl``.",
+      "createdAt": "2024-04-22T21:02:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105181#issuecomment-2070947147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857cJhe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I would rather not use ESA in the package name as this is not affiliated with the Agency\r\n\r\nI don't think there would be any issue with that. The package deals with \"ESA Interpolation Files\", so the *file format* is associated with ESA, but that does not imply that your package is, or that you can't use the name of the format as part of your package.\r\n\r\n> I will go ahead and apply the required changes by the auto-merge and change the name to IPFiles.jl\r\n\r\nYeah, `IPFFiles.jl` (two `F`'s, as following the pattern `<FileExtension>Files.jl`) is probably OK, although there is also the Interchangeable Preservation Format (which ranks higher in Google), which is not ideal.",
+      "createdAt": "2024-04-22T21:23:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105181#issuecomment-2070976606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858f4N2",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "Another PR has been opened with the required changes, therefore this can be closed.",
+      "createdAt": "2024-05-01T16:31:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105181#issuecomment-2088731510",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Ipf\n- Repository: https://github.com/andreapasquale94/Ipf.jl\n- Created by: @andreapasquale94\n- Version: v0.1.0\n- Commit: dbd86c1a16f645ab46de29ea5c0392e8d2274593\n- Reviewed by: @andreapasquale94\n- Reference: https://github.com/andreapasquale94/Ipf.jl/commit/dbd86c1a16f645ab46de29ea5c0392e8d2274593#commitcomment-141123640\n- Description: ESA Intepolation Files made easy.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- initial release of Ipf.ij, a lightweight package for providing allocation-free access to binary ESA/ESOC interpolation files.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64e493f35102dc501f32002324fc36d42969ce7cf53e7a816e16ff30faacae395f9bd843ce9082a31794948d96e5f5742d99fcad3ee7c943b02cee2735e0dd1563cc719348d3253899438d1eac942c4ab5398ea85d10d8ccb4bec3b1f642f8798d477b474d6535e1b6a8ee77d1d4ccebc7204b43d248741ef5cc1537baf8585fcd43bd8457e4ff2d17f43dbe636ed0d5a569eff3387614d0b9ed2f70a431dd7db3e9032419bfe6b2129245ee8fa5f6256 -->",
+  "package_name": "Ipf",
+  "closed_at": "2024-05-02T00:45:56Z",
+  "title": "New package: Ipf v0.1.0"
+}

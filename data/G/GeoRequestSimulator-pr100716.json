@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-02-12T19:53:14Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 100716,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85zmdsm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CxxWrap\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-12T19:57:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100716#issuecomment-1939462950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zmyKm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README",
+      "createdAt": "2024-02-12T20:48:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100716#issuecomment-1939546790",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zm0Bb",
+      "author": {
+        "login": "cheikh025"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear Michael,\r\n\r\nThank you very much for your feedback regarding the documentation for the\r\nGeoRequestSimulator package. Indeed, the submission was primarily a test to\r\nensure that the registration process and all related mechanisms are\r\nfunctioning correctly. I appreciate your guidance and will make sure to add\r\ncomprehensive documentation, including a detailed description of the\r\npackage's purpose and a usage example in the README, before proceeding with\r\na formal registration attempt.\r\n\r\nBest regards,\r\n\r\n\r\nOn Mon, Feb 12, 2024 at 3:48 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> Thank you for submitting your package! However, please make sure to add\r\n> some documentation before registering. At the very least\r\n> <https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4>,\r\n> that would be a description of the package's purpose and a small usage\r\n> example in the README\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/100716#issuecomment-1939546790>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AOQKHNNVRQ7SQS4IR6JQ2XDYTJ5Y5AVCNFSM6AAAAABDFJSLISVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTSMZZGU2DMNZZGA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2024-02-12T20:52:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100716#issuecomment-1939554395",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zm2IF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, I'll close this, then.\r\n\r\nPlease avoid using the General registry for testing. You might be interested in [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl) and [`RegistryCI`](https://github.com/JuliaRegistries/RegistryCI.jl) if you want to experiment with registration without disrupting `General`.",
+      "createdAt": "2024-02-12T20:57:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100716#issuecomment-1939563013",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GeoRequestSimulator\n- Repository: https://github.com/cheikh025/GeoRequestSimulator.jl\n- Created by: @cheikh025\n- Version: v1.0.0\n- Commit: 85ac03d1c0f95fa867195a108c9985d07d29b258\n- Reviewed by: @cheikh025\n- Reference: https://github.com/cheikh025/GeoRequestSimulator.jl/issues/2#issuecomment-1939450438\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835984e60d9ef2ee7504e691d0099aa4c51facd04742a7b88d48c1a109ac78c50d42737db2a71b0e371c797328ed7b8f0546ce53cbd4147b4d9bc5d9f14b25b4db578485c8e8fd2f088c2a8e65992ab58545ec38bad59fbc72abf0b9e1a6d4ac547b20e0a5b788378ae0b47d1beebca78841e437ca9c32d9888d1b31a07e65100fb8b -->",
+  "package_name": "GeoRequestSimulator",
+  "closed_at": "2024-02-12T20:57:44Z",
+  "title": "New package: GeoRequestSimulator v1.0.0"
+}

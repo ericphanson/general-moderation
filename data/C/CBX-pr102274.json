@@ -1,0 +1,61 @@
+{
+  "created_at": "2024-03-05T02:22:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102274,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85141mR",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DefaultKeywordArguments, Distributions, LaTeXStrings, LogExpFunctions, Plots, Reexport\n- Package name similar to 14 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Cbc. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  3. Similar to UCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.95 is at or below cutoff of 2.50.\n  4. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to CRC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to CBFV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to CBLS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to XCB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to Clp. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to COBS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to CBOR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-05T02:27:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102274#issuecomment-1977833873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8515G0Q",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name `ConsensusBasedOptimization` seems like it should be okay for this. A short, non-common acronym like `CBX` isn't going to work, I'm afraid. Not even with an existing [CBXpy](https://github.com/PdIPS/CBXpy) package. You might still be able to use the \"CBX\" branding by having `CBX` be a submodule of `ConsensusBasedOptimization` so that the package can be loaded as `using ConsensusBasedOptimization: CBX`, or something like that.",
+      "createdAt": "2024-03-05T03:29:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102274#issuecomment-1977904400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8517wan",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102274",
+      "createdAt": "2024-03-05T11:59:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102274#issuecomment-1978599079",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CBX\n- Repository: https://github.com/PdIPS/CBX.jl\n- Created by: @rafaelbailo\n- Version: v1.0.0\n- Commit: f6c9271ce0129f268ff3bbd9ed0bfcb228455e7f\n- Reviewed by: @rafaelbailo\n- Reference: https://github.com/PdIPS/CBX.jl/issues/10\n- Description: A Julia package for consensus-based optimisation\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359839593e1e7282f570cf89a2a0667103ccc085a3015d10f4855424ff10e20b820e00f74683bb7303cbbbd3353823cfc3558faa836f4d4ffabb1a0d295099f181e1637a9695878251d6f7e88ecf4895a2d93b3be3483dc8b0dd16fdc119602c573dc1d754f8301406db9ba359acd87a7fb0 -->",
+  "package_name": "CBX",
+  "closed_at": "2024-03-05T11:59:03Z",
+  "title": "New package: CBX v1.0.0"
+}

@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-08-08T12:37:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 112658,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86HpNiO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BasicInterpolators, JLD2, YAML, ZipFile\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-08T12:42:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112658#issuecomment-2275727502",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HzpZv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Did you want to close this in favor of https://github.com/JuliaRegistries/General/pull/112781?\r\n\r\nNote that `Refractive` would also be okay (if you fix the compat issues)",
+      "createdAt": "2024-08-09T18:00:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112658#issuecomment-2278463087",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IFqhp",
+      "author": {
+        "login": "BenCichos"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see, yes that would be great to 'Refractive' in favour to 'Refraction'. I thought that the name would not be acceptable that is why I changed the name.",
+      "createdAt": "2024-08-12T06:20:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112658#issuecomment-2283186281",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Refractive\n- Repository: https://github.com/BenCichos/Refractive.jl\n- Created by: @BenCichos\n- Version: v0.1.0\n- Commit: fa32a729c67174c7ca24e1095aa20aa959337c8a\n- Reviewed by: @BenCichos\n- Reference: https://github.com/BenCichos/Refractive.jl/issues/3\n- Description: Package for getting the refractive indices of materials from the refractiveindex.info database\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598bd1a6aa43c089e9cda789b61fa580127dc44b855232db451673a899f2d959837d6705467c0ceb93dcc80862ee358b6f7f33c3072ba9fd0b6c36d632bcfaa3ede356d8246df0bcb29cf6df84a779db789dd3bcc53b0a367340e9bcdabbce1a5048539c8d00528d7a64ded733ea5347e052f352932765d10962d3cabb1535f32c4 -->",
+  "package_name": "Refractive",
+  "closed_at": "2024-08-12T06:53:13Z",
+  "title": "New package: Refractive v0.1.0"
+}

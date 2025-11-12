@@ -1,0 +1,91 @@
+{
+  "created_at": "2021-08-10T09:09:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 42530,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841Zdax",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-10T09:14:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42530#issuecomment-895866545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Zdg2",
+      "author": {
+        "login": "pagnani"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand the package name ArDCA (Autoregressive Direct Coupling Analysis) is not compliant to the julia rules, but the package was already advertised with this name in an accepted publication in Nature Communication and on [bioarxiv draft](https://www.biorxiv.org/content/10.1101/2021.03.04.433959v1).",
+      "createdAt": "2021-08-10T09:15:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42530#issuecomment-895866934",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Zq5u",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I understand the package name ArDCA (Autoregressive Direct Coupling Analysis) is not compliant to the julia rules\r\n\r\nWell, it actually is, what the message above is saying is that the repository should be called `ArDCA.jl`, with the trailing `.jl`.  You can rename the repository from its settings without breaking anything.  Then trigger registration again without changing version number and this pull request will be automatically updated\r\n\r\n[noblock]",
+      "createdAt": "2021-08-10T10:38:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42530#issuecomment-895921774",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Z5E5",
+      "author": {
+        "login": "pagnani"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @giordano. I did not consider renaming ... I opened a new registration request [#42546 ](https://github.com/JuliaRegistries/General/pull/42546). \r\n\r\nHow can I close this PR?\r\n\r\n",
+      "createdAt": "2021-08-10T12:17:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42530#issuecomment-895979833",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841Z7R-",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can do that, thanks ",
+      "createdAt": "2021-08-10T12:31:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/42530#issuecomment-895988862",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ArDCA\n- Repository: https://github.com/pagnani/ArDCA\n- Created by: @pagnani\n- Version: v0.4.1\n- Commit: 897788dfbe2336f4933ae247c0aa5dc4a2b9af7e\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Autoregressive inference for protein multiple sequence alignment\n<!-- END RELEASE NOTES -->",
+  "package_name": "ArDCA",
+  "closed_at": "2021-08-10T12:31:57Z",
+  "title": "New package: ArDCA v0.4.1"
+}

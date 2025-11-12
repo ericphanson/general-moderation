@@ -1,0 +1,128 @@
+{
+  "created_at": "2019-05-01T14:46:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": "2019-05-05T21:11:23Z",
+  "pr_number": 478,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODQzMzkyNg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you add some compatibility constraints? See https://julialang.github.io/Pkg.jl/v1/compatibility/",
+      "createdAt": "2019-05-01T21:20:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488433926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODYxNDc0Mw==",
+      "author": {
+        "login": "NTimmons"
+      },
+      "authorAssociation": "NONE",
+      "body": "With the new Registrator do I simply tag the updated version?",
+      "createdAt": "2019-05-02T09:50:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488614743",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODYxNTI4OQ==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No, you trigger registrator again the same way as the first time. There is a [tag-bot](https://github.com/christopher-dG/tag-bot) which you can enable on your repos that will automatically create tags and releases for you after they have been registered.",
+      "createdAt": "2019-05-02T09:52:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488615289",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODYxNTc0OA==",
+      "author": {
+        "login": "NTimmons"
+      },
+      "authorAssociation": "NONE",
+      "body": "Registrator Errors with : \"Error while trying to register: Version 0.3.3 already exists\"\r\nwhen I triggered it on the new commit (https://github.com/NTimmons/ApproximateComputations.jl/commit/d7a0825cda4f8d3c26123676eeceb2c4990004b6).\r\n\r\nI have tag-bot installed and activated on that respository\r\n\r\nDo I need to update the version number to update this release?\r\n",
+      "createdAt": "2019-05-02T09:53:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488615748",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODYxOTMyMw==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's a different package (ApproximateComputations) than the one that's being registered here (Ditherings). The 0.3.3 version of ApproximateComputations is already registered:\r\n\r\nhttps://github.com/JuliaRegistries/General/blob/master/A/ApproximateComputations/Versions.toml\r\n\r\nIn order to make progress here, you'd have to retrigger the registration of Ditherings 0.1.0 with some compatibility constraints.",
+      "createdAt": "2019-05-02T10:07:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488619323",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4ODYxOTU1Mw==",
+      "author": {
+        "login": "NTimmons"
+      },
+      "authorAssociation": "NONE",
+      "body": "Whoopsie daises.\r\nGot the two mixed up. Thought this was the other pull request. \r\nNo problem, thanks for the help",
+      "createdAt": "2019-05-02T10:08:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-488619553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4OTQ2MzczMw==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I tried to create a release but ran into this error:\n```\nPOST https://api.github.com/repos/NTimmons/Ditherings.jl/releases: 422 Validation Failed [{Resource:Release Field:tag_name Code:already_exists Message:}]\n```\nTo retry, comment on this PR with the phrase `TagBot tag`.\ncc: @christopher-dG\n<!-- 5684fc80-6f7a-11e9-87c6-804eb2b9a4d9 -->",
+      "createdAt": "2019-05-05T21:11:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/478#issuecomment-489463733",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "Registering: Ditherings\nRepository: https://github.com/NTimmons/Ditherings.jl\nVersion: v0.1.0\nCommit: 23d290315de3e307a4fd4d06746abc0c69129b98\nProposed by: @NTimmons\nReviewed by: @NTimmons\nReference: [https://github.com/NTimmons/Ditherings.jl/commit/23d290315de3e307a4fd4d06746abc0c69129b98#commitcomment-33386469](https://github.com/NTimmons/Ditherings.jl/commit/23d290315de3e307a4fd4d06746abc0c69129b98#commitcomment-33386469)\n\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4e412d605c866e38be1b4d0ac2f382bb7798aa8a9c3a6c50b9969ae33d8373a971a15ca4fa16a5e9c6e5db2460036cfc5bba50cc4c2079e6241c868a76c17c9453806e9463e449a3db7047defac080f78b86ac7b0701b31286a8982fd0fa196404c9ca40b54bc8ca3ae134291ee63570281cdc1d881ac0d52634138ad09364b6c99f829f488536ebfdf1e0ce339d696ce204638c17bc8d6c4b845c693a98e90a32c1dd5dc639c613c174415a4376ab1e6 -->\n",
+  "package_name": "Ditherings",
+  "closed_at": "2019-05-05T21:11:23Z",
+  "title": "New package Ditherings: 0.1.0"
+}

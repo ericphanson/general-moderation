@@ -1,0 +1,106 @@
+{
+  "created_at": "2024-05-15T22:56:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 106904,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q859-1pF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArgParse, CSV, Combinatorics, DataFrames, DifferentialEquations, Distributions, JSON, RoadRunner, Sundials\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-15T23:06:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2113624645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-AbEd",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi and congrats on the new package! I have questions about registration:\n- Can it really be useful to users outside of your specific project?\n- If so, can you come up with a more specific name, one that highlights the link to chemical reactions for instance?",
+      "createdAt": "2024-05-16T05:10:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2114040093",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-HEBI",
+      "author": {
+        "login": "ltatka"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @gdalle,\r\n\r\nYes, there is use beyond the case I mentioned. You're right and I should update the readme to reflect that. There are three primary use cases in the field of systems biology \r\n1. Evolving reaction networks with specific behaviors. The default is oscillation, but in the future I may add additional behaviors. Additionally, users can input time series that reflect those desired behaviors.\r\n2. Evolving reaction networks (or ensemble models) to fit time series data. Often systems biologist will have timeseries data from experiments and will want to search for a reaction network (or group of them) that can recapitulate the time series data. This is useful for building models, informing future experiments or looking at output models for common reaction themes which may indicate the presence of those reactions in the ground truth. \r\n3.  Parameter (rate constants) fitting. In the case where model topology is known (for example, the biologist has already built the model from first principles) and wants to generate parameter values for those reactions that will recapitulate experimental time series data. \r\n\r\nThere are also some expansions I have planned for the future. In some cases, researchers might be certain of the presence of a few reactions but uncertain of the rest of the network. In this case, a user could input reactions and indicate the level of confidence they have that those reactions occur in the \"true\" system. The package would then evolve supplementary reactions to fit time series data.  Other expansions include different types of rate laws, more customizations of the evolution algorithm.\r\n\r\nAs you can see, the core functionality of the package is evolving networks, hence the name. But if you think it would be helpful or clarifying to indicate that the networks are specifically chemical reaction networks, I will try to think of a more informative name. \r\n\r\nAlso, since this work is partially funded by the NIH and is related to scientific research project, I have to make it publicly available. So while it may only be useful to handful of scientists, I am hoping that I can put it on the registry for more easy access.\r\n\r\nThanks for the feedback. I will try to think of a new name and update the readme to reflect the utility of the package. And of course fix all the things that caused the automatic tests to fail.  \r\n\r\n",
+      "createdAt": "2024-05-16T17:02:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2115780680",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-LHHa",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for the answer! \r\n\r\n> There are three primary use cases in the field of systems biology\r\n\r\nMy bad, I had spontaneously associated \"reaction networks\" with chemical reactions, but it can be networks of, say, predator-prey interactions as well?\r\n\r\n> But if you think it would be helpful or clarifying to indicate that the networks are specifically chemical reaction networks, I will try to think of a more informative name.\r\n\r\nThe central tenet is that the name space for Julia packages is limited, so each time we take a spot, it's good to be as specific as possible. Abbreviations are usually discouraged, and longer are rarely a bad thing (you can always do `import MyPackage as MP`).\r\n\r\n>  I will try to think of a new name and update the readme to reflect the utility of the package.\r\n\r\nWhat about `ReactionNetworksEvolution`?",
+      "createdAt": "2024-05-17T06:26:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2116841946",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BbnII",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-06-16T12:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2171499016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CO_dZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-06-23T12:23:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106904#issuecomment-2184968025",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NetEvolve\n- Repository: https://github.com/ltatka/NetEvolve\n- Created by: @ltatka\n- Version: v0.1.0\n- Commit: 058b2c068c70f3cfc5b44065dc57d1f07e300973\n- Reviewed by: @ltatka\n- Reference: https://github.com/ltatka/NetEvolve/commit/058b2c068c70f3cfc5b44065dc57d1f07e300973#commitcomment-142065816\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62d44bd58fd5966f428cdeb416cc913a6de22bcc391e88821761f8c94661fd52f11db6acbf1c7b210e73cc8888e79e8daa1cd0545993e945da4c73565e54a2bf263426ea6e0b3056a4cf3c6b1ddd61b686b65a08f022d86646e9f417ee3d33de4fb828099d5e73d3d49eeb12fcae3e8bd60d00ba9981544b4ea57f05aecf0cb00f517da04aa73ada4f473aa572ffd0d74ea6564416bc6e333d4e845ba9adbfa81fadafeff414aa505d90bc8ecc2bfd762 -->",
+  "package_name": "NetEvolve",
+  "closed_at": "2024-06-23T12:23:09Z",
+  "title": "New package: NetEvolve v0.1.0"
+}

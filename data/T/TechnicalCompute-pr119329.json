@@ -1,0 +1,252 @@
+{
+  "created_at": "2024-11-13T14:51:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 119329,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86TdLP_",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on this cool initiative. However, I'm not sure whether this is suited to a wide variety of users.\r\n\r\nMy first issue is that most people will only need to install an infinitesimal fraction of the packages you import, which means they would pay a disproportionate loading time. Additionally, `using TechnicalCompute` would prevent them from knowing where all of this imported stuff actually comes from. I happen to think that adding the dependencies ourselves is a good way to keep project complexity reasonable and understand the moving pieces.\r\n\r\nMy second issue is that this package looks a lot like a personal utility. It has a lot of personal overrides and options, and even contains type piracy. So I would not recommend registering it, even though it may be useful to your personal workflows. See the [package registration guidelines](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) for details.\r\n\r\nI'm not well-versed in other languages, but I assume the goal might have been to provide a turnkey environment to students, similar to what might be found in more integrated languages?",
+      "createdAt": "2024-11-13T15:11:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2473899007",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86TdXtP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-13T15:28:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2473950031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Tdv5g",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> even contains type piracy\r\n\r\nI would absolutely veto the registration of any package that contains type piracy, i.e., defining methods for functions you don't own for types you don't own. Unfortunately, \"own\" doesn't always map cleanly to package boundaries, so this can only be detected by manual code review, like in this case. But in my view, it makes that package ineligible for registration (and is a major foot-gun even for \"private\" use).\r\n\r\nType piracy is how you get the kind of bugs where you get plausible but wrong results and end up having to retract papers, or worse. Avoid it at all costs.",
+      "createdAt": "2024-11-13T16:06:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2474049120",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Td1xm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I haven't looked at how \"serious\" any potential type piracy in this package might be, but even beyond that, I'm inclined to agree with @gdalle that this type of meta-package is more useful in a closed group or context. It is better to not have meta-packages registered, and pull them in manually or via a local registry. After all, this kind of curation is *extremely* subjective. It would hardly be the catch-all curated collection of packages that would work for everyone doing technical computing in Julia (which is every Julia user)",
+      "createdAt": "2024-11-13T16:12:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2474073190",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86TiPaO",
+      "author": {
+        "login": "dgleich"
+      },
+      "authorAssociation": "NONE",
+      "body": "The origin of this package was after I talked/emailed with Viral Shah, Alan Edelman, and Chris Rackauckas about 5 years ago  about how Julia has been moving so much stuff out of the core language and into packages (which I agree with for the core language), and how this made it harder to teach. The vision for the package emerged out of those discussions is indeed to have something turnkey that supports much of what you'd probably see / need in undergrad / early grad classes. (And yes, the commits really do go that far back; might have done this earlier but, pandemic, etc.) \r\n\r\nSo this isn't designed as a personal package. I really really hope it'd be useful to a wider group of people -- especially educators! Although not having it registered as package would make that more challenging. As far as I know, there aren't other huge meta packages like it. I'm hoping to put together a suite of demos that really show off functionality across the ecosystem. \r\n\r\nThe \"overrides\" are mostly just to do method integration among multiple packages (`update!` is frequently used, but easy to  merge...)  or to pick one method from a package in the case that there's a clear \"winner\". (i.e. JuMP and Symbolics both export `@variables`, but JuMP never uses it in all the documentation, whereas Symbolics uses it extensively... hence that one went to Symbolics; also `JuMP.@variables` isn't that bad as a clarifier for that situation.) I can only think of a few methods where I couldn't get a successful merge that made me unhappy (`Makie.Axis` and `AxisArrays.Axis` was the biggest...).  \r\n\r\nI'm hoping we got the mix of packages roughly right to start getting feedback and working to improve. My hope is to see if we can do 'semester-aligned' releases to support teaching and bring new stuff in. \r\n\r\nI'm actually amazed this many packages can work together without broader / more fundamental method clashes! \r\n\r\nI can look at fixing the type piracy if this is truly a deal breaker -- it's largely just omissions/bugs in other packages. (e.g. https://github.com/JuliaMath/DoubleFloats.jl/pull/208, https://github.com/ITensor/ITensors.jl/issues/1581). ",
+      "createdAt": "2024-11-14T02:16:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2475226766",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86TihYZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay… this seems like something that should be manually merged by someone like @ViralBShah or @ChrisRackauckas then, if they agree with the reasoning.\r\n\r\nOf course, the license issue has to be fixed as well.\r\n\r\nPersonally, I'm still a little skeptical that these types of curated meta-packages are a good idea to have in the registry. But if they're sufficiently well-maintained, and have buy-in from some of the core devs or other big players, I could change my mind on that. It might also be worth to \"pre-announce\" this [on Discourse](https://discourse.julialang.org/c/package-announcements/60), to have a discussion with the wider community.",
+      "createdAt": "2024-11-14T02:46:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2475300377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Tns1D",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, @dgleich and I spoke about this a while ago! Since then, the package ecosystem has matured tremendously. I don't personally see a downside to such a package - but perhaps we can change the name to something a bit more instructive. `TechnicalComputeEdu` or something (not very inspired on my part).\r\n\r\n@dgleich Do you think the package benefits from being in General, or would students be ok directly adding it by the full URL?\r\n\r\n@mgkuhn brought up a similar sentiment here: https://github.com/JuliaLang/juliaup/issues/1083, and I think this would address many of the things he brought up.",
+      "createdAt": "2024-11-14T15:13:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2476657987",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86TpTpW",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think renaming this to something like TechnicalComputeForStudents would alleviate most of my concerns indeed.",
+      "createdAt": "2024-11-14T18:01:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2477079126",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T4l3Y",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The \"overrides\" are mostly just to do method integration among multiple packages (update! is frequently used, but easy to merge...) or to pick one method from a package in the case that there's a clear \"winner\". (i.e. JuMP and Symbolics both export @variables, but JuMP never uses it in all the documentation, whereas Symbolics uses it extensively... hence that one went to Symbolics; also JuMP.@variables isn't that bad as a clarifier for that situation.) I can only think of a few methods where I couldn't get a successful merge that made me unhappy (Makie.Axis and AxisArrays.Axis was the biggest...).\r\n\r\nI really think this should be worked out with more ecosystem coordination, not a package on top. For example, we have CommonSolve.jl that defines the behavior of `solve` in a reusable fashion: those other packages should really coordinate to extend the same function under the same meaning given it's such a common verb. It seems most of the type piracy issues are fixed when brought up (https://github.com/JuliaMath/DoubleFloats.jl/pull/208, https://github.com/ITensor/ITensors.jl/issues/1581 seem to be complete?), so I think most of what is solved in the package src is best solved via ecosystem coordination.\r\n\r\n> The origin of this package was after I talked/emailed with Viral Shah, Alan Edelman, and Chris Rackauckas about 5 years ago about how Julia has been moving so much stuff out of the core language and into packages (which I agree with for the core language), and how this made it harder to teach. The vision for the package emerged out of those discussions is indeed to have something turnkey that supports much of what you'd probably see / need in undergrad / early grad classes. (And yes, the commits really do go that far back; might have done this earlier but, pandemic, etc.)\r\n\r\nMultiple things here. I think ecosystem coordination issues should be solved directly in the packages, as mentioned above. But what I was saying is valuable is cross-package documentation. The reason is because for example a neural ODE training is not only using DiffEqFlux.jl, but it's a combination of SciMLSensitivity.jl, DifferentialEquations.jl, Optimization.jl, etc. Thus packages being diligent in documenting only their own functionality does not hit real-world workflows which are generally a multi-package endeavor. Someone needs to package up and document this higher level.\r\n\r\nSciML now has a documentation which merges all of the docs together and has a highest level set of examples which covers such workflows https://docs.sciml.ai/Overview/stable/ . To me, this is the valuable part of bringing stuff together, but it is a massive undertaking in terms of maintenance. You'd likely need to have a few people really dedicated to the project and buy-in from major maintainers to keep such a thing alive with the scale of packages you're setup for. Right now, TechnicalCompute.jl does not have a documentation, and I think that's most of the work and most of the value. So I'm not sure of its current value with this piece missing, and one of the major changes has been for these types of high level pieces to now somewhat exist.\r\n\r\nAs for a core batteries included experience, I think many things have shifted around due to package images. There is still a major need for version coordination, but that needs to be done with package maintainers involved otherwise it's going to be a nightmare to keep up. But I think the real solution here is the features feature https://github.com/JuliaLang/julia/issues/55516 which should be coming in the near future. With this kind of thing, we plan to re-bundle SciML packages back down to a smaller set and use features as a way to separate compile and allow for quicker load times by default. With these kinds of changes already being lined up, I think TechnicalCompute.jl is likely to not be so useful, since for example SciML.jl should be almost the same thing except setup with separate procompilation, pooled issues, etc. \r\n\r\nNow last thing is I think such a pooled system would be very useful if it had some automation in terms of version bumping and binary building. If this was \"Scientific Julia\" system images with a website that was auto-building an updating system image that has a clean set of all major packages built in, I would be on-board for that. That is something that I have been considering maintaining with SciML since it would be easier to globally document. though I am mostly waiting on the features feature now which would effectively make that a simpler design.\r\n\r\nSo all this is to say, I'm not sure of the value of the current form in 2024. To me, it's missing the hard parts that I think would be required for adoption:\r\n\r\n1. A high-level comprehensive documentation of cross-package workflows\r\n2. Automated system image building and binary distribution as a weekly-updatable batteries included Julia download (which would be nice to setup to juliaup)\r\n\r\nWhat I think it currently has a use for is as a test of ecosystem coordination. But I think it needs a bit more CI involved in order to really fill this purpose. It would be nice if it auto-ran daily tests, highlighted all cross-package inconsistencies, and pinged the right people to start discussions. But it's missing the devops component to this.\r\n\r\nOverall, the current state of the package I think is very useful for highlighting things that need to be changed in the ecosystem today, but I don't see the devops elements for it to really sustain itself as a multi-dev tool, nor do I see the elements for full adoption.\r\n\r\nThat said, I'm very lenient on the registration process. So I'd say, if you pick a more specific name for it `TechnicalComputeForStudents` then I'd say, let's see what happens.",
+      "createdAt": "2024-11-17T09:46:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2481085912",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UjFj1",
+      "author": {
+        "login": "dgleich"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for all the feedback!! (@ChrisRackauckas  -- lots of good ideas in that note, really appreciate it; will keep feedback for another channel and/or when things come up.) \r\n\r\nSo it sounds like this is 'probably okay' but we'll need to change the name. \r\n\r\nI'm trying to avoid names that put down students or 'special case' things for them, and something that might have some appeal to a broader group as well. \r\n\r\nWould \r\n\r\n`StarterPackages.jl` \r\n\r\nbe acceptable? \r\n\r\n(I have a longer list of possibilities ... just trying to focus discussion.) ",
+      "createdAt": "2024-11-21T20:29:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2492225781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ujqj4",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would also avoid that because it sounds like the set of starter packages _everyone_ should have. I'd like to add one word which makes its opinionated aspect more salient. Maybe TechnicalComputeBundle.jl? TechnicalComputeSelection.jl?",
+      "createdAt": "2024-11-21T21:30:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2492377336",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UkRWl",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I like TechnicalComputingBundle.jl",
+      "createdAt": "2024-11-21T23:07:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2492536229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UlBEm",
+      "author": {
+        "login": "dgleich"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, I'll go with TechnicalComputeBundle.jl, I liked that one too! Just to be clear on next steps. I rename Repo and then send a new register request (after fixing the license, Project, Readme, etc.)?",
+      "createdAt": "2024-11-22T02:11:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/119329#issuecomment-2492731686",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TechnicalCompute\n- Repository: https://github.com/dgleich/TechnicalCompute.jl\n- Created by: @dgleich\n- Version: v1.0.0\n- Commit: 0a19c4accb56fce081cc0678672c2cdabed1baea\n- Reviewed by: @dgleich\n- Reference: https://github.com/dgleich/TechnicalCompute.jl/commit/0a19c4accb56fce081cc0678672c2cdabed1baea#commitcomment-149043307\n- Description: A simple metapackage for Julia to be used for technical computing\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63c7610195b071290d05333b755aa8da42a47092f54578a5c1bf8d6008b87a6572e8d7a42c8ed90036eec5ea0c155066a1946a134cb857e6c10c825899d9c9d7b2b7ff1402a73f3647e698d7826319094e5b63acec83ea2b094242a51df3dd94d0b4080706d6dc55251c2a70538f544ac995140142eea96cb79f6b65e2bde5457e30c4da4f7434ce3574eddbb74b6e2a02a2f60567058a0f4d5362f3f813db9b592265848821fc7905809b6d4e83ca604 -->",
+  "package_name": "TechnicalCompute",
+  "closed_at": "2024-11-23T07:28:39Z",
+  "title": "New package: TechnicalCompute v1.0.0"
+}

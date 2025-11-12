@@ -1,0 +1,106 @@
+{
+  "created_at": "2024-02-13T23:51:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 100817,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85zzdvM",
+      "author": {
+        "login": "mwoodward-LANL"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator register()",
+      "createdAt": "2024-02-13T23:55:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1942870988",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zzecK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Version number is not allowed to contain prerelease data\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: LaTeXStrings, Measures, NPZ, Plots\n- Package name similar to 4 existing packages.\n  1. Similar to SIMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to CZML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to ZMQ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-13T23:58:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1942873866",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zzypW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`MoriZwanzigModalDecomposition` would be a suitable package name for this.",
+      "createdAt": "2024-02-14T01:38:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1942956630",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z4lfs",
+      "author": {
+        "login": "mwoodward-LANL"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have changed the name of the package and this is reflected in github repo. How do I retrigger Registrator?",
+      "createdAt": "2024-02-14T16:46:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1944213484",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z4xnX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You just do a new registration. With a changed package name, it'll be a new PR, and we'll close this one.",
+      "createdAt": "2024-02-14T17:14:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1944263127",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z4645",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/100873\r\n\r\nHowever, you still can't register a `-DEV` version. Maybe what you want to do is release `v0.1.0`, and then if that works and you're sure that your API is stable, you can release `v1.0.0` after that? The `compat` issues also have to be fixed before the package can be registered.",
+      "createdAt": "2024-02-14T17:39:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100817#issuecomment-1944301113",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MZMD\n- Repository: https://github.com/lanl/MZMD.jl\n- Created by: @mwoodward-LANL\n- Version: v1.0.0-DEV\n- Commit: 4e2ed9fcfc83958ff5ca581e980f43fa3b71cc2b\n- Git reference: HEAD\n- Description: This repository contains the source codes for the manuscript \"Mori-Zwanzig Modal Decomposition\". The source codes were reviewed and approved with a LANL O-number O4678\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> @JuliaRegistrator register()\n<!-- END RELEASE NOTES -->",
+  "package_name": "MZMD",
+  "closed_at": "2024-02-14T17:39:25Z",
+  "title": "New package: MZMD v1.0.0-DEV"
+}

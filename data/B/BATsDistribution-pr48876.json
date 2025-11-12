@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-11-16T15:40:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 48876,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8451yjg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Distributions, ForwardDiff, Ipopt, Roots\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-16T15:44:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/48876#issuecomment-970402016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8457WM6",
+      "author": {
+        "login": "mlkrock"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can be closed as we have renamed the package. Please see \r\nhttps://github.com/JuliaRegistries/General/pull/48955",
+      "createdAt": "2021-11-17T18:35:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/48876#issuecomment-971858746",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BATsDistribution\n- Repository: https://github.com/mlkrock/BATsDistribution.jl\n- Created by: @mlkrock\n- Version: v0.1.0\n- Commit: 57e1fe7ecd31dc958bbbab91e727d26422680d25\n- Git reference: HEAD\n- Description: Julia package for Bulk-And-Tails (BATs) distribution, along with R  interface\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial release\n<!-- END RELEASE NOTES -->",
+  "package_name": "BATsDistribution",
+  "closed_at": "2021-11-18T11:30:09Z",
+  "title": "New package: BATsDistribution v0.1.0"
+}

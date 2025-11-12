@@ -1,0 +1,195 @@
+{
+  "created_at": "2024-09-08T17:51:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 114769,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86LSEh9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, TestItemRunner\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-08T17:54:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2336770173",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LSL-O",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure that it has documentation and tests before registering.",
+      "createdAt": "2024-09-08T19:39:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2336800654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LSOTh",
+      "author": {
+        "login": "javinoram"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, when I had the documentation and some more code, I will upload again.",
+      "createdAt": "2024-09-08T20:09:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2336810209",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LSPTe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We can just keep this open. You can retrigger the registration to update this PR when you’re ready [noblock]",
+      "createdAt": "2024-09-08T20:25:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2336814302",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PV4k8",
+      "author": {
+        "login": "javinoram"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, I received an email with the bot’s message, recently I didn't have some much time to work in the project, so what should I do? if the PR get closed, can I retriggered?",
+      "createdAt": "2024-10-10T11:49:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2404878652",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PV6Wl",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Yes, if it gets closed (but it won’t for another 30 days now, at least), you can just re-register it at any point in the future, and it will just be a new PR",
+      "createdAt": "2024-10-10T11:53:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2404885925",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PV_13",
+      "author": {
+        "login": "javinoram"
+      },
+      "authorAssociation": "NONE",
+      "body": "thanks",
+      "createdAt": "2024-10-10T12:04:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2404908407",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UwN6a",
+      "author": {
+        "login": "javinoram"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, it's me again, sorry to bother you again, I upload a new version with more code (the last month, I forget to ask here) and I was wondering if now it can be merged or I'm missing something else, thank you in advance",
+      "createdAt": "2024-11-23T22:04:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2495667866",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UwPMB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, seems okay now. It wouldn't be a bad idea to copy the introduction paragraph into the README, and also a link to the full documentation (most packages use \"badges\" as documentation links).\r\n\r\nSince this PR is now quite out-of-date, and just to make sure that the version that gets registered is the _current_ version, I would recommend setting the version to `0.1.0` at this point and to redo the registration. That'll create a new PR which then should auto-merge after three days. I'll close this PR once the new one is online.",
+      "createdAt": "2024-11-23T22:27:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2495673089",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UwPek",
+      "author": {
+        "login": "javinoram"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, thanks.",
+      "createdAt": "2024-11-23T22:33:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2495674276",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UwcTB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/120062",
+      "createdAt": "2024-11-24T00:54:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114769#issuecomment-2495726785",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SpinSim\n- Repository: https://github.com/javinoram/SpinSim.jl\n- Created by: @javinoram\n- Version: v0.0.1\n- Commit: 2834c2119744ff75dc9f4b7062c1771146c194fb\n- Reviewed by: @javinoram\n- Reference: https://github.com/javinoram/SpinSim.jl/issues/4#issuecomment-2440118184\n- Description: Julia package to simulate and study spin models\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359829abf1917009cc414cadcbaa39e1176389fc7301f4bbfba0ac36a86a4dff774abe2d5667cad1a14b3ff6b6c473e799d0bd13a165925c2306a7529218bb88de55214b8ffa4a0be88e4c7f21b80f70eff6b008a4fdca901e34cab54b9b8895e5ed2e6fddbbe019f515764b71bf0d5e89e36a737e69e699d1a3d90fe4865289f2fb -->",
+  "package_name": "SpinSim",
+  "closed_at": "2024-11-24T00:54:21Z",
+  "title": "New package: SpinSim v0.0.1"
+}

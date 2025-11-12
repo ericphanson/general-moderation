@@ -1,0 +1,68 @@
+{
+  "created_at": "2025-04-29T11:19:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 129993,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86pL2z3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Version number is not allowed to contain prerelease data\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: MatrixMarket\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-29T11:25:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129993#issuecomment-2838457591",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pNE10",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on the new package!\nDo you think this functionality might make sense as part of https://github.com/JuliaLinearAlgebra/MatrixDepot.jl instead?",
+      "createdAt": "2025-04-29T13:01:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129993#issuecomment-2838777204",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pOI8s",
+      "author": {
+        "login": "pratikvn"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle , thanks for the pointer to the MatrixDepot package. I agree that it makes sense to incorporate the functionality here into that package, and I will try to do so.\r\n\r\nAs it does not make sense to add this package to the registry, I will not update this PR anymore, and I guess the [stale PR automation will close it](https://github.com/JuliaRegistries/General/blob/master/README.md#how-do-i-close-a-pr-that-registrator-has-opened-for-my-package).",
+      "createdAt": "2025-04-29T14:03:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129993#issuecomment-2839056172",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Genasys\n- Repository: https://github.com/pratikvn/Genasys.jl\n- Created by: @pratikvn\n- Version: v1.0.0-DEV\n- Commit: 577d471e428352c2380dad10ed8a7fca98f75746\n- Git reference: v0.0.1\n- Description: Package to generate sparse matrices",
+  "package_name": "Genasys",
+  "closed_at": "2025-05-02T14:23:41Z",
+  "title": "New package: Genasys v1.0.0-DEV"
+}

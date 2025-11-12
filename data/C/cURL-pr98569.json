@@ -1,0 +1,245 @@
+{
+  "created_at": "2024-01-09T23:03:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 98569,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85wSp0Z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 1 existing package.\n  1. Similar to IsURL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-09T23:06:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1883938073",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wS4td",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'd like to present a few points for consideration:\r\n\r\nCapitalization: The name \"cURL\" is intentionally styled to match the well-known command-line tool for working with URLs, which is commonly recognized as \"cURL\". This choice helps users immediately identify the package's relation to cURL.\r\n\r\nName Length: While \"cURL\" is shorter than the five-character minimum, its brevity is an asset. It accurately reflects the original tool's functionality without unnecessary length.\r\n\r\nSimilarity to Existing Package: Despite the name \"cURL\" being similar to \"IsURL\", the packages serve entirely different purposes. \"IsURL\" is for URL validation, whereas \"cURL\" is about data transfer. This reduces the potential for confusion.\r\n\r\nI request that you consider manual merging for my package, given its specific characteristics",
+      "createdAt": "2024-01-10T00:21:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1883999069",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wTXM6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for contributing your package! Unfortunately, I'm very skeptical that an exception should be made for the package name.\r\n\r\nI would have an *extremely* high bar for a package name `cURL` in the general registry:\r\n\r\n* It would have to be a wrapper around libcurl: adapting to the name of a wrapped library would be the only possible reason to deviate from the normal rules for Julia package names, especially not starting with a capital letter.\r\n* It would have to be a *canonical* implementation, meeting all the expectations that entails\r\n* It should ensure continued maintenance. At a minimum, it should be hosted by a well-established organization with multiple owners. In this case, that would probably be JuliaWeb, which is how I stumbled on https://github.com/JuliaWeb/LibCURL.jl, which already seems to be the canonical wrapper around `libcurl`.\r\n\r\nBased on that, I'd argue for a hard \"No\" on this submission, and recommend that you rename the package to meet the guidelines.",
+      "createdAt": "2024-01-10T03:13:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 5
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1884123962",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wTXuN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If \"user-friendly\" is your distinguishing feature, maybe something like `FriendlyCurl`?",
+      "createdAt": "2024-01-10T03:16:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1884126093",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wVOCo",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> If \"user-friendly\" is your distinguishing feature, maybe something like `FriendlyCurl`?\r\n\r\nTongue-in-cheek trolling acknowledged with `FriendlyCurl`. Considering the guidelines and your arguments, I propose renaming `cURL` to `Curl` to adhere to the naming conventions. This change maintains a close association with the wrapped library while respecting the convention of capitalizing the first letter in Julia package names.\r\n\r\nWould this be an acceptable resolution? @goerz \r\n",
+      "createdAt": "2024-01-10T10:48:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1884610728",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wW5Hc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No, `Curl` does not meet the guidelines (too short)",
+      "createdAt": "2024-01-10T15:19:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885049308",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wW52c",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "And I wasn’t trolling you",
+      "createdAt": "2024-01-10T15:21:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885052316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wXm9A",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for the nice package, @gryumov. I should point out that the Downloads stdlib is already the de facto standard libcurl wrapper. This cURL package wraps curl’s “easy” API, which is much simpler but breaks Julia’s I/O model: if you start a download it blocks Julia from doing any other work. In order to correctly wrap libcurl and allow other work to happen while a download is in progress, you need to use curl’s advanced “multi” API, which is what Downloads does. Getting this correct is quite tricky and it has taken many Julia versions to iron out the bugs and performance issues (we seems to have finally gotten there).\r\n\r\nWhy does this matter? It matters because we don’t want people to be mislead by a package named cURL to suggest that the best way to download things or use the curl library is to use the cURL package. If anyone uses this cURL package to download something and their code is doing anything else, they’re going to be quite unhappy when their code stops making progress on anything else. What is the motivation for making another wrapper for libcurl? Did you want to see if you could do it? Or thought the Downloads stdlib was unnecessarily complex? Or are there features you wanted that it doesn’t expose?",
+      "createdAt": "2024-01-10T16:57:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885237056",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wXtgF",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you, @StefanKarpinski, for your detailed feedback. Our motivation in creating this particular cURL package was to leverage the extended capabilities of the Curl client library which allows for simple `curl_request(x...; kw...)` calls. This functionality was particularly necessary for our projects that required the ability to select network interfaces and proxies, especially within a multi-account environment.\r\n\r\nAdditionally, it hadn't occurred to me that a library named Downloads would have the capability to perform requests. The name doesn't immediately convey the idea of a full-fledged client library, which may lead some users to look for alternatives that seem to more directly match their use case by name alone.\r\n\r\nThis is my first experience in package registration and, to be honest, I am a bit surprised by the naming process. Our team had planned to release numerous packages into the public space, but now I am inclined towards the development of open local registries. The naming process turned out to be not as simple as I had expected, and I realize the need for a more flexible approach to managing our packages, particularly in the context of support.",
+      "createdAt": "2024-01-10T17:13:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885263877",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wYArv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The naming conventions for Julia packages are quite different from most other languages and take some getting used to. In most cases, the expectation is for pretty long and descriptive names in CamelCase. You're certainly not the first one to brush up against this, coming from another language.\r\n\r\nAs far as I'm concerned, this looks like a very nice and polished package, and it would be great to have it in General with a more appropriate name. A high-level cURL implementation that focuses on a user-friendly API, for example, could be named something like `FriendlyCurl`, so that was a genuine suggestion. But anything [DescriptiveWord]Curl should be totally fine.\r\n\r\nIf you have a larger set of packages that are primarily for use in the context of your company or organization, then a `LocalRegistry` could be appropriate (and then you can use whatever names you want, of course). But I would very much encourage you to think about the package naming and contribute to the General registry. It might be a possibility to use `[OrgPrefix]Curl` for this and future packages (although `BHFT` isn't the nicest prefix).",
+      "createdAt": "2024-01-10T17:52:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885342447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wYBCc",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The General registry is a shared community resource. Most names are fine, but very short, specific names that suggest some level of \"officialness\" may get some pushback. I doubt there'd be much trouble with other package names. You could call this `CurlEasy` or `CurlBlocking` or something like that and put a disclaimer in the README that it will block all I/O when used. You could also copy some of the way `Downloads` uses the \"curl_multi\" API and fix the blocking issue while exposing more of the libcurl API. If you did that, I think it would be reasonable to consider this the wrapper for libcurl and the name would be ok so long as the README mentions `Downloads` for simple use cases.",
+      "createdAt": "2024-01-10T17:53:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885343900",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wYvEj",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": ">  (although BHFT isn't the nicest prefix).\r\n\r\nyes, yes, eye-gouging\r\n\r\n> You could call this CurlEasy\r\n\r\ni like the name `EasyCurl`, thank you!\r\n\r\nhttps://github.com/JuliaRegistries/General/pull/98653",
+      "createdAt": "2024-01-10T19:18:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98569#issuecomment-1885532451",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: cURL\n- Repository: https://github.com/bhftbootcamp/cURL.jl\n- Created by: @gryumov\n- Version: v1.0.0\n- Commit: 08ca91dfd323ec3dd7324936431a2a49951eaaaa\n- Reviewed by: @gryumov\n- Reference: https://github.com/bhftbootcamp/cURL.jl/commit/08ca91dfd323ec3dd7324936431a2a49951eaaaa#commitcomment-136649607\n- Description: cURL is a lightweight Julia package that provides a user-friendly wrapper for the libcurl C library, for making HTTP requests. It is useful for sending HTTP requests, especially when dealing with RESTful APIs.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fd16f2157b66ae38fcd16246968561f74f232eb0724201ac352a2cdfb354751a378a942979e4cbdbb7f8f1892ca8d611db9ae639cf2b9423146d521087ca5cd94f80a1a61e1b16680874895ee94a5d10148b7f8917e31c0098ee1c10361d90a8fad4ccf54f229876380898bb4e00164151df0508843e5463906291c92f1a9ddcb46e331f085d5e3afc817123d7b39cb186e0888f575e3baef97589320706bff52129d89c54946b93b71e89c9b3060664 -->",
+  "package_name": "cURL",
+  "closed_at": "2024-01-30T08:25:21Z",
+  "title": "New package: cURL v1.0.0"
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-11-20T11:32:38Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 49081,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846F8Xi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"Sentinel\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import Sentinel` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-20T11:35:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49081#issuecomment-974636514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846GBxa",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #49082, I suppose.\r\n\r\n@mhudecheck note that if you do _**not**_ change the version number every time, you update the same pull request instead of opening multiple times that then have to be closed.",
+      "createdAt": "2021-11-20T14:34:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49081#issuecomment-974658650",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Sentinel\n- Repository: https://github.com/mhudecheck/Sentinel.jl\n- Created by: @mhudecheck\n- Version: v0.2.0\n- Commit: a155b01cf49c35b7afa927f8e8a64786e872b636\n- Reviewed by: @mhudecheck\n- Reference: https://github.com/mhudecheck/Sentinel.jl/issues/1\n- Description: This is a Julia library for processing ESA Sentinel 2 satellite data.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> New features\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598db5f14f9d69c98f264307d1b18c99f360a7b944216b8a51194ba4934c9e17d875f8f1200a28e3f2b47d07b7220bb72ec907da5105d795b4cdc941c21d2753eb83e0e8cefaaaf286458a2708928e56bb963384347f623a853d31fcc090e3b370a0fd4daff42f7d6744f9b7c6a2256b2493a7c2b2d7b1cd568ade5292b53117a69 -->",
+  "package_name": "Sentinel",
+  "closed_at": "2021-11-20T14:34:50Z",
+  "title": "New package: Sentinel v0.2.0"
+}

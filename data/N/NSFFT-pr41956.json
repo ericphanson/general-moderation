@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-08-01T19:21:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 41956,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q841FRD7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Repo URL does not end with /name.jl.git, where name is the package name\n- I was not able to load the package (i.e. `import NSFFT` failed). See the CI logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to NFFT. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to NFFT3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-08-01T19:24:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41956#issuecomment-890573051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q841FRWL",
+      "author": {
+        "login": "dannys4"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ignore this registration, I forgot to rename the package in the Project.toml",
+      "createdAt": "2021-08-01T19:33:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/41956#issuecomment-890574219",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NSFFT\n- Repository: https://github.com/dannys4/FFTA.jl\n- Created by: @dannys4\n- Version: v0.1.0\n- Commit: 2f68b3707c93e36d1a5f4cca0cc20e3a9c5ee960\n- Reviewed by: @dannys4\n- Reference: https://github.com/dannys4/FFTA.jl/issues/7#issuecomment-890572662\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598530f75385e8bef5a5931df36c48fb0c1c1f135545f7d0c530ceb495f22daa9161873a13e1f63e315c554f71af951987e5d37055d895b266dbe0e71d880441c25165e405be2b913e0974db2c19fabd6fea75473c49973ffc0e8bac12c12087fd6178a5884565f11faf4365318ad24d55c -->",
+  "package_name": "NSFFT",
+  "closed_at": "2021-08-01T20:42:39Z",
+  "title": "New package: NSFFT v0.1.0"
+}

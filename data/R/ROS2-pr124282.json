@@ -1,0 +1,128 @@
+{
+  "created_at": "2025-02-04T01:15:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124282,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86c6YGg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- I was not able to load the package (i.e. `import ROS2` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-04T01:23:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2632548768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c-qs2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The point 3 in https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2632548768\r\n\r\n> * I was not able to load the package (i.e. `import ROS2` failed). See the [AutoMerge logs](https://github.com/JuliaRegistries/General/pull/124282/checks) for details.\r\n\r\nneeds to be resolved before this can be merged manually (overriding the package name issues).\r\n\r\nThe underlying error causing the failure seems to be at https://github.com/JuliaRegistries/General/actions/runs/13126257401/job/36623084104?pr=124282#step:17:401",
+      "createdAt": "2025-02-04T11:49:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2633673526",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c_zaK",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thank you so much for the detailed explanation. I have submitted a PR for auto-merge (https://github.com/JuliaRegistries/General/pull/124318) again. I modified the` __init__ `function in ROS2.jl to pass CI checks. If it fails, I can revisit the solution. Thanks for your help with this process.\r\n\r\n\r\n```\r\nfunction __init__()\r\n    if contains(lowercase(get(ENV, \"GITHUB_WORKFLOW\", \"\")), \"automerge\")\r\n        return\r\n    end\r\n    \r\n    try\r\n        copy!(rclpy, pyimport_conda(\"rclpy\", \"rclpy\", \"conda-forge\"))\r\n        copy!(rclpy_node, pyimport(\"rclpy.node\"))\r\n    catch e\r\n        @warn \"ROS2 initialization deferred: $e\"\r\n    end\r\nend\r\n\r\n```",
+      "createdAt": "2025-02-04T13:36:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2633971338",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c__MT",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry, same problems happen in #124318 ...\r\n\r\n> I was not able to load the package (i.e. import ROS2 failed). See the AutoMerge logs for details.\r\n\r\nI I'll investigate potential solutions for addressing our CI issues.\r\n\r\nAs for ROS.jl (https://github.com/gstavrinos/ROS.jl/blob/master/src/ROS.jl)\r\n __precompile__(false)\r\n ↑\r\nDo you know whether it is useful?",
+      "createdAt": "2025-02-04T13:46:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2634019603",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dL4ka",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> precompile(false)\r\n> ↑\r\n> Do you know whether it is useful?\r\n\r\nIt's something you never want to do, but in rare circumstances it might work around certain problems. I.e. don't do it unless it's the only way you can manage to get something to work.",
+      "createdAt": "2025-02-05T15:09:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2637138202",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dMXj3",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@GunnarFarneback Thank you so much for your advice. Now in the latest PR https://github.com/JuliaRegistries/General/pull/124318  which I want to merge has no problem with the import problem being solved without using precompile as shown in figures, but I would like to keep it in next time.\n\n![image](https://github.com/user-attachments/assets/2302b0a8-697a-4124-8b05-d261ee85b7c0)\n\n![image](https://github.com/user-attachments/assets/792a88a6-330f-4ac6-9858-fb0dd74b8478)",
+      "createdAt": "2025-02-05T15:35:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2637265143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dVeA-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124318\r\n\r\nFor the future, please try to avoid changing the version number when fixing automerge issue. The key to that is not to create tags manually before the registration has been merged, see https://github.com/JuliaRegistries/General/pull/124318#issuecomment-2639649307",
+      "createdAt": "2025-02-06T12:10:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124282#issuecomment-2639650878",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ROS2\n- Repository: https://github.com/Michi-Tsubaki/ROS2.jl\n- Created by: @Michi-Tsubaki\n- Version: v0.1.4\n- Commit: 23155df07d0b4c9d7d04904c1e3cc12694628979\n- Reviewed by: @Michi-Tsubaki\n- Reference: https://github.com/Michi-Tsubaki/ROS2.jl/issues/6#issuecomment-2632538122\n- Description: Robot Operating tool using Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ec4dc6bdd6af107957063bfcad4e69d78703cd628690b4c80b4059512d66f5d0cf4c2c0cb96f760eb087102b5fcb52bff2c95a392d95478b46143dca0674f24e22b18e13c71555cd79069cfe7d6104c9abd7e44064cc40b3931ee1347f27e7ae79442fcfdba55d5c1f025a30ed88743c2872c0f86a64dc26be209f9237fb8f07 -->",
+  "package_name": "ROS2",
+  "closed_at": "2025-02-06T12:10:10Z",
+  "title": "New package: ROS2 v0.1.4"
+}

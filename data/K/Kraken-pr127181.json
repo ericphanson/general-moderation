@@ -1,0 +1,282 @@
+{
+  "created_at": "2025-03-18T21:38:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 127181,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86jAhyi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-18T21:52:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2734824610",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jA6zA",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] How does this compare to https://github.com/org-arl/AcousticsToolbox.jl? @mchitre",
+      "createdAt": "2025-03-18T23:09:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2734927040",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jA-Qu",
+      "author": {
+        "login": "vardister"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n@goerz @mchitre \r\nhttps://github.com/org-arl/AcousticsToolbox.jl includes support for running a Fortran version of the Kraken program through writing and reading files to and from the program.\r\n\r\nHere is a version of Kraken entirely written in Julia, with extra support for calling the Fortran version through `ccall`.\r\n\r\nSome parts of this program are also inspired by https://github.com/org-arl/UnderwaterAcoustics.jl, and credit will be given once I finish writing the README file.",
+      "createdAt": "2025-03-18T23:21:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2734941230",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jBZNU",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\n\n@vardister Would it be possible to implement the model API in `UnderwaterAcoustics.jl` in `Kraken.jl`? That way it can become a model that can easily swapped in by anyone who already uses `UnderwaterAcoustics.jl`? We have some changes to the API in the upcoming version, so I could work with you on this.\n\nI noticed that you have so and dll files checked into your repo. This may make things tricky to support different architectures and OSs. You may want to consider using BinaryBuilder infrastructure for native compilation across platforms.",
+      "createdAt": "2025-03-19T01:05:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2735051604",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jIJYr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> once I finish writing the README file.\r\n\r\nI would generally ask that the README file is complete _before_ the registration goes through. [The general point](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), is to have a description of the package's purpose and a small usage example in (or linked from) the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is a lack of documentation.\r\n\r\nIn the longer term, I definitely recommend setting up a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation. Before a `v1.0` release, or for smaller packages that can be effectively described entirely with their `README`, that's not a requirement, though.\r\n\r\nI also wanted to make a general comment on the name: I haven't been able to find out very much about [the original KRAKEN](https://oalib-acoustics.org/website_resources/AcousticsToolbox/manual/kraken.html), specifically whether it is an acronym or not. It seems like it is not, but that the uppercase spelling is a remnant of Fortran code using uppercase formatting back in the day. If it was an acronym (and widely recognized as such), `KRAKEN.jl` in https://github.com/JuliaRegistries/General/pull/127169 would have actually been appropriate. Just for future reference, the bot-rule against all uppercase letters is not a _hard_ rule. Changing a package name _just_ to make a bot happy is usually not a good idea. Alas, in this case, `Kraken` seems like the appropriate name, so let's stick to that.\r\n\r\nThat being said, a search shows the \"Kraken\" is a heavily overloaded name in software projects. At least, there's a popular [OCR project](https://kraken.re/main/index.html), a [cryptocurrency exchange](https://kraken.com), an [image optimizer](https://kraken.io) and [possibly more](https://en.wikipedia.org/wiki/Kraken_(disambiguation)). That makes me a little uneasy about monopolizing the name in `Kraken.jl`. My recommendation would probably be for `AcousticKraken.jl`. I leave this up to your best judgment, though. Ultimately, there is a bit of a \"first come, first serve\" policy. That doesn't mean it's not a good idea to disambiguate package names as much as possible, since the General registry has to serve a very wide audience.\r\n\r\nWhen you renamed from `KRAKEN` to `Kraken`, it seems like the uppercase spelling is still in a lot of places, like the README and the tests. That also means the tests aren't currently being run. I _strongly_ recommend setting up automated tests before registering the package.\r\n\r\n\r\n",
+      "createdAt": "2025-03-19T14:20:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2736821803",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jIMF1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh, I also just noticed you are already at a version > 1.0. If you intend to follow [semantic versioning](https://semver.org), that means your package should have a stable and fully documented API, and that you track breaking and non-breaking changes. In my opinion, the latter _requires_ automated tests with decent coverage. So I would very much recommend that you polish up the package a bit more with full documentation and testing before continuing with the registration.",
+      "createdAt": "2025-03-19T14:23:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2736832885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jIW6Q",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I noticed that you have so and dll files checked into your repo. This may make things tricky to support different architectures and OSs. You may want to consider using BinaryBuilder infrastructure for native compilation across platforms.\r\n\r\nI'm not 100% sure if there's a hard rule against compilation artifacts in the `src` folder, but I think there is (if I'm not making up memories of earlier discussions on this issue). We should probably add automated checks for binary files in `src`. In any case, `BinaryBuilder` is definitely the correct way to handle this.\r\n\r\nSo that's probably more of a blocker for the registration of this package than the naming or the state of documentation/testing.",
+      "createdAt": "2025-03-19T14:36:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2736877200",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jKESn",
+      "author": {
+        "login": "vardister"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n> @vardister Would it be possible to implement the model API in `UnderwaterAcoustics.jl` in `Kraken.jl`? That way it can become a model that can easily swapped in by anyone who already uses `UnderwaterAcoustics.jl`? We have some changes to the API in the upcoming version, so I could work with you on this.\r\n> \r\n> I noticed that you have so and dll files checked into your repo. This may make things tricky to support different architectures and OSs. You may want to consider using BinaryBuilder infrastructure for native compilation across platforms.\r\n\r\n\r\n@mchitre It's absolutely possible! I would be happy to be working with you on that. What's the best channel of communication for you?\r\n\r\nAnd thanks for the suggestion about the binary files. I thought I would get by with a Make file, but BinaryBuilder is definitely the way to go.",
+      "createdAt": "2025-03-19T16:36:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2737325223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jKLso",
+      "author": {
+        "login": "vardister"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n> Oh, I also just noticed you are already at a version > 1.0. If you intend to follow [semantic versioning](https://semver.org/), that means your package should have a stable and fully documented API, and that you track breaking and non-breaking changes. In my opinion, the latter requires automated tests with decent coverage. So I would very much recommend that you polish up the package a bit more with full documentation and testing before continuing with the registration.\r\n\r\nYou are correct. I will get it back to version 1.0 and start from there. I will polish a test set for this as well.\r\n\r\n> I would generally ask that the README file is complete before the registration goes through. [The general point](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), is to have a description of the package's purpose and a small usage example in (or linked from) the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is a lack of documentation.\r\n\r\nGood opportunity to work on my README file then!\r\n\r\n> I also wanted to make a general comment on the name: I haven't been able to find out very much about [the original KRAKEN](https://oalib-acoustics.org/website_resources/AcousticsToolbox/manual/kraken.html), specifically whether it is an acronym or not. It seems like it is not, but that the uppercase spelling is a remnant of Fortran code using uppercase formatting back in the day. If it was an acronym (and widely recognized as such), KRAKEN.jl in https://github.com/JuliaRegistries/General/pull/127169 would have actually been appropriate. Just for future reference, the bot-rule against all uppercase letters is not a hard rule. Changing a package name just to make a bot happy is usually not a good idea. Alas, in this case, Kraken seems like the appropriate name, so let's stick to that.\r\n\r\nKRAKEN is just a very well known name for a program in the field of underwater acoustics, and it is referenced in dozens, if not hundreds, of papers in the field. My thinking goes that it would make it much easier for people in the field to recognize the program and understand its implementation, as it is quite similar to the original Fortran version. I will give it some thought though following your comments.\r\n\r\n\r\n> I'm not 100% sure if there's a hard rule against compilation artifacts in the `src` folder, but I think there is (if I'm not making up memories of earlier discussions on this issue). We should probably add automated checks for binary files in `src`. In any case, `BinaryBuilder` is definitely the correct way to handle this.\r\n> \r\n> So that's probably more of a blocker for the registration of this package than the naming or the state of documentation/testing.\r\n\r\nI deleted the binary files. I do have a Make file ready to go. Will try and use it with BinaryBuilder.\r\n\r\n\r\n\r\n@goerz Generally, wanted to say thanks for for all the helpful comments!\r\n\r\n",
+      "createdAt": "2025-03-19T16:44:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2737355560",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jQqds",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n@vardister I think the suggestion was to go to a pre-release version `0.x.y` if you feel that the API may change in the initial days of the package. To follow semantic versioning, once you have a `1.x.y` version, any breaking changes (e.g. API changes that will force users to change their code) will force you to have a major version change to `2.x.y`.",
+      "createdAt": "2025-03-20T03:49:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2739054444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jUsHJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I think the suggestion was to go to a pre-release version 0.x.y\r\n\r\nThat's one possibility, the other being to go to 1.0 (or keep 1.2), but bringing the documentation and tests into shape, for that label to be justified.\r\n\r\nPersonally, I would usually make the initial public release <1.0. You can still go from, e.g., v0.1 to v1.0 without substantive changes later on, if the original API proves to be useful. However, for a package like this, where the API is determined by the original KRAKEN project, there might be less room for the \"experimental\" pre-1.0 stage of development. An initial public version 1.0 would then be fine, provided it can live up to the expectations set by semantic versioning.\r\n\r\n> KRAKEN is just a very well known name for a program in the field of underwater acoustics, and it is referenced in dozens, if not hundreds, of papers in the field.\r\n\r\nJust to clarify this further: Different languages have different naming conventions. Especially with compiled languages like Fortran/C++, there's never been a central authority, and names tend towards \"short\" and also towards acronyms. This is very much not the case with Julia, where the community expectation is mostly for `LongDescriptiveName` (unless there's a witty short name like `Makie` or something like that). Acronyms in particular are very frowned upon. I recommend that when people switch from some other language to Julia, they adapt to Julia's conventions instead of bringing over conventions from the other language.\r\n\r\nThere are exceptions to the naming guidelines for wrappers, or potentially for translations as well. The automatic rule again all-cap names is mainly to protect against random acronyms. At least in my opinion, it should not cover _pronounceable_ acronyms. But still, it doesn't seem like the original KRAKEN is actually an acronym, so I think the more Julian variation of that name, `Kraken` (or `AcousticKraken`), is preferable and still has plenty of name recognitions to potential users familiar with the traditional KRAKEN.",
+      "createdAt": "2025-03-20T11:34:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2740109769",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86js8ns",
+      "author": {
+        "login": "vardister"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think I will strive towards getting the version down below 1.0.0 as I won't have nearly enough time to get everything in order soon.\r\n\r\n@goerz Should I go with getting a new issue opened with the registration bot or just commit the new version numbering?\r\n\r\n@mchitre Would you have a good suggestion for a good package name? `AcousticKraken` does sound good though.",
+      "createdAt": "2025-03-23T21:10:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2746468844",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jutrj",
+      "author": {
+        "login": "mchitre"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nI personally like just `Kraken.jl`, since it is not likely to be confused with anything else and directly reflects the name of the original model. But `AcousticKraken.jl` or `KrakenModes.jl` or `KrakenAcousticModes.jl` could work too.",
+      "createdAt": "2025-03-24T05:28:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2746931939",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jzbCk",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Should I go with getting a new issue opened with the registration bot or just commit the new version numbering?\r\n\r\nIf you make any changes, you just retrigger the registration the same way you did the original registration. Personally, I just comment `@Registerator register` on the commit that I want to be tagged as the release. I never really understood the process of doing this via issues, but presumably that works as well.\r\n\r\nIn any case, if you change the name of the package or the version number, this will automatically create a new registration PR here (and we would close this PR in favor of the new one). For other things, like updating the documentation, or hypothetically fixing many of the issues that the registration bot flags (like invalid compat bounds), retriggering the registration would update an existing PR.\r\n\r\n[noblock]",
+      "createdAt": "2025-03-24T13:37:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2748166308",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lPvlM",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #128174.",
+      "createdAt": "2025-04-02T12:12:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127181#issuecomment-2772367692",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Kraken\n- Repository: https://github.com/vardister/Kraken.jl\n- Created by: @vardister\n- Version: v1.2.0\n- Commit: 297dbdd7a5ceb56562c24a07ab37403556792001\n- Reviewed by: @vardister\n- Reference: https://github.com/vardister/Kraken.jl/issues/1#issuecomment-2734856268\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598108b7e0b41e6bc0b730fbc33a291013415eb6765d4b9bf77f75d6480ba7372ead2aa7796784ca309fabdef9e7b940b5023566e61154b12eba308d135ef626f0c7d13966615b55748349c05828e3a15460819b63286da26402638a184bd9ca34797d97f752a1730995f4dfce3ed482d6aa4894b38f610bd3984091ed31b7e9334 -->",
+  "package_name": "Kraken",
+  "closed_at": "2025-04-02T12:12:02Z",
+  "title": "New package: Kraken v1.2.0"
+}

@@ -1,0 +1,136 @@
+{
+  "created_at": "2025-09-28T01:14:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 139285,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87HNXIZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-28T01:21:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3342168601",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HNZ9v",
+      "author": {
+        "login": "Tortar"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Given the similarity of name with other packages, maybe I could use instead something like `KeyedTables.jl` which was a possible contender. Will soon open a new pr",
+      "createdAt": "2025-09-28T01:46:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3342180207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HNncN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name similarity is a false positive. My main question would be whether this is an `IdTable` in the exact same sense that `IdDict` is an `IdDict`. If yes, then I think the name is appropriate.\r\n\r\nBut, based on the README, it seems that it’s something different, so maybe `KeyedTables` would indeed be better",
+      "createdAt": "2025-09-28T03:29:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3342235405",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HNpt_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General/pull/139286#issuecomment-3342242368\r\n\r\nI'm not sure what my stance is on \"renaming\" an existing registered package (i.e., officially abandoning the existing package, and registering a new one). My first intuition would be \"avoid\", but on second thought, it's probably okay, if there's a strong reason to do so.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-28T03:45:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3342244735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HWmJw",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I personally don't see anything wrong with the current (\"old\") name, but maybe the package indeed changed enough to warrant a rename... IMO there should be at least some bar for renaming a registered package.\r\n[noblock]\r\n",
+      "createdAt": "2025-09-29T01:56:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3344589424",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Hvu02",
+      "author": {
+        "login": "Tortar"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "yeah, I'm still undecided about the rename, in any case this is not a good name because it clashes with `IdDict` but doesn't have much in common, so this PR can be closed",
+      "createdAt": "2025-09-30T10:22:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3351178550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87OsYA6",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-30T12:24:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3467739194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87QcDuq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-11-06T12:24:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139285#issuecomment-3497016234",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IdTables\n- Repository: https://github.com/Tortar/IdTables.jl\n- Created by: @Tortar\n- Version: v0.1.0\n- Commit: c74ce9743251bb8da7f627667bf33bccb67a0e21\n- Git reference: HEAD\n- Description: Tables with stable identifiers in Julia\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis is a rename: the package was previously called IndexedStructVectors.jl\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "IdTables",
+  "closed_at": "2025-11-06T12:24:19Z",
+  "title": "New package: IdTables v0.1.0"
+}

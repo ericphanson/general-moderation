@@ -1,0 +1,121 @@
+{
+  "created_at": "2021-10-23T22:41:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 47391,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844o1OG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 5 existing packages.\n  1. Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.23 is at or below cutoff of 2.50.\n  2. Similar to Soss. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Folds. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Mods. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Plots. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-23T22:45:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-950227846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844o1bY",
+      "author": {
+        "login": "jmichel7"
+      },
+      "authorAssociation": "NONE",
+      "body": "I called my package `Pols` since `Pol` is the data type produced by my package, so it seemed logical. If this is not accepted I am ready to accept suggestions. This package is used by another I intend to register tomorrow, called `Mvps` since it provides\r\n`Mvp` (multivariate polynomials). I will encounter the same problem I guess. I became used to this names since they are the names for the similar data types in GAP3 whose port started these packages (but the current packages have nothing anymore to do with GAP3 -- they are very generally useful).",
+      "createdAt": "2021-10-23T22:54:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-950228696",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844o_jQ",
+      "author": {
+        "login": "baggepinnen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "How about the more descriptive names\r\nLaurentPolynomials and MultivariatePolynomials?\r\nPols and Mvps are not very easy to understand. ",
+      "createdAt": "2021-10-24T06:39:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-950270160",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844pCNd",
+      "author": {
+        "login": "jmichel7"
+      },
+      "authorAssociation": "NONE",
+      "body": "Le Sat, Oct 23, 2021 at 11:39:13PM -0700, Fredrik Bagge Carlson a écrit :\n> How about the more descriptive names\n> LaurentPolynomials and MultivariatePolynomials?\n> Pols and Mvps are not very easy to understand. \n\nThere is already a package called MultivariatePolynomials (part of Oscar)\nso this name is not possible.\n------------------------------------------------------------------------------\nJean MICHEL, Groupes et representations, IMJ-PRG UMR7586 tel.(33)157279144\nBureau 639 Bat. Sophie Germain Case 7012 - 75205 PARIS Cedex 13\n",
+      "createdAt": "2021-10-24T08:12:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-950281053",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844pDoV",
+      "author": {
+        "login": "jmichel7"
+      },
+      "authorAssociation": "NONE",
+      "body": "It seems I cannot ask registration of Mvps which depends on Pols until Pols is registered so naming both needs to be resolved here and now. It seems I could use the names LaurentPolynomials and PuiseuxPolynomials which are not yet taken, but I think it is not nice of me (or anyone) to preempt the namespace this way, and that choosing rather the (unusual) names Pols and Mvps would cause less friction with other potential packages.  But I will follow the official policy if it disagrees. ",
+      "createdAt": "2021-10-24T08:56:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-950286869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846M930",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-11-23T12:44:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-976477684",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846oKQt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-12-01T12:46:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47391#issuecomment-983606317",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Pols\n- Repository: https://github.com/jmichel7/Pols.jl\n- Created by: @jmichel7\n- Version: v0.0.3\n- Commit: 893a34b90c2ede57636bc3250ba6eb2a33486c92\n- Git reference: HEAD\n- Description: Univariate Laurent polynomials and rational fractions",
+  "package_name": "Pols",
+  "closed_at": "2021-12-01T12:46:15Z",
+  "title": "New package: Pols v0.0.3"
+}

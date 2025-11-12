@@ -1,0 +1,121 @@
+{
+  "created_at": "2022-02-16T20:36:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 54786,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-H8hX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-16T20:40:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042270295",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-IEiA",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Checkout FHist.jl and StatsBase.jl for histogram.\n\n\nIn general personally used utility packages don't need to get registered. You can ]add by GitHub url to distribute to friends or a different computer of your own",
+      "createdAt": "2022-02-16T20:56:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042303104",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-IHyv",
+      "author": {
+        "login": "kirklong"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @Moelf &mdash; Originally I had intended to submit this functionality as PR to StatsBase, but based on [advice of others there](https://github.com/JuliaStats/StatsBase.jl/pull/760) it seemed better to try to find a home for it as a standalone utility or in a different package. I thought it would be a good learning experience to make my own package for the first time so opted to try going that route, which is why I've done this. This is a really common utility used by a lot of people in academia (I'm an astrophysics PhD student), and things like this that are missing from Julia are a big barrier to entry for some of my colleagues. You are correct that some of this functionality is already possible with existing packages, but this way is much faster (>10x speed-up compared to using the StatsBase histogram method, for example). This is detailed more in my original linked PR if you would like to read more there. I had hoped I could continue adding commonly used routines that exist in other languages (Python, IDL, etc.) but that do not yet exist in Julia to this new package as I think that would be a useful tool for myself + others in my field, but if you think that's not worth having as a package I suppose I can distribute ad-hoc internally. ",
+      "createdAt": "2022-02-16T21:14:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042316463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-IVkV",
+      "author": {
+        "login": "kirklong"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm thinking now it might be better if this was just named `binnedStatistic` and only did this one equivalent operation to SciPy to better follow the guidelines (no amalgamations of utility functions), so I'll delete this repo and re-submit later. If you think this could be integrated into FHist.jl @Moelf let me know and happy to go that route as well!",
+      "createdAt": "2022-02-16T22:29:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042372885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-JD5f",
+      "author": {
+        "login": "kirklong"
+      },
+      "authorAssociation": "NONE",
+      "body": "This should be closed / deleted in favor of re-submission under new name / description (https://github.com/JuliaRegistries/General/pull/54800)",
+      "createdAt": "2022-02-17T04:26:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042562655",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-JHUt",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "if I'm understanding correctly, the \"statistics\" is just a function you apply bin-by-bin right? effectively you're keeping track of a \"statistics metric\" for all the data ever went into that bin, while also making a histogram.\r\n\r\nthis is an interesting application, in FHist.jl the \"statistics\" we choose is sum of weight^2, because it gives you the error on the final bin count (gaussian approximation to the poission statistics)",
+      "createdAt": "2022-02-17T04:59:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1042576685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-Mf1Z",
+      "author": {
+        "login": "kirklong"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes exactly @Moelf. If you think this is something we could roll into FHist.jl let me know and I would be happy to help! ",
+      "createdAt": "2022-02-17T21:24:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54786#issuecomment-1043463513",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MiscPyTools\n- Repository: https://github.com/kirklong/MiscPyTools.jl\n- Created by: @kirklong\n- Version: v0.1.0\n- Commit: 478d0d3e934bfd8baaa100c825fb090451d488b2\n- Reviewed by: @kirklong\n- Reference: https://github.com/kirklong/MiscPyTools.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983dfc2560a30b7f9f466e3931ca1ef270e811d8cea742b93fb45b7d353a7fbc030c9a7836bfdfa7e430707a5cf17b30555f101ab910a424ee8116619cdc9ccb4d08f87259b1fccdc9b59b0e62a1e2aad57bb1da96dfa3ed3a92def49670edc69bcc85eb9f3430ca48ba0c76900731ef22f5acd0f11cc5502300c89fe13bb2feb6 -->",
+  "package_name": "MiscPyTools",
+  "closed_at": "2022-02-17T07:52:28Z",
+  "title": "New package: MiscPyTools v0.1.0"
+}

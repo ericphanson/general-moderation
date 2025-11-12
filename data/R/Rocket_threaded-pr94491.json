@@ -1,0 +1,151 @@
+{
+  "created_at": "2023-10-31T13:57:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 94491,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85qh8Q5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Sockets\n- I was not able to load the package (i.e. `import Rocket_threaded` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-31T14:02:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1787282489",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qivP8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "“Forked from [biaslab/Rocket.jl](https://github.com/biaslab/Rocket.jl)”. Shouldn’t this be contributed back to Rocket.jl?",
+      "createdAt": "2023-10-31T15:48:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1787491324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qi2-Y",
+      "author": {
+        "login": "jakubMitura14"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello @goerz Frankly I want to experiment with some ideas before I will go with PR for contribution - Hovewer I need to check it within my packages. So the problem is I am updating package MedPipe3D  that depends on MedEye3D and MedEye3D depends on Rocket.jl In order to test MedPipe3D I need to load MedEye3D with updated dependencies to my fork of Rocket. Hvewer in order to do this I need to put my dependency on my Fork to Rocket in Project.toml of MedEye3d.\r\n\r\nSummarising Can I add to the project.toml of a package in [compat] section a link to github repo of the fork instead of the package version?\r\nI would like to add sth like \r\n```\r\n[compat]\r\nRocket_threaded = \"https://github.com/jakubMitura14/Rocket_threaded.jl\"\r\n```\r\nto project.toml of MedEye3D\r\n\r\nthen load MedEye3D by\r\n```\r\nPkg.add(url=\"https://github.com/jakubMitura14/MedEye3d.jl.git\")\r\n``` \r\nThen I would not need to register fork as a new package for experimentation - is it possible?",
+      "createdAt": "2023-10-31T16:03:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1787522968",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qi6HD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can use a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl).\r\n\r\nAlternatively, use `Pkg.develop` to install your forked version of Rocket into a given environment. You can’t specify that in a `Project.toml`, but it does get recorded in the `Manifest.toml`. So as long as you don’t delete that file, even re-instantiating the environment will keep using the local version.",
+      "createdAt": "2023-10-31T16:10:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1787535811",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qi_S5",
+      "author": {
+        "login": "jakubMitura14"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz thanks !",
+      "createdAt": "2023-10-31T16:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1787557049",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qrJp_",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think you no longer want to register, since the repo went away, but that's not needed. I was curious to watch over your shoulder... And it can also be helpful to others (and you) to have access to unregistered packages. Did you contribute back into Rocket.jl? The main one?",
+      "createdAt": "2023-11-01T21:14:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1789696639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85qtXHH",
+      "author": {
+        "login": "jakubMitura14"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@PallHaraldsson\r\n I am still testing the idea - for now I had some data races, channel closed etc. but If it will work I will contribute back, thanks for asking !",
+      "createdAt": "2023-11-02T08:28:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1790276039",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tgHiy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-12-02T12:22:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1837136050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uLEZJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-12-09T12:22:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/94491#issuecomment-1848395337",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Rocket_threaded\n- Repository: https://github.com/jakubMitura14/Rocket_threaded.jl\n- Created by: @jakubMitura14\n- Version: v1.7.2\n- Commit: 0c2fe731323d14332c4312543d7e7e1e61a58a37\n- Reviewed by: @jakubMitura14\n- Reference: https://github.com/jakubMitura14/Rocket_threaded.jl/commit/0c2fe731323d14332c4312543d7e7e1e61a58a37#commitcomment-131364720\n- Description: Functional reactive programming extensions library for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd630e6a2c8596ce182d1f0ae71231e4a2418053cdcda36feb8fe847fadf1fc2eb1d6c4957e804e4f7a2c9da17c58c1c2b02eb3d418d2460f291f568c6d96933c0468711d0116f32911e4827b07f17794fbb5982541d500fd9691bff872e6be442ced4a8dcc91fa43964f0db94e7fb365d0986834a910f86c94348f153d08ccfb1b0aa1ed7abc4520f1cd5e486c4d77ec41160aa32cafd3793bda7b4ef21e7143c497c8c25ba751405ebd3ad131bac5e4722e5e0f440aab4c2673b96df2bf7b950c -->",
+  "package_name": "Rocket_threaded",
+  "closed_at": "2023-12-09T12:22:59Z",
+  "title": "New package: Rocket_threaded v1.7.2"
+}

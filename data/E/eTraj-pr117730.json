@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-10-21T09:09:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 117730,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Qm4S9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Version number is not allowed to contain prerelease data\n- The compat entry for `julia` is unbounded.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CodecZlib, Einsum, Folds, ForwardDiff, HDF5, JLD2, LsqFit, NLsolve, OrderedCollections, OrdinaryDiffEq, Parameters, ProgressMeter, PyCall, QuadGK, Reexport, Rotations, SpecialFunctions, SphericalHarmonics, StaticArrays, Unitful, UnitfulAtomic, WignerD, YAML\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-21T09:25:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2426111165",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QoJiU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package. In addition to the issues flagged by the bot:\r\n\r\n* [Long and descriptive package names are preferred](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules) in Julia. Something like `StrongFieldTrajectories`.\r\n\r\n* The package [needs to be ready for public use](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) at the time of registration. Generally, a `v0.1` version is recommended for the initial registration. This package seems to be at a pre-0.1 state of development, and definitely very far from a stable 1.0 release.\r\n\r\n* The package must have documentation at the time of registration. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README\r\n\r\n* A `v1.0` release would have stricter requirements. In particular, it needs to have _complete_ documentation of the API and a complete set of tests.\r\n\r\n\r\n> This library is currently under construction, and would be available in the recent months! \r\n\r\nI'm going to close this, since it'll be a few months until the library is ready. In the meantime, it can be helpful (although not always necessary) to use a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) during development.\r\n",
+      "createdAt": "2024-10-21T11:46:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2426443924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Qo4AV",
+      "author": {
+        "login": "TheStarAlight"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Thank you for submitting your package. In addition to the issues flagged by the bot:\r\n> \r\n> * [Long and descriptive package names are preferred](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules) in Julia. Something like `StrongFieldTrajectories`.\r\n> * The package [needs to be ready for public use](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) at the time of registration. Generally, a `v0.1` version is recommended for the initial registration. This package seems to be at a pre-0.1 state of development, and definitely very far from a stable 1.0 release.\r\n> * The package must have documentation at the time of registration. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README\r\n> * A `v1.0` release would have stricter requirements. In particular, it needs to have _complete_ documentation of the API and a complete set of tests.\r\n> \r\n> > This library is currently under construction, and would be available in the recent months!\r\n> \r\n> I'm going to close this, since it'll be a few months until the library is ready. In the meantime, it can be helpful (although not always necessary) to use a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) during development.\r\n\r\nThank you very much. I'll reconsider the name of the package. The package has already finished, and documentation of the package should be ready in a few days :D",
+      "createdAt": "2024-10-21T13:09:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2426634261",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RihpI",
+      "author": {
+        "login": "TheStarAlight"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Hi, my advisor insist on this name `eTraj`, and I could not persuade him. By now I have built all the docs and testing, and I wonder if there's still a chance for this package to be added to the general registry, despite the issue of package name. Thanks :D",
+      "createdAt": "2024-10-28T14:27:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2441747016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RjSd9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name `eTraj` is not a possibility for a Julia package. Your advisor may not be familiar with the technical limitations and conventions of the Julia ecosystem, but that is no grounds for making any kind of exception. So, unfortunately, there will not be any way to have this package registered if they insist on the package name `eTraj`.",
+      "createdAt": "2024-10-28T15:41:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2441947005",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rjhe9",
+      "author": {
+        "login": "TheStarAlight"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thanks for your reply. Anyway, programming in julia is enjoyable and I hope that I could contribute more in the promotion of julia in the future :D",
+      "createdAt": "2024-10-28T16:05:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117730#issuecomment-2442008509",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: eTraj\n- Repository: https://github.com/TheStarAlight/eTraj.jl\n- Created by: @TheStarAlight\n- Version: v1.0.0-rc1\n- Commit: d26aa419d83bcef16fa219bc9b0843ae559af6a4\n- Git reference: master\n- Description: Implementation of classical/semiclassical methods in strong-field ionization of atoms and molecules. [Note: This library is currently under construction, and would be available in the recent months! :D]",
+  "package_name": "eTraj",
+  "closed_at": "2024-10-21T11:46:35Z",
+  "title": "New package: eTraj v1.0.0-rc1"
+}

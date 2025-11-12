@@ -1,0 +1,68 @@
+{
+  "created_at": "2021-01-25T20:56:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 28646,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzEwOTk4NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 2 existing packages.\n1. Similar to BAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n2. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-25T21:01:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28646#issuecomment-767109984",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzExNDg2NQ==",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nPATH.jl is a wrapper for the mixed-complementarity solver PATH (http://pages.cs.wisc.edu/~ferris/path/) and is part of the JuMP ecosystem.\r\n\r\nThere are two existing repositories with similar names:\r\nhttps://github.com/JuliaRegistries/General/tree/master/P/PATHSolver\r\nhttps://github.com/JuliaRegistries/General/tree/master/P/PATHlib_jll\r\nBoth are old wrappers for the same underlying solver. PATHlib_jll compiles a wrapper @chkwon wrote around an out-dated release of the source-code by a third-party company. PATHSolver is a Julia wrapper for PATHlib_jll and does not provide an interface to JuMP.\r\n\r\nPATH.jl uses binaries provided by the original author of the C library (who is a collaborator on PATH.jl), integrates directly with JuMP. The naming follows the precedent in the JuMP ecosystem of naming the package directly after the underlying solver, including ALL-CAPS (e.g., https://github.com/jump-dev/CPLEX.jl) and names shorter than 5 characters (https://github.com/jump-dev/Cbc.jl).\r\n\r\n",
+      "createdAt": "2021-01-25T21:10:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28646#issuecomment-767114865",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzIzMjM1Nw==",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can this PR be closed in favor of https://github.com/JuliaRegistries/General/pull/28675 please?",
+      "createdAt": "2021-01-26T02:01:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28646#issuecomment-767232357",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PATH\n- Repository: https://github.com/odow/PATH.jl\n- Created by: @odow\n- Version: v0.2.1\n- Commit: eae8507ef21be5c04b1283ce16a92ce6677ea71b\n- Reviewed by: @odow\n- Reference: https://github.com/odow/PATH.jl/commit/eae8507ef21be5c04b1283ce16a92ce6677ea71b#commitcomment-46353475\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fb1ed1679e5471f3ee4c75b00cd7857a6c4db3c7a0d7f3d83dd9ef947aa73f83ec24fbcf8d2e585bbf0763569651b5a8e86df4f025116a1dadb790d887f56848e1d1bdbbe9e366c8a1119430da2c62b12e16620ba67b14c38a81f6a280c9711510d064626990ac9260ae90d614e528d2390b0c707dd738a49c60a2fd63632e28416cbe36cf5cf21d79c8e336e53d6401d5e5f9453f6a8b9f8b0101ea8e12b01d -->",
+  "package_name": "PATH",
+  "closed_at": "2021-01-26T02:06:25Z",
+  "title": "New package: PATH v0.2.1"
+}

@@ -1,0 +1,278 @@
+{
+  "created_at": "2022-10-27T09:52:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 71165,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85NFeKL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-27T09:56:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1293279883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NFiSV",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think it might be premature to merge. I found the (Julia) code. The module contains one line:\r\n```\r\n# Write your package code here.\r\n```\r\n\r\nIt's also a good name that I'm not sure should be taken by not yet working code. On the other hand there's also code there for 4 other languages (seemingly well developed, though all 4 files on smaller side), and I'm not sure what to do for multi-language packages. [If this is an important package for other languages, do we want to reserve a/this name here? Is there a policy for/against that?] And keep same name, even though we usually start with a capital letter? It would be bad to register later upper-case OpenInterfaces.jl (for other stuff), while I'm not sure such \"conflicts\" would automerge.\r\n\r\nThere IS though a license file, OSI-approved it seems (or such language). I guess that's important for one-line (comment) code. :)\r\n",
+      "createdAt": "2022-10-27T10:08:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1293296789",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NF1Ky",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm happy to match the package name with an uppercase \"O\", I just didn't read the guidelines well enough it seems.  \r\n\r\nThe license check apparently chokes on the license file being a symlink to our license in the project root. Can this be solved w/o us needing to make the license file for the julia package a copy? \r\n\r\nI'm also happy to keep this PR open until we've moved more of the current code into julia package structure. Since we're building package to bridge languages/ecosystems for us it's important that it is available under the same-ish name in each of them.\r\n\r\n> I guess that's important for one-line (comment) code. :)\r\n\r\nCan you explain what you mean here? I don't think there's minimum code size when we should add a licence?\r\n\r\n[noblock]",
+      "createdAt": "2022-10-27T11:17:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1293374130",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NOgY-",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> >I guess that's important for one-line (comment) code. :)\r\n\r\n>Can you explain what you mean here?\r\n\r\nIt was just a joke. There was seemingly close to 0 Julia code, I see it elsewhere now (and there's no minimum to require a license, at lest for registration purposes, I've seen some low number of lines not copyrightable, according to Stallman, not sure it's agreed upon by all).",
+      "createdAt": "2022-10-28T23:54:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1295648318",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NQw8I",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The license check apparently chokes on the license file being a symlink to our license in the project root. Can this be solved w/o us needing to make the license file for the julia package a copy?\r\n\r\nNo, because when installing the package users will be served only the [subdirectory](https://github.com/MaRDI4NFDI/open-interfaces/tree/9d5da50355ef61e6a6d2350bfd29c758471b780b/lang_julia/package) with the code of the julia package, so the symlink will be broken and the package will effectively not have a license.  A copy if the license must be present there.\r\n\r\n[noblock]",
+      "createdAt": "2022-10-30T12:12:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1296240392",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ntkg7",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Fyi: I could add the package with:\r\n```\r\njulia> using Pkg; Pkg.add(url=\"https://github.com/MaRDI4NFDI/open-interfaces\", subdir=\"lang_julia/package\")\r\n\r\n(@v1.8) pkg> test OpenInterfaces\r\n[..]\r\nTest Summary:     |Time\r\nOpenInterfaces.jl | None  0.0s\r\n     Testing OpenInterfaces tests passed \r\n```\r\n\r\nI did notice the test code, but unusual for me to see test code for non-existing code (in the src folder).\r\n\r\n[noblock]",
+      "createdAt": "2022-11-04T15:49:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1303791675",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OP85E",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We generally do not allow empty packages to be registered. We generally ask that you wait to register your package until after you have written some code and tests.\r\n\r\n[noblock]",
+      "createdAt": "2022-11-13T19:35:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1312804420",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Og9iM",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "> We generally do not allow empty packages to be registered. We generally ask that you wait to register your package until after you have written some code and tests.\r\n\r\nI've moved more of the existing code into the actual Julia package now: https://github.com/MaRDI4NFDI/open-interfaces/pull/124/files\r\n\r\n[noblock]",
+      "createdAt": "2022-11-16T16:07:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1317263500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OhXOs",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have no objection, and FYI add [noblock] to well not block..., I guess you did.\r\n\r\nI don't know if you need to wait for 3 days from now on, or can be merged speedily.\r\n\r\nI at least confined code is in (didn't do a thorough review, I believe there's no great requirement to merge, over some bare minimum code, nor quality requirement, hard to judge).\r\n\r\n```\r\nimport Pkg; Pkg.add(url=\"https://github.com/MaRDI4NFDI/open-interfaces\", subdir=\"lang_julia/package\")\r\n```\r\n\r\nI also ran tests (it's recommended to have tests, good practice, but not a requirement, so I'm not sure if there's a requirement in case they fail...):\r\n\r\n```\r\nTEST RUNOpenInterfaces.jl tests: Error During Test at /home/pharaldsson/.julia/packages/OpenInterfaces/76x0q/test/runtests.jl:6\r\n  Got exception outside of a @test\r\n  LoadError: could not load library \"liboif_connector\"\r\n  liboif_connector.so: cannot open shared object file: No such file or directory\r\n  Stacktrace:\r\n    [1] init(lang::String)\r\n      @ OpenInterfaces ~/.julia/packages/OpenInterfaces/76x0q/src/OpenInterfaces.jl:14\r\n    [2] top-level scope\r\n      @ ~/.julia/packages/OpenInterfaces/76x0q/test/test_solve.jl:12\r\n    [3] include(fname::String)\r\n      @ Base.MainInclude ./client.jl:476\r\n    [4] macro expansion\r\n      @ ~/.julia/packages/OpenInterfaces/76x0q/test/runtests.jl:7 [inlined]\r\n    [5] macro expansion\r\n      @ ~/.julia/juliaup/julia-1.8.2+0.x64/share/julia/stdlib/v1.8/Test/src/Test.jl:1357 [inlined]\r\n    [6] top-level scope\r\n      @ ~/.julia/packages/OpenInterfaces/76x0q/test/runtests.jl:7\r\n    [7] include(fname::String)\r\n      @ Base.MainInclude ./client.jl:476\r\n    [8] top-level scope\r\n      @ none:6\r\n    [9] eval\r\n      @ ./boot.jl:368 [inlined]\r\n   [10] exec_options(opts::Base.JLOptions)\r\n      @ Base ./client.jl:276\r\n   [11] _start()\r\n      @ Base ./client.jl:522\r\n  in expression starting at /home/pharaldsson/.julia/packages/OpenInterfaces/76x0q/test/test_solve.jl:6\r\nTest Summary:           | Error  Total  Time\r\nOpenInterfaces.jl tests |     1      1  1.5s\r\nERROR: LoadError: Some tests did not pass: 0 passed, 0 failed, 1 errored, 0 broken.\r\nin expression starting at /home/pharaldsson/.julia/packages/OpenInterfaces/76x0q/test/runtests.jl:6\r\nERROR: Package OpenInterfaces errored during testing\r\n```\r\n\r\n[noblock]",
+      "createdAt": "2022-11-16T17:12:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1317368748",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Oj6MU",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks like some code and tests have been added. I've edited my previous comment to include the text `[noblock]`.\r\n\r\n@renefritze If you want this PR to be merged, you'll need to edit all of your comments to include the text `[noblock]`: https://github.com/JuliaRegistries/General/blob/master/README.md#automerge-is-blocked-by-one-of-my-comments-how-do-i-unblock-it\r\n\r\n@PallHaraldsson If you no longer want to block this PR, you'll need to edit all of your comments to include the text `[noblock].",
+      "createdAt": "2022-11-17T04:05:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318036244",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Oklkv",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "@renefritze Thanks, I somehow had assumed the [noblock] bit did not apply to myself as the PR author. Looks like you missed on of [your comments](https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1312804420)\r\n\r\nThe tests fail on their own because a necessary lib is missing. [See here](https://github.com/MaRDI4NFDI/open-interfaces/actions/runs/3480941418) for an example how they run properly. ",
+      "createdAt": "2022-11-17T07:40:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318213935",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Okmn3",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Looks like you missed on of [your comments](https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1312804420)\r\n\r\nAh, fixed\r\n\r\n[noblock]",
+      "createdAt": "2022-11-17T07:44:50Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318218231",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OkpfV",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Looks like you missed on of [your comments](https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1312804420)\r\n> \r\n> Ah, fixed\r\n\r\nBut now you missed [noblock] on your new comment :wink: ",
+      "createdAt": "2022-11-17T07:56:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318229973",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OlDAA",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do. While I am here, can I also suggest using 0.1.0 or 1.0.0 as the first version number? Otherwise there is no way for you to release patch versions (all 0.0.X are considered breaking releases in Pkg).",
+      "createdAt": "2022-11-17T09:24:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318334464",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OlKCz",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "> See https://github.com/JuliaRegistries/General#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do. \r\n\r\n[Done](https://github.com/MaRDI4NFDI/open-interfaces/pull/135/files#diff-4786e57db0aa3c36467cc5294c775de6e0ad2a4e93527a28f0dc81e6711fb71dR4)\r\n\r\n> While I am here, can I also suggest using 0.1.0 or 1.0.0 as the first version number? Otherwise there is no way for you to release patch versions (all 0.0.X are considered breaking releases in Pkg).\r\n\r\nand [done](https://github.com/MaRDI4NFDI/open-interfaces/pull/135/files#diff-12c70176e1b370d3cac6a677bfc515bb33326dc1acee2a3b539e55c746cc1198R5).\r\n\r\nThank you for the help!\r\n\r\n[noblock]",
+      "createdAt": "2022-11-17T09:47:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318363315",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OlSid",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Cool, you can just retrigger the release bot then and this PR will be updated.\r\n\r\nOh, and BTW, that change doesn't seem like it is necessary, I misunderstood what you were talking about above. The CI here doesn't run the tests, just make sure that `using OpenInterfaces` work, and it looks like that worked already before.",
+      "createdAt": "2022-11-17T10:12:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318398109",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OlWGs",
+      "author": {
+        "login": "renefritze"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Cool, you can just retrigger the release bot then and this PR will be updated.\r\n> \r\n> Oh, and BTW, that change doesn't seem like it is necessary, I misunderstood what you were talking about above. The CI here doesn't run the tests, just make sure that `using OpenInterfaces` work, and it looks like that worked already before.\r\n\r\nActually, that created a [new PR](https://github.com/JuliaRegistries/General/pull/72348) it seems\r\n\r\n[noblock]",
+      "createdAt": "2022-11-17T10:22:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71165#issuecomment-1318412716",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OpenInterfaces\n- Repository: https://github.com/MaRDI4NFDI/open-interfaces\n- Created by: @renefritze\n- Version: v0.0.1\n- Commit: 846290f2e3d75a5d9401f5a0811e16e0fa52ad19\n- Git reference: HEAD",
+  "package_name": "OpenInterfaces",
+  "closed_at": "2022-11-17T11:22:05Z",
+  "title": "New package: OpenInterfaces v0.0.1"
+}

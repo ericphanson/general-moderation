@@ -1,0 +1,113 @@
+{
+  "created_at": "2023-12-31T13:59:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 97971,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vowx8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-31T14:04:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1872956540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vo2IM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Nothing wrong with this package, but it doesn't seem like something that other packages would need as a dependency. That makes it much less important to be registered: https://github.com/JuliaRegistries/General#do-i-need-to-register-a-package-to-install-it\r\n\r\nI'm just slightly skeptical that the name is so generic, as it seems more like a \"personal tool\" (not that others wouldn't want some motivation, too). If the name was less generic (`MotivateMarkus`, or maybe even just `MotivateMe`), I don't think it would raise any flags.",
+      "createdAt": "2023-12-31T15:42:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1872978444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vo26b",
+      "author": {
+        "login": "MarkusTrunschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks for the comment. I agree, it is probably not a high priority package. However, I plan to build this package to include a much larger set of quotes, more options, and topics. It could be a fun tool for easter eggs in other dependencies.\r\n\r\nI agree, that changing the name to MotivateMe is a good idea. Do I need to start the registering process all over again if I change the name?",
+      "createdAt": "2023-12-31T15:57:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1872981659",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vo4PI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For a name change, yes, I think so. For the earlier problem with the `compat` bound it would have been sufficient to just retrigger the existing registration to update the existing PR. But if you change the name, that'll be a new PR. ",
+      "createdAt": "2023-12-31T16:20:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1872987080",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vo5Dv",
+      "author": {
+        "login": "MarkusTrunschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "Good to know. I'll then restart the process. Thanks!",
+      "createdAt": "2023-12-31T16:38:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1872990447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vo79E",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "In any case: when retriggering/resubmitting the registration, you generally shouldn't change the version number. A different version number means a different PR, whereas if the package name and the version number stay the same, it'll just update the existing PR. I'd recommend using `0.1.0` for registration.",
+      "createdAt": "2023-12-31T17:34:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97971#issuecomment-1873002308",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Motivate\n- Repository: https://github.com/MarkusTrunschke/Motivate.jl\n- Created by: @MarkusTrunschke\n- Version: v0.0.1\n- Commit: 299b5af8e722c387185e6cba0a8536e0c9075a3d\n- Reviewed by: @MarkusTrunschke\n- Reference: https://github.com/MarkusTrunschke/Motivate.jl/issues/4\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983865f9efa3290184f01599f822ef65d742477b2965897b4cd5e35eb1faf9ebcccb503852e6757a86bb6c86fde7597bdb8184df0afd519fbb84a90a4ab4b2679b302b57769a16c608fc7c09c4f26ba83bb8be42998d1316287814f493512205f342aa3ac6ce2afa1ade37813e2ef22e83f1682b5d236605004f0fa0052e73f82e -->",
+  "package_name": "Motivate",
+  "closed_at": "2024-01-30T08:07:46Z",
+  "title": "New package: Motivate v0.0.1"
+}

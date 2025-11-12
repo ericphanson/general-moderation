@@ -1,0 +1,283 @@
+{
+  "created_at": "2024-10-04T15:08:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 116607,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86OsH36",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-04T15:11:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2393931258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OtJKF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/JuliaRegistries/General/pull/116605#issuecomment-2393924847 still applies ",
+      "createdAt": "2024-10-04T17:26:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394198661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OteIj",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would prefer to make this package available now so that my research collaborators can use it while I figure out how to integrate my code cleanly into the SciML package. I would need to look into how extensions, weak dependencies, and all of that work first. I do also see the value in having a standalone package that would result in lower precompilation times for code that deals exclusively with StaticArrays.\r\n\r\nI would also prefer that whether my code is available publicly not depend on whether I want to incorporate my code into a larger package. What if I don't agree with the design choices in the package to which you want me to merge my code? What if I want to retain ownership of the project? I'm surprised to see this sort of strong-arming in the Julia community.",
+      "createdAt": "2024-10-04T17:57:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394284579",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Otw7e",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I would prefer to make this package available now so that my research collaborators can use it while I figure out how to integrate my code cleanly into the SciML package\r\n\r\nSince registrations in `General` are permanent, it doesn't make sense to register it now and then later have it merged into another package. So, I'd want to hold off on merging this while you explore your options for contributing to the existing package.\r\n\r\n> I would also prefer that whether my code is available publicly not depend on whether I want to incorporate my code into a larger package.\r\n\r\nYour code does not have to be registered in `General` for it to be \"public\". Your collaborators can [install the package directly from GitHub](https://pkgdocs.julialang.org/v1/managing-packages/#Adding-unregistered-packages) with\r\n\r\n```\r\n] add https://github.com/jecs/StaticExpmv.jl\r\n```\r\n\r\nOr, you can register it in another registry, i.e., set up a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl), to make it easier to work with the package if it is a dependency for other (unregistered) packages currently under development.\r\n\r\n[Edit: that would install `StaticExpmv`, not the sub-package `ExpmvCore`. Sub-packages make this a little more complicated, and I'd have to figure out what the correct invocation of `Pkg` is]",
+      "createdAt": "2024-10-04T18:43:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394361566",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ot0WZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm also a little confused about the package name and organization, in terms of this being a sub-package of https://github.com/jecs/StaticExpmv.jl.\r\n\r\nThe parent package `StaticExpmv` isn't registered, right? I don't think this has come up before, but we'd have to think a bit about whether it makes sense / is okay for a sub-package to be registered when the parent package is unregistered.\r\n\r\nThere's also that if the parent package is named `StaticExpmv`, should be the sub-package be `StaticExpmvCore`? There is already https://github.com/marcusps/ExpmV.jl (albeit unregistered), so @marcusps would have a claim on the name `ExpmVCore`.\r\n\r\nLastly, even for sub-packages, there has to be an independent README (in https://github.com/jecs/StaticExpmv.jl/tree/master/ExpmvCore) that explains the context and the relationship to the parent package, and possibly points to more complete documentation for the functionality implemented by the sub-package.",
+      "createdAt": "2024-10-04T18:52:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394375577",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ot3NI",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "Registering the main package requires registering the subpackage. That's why I'm starting with ExpmvCore before adding StaticExpmv. Otherwise the registration process errors out.",
+      "createdAt": "2024-10-04T19:01:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394387272",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ot7ba",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alright, that makes sense. The sub-package should definitely be `StaticExpmvCore`, then, however.\r\n\r\n> Registering the main package requires registering the subpackage. \r\n\r\nIt would be possible (and even preferable, albeit a little more difficult) to manually prepare a PR that registers both `StaticExpmv` and `StaticExpmvCore` at the same time. I think to prepare such PRs, you also use the [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) package. Not 100% sure, it might be worth searching/asking on [Discourse](https://discourse.julialang.org) about the best workflow.\r\n\r\nI'm not fundamentally opposed to having an independent `StaticExpmv`, if it specifically exploits properties of `StaticMatrix` in a way that does not fit into the philosophy of `ExponentialUtilities`. The relationship to `ExponentialUtilities` should definitely be clarified before the registration, though. I suppose @ChrisRackauckas directly is the person maintaining `ExponentialUtilities`",
+      "createdAt": "2024-10-04T19:12:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394404570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OujDJ",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I personally think making code available is not a sufficient reason for registration. As soon as your package is on GitHub, it is installable and your collaborators can use it. The real question is whether your design philosophy is so different from what came before that it warrants a separate name in the general registry.\nThis is not strong arming by the way. I don't have any particular rights on the registry. Anyone in the community is free to object and discuss registrations, which is both cool and frustrating at times",
+      "createdAt": "2024-10-04T20:54:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394566857",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OujQR",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd be happy to pull this in as a static array extension. Though it is a bit of an odd idea because expmv tends to only do well for sufficiently large matrices (generating the exponential is pretty good for small matrices but has poor scaling) so I'm very curious if this is even a good idea in the first place. I'd be interested to see what the benchmarks say.",
+      "createdAt": "2024-10-04T20:54:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394567697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OvAHj",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@ChrisRackauckas Even for 6x6 matrices, I saw a speedup of 3x.",
+      "createdAt": "2024-10-04T21:19:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394685923",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OvAkH",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle You're right. It's not strong arming. Just got a bit emotional about my code. Sorry.\r\n\r\n@goerz I think that I will follow your advice and use LocalRegistry. Thanks for bearing with me.",
+      "createdAt": "2024-10-04T21:21:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394687751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OvB7y",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@ChrisRackauckas \r\n\r\n```\r\njulia> using StaticExpmv,StaticArrays,LinearAlgebra,BenchmarkTools\r\n\r\njulia> A = I+SMatrix{6,6}(randn(6,6));x = SVector{6}(randn(6));\r\n\r\njulia> @benchmark exp($A)*$x\r\nBenchmarkTools.Trial: 10000 samples with 21 evaluations.\r\n Range (min … max):  960.286 ns …  1.708 μs  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     974.190 ns              ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   975.719 ns ± 27.055 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n        ▄ ▇ ▇ █▇ ▃                                              \r\n  ▂▂▁▄▁▇█▁█▁█▁██▁█▁▆▄▁▃▁▂▁▂▂▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▁▂▁▂▁▂▂▁▂▁▂▂ ▃\r\n  960 ns          Histogram: frequency by time         1.03 μs <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> @benchmark expmv($A,$x)\r\nBenchmarkTools.Trial: 10000 samples with 239 evaluations.\r\n Range (min … max):  313.636 ns … 552.996 ns  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     315.728 ns               ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   320.862 ns ±  17.998 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n  ▆█▁      ▂ ▃▁                                                 ▁\r\n  ███▅▇▇▆▅▅████▆▆▅▅▅▅▅▅▅▅▄▅▅▅▆▆▅▅▅▅▅▅▅▅▅▅▅▅▅▄▄▃▄▅▅▅▆▅▅▆▆▆▅▅▅▅▄▅ █\r\n  314 ns        Histogram: log(frequency) by time        414 ns <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> A = I+SMatrix{9,9}(randn(9,9));x = SVector{9}(randn(9));\r\n\r\njulia> @benchmark exp($A)*$x\r\nBenchmarkTools.Trial: 10000 samples with 8 evaluations.\r\n Range (min … max):  3.911 μs …   7.922 μs  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     4.062 μs               ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   4.104 μs ± 164.296 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n         █▁                                                    \r\n  ▂▂▂▂▂▂▅██▆▃▂▄▆▄▄▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂ ▂\r\n  3.91 μs         Histogram: frequency by time        4.95 μs <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> @benchmark expmv($A,$x)\r\nBenchmarkTools.Trial: 10000 samples with 194 evaluations.\r\n Range (min … max):  500.216 ns … 975.304 ns  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     502.144 ns               ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   504.040 ns ±   9.893 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n  ▃██▇▂                  ▁▃▃                                    ▂\r\n  █████▆▄▄▃▃▃▄▅▆▇▆▆▄▁▄▁▁▃███▇▅▄▄▅▃▅▁▄▆▇█▇▅▃▃▁▄▃▃▅▄▅▃▃▃▃▃▃▅▄▄▁▆▄ █\r\n  500 ns        Histogram: log(frequency) by time        547 ns <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> A = I+SMatrix{12,12}(randn(12,12));x = SVector{12}(randn(12));\r\n\r\njulia> @benchmark exp($A)*$x\r\nBenchmarkTools.Trial: 10000 samples with 1 evaluation.\r\n Range (min … max):  25.208 μs … 125.375 μs  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     25.583 μs               ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   25.817 μs ±   1.497 μs  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n   ▃██▂   ▃▅▂                                                  ▂\r\n  ▅████▇▅████▆▄▄▄▅▅▄▆▅▅▅▄▃▅▅▅▅▄▅▆▇▇▅▃▄▅▅▄▆▅▅▅▄▅▆▅▅▆▆▅▄▁▄▄▄▅▄▄▆ █\r\n  25.2 μs       Histogram: log(frequency) by time      32.1 μs <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n\r\njulia> @benchmark expmv($A,$x)\r\nBenchmarkTools.Trial: 10000 samples with 10 evaluations.\r\n Range (min … max):  1.038 μs …  2.350 μs  ┊ GC (min … max): 0.00% … 0.00%\r\n Time  (median):     1.050 μs              ┊ GC (median):    0.00%\r\n Time  (mean ± σ):   1.061 μs ± 41.686 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%\r\n\r\n           ▅    █                                 ▁           \r\n  ▂▁▁▁▃▁▁▁▁█▁▁▁▁█▁▁▁▁▄▁▁▁▁▃▁▁▁▂▁▁▁▁▂▁▁▁▁▂▁▁▁▁▇▁▁▁▁█▁▁▁▁▃▁▁▁▃ ▂\r\n  1.04 μs        Histogram: frequency by time        1.09 μs <\r\n\r\n Memory estimate: 0 bytes, allocs estimate: 0.\r\n```",
+      "createdAt": "2024-10-04T21:26:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394693362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ov3E-",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Those are pretty good results. Unexpected. I can see that coming in handy for Magnus methods.",
+      "createdAt": "2024-10-05T03:54:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2394911038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ow-rr",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "Cool. Please let me know how you'd like to proceed. Whatever package you think this would fit nicely in, I'd be happy to incorporate this code in it.",
+      "createdAt": "2024-10-05T21:38:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2395204331",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RJqvQ",
+      "author": {
+        "login": "jecs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Please feel free to close. We merged my code into ExponentialUtilities.jl.",
+      "createdAt": "2024-10-24T12:59:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116607#issuecomment-2435230672",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ExpmvCore\n- Repository: https://github.com/jecs/StaticExpmv.jl\n- Created by: @jecs\n- Version: v0.1.0\n- Commit: 858a5d65d19bca0072d82144312db71f6f07d044\n- Git reference: HEAD",
+  "package_name": "ExpmvCore",
+  "closed_at": "2024-10-24T13:09:25Z",
+  "title": "New package: ExpmvCore v0.1.0"
+}

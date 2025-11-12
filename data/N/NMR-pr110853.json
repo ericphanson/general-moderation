@@ -1,0 +1,106 @@
+{
+  "created_at": "2024-07-11T07:47:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 110853,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86EdTK9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Arpack, CSV, DataFrames, Distributions, FFTW, HTTP, JSON, LightXML, LsqFit, Optim, Plots\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 20 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to NMF. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.03 is at or below cutoff of 2.50.\n  2. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to LNR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SMM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NMFk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to NES. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to NPZ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to KML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to XML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to QML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to GMT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to NMEA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to SVR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  15. Similar to NRRD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  16. Similar to ZMQ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  17. Similar to FMI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  18. Similar to NUMA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  19. Similar to NIRX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  20. Similar to GR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-11T07:53:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2222273213",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Efmqd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "In general, we try to avoid domain-specific acronyms for package names. Personally, I think \"NMR\" might be commonly understood enough to be at least *part* of a name. So if you choose `NMR<Something>`, that would probably be fine. It would be good to check what other Julia packages might exist in the NMR space, compare yourself with their feature set, and figure out how you want to situate this package in that space.\r\n\r\nIt might even be possible to use just \"NMR\" as a package name, but I think there's a pretty high bar for that. The package would have to be a very complete NMR framework, basically the \"go to\" package for the entire field of NMR. That also implies exceptionally good documentation (or at least a trajectory towards that). The package should also be expected to receive long-term maintenance. It appears that you might have a permanent academic position, and that would go a very long way towards guaranteeing maintenance.\r\n\r\nIn its current form, the package definitely lacks documentation. In general, the minimum requirement for a package to be registered is a README that explains what problem the package is trying to solve and gives some indication of the features and how the package can be used, e.g., by giving a usage example. For a package name like\" NMR\" the bar would probably be much higher. It should have a full online Documenter-based documentation.\r\n\r\nIf you think this package will live up to the expectations implied by the name \"NMR\", I would say maybe use a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl) for the moment, and re-register in General once the package is a bit more mature (has full documentation). If the package should be smaller in scope, I would recommend that you change the name to something longer and more descriptive.",
+      "createdAt": "2024-07-11T12:59:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2222877341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EuxM4",
+      "author": {
+        "login": "marcel-utz"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear Michael,\r\n\r\nMany thanks for your feedback. You are certainly right that the package documentation is not yet ready for prime time. We will continue to develop it and improve its documentation, and get in touch again at a later date. For the moment, we will use a local registry. The name can be made more specific as well. The package contains functionality to both analyse experimental NMR data as well as simulate NMR spin dynamics. Would a name like NmrKIT or similar be acceptable?\r\n\r\nBest wishes,\r\n-Marcel\r\n\r\n\r\nProf. Dr. Marcel Utz\r\n***@***.***\r\n\r\n\r\n\r\n> On 11. Jul 2024, at 14:59, Michael Goerz ***@***.***> wrote:\r\n> \r\n> \r\n> In general, we try to avoid domain-specific acronyms for package names. Personally, I think \"NMR\" might be commonly understood enough to be at least part of a name. So if you choose NMR<Something>, that would probably be fine. It would be good to check what other Julia packages might exist in the NMR space, compare yourself with their feature set, and figure out how you want to situate this package in that space.\r\n> \r\n> It might even be possible to use just \"NMR\" as a package name, but I think there's a pretty high bar for that. The package would have to be a very complete NMR framework, basically the \"go to\" package for the entire field of NMR. That also implies exceptionally good documentation (or at least a trajectory towards that). The package should also be expected to receive long-term maintenance. It appears that you might have a permanent academic position, and that would go a very long way towards guaranteeing maintenance.\r\n> \r\n> In its current form, the package definitely lacks documentation. In general, the minimum requirement for a package to be registered is a README that explains what problem the package is trying to solve and gives some indication of the features and how the package can be used, e.g., by giving a usage example. For a package name like\" NMR\" the bar would probably be much higher. It should have a full online Documenter-based documentation.\r\n> \r\n> If you think this package will live up to the expectations implied by the name \"NMR\", I would say maybe use a LocalRegistry <https://github.com/GunnarFarneback/LocalRegistry.jl> for the moment, and re-register in General once the package is a bit more mature (has full documentation). If the package should be smaller in scope, I would recommend that you change the name to something longer and more descriptive.\r\n> \r\n> —\r\n> Reply to this email directly, view it on GitHub <https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2222877341>, or unsubscribe <https://github.com/notifications/unsubscribe-auth/ACFXILQVJJCGFRGPEKC5ZZTZLZ6TPAVCNFSM6AAAAABKWM24M2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDEMRSHA3TOMZUGE>.\r\n> You are receiving this because you were mentioned.\r\n> \r\n\r\n",
+      "createdAt": "2024-07-13T10:44:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2226852664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EuzSo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> You are certainly right that the package documentation is not yet ready for prime time. We will continue to develop it and improve its documentation, and get in touch again at a later date. For the moment, we will use a local registry.\r\n\r\nSounds good!\r\n\r\n> The name can be made more specific as well. The package contains functionality to both analyse experimental NMR data as well as simulate NMR spin dynamics. Would a name like NmrKIT or similar be acceptable?\r\n\r\nMaybe `NMRKit`. \"NMR\" still remains an acronym and should always stay in all-caps. It's still pretty generic, though. We already have an `NMRTools.jl` – perhaps you can still come up with something more descriptive or more creative. For these types of framework packages, especially if you want to develop any kind of branding around them, it is often better to use the \"less systematic name\" approach (see [point 5 in the guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines)). Something more along the lines of your colleague Ilya Kuprov's \"Spinach\" framework for NRM in Matlab.\r\n",
+      "createdAt": "2024-07-13T11:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2226861224",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IIHjX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-08-12T12:23:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2283829463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86I4QTi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-08-19T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/110853#issuecomment-2296448226",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NMR\n- Repository: https://github.com/marcel-utz/NMR.jl\n- Created by: @marcel-utz\n- Version: v0.8.0\n- Commit: d6277d7f0a83f8d5dce784186517f79a547f24d8\n- Git reference: master\n- Description: tools for NMR spectroscopy, data processing, and simulation in Julia",
+  "package_name": "NMR",
+  "closed_at": "2024-08-19T12:23:54Z",
+  "title": "New package: NMR v0.8.0"
+}

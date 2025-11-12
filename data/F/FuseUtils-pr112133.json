@@ -1,0 +1,344 @@
+{
+  "created_at": "2024-07-31T16:08:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "carstenbauer",
+  "merged_at": null,
+  "pr_number": 112133,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86GwlHT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-31T16:11:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2260881875",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Gwzau",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Just a suggestion – more descriptive name could be helpful for clarity.\r\n\"Fuse\" tend to be associated with the filesystem, as in https://juliahub.com/ui/Packages/General/FuseApi.",
+      "createdAt": "2024-07-31T16:44:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2260940462",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HGzC5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd definitely associate \"Fuse\" with the filesystem.\r\n\r\nI was too late to comment on https://github.com/JuliaRegistries/General/pull/112083, but that package mentions \"Basic data dictionary functionalities of IMAS.jl\", but as far as I can tell, IMAS.jl does not exist. Is IMAS.jl planned to be released in the near future?\r\n\r\nIf so, and if this package is intended as another sub-package/dependency of IMAS, maybe `IMASFuseUtils` would be a sufficiently distinctive name.\r\n\r\nWhen you say \"other packages in the FUSE ecosystem\", that should be a link to that ecosystem.\r\n\r\n[noblock]",
+      "createdAt": "2024-08-03T13:02:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2266706105",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HIfuy",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "@aplavin @goerz indeed we're planning on registering [IMAS.jl](https://github.com/ProjectTorreyPines/IMAS.jl) as well, since we have just made the package public. We want to first register the packages that IMAS.jl depends on, `FuseUtils.jl` being one of them.\r\n\r\nThis is part of a broader effort to open-source the FUSE framework that was developed by General Atomics. FUSE is a framework for design and optimization of nuclear fusion power reactors. It was recently presented at JuliaCon 2024 https://youtu.be/HCSdOMnzcnY?t=18425\r\n\r\n[noblock]",
+      "createdAt": "2024-08-03T21:08:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2267151282",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HIf_D",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "FUSE.jl is a relatively big project. Developed over the past three years, it currently spans 25 repositories and over 200k lines of Julia code. All this to say that there will be lots of `FUSE` related packages coming down the line. [noblock]",
+      "createdAt": "2024-08-03T21:09:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2267152323",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HIjXp",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "https://github.com/JuliaRegistries/General/pull/112171#event-13751973915 just got merged\r\n[noblock]",
+      "createdAt": "2024-08-03T21:32:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2267166185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JT9cl",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "@aplavin @goerz if this is ok, could you please proceed with the merging of this PR? Once this is merged, we can then proceed to register the IMAS.jl package. Thank you. [noblock]",
+      "createdAt": "2024-08-22T04:36:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2303711013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JVtE4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I don’t have manual merge permissions. The automatic merge will proceed when all comments have `[noblock]`",
+      "createdAt": "2024-08-22T09:11:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2304168248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Jiaac",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] ping @aplavin if it's possible to please add `[noblock]` to your initial comment https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2260940462\r\n\r\nThank you!",
+      "createdAt": "2024-08-23T17:18:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2307499676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86KeG3R",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'd really like to stick to the current naming convention. This is what makes sense for us.\r\n\r\nGoogling FUSE at this point will certainly return few fusion-related results since we are in fact trying to open-source our project and make it easily findable by registering it on the General registry.\r\n\r\n@aplavin if you could add [noblock] that would be great! Thank you in advance.",
+      "createdAt": "2024-09-01T03:36:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2323148241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4edP",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "On technical grounds, I don't see a reason not to merge this.\n\nHowever, the mentioned name conflict with the Fuse filesystem is unfortunate. Especially as it seems that you don't want to register only FUSE.jl but an ecosystem of FuseX.jl named packages. Even a FuseFS.jl or FuseAPI.jl could then be confused with your ecosystem. How many FuseX.jl do you plan to register?\n\nAlso note that it's generally better to release the main package as soon as possible when registering ecosystem packages. The reason is simple: who says that after registering your FuseX.jl packages the name FUSE.jl is still available?\n\nIt seems to me that \"GA\" (for General Atomics) is a distinctive and \"[established](https://gacode.io/)\" prefix that could be considered here, at least for the ecosystem packages (I.e dependencies of FUSE.jl). But I'm not an expert on the topic.",
+      "createdAt": "2024-09-28T03:56:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380392271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4gLQ",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the comments @carstenbauer.\r\n\r\nUnfortunately I don't see a way to register the main package as soon as possible if I cannot register its dependencies first. Are you suggesting to make an empty package with the desired name, and push that through the registration process first? Wouldn't that raise concerns about people holding onto package names without actually using them?\r\n\r\nWe are open sourcing our software and releasing it to the public so that this can become a platform for the fusion community to build on. Branding it as GA goes agains this idea. Like say Oceananigans.jl is not called MITOceananigans.jl.",
+      "createdAt": "2024-09-28T04:21:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380399312",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4gSb",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "Here's the documentation page for FUSE https://fuse.help and repo https://github.com/ProjectTorreyPines/FUSE.jl",
+      "createdAt": "2024-09-28T04:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380399771",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4jMZ",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> We are open sourcing our software and releasing it to the public so that this can become a platform for the fusion community to build on. Branding it as GA goes agains this idea. Like say Oceananigans.jl is not called MITOceananigans.jl.\r\n\r\nI wasn't suggesting a rename FUSE.jl -> GAFUSE.jl but was talking about its dependencies, specifically those that are named FuseXYZ.jl. I'm fine with FUSE.jl. It seems to be a cool, serious effort, you are the first to occupy the name, and I understand that it's an adequate, catchy name for a bigger project. The fact that FUSE is ambiguous is unfortunate but acceptable, IMO. What I was wondering is whether we can find a better naming compromise for dependencies like FuseUtils.jl, which could also be confused with FUSE (the file system / kernel module) utilities.\r\n\r\nLooking at the FUSE.jl repo, it seems like FuseUtils.jl is the only \"problematic\" dependency. Would it be possible to rename FuseUtils.jl to something less generic and less ambiguous?\r\n\r\n(UPDATE: I see that there also is [FuseExchangeProtocol.jl](https://github.com/JuliaRegistries/General/tree/master/F/FuseExchangeProtocol) in General...)\r\n\r\n> Unfortunately I don't see a way to register the main package as soon as possible if I cannot register its dependencies first. Are you suggesting to make an empty package with the desired name, and push that through the registration process first? Wouldn't that raise concerns about people holding onto package names without actually using them?\r\n\r\nSorry, this was merely meant as advice to try to be as quick as possible (perhaps stating the obvious). But to be concrete, I would perhaps think about already opening a (draft) PR for registering FUSE.jl (not an empty repo) to indicate my intentions.",
+      "createdAt": "2024-09-28T05:12:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380411673",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4kCL",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the clarifications @carstenbauer \r\n\r\nWe can rename FuseUtils something else. That's not the end of the world. But do you think anything starting with `Fuse` would be always unacceptable? What about if the packages started with `FUSE` all capital, like`FUSEutils`. I don't like it but oh well.\r\n\r\nI'll follow your suggestion and open a PR for the main package even if it will fail because of the dependencies not being registered.",
+      "createdAt": "2024-09-28T05:27:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380415115",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4k8N",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> But do you think anything starting with `Fuse` would be always unacceptable?\r\n\r\nNo, I wouldn't make a blanket statement like this. I think `FuseUtils.jl` is particularly unfortunate because `Utils` is very generic and doesn't disambiguate at all. For example, \"FuseReactor.jl\" can hardly be (mis)associated with the FUSE file system.\r\n\r\n> What about if the packages started with `FUSE` all capital, like`FUSEutils`.\r\n\r\nNo, I don't think this helps (and I also don't like it 😉).\r\n\r\n",
+      "createdAt": "2024-09-28T05:43:50Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380418829",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N4lB6",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "In any case, it would be good to get a comment from @DilumAluthge (or someone else) here as well.",
+      "createdAt": "2024-09-28T05:45:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380419194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86N59nl",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Just my opinion: I think we should give `FUSE.jl` in particular a pass, given how fully developed it is. And Julia is a language for scientific computing, so having a particularly nice fusion-related package called `FUSE` seems okay, even if it's not about the possibly more widely understood \"Filesystem in Userspace\".\r\n\r\nWhile FUSE.jl can't be registered without its dependencies being registered first, that package will require a manual merge anyway (uppercase name rule), so I don't think we'll run into a situation where someone else will register `FUSE.jl` without anyone noticing. Another option would be to prepare a manual PR to register the entire FUSE ecosystem in one go (FUSE.jl and all its currently unregistered dependencies).\r\n\r\n\r\nAs for \"sub-packages\" like `FuseUtils`: My general opinion is that an existing `MyPackage` \"owns\" the namespace for `MyPackageSomething` packages. In this case, that would be `FUSEUtils` (with an uppercase `FUSE`, and I'm not a fan of deviating from CamelCase by making the `U` in `Utils` lower-case). Using `FuseUtils` already deviates from this (case-sensitive) scheme, where the package name is \"obviously\" connected to `FUSE.jl`. So at that point it might be better to go with `FusionUtils`. But I'm not super opposed to `FuseUtils` either. However, since `Fuse/FUSE` is such an overloaded name, I don't think it would be fair for `FUSE.jl` to completely own the `FuseSomething` namespace. It'll have to co-exist with other packages related, e.g., to the filesystem FUSE. It's not an ideal situation, but probably tolerable.",
+      "createdAt": "2024-09-28T16:40:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2380782053",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86OHSAW",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok. Thank you for the feedback. Let me regroup with my team and figure out the best way forward and how we can minimize collisions with FuseWhatever.jl packages. We may indeed follow up on the open a manual PR to register the whole FUSE ecosystem in one go.",
+      "createdAt": "2024-09-30T22:13:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2384273430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86T7ux-",
+      "author": {
+        "login": "orso82"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed \r\n\r\nhttps://github.com/JuliaRegistries/General/pull/119445",
+      "createdAt": "2024-11-18T04:10:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112133#issuecomment-2481908862",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FuseUtils\n- Repository: https://github.com/ProjectTorreyPines/FuseUtils.jl\n- Created by: @orso82\n- Version: v1.1.1\n- Commit: 78a47619b01598569c291e1942a71a46bf54c371\n- Reviewed by: @orso82\n- Reference: https://github.com/ProjectTorreyPines/FuseUtils.jl/commit/78a47619b01598569c291e1942a71a46bf54c371#commitcomment-144862560\n- Description: low-level utilities for FUSE ecosystem\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6be682a66a1727334e68ac3d30a346d6a315e658df186e2e018c718c7936a144b1fc92373fbe214e88e1e009027f9e1c27a9baf76175b5dbec6e3cc733c2935d08c348fd2e233d098f8f09107e4e42dab86041de37e32527014b58618018004f4e511d18a6f89966d727266f71715d663f9f4d0e076107dfd5749dad188e86d6fa8ca83fca27c1ce08c9db03dee8a78fd24b57827df607914aa0ccd6cfca78c655dc4e5a3973997a20cc151b2b5a5e8f5 -->",
+  "package_name": "FuseUtils",
+  "closed_at": "2024-11-18T07:25:56Z",
+  "title": "New package: FuseUtils v1.1.1"
+}

@@ -1,0 +1,158 @@
+{
+  "created_at": "2019-10-30T22:44:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 4907,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODE0NDU3NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: Nettle, Paillier\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-10-30T22:46:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548144574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODI2NzU2OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `ElectronicSignatures` is a less generic and more descriptibe name? Just a suggestion.\r\n\r\nAlso, if you add the compatibiltiiy bounds this PR will be merged automatically.\r\n\r\n[noblock]",
+      "createdAt": "2019-10-31T08:41:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548267568",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODMwMjkxOQ==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name is indeed generic. Currently, I can think of two examples which user might think about what Signatures does:\r\n+ some processing with type signatures \r\n+ the electronic signatures from cryptography\r\n\r\nOn the other hand, I think the second option does dominate. Also, the library intends to cover the case of ring signatures which does not pop out in google easily when searches for electronic signatures. ",
+      "createdAt": "2019-10-31T10:22:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548302919",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODg5NDM4MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "How about:\r\n- `DigitalSignatures`\r\n- `ElectronicSignatures`\r\n- `CryptoSignatures`\r\n- `CryptographicSignatures`\r\n\r\nPersonally I like `DigitalSignatures` the best.\r\n\r\nThat being said, I don't mind `Signatures` as a name.\r\n\r\n[noblock]",
+      "createdAt": "2019-11-01T18:12:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548894381",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODk2MDUyNw==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I like DigitalSignatures and CryptoSingatures. I think I will change the name. ",
+      "createdAt": "2019-11-01T21:40:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548960527",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODk3MTEwNw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a compat entry that has an upper bound: Nettle, Paillier\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-01T22:25:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548971107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODk3MTc3Nw==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I just changed the name and updated pull request. Do I need to worry about:\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n",
+      "createdAt": "2019-11-01T22:28:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548971777",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODk3MzkxMg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is due to a bug in Registrator.jl: https://github.com/JuliaRegistries/Registrator.jl/issues/236\r\n\r\nI will close this pull request. Can you re-trigger Registrator? This will open a new pull request with the correct pull request title corresponding to your new package name.\r\n\r\nAlso, if you can add compat entries (with upper bounds) for Nettle and Paillier, then your PR will be automerged.",
+      "createdAt": "2019-11-01T22:38:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548973912",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0ODk3NTQ5MA==",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "But I don't know the future. How can I add upper bounds?",
+      "createdAt": "2019-11-01T22:46:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4907#issuecomment-548975490",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Signatures\n- Repository: https://github.com/PeaceFounder/CryptoSignatures.jl\n- Created by: @akels\n- Version: v0.1.0\n- Commit: b61c26603bdd20055ee9d7390dbe84e7b4070208\n- Reviewed by: @akels\n- Reference: https://github.com/PeaceFounder/CryptoSignatures.jl/commit/b61c26603bdd20055ee9d7390dbe84e7b4070208#commitcomment-35770978\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4bf0e3d104a1100ba0e73a34e61bf8613a47f27b893901486cdb17ba1277a658a5662858e02877d7bbcb0a3ef39b0e913cba068508822fb81bf54292f5ccf479f2ba2160f5668a75054a5dfa6c23679cd3e649478ee0d5aaa51b1da0436587e28a766639fc21d00e84d24bc67c4ef58c82c5ae38bd028851fb508518f829dab18283871fdf057868303c0bf1dcef04798e3c82972aa0ac7d53bcde4f5bfa9ba4c5b9aca0b2e4433bd11a339fb72db5cbd016af7c2084fcb7ac2acf9f271a97866 -->",
+  "package_name": "Signatures",
+  "closed_at": "2019-11-01T22:38:46Z",
+  "title": "New package: Signatures v0.1.0"
+}

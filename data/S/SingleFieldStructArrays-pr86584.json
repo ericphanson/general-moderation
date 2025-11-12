@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-06-30T13:59:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 86584,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85gPmO_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-30T14:03:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1614701503",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gQCq6",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Seems like `mapview` function can be used instead of `SingleFieldStructArray` with exact same performance. It is even more general and shorter to type :)\r\nEg:\r\n```julia\r\n# either vanilla:\r\nmapview(x->x.t, foos)\r\n# or even, for convenience:\r\nmapview(:t, foos)\r\n\r\n# instead of\r\nSingleFieldStructArray(foos, Val{:t})\r\n```\r\nThe `mapview` function is available in either `SplitApplyCombine.jl` (older, more popular) or `FlexiMaps.jl` (newer, more focused and featureful).\r\n\r\nNot to discourage the package, especially in case if there are any non-trivial advantages of `SingleFieldStructArray`. At least I think these advantages (wrt `mapview` that has been around for a long time) should be highlighted in the readme.",
+      "createdAt": "2023-06-30T15:26:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1614817978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gQJNl",
+      "author": {
+        "login": "jishnub"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nCould you highlight what are the advantages of this package over `StructArrays.jl`?",
+      "createdAt": "2023-06-30T15:49:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1614844773",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gQdLW",
+      "author": {
+        "login": "dingraha"
+      },
+      "authorAssociation": "NONE",
+      "body": "@aplavin Excellent, thanks for the comment. As you might have guessed, I was unaware of both `SplitApplyCombine.jl` and `FlexiMaps.jl`'s `mapview`. :-) `FlexiMaps.mapview` appears to do exactly what I want, and so I don't see any need to register this package.\r\n\r\n@jishnub Re: SingleFieldStructArrays.jl vs StructArrays.jl, my understanding is that they do opposite things. StructArrays.jl takes a struct of Arrays and makes it look like an Array of structs. SingleFieldStructArrays.jl takes an array of structs and makes it look like an array of one of the struct elements.",
+      "createdAt": "2023-06-30T16:58:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1614926550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85i1y3g",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-07-31T12:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1658269152",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jgrq0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-08T12:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86584#issuecomment-1669511860",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SingleFieldStructArrays\n- Repository: https://github.com/OpenMDAO/SingleFieldStructArrays.jl\n- Created by: @dingraha\n- Version: v0.3.2\n- Commit: c97c78ee8e6fd5773da3ba8b1918ec057a0dc8c4\n- Reviewed by: @dingraha\n- Reference: https://github.com/OpenMDAO/SingleFieldStructArrays.jl/issues/8\n- Description: Make an Array of structs act like an Array of one of the fields of the struct.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f2b95b930adc8bfe8d5ed4e6d17397acbab65842563c5ffeda51001c75395e7cc63ab6897e7a675d76e19fd7e67ac77ffe548dfbd921f94e849d11b38eecec5d6e0889b0ac8456f04a53afbcd499818c5727dc75fbeba30e39bd0ef8a845405953a4a01119899b3002b9a7ddf5deb295ac932beac2f7c8b56788fa9620b7ccbf9f5205a7deaeb037ad3aefe0063236fc -->",
+  "package_name": "SingleFieldStructArrays",
+  "closed_at": "2023-08-08T12:23:27Z",
+  "title": "New package: SingleFieldStructArrays v0.3.2"
+}

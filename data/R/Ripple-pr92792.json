@@ -1,0 +1,91 @@
+{
+  "created_at": "2023-10-04T23:48:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 92792,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85oLWs-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Stipple. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-04T23:52:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1747807038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oSKoh",
+      "author": {
+        "login": "azraq27"
+      },
+      "authorAssociation": "NONE",
+      "body": "The proposed name \"Ripple\" is similar to \"Stipple\", but I don't think those names will be confused, and the Package is meant to provide methods to support products with the brand name \"Ripple\".",
+      "createdAt": "2023-10-05T20:25:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1749592609",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ooUXV",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This seems to be superseded by https://github.com/JuliaRegistries/General/pull/93103.",
+      "createdAt": "2023-10-10T13:09:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1755399637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oqfVZ",
+      "author": {
+        "login": "azraq27"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, sorry. In the time since I originally submitted the first version, I've made several additions and bugfixes. I didn't realize this hadn't been merged yet. Is it waiting on something?",
+      "createdAt": "2023-10-10T18:05:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1755968857",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oqodO",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your comment https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1749592609 (and now these newer comments as well) don't contain the noblock tag and thus block automerge.\r\n\r\nI do not know how well the registry handles two \"new package\" PRs, so I guess the cleanest thing would be to abandon this one and instead focus on #93103. ",
+      "createdAt": "2023-10-10T18:33:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92792#issuecomment-1756006222",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Ripple\n- Repository: https://github.com/WiredBrains-Lab/Ripple.jl\n- Created by: @azraq27\n- Version: v1.0.1\n- Commit: 3d663b808d9a3d053f2c0e50385a400c5ca38da8\n- Reviewed by: @azraq27\n- Reference: https://github.com/WiredBrains-Lab/Ripple.jl/issues/1#issuecomment-1749772070\n- Description: Julia Pkg providing utilities for working with the Ripple electrophysiology recording system\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598d7ee21268e53647037801c2ea06a7a47b55df5dc8a8c0540ff4d3290117af102f3fb0da76cf16be4d714971b4037dbec53200837b7646c6a3d238347324913a3de52792e784bcc677f66faaa2a18f398e17b6810c55280d1cd3b819d199c3f6c9d0611802b19c4202fe12e7e84c49da97adf5bc9bbd6b378b844743b2c48a4b8 -->",
+  "package_name": "Ripple",
+  "closed_at": "2023-10-10T22:25:16Z",
+  "title": "New package: Ripple v1.0.1"
+}

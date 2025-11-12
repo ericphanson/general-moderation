@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-06-08T08:42:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 85122,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85eTeQ8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: AtomsBase, PyCall, Reexport\n- Package name similar to 1 existing package.\n  1. Similar to Maracas. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-08T08:50:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85122#issuecomment-1582163004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eTlOh",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This seems to be a test only, so I assume this can be closed @chemicalfiend? \r\n\r\nFor future, I would assume that a generic and non-intuitive name like `Marcus` will generate some pushback when attempting to register in the General registry, where we are usually looking for more descriptive names to aid discoverability.",
+      "createdAt": "2023-06-08T09:10:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85122#issuecomment-1582191521",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eT5Fo",
+      "author": {
+        "login": "chemicalfiend"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes sure, it can be closed it was just a test..",
+      "createdAt": "2023-06-08T10:03:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85122#issuecomment-1582272872",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eVqAF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`MarcusMobility` would be totally fine, though",
+      "createdAt": "2023-06-08T14:51:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85122#issuecomment-1582735365",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Marcus\n- Repository: https://github.com/chemicalfiend/Marcus.jl\n- Created by: @chemicalfiend\n- Version: v0.0.1\n- Commit: 78ffc9e51b2bf183efa0efb5ad6439fa306ef1d9\n- Reviewed by: @chemicalfiend\n- Reference: https://github.com/chemicalfiend/Marcus.jl/issues/1\n- Description: Mobility with Marcus model\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980891595519eeb4c43ad3a37d9b93caf54140d44b2965eca941ff3c6220fd556d728ec4988f9c5606103ac32a852e994192e99e3d730705b9e62733608f49f0e13707b8ebd52654b08a54581153f17951963deb1677ef41829410e65434db13b0a7d9093866db0f6002a176c69a55ac7c8c5faf550d48dc03a14045f44bfc0591 -->",
+  "package_name": "Marcus",
+  "closed_at": "2023-06-08T10:04:08Z",
+  "title": "New package: Marcus v0.0.1"
+}

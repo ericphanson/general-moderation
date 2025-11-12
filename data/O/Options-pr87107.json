@@ -1,0 +1,165 @@
+{
+  "created_at": "2023-07-08T20:20:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 87107,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hAWsb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Optionals. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-08T20:25:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627482907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hAWuy",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nHi, thank you for the contribution!\r\nThis package has a very generic name and no documentation at all, could you be a little more precise on what if does? Perhaps a more specific name would help users?",
+      "createdAt": "2023-07-08T20:26:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627483058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hAXDP",
+      "author": {
+        "login": "bit-web24"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your feedback. I apologize for the lack of clarity in the package description. Options.jl is a package that brings the concept of optional values, similar to Rust's Option type, to Julia. It provides a set of comprehensive types and functions, including `Some(data)` and `None`, for working with optional values. With `Options.jl`, you can write more concise and reliable code by simplifying the handling of optional values. Additionally, the package offers functions for transforming, mapping, and chaining operations on Option types. I will take your suggestion into consideration and work on providing more specific documentation to better communicate the package's functionality and purpose to users.",
+      "createdAt": "2023-07-08T20:34:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627484367",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hAYKJ",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThank you for your precisions! How different is it from the [built-in `Some`](https://docs.julialang.org/en/v1/base/base/#Base.Some)?\r\n\r\nCould I suggest renaming the package to `OptionalValues.jl`? Package names are in short supply in Julia since they all share the same namespace, so the more specific the better. At first glance yours made me think it was about setting options (parameters), not for dealing with optional values.",
+      "createdAt": "2023-07-08T21:03:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627488905",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hAcFw",
+      "author": {
+        "login": "bit-web24"
+      },
+      "authorAssociation": "NONE",
+      "body": "my `Some` type gives the same syntax as in rust, and no more complexities in providing and extracting values from the `Some` type or using macros to do the same. Also you have full control over error handling part.",
+      "createdAt": "2023-07-08T21:18:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627505008",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hBHin",
+      "author": {
+        "login": "mrufsvold"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] \r\n\r\n~~I love this! Thank you!~~\r\n\r\n~~I second a slightly more specific name. When I saw `Options` my first thought was like \"setting options for your program\" like `Preferences.jl`. I understand the desire for terseness, but I wouldn't want it to get overlooked because of ambiguity.~~\r\nIgnore me . I see the update! Thanks again. Excited to use this!!",
+      "createdAt": "2023-07-09T11:06:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627682983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hBH4D",
+      "author": {
+        "login": "bit-web24"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have renamed the Package as [`OptionType`](https://github.com/JuliaRegistries/General/pull/87109) which clearly represents that package provides an Option types to work with.",
+      "createdAt": "2023-07-09T11:12:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1627684355",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jgrii",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-08T12:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1669511330",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kKnyx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-16T12:22:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87107#issuecomment-1680506033",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Options\n- Repository: https://github.com/bit-web24/Options.jl\n- Created by: @bit-web24\n- Version: v1.0.0\n- Commit: 2df77a7f79e9123de14b6f9038b1d804a66e243e\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Simplify optional value handling in Julia with an elegant and powerful Option{T} type. Enhance code clarity and reliability\n<!-- END RELEASE NOTES -->",
+  "package_name": "Options",
+  "closed_at": "2023-08-16T12:22:58Z",
+  "title": "New package: Options v1.0.0"
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-06-30T00:07:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 63383,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Fxhx5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 3 existing packages.\n  1. Similar to Nemo. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.64 is at or below cutoff of 2.50.\n  2. Similar to Dolo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Dojo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-30T00:10:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63383#issuecomment-1170611321",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FxiMe",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It doesn't seem like this package needs to be registered?\r\n\r\nSee also:\r\n1. https://github.com/JuliaRegistries/General/blob/master/README.md#should-i-register-my-package\r\n2. https://github.com/JuliaRegistries/General/blob/master/README.md#do-i-need-to-register-a-package-to-install-it",
+      "createdAt": "2022-06-30T00:13:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63383#issuecomment-1170613022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85F0Ri8",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@beorostica, I was also going to block the registration, since the package (almost) empty (and a good name). If it wasn't registered in error, can you explain the purpose of (both) packages. If not some great plans, or until fulfilled keep to name Demo.jl free for others to register.\r\n\r\nYou can also close these open issues here.",
+      "createdAt": "2022-06-30T15:01:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63383#issuecomment-1171331260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85F0Yha",
+      "author": {
+        "login": "beorostica"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I was just making some tests with TagBot.\r\nSo please, don't consider the packages Beon.jl nor BeonDemo.jl.\r\nThanks guys!",
+      "createdAt": "2022-06-30T15:26:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63383#issuecomment-1171359834",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Demo\n- Repository: https://github.com/orosticaingenieria/Demo.jl\n- Created by: @beorostica\n- Version: v0.1.0\n- Commit: f1ab33a54b2502a0cda4e4bf263fdedfb53aa85d\n- Reviewed by: @beorostica\n- Reference: https://github.com/orosticaingenieria/Demo.jl/commit/f1ab33a54b2502a0cda4e4bf263fdedfb53aa85d#commitcomment-77324246\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e538243c8462a0c03def02d05ac71f57d64c0a5baec95462db8198204de31b45213f4e554165412079e1b369f1fd8dbf6fbddbc2d252cdb7a06153f92b4eadc8f53f1b22854d21dd2cdc52e799b63e5e7096efb983e4d7eb918582e8b0952d446e283c4096d404d6788519c6add803fa3c323e024f0fe357adadbe86087fbba21b6edeceeaa78f2335413929132f871f220c124caaa9d9c7dbf189d1551717f7e04e327a58a759de2e6df67e39c8a10e -->",
+  "package_name": "Demo",
+  "closed_at": "2022-06-30T15:32:21Z",
+  "title": "New package: Demo v0.1.0"
+}

@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-04-30T14:22:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130064,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86paFEm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import MCPClient` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-30T14:31:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130064#issuecomment-2842186022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86paGyq",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "oh my gosh. I made a big mistake with my last edits. Sorry! Please close the case, the pacekge will be renamed to MCPclient.jl!",
+      "createdAt": "2025-04-30T14:33:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130064#issuecomment-2842193066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86paRIy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Are you sure? `MCPclient` is arguably incorrect CamelCase spelling. I would stick to `MCPClient` (or an entirely different name, if you can come up with something better). The name similarity is not an issue, I can override that [noblock]",
+      "createdAt": "2025-04-30T14:45:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130064#issuecomment-2842235442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pnwc-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/130145",
+      "createdAt": "2025-05-01T21:02:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130064#issuecomment-2845771582",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MCPClient\n- Repository: https://github.com/Cvikli/MCPClient.jl\n- Created by: @Cvikli\n- Version: v1.1.0\n- Commit: a95694f28662a55a089fb0274e7c720cd3d87c73\n- Git reference: HEAD\n- Description: Simplest MCP layer. \n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nJulia MCP client to reach MCP servers\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "MCPClient",
+  "closed_at": "2025-05-01T21:02:38Z",
+  "title": "New package: MCPClient v1.1.0"
+}

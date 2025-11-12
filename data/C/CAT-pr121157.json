@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-12-10T22:28:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 121157,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86W_CT8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArgParse, CSV, CUTEst, DataFrames, Distributions, EnumX, JuMP, JuliaFormatter, MathOptInterface, NLPModels, NLPModelsJuMP, PDMats, Plots, StatsBase, StatsPlots\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 22 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to BAT. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.01 is at or below cutoff of 2.50.\n  2. Similar to MAT. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.33 is at or below cutoff of 2.50.\n  3. Similar to CAP. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  4. Similar to GMT. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.97 is at or below cutoff of 2.50.\n  5. Similar to RAI. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.17 is at or below cutoff of 2.50.\n  6. Similar to GAP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to XRT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to CRC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to JET. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to WAV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to Cbc. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  15. Similar to NATS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  16. Similar to CAOS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  17. Similar to XAM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  18. Similar to COPT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  19. Similar to CGAL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  20. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  21. Similar to Clp. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  22. Similar to GMAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-12-10T22:41:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121157#issuecomment-2533106940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86XO-Jj",
+      "author": {
+        "login": "fadihamad94"
+      },
+      "authorAssociation": "NONE",
+      "body": "We decided to name the package CATrustRegionMethod and we included in the package readme an explanation of the name.\r\nWe opened another pull request. Can you please close this pull request.",
+      "createdAt": "2024-12-11T22:00:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121157#issuecomment-2537284195",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CAT\n- Repository: https://github.com/fadihamad94/CAT-Journal\n- Created by: @fadihamad94\n- Version: v0.1.0\n- Commit: 100eb39faa44da65ee65dc8a4627684c7ea86cd6\n- Git reference: HEAD\n- Description: This package is the implementation of a simple and practical adaptive trust-region method for finding stationary points of nonconvex functions with L-Lipschitz Hessians and bounded optimality gap.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nRelease notes:\n\nFirst version of the CAT Solver\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "CAT",
+  "closed_at": "2024-12-12T15:45:48Z",
+  "title": "New package: CAT v0.1.0"
+}

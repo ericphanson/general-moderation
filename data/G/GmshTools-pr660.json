@@ -1,0 +1,121 @@
+{
+  "created_at": "2019-05-10T04:05:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": "2019-05-20T14:59:03Z",
+  "pr_number": 660,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5MTMxNjE5OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I noticed that you included some files verbatim from gmsh which is GPL licensed (https://github.com/shipengcheng1230/GmshTools.jl/blob/master/test/t1.jl vs https://gitlab.onelab.info/gmsh/gmsh/blob/master/demos/api/t1.jl etc). I think it would be nice if you added a comment about this e.g. in the LICENSE file, and at the top of those copied files. IANAL but seems like you should at least acknowledge the original source here.\r\n\r\nAlso, https://github.com/shipengcheng1230/GmshTools.jl/blob/f6ea5a98b8f43d9b847107c024e234c53e0411fa/src/GmshTools.jl#L9 seems like a really bad idea, but we don't have to discuss that here.",
+      "createdAt": "2019-05-10T14:49:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-491316198",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5MTM0NTU3Ng==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre my apology for the mess in the license issue.  I added descriptions on top of those ported files and changed the license compatible with Gmsh GPLv2.\r\n\r\nAs for the `Base.include` usage, that's a temporary solution for v4.3.0 on linux without segment fault. I don't see discussion of this function (would be great if you could refer such).\r\n\r\nThanks.",
+      "createdAt": "2019-05-10T16:15:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-491345576",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5MTM0NzI1MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I am not sure you necessarily have to license your package under GPL, just the copied files. But again, IANAL and it would be nice if anyone else could comment, I don't really know.",
+      "createdAt": "2019-05-10T16:20:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-491347250",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5MTM3NjAyNQ==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre After viewing this [post](https://discourse.julialang.org/t/gpl-and-virality/7715/17) and find an example of FFTW.jl (mit license, fftw is GPLv2), I decided to remove the shipped codes and change back to MIT license.",
+      "createdAt": "2019-05-10T17:51:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-491376025",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NDAyMDExOQ==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @StefanKarpinski, it's been quiet for a while and is there anything I should change if I may ask? Really appreciated for your review. Thanks!",
+      "createdAt": "2019-05-20T14:50:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-494020119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NDAyNDAyNA==",
+      "author": {
+        "login": "julia-tagbot"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created release `v0.1.0`, [here](https://github.com/shipengcheng1230/GmshTools.jl/releases/tag/v0.1.0) it is.\n<!-- cedd0d30-7b0f-11e9-9bcb-5dde68c4ba64 -->",
+      "createdAt": "2019-05-20T14:59:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-494024024",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ5NDAyNDM4OA==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre Thanks!",
+      "createdAt": "2019-05-20T15:00:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/660#issuecomment-494024388",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "- Registering package: GmshTools\n- Repository: https://github.com/shipengcheng1230/GmshTools.jl\n- Created by: @shipengcheng1230\n- Version: v0.1.0\n- Commit: 1c2c5beb9e68fadab529d0724354732439191097\n- Reviewed by: @shipengcheng1230\n- Reference: https://github.com/shipengcheng1230/GmshTools.jl/commit/1c2c5beb9e68fadab529d0724354732439191097#commitcomment-33586034\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4eda386aa08590f657649515c956c426d2989d5ab48706125e3478f3616796db24261cec51310b6b3a8de05a6843c1bd529b70b8269ae0c20dd3ee0b2105f788a23d1403ca4d9396a18c8a9a84cead84c1101d86ce0a5f726218185b3aa90809c2f8130d9627abb337993b95b0adbfc092c56f5ce212bfae8bd80c19a754160e731b9f57cce8e5b387888de104dc99369f7f891f53ca799b5524001fda940d0b0521ea11ade9b8ed7306db896cee512d58698a646d91b2e26bc8226ac30057708 -->",
+  "package_name": "GmshTools",
+  "closed_at": "2019-05-20T14:59:03Z",
+  "title": "New package GmshTools: 0.1.0"
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-04-14T14:29:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 58507,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85BhUNj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, DataFramesMeta, DrWatson, Gridap, LaTeXStrings, Parameters, Plots, Roots, WriteVTK\n- I was not able to load the package (i.e. `import VLFS_FEM` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-14T14:35:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58507#issuecomment-1099252579",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CZv1W",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Presumably superseded by https://github.com/JuliaRegistries/General/pull/58533",
+      "createdAt": "2022-04-30T20:01:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58507#issuecomment-1114045782",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: VLFS_FEM\n- Repository: https://github.com/oriolcg/VLFS_FEM\n- Created by: @oriolcg\n- Version: v0.1.0\n- Commit: d5244209bff6a57b7556f8fcaec757510cc2bfb4\n- Reviewed by: @oriolcg\n- Reference: https://github.com/oriolcg/VLFS_FEM/commit/d5244209bff6a57b7556f8fcaec757510cc2bfb4#commitcomment-71285711\n- Description: A monolithic Finite Element formulation for the hydroelastic analysis of Very Large Floating Structures\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6feea7d7c736b84b57f56bc84c67d3576e39a7f943b8911d94bad0dc46d5399b0cc155a1cc422b80c0b7e155fee36877293d8ae211d6286d36430e1383a024e06f7ae9ac5a607c6be917a17fb4ef77726fdfaa5a0a67a3fa0ffa51e9b2a45a1d19156ee0f1ef22436dd2d299ae414f38b4d332460b32256c1532024da1e0118e2925a054d4dbdf7a686f377dd876f021618db40f3405603ca31afba892dc9f0295af7487263380b08fa5afb1b9f773586 -->",
+  "package_name": "VLFS_FEM",
+  "closed_at": "2022-04-30T20:01:30Z",
+  "title": "New package: VLFS_FEM v0.1.0"
+}

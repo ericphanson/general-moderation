@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-04-12T05:19:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 58379,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85BVLmx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to TimesDates. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-12T05:22:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58379#issuecomment-1096071601",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BVMBP",
+      "author": {
+        "login": "JeffreySarnoff"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@admin After receiving additional suggestions, it would be best to use the name `TimeDates.jl` for this content.  While it is very close to `TimesDates.jl`, both are mine, this is the rewrite of the former without time zone support. `ZonedTimeDates.jl` will be the rewrite of the time zone supporting part of TimesDates. Their connection is documented in this README.  This repo has been approved to move into JuliaTime soon.\r\n[noblock]",
+      "createdAt": "2022-04-12T05:23:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58379#issuecomment-1096073295",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Bk7mx",
+      "author": {
+        "login": "JeffreySarnoff"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@admin please close this PR",
+      "createdAt": "2022-04-15T16:06:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58379#issuecomment-1100200369",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TimeDates\n- Repository: https://github.com/JeffreySarnoff/TimeDates.jl\n- Created by: @JeffreySarnoff\n- Version: v0.1.0\n- Commit: 5a99b4a39286219cff1655835f7758826eb478ab\n- Reviewed by: @JeffreySarnoff\n- Reference: https://github.com/JeffreySarnoff/TimeDates.jl/commit/5a99b4a39286219cff1655835f7758826eb478ab#commitcomment-71073021\n- Description: Provides TimeDate, a nanosecond resolved DateTime type.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cf5f0c9b2111b6a2410e54347033a58ec0d13010500dd927975d41ec35c6cf69197f29fdb9f36aa5b25af8289b8af41667b7619273a659b95b50890bbdc2bdb2f5eb7ae70eabae3027187b3b441ed8790157206bf139d5e55981308dac09b0cb01a152d36be55acad332406afa5854b1974a93753f4855bc08b0ec7ca6e8984ab2fa13531d5ec2ded6a7529294fe44ea34f62079b800fd5a5639cb5f6699867d651a2e54715cbecdaef6d619c6328285 -->",
+  "package_name": "TimeDates",
+  "closed_at": "2022-04-15T16:18:50Z",
+  "title": "New package: TimeDates v0.1.0"
+}

@@ -1,0 +1,98 @@
+{
+  "created_at": "2019-11-17T08:02:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 5499,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NDcyMjY3NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name is not at least five characters long\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n- The following dependencies do not have a compat entry that has an upper bound: CSV, DataFrames, julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-17T08:04:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5499#issuecomment-554722674",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg2NzEzNQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What does ExSup mean? Just FYI; https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1",
+      "createdAt": "2019-11-26T23:56:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5499#issuecomment-558867135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODk2MDk1OQ==",
+      "author": {
+        "login": "mjirik"
+      },
+      "authorAssociation": "NONE",
+      "body": "It means Experiment Support. The inspiration is our other package called\nexsu\nhttps://github.com/mjirik/exsu\nIt is used for generating spreadsheets and image data from computer\nvision experiments for further processing.\nIn the future, we plan to add all that functionality to ExSup.jl.\n\n\nst 27. 11. 2019 v 0:56 odesílatel Fredrik Ekre <notifications@github.com>\nnapsal:\n\n> What does ExSup mean? Just FYI;\n> https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1\n>\n> —\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/5499?email_source=notifications&email_token=AAO7MFGUSFXTCDM3CHQ3DQTQVWZRHA5CNFSM4JOIXJP2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOEFH2FPY#issuecomment-558867135>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AAO7MFHHCSDO7ZIUCRLCGTDQVWZRHANCNFSM4JOIXJPQ>\n> .\n>\n",
+      "createdAt": "2019-11-27T07:11:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5499#issuecomment-558960959",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTI2NTQ4Mw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, maybe add that in the README. Can you add bounds to your dependencies and retrigger the bot?",
+      "createdAt": "2019-11-27T22:02:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5499#issuecomment-559265483",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI2MjE1Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks like the package was renamed to ExSup, but this PR is for ExSu, so I’m closing it.",
+      "createdAt": "2019-12-22T13:30:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5499#issuecomment-568262153",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ExSu\n- Repository: https://github.com/mjirik/ExSu.jl\n- Created by: @mjirik\n- Version: v0.2.0\n- Commit: b258bff7738cfc52919d9ffad9d865da094c3cc4\n- Git reference: master\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Experiment outputs written to CSV file\n<!-- END RELEASE NOTES -->",
+  "package_name": "ExSu",
+  "closed_at": "2019-12-22T13:30:50Z",
+  "title": "New package: ExSu v0.2.0"
+}

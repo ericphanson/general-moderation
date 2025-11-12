@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-10-11T23:06:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 46555,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844Dwai",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The compat entry for `julia` is unbounded.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: BusinessDays, DBInterface, DataFrames, FixedEffectModels, LibPQ, ParallelKMeans\n- I was not able to load the package (i.e. `import WRDSMerger` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-11T23:11:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46555#issuecomment-940508834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844FvNM",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Looks like this can be closed as well per: https://github.com/JuliaRegistries/General/pull/46556",
+      "createdAt": "2021-10-12T13:45:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46555#issuecomment-941028172",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844Fz0f",
+      "author": {
+        "login": "junder873"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, this can be closed.",
+      "createdAt": "2021-10-12T14:07:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/46555#issuecomment-941047071",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: WRDSMerger\n- Repository: https://github.com/junder873/WRDSMerger\n- Created by: @junder873\n- Version: v0.4.1\n- Commit: 38b090ed2a580e1c7234c05ffec81fed73f32356\n- Reviewed by: @junder873\n- Reference: https://github.com/junder873/WRDSMerger/commit/38b090ed2a580e1c7234c05ffec81fed73f32356#commitcomment-57844060\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c0ae8e023da6b08505c003bbe28fb10f1415ef90a32156b24e228978dfd17df5b095a9a4774700ebc166598ca0fcec3bf5ebf82e74269b2d601f4358c5b86b9a791cfab0f1444d2c2fa26b67fb94e483fd0b1de1a69a78e3d9378afa6d14117e34bca61d07bc2c9f32b5756f731ffae0eb537d3f82837ddf11ce133b99db288b18138cd27c1691bb7b286d330dc548030e4f23dee3b17f64bc3ec4001bdba4a94d4fc689cd393a7e7a0bb703434037ca -->",
+  "package_name": "WRDSMerger",
+  "closed_at": "2021-10-12T14:07:54Z",
+  "title": "New package: WRDSMerger v0.4.1"
+}

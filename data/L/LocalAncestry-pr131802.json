@@ -1,0 +1,150 @@
+{
+  "created_at": "2025-05-27T12:27:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 131802,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86tltw1",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This package doesn't have a Readme, a description, or documentation, making it seem unlikely that anyone other than the author would be able to actually use it for anything.\r\n\r\nGenerally, the registry is not for personal projects and is instead for sharing software for other people to be able to actually use. If this is meant for distribution to other people, could you please add some documentation and usage info?",
+      "createdAt": "2025-05-27T12:33:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2912345141",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tlu_T",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Version number is not allowed to contain prerelease data\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-27T12:35:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2912350163",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tmY3h",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also caution against starting with `v1.0.0` as a version number at the project's current state. If you are following [semantic versioning](https://semver.org), a `v1.0.0` version indicates the first \"stable\" release, which _must declare a public API_. In order to do that, I would generally recommend a full [Documenter](https://documenter.juliadocs.org/stable/)-based API documentation. I would also recommend setting up tests with good coverage. Without that, it is hard to determine whether changes are \"breaking\" or not, which SemVer would require keeping track of post-1.0 in the form of a [changelog](https://keepachangelog.com/en/1.1.0/). Unless you want to polish up your project now and are quite sure that the API is stable and well-tested, my recommendation is usually for projects to start with `0.1` and then move to `1.0` as soon as they have reached the level of maturity that would warrant the label \"stable\".",
+      "createdAt": "2025-05-27T13:29:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2912521697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uH66y",
+      "author": {
+        "login": "BgroveP"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you both for your comments. I have added a public API, bumped the version down to 0.1.0,  and started writing a documentation. When ready to resubmit, do I just submit as I did the first time, or is can I resubmit in another way that signals that it is a resubmission?",
+      "createdAt": "2025-05-30T05:57:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2921311922",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uLeRt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you!\r\n\r\nYes, you resubmit the same way as for the original registration.\r\n\r\nIt would probably be a good idea to specify not just the input types of `getLocalAncestries`, but also the output. If you have both, since that is the only function in the package, that would then be a complete specification of the API, and you _could_ release this as `v1.0.0`.\r\n\r\nLastly, a small note: the convention for function names in Julia is to use `snake_case`, not `camelCase`. Thus, I would recommend renaming `getLocalAncestries` to `get_local_ancestries`",
+      "createdAt": "2025-05-30T12:18:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2922243181",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86u9GH9",
+      "author": {
+        "login": "BgroveP"
+      },
+      "authorAssociation": "NONE",
+      "body": "Great, I have resubmitted the package for registration with the suggested changes.",
+      "createdAt": "2025-06-03T13:30:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2935251453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vBFaD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I have resubmitted the package for registration\r\n\r\nI haven't seen any resubmission…?",
+      "createdAt": "2025-06-03T16:52:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2936297091",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vCQZ1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Well, now I have! 😀\r\n\r\nClosing in favor of https://github.com/JuliaRegistries/General/pull/132240",
+      "createdAt": "2025-06-03T18:18:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131802#issuecomment-2936604277",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LocalAncestry\n- Repository: https://github.com/BgroveP/LocalAncestry.jl\n- Created by: @BgroveP\n- Version: v1.0.0-DEV\n- Commit: b7c1437b2a0e08c1e547a8bf3b86669096f4a250\n- Git reference: HEAD",
+  "package_name": "LocalAncestry",
+  "closed_at": "2025-06-03T18:18:38Z",
+  "title": "New package: LocalAncestry v1.0.0-DEV"
+}

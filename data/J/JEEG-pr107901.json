@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-05-29T18:42:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 107901,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_cByB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Version number is not allowed to contain prerelease data\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DSP, EDF, FFTW, Plots\n- Package name similar to 2 existing packages.\n  1. Similar to JET. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-29T18:48:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107901#issuecomment-2138053761",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_cHHn",
+      "author": {
+        "login": "slopezpereyra"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name JEEG seems well-suited. It is a Julia package for EEG analysis. EEG is a shortcut for electroencephalography and it is always written in upper-case letters.",
+      "createdAt": "2024-05-29T19:02:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107901#issuecomment-2138075623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_cZAB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> It is a Julia package for EEG analysis\r\n\r\nMaybe `EEGAnalysis`, then? I do think \"EEG\" is a commonly enough understood acronym to be okay as part of a Julia package name. However, I'm assuming the `J` in `JEEG` is supposed to stand for \"Julia\", which would be very much frowned upon in the [Package Naming Guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines). Also, the \"Name is not at least 5 characters long\" is pretty much a hard rule at this point (especially for any kind of acronym), so that's going to make `JEEG` an extremely hard sell.",
+      "createdAt": "2024-05-29T19:47:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107901#issuecomment-2138148865",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_cu0G",
+      "author": {
+        "login": "slopezpereyra"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thanks for the comments, they made sense. I'll change the package name and re-execute the registrator..\r\n",
+      "createdAt": "2024-05-29T20:48:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/107901#issuecomment-2138238214",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_c3AV",
+      "author": {
+        "login": "slopezpereyra"
+      },
+      "authorAssociation": "NONE",
+      "body": "This pull request can be closed - new pull request [here](https://github.com/JuliaRegistries/General/pull/107914)",
+      "createdAt": "2024-05-29T21:11:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107901#issuecomment-2138271765",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JEEG\n- Repository: https://github.com/slopezpereyra/JEEG.jl\n- Created by: @slopezpereyra\n- Version: v1.0.0-DEV\n- Commit: f538f1eb393733874a6dd2493619fbaae0f70b43\n- Git reference: HEAD\n- Description: A Julia package for computational EEG analysis ~ With special tools for sleep neuroscience!",
+  "package_name": "JEEG",
+  "closed_at": "2024-05-30T10:45:06Z",
+  "title": "New package: JEEG v1.0.0-DEV"
+}

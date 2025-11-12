@@ -1,0 +1,150 @@
+{
+  "created_at": "2024-03-25T02:27:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "LilithHafner",
+  "merged_at": null,
+  "pr_number": 103532,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q854OoiQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"OffsetTables\")` failed). See the AutoMerge logs for details.\n- I was not able to load the package (i.e. `import OffsetTables` failed). See the AutoMerge logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-25T02:30:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2017101968",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854O-kj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you extend the README a bit with a paragraph to give context for the package and maybe a small usage example? As triage members, we should probably lead by example when it comes to (not) registering \"undocumented\" packages, no? ;-)\r\n\r\n[noblock]",
+      "createdAt": "2024-03-25T04:33:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2017192227",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854UpwC",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The package was pretty solid from functionality, tests, efficiency & benchmarks perspectives. But you're right that that does not make up for missing docs.\r\n\r\nI can and should do better when it comes to documentation quality.\r\n\r\nThe [new docs](https://offsettables.lilithhafner.com) are still a work in progress, but they are reasonable.",
+      "createdAt": "2024-03-25T18:49:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2018679810",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854UtSW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Thanks! Looks great!\r\n\r\nI don't mind \"early stage\" docs in registrations, but I'm pretty strict about the README having a paragraph that explains the purpose of a package, and then either a small usage example or a link to a more complete online documentation.\r\n\r\nP.S.: don't forget to add `[noblock]` to your own comment",
+      "createdAt": "2024-03-25T18:58:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2018694294",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854UtzT",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "A note on the CI failure: This package requires Julia 1.11 because it uses `Memory`. (so automerge will not succeed)\r\n\r\nA note on the name: This package implements [Alias tables](https://en.wikipedia.org/wiki/Alias_method) using diff coding to store the aliases as offsets rather than absolute aliases. This diff coding saves about one instruction in sampling and is an implementation detail.\r\n\r\nI'm open to other suggestions for the name (e.g. AliasTables.jl)",
+      "createdAt": "2024-03-25T18:59:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2018696403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854nJDN",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> A note on the name: This package implements [Alias tables](https://en.wikipedia.org/wiki/Alias_method) using diff coding to store the aliases as offsets rather than absolute aliases. This diff coding saves about one instruction in sampling and is an implementation detail.\r\n> \r\n> I'm open to other suggestions for the name (e.g. AliasTables.jl)\r\n\r\nThere might be possible confusion with https://github.com/JuliaArrays/OffsetArrays.jl. I have no opinion on this but wanted to make you aware of this. [noblock] ",
+      "createdAt": "2024-03-27T18:21:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2023526605",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854o3EU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> This package implements [Alias tables](https://en.wikipedia.org/wiki/Alias_method) using diff coding to store the aliases as offsets rather than absolute aliases. This diff coding saves about one instruction in sampling and is an implementation detail.\r\n\r\nBased on that description, it does seem like `AliasTables` would be a better name. But this is pretty far outside my domain of expertise, so I'm not sure that I have much insight here.\r\n\r\nEven with the current name, though, I don't really see much potential for confusion with `OffsetArrays`. @lgoettgens: Do you feel strongly enough about the potential similarity to make your comment blocking, or did you just forget a `[noblock]`?",
+      "createdAt": "2024-03-27T20:58:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2023977236",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854poBL",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Renamed to AliasTables.jl. New PR: https://github.com/JuliaRegistries/General/pull/103755",
+      "createdAt": "2024-03-28T00:06:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103532#issuecomment-2024177739",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OffsetTables\n- Repository: https://github.com/LilithHafner/OffsetTables.jl\n- Created by: @LilithHafner\n- Version: v0.0.1\n- Commit: 5ccc765b5df9b3501774d859a6a72f0acf274224\n- Reviewed by: @LilithHafner\n- Reference: https://github.com/LilithHafner/OffsetTables.jl/commit/5ccc765b5df9b3501774d859a6a72f0acf274224#commitcomment-140212218\n- Description: An efficient sampler for discrete random variables\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd636a0414f037d2d4b8c2c6f81a88681491004e5b8c3f203ac2b245e57d23a1a51679721be674bddcb9d6660beeafeda2095568c8a3d0affa1dc0c3c7bfe3ea41f028799cf821b55b6ec1abb536a3d61bcdb0ed249da695160f0ffa59f3e18fff51e7d98d375c4cbef1d646c53a1e99c520c7fdfc951ec2ae1b4a7be5c26575145ba5bafbf8478774f3b3882f0eb0f7441dcb8cf5b8c7cedfa590721454312cfc9da5496290bbe86b66f37c21af42632ad -->",
+  "package_name": "OffsetTables",
+  "closed_at": "2024-03-28T00:06:13Z",
+  "title": "New package: OffsetTables v0.0.1"
+}

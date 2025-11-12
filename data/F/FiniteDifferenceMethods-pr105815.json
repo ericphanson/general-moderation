@@ -1,0 +1,143 @@
+{
+  "created_at": "2024-04-29T14:21:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 105815,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858Jmhn",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-29T14:24:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2082891879",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858JpXu",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, and congrats on the package!\nSince it has no documentation or README and seems fairly similar to FiniteDifferences.jl, I'm unsure whether registration is justified. Can you tell us a little more?",
+      "createdAt": "2024-04-29T14:29:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2082903534",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858JvId",
+      "author": {
+        "login": "vlc1"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @gdalle, the objective if not quite the same (correct me if I'm wrong): FiniteDifferences.jl approximates derivatives of functions, whereas the ultimate objective of FiniteDifferenceMethods.jl is to apply it to discrete fields on Cartesian grids: classical formulas for Laplacian, forward/backward differentiation...\r\n\r\nThe motivation is to gather code that I regularly need (instead of copy-pasting), and made it easily available to students/collaborators. If you think it's too confusing, I can make a local registry somewhere else, just let me know. Thanks!",
+      "createdAt": "2024-04-29T14:39:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2082927133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858K5p8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the name could be okay in principle, but it’s very general, and thus the package should live up to slightly higher standards of being “authoritative”. It should also have a commitment to long-term maintenance, which would include being hosted under an organization with multiple owners.\r\n\r\nI would expect the package to be a little bit more mature before registration, with full documentation. So maybe keep it in a LocalRegistry for now, and resubmit it to General when it’s somewhat more “stable”?",
+      "createdAt": "2024-04-29T17:04:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2083232380",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858LCxo",
+      "author": {
+        "login": "vlc1"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, let's do that.",
+      "createdAt": "2024-04-29T17:26:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2083269736",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858QYjh",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "So historical note: FiniteDifferences.jl was originally named FDM.jl short for Finite Diffrence Methods,\r\nbut we changed the name a way from that when we realized that finite difference methods referred to some other mathematical concept. (No comment on as to if this new FiniteDifferenceMethods.jl implement that concept)\r\n\r\n [noblock]",
+      "createdAt": "2024-04-30T08:12:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2084669665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85_hT6Q",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-05-30T12:23:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2139438736",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ASR6e",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-06-06T12:23:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105815#issuecomment-2152275614",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FiniteDifferenceMethods\n- Repository: https://github.com/vlc1/FiniteDifferenceMethods.jl\n- Created by: @vlc1\n- Version: v0.1.0\n- Commit: dff7e66c4b5410b10ee2764a79d6158b25e17645\n- Reviewed by: @vlc1\n- Reference: https://github.com/vlc1/FiniteDifferenceMethods.jl/issues/2#issuecomment-2082884973\n- Description: Classical finite difference formulas and related functionalities\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835988aef4288c66d079ad49392d5c15f9cd0c1acbe7b2cd33434dcd0719c60440e45dc04974266b8921fc25d9114c07d2f949c5e5c884b176c63f507285fd8e35bb3be10c5e119b6de409abd415d59baa1f39c12c1b45c62a9d78d2f4277141613e15906f819b707d5b6931f1b9fef3466b50baeb078b829d22cf060ff5688e4593b -->",
+  "package_name": "FiniteDifferenceMethods",
+  "closed_at": "2024-06-06T12:23:20Z",
+  "title": "New package: FiniteDifferenceMethods v0.1.0"
+}

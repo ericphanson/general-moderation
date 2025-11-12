@@ -1,0 +1,188 @@
+{
+  "created_at": "2024-01-25T16:31:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "LilithHafner",
+  "merged_at": null,
+  "pr_number": 99531,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85x4P8G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-25T16:35:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1910570758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x4RjZ",
+      "author": {
+        "login": "kagalenko-m-b"
+      },
+      "authorAssociation": "NONE",
+      "body": "I believe FMin is a good name for this package, because it is as literal as possible translation to Julia of a popular and well-known Fortran routine http://www.netlib.org/fmm/fmin.f\r\n[noblock] ",
+      "createdAt": "2024-01-25T16:39:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1910577369",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x5vEp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This actually seems okay to me, but you'll have to wait three days and then ping the slack for a manual merge\r\n\r\n[noblock]",
+      "createdAt": "2024-01-25T20:37:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1910960425",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yVjKc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] @kagalenko-m-b Can you try retriggering this registration (just add another `@JuliaRegistrator register` comment to https://github.com/kagalenko-m-b/FMin.jl/issues/2).\r\n\r\nIn theory, it should then merge automatically because I applied the \"name similarity is okay\" tag. Otherwise, we'll have to ping a registry maintainer for a manual merge. But I'm kinda curious if retriggering works.",
+      "createdAt": "2024-01-31T02:24:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1918251676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yVjS0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oh, never mind, there's also \"Name is not at least 5 characters long\", which I can't override\r\n\r\n[noblock]",
+      "createdAt": "2024-01-31T02:25:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1918252212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zBbpd",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Does \"fmin\" always mean this same algorithm in practice? For example, in `scipy.optimize.fmin`.\r\nBtw, the first google result on \"fmin\" is C++ `std::fmin` that does a completely different thing.\r\n\r\nAnyway, I would suggest something like \"NetlibFMin\" or \"FMinNetlib\" to avoid potential ambiguities.",
+      "createdAt": "2024-02-06T14:09:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1929755229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zFfNJ",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also prefer a longer and more descriptive name.",
+      "createdAt": "2024-02-06T21:56:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1930818377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zKoxb",
+      "author": {
+        "login": "kagalenko-m-b"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Does \"fmin\" always mean this same algorithm in practice? For example, in `scipy.optimize.fmin`. Btw, the first google result on \"fmin\" is C++ `std::fmin` that does a completely different thing.\r\n\r\nNetlib's `fmin` is clearly the oldest of those. In addition, there already is an `fmin` repo on Github, that contans Fortran 90 port of the original Fortran 77 routine. It's that repository that put me in mind to publish the literal `fmin` port that I have written before.\r\n\r\n\r\n\r\n",
+      "createdAt": "2024-02-07T14:30:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1932168283",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zZnNL",
+      "author": {
+        "login": "carstenbauer"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I tend to agree with the others here that a more descriptive name would be preferable. As far as I can see, \"fmin\" isn't a (well known) package or library name in any of the mentioned languages but only a (sub-)functionality. On top of that, as pointed out by @aplavin, it can even mean different things. Therefore, I would not make an exception to our general rule here.",
+      "createdAt": "2024-02-09T15:05:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1936094027",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851ZQHC",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Happy to register this package under a more descriptive name, though that will need a new PR.",
+      "createdAt": "2024-02-28T18:06:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-1969553858",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86UMTfV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Follow-up in https://github.com/JuliaRegistries/General/pull/119764",
+      "createdAt": "2024-11-19T16:55:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99531#issuecomment-2486253525",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FMin\n- Repository: https://github.com/kagalenko-m-b/FMin.jl\n- Created by: @kagalenko-m-b\n- Version: v1.0.0\n- Commit: 91a913f3228e0b97d7ddd77e66cf6ac9e70ec97f\n- Reviewed by: @kagalenko-m-b\n- Reference: https://github.com/kagalenko-m-b/FMin.jl/issues/2\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f37e66da79cc5079e758c7b89369125b9401fe23131ae9b6ffe8c6ae8e0eebe062b00052144ab7c26ba31b7eef17929f789156cdafed906c11c2dace8e8ebad010a8d55a073edc135298ffd50805bcdf8cd9e696e693570ad5df364aa18435d3d6756190f6174ca4d4e5bb384d2b24d89f49e7736a32945b09a329ebf4a9a688 -->",
+  "package_name": "FMin",
+  "closed_at": "2024-02-28T18:06:03Z",
+  "title": "New package: FMin v1.0.0"
+}

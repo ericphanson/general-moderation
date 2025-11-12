@@ -1,0 +1,151 @@
+{
+  "created_at": "2024-02-13T12:51:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 100761,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85zuFcA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-13T12:56:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1941460736",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zuS_y",
+      "author": {
+        "login": "imciner2"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What is the reasoning for including this in the general registry as a separate package instead of sending it to StatsBase, especially since the Readme of the package says it is a contender for inclusion there? Was this submitted there and turned down, so it needs to live in its own package?\r\n\r\n[noblock]",
+      "createdAt": "2024-02-13T13:28:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1941516274",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zxi38",
+      "author": {
+        "login": "PGS62"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thanks for your question. My intention is that `KendallTau.corkendall` does get moved to `StatsBase`, and there is an [open issue](https://github.com/JuliaStats/StatsBase.jl/issues/849) for that. It has not been \"turned down\" by the maintainers of `StatsBase`, who were very helpful when I was fine tuning my previous contribution to `StatsBase`, which was in fact the current version of `StatsBase.corkendall`. What I hope will happen is that `KendallTau.corkendall` moves to `StatsBase`, and `KendallTau` then exists to export other functions which would not sensibly live in `StatsBase`, of which there is currently only one: `corkendall_fromfile`.",
+      "createdAt": "2024-02-13T20:12:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1942367740",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zyZi8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Where does the name `KendallTau` derive from? It seems to have no obvious connection to `corkendall`. It might be worth explaining the meaning of the name in the README.\r\n\r\nThat being said, I'm also a bit skeptical that should be registered as a separate package.",
+      "createdAt": "2024-02-13T21:27:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1942591676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85z2NiB",
+      "author": {
+        "login": "PGS62"
+      },
+      "authorAssociation": "NONE",
+      "body": "To quote the first sentence of the relevant Wikipedia article:\r\n\"In statistics, the Kendall rank correlation coefficient, commonly referred to as Kendall's τ coefficient (after the Greek letter τ, tau)\" It's on that basis that I went for KendallTau as a package name.\r\n\r\nThe package has additional functionality that does not sit well in StatsBase, namely calculation of tau direct from a CSV file, and calculation of tau using the slow \"naive\" algorithm, rather than Knight's algorithm. The latter was helpful in writing more thorough tests of an implementation than would typically be included in automated tests. In my earlier work to speed up the single-threaded implementation of `corkendall` comparison against the naive algorithm revealed the possibility of overflow errors in the code as was, so I think there is value in the naive implementation.\r\n\r\nFor me, a consideration is that getting additional functionality into a package such as StatsBase, upon which a great many packages depend, is a slow process. I would benefit from being able to release functionality to a more agile, but still registered package. Where appropriate, I can then raise PRs to transfer the functionality to a more widely-used package such as StatsBase.",
+      "createdAt": "2024-02-14T11:36:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1943591041",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850BnlV",
+      "author": {
+        "login": "PGS62"
+      },
+      "authorAssociation": "NONE",
+      "body": "On reflection and taking into account @goerz 's comments I've decided to put this request for registration on hold for the time being.",
+      "createdAt": "2024-02-15T16:56:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1946581333",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850Bv1f",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Okay. We'll keep the PR open in case you decide to get back to it in some form. Otherwise, the bot is going to auto-close it after 30 days of inactivity.",
+      "createdAt": "2024-02-15T17:08:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-1946615135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853Wsog",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-17T12:22:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-2002438688",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854Rnhy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-03-25T12:22:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100761#issuecomment-2017884274",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: KendallTau\n- Repository: https://github.com/PGS62/KendallTau.jl\n- Created by: @PGS62\n- Version: v3.0.2\n- Commit: 732c4e173aa804c75e3e9b1b78c048b26aac39e5\n- Reviewed by: @PGS62\n- Reference: https://github.com/PGS62/KendallTau.jl/issues/11\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a22481319dccc14a04df17349eb3630f662f0e9feba0354e2e18fc0eee5edb808cbe73d2e8416e0ad998dc9ad7c0a8e4f3822875b71e305a9b57d4a4dcb2ee068d151c18fb14c3b0e38d34b0d4561f678cc3fad8ea2f52c14ef4303915ddc93ce7d97ddbf6f2e379a88defb6a1a7220857ec9a0bc25a1e37857990c87a537f0c -->",
+  "package_name": "KendallTau",
+  "closed_at": "2024-03-25T12:22:46Z",
+  "title": "New package: KendallTau v3.0.2"
+}

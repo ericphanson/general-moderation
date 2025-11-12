@@ -1,0 +1,209 @@
+{
+  "created_at": "2025-06-17T15:44:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 133076,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86xrRb9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 3 existing packages.\n  1. Similar to YAML. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to HAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to YAJL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-17T15:50:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2980910845",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsDCi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "IMO this inappropriately presents itself as a successor to [YAML.jl](https://github.com/JuliaData/YAML.jl), which it is not. In principle, there could be a case made for it to be a successor to [LibYAML.jl](https://github.com/JuliaData/LibYAML.jl). What we would normally encourage in situations where an existing package `LibYAML` is unmaintained is for a new maintainer to continue the development of the existing package. Creating a new package `LibYAML2` would be a last resort, or an option if the successor needs to coexist with the original package. That being said, personally, I am not enthusiastic about the idea of adding BHFT Bootcamp members as maintainers to the existing `LibYAML`. Your track record with registering packages consistently demonstrates a lack of alignment with the community. The fact that after the discussion on Slack about replacing/deleting `LibYAML`, you felt it appropriate to try to register under the name `YAML2` does not inspire confidence for a possible stewardship of `LibYAML`.\r\n\r\nI'll let others decide on how to handle this or any potential registration of `LibYAML`/`LibYAML2`, but with the lack of alignment between your projects and the larger community, and with this package seemingly fulfilling an internal need (\"We parse large configuration files so we require a really fast yaml parser\"), I would feel most comfortable if you kept this in [your private registry](https://github.com/bhftbootcamp/Green). There is nothing wrong with maintaining a set of packages for a particular organization. Not everything needs to be in `General`.\r\n",
+      "createdAt": "2025-06-17T16:56:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981114018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsJKL",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, we’re open to proposing the name LibYAML2 if that’s appropriate",
+      "createdAt": "2025-06-17T17:03:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981139083",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsKPg",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "We’re planning to add this package as a dependency in Serde, so we need to include it in General",
+      "createdAt": "2025-06-17T17:05:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981143520",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsNxM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Of course, `Serde` itself turned out to be somewhat problematic, [causing exactly the confusion that people worried about during its registration](https://discourse.julialang.org/t/serde-jl-a-package-for-serialization-deserialization/115386). Not that that has a direct relevance to this registration, except to demonstrate the pattern of consistently problematic registrations.\r\n\r\nCould you add this `YAML` as a submodule of `Serde`? That might be a good way forward, as far as I'm concerned.",
+      "createdAt": "2025-06-17T17:10:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981157964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsQvP",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz, if we go with the name LibYAML2, is that actually against any public registry rules?",
+      "createdAt": "2025-06-17T17:15:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981170127",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsRPQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It will run into the \"name similarity\" issue. As I said, I'll let others decide…",
+      "createdAt": "2025-06-17T17:16:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981172176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xsTBm",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, thank you, we’ll propose the name LibYAML2",
+      "createdAt": "2025-06-17T17:18:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981179494",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xtcq1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/133103 (without any implication of endorsement)",
+      "createdAt": "2025-06-17T18:49:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981481141",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xt__0",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't see a reason for this to not just replace the LibYAML.jl. Was there an attempt to contact the author? If the author doesn't respond, the default assumption should be to just accept the change, given their own README says it's an abandoned repo. There's no reason to keep a name for a repo the author is already claiming is abandoned.",
+      "createdAt": "2025-06-17T19:31:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981625844",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xuUPz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Was there an attempt to contact the author? \r\n\r\nYes, the author agreed to transfer the repo to the JuliaData organization (where it is now), in reaction to the last round of discussions on this, cf. https://github.com/JuliaRegistries/General/pull/132387 and [the related discussion on Slack](https://julialang.slack.com/archives/C6M4DQA5P/p1749151077987889)",
+      "createdAt": "2025-06-17T20:15:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981708787",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: YAML2\n- Repository: https://github.com/bhftbootcamp/YAML2.jl\n- Created by: @gryumov\n- Version: v0.1.0\n- Commit: 43dd2e4cddb7843e98e39e88034fb954f1b16bea\n- Reviewed by: @gryumov\n- Reference: https://github.com/bhftbootcamp/YAML2.jl/commit/43dd2e4cddb7843e98e39e88034fb954f1b16bea#commitcomment-160244547\n- Description: A Julia wrapper for libyaml, providing fast and minimal YAML parsing\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68eefc67d26301a1c2ffe30ad4dcf9afc0fe98621f9c9b984804eafe635f30f9350371d5a7cfedb4fea6ed3f885edcd9abc75ad53913b69d372c5d9945351c449c77c67ef8901eb6c3b114fdf523f2f55b16a4066c79e947781705b901373817a51d5c06be51c6d73027f54bf674d0d576c75f7687ed41b0d9ec5ba6f3c14563bbdfc545378ad27fd56ddd2264498b98847860c573c85af433678f4eb526a7dd4f2f80e478bccd8206be0f65bff66cf5d -->",
+  "package_name": "YAML2",
+  "closed_at": "2025-06-17T18:49:10Z",
+  "title": "New package: YAML2 v0.1.0"
+}

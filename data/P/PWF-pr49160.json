@@ -1,0 +1,61 @@
+{
+  "created_at": "2021-11-22T14:34:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 49160,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q846Jm5w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, DocumenterTools, PowerModels\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- Package name similar to 8 existing packages.\n  1. Similar to NMF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to EDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to BDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to AWS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to XDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to JDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Pkg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-11-22T14:40:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49160#issuecomment-975597168",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846J7NE",
+      "author": {
+        "login": "iagochavarry"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello Community! \r\n\r\nI'm aware of the naming guidelines for automatic merging, but.. :)\r\n\r\nPWF.jl is a package exclusively dedicated to reading \".PWF\" files, which is the extension used in the Brazilian Power System's cases. Like CSV.jl, which is dedicated to read/parse CSV files into Julia, PWF.jl would like to be registered like the file extension. name. Is it possible? \r\n\r\nCheers!",
+      "createdAt": "2021-11-22T16:08:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49160#issuecomment-975680324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q846K3Nn",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm assuming this is superseded by #49190",
+      "createdAt": "2021-11-22T21:16:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/49160#issuecomment-975926119",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PWF\n- Repository: https://github.com/LAMPSPUC/PWF.jl\n- Created by: @iagochavarry\n- Version: v0.3.1\n- Commit: dc105f969db2001de35174e32f794e17081320a0\n- Reviewed by: @iagochavarry\n- Reference: https://github.com/LAMPSPUC/PWF.jl/issues/15#issuecomment-975858107\n- Description: A Julia package for reading the Brazilian electric power system file \".pwf\".\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983947b4a3198af9f0ae0f9768cd4b301962256fa2e3c48cc777092cb7fab47ae4b346a5f61375a00360a6e1a22940f041c967b33af1d9f26829f6dc9c0a97a7a8e7dc2788edd8be3cec1f2b8758547e50db6acfa15386a37c4a27fa0b901cc242c25583538918722ac85997937eb7f647 -->",
+  "package_name": "PWF",
+  "closed_at": "2021-11-22T21:16:57Z",
+  "title": "New package: PWF v0.3.1"
+}

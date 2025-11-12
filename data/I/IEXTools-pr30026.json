@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-02-14T01:43:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 30026,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3ODcwNjk0Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, GZip, HTTP, JSON, ProgressMeter, URIParser\n- Package name similar to 1 existing package.\n1. Similar to IRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n- I was not able to load the package (i.e. `import IEXTools` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-14T01:47:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30026#issuecomment-778706947",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3ODczOTU3NA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@lukemerrick  :point_up: \r\n\r\n[noblock]",
+      "createdAt": "2021-02-14T07:22:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30026#issuecomment-778739574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3ODc0MTU3Mg==",
+      "author": {
+        "login": "lukemerrick"
+      },
+      "authorAssociation": "NONE",
+      "body": "Apologies @giordano , but could you just close this PR? I made a couple beginner's mistakes (this commit omits the renaming the src/IEX folder name, so it's broken), and I already successfully retried registration with a different name (InvestorsExchange) which doesn't trigger the auto-merge block in PR #30028.",
+      "createdAt": "2021-02-14T07:47:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30026#issuecomment-778741572",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3ODc1MzU4OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's OK, no worries! ",
+      "createdAt": "2021-02-14T09:46:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30026#issuecomment-778753588",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IEXTools\n- Repository: https://github.com/lukemerrick/IEXTools.jl\n- Created by: @lukemerrick\n- Version: v0.1.0\n- Commit: efe3669f8c82035cca9f3f1d1eff5cfa148e1ffb\n- Reviewed by: @lukemerrick\n- Reference: https://github.com/lukemerrick/IEXTools.jl/commit/efe3669f8c82035cca9f3f1d1eff5cfa148e1ffb#commitcomment-47098228\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d478e6ccd7b095770316281e68c39745560c36e5500482afd1c69c5538d903fe442f42e0d4d57c90f0b94430b47007d2ba33260ae0dcd4fe3a9b48ff9cd633e5063c0804dd7468f47e3c09f0301609154d5320feb272c5e2d2425252a6dd6e711c3372fbe02c06cd076ede0f735a302990358d699d01bd69250ab40fac925680a148a9a219cc3f176256a07be081b70c2013a87976fcf76cc567225b86f0f326761c8fb3a65cc515ddc134c92aeff14f -->",
+  "package_name": "IEXTools",
+  "closed_at": "2021-02-14T09:46:56Z",
+  "title": "New package: IEXTools v0.1.0"
+}

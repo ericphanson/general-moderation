@@ -1,0 +1,135 @@
+{
+  "created_at": "2019-11-21T05:25:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 5681,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NjkyNjQxMQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: BitBasis, DiffEqBase, FFTW, ForwardDiff, Yao, YaoArrayRegister, YaoBlocks, julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-21T05:27:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-556926411",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg2OTc2Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Do you want to add the bounds? https://github.com/bcbi/CompatHelper.jl might be of interest. [noblock]",
+      "createdAt": "2019-11-27T00:06:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-558869767",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MDEwMDU0Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: Yao, julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-01T12:17:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-560100546",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MDEwMDkwNw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- I was not able to install and import the package. See the Travis logs for details. Please make sure to read all of the Travis logs for all jobs. In particular, make sure to look at the logs for all Julia versions.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-01T12:20:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-560100907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MDEwNDk2MA==",
+      "author": {
+        "login": "Roger-luo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I can't tell what's wrong now… @fredrikekre any idea? [noblock]",
+      "createdAt": "2019-12-01T12:57:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-560104960",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MDI5MjU3NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "```\r\nERROR: Unsatisfiable requirements detected for package Yao [5872b779]:\r\n Yao [5872b779] log:\r\n ├─possible versions are: [0.1.4, 0.2.0-0.2.2, 0.3.0-0.3.2, 0.4.0-0.4.2, 0.5.0-0.5.1] or uninstalled\r\n ├─restricted by compatibility requirements with QuDiffEq [c02438fe] to versions: 0.5.0-0.5.1\r\n │ └─QuDiffEq [c02438fe] log:\r\n │   ├─possible versions are: 0.1.0 or uninstalled\r\n │   └─restricted to versions 0.1.0 by an explicit requirement, leaving only versions 0.1.0\r\n └─restricted by compatibility requirements with YaoBlocks [418bc28f] to versions: [0.1.4, 0.2.0-0.2.2, 0.3.0-0.3.2, 0.4.0-0.4.1] or uninstalled — no versions left\r\n   └─YaoBlocks [418bc28f] log:\r\n     ├─possible versions are: [0.1.0, 0.2.0, 0.3.0-0.3.4, 0.4.0-0.4.1, 0.5.0, 0.6.0, 0.7.0-0.7.5] or uninstalled\r\n     └─restricted by compatibility requirements with QuDiffEq [c02438fe] to versions: 0.7.0-0.7.5\r\n       └─QuDiffEq [c02438fe] log: see above\r\n```",
+      "createdAt": "2019-12-02T08:42:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-560292575",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI2MjIzNQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’m going to close this PR as stale.\r\n\r\n@Roger-luo Feel free to make a new registration once you get things working.",
+      "createdAt": "2019-12-22T13:31:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5681#issuecomment-568262235",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuDiffEq\n- Repository: https://github.com/QuantumBFS/QuDiffEq.jl\n- Created by: @Roger-luo\n- Version: v0.1.0\n- Commit: 6c919b40859900f6b2af7172289df687f512023e\n- Reviewed by: @Roger-luo\n- Reference: https://github.com/QuantumBFS/QuDiffEq.jl/issues/10#issuecomment-560100679\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf35df39a0b500726b0746a59d77dc8da883fa6ae664ddf9fa374c47e22c27bf66594f505a7398a61fe542f383172eb3492faa535f69e06a17bb5381bcb4a15ffaf28405bf694f5d10e03d9dd609ed59217b34277fabcc2ced33c28adf6ef6e29c0afa797089b48c8199fc1398c83c0736c215bb9ce0b61fe5cd7ecd9fbf35af11 -->",
+  "package_name": "QuDiffEq",
+  "closed_at": "2019-12-22T13:31:54Z",
+  "title": "New package: QuDiffEq v0.1.0"
+}

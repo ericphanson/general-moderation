@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-02-02T17:13:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124209,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86cuqs9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- I was not able to load the package (i.e. `import ROJ` failed). See the AutoMerge logs for details.\n- Package name similar to 8 existing packages.\n  1. Similar to ROS. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.84 is at or below cutoff of 2.50.\n  2. Similar to MLJ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to RAI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to QOI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Run. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to ROOT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to SOM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Proj. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-02T17:21:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124209#issuecomment-2629479229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86cvrlg",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "While acronyms like `ROJ` are very frowned upon in the Julia community, there are generally exceptions for wrapper packages, which usually can use the name of the wrapped package. That tends to be the least confusing for the user, and is often preferable to coming up with a \"Julian\" name. In fact, a package with a non-Julian name can serve as a signal that the package wraps something from another language.\r\n\r\nI'm not really familiar with ROS, but it does seem like \"ROS 1\" and \"ROS 2\" are official names. For ROS 1, my understanding is that we have https://github.com/gstavrinos/ROS.jl by @gstavrinos (unmaintained?), and this package would target \"ROS 2\". As such, I think `ROS2` might actually be the most appropriate name for this package. Of course, that absolutely does not pass the automatic rules, and would have to be merged manually by a registry maintainer. I would recommend checking in the `#pkg-registration` channel on Slack for some more community feedback on this.",
+      "createdAt": "2025-02-03T02:17:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124209#issuecomment-2629744992",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c6qJz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124282",
+      "createdAt": "2025-02-04T02:29:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124209#issuecomment-2632622707",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ROJ\n- Repository: https://github.com/Michi-Tsubaki/ROJ.jl\n- Created by: @Michi-Tsubaki\n- Version: v0.1.0\n- Commit: 84fb13f92f4a312d654cce85abdb991424c0b7d5\n- Reviewed by: @Michi-Tsubaki\n- Reference: https://github.com/Michi-Tsubaki/ROJ.jl/issues/6#issuecomment-2629476587\n- Description: Robot Operating tool using Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e1592909d76ac4fe2d5458a18cc254648cf038525b4b53bb707c00f064f9861c8238d5c4043566fefbfb01f4b443bfd7757a651bf3634c8c1365b75783edbdce3d3f1a5be35116dc0fb208cfd52a968de6876129d0ad2db56d9e70066558399249dc5069709c8a8d1fc8842cb995ca4b9b813a8971a5cb2bb0a589394e5bbc63 -->",
+  "package_name": "ROJ",
+  "closed_at": "2025-02-04T02:29:58Z",
+  "title": "New package: ROJ v0.1.0"
+}

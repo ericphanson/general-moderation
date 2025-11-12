@@ -1,0 +1,231 @@
+{
+  "created_at": "2024-09-17T19:58:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 115372,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86MeezA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-17T20:04:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2356800704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MegdN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would be *extremely* skeptical of a package name that general",
+      "createdAt": "2024-09-17T20:07:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2356807501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MehOk",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `BurdenNumericalAnalysis`?",
+      "createdAt": "2024-09-17T20:08:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2356810660",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Meihd",
+      "author": {
+        "login": "jmanthony3"
+      },
+      "authorAssociation": "NONE",
+      "body": "I had initially built this package out of a graduate class that was called \"Numerical Methods\". And I wouldn't want to be too tied to the author because this package is not supposed to be a straight implementation of every method in the textbook, but was initially inspired by it. And it appears that there exists a couple of similar packages in the General Registry:\r\n\r\n1. [NumericalAlgorithms.jl](https://github.com/mrtkp9993/NumericalAlgorithms.jl)\r\n2. [NumericalAnalysis.jl](https://github.com/ZhouZhuofei/NumericalAnalysis.jl)\r\n3. [NumericalMethodsforEngineers.jl](https://github.com/PtFEM/NumericalMethodsforEngineers.jl)",
+      "createdAt": "2024-09-17T20:10:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2356815965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MfLhO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The General registry was a lot less \"monitored\" some years ago, and there's definitely been some evolution and shifts in the level of scrutiny new submissions receive. As the size of the ecosystem and the number of packages has grown, the community has gotten more involved in monitoring submissions. For this reason, arguing from previous accepted package names for future submissions is generally not convincing. The first two package names, `NumericalAlgorithms` and `NumericalAnalysis` would certainly not be easy to register by today's standard (and their current deprecation status shows that it was a mistake to have them registered when they were, IMO).\r\n\r\nFor something as general as `NumericalMethods`, which is at the level of the standard-library `LinearAlgebra` or the extremely well-supported `DifferentialEquations`, I would expect the package to have a similar level of maintenance and maturity. This would probably imply:\r\n\r\n* The package should be owned by an organization with multiple owners, not a personal account. Preferably an organization with a history, like SciML\r\n* There should be a reasonable expectation that the package will be maintained in the long term. That usually means multiple maintainers, and/or maintainers with a permanent position, or at least support by someone with a permanent position (e.g., an academic group willing to commit to hiring multiple generations of students/postdocs to work on the package)\r\n* A reasonably complete documentation and set of tests. Especially for an initial 1.0 release, I would expect that package to be somewhat \"complete\" and fully documented. For 0.1, that's obviously not the case, but I would want a reasonable expectation that it's going to develop in that direction. (I'm not sure this particular package should really be at 1.0 at this point, but that's easy to fix).\r\n* The maintainers should be able and willing to manage a significant number of contributors. A name like `NumericalMethods` would have to live up to the expectation of being the one-stop-solution for a great many things \"numerical\".\r\n\r\nNeither I nor most other community members monitoring new package registrations have a special authority over package names, or which packages should be registered. Most things are resolved based on consensus. Ultimately, there is a small handful of full registry maintainers that have the permission to merge submissions manually, and who would have the last word on any given package. In this case, I think the name `NumericalMethods` is so general that I would not feel comfortable seeing it merged except with the explicit approval of one of the full registry maintainers. That does not mean that I'm \"vetoing\" the registration. If I'm satisfied that my concerns from the above bullet points are fully addressed, I might even actively support having the package merged.",
+      "createdAt": "2024-09-17T21:40:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 5
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2356983886",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MkqwQ",
+      "author": {
+        "login": "jmanthony3"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz, thank you for all your explanation! I did not know most of what you described and am grateful that you took the time to lay out some of the expectations of the Julian community. My initial thought to publish this package was to comply with a statement in the General Registry README about a [published package not depending on any unregistered ones](https://github.com/JuliaRegistries/General?tab=readme-ov-file#can-my-package-in-this-registry-depend-on-unregistered-packages). Some of my colleagues and I were hoping to publish a package that would likely depend on this one so I figured to publish this one in the mean time since I did not know what that process would entail.\r\n\r\nGiven what you laid out and that my colleagues have agreed to start on this venture only yesterday, I am alright with blocking the publication of this package to the General Registry. For now, some of my other projects can depend on this package from GitHub directly without adding clutter to the Registry for projects that are still in their infancy. I more so wanted to try publishing and learn the process, and your explanation above more than delivered.",
+      "createdAt": "2024-09-18T13:06:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2358422544",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MlMZp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You might also find using a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) useful. Working with unregistered packages has always been quite problematic in Julia (even though there are some features in the upcoming Julia 1.11 that should improve the situation). For most issues related to unregistered packages, it's not actually important that they are registered in `General`, just that they are registered *somewhere*. That's where `LocalRegistry` comes in. There is still the issue that if you ever want to register a package in `General` that depends on `NumericalMethods`, then `NumericalMethods` also has to be in `General`. But until then, you're fine.\r\n\r\nI would also say that this package is actually in pretty decent shape, so I'm not opposed as such to having it registered. If you want to develop this further, I would invite you to seek more interaction with the community, especially on [Slack](https://julialang.org/slack/) and [Discourse](https://discourse.julialang.org). Maybe that will allow you to pull in more people into the project, or find a suitable organization to host the package. Or, of course, if you think that there is a potential of having the package supported in the long term through, e.g., your PhD advisor, setting up your own organization could also be an option. The main point is not to have broad-scoped packages with a [bus factor](https://en.wikipedia.org/wiki/Bus_factor) of 1.\r\n\r\nThe expectations I expressed regarding maturity and maintenance aren't any kind of official policy. I just feel like it would be important to have some discussion about what kind of expectations we *should* have for certain types of package names, as a community. My blocking comments are mainly intended to prompt that conversation, and to have some `General` maintainers and core people of the Julia community involved in it.\r\n\r\nBeyond that, this package would definitely be fine to be registered under a name that doesn't imply an aspiration to cover the entire field of numerical methods. So, as soon as you put any third word in front of `NumericalMethods`, you should be fine (or, of course, another package name entirely, if you can come up with something creative). I would even be open to `JobysNumericalMethods` (there's technically a rule against \"personal utility packages\", but personally, I don't see the harm in using branding/namespacing for packages, even beyond org names)",
+      "createdAt": "2024-09-18T14:02:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2358560361",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MlOIh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Some of my colleagues and I were hoping to publish a package that would likely depend on this one\r\n\r\nIf it's just *one* package, you could also have an internal `NumericalMethods` submodule, and develop `NumericalMethods` as part of that other package. This would still allow you to spin it out as an independent package at some later point.",
+      "createdAt": "2024-09-18T14:05:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2358567457",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MlPNq",
+      "author": {
+        "login": "jmanthony3"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Some of my colleagues and I were hoping to publish a package that would likely depend on this one\r\n> \r\n> If it's just _one_ package, you could also have an internal `NumericalMethods` submodule, and develop `NumericalMethods` as part of that other package. This would still allow you to spin it out as an independent package at some later point.\r\n\r\nThat is a good idea! And is probably the best way to go for the time being.",
+      "createdAt": "2024-09-18T14:06:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2358571882",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QeFfb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-10-19T12:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2423805915",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aHtmb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-12T12:23:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2585713051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86bG8b2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-20T12:23:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/115372#issuecomment-2602288886",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NumericalMethods\n- Repository: https://github.com/jmanthony3/NumericalMethods.jl\n- Created by: @jmanthony3\n- Version: v1.0.0\n- Commit: 1a146494cab2c103fc44167373ca30eac369a864\n- Reviewed by: @jmanthony3\n- Reference: https://github.com/jmanthony3/NumericalMethods.jl/commit/1a146494cab2c103fc44167373ca30eac369a864#commitcomment-146845722\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d09a62a0a19f1d2965b25d70a9b1df27110122249cfd73c58dbb0ddc8ae8ad8084358ff8ac7b969d4873d89632f60c9fbb60427b381abece7cb164b7a481993b8ae315bc21f8955c0d5dd29342b72e92edd1ba6d0b7929ccefc82c1ce6d5d7b518583787fef426584abc83904dc30c1c3e869d00d6ef0753ab58fb37c2c30d41d4ac9ed705413e7a686a8ba9ca8fcbd70e6f28ad4dddd0897f5d48ca9f19ad5e22b033c8b0b99e6fa4c30bad4c74eb04 -->",
+  "package_name": "NumericalMethods",
+  "closed_at": "2025-01-20T12:23:47Z",
+  "title": "New package: NumericalMethods v1.0.0"
+}

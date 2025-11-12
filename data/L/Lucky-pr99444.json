@@ -1,0 +1,223 @@
+{
+  "created_at": "2024-01-24T14:42:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 99444,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xvfsP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Rocket\n- Package name similar to 1 existing package.\n  1. Similar to Lucon. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-24T14:45:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908275983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xvhN1",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nAutoMerge fail with message:\r\n\r\n\"Package name similar to 1 existing package.\\n  1. Similar to Lucon. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nLooks fine to me. :)",
+      "createdAt": "2024-01-24T14:48:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908282229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xvpUN",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The \"name similarity\" isn't a problem, but the package name isn't very descriptive. That might be fine, but the project also does not have any documentation or even a description of what the purpose of the package is. Please add at least a README with a description and a full usage example before registering. Without that, the package cannot be used by others and thus [is not ready for General yet](https://github.com/JuliaRegistries/General#should-i-register-my-package-now)",
+      "createdAt": "2024-01-24T15:04:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908315405",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xwANm",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nDone. Looks ok to you? :)",
+      "createdAt": "2024-01-24T15:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908409190",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xwVbO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Yeah, that seems good enough, as a start.\r\n\r\nI could probably come around on the name, too. With \"nice\" names like `Lucky`, I would tend to put a little bit more scrutiny on the package. I'd feel much better if it's a package that has some kind of institutional (or commercial) backing that would ensure its longer-term maintenance. With personal, \"one-off\" packages, there's a much greater risk of the package becoming unmaintained. That's fine for `MySpecificFeatureTradingPackage`, but not so much with a name like `Lucky` that maybe some bigger project could use in the future. Can you comment on how you see the maintenance status of this package in the longer term?\r\n\r\nIn any case, this still needs a manual merge because of the name similarity flag, so it's not up to me (I don't have merge permissions on General). After the three-day waiting period, you'll have to get the attention of a registry maintainer on Slack.",
+      "createdAt": "2024-01-24T16:33:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908496078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xyDxW",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Thank you so much @goerz for taking the time to review and answer.\r\n\r\nWell, quantitative finance is a promising user base for Julia. https://github.com/JuliaQuant was created very early on (2016) for that reason I believe. (My package integrates https://github.com/JuliaQuant/MarketData.jl as a data source)\r\n\r\nQuantFi people are R, Matlab, or Python people who'd love a bridge to the world of Julia math libraries (probabilities, statistics, solvers, MLs, etc.), but that also requires a way to get out of the lab and into production. That's what this package proposes to do. \r\n\r\nThis package also integrates with another package I am releasing (https://github.com/JuliaRegistries/General/pull/99427 ).\r\n\r\nIn any case, my funky package name doesn't seem to collide with any serious institution or scientific field does it? (Not as if I called it Thermodynamics.jl :) ) \r\n\r\nWhatever you decide, I've been on GitHub for about 12 years now. Not planning on going away anytime soon. :)",
+      "createdAt": "2024-01-24T21:30:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1908948054",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xyni8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> In any case, my funky package name doesn't seem to collide with any serious institution or scientific field does it?\r\n\r\nOh, that wasn't really something I was concerned about \r\n\r\n> I've been on GitHub for about 12 years now. Not planning on going away anytime soon.\r\n\r\nSounds good to me, then!\r\n\r\nThat was really the only point, whether you're in a position to ensure that this package is maintained in the longer term.\r\n\r\nIf this was for a more academic subject, I'd want to ensure that a package maintainer either had a permanent position or that there was someone with a permanent position committed to keep hiring students to work on it.\r\n\r\nSo I don't have any objections to having `Lucky` registered.\r\n\r\n[noblock]\r\n\r\n",
+      "createdAt": "2024-01-24T23:29:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1909094588",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x1tQS",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nAwesome! Thank you. I'll wait for the PR acceptance then. :)",
+      "createdAt": "2024-01-25T10:49:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1909904402",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85x2L6I",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You'll probably have to ping the Slack again in a couple of days (after the 3-day waiting period ends). Typically, the registry maintainers don't keep track of pending registrations, so getting someone's attention in the moment is the only way to get it merged.",
+      "createdAt": "2024-01-25T11:54:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1910029960",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yKiPd",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The following dependencies do not have a [compat] entry that is upper-bounded and only includes a finite number of breaking releases: Rocket\r\n\r\nThis issue should be addressed first, otherwise LGTM! Add a [`compat` entry to your Project.toml](https://github.com/oliviermilla/Lucky.jl/blob/fd359ae0c5ea25174d563bc0724d12ed838eb3e0/Project.toml#L19-L20) like `Rocket = \"1\"` and retrigger registration the same way you did the first.",
+      "createdAt": "2024-01-29T18:55:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1915364317",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q85yN5ki",
+      "author": {
+        "login": "oliviermilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "@ericphanson Done https://github.com/JuliaRegistries/General/pull/99823",
+      "createdAt": "2024-01-30T07:43:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99444#issuecomment-1916246306",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Lucky\n- Repository: https://github.com/oliviermilla/Lucky.jl\n- Created by: @oliviermilla\n- Version: v0.1.3\n- Commit: e1adc0f51c86bca414ce69cc7fc07dacfd7d7b1b\n- Reviewed by: @oliviermilla\n- Reference: https://github.com/oliviermilla/Lucky.jl/issues/1\n- Description: Lucky\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359824930325cecdbcb5a54f9cb341aa1e48ac2fec17ba7ceeadf1b645bd8e4811679040e6cbde469d017e4e82cea8b6b14a1aa6d53afd9477bdc2451d47f3793416e70e73cfd9171742b73ffae696f3b1ae479a6f4d1c8cbeddbb75d1ee4d62c62150212aa8e825643079cc75eb2422d26bacdaa0c60c4b1241b520722d4ce0fe3e -->",
+  "package_name": "Lucky",
+  "closed_at": "2024-01-30T11:41:44Z",
+  "title": "New package: Lucky v0.1.3"
+}

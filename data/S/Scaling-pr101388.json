@@ -1,0 +1,112 @@
+{
+  "created_at": "2024-02-21T21:21:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101388,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q850tHrM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-21T21:26:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101388#issuecomment-1957984972",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850vQyR",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "\"Scaling\" can mean very different things in different contexts... Maybe, worth considering more descriptive names like \"FiniteSizeScaling\"? This would also help discoverability.",
+      "createdAt": "2024-02-22T02:28:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101388#issuecomment-1958546577",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850x2bO",
+      "author": {
+        "login": "maltepuetz"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the suggestion! Unfortunately, the name FiniteSizeScaling is already taken. I think the name \"ScalingCollapse\" would also clarify the purpose of the package, what do you think?\r\n\r\nWhat's the smartest way to rename the package? Can I just rename:\r\n- the file Scaling.jl\r\n- the name field in the Project.toml\r\n- the module\r\n- the repository\r\nand after that tag the JuliaRegistrator again. Or is there anything else to consider?",
+      "createdAt": "2024-02-22T11:12:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101388#issuecomment-1959225038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850yAg4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2024-02-22T11:34:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101388#issuecomment-1959266360",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8507uKx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/101557",
+      "createdAt": "2024-02-23T18:37:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101388#issuecomment-1961812657",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Scaling\n- Repository: https://github.com/maltepuetz/Scaling.jl\n- Created by: @maltepuetz\n- Version: v0.3.1\n- Commit: 539ffbd383ade822ce8d1a4ff5420f20bbe87c94\n- Reviewed by: @maltepuetz\n- Reference: https://github.com/maltepuetz/Scaling.jl/issues/23#issuecomment-1958040837\n- Description: A julia package for automatic finite size scaling.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359872f0f8a07d4e625296d1eee5fe335e05c7f1e74ec3596e80fbc0238ee64a94618129585a959c140eccbdab1532cc3853c39dcc468080a522dfedc2952219dee86fec60eb0c7d8575ea5378415419d2404a4dbab7f44b5c0707cbd4065cf1a4cce51554a5fd0b8558d13e9f37b01f4e0956827b0e2c4815a6db8e16fefcefca4e -->",
+  "package_name": "Scaling",
+  "closed_at": "2024-02-23T18:37:45Z",
+  "title": "New package: Scaling v0.3.1"
+}

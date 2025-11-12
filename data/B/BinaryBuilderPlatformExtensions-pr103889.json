@@ -1,0 +1,127 @@
+{
+  "created_at": "2024-03-29T22:45:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "staticfloat",
+  "merged_at": null,
+  "pr_number": 103889,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8543czF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-29T22:48:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2027801797",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8547Q_-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you give some background on this? It's a bit of an unusual monorepo setup…\r\n\r\nThe repo description says \"Temporary repository to hold BinaryBuilder rewrite\". Is it intentional / a good idea to register new packages from a \"temporary\" location?\r\n\r\nWould it be possible to add a README to the repository to give a bit of explanation for people stumbling across it?\r\n\r\nNormally, for new registrations, I would ask that packages have at least minimal README. Even if they're secondary/extension packages, the README should still give a paragraph of context for the package, and link to the documentation of the main package. In this case, BinaryBuilder already has great documentation at https://binarybuilder.org. But I still think it would be a good idea to add README (also for how the package might show up on JuliaHub?)\r\n\r\n(I'm just blocking this temporarily to give @staticfloat a chance to confirm; this is not an objection)\r\n\r\n[noblock]",
+      "createdAt": "2024-03-31T15:44:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2028802046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8548vI7",
+      "author": {
+        "login": "staticfloat"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Those are very fair points.  I've added `README.md` files to all subpackages and for the `BB2.jl` repository overall.\r\n\r\nThe background is that this repository is a complete rewrite of `BinaryBuilder.jl`, and while I originally thought that I would eventually replace `BinaryBuilder.jl` with this new code and release a breaking version of `BinaryBuilder.jl` with the new code, I now think that we're going to need to maintain the old `BinaryBuilder.jl` for a while, and so it's probably best to just have them as two separate packages.  Therefore, I have taken away the \"temporary\" from the repository description.\r\n\r\nAs part of the rewrite process, I am factoring out many pieces of functionality into their own sub-packages for maintainability, package precompilation/load time, and ecosystem-reuse reasons.  However it's still very convenient to be able to co-develop all the packages, hence the monorepo setup.\r\n\r\nThis leaves open the question, should I re-name the repository to `BinaryBuilder2.jl`, or just continue to leave it as `BB2.jl`?  I don't have a strong opinion, but if I should rename it then I should do it now before I start registering all of those subpackages. ",
+      "createdAt": "2024-04-01T05:31:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2029187643",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855AKg8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Should I re-name the repository to BinaryBuilder2.jl\r\n\r\nSeems to me like that would be the right thing to do, but I don't have any strong preferences around this. Maybe solicit some feedback on Slack or Discourse?\r\n\r\n> if I should rename it then I should do it now\r\n\r\nRight… [your own comment](https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2029187643) is now blocking, so I'll unblock [mine](https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2028802046), and you can make your own decision.\r\n\r\n[noblock]",
+      "createdAt": "2024-04-01T16:20:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2030086204",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855Awg_",
+      "author": {
+        "login": "staticfloat"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I decided to rename it to `BinaryBuilder2.jl`.  Registrator made a new PR: https://github.com/JuliaRegistries/General/pull/104019",
+      "createdAt": "2024-04-01T17:51:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2030241855",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855A16x",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sounds good! I also pinged the Slack in `#pkg-registration` about https://github.com/JuliaRegistries/General/pull/104021",
+      "createdAt": "2024-04-01T18:04:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103889#issuecomment-2030263985",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BinaryBuilderPlatformExtensions\n- Repository: https://github.com/JuliaPackaging/BB2.jl\n- Created by: @staticfloat\n- Version: v0.1.0\n- Commit: 8f4a168491f9b9d2cb2fb71f1a21b0ed2f99d5eb\n- Reviewed by: @staticfloat\n- Reference: https://github.com/JuliaPackaging/BB2.jl/commit/8f4a168491f9b9d2cb2fb71f1a21b0ed2f99d5eb#commitcomment-140393406\n- Description: Temporary repository to hold BinaryBuilder rewrite\n<!-- 372699842d9d3b01ac149524d28823a8d0c42c29a69ed7c6f18e7d28a846c84ea5ba09d1a1c2140c0c251428e2553c86fe24d4f842ebf57e64d876dba285ab7af90694f07149d1ab121a34f71960a2da130ab2d2a213504df96bf6d7f0b6f9644561956c0b81aab7b02a971aae7a92af96994b1ad0d4b6b527b48ebf88ce466006a2546b3134179f872b1a795cb4f7c2efc8e11c249e6ad264339e6d80064110a7f49fecf2ffe1bc069c8a68a28b238bf3d728ffa0542cf0a1b0ab9d183464046b341d845dd66f0067637d346d0dd3bbc43f602a83905f4f2b11c93ef636cbc8f01ef0fa98f4975d8181996a7055aba6743f7f6c4cb5e5e8e1b3d707b960ab6f -->",
+  "package_name": "BinaryBuilderPlatformExtensions",
+  "closed_at": "2024-04-01T17:51:11Z",
+  "title": "New package: BinaryBuilderPlatformExtensions v0.1.0"
+}

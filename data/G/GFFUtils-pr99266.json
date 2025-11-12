@@ -1,0 +1,61 @@
+{
+  "created_at": "2024-01-21T16:58:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 99266,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xaNha",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, DataFramesMeta, FASTX, GFF3, Intervals, NaturalSort\n- I was not able to install the package (i.e. `Pkg.add(\"GFFUtils\")` failed). See the AutoMerge logs for details.\n- Cloning repository failed.\n- Could not check license because could not access package code. Perhaps the `can_download_code` check failed earlier.\n- `src` directory not found\n- I was not able to load the package (i.e. `import GFFUtils` failed). See the AutoMerge logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to GRUtils. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-21T17:03:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99266#issuecomment-1902696538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852cmcd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-10T12:22:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99266#issuecomment-1987208989",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853byTM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-03-18T12:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99266#issuecomment-2003772620",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GFFUtils\n- Repository: https://github.com/yr-neurospace/GFFUtils\n- Created by: @yr-neurospace\n- Version: v0.1.0\n- Commit: e6a6f79e1f102e144e9e0329fd3357c043a67072\n- Reviewed by: @yr-neurospace\n- Reference: https://github.com/yr-neurospace/GFFUtils/issues/1#issuecomment-1902695258\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986adfb3561f290bae51e6ecec75f7decc5ea3ee16ca5078f04375c38cf541094b09e7770d0c9c0a853ec30527250aaac7eb55f43236d83fee4d9c523c30cd6999234f4c4741cacd56399bec64cf1851f218500b621fedd17dbd39f8ada82a425aed068bca6a041a0a1bb3eebb515eb5f6e709c145c1394081b2148847c638f585 -->",
+  "package_name": "GFFUtils",
+  "closed_at": "2024-03-18T12:22:55Z",
+  "title": "New package: GFFUtils v0.1.0"
+}

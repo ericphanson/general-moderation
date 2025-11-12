@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-04-02T22:46:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 57837,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Axk01",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, GSL\n- I was not able to load the package (i.e. `import HartreeFock` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-02T22:50:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57837#issuecomment-1086737717",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85AxzVL",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The repository isn't accessible anymore ",
+      "createdAt": "2022-04-03T07:50:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57837#issuecomment-1086797131",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HartreeFock\n- Repository: https://github.com/Leticia-maria/HartreeFock.jl\n- Created by: @Leticia-maria\n- Version: v0.1.0\n- Commit: df725873e10d6f489057d2845c26217363e29c7a\n- Reviewed by: @Leticia-maria\n- Reference: https://github.com/Leticia-maria/HartreeFock.jl/issues/1#issuecomment-1086737298\n- Description: Implementation of Hartree Fock theory in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835989de933c3dd55dcc1b5fbfec00caa6a5fd98ea61ece8ecd85fe6d1af47ccb88b6ad75ca0add1ff83f521329aeab66aca704e13d2f61c95b92bb0927cc1049ccf281fcbfef77ec938b5f138cc4a901033581a715628626f8b3b0d9d4c84451b535e37c85a9d3848c7a430a4249c533806c267e0cbf4f982688f74de409b11f0cdf -->",
+  "package_name": "HartreeFock",
+  "closed_at": "2022-04-03T07:50:21Z",
+  "title": "New package: HartreeFock v0.1.0"
+}

@@ -1,0 +1,354 @@
+{
+  "created_at": "2024-08-01T20:18:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 112248,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86G8Jcf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-01T20:21:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2263914271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86G_4_y",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I think this should be fine as it is an existing name of a Python Package, `CadCAD` wouldn't really be in improvement imho and we have some lowercase packages in General already.",
+      "createdAt": "2024-08-02T08:53:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2264895474",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HA325",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] So how should I proceed to have the PR merged?",
+      "createdAt": "2024-08-02T11:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2265152953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HCE-u",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> CadCAD wouldn't really be in improvement imho\r\n\r\nI disagree. I expect package names to start with a capital letter. If they don’t, that would indicate something unusual about the package. There should be a good reason to subvert a standard expectation, and so far, I haven’t seen one.\r\n\r\n> we have some lowercase packages in General already\r\n\r\nWhich ones, and on what basis was an exception granted? I would presume “existing API name” might be a reason… but it should be a rare exception.",
+      "createdAt": "2024-08-02T14:01:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2265468846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HCWSZ",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "> There should be a good reason to subvert a standard expectation\r\n\r\nThe [library](https://cadcad.org/) has already existed in Python for many years, has a sizable community around it and just now has been ported to Julia. So for the sake of \"brand recognition\" on the community, I would ask for its name to be cadCAD.",
+      "createdAt": "2024-08-02T14:35:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2265539737",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HDE--",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alright, sounds okay to me",
+      "createdAt": "2024-08-02T16:15:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2265731006",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HKOXf",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I would still prefer a capital first letter. That is the usual naming scheme in Julia packages, I am not even aware of an exception here. For me that would be confusing having a lower case first for a package.\r\n\r\nSome packages have their naming schemes adopted to the language they are written in, for example in my personal case manopt (in Matlab) pymanopt (Python) and Manopt.jl (Julia).\r\n\r\nSo with that I think that `CadCAD.jl` would still be very close but more julian.",
+      "createdAt": "2024-08-04T16:54:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2267604447",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HPRrl",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "Why would it be confusing to have a lower case first letter? The way I see it, it would be confusing (and annoying) for someone coming from Python having to type it differently than what his muscle memory is used to.",
+      "createdAt": "2024-08-05T12:13:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2268928741",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HPTON",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Because in the x years I used Julia until now I have never seen/used a package starting with a lower case latter. So this contradicts the expectation of Julia users.\r\nAnd that holds even for (transcribed / adapted) packages that are analogons of Python packages.\r\n\r\nIf I move to Python I also do not expect Julia conventions there, so why should they do that here?\r\n\r\n_edit:_ With the same reason you could argue that Julia should change all its syntax to Python syntax because that is the python users muscle memory?",
+      "createdAt": "2024-08-05T12:17:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2268935053",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HPdbX",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "No, the syntax of the language is a completely different story. I just think this change brings no gain to the Julia side, but gives a loss in developer experience on the library side. But anyway, no use to keep discussing this, do I just change the repo name and the `project.toml` or is there something else to be changed?",
+      "createdAt": "2024-08-05T12:38:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2268976855",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HPkO1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, to rename you just change the repo name and all references, see https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name\r\n\r\nFor what it's worth, I could live with the `cadCAD` name, but I'd definitely prefer `CadCAD`. It's *very* unusual for a Julia package name to start with a lowercase name, and I think watering down the conventions of the ecosystem is not something that should be done lightly. In any case, `cadCAD` will need one of the small handful of full registry maintainers to decide to support it and to merge it manually. So it really comes down to how *they* feel about making this particular exception. `CadCAD` on the other hand, should auto-merge without further intervention.",
+      "createdAt": "2024-08-05T12:52:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2269004725",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HX9XR",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sorry missed notifications on this, because the question came up on lowercase packages in General, there are currently 20 excluding JLLs:\r\n\r\n```\r\njulia> x = collect(values(Pkg.Types.Context().registries[1].pkgs));\r\n\r\njulia> filter(x -> !occursin(\"jll\", x), getfield.(x, :name)[findall(islowercase, first.(getfield.(x, :name)))])\r\n20-element Vector{String}:\r\n \"cuDNN\"\r\n \"mlpack\"\r\n \"jlpkg\"\r\n \"vOptGeneric\"\r\n \"oneAPI\"\r\n \"eQuilibrator\"\r\n \"openPMD\"\r\n \"vOptSpecific\"\r\n \"cuStateVec\"\r\n \"cuTensorNet\"\r\n \"cuTENSOR\"\r\n \"jInv\"\r\n \"oneAPIKernels\"\r\n \"vSmartMOM\"\r\n \"deSolveDiffEq\"\r\n \"julia\"\r\n \"uCSV\"\r\n \"mPulseAPI\"\r\n \"gRPCClient\"\r\n \"sparseQFCA\"\r\n```\r\n",
+      "createdAt": "2024-08-06T12:45:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2271204817",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HYk8M",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "Given the cases of oneAPI and the Cuda libraries, I must insist then, to have it named cadCAD. ",
+      "createdAt": "2024-08-06T13:58:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2271366924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Hc2yI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Well, I was going to say, that's 19 packages out of 9687. In my opinion, we should very much avoid adding to that list. But it's not my decision.",
+      "createdAt": "2024-08-07T02:16:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2272488584",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Hc4AO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, [historically](https://github.com/JuliaRegistries/General/pull/96042#issuecomment-1834016413), we've been a bit more lenient for Julia packages that *wrap* existing libraries to keep the name and capitalization of the existing library. This PR, however, is not a wrapper, but a full Julia implementation, and I think you actually will confuse your potential users *less* by staying in line with the normal conventions.\r\n\r\nI would read non-standard capitalization as a signal that \"this is not a normal Julia package, but something that accesses a component or library outside the Julia ecosystem\". For this package, since it's a pure Julia package, that would seem to be the wrong message to send, despite the existing Python library.",
+      "createdAt": "2024-08-07T02:22:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2272493582",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HhJQa",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano could you give us your opinion on this?",
+      "createdAt": "2024-08-07T14:27:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2273612826",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HzA4j",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Should I close this in favor of https://github.com/JuliaRegistries/General/pull/112770?",
+      "createdAt": "2024-08-09T16:14:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2278297123",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HzBBm",
+      "author": {
+        "login": "lima-emanuel"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes",
+      "createdAt": "2024-08-09T16:14:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112248#issuecomment-2278297702",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: cadCAD\n- Repository: https://github.com/cadCAD-org/cadCAD.jl\n- Created by: @emanuellima1\n- Version: v0.0.1\n- Commit: 60a655749dacd39ad4103688ddaa4dc7cfbf9c9a\n- Git reference: v0.0.1\n- Description: cadCAD implementation in Julia\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis is the first alpha release of cadCAD.jl. Expect many bugs and crashes! This is a work in progress and is not feature complete.\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "cadCAD",
+  "closed_at": "2024-08-09T16:23:05Z",
+  "title": "New package: cadCAD v0.0.1"
+}

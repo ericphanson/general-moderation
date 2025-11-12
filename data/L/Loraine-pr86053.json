@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-06-22T12:32:22Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 86053,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85fhUXB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ConjugateGradients, Dualization, MathOptInterface, Plots, Revise, TimerOutputs\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-22T12:42:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86053#issuecomment-1602569665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ftI-7",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Presumably superseded by #86074",
+      "createdAt": "2023-06-24T17:52:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86053#issuecomment-1605668795",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ftJdZ",
+      "author": {
+        "login": "kocvara"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, didnt manage to keep the version number after the requested update. ",
+      "createdAt": "2023-06-24T17:59:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86053#issuecomment-1605670745",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ftJn8",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just don't change the version number and the PR is updated automatically (as also suggested by the message above) :slightly_smiling_face: ",
+      "createdAt": "2023-06-24T18:02:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86053#issuecomment-1605671420",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Loraine\n- Repository: https://github.com/kocvara/Loraine.jl\n- Created by: @kocvara\n- Version: v0.1.0\n- Commit: a1c0e971983fbee895ffcafd3d15d0550b12ce01\n- Reviewed by: @kocvara\n- Reference: https://github.com/kocvara/Loraine.jl/commit/a1c0e971983fbee895ffcafd3d15d0550b12ce01#commitcomment-119259408\n- Description: Julia code for general and low-rank semidefinite optimization \n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bf2d44f7991983c1e718c289a48f7be0e4ca4c21792de94e6a100cf2307338f9f924f28d9692682942eb64cc0e95f104312741722e17bac3c2be6a165872110b4de6a6ccc1bb888f7a1dce89de89fc2757cb976de717072daa818accdca0c8ce84de4d1e1fdc588cf6585462cd4e13bd7a2abacd18e6fbdc6f3a3008fdab5b8c76ba6ee56f1551e7475af06194b88b35a40c9c05bec920c6bb931a91bbb2aa07ae610ac787f2ab24bc40ebf20a096db6 -->",
+  "package_name": "Loraine",
+  "closed_at": "2023-06-24T17:52:26Z",
+  "title": "New package: Loraine v0.1.0"
+}

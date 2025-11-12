@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-09-10T22:18:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 114965,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Lm8sR",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CairoMakie, ChainRulesCore, DataFrames, DrWatson, FillArrays, GridapEmbedded, GridapMakie, IJulia, LineSearches, Literate, NLopt, NLsolve, Plots, Revise, Zygote\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-10T22:31:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114965#issuecomment-2342243089",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LnIPf",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Clearly, this is too general of a name. I assume you were trying for something like `GridapTutorials`. Also, teaching materials or similar “personal” packages are generally not suitable for registration. If it’s not a dependency of another registered package, it doesn’t need to be registered.",
+      "createdAt": "2024-09-10T22:42:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114965#issuecomment-2342290399",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MBpsM",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "While I agree that `Tutorials` is too general a name for this, I disagree that only packages with dependents need to be registered. Specifically, packages that folks are likely to load directly (such as Chairmarks, Plots, Profile, PPTX) are worth registering even if they don't have registered dependents.",
+      "createdAt": "2024-09-13T15:37:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114965#issuecomment-2349243148",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MB6-5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, I agree with you.\r\n\r\nThat was badly phrased, and meant as a sufficient, but not a necessary condition. Maybe I should have emphasized the word \"need\": If it's a dependency of a registered package, it needs to be registered. But there are also plenty of end-user packages that are perfectly fine to be registered, and are very valuable to have as part of the ecosystem. At the same time, I would invite authors of some \"standalone\" packages to think about whether registration in General is necessary. I think teaching material is often in the category of packages that don't need to be in General, but can remain either unregistered or go in a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl). That's by no means a \"rule\" of course: As always, we can see on a case-by-case basis whether some particular registration might be a problem.",
+      "createdAt": "2024-09-13T16:14:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114965#issuecomment-2349313977",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86MHP61",
+      "author": {
+        "login": "JordiManyer"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry, this was my bad. This is a package we do not register, we only create tags. I just launched the bot out of habit. We did not mean to register it. ",
+      "createdAt": "2024-09-13T23:44:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114965#issuecomment-2350710453",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Tutorials\n- Repository: https://github.com/gridap/Tutorials\n- Created by: @JordiManyer\n- Version: v0.17.0\n- Commit: 8109809e082ac0f38d4d8108f74c44c77c68b9d6\n- Reviewed by: @JordiManyer\n- Reference: https://github.com/gridap/Tutorials/commit/8109809e082ac0f38d4d8108f74c44c77c68b9d6#commitcomment-146524024\n- Description: Start solving PDEs in Julia with Gridap.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd61ed12c84e7d2fb0b3f6073012b359d32d6d0df67f0bbeb0580195354ddb0ae6fae3d2a2b054e0ac3f057e4233d5005005309764ee5ec157a614117998e335ed42524181f301f8e43e3fd44c332323c220be6f06659f23ebc27c0e9ba78b44fca55730a6b859f7eda97b543b85a00a88d56af146cfa530014cb1679d5f37833c663267f6155d22d19665c6bda9d448de1352f7fe6ec703c2aef000516a749d03f38a3ef131488ad42cd2c97134f30a7fd -->",
+  "package_name": "Tutorials",
+  "closed_at": "2024-09-10T22:42:32Z",
+  "title": "New package: Tutorials v0.17.0"
+}

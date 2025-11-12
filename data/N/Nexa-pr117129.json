@@ -1,0 +1,120 @@
+{
+  "created_at": "2024-10-12T01:09:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 117129,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Pi4GM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: SimpleDirectMediaLayer\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-12T01:17:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2408284556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pi5_1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I only started working on it 2 days ago.\r\n\r\nI'm not necessarily opposed to the name `Nexa`, but it may be a bit premature to register it quite that early. We can make exceptions for \"nice\" names shorter than 5 characters, but generally, I would endorse that only for packages that are on a clear path to be relatively mature and well-supported. Meanwhile, it might be better to use a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) for development.",
+      "createdAt": "2024-10-12T01:37:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2408292341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pi6wZ",
+      "author": {
+        "login": "SabeDoesThings"
+      },
+      "authorAssociation": "NONE",
+      "body": "oh ok. Yeah I wanted to try to make a simple game with it but didn't want the entire package source code in the project. I will definitely look into making a LocalRegistry. Does that make it to where I can just add a package with the github url instead of registering a whole package?",
+      "createdAt": "2024-10-12T01:45:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2408295449",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pi8z9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Does that make it to where I can just add a package with the github url\r\n\r\n*That* you can do without any registration at all, see [\"Adding unregistered packages\"](https://pkgdocs.julialang.org/v1/managing-packages/#Adding-unregistered-packages) in the `Pkg` documentation.\r\n\r\nWhat a `LocalRegistry` would do is to allow you to [`Pkg.add` it as a registered package](https://pkgdocs.julialang.org/v1/managing-packages/#Adding-registered-packages). The General registry is just the default one, [but you can have others](https://pkgdocs.julialang.org/v1/registries/). A lot of development workflows get easier with registered packages, but it doesn't matter if they are registered in General or any other registry.\r\n\r\nThe point of `General` is to make the package more visible and easier to install for the entire Julia community, and, most importantly, packages that are dependencies for other packages in General must also be registered in General. But until there is some other package that should be in General that has `Nexa` as a dependency, a `LocalRegistry` is sufficient in principle.",
+      "createdAt": "2024-10-12T02:04:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2408303869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZyCJ9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-09T12:25:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2580030077",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86as7bU",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-16T12:31:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117129#issuecomment-2595469012",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Nexa\n- Repository: https://github.com/SabeDoesThings/Nexa.jl\n- Created by: @SabeDoesThings\n- Version: v0.1.0\n- Commit: 4d72040d6b8d7e0bc034246c70158cd6341b8272\n- Git reference: main\n- Description: A simple upcoming game library for the Julia programing language\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nthe first release with some of the basic usage\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "Nexa",
+  "closed_at": "2025-01-16T12:31:19Z",
+  "title": "New package: Nexa v0.1.0"
+}

@@ -1,0 +1,157 @@
+{
+  "created_at": "2024-02-05T12:13:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 100270,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85y2ckh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-05T12:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1926875425",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85y34RM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package!\r\n\r\nHow does this differentiate itself from [QuantumOptics.jl](https://github.com/qojulia/QuantumOptics.jl)? Would it be more appropriate to contribute to this existing package?\r\n\r\nIf it takes a fundamentally different approach or targets a narrower set of features, I would recommend a more descriptive name. In any case, the package name is not very Julian, as long descriptive package names are strongly preferred.\r\n\r\nNote that there are also quite a number of quantum-related packages besides `QuantumOptics` (there was a whole quantum track at last year's [JuliaCon](https://www.youtube.com/playlist?list=PLP8iPy9hna6T7PRe2sucSonFsrrH-oEZC)), so those might be possible to contribute to as well.",
+      "createdAt": "2024-02-05T15:24:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1927251020",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85y-6wQ",
+      "author": {
+        "login": "albertomercurio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "QuPhys.jl has almost the same syntax of QuTiP, and it is useful for a wide amount of people coming from python. This would lead to rebase totally the whole QuantumOptics.jl package, and so I decided to make the package.\r\n\r\nIn general, my intentions are not to have a package as a competitor to QuantumOptics.jl, but instead an alternative way.\r\n\r\nRegarding the name, if QuPhys.jl is not appropriate, it might be QuantumToolbox.jl, coming from the naming of QuTiP (Quantum Toolbox in Python)",
+      "createdAt": "2024-02-06T09:22:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1929096208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zN67s",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This isn't directly related to the registration as such, but `QuantumOptics` is already what I think of as \"QuTiP for Julia\". In your position, I'd be hesitant to start another framework whose only (?) distinguishing feature is that its surface syntax is closer to QuTiP. I'm not saying \"don't do it\". But this sort of thing can be a huge time sink, so make sure you talk to your PhD advisor (going by your GitHub bio that you're a PhD student) about whether it's worth the effort. From a community perspective, I'd always push for the limited number of quantum-related open-source developers to combine their efforts instead of working on competing projects. In this case, contributing to `QuantumOptics`. But that's up to you.\r\n\r\nAs for the name, `QuantumToolbox` if fine in principle, although it's a very general name, and we tend to put a bit of scrutiny on the longevity of such names. This is somewhat related to my previous point: Writing a Julia replacement for QuTiP is a pretty big undertaking, somewhat bigger than a single PhD student can probably manage. Both QuTiP and `QuantumOptics` have multiple contributors, and have had multiple generations of lead developers. If your advisor is committed to supporting a `QuantumToolbox.jl` in the long term, then by all means: `QuantumToolbox.jl` is a good name. This would mean they will have multiple people in the group contribute to it, use it in collaborations, and hire PhD students or postdocs as lead developers after you graduate; the way e.g. Franco Nori supported QuTiP. On the other hand, if this is more of a personal project, you could still register with a more distinctive name `<Something>QuantumToolbox` where `<Something>` is some particular angle, the name of the research group, or even your initials. I'd probably even let `QuPhysToolbox` go through, since it's not a particularly \"pretty\" name where a lot of scrutiny is warranted.",
+      "createdAt": "2024-02-07T22:17:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1933029100",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zOAKJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> going by your GitHub bio that you're a PhD student\r\n\r\nSeems like you're a postdoc now! Congrats!\r\n\r\nSo yeah, if you can commit to `QuantumToolbox` being a \"QuTiP in Julia\" package with a prospect for being maintained in the long term, go for it!",
+      "createdAt": "2024-02-07T22:36:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1933050505",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ziKIe",
+      "author": {
+        "login": "albertomercurio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you for your time. \r\n\r\nMy goal is to be supported by the Franco Nori's lab in the future, so that this package will be directly supported by the QuTiP community.\r\n\r\nBy the way, how can I change the package name?",
+      "createdAt": "2024-02-12T09:45:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1938334238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zj67K",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name",
+      "createdAt": "2024-02-12T14:35:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1938796234",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850E9xv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/100992",
+      "createdAt": "2024-02-15T22:43:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100270#issuecomment-1947458671",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuPhys\n- Repository: https://github.com/albertomercurio/QuPhys.jl\n- Created by: @albertomercurio\n- Version: v0.5.2\n- Commit: 010874a1c3f2a789fd5ef94047d09f8655cd7232\n- Reviewed by: @albertomercurio\n- Reference: https://github.com/albertomercurio/QuPhys.jl/commit/010874a1c3f2a789fd5ef94047d09f8655cd7232#commitcomment-138273716\n- Description: Julia Package for Quantum Optics and Quantum Physics\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6554ae0cca8f28af96e06cade9575bb78cd93001949043d841330b154f0a54ff7834777dfa7fbd830070a061afc02cf01a6d4e15fbfb062b5544661b4ba0096193b0f4e2e43aef04380962d70971076e417fd32c2a902b32f78e043e8df653f3bac27469c773c2ad0509afa0298d6933eaeeeb20153cdce01c6de64aed9fa9a14af5835382660eee7071e555a162e3128bf083936b1f570a25b4063d626ab4cb8b522d28888bc48559513455f6537a864 -->",
+  "package_name": "QuPhys",
+  "closed_at": "2024-02-15T22:43:56Z",
+  "title": "New package: QuPhys v0.5.2"
+}

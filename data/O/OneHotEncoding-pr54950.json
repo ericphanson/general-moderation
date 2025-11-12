@@ -1,0 +1,120 @@
+{
+  "created_at": "2022-02-19T04:37:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 54950,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q84-VNPF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-19T04:40:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1045746629",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-Vj1r",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "https://github.com/FluxML/Flux.jl/blob/13a65bef68390bf6fbe829241be481417406a302/src/onehot.jl#L11-L13\r\n\r\narguably Flux has the \"correct\" implementation. Returning a sparse vector is a waste of space considering you can do this in O(1 byte).",
+      "createdAt": "2022-02-19T05:56:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1045839211",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-XPlk",
+      "author": {
+        "login": "TLipede"
+      },
+      "authorAssociation": "NONE",
+      "body": "@Moelf thanks for taking a look. I did take some inspiration from the Flux version, as you probably noticed from the choice of argument names 😃. \r\n\r\nTo your point, while I do agree that just storing the indices makes sense, I think it also depends somewhat on what you're looking to do with the matrix afterwards. \r\n\r\nFor my purposes, I was looking to create tabular structures from the matrix, where I'd be looking to pull out individual columns. Flux is a bit slower at doing that than for a CSC matrix.\r\n\r\nAlso, I found when building a processing pipeline for a large dataset that `Flux.onehotbatch` itself seems to be quite slow (couple orders of magnitude slower than this), though I'm not sure why.\r\n\r\nI'm totally happy to change the name of the package to `OneHotCSC` or something if people feel that this name should be reserved for when the Flux implementation moves out of Flux.\r\n\r\n[noblock]",
+      "createdAt": "2022-02-20T17:06:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1046280548",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-XP4Q",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I can't see why the Flux one is slower for any purposes unless you're modifying the CSC in-place, but that's probably not what most people would do to an one-hot encoding vector.\r\n\r\nIf somehow Flux onehot is slower than this, it may be missing some specialization against sparse matrix or something. If you look at what `@edit` shows you when you use Flux's onehot encoding for your benchmark, maybe you can see if it's using some slow default fallback\r\n\r\n[noblock]",
+      "createdAt": "2022-02-20T17:12:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1046281744",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-XRns",
+      "author": {
+        "login": "TLipede"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ahh I see, it was due to passing in a vector for labels, rather than a tuple:\r\n\r\n```julia\r\njulia> data = rand([:a, :b, :c, :d, :e], Int(1e6));\r\n\r\njulia> @btime Flux.onehotbatch($data, labels) setup=(labels=(:a, :b, :c, :d, :e));\r\n  10.682 ms (5 allocations: 7.63 MiB)\r\n\r\njulia> @btime Flux.onehotbatch($data, labels) setup=(labels=[:a, :b, :c, :d, :e]);\r\n  1.326 s (8000007 allocations: 358.58 MiB)\r\n\r\njulia> @btime OneHotEncoding.onehot($data, labels) setup=(labels=[:a, :b, :c, :d, :e]);\r\n  32.174 ms (21 allocations: 41.01 MiB)\r\n```\r\n\r\nI would never have guessed the difference might be so stark. This can be closed. Thanks for taking the time to take a look!",
+      "createdAt": "2022-02-20T17:52:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1046288876",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q84-XS7B",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Nice!.\r\n\r\n(btw, `10^6` better than `Int(1e6)`)",
+      "createdAt": "2022-02-20T18:23:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/54950#issuecomment-1046294209",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OneHotEncoding\n- Repository: https://github.com/TLipede/OneHotEncoding.jl\n- Created by: @TLipede\n- Version: v0.1.2\n- Commit: 5aa8f2a670cda24c2f7d408b1c4125ca24233f17\n- Git reference: HEAD",
+  "package_name": "OneHotEncoding",
+  "closed_at": "2022-02-27T09:16:22Z",
+  "title": "New package: OneHotEncoding v0.1.2"
+}

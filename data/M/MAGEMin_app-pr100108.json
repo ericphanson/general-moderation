@@ -1,0 +1,83 @@
+{
+  "created_at": "2024-02-02T09:57:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 100108,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ypeIW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-02T10:03:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100108#issuecomment-1923473942",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ypoUK",
+      "author": {
+        "login": "NicolasRiel"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, \r\nI would like to have this package named MAGEMin_app as the Julia package it is relying on is called MAGEMin_C. \r\nMAGEMin_app offers a web browser Julia app of MAGEMin_C and I think the name would fit quite well.\r\nWould that be fine?\r\n\r\nThanks for the help!",
+      "createdAt": "2024-02-02T10:27:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100108#issuecomment-1923515658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yqZaa",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As was pointed out on Slack, this package should be named `MAGEMinApp`, since Julia package names cannot contain underscores as a matter of policy in General (`MAGEMin_C` somehow slipped through). I’ll close this, but you can rename the package and submit another registration.",
+      "createdAt": "2024-02-02T12:33:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/100108#issuecomment-1923716762",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yqZuI",
+      "author": {
+        "login": "NicolasRiel"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes I am working on that, thank you for your help",
+      "createdAt": "2024-02-02T12:34:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/100108#issuecomment-1923718024",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MAGEMin_app\n- Repository: https://github.com/ComputationalThermodynamics/MAGEMin_app.jl\n- Created by: @NicolasRiel\n- Version: v0.1.0\n- Commit: cf8c4bd249cb609e42a64d84a3d16f5995b5208a\n- Git reference: HEAD\n- Description: Graphical User Interface for MAGEMin, which runs in your web-browser.",
+  "package_name": "MAGEMin_app",
+  "closed_at": "2024-02-02T12:33:43Z",
+  "title": "New package: MAGEMin_app v0.1.0"
+}

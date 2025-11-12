@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-01-04T14:05:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 98202,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85v4xTP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-04T14:09:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98202#issuecomment-1877152975",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v4_FG",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not sure what GISTR stands for—it would be better not to use an acronym for this.\r\n\r\nFrom the package naming guidelines:\r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> -  It's ok to say USA if you're talking about the USA.\r\n> -  It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\nAlso, CamelCase indicates that the \"t\" in \"tree\" should be capitalized.",
+      "createdAt": "2024-01-04T14:43:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98202#issuecomment-1877209414",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v5ksI",
+      "author": {
+        "login": "maxfreu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Actually I don't really like the name, too. In super long it's GeoInterfaceSortTileRecursiveTree. In geo-informatics \"sort tile recursive\" is commonly abbreviated as STR and the julia package GeoInterface as GI, hence the GISTR. As the audience is rather narrow I thought contracting the name is ok. Regarding the camel case, I'm following what the [comparable python package](https://shapely.readthedocs.io/en/stable/strtree.html) does - but that's of course not a proper argument. I'm a bit uncertain how to proceed. Maybe GeoInterfaceSTRTree?",
+      "createdAt": "2024-01-04T16:11:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98202#issuecomment-1877363464",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v5uE9",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If the primary use of the package is to provide the SortTileRecusriveTree dstastructure, which works well when used with GeoInterface.jl but could also be used for other things, then it might make sense to call the package SortTileRecursiveTrees.jl",
+      "createdAt": "2024-01-04T16:31:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98202#issuecomment-1877401917",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yI2RC",
+      "author": {
+        "login": "maxfreu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Can be closed in favor of https://github.com/JuliaRegistries/General/pull/99759",
+      "createdAt": "2024-01-29T15:22:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98202#issuecomment-1914922050",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GISTRtree\n- Repository: https://github.com/maxfreu/GISTRtree.jl\n- Created by: @maxfreu\n- Version: v0.1.0\n- Commit: 09d0c94a368e25729864478d03cc40087694a841\n- Git reference: HEAD\n- Description: Fast spatial queries: STR tree for GeoInterface compatible geometries",
+  "package_name": "GISTRtree",
+  "closed_at": "2024-01-29T15:25:11Z",
+  "title": "New package: GISTRtree v0.1.0"
+}

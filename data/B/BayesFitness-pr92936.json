@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-10-06T18:26:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "StefanKarpinski",
+  "merged_at": null,
+  "pr_number": 92936,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85oYnwL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Bijectors, CSV, ComponentArrays, DataFrames, Distributions, DynamicHMC, DynamicPPL, JLD2, MCMCChains, Memoization, ReverseDiff, Revise, StatsBase, Turing, UnPack\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-06T19:06:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1751284747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ooTdj",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can you add a link to the documentation of your package to the README? And it would be great if you could add a small description of the package and a usage example to the README as well.",
+      "createdAt": "2023-10-10T13:07:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1755395939",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oq0r6",
+      "author": {
+        "login": "mrazomej"
+      },
+      "authorAssociation": "NONE",
+      "body": "@lgoettgens, done! I will go ahead and expand on the README file later on once the accompanying paper is submitted. But I added the link and a brief description, as you asked.",
+      "createdAt": "2023-10-10T18:57:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1756056314",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oq6bH",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks! \r\n\r\nI just noticed that this PR is already superseded by https://github.com/JuliaRegistries/General/pull/92941. So it can be abandoned until CI closes it automatically. ",
+      "createdAt": "2023-10-10T19:16:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1756079815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oq7XK",
+      "author": {
+        "login": "mrazomej"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, I'm sorry. My collaborators decided they wanted to rename the package just as I submitted it here.\r\nI am not familiar with CI (this is my first software package ever). Do I need to do something, or will `BarBay.jl` be available now to be installed?",
+      "createdAt": "2023-10-10T19:19:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1756083658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85orA7y",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You already registered BayesFitness.jl in #92941. BarBay.jl is still waiting in #93121 for registration. ",
+      "createdAt": "2023-10-10T19:37:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92936#issuecomment-1756106482",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BayesFitness\n- Repository: https://github.com/mrazomej/BayesFitness.jl\n- Created by: @mrazomej\n- Version: v0.0.1\n- Commit: 72d03385e3d4eca4797578626f18ebd6d59487fc\n- Reviewed by: @mrazomej\n- Reference: https://github.com/mrazomej/BayesFitness.jl/issues/5\n- Description: BayesFitness.jl Julia package to infer fitness values from pooled competition experiments.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835982d70a9bcb5cff4248a563cc0957e3f548d39d968522b43ad34898642466aaef93163f95b179ae5a683548a9f8dc1034847cc24ca2fa6fedeed85895698a974caaee97f8ad929f7f80acad1279937650cbb756a300bc817048d04e6944ccee8248c8a588385c0d6c2f92f3f2c189a12dddd7967ede80fb72c6d6f56d10b58aba6 -->",
+  "package_name": "BayesFitness",
+  "closed_at": "2023-10-12T19:48:38Z",
+  "title": "New package: BayesFitness v0.0.1"
+}

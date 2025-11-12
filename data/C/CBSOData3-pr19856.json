@@ -1,0 +1,106 @@
+{
+  "created_at": "2020-08-20T17:04:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 19856,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3Nzc4Nzk0NQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import CBSOData3` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-08-20T17:06:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-677787945",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3Nzg4MDc5Mg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Perhaps CBSOData3? That seems to be how they capitalize it. Also, it would be good to add some tests, just happened to notice that is missing when checking out the repo.\r\n[noblock]",
+      "createdAt": "2020-08-20T20:15:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-677880792",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3ODA0OTk5Nw==",
+      "author": {
+        "login": "HenricoWitvliet"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've changed the name to CBSOData3 and added some documentation. Will the new version be automatically linked to this pull request? For the moment I think I do not want test-cases. This package only retrieves data via a rest api. And the OData3 interface will be replaced with OData4 in the next 1 or 2 years.",
+      "createdAt": "2020-08-21T05:40:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-678049997",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3ODA1Mjc2MA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Will the new version be automatically linked to this pull request?\r\n\r\nNo I think it will create a new one since you updated the name.\r\n\r\n> For the moment I think I do not want test-cases. This package only retrieves data via a rest api.\r\n\r\nOkay, things can go wrong in simple cases too, but it doesn't matter, just something I noticed.\r\n\r\n> And the OData3 interface will be replaced with OData4 in the next 1 or 2 years.\r\n\r\nOkay, perhaps the packaeg name should not include the version number then? Perhaps `CBSOData` is a good name and when the new format is released you can just update the implementation instead of creating a new package.\r\n\r\nAnyway, these are just suggestions, ultimately it is up to you.",
+      "createdAt": "2020-08-21T05:48:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-678052760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3ODA1NTU0MQ==",
+      "author": {
+        "login": "HenricoWitvliet"
+      },
+      "authorAssociation": "NONE",
+      "body": "The new OData4 interface is really different from OData3. And at the moment they could exist next to each other (the new interface contains a small selection of everything.) So somewhere in the future I plan to make a package just for Odata4.\r\n\r\nThe automerge failed. Maybe because I changed the name and not the uuid? Should I change the uuid and try again?",
+      "createdAt": "2020-08-21T05:57:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-678055541",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3ODA2NDk5MQ==",
+      "author": {
+        "login": "HenricoWitvliet"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've changed the uuid, and I will re-register this package.\r\n",
+      "createdAt": "2020-08-21T06:23:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19856#issuecomment-678064991",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CBSOData3\n- Repository: https://github.com/HenricoWitvliet/CBSOData3.jl\n- Created by: @HenricoWitvliet\n- Version: v0.1.0\n- Commit: 66ab248a80f49d990883769596133e4b468e8fd1\n- Git reference: master\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> first version to use odata3 to read CBS (https://www.cbs.nl) datasets.\n<!-- END RELEASE NOTES -->",
+  "package_name": "CBSOData3",
+  "closed_at": "2020-08-21T06:28:50Z",
+  "title": "New package: CBSOData3 v0.1.0"
+}

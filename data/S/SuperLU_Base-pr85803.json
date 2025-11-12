@@ -1,0 +1,91 @@
+{
+  "created_at": "2023-06-18T09:21:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 85803,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85fIeaH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CIndices\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-18T09:26:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85803#issuecomment-1596057223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fI46O",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You cannot have underscores in a package name, but `SuperLUBase` should be fine",
+      "createdAt": "2023-06-18T14:18:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85803#issuecomment-1596165774",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fJSCq",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Oops, how did I never notice that 😅 [noblock]",
+      "createdAt": "2023-06-18T21:00:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85803#issuecomment-1596268714",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85h3rwO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-07-19T12:23:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85803#issuecomment-1641987086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ijqpN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-07-27T12:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85803#issuecomment-1653516877",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SuperLU_Base\n- Repository: https://github.com/Wimmerer/SuperLU_Base.jl\n- Created by: @Wimmerer\n- Version: v0.1.0\n- Commit: bb4fc937006c28731d3bfee7631ec6d9fb311b2a\n- Reviewed by: @Wimmerer\n- Reference: https://github.com/Wimmerer/SuperLU_Base.jl/commit/bb4fc937006c28731d3bfee7631ec6d9fb311b2a#commitcomment-118583878\n- Description: Common definitions for SuperLU solver libraries.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6dc1387054e547aa0e13e7cb37de25816827c3b387e929975bd834dcd60be059f8c8ef3403b7197cd667b2637a3396db724bffdcb0e3d5942891ad97a77d6958c08bd14c27fb97ffd04bdfeb02f2175dd05aa8776215f1a12fa495d1d34af4fad9146ff35779d2b684fef686c25fcfee3cde6d7c9c3a5bbf1cd6257e588e67472cf642afe916055cab12e0ec07bc2bf76d8d7d33de432b2acec1eb88afd0cd815cab1a02ca52cc4b5485a0fedb1a1800c -->",
+  "package_name": "SuperLU_Base",
+  "closed_at": "2023-07-27T12:23:42Z",
+  "title": "New package: SuperLU_Base v0.1.0"
+}

@@ -1,0 +1,173 @@
+{
+  "created_at": "2025-02-23T21:26:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 125694,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86fkbz4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-23T21:32:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2677128440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86fmF09",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on the package! Is this something you plan to expand on? At the moment, the total length of the code is rather minimal.",
+      "createdAt": "2025-02-24T06:50:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2677562685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86fmNCp",
+      "author": {
+        "login": "jfb-h"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @gdalle, indeed I plan to extend this over time. The initial scaffolding and plotting functionality was already useful to me and my colleagues, though, so I registered it. Hope that is ok!",
+      "createdAt": "2025-02-24T07:12:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2677592233",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86foSP9",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "In my view it may be wise to wait a little, until you get a clearer picture of where the package is going. For instance, will it ever include inference algorithms? Are there any alternatives in Julia (like CommunityDetection.jl), and why are they not satisfactory?\nNote that I don't have rights over the registry, I'm just a concerned citizen wondering if a package with such a generic name will end up being _the_ reference in Julia on SBMs",
+      "createdAt": "2025-02-24T11:27:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2678137853",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86fqfOX",
+      "author": {
+        "login": "jfb-h"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your consideration! Indeed the package does not strive to be the reference on stochastic blockmodels, which are just one specific way of doing blockmodeling (see e.g., [generalized blockmodeling](https://en.wikipedia.org/wiki/Generalized_blockmodeling) as a different approach). In a similar vein, blockmodels are not always about communities, but might come from structural or regular equivalence relations, so what I was looking for was not a natural fit for CommunityDetection.jl. Instead I wanted a simple wrapper type to represent, summarize, and plot blockmodels to begin with, without consideration to how you got your node partition yet. If you think the package is too small or the name too broad for the registry, I can also put it on a private registry for now.",
+      "createdAt": "2025-02-24T14:58:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2678715287",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86gAilH",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Perhaps a slightly more specific name would be good, like BlockModelsUtilities.jl?",
+      "createdAt": "2025-02-26T10:04:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2684496199",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86gGN4L",
+      "author": {
+        "login": "jfb-h"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah, I could do that. Do I need to do something to close this PR so I can register again with a changed name?",
+      "createdAt": "2025-02-26T19:21:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2685984267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86gG00j",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No, it will automatically be prevented from merging due to our comments, and will close in 30 days on its own",
+      "createdAt": "2025-02-26T20:40:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2686143779",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ktTzo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-03-29T12:23:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2763341032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86lvgpk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-04-05T12:23:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/125694#issuecomment-2780695140",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Blockmodels\n- Repository: https://github.com/jfb-h/Blockmodels.jl\n- Created by: @jfb-h\n- Version: v0.1.0\n- Commit: 48a0cd3fa27138b8a6083237b29014fcc4b9aff3\n- Reviewed by: @jfb-h\n- Reference: https://github.com/jfb-h/Blockmodels.jl/commit/48a0cd3fa27138b8a6083237b29014fcc4b9aff3#commitcomment-152902358\n- Description: Julia package for representing network blockmodels\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60b10b1e34acbe6c3852829fa367f0e826f7bcbcf9d22bdd9d706c6e10f293f486c90be4c8a53141d714fbd48526e1672922635d24b0dbffe3bb850dd2a63c81a4a835692a337baf5f81a097485080f334b9e6ec45d3ac94349891d023ee4e5c6374b993a1a2eefdbea4391af5ecd3d5a4e8d7ee147085509501f8af0db0c8ed101b3434a9f7b7bd6b3f59e27f1f22283e304e44c45bcf13616ee513320c2be0b7f0c7d2ddebe56281bec1db7434ed780 -->",
+  "package_name": "Blockmodels",
+  "closed_at": "2025-04-05T12:23:56Z",
+  "title": "New package: Blockmodels v0.1.0"
+}

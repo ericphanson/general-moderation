@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-05-27T22:12:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 131849,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ttMAA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CodecZlib, Unitful, UnitfulAstro\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 12 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to LITS. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.77 is at or below cutoff of 2.50.\n  2. Similar to MCTS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to FFTA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to FFTW. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NATS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to FITSIO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to EFIT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to FIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to MIToS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to OIFITS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to Bits. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n  </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-27T22:19:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131849#issuecomment-2914304000",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tvKTI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! I might suggest something like `FITSFormat` or `FITSFiles` as a name. Also, from looking at the documentation, I don’t think I’d be able to figure out how to use this package or what the API is. Could you improve that a little before re-registering?",
+      "createdAt": "2025-05-28T03:52:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131849#issuecomment-2914821320",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86t66zL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/131918",
+      "createdAt": "2025-05-29T00:27:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131849#issuecomment-2917903563",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FITS\n- Repository: https://github.com/barrettp/FITS.jl\n- Created by: @barrettp\n- Version: v0.2.0\n- Commit: e97a4b12632a26c6439c50cd6492b641306b3c5b\n- Reviewed by: @barrettp\n- Reference: https://github.com/barrettp/FITS.jl/issues/6\n- Description: A Julia Flexible Image Transport System (FITS) file IO package\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598122f80d797bc5e25e74ce47e30f20b5e263ef1bed915ce33cdd661f252b08a7183b6ce0834f3136cb823d60d3ecab2e93f14d7bfdbfd380f2c588cd57183bc8cbf3ceb36ae58192310b975d714169c23e0c16e0fc6ca51a1bc7802a513ee70891f381267ebeacf5b20cfeb2a2e582530 -->",
+  "package_name": "FITS",
+  "closed_at": "2025-05-29T00:27:04Z",
+  "title": "New package: FITS v0.2.0"
+}

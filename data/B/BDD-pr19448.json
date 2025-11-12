@@ -1,0 +1,135 @@
+{
+  "created_at": "2020-08-13T17:38:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 19448,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3MzYxMzkzNw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n- Package name similar to 18 existing packages.\n<details>\n<summary>Similar package names</summary>\n\n1. Similar to BED. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.37 is at or below cutoff of 2.50.\n2. Similar to BDF. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.72 is at or below cutoff of 2.50.\n3. Similar to ODE. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.01 is at or below cutoff of 2.50.\n4. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.29 is at or below cutoff of 2.50.\n5. Similar to EDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n6. Similar to MD5. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n7. Similar to PDDL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n8. Similar to FDM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n9. Similar to AMD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n10. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n11. Similar to SDDP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n12. Similar to JLD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n13. Similar to XDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n14. Similar to JDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n15. Similar to Bio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n16. Similar to BAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n17. Similar to ADI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n18. Similar to CUDD. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n</details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-08-13T17:40:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-673613937",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3NzUyNzEyMw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Bump @RenatoGeh.\r\n\r\nRegarding the name, perhaps `BinaryDecisionDiagrams` is a better name?",
+      "createdAt": "2020-08-20T10:59:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-677527123",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY3ODQ2Nzg5Nw==",
+      "author": {
+        "login": "RenatoGeh"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Bump @RenatoGeh.\r\n> \r\n> Regarding the name, perhaps `BinaryDecisionDiagrams` is a better name?\r\n\r\nSure. My only concern was already existing users that might have their package and code break (plus `using BDD` was such a simple quaint one-liner). But on second thought, I doubt anyone is actually using my package, so why not. Better to have it on the general registry. Is there a way to have both ways? As in, leave the repo as `BDD.jl` but have it on the general registry as `BinaryDecisionDiagrams`?",
+      "createdAt": "2020-08-21T20:01:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-678467897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY5ODE5MDM2Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> As in, leave the repo as BDD.jl but have it on the general registry as BinaryDecisionDiagrams?\r\n\r\nSure, but why? Pretty confusing when they don't match.",
+      "createdAt": "2020-09-24T08:13:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-698190367",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczMTUyMjU1Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@RenatoGeh Here is what I would recommend:\r\n1. Rename this package to `BinaryDecisionDiagrams.jl`\r\n2. When users use your package in their code, tell them to do one of these two options:\r\n\r\nOption 1:\r\n```julia\r\nimport BinaryDecisionDiagrams as BDD\r\n```\r\n\r\nOption 2\r\n```julia\r\nusing BinaryDecisionDiagrams\r\nconst BDD = BinaryDecisionDiagrams\r\n```\r\n\r\nThat way, they still get to use the `BDD` abbreviation in their code.",
+      "createdAt": "2020-11-21T07:28:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-731522553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczMjQyOTM2MA==",
+      "author": {
+        "login": "RenatoGeh"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sounds good. Will work on this once I've got the time.",
+      "createdAt": "2020-11-23T21:13:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-732429360",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc0Mzc5MTM5OQ==",
+      "author": {
+        "login": "RenatoGeh"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi. Could you guys close this PR, please? This package was merged in on PR #25646 with the discussed changes in naming.",
+      "createdAt": "2020-12-12T17:50:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/19448#issuecomment-743791399",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BDD\n- Repository: https://github.com/RenatoGeh/BDD.jl\n- Created by: @RenatoGeh\n- Version: v0.1.0\n- Commit: b5a6f58eeacfd05287e872f0ae5572a479281e58\n- Reviewed by: @RenatoGeh\n- Reference: https://github.com/RenatoGeh/BDD.jl/commit/b5a6f58eeacfd05287e872f0ae5572a479281e58#commitcomment-41446704\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b6caedc9aeced63d2b73071753eaaba70691c4566addfd889e8abc1b49e4aa0a5fab6f2b43174ae0c8e38bf708e3ace673c0018f1f21211bac169c2a00c2f5f98eab95af970f0bccb84135eae85ad7c0fb5f29f44a031172c489da9a04f161ef7d8c1ccff4c99afce4597cf1cb59669aa52df7cc51e93ace6fe946a2112edf5fd41485d5901318144de3ddea887d94ff51c20512c9a4cc051fc6e997c9cda8462a06cc4bee04e25b4303382a273d9eab -->",
+  "package_name": "BDD",
+  "closed_at": "2020-12-12T23:49:58Z",
+  "title": "New package: BDD v0.1.0"
+}

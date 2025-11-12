@@ -1,0 +1,225 @@
+{
+  "created_at": "2025-06-17T18:42:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 133103,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86xtco9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to LibYAML. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-17T18:49:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2981481021",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xtfFr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For anyone reviewing, https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981114018 and following still applies.\r\n\r\nPersonally, I would probably be happiest with this being a submodule of [Serde.jl](https://github.com/bhftbootcamp/Serde.jl)",
+      "createdAt": "2025-06-17T18:52:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2981491051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xyv1a",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What I do not like is, that the package does not even mention LibYAML; for best of cases the currently abandoned package should be reactivated to avoid confusion (in the case of this happening more often: something like: Which of the LibYAML1-17 is the one that is still maintained?)\r\n\r\nI think making this a submodule within Serde would probably best.",
+      "createdAt": "2025-06-18T06:34:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2982870362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xy5UG",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> What I do not like is, that the package does not even mention LibYAML\r\n\r\nAgreed, we should add a mention of LibYAML to clarify the relationship\r\n\r\n",
+      "createdAt": "2025-06-18T06:50:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2982909190",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86xzAKV",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Note that LibYAML also has been moved by now and is at https://github.com/JuliaData/LibYAML.jl and hence probably no longer abandoned.",
+      "createdAt": "2025-06-18T07:01:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2982937237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86x7DiP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Despite my misgivings in https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981114018, I agree with @ChrisRackauckas in https://github.com/JuliaRegistries/General/pull/133076#issuecomment-2981625844 that this should _replace_ the existing `LibYAML`. The idea of the `General` registry is very much that of a shared community resource, which comes with the recommendation for very general and descriptive package names (which then should be the \"canonical\" package for its domain), and the idea that when packages become unmaintained, they can be transferred to one of the established Julia organizations and assigned a new maintainer. For `LibYAML` that is exactly what happened: `LibYAML` was transferred to `JuliaData` so that the it can be assigned a new maintainer, in this case potentially @gryumov or @kbarsegian, who can then integrate the code from https://github.com/bhftbootcamp/LibYAML2.jl and release it as a new breaking version.\r\n\r\nUnfortunately, based on the communication here and in the earlier threads surrounding this new `LibYAML` version, as well as similar experiences with half a dozen previous registrations, I'm not sure that there is an alignment between this community-managed aspect of packages in the General registry and the way BHFT Bootcamp handles the development of Julia packages. That is completely fine, and why the [guidelines for General](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) recommend a local registry for \"packages that are only useful for a closed group (like a research group or a company)\". Hence my recommendation, or personal preference, for BHFT Bootcamp to keep their entire ecosystem in the dedicated registry at https://github.com/bhftbootcamp/Green. However, the fact is that [Serde.jl](https://github.com/bhftbootcamp/Serde.jl) (and some other BHFT Bootcamp packages) _are_ in General, which means that if `Serde` wants to use this new `LibYAML` implementation (which it is absolutely entitled to do), that leaves two options:\r\n\r\n* Work within the community to maintain the new code as part of the existing `LibYAML`, within the `JuliaData` organization\r\n* Add the new `LibYAML` implementation as a submodule to `Serde`\r\n\r\nI don't think the community interests are really compatible with having a separate `LibYAML2` when the original `LibYAML` can still continue. But I'm also okay with others (the registry maintainers) taking a different view on this, and merging `LibYAML2`.",
+      "createdAt": "2025-06-18T16:59:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2985048207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86x8XPe",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz, Are you willing to make me a maintainer of LibYAML under JuliaData?",
+      "createdAt": "2025-06-18T19:01:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2985391070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86x8rKF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I have no such permissions, this is up to whoever has admin access to that org, like probably @DilumAluthge",
+      "createdAt": "2025-06-18T19:34:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2985472645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86x9sqC",
+      "author": {
+        "login": "stepanplaunov"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't think leaving LibYAML in Serde as a submodule is the right decision. Serialization in Serde.jl is built on the use of separate libraries designed for specific data types. LibYAML is just one of them and inlining such a library in Serde will break the abstraction of the package.\r\n\r\nFrom what I can see, the current LibYAML implementation is essentially empty, so starting with the implementation from this PR seems optimal.",
+      "createdAt": "2025-06-18T21:26:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2985740930",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yB51H",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If there is a push towards revitalising `LibYAML`, sure that should not live within Serde, you are right. But with the original package now moved to JuliaData, that might happen and the developers here should probably join that. \r\n\r\nMy main incentive to have `LibYAML2` within Serde is, that we should avoid having too many similar named packages doing the same thing in General. \r\nI like that usually I can nearly guess names and it works – I do not have to remember wether I have to use some PkgName or PkgName2 for it to work.\r\n\r\nSo I still would propose to join forces with who ever is maybe left on the original LibYAML and do an (hopefully even better) package together.",
+      "createdAt": "2025-06-19T06:51:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2986843463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yB6U_",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Are you willing to make me a maintainer of LibYAML under JuliaData?\r\n\r\nEven without being a maintainer, you can open issues and do PRs, since it is now in JuliaData there are hopefully a few developers keeping an eye on those.",
+      "createdAt": "2025-06-19T06:52:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-2986845503",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q864UR4d",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-07-19T12:24:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-3092323869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q866EfNS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-07-26T12:24:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133103#issuecomment-3121738578",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LibYAML2\n- Repository: https://github.com/bhftbootcamp/LibYAML2.jl\n- Created by: @gryumov\n- Version: v0.1.0\n- Commit: 83ded8f48476c6bbd78a6c8be7c78108d77d306e\n- Reviewed by: @gryumov\n- Reference: https://github.com/bhftbootcamp/LibYAML2.jl/commit/83ded8f48476c6bbd78a6c8be7c78108d77d306e#commitcomment-160259584\n- Description: A Julia wrapper for libyaml, providing fast and minimal YAML parsing\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bbb5204c87cce5305d435456209d7e8c287d1891f6fab3d7e8e665360fa39ba4823dec5e8b26ceb1346a6d54346ba6dec61a5f0432397aeb4d366cc95a70ab0bff13e6d88445f4305362fff90e4b744bf532b75a6802eb03e466eafeb117ee6b3bc461b94fec6b7a5634ef2c8244b80f4debf7d76b0ac583d5c1e097a6d9fdec5515fa709f42d01aec15100383f3c7a5aae56ebdd56b931eaf45be752e6e62fd19a540fbdb6512e70caa005f2d3a4c03 -->",
+  "package_name": "LibYAML2",
+  "closed_at": "2025-07-26T12:24:18Z",
+  "title": "New package: LibYAML2 v0.1.0"
+}

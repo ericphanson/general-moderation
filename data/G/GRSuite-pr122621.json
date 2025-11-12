@@ -1,0 +1,165 @@
+{
+  "created_at": "2025-01-08T18:29:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 122621,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Zrs5e",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-08T18:41:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2578370142",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zru-Q",
+      "author": {
+        "login": "AuroraDysis"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nI want to use the name `GRSuite.jl`. Can anyone help me resolve the issue? I don't think it is similar to `MLSuite.jl`.",
+      "createdAt": "2025-01-08T18:46:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2578378640",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZyhXe",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] \r\nI feel the name is very unfortunate. There exists GR.jl, which might lead to the impression this is about a Suite for that, especially since GRUtils.jl does exist and _does_ provide utilities for GR(.jl). Also “suite” could be _anything. So the name here is a (not unique) abbreviation together with a noun that provides no further information.\r\n\r\nWhat about\r\n* `GeneralRelativity.jl`? Or the other way around: What justifies the “suite” suffix? I think that is not necessary.\r\n* `GeneralRelativityPDEs.jl` might also be nice, since for now the name does not indicate that this is about solving PDEs\r\n* `Relativia.jl` was proposed on slack as well.",
+      "createdAt": "2025-01-09T13:29:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2580157918",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z0VSB",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "IMO the GR/GRUtils conflict is quite strong. That's a very popular package, and also the default Plots backend.\r\n\r\nI think the situation of GR.jl, GRSuite.jl, GRUtils.jl, GRTools.jl, etc where half of them are about plotting and half about general relativity isn't optimal and can easily lead to confusion :)\r\nGR.jl is probably a historical artifact, currently General doesn't tend to accept 2-letter names – but it's here to stay.",
+      "createdAt": "2025-01-09T15:54:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2580632705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aDZuR",
+      "author": {
+        "login": "AuroraDysis"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHi @aplavin, I won’t repeat the entire discussion here since it’s already quite lengthy in the Slack channel. If you’re interested, please check there.\r\n\r\nhttps://julialang.slack.com/archives/C6M4DQA5P/p1736362206643109\r\n\r\nThe conflict doesn’t seem significant to me. There might be a better name, but I don’t have time to think of one right now. I’ve already explained in Slack why this name works best and why the alternatives don’t.\r\n\r\nPlots.jl is popular, but few users install and use it as a standalone library. Many are even unaware they are using GR.\r\n\r\nApple Inc. attempts to monopolize the common symbol \"apple.\" In my opinion, you are doing similar things.\r\n",
+      "createdAt": "2025-01-10T22:36:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2584583057",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aFdDX",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As mentioned earlier, there is a community effort to make package names intuitive – so also not confusing. There are also [rules](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules).\r\n\r\nIt is also not about “monopolizing” anything. Naming should help a user _find_ your package but also to not confuse your package with a different ecosystem. So the name should both transport well what your package provides but also avoid confusing your package with other ecosystems.\r\n\r\n Though I think GR.jl predates quite a few of these rules, it does wrap the GR api and hence rule 6 says\r\n\r\n> 6. Packages that wrap external libraries or programs can be named after those libraries or programs.\r\n\r\nAnd that is what GR does to some extend. It also already exists and is very well established and often used directly indeed. I just saw it turns 10 years today.\r\n\r\nConcerning the name here, there are\r\n\r\n> 1. Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\nand\r\n\r\n> 4. Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\nThe first one is broken due to the confusion that `GRSuite` is too close to `GRUtils` in the sense that one would not be able to tell which one refers to which GR. But it also says avoid acronyms. That is what I also already wrote on slack. There is also\r\nThat does not mean packages _never_ have acronyms. Some packages might predate that rule, for some it might have been considered less confusing.\r\nBut with GR being used for 10 years already for something different here – there _is_ confusion.\r\n\r\nAnd finally there is also \r\n\r\n> 7. Avoid naming a package closely to an existing package\r\n\r\nSo the current name does not follow even 3 of the given naming rules.\r\n\r\nFrom the discussion on slack, since you aim to provide more than the PDE solvers in the future, so something that is meant to takle General Relativity (simulations?) more broadly, I think `GeneralRelativity.jl` would be a really neat and cool name, but also `GeneralRelativitySuite.jl` still sounds nice to me.  \r\n",
+      "createdAt": "2025-01-11T06:42:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2585120983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aFf6y",
+      "author": {
+        "login": "AuroraDysis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm tired of discussing this. Anyway, thanks for the suggestions. I would like to proceed with the name `Einstein.jl` or `EinSuite.jl`, if possible.  \r\n\r\nFor `Einstein.jl`, it shares a somewhat similar goal to [EinsteinPy - Making Einstein possible in Python — EinsteinPy](https://docs.einsteinpy.org/en/stable/), although the functions are a bit different.  \r\n\r\nFor `EinSuite.jl`: While there are packages like [ahwillia/Einsum.jl: Einstein summation notation in Julia](https://github.com/ahwillia/Einsum.jl) and [EinExprs](https://juliahub.com/ui/Packages/General/EinExprs), they are still somewhat connected since Einstein introduced this summation for general relativity.\r\n\r\nI will wait for comments before renaming everything. I will also post on Slack to attract more attention.",
+      "createdAt": "2025-01-11T07:33:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2585132722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aFgkR",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n`Einstein.jl` is fine with me as far as I checked for too similar names – we want to avoid packages too close to avoid typos being new packages.\r\n`EinSuite.jl` is probably fine in naming as well, there I only personally do not like that, can‘t even argue why, just sounds strange. But sure that is subjective, so the name is probably also fine.\r\n\r\nI can totally understand that naming is tiring. You committed to a name when you opened this, sure. On the other hand the overall community aims to avoid confusion, when people explore packages. And these names are permanent. So then it is worth carefully finding a solution together. So please do not take that personally and continue your good work on contributing to the Julia community!\r\n\r\nAnd sure checking back on Slack as well is a good idea. I will set mz last post to nonblack when the renaming has happened.\r\n",
+      "createdAt": "2025-01-11T07:45:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2585135377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aGvt_",
+      "author": {
+        "login": "AuroraDysis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm not sure how to change the package name within this PR. I opened a new one; please close this in favor of https://github.com/JuliaRegistries/General/pull/122822.",
+      "createdAt": "2025-01-11T22:02:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/122621#issuecomment-2585459583",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GRSuite\n- Repository: https://github.com/AuroraDysis/GRSuite.jl\n- Created by: @AuroraDysis\n- Version: v0.0.1\n- Commit: 2e211544c552d1bc5f7cb073229d54120be783c8\n- Reviewed by: @AuroraDysis\n- Reference: https://github.com/AuroraDysis/GRSuite.jl/commit/2e211544c552d1bc5f7cb073229d54120be783c8#commitcomment-151062664\n- Description: GRSuite.jl is a high-performance suite for solving PDEs with arbitrary precision.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60ee071c2aae6d3ee393dc49106c7b56289ad0f7172f5a924946e3c04116dad56af4d3cbd98d43ae4187a27bd63057caa04ad3820da54638674612a3cd78710f7f84fc11c752e4dbfa564856e45c394c61883817951cc3354a8f1a4af032e6fe2fd3a74bca9b9c7a9b55c7fd607e860a7916a3a8c889a7c6eec082ace1ca6f7726caeabe365f075961c208c6d2caf90e295fac40b245e01d60628deb53b9eadf082aeeddfbfe3e371ab06e90d715ef9e7 -->",
+  "package_name": "GRSuite",
+  "closed_at": "2025-01-11T22:41:24Z",
+  "title": "New package: GRSuite v0.0.1"
+}

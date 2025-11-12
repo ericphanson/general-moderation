@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-10-10T14:39:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 116998,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86PX89w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Comonicon, FoldsThreads, MKL, QuantumDynamics, Unitful, UnitfulAtomic\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-10T15:20:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116998#issuecomment-2405420912",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PX9Zt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I assume this was opened by mistake",
+      "createdAt": "2024-10-10T15:21:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116998#issuecomment-2405422701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pcdfg",
+      "author": {
+        "login": "amartyabose"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz --- Yes, sorry... While I have released Julia packages, I got confused because this uses the Comonicon.jl package to give a command line utility.  I'll upload the code to another repository with proper naming, address the other issues and open a registration request.\r\n\r\n> I assume this was opened by mistake\r\n\r\n",
+      "createdAt": "2024-10-11T05:53:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116998#issuecomment-2406602720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pj81l",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No problem… But I think it should be possible to use Comonicon to make this utility an optional part of your existing `QuantumDynamics` package, see https://github.com/JuliaRegistries/General/pull/117132#issuecomment-2408564756. That would be a much cleaner solution. Otherwise, I think you should make use of the `QuantumDynamics` \"namespace\" (I consider an author of `Package` to \"own\" the names `PackageSomething`) instead of using a new package name that will only confuse your users, and pollute the General namespace",
+      "createdAt": "2024-10-12T13:29:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116998#issuecomment-2408566117",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: qdsim\n- Repository: https://github.com/amartyabose/qdsim\n- Created by: @amartyabose\n- Version: v0.5.0\n- Commit: 88e215246abb802dbc918f14b95a6d6e431d262c\n- Reviewed by: @amartyabose\n- Reference: https://github.com/amartyabose/qdsim/commit/88e215246abb802dbc918f14b95a6d6e431d262c#commitcomment-147809733\n- Description: Simulations using QuantumDynamics.jl made a breeze\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ee05bf8653d524c3cf5b74cd08ca2fed67461e377ad70070a0a37e0f725c3b806386eafb8849e604ce125069019a7467307c7b091f0660488dadc92ec934027026df3d92bc8597d33e2ac196da9b88a37c3fcc9e04fea1827076089b10742db5a584c20b17673e9d74006665e64f84de50d2aaceaa503ed716d6927fee437e437c2dc78171bfd10afb3f9a8576f5f05f74f20d00ab93ce87bd950b78762f95d1c1053ec55037b6a627926d836b58f9cd -->",
+  "package_name": "qdsim",
+  "closed_at": "2024-10-10T15:21:39Z",
+  "title": "New package: qdsim v0.5.0"
+}

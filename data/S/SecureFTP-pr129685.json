@@ -1,0 +1,172 @@
+{
+  "created_at": "2025-04-23T21:09:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 129685,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86oagIm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-23T21:15:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2825519654",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86obK0j",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sounds like SecureFTPClients.jl would be a better name. Note the plural S.",
+      "createdAt": "2025-04-23T22:59:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2825694499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86obLip",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "But it also quite unclear what this package provides that SFTPClient does not.",
+      "createdAt": "2025-04-23T22:59:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2825697449",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86oc3vL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Indeed, it would be better to contribute to the existing [SFTPClient](https://github.com/stensmo/SFTPClient.jl.git)",
+      "createdAt": "2025-04-24T02:50:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2826140619",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86on0Tk",
+      "author": {
+        "login": "pb866"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the feedback.\r\nLet me respond to all questions/suggestions in a hopefully structured way:\r\n\r\n**Wharts new:**  \r\n\r\n- A complete internal refactoring of the package using more native Julia functionality rather than self-written functions and obeying to the Julia style guide and naming conventions of functions/variables (e.g. preferred snake_case (or no underscore at all) over camel case)\r\n- Several bug fixes mainly concerning the handling of paths (locally under all OS and on the server) and the recognition of symlinks\r\n- Extended functionality of the filesystem functions more similar to Julia's Base functions and the possibility to deal with folders and not just files\r\n- All changes are documented in the CHANGELOG.md\r\n\r\nIs it enough for a new package? Maybe not. My original plan was indeed to contribute to the SFTPClient package. But after refactoring almost all of the code to use the Julia guidelines for code style, function and variable names and simplifying some of the functions, the difference to the original package was so big that I am not sure, how  to even handle it in a pull request. Since the repo didn't offer really an alternative for informal contact, I decided for me a new package would be the easiest solution and to make it available for other, who might find the functionality useful. But I can see the point that some effort to combine both packages is preferential.\r\n\r\nMaybe @stensmo can comment/discuss how this package can be merged into his, ideally without the loss of the new functionality.\r\n\r\n**Renaming the package:**\r\n\r\nIn case of a separate solution, I am open to suggestions and don't have strong feelings about the current name. I was trying to keep the name short and concise, especially since currently the structs `Client` and `StatStruct` are not exported but needed when using the package. So something like `SecureFTPClients.StatStruct` seems quite bulky to me.\r\n",
+      "createdAt": "2025-04-24T22:37:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2829010148",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86opH_k",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think it is quite clear that registering a new package should be the last resort.",
+      "createdAt": "2025-04-25T04:37:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2829352932",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ouPZb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe it's not an absolute rule, but generally, I would say that a fork of an existing package is not suitable for registration. Certainly not under a name that's basically interchangeable with the original package.\r\n\r\nIn any case, it would need an explicit OK from @stensmo. If the changes take the package in an entirely new direction that @stensmo doesn't feel the original package should go in, then there may be a case, but then probably an appropriate name would be `<NewAspect>SFTPClient`. It seems to me that all the changes in this package are within the scope of the original `SFTPClient`, so they really should be contributed, not released as a new package.\r\n\r\nOf course, there are also situation where an existing package is abandoned, and a fork has to take over. We've switched registered packages to a new owner in the registry when the original author has disappeared completely. But that's a rare instance, and I don't think that's the case here.",
+      "createdAt": "2025-04-25T15:07:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2830693979",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ovl-n",
+      "author": {
+        "login": "stensmo"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would prefer to make one really good SFTP package for Julia. I have no problems with coauthors. SFTPClient has done it's job in production for more than a year (both Red Hat and Windows).",
+      "createdAt": "2025-04-25T17:45:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2831048615",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ow2eF",
+      "author": {
+        "login": "pb866"
+      },
+      "authorAssociation": "NONE",
+      "body": "Fine with me. Then this can be closed. \r\n@stensmo, I could make a PR for some bug fixes, but the additional file system functionality requires some coordination since it relies on heavy refactoring. ",
+      "createdAt": "2025-04-25T20:32:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/129685#issuecomment-2831378309",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SecureFTP\n- Repository: https://github.com/LIM-AeroCloud/SecureFTP.jl\n- Created by: @pb866\n- Version: v0.1.0\n- Commit: 99ff7674eed3de800e69091a2538eebeb17b8892\n- Reviewed by: @pb866\n- Reference: https://github.com/LIM-AeroCloud/SecureFTP.jl/commit/99ff7674eed3de800e69091a2538eebeb17b8892#commitcomment-155785691\n- Description: An SFTPClient for Julia.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64445f1ad2db3a37ffad361630493c98f8781f2631c1659dc445ae5e8ba0e9b43cb7b7ca6042ed45771f5b1307c9220a6645a9a05ac9c499466f38830cb2a35851ee19913b3e7b6794163ae00fbce7dac6566c495bf61a8951b2c05b72466da1e85544fb917c6dbb42a82a46d6e7af6773280f236cb5303184b16e31f2ce48f1e93c428e7df7137328c880181446b30532a94783c1d736ea7448a54b57cba5890b05f952587d8dc49ace85b9bbcb3f7bb -->",
+  "package_name": "SecureFTP",
+  "closed_at": "2025-04-25T20:48:24Z",
+  "title": "New package: SecureFTP v0.1.0"
+}

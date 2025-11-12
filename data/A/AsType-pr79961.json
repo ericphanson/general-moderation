@@ -1,0 +1,151 @@
+{
+  "created_at": "2023-03-20T16:44:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 79961,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85YAvg7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to ADTypes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-20T16:48:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1476589627",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YBWTQ",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "usually Julia doesn't want to have a bunch of tiny (<50 lines) packages, curious to what others thing",
+      "createdAt": "2023-03-20T18:38:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1476748496",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YESkt",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@Moelf I understand that and I was reluctant to submit it. However it tuns out that this tiny package provides something basic but very useful for many other packages and this does not really fit in any existing packages. So here it is.",
+      "createdAt": "2023-03-21T09:33:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1477519661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YE5uf",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`convert` is already a no-op if the type matches, I don't really understand what this package provides, except an alternative speling of the `x -> convert(Int, x)` lambda.\r\n\r\n<!-- [noblock] -->",
+      "createdAt": "2023-03-21T11:33:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1477680031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YFRuB",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Compared to `convert`, the `as` method:\r\n1. provides type assertion which is useful if you consider the number of times expressions like `convert(T,x)::T` appear in Julia base code and many other Julia packages;\r\n2. has the ability to build a callable object for conversion, like `isequal` and a few other functions;\r\n3. can be extended to behave differently than `convert` for some specific types while perserving the semantic that it yields an object of the requested type and avoiding type-piracy. For instance the `CartesianIndex` constructor may be called to convert a tuple of integers to a Cartesian index but `convert(CartesiaIndex,x)` cannot do that.\r\n\r\nOtherwise, using `as` is mostly a matter of improving code readability for a common type of operation. I may be a bit paranoid on type-stability but making sure that parameters have a given stable type is something I do a lot, in particular for real-time applications. ",
+      "createdAt": "2023-03-21T12:46:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1477778305",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YtMW_",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you for your advice and remarks. I extended the package to reflect the above ideas. ",
+      "createdAt": "2023-03-29T09:20:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1488242111",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ZP9ZR",
+      "author": {
+        "login": "emmt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@Moelf and @fredrikekre, sorry to bother you with that but I have extended the package following your remarks and my needs. Now I have to rename it due to conflicts. I plan to use the name `CastType` which (currently) passes the `AutoMerge.meets_distance_check` test. Do I have to change the package UUID before resubmitting? Or shall I make a completely new submission (and close this issue)?\r\n\r\nBTW, is there a chance that you revise your opinion about the usefulness of such a package? I have a growing number of packages where it simplifies things and I would like to propagate it in other official packages...",
+      "createdAt": "2023-04-05T11:50:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1497355857",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bkEGd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-05-05T12:23:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1536180637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85cL9L0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-05-13T12:23:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79961#issuecomment-1546638068",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AsType\n- Repository: https://github.com/emmt/AsType.jl\n- Created by: @emmt\n- Version: v0.1.1\n- Commit: 86fb3e7421fcca3abbd509d9adf24b4cf5a71cac\n- Reviewed by: @emmt\n- Reference: https://github.com/emmt/AsType.jl/commit/86fb3e7421fcca3abbd509d9adf24b4cf5a71cac#commitcomment-106540903\n- Description: Tiny utility for casting to type in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd68ac058df8742ee5095677348368f19c9ab5d99cd5740b52cfefab5df099fb0bb8dbdda2feec0a4fbda756da35f0e6af0531347668cc0617969c62d1c38a9942a60c6d2e5465ed58ab2bded4b6ee0a1975c676e53be79d7ff461469b2edeea83052e0f7430f043fcc0652fecee26a607f5aafc6796dbc9a933aa9b755306680502fc2d1b090b0c44b3194f2de91b6d967bd94c9b9c01aaf60f62adf2f0772f506 -->",
+  "package_name": "AsType",
+  "closed_at": "2023-05-13T12:23:11Z",
+  "title": "New package: AsType v0.1.1"
+}

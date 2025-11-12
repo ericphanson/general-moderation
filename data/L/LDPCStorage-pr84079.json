@@ -1,0 +1,136 @@
+{
+  "created_at": "2023-05-23T12:45:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 84079,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85c8Fat",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DocStringExtensions, JSON\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-23T12:50:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1559254701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dFB5-",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Have you thought about a more descriptive name than LDPC? most people will not know what the acronym stands for.\r\n\r\nFor recent discussion on acronym use, see: https://julialang.slack.com/archives/C6M4DQA5P/p1684165314021079\r\n\r\nnaming guidelines are here:\r\nhttps://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines",
+      "createdAt": "2023-05-24T16:57:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1561599614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dIUlh",
+      "author": {
+        "login": "adomasbaliuka"
+      },
+      "authorAssociation": "NONE",
+      "body": "@rafaqz Thanks for your interest. I think the \"actual\" pull request is this: https://github.com/JuliaRegistries/General/pull/84085. \r\n\r\nWould I need to stop that request somehow in order to rename (probably best to make a new github repo)?\r\n\r\nPossible new names might be\r\n- LowDensityParitiyCheckStorage\r\n- SparseLogicalMatrixStorage\r\n\r\nwhat would you suggest? The second option (SparseLogical) omits the quasi-cyclic options that my package provides. Meanwhile, I strongly believe anyone who knows what a low density parity check matrix is knows it by the acronym LDPC.\r\n\r\nBy the way, it seems that Julia does not support sparse logical arrays (like Matlab does), right? Do you think there might be performance benefits compared to using `SparseMatrixCSC{Bool}`? There also do not seem to be specializations of methods for `SparseMatrixCSC{Bool}`.\r\n",
+      "createdAt": "2023-05-25T08:03:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1562462561",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85dIpxW",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah those names are pretty wordy, I see why you wanted to shorten. Up to you really.\n\nBut people who already know are not the people that really matter here. The problem is the cumulative effect of every feild using names most people dont know. It will make half the ecosystem incomprehensible to everyone.\n\nYou can just rename the repo and update the module name if you do want to change it.",
+      "createdAt": "2023-05-25T09:05:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1562549334",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eXdnB",
+      "author": {
+        "login": "adomasbaliuka"
+      },
+      "authorAssociation": "NONE",
+      "body": "Note: the package has been registered from the other PR (https://github.com/JuliaRegistries/General/pull/84085) without changing the name. This pull request is obsolete.",
+      "createdAt": "2023-06-08T19:25:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1583208897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85eXmEe",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Its still a terrible name ;)",
+      "createdAt": "2023-06-08T19:48:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1583243550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hBL6q",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-07-09T12:23:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1627700906",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hk7eo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-07-16T12:23:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/84079#issuecomment-1637070760",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LDPCStorage\n- Repository: https://github.com/XQP-Munich/LDPCStorage.jl\n- Created by: @XQP-Munich\n- Version: v0.3.3\n- Commit: 0313a5af41433d815be36e90f1bf689f8a04f75d\n- Reviewed by: @XQP-Munich\n- Reference: https://github.com/XQP-Munich/LDPCStorage.jl/issues/4\n- Description: Utility Julia package for loading and saving LDPC codes to files\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598dced05b511a173af2d0c78de153607c9796c9e39cc3034b266778919e7352e82e775d31246312964baa967aca5b0ae53b68d4cb3c09836bba1ff58e796c0bf9a107bd18a100d830a6550f472ce6b224e7d7079c2d2bfdf7a5a0f140a3443775e41b54060c9b0db5484b78c732be47cd0be8df011beb039735e271be344e9eb73 -->",
+  "package_name": "LDPCStorage",
+  "closed_at": "2023-07-16T12:23:34Z",
+  "title": "New package: LDPCStorage v0.3.3"
+}

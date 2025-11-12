@@ -1,0 +1,142 @@
+{
+  "created_at": "2024-11-25T21:42:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 120172,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86U9WG5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-25T21:51:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2499109305",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86U9dKe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Do you just want to wait out the three days, or should we see if this can be merged sooner? Normally, I’m pretty opposed to early merges or to bothering the maintainers when not absolutely necessary. But in this case, I bear some responsibility for the delay, and it should be a very clear-cut case, so I would fully support a manual merge if waiting would cause any problems for you.\r\n\r\nI don’t have merge permissions myself , so unfortunately I can’t just do it myself.",
+      "createdAt": "2024-11-25T22:09:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2499138206",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VNof8",
+      "author": {
+        "login": "GordStephen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Maintainer of https://github.com/NREL/PRAS here. It sounds like we have some internal discussions to work through and would prefer if this wasn’t registered immediately. For what it’s worth we’re entirely open to registering PRAS, but have known for a while that getting the package name through would be a challenge.",
+      "createdAt": "2024-11-27T09:34:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2503378940",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VSLhQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Personally, I'm not actually that opposed to acronyms in package names. I don't know how much consensus there is on this (@gdalle seems more sensitive to this), but IMO pronounceable acronyms (which PRAS is) should often be fine. For longer acronyms that involve some kind of pun or double as a word or name (which PRAS doesn't), I'd even say they can make _good_ package names. Basically, the capitalization of a package should have no impact on whether it can be used. If we'd be okay with `Pras.jl`, we should also be fine with `PRAS.jl`.\r\n\r\nThere's certainly a strong bias for \"long, descriptive\" package names ([\"err on the side of clarity\"](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules)), but that doesn't mean that those are the only type of package names that are acceptable. I would argue that pronounceable acronyms can fall in the category of \"less systematic names\" that also contains hugely popular packages like `Makie` and `JuMP`.\r\n\r\nThe point of the all-caps and minimum length checks is basically to prevent the proliferation of a bunch of random 3 and 4 letter acronyms that are the pinnacle of \"jargon\".\r\n\r\nThere's also other considerations for short package names, like how fully developed a proposed package is. If it already has a community behind it, has good documentation, multiple contributors, that makes a much better case for exceptions to the naming guidelines. It seems to me that PRAS is on a pretty good path there, so that speaks in its favor.\r\n\r\nAnother issue that maybe we haven't fully come to grips with is that there are communities where often C++ has been dominant, with a culture of acronyms. The high energy physics community has been one such example, and possibly, PRAS also falls into that category. The issue is then confounded by the community aspects of the Julia ecosystem, where registrations are reviewed and may receive pushback. I believe this community aspect is an important component of Julia, and at least to some extent, stems from the interoperability of packages deriving from multiple dispatch. More than in other languages, we want a cohesive ecosystem of packages that work well together and follow similar conventions. I understand this can be alienating to users coming from other languages or communities with different naming conventions. In C++, there is no equivalent to the General registry, and PyPI has no moderation whatsoever, and really no other language I'm aware of has quite the same DescriptiveCamelCase approach to package names.\r\n\r\nJulia as a language has a lot to offer to those communities. So, we will have to find a way to make sure not to alienate these users, without giving up on the unique character of the General registry, and making it a free-for-all of acronyms. That's not an easy problem to solve. We can't always tell the background of people submitting to the general registry, and there's not always the bandwidth to engage at length, at a personal level. Still, finding the most effective communication strategies is definitely something that requires more reflection, and is something that I try to improve upon (and have definitely failed at on some past occasions).\r\n\r\nAll of this is to say that I think there's a pretty good chance that PRAS could be registered under its existing name. Especially since I'm not even sure what a hypothetical alternative name might be. As a \"triage member\" I can't override the all-caps rule nor the minimum length rule, so I can't make any promises. The registration would have to be merged by a full maintainer. I wouldn't be too pessimistic about it, though.\r\n\r\n[noblock]",
+      "createdAt": "2024-11-27T18:41:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2504570960",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VTEni",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] I would prefer a longer, more descriptive name but I won't veto PRAS since it seems to come from a trustworthy place",
+      "createdAt": "2024-11-27T21:35:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2504804834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VataM",
+      "author": {
+        "login": "GordStephen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @goerz and @gdalle - if that's the case we'll submit PRAS for registration. I've just submitted its only unregistered dependency (which is hopefully less controversially-named) in https://github.com/JuliaRegistries/General/pull/120355",
+      "createdAt": "2024-11-28T22:15:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2506806924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86YdJxP",
+      "author": {
+        "login": "jd-lara"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz we can close this and use https://github.com/JuliaRegistries/General/pull/121757 instead. ",
+      "createdAt": "2024-12-20T22:08:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120172#issuecomment-2557779023",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SiennaPRASInterface\n- Repository: https://github.com/NREL-Sienna/SiennaPRASInterface.jl\n- Created by: @jd-lara\n- Version: v0.1.0\n- Commit: 77b86038b7ba8cdb44ae8748416e4ca5c2de5fee\n- Reviewed by: @jd-lara\n- Reference: https://github.com/NREL-Sienna/SiennaPRASInterface.jl/commit/77b86038b7ba8cdb44ae8748416e4ca5c2de5fee#commitcomment-149530178\n- Description: Interface to PRAS.jl maintained by Sienna\\Ops\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd685b1e70d55941f6dfa0fe06834e715e1615005864ee5d81661a00ffe3dc9c08b7b8b5959f9cd0631dc6551ccc193394f8e1be8e55efbce4d70e67ef8c9a46a4357d81524040b02cc311e60cb1a9cb8f85f0ad4ad93a9a4d3b6c012e7dbe0e2552cede7361d320c1a3b7ac859dc5f6c694a824b57fba1e46f825e7a0b42fab2b2a675b76e611ffc27e2bba633371adb075b863e2088e9fe012bc95fe069731ecb76acc98e68da7b1e31a9b28c6df2caf15a8be4570b46296df85add95fc15663a -->",
+  "package_name": "SiennaPRASInterface",
+  "closed_at": "2024-12-20T22:15:47Z",
+  "title": "New package: SiennaPRASInterface v0.1.0"
+}

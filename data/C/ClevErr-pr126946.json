@@ -1,0 +1,364 @@
+{
+  "created_at": "2025-03-15T12:42:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 126946,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86igxt3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-15T12:47:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726501239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ig5rb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sorry, but this is type piracy.\r\n\r\nInstead of overriding `Base.error`, implement a separate function `ClevErr.error`. If you want, you can give instructions in the documentation on how a user might override `Base.error` to be `ClevErr.error` instead, but this should only ever be done manually by the end user. Having the behavior of `error` change because some package somewhere in the dependency stack might be using `ClevErr` is not okay.\r\n\r\nAlso, `v0.0.1` is generally not the correct version number for an initial registration. Public releases should start with `v0.1.0`.",
+      "createdAt": "2025-03-15T12:55:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726533851",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ig6Ks",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "A lot of packages commit type piracy, so it's clearly not a requirement for a package to be in General. Here, it's clearly documented, which is already better than many other cases :)\r\nAnd piracy is the only way to override all `error()` calls, which makes sense for this package.\r\n\r\n@Ntropic, note that even if the automerge is blocked by comments, you can ask for a manual merge on Julia slack after three days.",
+      "createdAt": "2025-03-15T12:59:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726535852",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ig91V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> A lot of packages commit type piracy, so it's clearly not a requirement for a package to be in General.\r\n\r\nAs a general principle, no package should commit type piracy! I will absolutely block any package from General where I see type piracy. Type piracy in packages could easily cause severe disruptions across the entire ecosystem. This is not an official rule that has been written out anywhere AFAIK, but it seems rather obvious to me. I am open to having a discussion about that with other registry maintainers if or when there can be exceptions to this rule.\r\n\r\n> And piracy is the only way to override all error() calls, which makes sense for this package.\r\n\r\nIt's fine to do _manually_ in your end-user code. It's not fine _for a package_ to do it without user input. Simply loading a package (which you have not control over, since it can happen somewhere deep in the dependency stack) must never change the behavior of existing methods. (And yes, there might be exceptions to that, like different BLAS backends, but let's leave that to core devs who _really_ know what they're doing)\r\n\r\n> you can ask for a manual merge on Julia slack after three days.\r\n\r\nYou can, but I would speak out against such a request, unless someone convinces me that this particular type piracy is okay, at which point I would be unblocking this merge anyway.",
+      "createdAt": "2025-03-15T13:18:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726550869",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihAjW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just to be clear: I'm also okay with something like `ClevErr.activate()` overwriting `Base.error` with `ClevErr.error` if that's something that can be implemented (presumably via `eval`?). The point is: it has to be triggered explicitly on-demand, not at load time",
+      "createdAt": "2025-03-15T13:35:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726562006",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihA2D",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> As a general principle, no package should commit type piracy!\r\n\r\nAs a matter of fact, a lot of packages commit type piracy. Implying that it isn't a general principle, more of a guideline that one is encouraged to follow but can choose to break if desired.\r\n\r\nIt's very weird to see this attempt at selective enforcement here.\r\nThis case is clearly a package intended to be loaded by the enduser only, it's hard to imagine any other package taking it as a dependency. In this context, `using ClevErr` is already that opt-in to piracy that you request.\r\n\r\n> You can, but I would speak out against such a request\r\n\r\nSure, anyone is free to speak out for/against any request.",
+      "createdAt": "2025-03-15T13:38:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726563203",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihCxQ",
+      "author": {
+        "login": "thofma"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I concur with @aplavin that type piracy is common in registered packages and starting to enforce a recommendation as a rule in a random PR in the registry does not look right.",
+      "createdAt": "2025-03-15T13:50:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726571088",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihCyX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> As a matter of fact, a lot of packages commit type piracy\r\n\r\nWhich ones? Instances of type piracy should be reported as bugs. I would even say they should be treated with high priority, as they pave the way to the notorious \"correctness bugs\" that have plagued Julia in the public perception for a long time.\r\n\r\nAnd, as far as the registry is concerned, \"There are registered packages that do X\" is never a valid argument for new registrations. We have exceptions for all kinds of rules on a case-by-case basis, things might slip though, or, we have evolving standards for what is and is not acceptable for registered packages.\r\n\r\n> It's very weird to see this attempt at selective enforcement here.\r\n\r\nI will consistently block _any_ package that has type piracy. If there was a reliable way to detect type piracy, we should add it to the bot. Unfortunately, for now, we have to rely on manual intervention.\r\n\r\n> This case is clearly a package intended to be loaded by the enduser only\r\n\r\nIf it's not intended to be used as a dependency, then registering it is optional. \r\n\r\n> It's hard to imagine any other package taking it as a dependency\r\n\r\nThat's not enforceable. Or rather, the only way to enforce it is to not allow it in General, so that other registered packages are prevented from using it as a dependecy. Which is what I'm doing here. As an _unregistered_ package, I have to problem with this: then yes, install it manually and indicate that you want to use it with `using ClevErr` in your REPL.\r\n\r\n",
+      "createdAt": "2025-03-15T13:50:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726571159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihDBg",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I concur with @aplavin that type piracy is common in registered packages\r\n\r\nIs it really? Which ones?\r\n\r\nI can't imagine a bigger footgun than type piracy: How can you possible trust any computation if any package anywhere in your dependency stack can overwrite any function with a completely buggy version? While we may not be able to prevent that technically, due to how multiple dispatch works, we should at least prevent it culturally, as much as possible.",
+      "createdAt": "2025-03-15T13:53:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726572128",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihDIg",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Just a very small glimpse into packages that explicitly acknowledge the presence of piracy, but choose not to do anything about it: https://github.com/search?q=lang%3AJulia%20%2Fpiracies%3D%2F&type=code.\r\nAnd on JuliaHub, to be sure only packages registered in General are counted: https://juliahub.com/ui/Search?type=code&q=piracies=&f=test/.*.",
+      "createdAt": "2025-03-15T13:54:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726572576",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihDO2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For this particular case, I agree that overwriting `error` is unlikely to have such severe consequences, and I also agree that\r\n\r\n> clearly a package intended to be loaded by the enduser only\r\n\r\nis probably true (albeit unenforceable).\r\n\r\nSo this is more of a principled stance. If there's a broad consensus (especially among registry maintainers) that this particular package is fine, I'll be okay with letting it merge.\r\n\r\n",
+      "createdAt": "2025-03-15T13:55:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726572982",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihEg_",
+      "author": {
+        "login": "Ntropic"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok. I will implement it that way! That seems reasonable. \r\n> Just to be clear: I'm also okay with something like `ClevErr.activate()` overwriting `Base.error` with `ClevErr.error` if that's something that can be implemented (presumably via `eval`?). The point is: it has to be triggered explicitly on-demand, not at load time\r\n\r\n",
+      "createdAt": "2025-03-15T14:08:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726578239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ihFb-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> https://github.com/search?q=lang%3AJulia%20%2Fpiracies%3D%2F&type=code\r\n\r\nThat's an interesting search! Luckily, not _that_ many packages, given how many registered packages we have in total. (Of course, plenty more packages don't check with Aqua). A lot of these are `treat_as_own` from \"Base\" packages in the same org. That's been a common pattern, and is safer than \"wild west\" type piracy, but is probably not a great design, either, and should be avoided (especially now that we have package extensions). Some of them (JuliaArrays), I would give the \"core devs\" exemption. But even those have been recognized as \"problematic\" in recent discussions about removing `LinearAlgebra` from the standard library. Some of them might also be silencing Aqua's false positives. I'm not sure if \"choose not to do anything about it\" really means \"shouldn't do anything about it\". I feel like all of these should be addressed _eventually_. \r\n\r\nI noticed @aplavin's [AccessorsExtra.jl](https://github.com/JuliaAPlavin/AccessorsExtra.jl) in there. Would you want to elaborate exactly what type piracy that commits and why? I'm certainly open to trying to understand possible \"good\" use cases for type piracy.\r\n\r\nSo far, I remain unconvinced that we shouldn't come down pretty hard on type piracy in newly registered packages, tough. There's always room for exceptions, but it's a pretty big code smell at best, and something truly disruptive and dangerous at worst.",
+      "createdAt": "2025-03-15T14:15:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2726582014",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86is3Hq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "After thinking about this more and getting some additional feedback, I've come to the conclusion that my knee-jerk reaction was a little off-base. While I still think that there are serious concerns around type piracy and that we should be extremely critical of any package that engages in it (and generally flag it in registrations), I also see that the topic requires a bit more nuance.\r\n\r\nFor this package, I've actually gotten myself convinced towards @aplavin's view that\r\n\r\n> This case is clearly a package intended to be loaded by the enduser only, it's hard to imagine any other package taking it as a dependency. In this context, using ClevErr is already that opt-in to piracy that you request.\r\n\r\nIn particular, there is little danger of some widely used package accidentally including this as a dependency, because then suddenly errors would start dinging all over the ecosystem, which would be easily detectable.\r\n\r\nNor would `ClevErr.activate()` _really_ change the situation: If someone actually was misguided enough to want to use `ClevErr` as a package dependency, and not just in their REPL, they would activate it, and then the same \"type piracy issue\" would exist. That's not to say that it may not still be a good design for any package that overwrites built-in functions \"for UX reasons\" shouldn't consider having a run-time manual activation command, for safety. But I'll leave that decision to you. From my perspective, I would be okay to unblock the registration as-is. Let me know what you want to do (and if you want to change the version number to `v0.1`, which is also optional).",
+      "createdAt": "2025-03-17T14:13:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2729669098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86itcTb",
+      "author": {
+        "login": "Ntropic"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi. Glad to see such lively discussion, on a topic I would have never even considered!\r\n@goerz just realized you are doing quantum optimal control, and that it was your Krotov paper through which I learned my first things about QOC. Greetings from Berlin :D",
+      "createdAt": "2025-03-17T14:53:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2729821403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86itjA9",
+      "author": {
+        "login": "Ntropic"
+      },
+      "authorAssociation": "NONE",
+      "body": "I am nonetheless checking ways to run the eval loop only if the package was not loaded from within another package.\r\n",
+      "createdAt": "2025-03-17T14:59:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2729848893",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ity1P",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> just realized you are doing quantum optimal control, and that it was your Krotov paper through which I learned my first things about QOC\r\n\r\nVery kind of you! Feel free to reach out anytime to talk about optimal control in the `#quantumcontrol` channel of the [Julia Slack](https://julialang.org/slack/), on [Discourse](https://discourse.julialang.org), or in the [JuliaQuantumControl discussions](https://github.com/orgs/JuliaQuantumControl/discussions). And, of course, being in Berlin, you would have easy access to my PhD adviser [Christiane Koch's group](https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-koch/index.html). They would have _a lot_ of expertise on the topic, and are continuing to develop the [Fortran code](https://qdyn-library.net) on which my newer Julia implementations (and the [Python implementation of Krotov](https://qucontrol.github.io/krotov/v1.3.0/01_overview.html) from that paper you mentioned) are based.\r\n\r\n",
+      "createdAt": "2025-03-17T15:15:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2729913679",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86npoMJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-04-17T12:24:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2812707593",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ohx7b",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-04-24T12:24:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126946#issuecomment-2827427547",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ClevErr\n- Repository: https://github.com/Ntropic/ClevErr.jl\n- Created by: @Ntropic\n- Version: v0.0.1\n- Commit: 904d17919a7d1615d22e432e5ab9f6d66f85e245\n- Git reference: HEAD\n- Description: Modifies the error function to play a sound on error. Adds celebrate and done functions which also play sounds, to add saudible updates on functions progress.",
+  "package_name": "ClevErr",
+  "closed_at": "2025-04-24T12:24:41Z",
+  "title": "New package: ClevErr v0.0.1"
+}

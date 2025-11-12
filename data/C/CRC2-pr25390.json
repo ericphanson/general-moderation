@@ -1,0 +1,91 @@
+{
+  "created_at": "2020-11-27T10:59:53Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 25390,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczNDc3OTE1NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 5 existing packages.\n1. Similar to CRC. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n2. Similar to ORCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to CDCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to CRC32c. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n5. Similar to PCRE2. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-11-27T11:03:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/25390#issuecomment-734779154",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczNDc4MDIyOA==",
+      "author": {
+        "login": "laborg"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've forked CRC.jl into CRC2.jl due to ArgParse.jl dependency problems. CRC.jl is from my perspective unmaintained and massaging the author to accept changes has been slow in the past.",
+      "createdAt": "2020-11-27T11:05:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/25390#issuecomment-734780228",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczNDgwMzE4OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If the author agrees we could just point the CRC package to your fork. Alternatively the package could be transferred to an organization where more people can help maintain it, not sure which org would be fitting.",
+      "createdAt": "2020-11-27T12:04:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/25390#issuecomment-734803188",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczNDgxMTkwNg==",
+      "author": {
+        "login": "laborg"
+      },
+      "authorAssociation": "NONE",
+      "body": "Silly me just realized that I'm allowed to merge PRs on CRC.jl.... Please close this PR, I'll create a followup to merge the new CRC.jl version 3.1.0",
+      "createdAt": "2020-11-27T12:27:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/25390#issuecomment-734811906",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDczNDgxMjIxMw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Great.",
+      "createdAt": "2020-11-27T12:28:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/25390#issuecomment-734812213",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CRC2\n- Repository: https://github.com/laborg/CRC2.jl\n- Created by: @laborg\n- Version: v1.0.0\n- Commit: 772eb82fd57f542be5019d5641631e22a309b33a\n- Reviewed by: @laborg\n- Reference: https://github.com/laborg/CRC2.jl/issues/1#issuecomment-734777639\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b2011bb4effe5f77530a86aab1b637460c04d06aa1a69ae26c702ea09f101476849b25e5d83b089542a358ea336de1267010ceca88e8a57d490ffe7fe157bef8231502d4ad6a67c7c94974ff138b931c329c910ff3e97c4396a173e165faef7c12d8542d67bd5835218beffc7ddb6ed0 -->",
+  "package_name": "CRC2",
+  "closed_at": "2020-11-27T12:28:02Z",
+  "title": "New package: CRC2 v1.0.0"
+}

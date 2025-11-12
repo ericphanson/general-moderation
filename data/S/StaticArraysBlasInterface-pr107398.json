@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-05-22T12:54:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 107398,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85-pOMT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-22T12:57:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107398#issuecomment-2124735251",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-rsEa",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #107403.",
+      "createdAt": "2024-05-22T17:27:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107398#issuecomment-2125381914",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: StaticArraysBlasInterface\n- Repository: https://github.com/ronisbr/StaticArraysBlasInterfaces.jl\n- Created by: @ronisbr\n- Version: v0.1.0\n- Commit: 30b41a938d6cf6f89f52227f000ad9fee77f2427\n- Reviewed by: @ronisbr\n- Reference: https://github.com/ronisbr/StaticArraysBlasInterfaces.jl/commit/30b41a938d6cf6f89f52227f000ad9fee77f2427#commitcomment-142278751\n- Description: Interfaces between StaticArrays.jl and BLAS library.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- Initial version.\r\n  - This version implements the interface between `StaticMatrix` and the BLAS functions to compute the singular value decomposition (SVD). Hence, by loading this package, the functions `svd` and `pinv` does not allocate anymore if the input is a `StaticMatrix` (`Float32` or `Float64`).\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd603730b1795439868c5b44e68fe8a4a7d29f12d997c50ba0b982b62562c92045a8f1840a22eb4c87705b23615ecd9231dd86916ba5f9cc91bc37be56544449db0e0bf8b9abde5989c6817dab57c89e519c3cc74efe534acfcaafbc9577928aae3d3146c54c37b86bd858a2dbb632d08996c17ef168c9104217f306f9a830c92cb444b72dde9791e67c79f8ccd928583cfb14ac5b8201e31781332bc71ea440e11fc9f2ff18e1c1771248895d18069a0b12cf977e73e2ce5820bf6ace00dd3079b -->",
+  "package_name": "StaticArraysBlasInterface",
+  "closed_at": "2024-05-22T17:27:45Z",
+  "title": "New package: StaticArraysBlasInterface v0.1.0"
+}

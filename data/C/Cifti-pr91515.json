@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-09-15T23:18:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 91515,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85mo7zs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: JLD\n- Package name similar to 1 existing package.\n  1. Similar to NIfTI. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-15T23:23:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91515#issuecomment-1722006764",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mpNf3",
+      "author": {
+        "login": "myersm0"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've fixed the compat issue for JLD, but the naming conflict is not applicable because NIfTI is a related but different filetype. The current package is named after the filetype it aims to support, so the name is appropriate as is.",
+      "createdAt": "2023-09-16T00:32:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91515#issuecomment-1722079223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pKf8B",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-10-16T12:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91515#issuecomment-1764359937",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pzYNy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-10-23T12:24:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91515#issuecomment-1775076210",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Cifti\n- Repository: https://github.com/myersm0/Cifti.jl\n- Created by: @myersm0\n- Version: v1.0.1\n- Commit: a62bda6dbf6c8921b155575499ed11419160f542\n- Reviewed by: @myersm0\n- Reference: https://github.com/myersm0/Cifti.jl/issues/12\n- Description: A Julia package for reading CIFTI files for surface-space neuroimaging data\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359836fc902ee2e7cd00a97527a26720b02f6f563476da5e422c4ea101e826c868dd563f46721ad68a9187b608b2ce64df3e8b3d6ea913e769bdc844e1bd03184829ac38c4507dff2a9c87c96a1afa3137c8162fc684b6f7abbd3d90df5d13eb280d552daed83b67bba4412e7233484ba741 -->",
+  "package_name": "Cifti",
+  "closed_at": "2023-10-23T12:24:07Z",
+  "title": "New package: Cifti v1.0.1"
+}

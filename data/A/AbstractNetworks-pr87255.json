@@ -1,0 +1,179 @@
+{
+  "created_at": "2023-07-11T12:57:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 87255,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hM-D3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-11T13:02:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1630789879",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hM-2a",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @JuliaGNI, thank you for the contribution!\r\nYour package does not have a description, readme or working docs, could you add those so that users know what it does?\r\nIts name is also quite generic, and might suggest a link with graph theory, perhaps a more specific name would be better suited?\r\nFor now my comment is blocking (sorry about that), if the name turns out to be appropriate I'll make it unblocking.",
+      "createdAt": "2023-07-11T13:04:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1630793114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hSTyG",
+      "author": {
+        "login": "michakraus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @gdalle, no problem, makes sense! This kind of slipped my attention...\r\n\r\nI added a description, README and the docs are now generated properly (although github pages seem to need some time to reflect that).\r\n\r\nThe package implements abstract data structures for the construction of neural networks and mainly serves as a common base package for [GeometricMachineLearning.jl](https://github.com/JuliaGNI/GeometricMachineLearning.jl) and [SymbolicNetworks.jl](https://github.com/JuliaGNI/SymbolicNetworks.jl).\r\n\r\nWe thought about calling it `AbstractNeuralNetworks` which is somewhat more descriptive, but also longer... however, if you think it would be better to change the name, we can do that.",
+      "createdAt": "2023-07-12T09:43:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1632189574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hSWcs",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hey @michakraus, thanks for the answer!\r\n\r\nWhen I speak as a JuliaGraphs maintainer, AbstractNeuralNetworks.jl definitely sounds better because it prevents the graph theory interpretation.\r\nBut when I speak as a ML practitioner, AbstractNeuralNetworks.jl might also be too generic and people from the Lux, Flux or MLJ ecosystems would probably have something to say about that.\r\nIf I wanted to err on the side of caution, I would suggest AbstractNeuralNetworkUtils.jl, but that may be extreme. What do you think?\r\n\r\nSide note: in my field, whenever someone mentions geometric ML, the first thing that comes to mind is https://geometricdeeplearning.com/. I haven't checked out GeometricMachineLearning.jl, but is it related to this whole segment of the literature?",
+      "createdAt": "2023-07-12T09:51:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1632200492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hScX8",
+      "author": {
+        "login": "michakraus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @gdalle,\r\n\r\nI concur with your considerations. AbstractNeuralNetworks.jl is fine with us, but AbstractNeuralNetworkUtils.jl seems a bit over the top. I had a look around the Lux/SciML/MLJ repos and they all have their base packages, so naming clashes seem rather unlikely.\r\n\r\nGeometric Machine Learning refers to preserving geometric structure (Hamiltonian, Lagrangian, symmetries, invariance) by neural networks or using such structures to devise network architectures. It seems related to https://geometricdeeplearning.com/ but maybe not exactly the same.",
+      "createdAt": "2023-07-12T10:08:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1632224764",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hVvKD",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Cool! I think you need to relaunch the registration process once you change the name, so it won't be the same PR anymore",
+      "createdAt": "2023-07-12T19:24:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1633088131",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hZlXk",
+      "author": {
+        "login": "michakraus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Alright! I changed the name and re-registered at https://github.com/JuliaRegistries/General/pull/87401",
+      "createdAt": "2023-07-13T11:42:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1634096612",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j5AAN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-12T12:22:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1675886605",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kczJD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-20T12:22:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87255#issuecomment-1685271107",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AbstractNetworks\n- Repository: https://github.com/JuliaGNI/AbstractNetworks.jl\n- Created by: @github-actions[bot]\n- Version: v0.1.0\n- Commit: bc9c029fb625e637376f9298e5f0508717b6f426\n- Reviewed by: @github-actions[bot]\n- Reference: https://github.com/JuliaGNI/AbstractNetworks.jl/commit/bc9c029fb625e637376f9298e5f0508717b6f426#commitcomment-121371290\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6658cb26d7023e7d8baee6b73bbacfae0e43f1b18393c46e3581fb9c60387e875d75f0a9f464a013f4721f5bdb66a51e665cc789226180aac3e79ffd52aa38cad0febb74095d0893eecd533e5f977aad74ead27a7e9454d290cfc971a869db7b10ce11d0e579518474c06b0a68e27e6b1f074e848e23377a9a1306ef4e49315b9ffc37fad513e9239ad2b89a232c112eb46c26faf64f20a5562d7e20ada177fbb09e2e4a81967d58de58704263b2d3d0e -->",
+  "package_name": "AbstractNetworks",
+  "closed_at": "2023-08-20T12:22:36Z",
+  "title": "New package: AbstractNetworks v0.1.0"
+}

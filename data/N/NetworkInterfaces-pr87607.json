@@ -1,0 +1,181 @@
+{
+  "created_at": "2023-07-17T05:03:34Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 87607,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hmJIq",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-17T05:08:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1637388842",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hmMbU",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nHi there, congrats on the new contribution!\nComing from graph theory, I'm just mildly concerned that users may think this package has something to do with network analysis or graph structures. Would there be a way to make the name more explicit?",
+      "createdAt": "2023-07-17T05:27:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1637402324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hmPKH",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nI'm seeing CI errors which I don't understand. In case someone know what I can do to fix this, please let me know.\r\n\r\n@gdalle I see! This package provides functions to interact with network interface controllers via libuv. It's the networking side of the work I'm currently doing for Hwloc.jl. So I don't know what else to call it.\r\n\r\nThat said, I'm not the most creative, so if someone has a suggestion for a better name, please let me know.",
+      "createdAt": "2023-07-17T05:42:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1637413511",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hmV6b",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\n> This package provides functions to interact with network interface controllers via libuv. It's the networking side of the work I'm currently doing for Hwloc.jl. So I don't know what else to call it.\r\n\r\nI don't know anything about this domain, but what about `NetworkInterfaceControllers.jl` or `NetworkInterfacesLibUV.jl`?",
+      "createdAt": "2023-07-17T06:17:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1637441179",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hsRYE",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n> I don't know anything about this domain, but what about `NetworkInterfaceControllers.jl` or `NetworkInterfacesLibUV.jl`?\r\n\r\n@gdalle  I am partial of `NetworkInterfaceControllers.jl` -- should I create a fresh registration request and close this PR? Or is there a way to rename these?",
+      "createdAt": "2023-07-17T22:52:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1638995460",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hsUHa",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think you can close this PR, rename the package and re register, it will create a new one",
+      "createdAt": "2023-07-17T23:05:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1639006682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iLKkQ",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "Got it -- new PR here https://github.com/JuliaRegistries/General/pull/88149\r\n\r\nClosing this RP",
+      "createdAt": "2023-07-24T02:08:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1647094032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iLKxQ",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "HA! So used to being able to close PRs -- @gdalle requesting that this RP be closed.",
+      "createdAt": "2023-07-24T02:09:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1647094864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85iM11W",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think it's gonna die automatically because our comments prevent it from being merged",
+      "createdAt": "2023-07-24T09:18:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1647533398",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kuVEg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-23T12:22:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1689866528",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lRapj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-30T12:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87607#issuecomment-1699064419",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NetworkInterfaces\n- Repository: https://github.com/JuliaParallel/NetworkInterfaces.jl\n- Created by: @JBlaschke\n- Version: v0.1.0\n- Commit: 5e5c21752944d51a6630eecae40fe83957980b94\n- Git reference: HEAD\n- Description: Extensions to Julia's LibUV to help with working with multiple NICs per node",
+  "package_name": "NetworkInterfaces",
+  "closed_at": "2023-08-30T12:23:05Z",
+  "title": "New package: NetworkInterfaces v0.1.0"
+}

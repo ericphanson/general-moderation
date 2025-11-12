@@ -1,0 +1,277 @@
+{
+  "created_at": "2025-05-14T10:13:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130944,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ro-KJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-14T10:19:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2879644297",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rtZ1A",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> In order to get the inverse mapping, you can use `Base.adjoint`\r\n\r\nIs that really a good idea? The [docstring for `adjoint`](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/#Base.adjoint) is\r\n\r\n> Lazy adjoint (conjugate transposition). Note that adjoint is applied recursively to elements\r\n\r\nUsing `adjoint` for something that does not fit that description seems like it would be a footgun, or at least bad style. I could see a `BijectiveDicts.adjoint` that has no relation to `Base.adjoint` being okay semantically, but that's probably an impractical name collision. Thus, I would recommend an entirely different name. Maybe something like `inverted` / `invert` / `invert!`",
+      "createdAt": "2025-05-14T16:12:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2880806208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rwl9f",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nOkay, that's fair point. I liked `adjoint` because of the concise syntax and because it has some notion of \"going backward\" in some contexts (like unitary linear algebra and autodiff).\r\n\r\nHow about `Base.inv`? If thought as a mathematical map, it's literally the inverse map.",
+      "createdAt": "2025-05-14T21:37:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2881642335",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rxVi-",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`inv` specifically defines multiplicative inverse in Julia, so you may want to overload (and export) `InverseFunctions.inverse` for a function/map inverse.\r\n\r\nAlso, looking at the readme:\r\n\r\n> One of the bigest differences with [Bijections.jl](https://github.com/scheinerman/Bijections.jl) is that BijectiveDict parameterizes the dictionaries underneath, so you can choose to use different dictionary types for both forward and inverse dictionaries.\r\n\r\nDoes this difference _really_ need a separate package? Maybe Bijections.jl can just enable a more flexible parametrization? cc @scheinerman",
+      "createdAt": "2025-05-14T23:42:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2881837246",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ryJqq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> How about `Base.inv`?\r\n\r\nI don't think it's totally ideal, since it's supposed to be the multiplicative inverse. But, it's what `Bijections` seems to be using, so that might be an argument to use it anyway. Except, I guess what you're doing is `Bijections.active_inv`. Using the same interface as `Bijections` _could_ be an option. Or, as @aplavin suggests, contributing the extended functionality to the existing package.\r\n\r\nI don't think there's any `Base` function that's a perfect fit. Since I generally feel that it's best to keep _very_ close to the original meaning of a function when adding methods to it, that probably means I would recommend a name that's specific to `BijectiveDicts`. I might even keep it as only `public`, i.e., non-exported, so that it would be used as the very explicit `BijectiveDicts.invert(d)` (or whatever other name you come down on). I do realize that makes using the package a lot more verbose, and the `b'` shortcut for `adjoint` was probably a big part of the appeal. Not sure what the best solution is here.\r\n\r\nI guess my point is, it's worth thinking about, but ultimately, your decision.\r\n\r\n[noblock]",
+      "createdAt": "2025-05-15T02:44:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2882050730",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rzyYG",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > How about `Base.inv`?\r\n> \r\n> I don't think it's totally ideal, since it's supposed to be the multiplicative inverse. But, it's what `Bijections` seems to be using, so that might be an argument to use it anyway. Except, I guess what you're doing is `Bijections.active_inv`. Using the same interface as `Bijections` _could_ be an option. Or, as @aplavin suggests, contributing the extended functionality to the existing package.\r\n> \r\n> I don't think there's any `Base` function that's a perfect fit. Since I generally feel that it's best to keep _very_ close to the original meaning of a function when adding methods to it, that probably means I would recommend a name that's specific to `BijectiveDicts`. I might even keep it as only `public`, i.e., non-exported, so that it would be used as the very explicit `BijectiveDicts.invert(d)` (or whatever other name you come down on). I do realize that makes using the package a lot more verbose, and the `b'` shortcut for `adjoint` was probably a big part of the appeal. Not sure what the best solution is here.\r\n> \r\n> I guess my point is, it's worth thinking about, but ultimately, your decision.\r\n> \r\n> [noblock]\r\n\r\nI think `inv` is appropriate. True that the inverse of a *number* is generally interpreted as the multiplicative inverse, but for a bijection *f*, the inverse of *f* is a new function that has the property that *f* composed with the inverse of *f* is the identity function. Multiplication doesn’t make sense for functions, but composition does. This is 100% consistent with matrices. Multiplication of matrices is also composition of them as linear transformations. The inverse of a matrix is also its inverse in terms of composition. Also `inv` is easier to remember and type. \r\n\r\n[noblock]",
+      "createdAt": "2025-05-15T05:24:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2882479622",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r5c7y",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nI agree with @scheinerman's comment. I've replaced the `Base.adjoint` method for a `inv_dict` function and an alias from `Base.inv(::BijectiveDict)` to `inv_dict` accordingly.\r\n\r\n> Does this difference really need a separate package? Maybe Bijections.jl can just enable a more flexible parametrization? cc @scheinerman\r\n\r\nIt will break other packages that depend on it. Also, I got rid of the `domain` and `range` fields, which IMO are not necessary since they are the keys of the dicts.\r\n\r\n@scheinerman what do you think? are you willing to accept the changes to Bijections and do a breaking v0.2 release? or should we keep them separate? i can write a PR if so.\r\n\r\nEDIT: There's also another important detail and its about the behavior of `inv`. AFAIK Bijections returns a copy of the underneath dictionaries, but BijectiveDicts returns the same dictionaries just switched for performance.",
+      "createdAt": "2025-05-15T14:12:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2883964658",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r6U6g",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> It will break other packages that depend on it.\r\n\r\nHow can making a type more flexible break dependent packages?\r\n\r\n> domain and range fields, which IMO are not necessary since they are the keys of the dicts\r\n\r\nGood point, it was already raised in https://github.com/scheinerman/Bijections.jl/issues/3 – closed with \"completed\" somehow...\r\n\r\nIt would definitely be preferable for potential users to have one fully-featured package with this kind of 2-way dicts, than two very similar packages with slight differences here and there.",
+      "createdAt": "2025-05-15T15:12:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884193952",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r6v1A",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @mofeing : I’m on vacation (and so my brain is currently set to “off”). I’m open to changes to `Bijections` if you think it would make it better. But I’m not grasping the kinds of changes you’re proposing. Give me a week and let’s talk. Thanks for the interest!!\r\n\r\n[noblock]",
+      "createdAt": "2025-05-15T15:46:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884304192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r8Oty",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can close this in favor of https://github.com/JuliaRegistries/General/pull/131059, though, right?",
+      "createdAt": "2025-05-15T18:17:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884692850",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r8Y2J",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Hi @mofeing : I’m on vacation (and so my brain is currently set to “off”). I’m open to changes to Bijections if you think it would make it better. But I’m not grasping the kinds of changes you’re proposing. Give me a week and let’s talk. Thanks for the interest!!\r\n\r\nSure, have fun! The main reason I need this over a `Bijection` is that I need to use a `IdDict` inside, and Bijections doesn't parameterize the `Dict` type. But let's talk when you come back. I go by the same name in the Slack.\r\n\r\n> I can close this in favor of https://github.com/JuliaRegistries/General/pull/131059, though, right?\r\n\r\n@goerz yes, but does it means it can be unblocked or registration is still on pause?",
+      "createdAt": "2025-05-15T18:33:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884734345",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r8q44",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> does it means it can be unblocked or registration is still on pause?\r\n\r\nYou're currently blocking #131059 yourself with https://github.com/JuliaRegistries/General/pull/131059#issuecomment-2883991199\r\n\r\nI'm not entirely sure what the exact \"status\" is… it seems like you've changed over to `inv`, which is fine by me. You can unblock #131059 whenever you feel the discussion (here or on the new PR) has run its course, and you've decided if or how this would be better as a part of the existing `Bijections`. Possibly after @scheinerman is back from vacation and you've had a chance to talk. I have no blocking concerns on #131059, personally, so I'll just leave that be and trust your judgement on when to continue.",
+      "createdAt": "2025-05-15T19:05:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884808248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86r83lh",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "yeah, i blocked it on purpose because i wanted to know your opinion first. i will talk @scheinerman and decide from there.",
+      "createdAt": "2025-05-15T19:29:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2884860257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86sz4bm",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "@mofeing I'm back from travel and ready to hear about your ideas. Would it be better to move this discussion elsewhere? ",
+      "createdAt": "2025-05-21T21:22:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2899281638",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tE4w5",
+      "author": {
+        "login": "mofeing"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "hey @scheinerman\r\n\r\nhow about Slack or #131059?",
+      "createdAt": "2025-05-23T08:48:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2903739449",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tGJET",
+      "author": {
+        "login": "scheinerman"
+      },
+      "authorAssociation": "NONE",
+      "body": "> hey @scheinerman\r\n> \r\n> how about Slack or #131059?\r\n\r\nI don't have Slack, so we can chat on GitHub as suggested. I'll start the conversation with the part I think I understand. ",
+      "createdAt": "2025-05-23T11:01:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130944#issuecomment-2904068371",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BijectiveDicts\n- Repository: https://github.com/bsc-quantic/BijectiveDicts.jl\n- Created by: @mofeing\n- Version: v0.2.4\n- Commit: 420ac9e53db95201547fba177cb49c8a32c515a1\n- Git reference: HEAD\n- Description: Bijective Dictionaries, aka Bijections",
+  "package_name": "BijectiveDicts",
+  "closed_at": "2025-05-15T19:05:31Z",
+  "title": "New package: BijectiveDicts v0.2.4"
+}

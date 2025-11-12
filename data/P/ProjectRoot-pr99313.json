@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-01-22T15:08:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 99313,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xf_Tm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-22T15:12:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1904211174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xgH83",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Not a strong objection, but with the new name, it's not obvious that the `@here` macro originates from the `ProjectRoot` package. That is, if I saw it in a script, I wouldn't make the connection. So one possibility would be to rename the macro to `@project_root`. Or, as I suggested in https://github.com/JuliaRegistries/General/pull/99288#issuecomment-1903978986, `HereMacro` might be a suitable package name.",
+      "createdAt": "2024-01-22T15:29:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1904246583",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xgOXG",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I understand the objection and I actually considered changing to `@project_root`, but I thought that it would not as clearly give the idea that you are constructing file paths and not just referencing the project root. I don't really like HereMacro because the fact that the main functionality of the package is a macro is mostly an implementation detail.",
+      "createdAt": "2024-01-22T15:41:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1904272838",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xgZ3a",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] That's true, but it does make it very clear that the package exports the `@here` macro ;-)\r\n\r\nI can only speak for myself, but I would absolutely expect `@project_root(\"path\", \"to\", \"file\")` to construct a file path (even without reading the documentation), as it does. Conversely, I would find `@here` confusing (where's \"here\"? My first guess would be the current folder, i.e. `@__DIR__`). Not being an R user who has ever interacted with the R package that inspired this probably contributes to that confusion.\r\n\r\nSo my first choice would actually be to keep the `ProjectRoot` package name and to rename the macro. I might actually use this package! I was, in fact, considering some similar kind of macro for [QuantumControl.Workflows](https://juliaquantumcontrol.github.io/QuantumControl.jl/dev/api/quantum_control_reference/#QuantumControlWorkflowsLocalAPI), which is where I collect functions similar to DrWatson, but where DrWatson was too opinionated for my typical workflows.\r\n\r\nI'm not sure if I could get used to `@here`. You could have both names, too, an exported `@project_root` and a non-exported `@here` for users with an R background (`using ProjectRoot: @here` doesn't have the problem of not being obvious). Especially if you want to keep support for a `.here` file.\r\n\r\n",
+      "createdAt": "2024-01-22T16:04:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1904319962",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xkrpN",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I've mulled it over and I've come around :) I think you're right that `here` is actually more obscure. There is also a python package **pyprojroot** and an r package **rprojroot** too, so sticking with here doesn't really have that much value after all. Maybe it should just be `@projectroot` rather than `@project_root`; I'll think about it.\r\n\r\nI will make the necessary changes and push an update. I'm glad to hear that you might find it useful!",
+      "createdAt": "2024-01-23T07:26:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1905441357",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xlHGE",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay, I've opened a new pull request at https://github.com/JuliaRegistries/General/pull/99360. Sorry for all the back and forth here, and thanks for the valuable input!",
+      "createdAt": "2024-01-23T08:34:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1905553796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xo73e",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No worries! Looks good!",
+      "createdAt": "2024-01-23T17:21:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99313#issuecomment-1906556382",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ProjectRoot\n- Repository: https://github.com/jolars/ProjectRoot.jl\n- Created by: @jolars\n- Version: v0.2.0\n- Commit: 24b4d46c832569ca6785892278cf52bf1e7a452e\n- Reviewed by: @jolars\n- Reference: https://github.com/jolars/ProjectRoot.jl/commit/24b4d46c832569ca6785892278cf52bf1e7a452e#commitcomment-137568549\n- Description: Easy file-referencing for project-oriented workflows\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd61144e5aab5c9db462c0ba0493dbb547f04734dadcb05075269fcadf4c70860ff98313c7e6eb5739e7e8088b72dd9b992e83159ea23759e174602a29adfd93e83081c14d8200854131d951669a9d1e34ac11a551378c26e00b068f4b0ec2a91bf192732b9ed269b09c147482a3f1e416730f01f6b4e9a94c5b9422dec0590a56084925472467ae193a093d8b8ec415f2999ead9546a71f90d2402e21869d8fe74842b3b6163f7359dda9a24562a029226 -->",
+  "package_name": "ProjectRoot",
+  "closed_at": "2024-01-29T14:13:38Z",
+  "title": "New package: ProjectRoot v0.2.0"
+}

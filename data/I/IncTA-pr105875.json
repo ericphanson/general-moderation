@@ -1,0 +1,128 @@
+{
+  "created_at": "2024-04-30T08:49:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "LilithHafner",
+  "merged_at": null,
+  "pr_number": 105875,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858Qsf-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-30T08:52:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2084751358",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858TWCq",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for making this package!\r\n\r\nBecause everyone who uses Julia shares the General registry namespace, we try to make sure the names are accessible to everyone (even folks who are not going to be using your package). When it comes to abbreviations, we try pretty hard to avoid non-obvious abbreviations. ([more detailed/official explanation here](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines))\r\n\r\nThinking about IncTA.jl, specifically, it's pretty hard for someone who is not involved in the field of incremental technical analysis to know what those abbreviations stand for.\r\n\r\nI would recommend the name IncrementalTechnicalAnalysisIndicators.jl or IncrementalTechnicalAnalysis.jl instead. The repo description \"Julia Incremental Technical Analysis Indicators (inspired by talipp)\" makes those package names sound quite appealing.",
+      "createdAt": "2024-04-30T14:13:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2085445802",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858d5rg",
+      "author": {
+        "login": "femtotrader"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm considering naming this package `OnlineTechnicalIndicators.jl` because of\r\n\r\n    abstract type TechnicalIndicator{T} <: OnlineStat{T} end\r\n\r\nie all implemented technical indicators in this package implement abstract type `TechnicalIndicator` (or subtypes of it). Moreover `TechnicalIndicator` is a subtype of `OnlineStat`\r\n\r\nMoreover it shares common part with https://github.com/femtotrader/OnlinePortfolioAnalytics.jl\r\n\r\nAny opinion @LilithHafner ?",
+      "createdAt": "2024-05-01T09:36:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2088213216",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858hHTp",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`OnlineTechnicalIndicators.jl` sounds like a great name!",
+      "createdAt": "2024-05-01T20:08:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2089055465",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858jcZT",
+      "author": {
+        "login": "femtotrader"
+      },
+      "authorAssociation": "NONE",
+      "body": "#105997 should replace this one",
+      "createdAt": "2024-05-02T06:12:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2089666131",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858jc3_",
+      "author": {
+        "login": "femtotrader"
+      },
+      "authorAssociation": "NONE",
+      "body": "Don't merge - Please close",
+      "createdAt": "2024-05-02T06:14:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2089668095",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8582dTQ",
+      "author": {
+        "login": "femtotrader"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @LilithHafner ",
+      "createdAt": "2024-05-05T06:29:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105875#issuecomment-2094650576",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IncTA\n- Repository: https://github.com/femtotrader/IncTA.jl\n- Created by: @femtotrader\n- Version: v0.1.0\n- Commit: b133e2d39889d7583d88f55acf33907f81b6e16f\n- Reviewed by: @femtotrader\n- Reference: https://github.com/femtotrader/IncTA.jl/issues/6#issuecomment-2084842744\n- Description: Julia Incremental Technical Analysis Indicators (inspired by talipp)\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598d11a4d8e6af823ebd17dbd8b977f639046922c5846b73583b51738641a43ca95034059974a49e8b427135376fb152d41b7f2d8ece0e7048085e660df502e0883f8fcfae293a8f053c6576743af358344f6ae1d1dfc1e769a2709bbeebf8293cac221190e6b1a5ff4fed4f7f67e3fb6dd5bfad2f298660944300b98b71a265eb0 -->",
+  "package_name": "IncTA",
+  "closed_at": "2024-05-03T23:06:18Z",
+  "title": "New package: IncTA v0.1.0"
+}

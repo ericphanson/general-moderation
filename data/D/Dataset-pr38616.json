@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-06-11T02:29:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 38616,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1OTIxNzc1NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to DataSets. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to RDatasets. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-11T02:32:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38616#issuecomment-859217754",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1OTMwNjk1MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi @sl-solution,\r\n\r\nThank you for the package submission!\r\n\r\nUnfortunately, we already have a package named `DataSets.jl` in the General registry. I think that the name `Dataset.jl` is too similar to `DataSets.jl`, and I think that it would be confusing to have both `Dataset.jl` and `DataSets.jl` in the registry.\r\n\r\nCould you please rename your package?",
+      "createdAt": "2021-06-11T06:21:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38616#issuecomment-859306951",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Dataset\n- Repository: https://github.com/sl-solution/Dataset.jl\n- Created by: @sl-solution\n- Version: v0.1.0\n- Commit: 84e3cf951de94e1ec4044a1e883f57482765229c\n- Reviewed by: @sl-solution\n- Reference: https://github.com/sl-solution/Dataset.jl/issues/6#issuecomment-859221192\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835987663ac2ee37dbc39aa0a61a2c41bdf568d7ca3fc7e6ec7f9ecf29a63d936519ff484675520584d2c6105877ba78ee53b485d95293e51c0a957756ba633ba435aaa6f70f549e3da92bc981c0dde3456804a36eb51ea11f84e9bca6e941960a076f348f896727ba0b5921671ffe0d166d0ae8f0b70e74d3f9d3138aa4c1530f9b1 -->",
+  "package_name": "Dataset",
+  "closed_at": "2021-06-29T02:03:16Z",
+  "title": "New package: Dataset v0.1.0"
+}

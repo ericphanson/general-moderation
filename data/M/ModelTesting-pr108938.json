@@ -1,0 +1,247 @@
+{
+  "created_at": "2024-06-13T22:16:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 108938,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86BKCoG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "## 1. Introduction\n\nHello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). Meeting these guidelines is only required for the pull request to be **merged automatically**. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 2. New package registration\n\nSince you are registering a new package, please make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 3. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-13T22:25:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2166893062",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLbcK",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi and congrats on the package! I fear the name is a bit too generic, how about \"ModelingToolkitTesting\"?",
+      "createdAt": "2024-06-14T05:47:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167256842",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLm6z",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think that's a bit too specific as the library supports SymbolicIndexingInterface implementations (so it should be compatible with a lot of the SciML ecosystem). I guess it's probably the best alternative, though?\r\n\r\nI don't want to give the impression that this is part of MTK, though, at least not in its current form, which is my main worry with ModelingToolkitTesting as a name on reflection.",
+      "createdAt": "2024-06-14T06:25:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167303859",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLrFl",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "SymbolicModelTesting?",
+      "createdAt": "2024-06-14T06:32:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167320933",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLr2t",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I thought of that one - I don't like it because it implies that I'm testing symbolic models (like in symbolic AI or similar), which I'm not. I haven't came up with a good way to speak to the use of SII because of this; anything with \"Symbolic\" makes it sound like this library is doing something symbolic itself. SymbolicallyIndexedModelTesting is accurate, but slightly absurd.\r\n\r\nI think that saying it's for MTK is more accurate than not but then the problem there is disambiguating it from things that are more properly part of MTK like MTKSL. It seems like a least-worst option?",
+      "createdAt": "2024-06-14T06:35:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167324077",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLsZs",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Well indeed, I don't know what SymbolicIndexingInterface is but my first guess would have been \"something symbolic\".\r\nI'm just against ModelTesting because it could be misconstrued as statistical model / hypothesis testing ",
+      "createdAt": "2024-06-14T06:37:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167326316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BLtdo",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Amusingly, on that note, I'm currently working on using statistical model testing approaches to do model testing in-this-sense as a library feature.\r\n\r\nSII lets you interface with various dynamical systems symbolically so you don't have to remember that position is element 4. DynamicModelTesting is an idea... but it implies that it's dynamically testing models which is also not accurate. DynamicalModelTesting? I don't really support PDEs at the moment so it's fairly accurate, and it disambiguates what this does from statistical model testing.\r\n\r\nWait no, that has ambiguity issues with DynamicalSystems.jl, which I don't support now...\r\n\r\nThis kind of argues for \"proper name\" but I am even more terrible at coming up with those.",
+      "createdAt": "2024-06-14T06:40:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167330664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BL3Oh",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "DifferentialModelTesting?",
+      "createdAt": "2024-06-14T07:04:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167370657",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BL4Fa",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Annoyingly, for this purpose, MTK/SII supports nondifferential models too. You can solve normal NLPs as well as optimization problems, and test them using this framework.\r\n\r\nModelTestingFramework is another idea and gently increases the odds that it's not statistical model testing, but still probably too ambiguous. ModelUnitTesting perhaps? I don't have _great_ support for writing unit tests as that name would imply, but it's a good direction for the library to grow in and isn't _wrong_ now.\r\n\r\nI'm going to ask Chris/Yingbo to see if they're okay with ModelingToolkitTesting because I think that's the best name so far.",
+      "createdAt": "2024-06-14T07:07:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2167374170",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BSCL_",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thoughts on DynamicModelTestUtils? Another option is ModelRegressionTesting (since that's the current major usecase) but I'm worried that pigeonholes it a little.",
+      "createdAt": "2024-06-15T00:35:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2168988415",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BSlrw",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Thoughts on DynamicModelTestUtils?\r\n\r\nSounds good to me!",
+      "createdAt": "2024-06-15T05:14:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2169133808",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86BgO_p",
+      "author": {
+        "login": "BenChung"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "New PR at https://github.com/JuliaRegistries/General/pull/109156.",
+      "createdAt": "2024-06-17T08:45:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2172710889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86FG9hE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-07-17T12:23:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2233194564",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86GH0O0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-07-25T12:23:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108938#issuecomment-2250195892",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ModelTesting\n- Repository: https://github.com/JuliaComputing/ModelTesting.jl\n- Created by: @BenChung\n- Version: v0.1.0\n- Commit: 0bbe9e06540c5ced151fa73aa9190099736cdd2d\n- Reviewed by: @BenChung\n- Reference: https://github.com/JuliaComputing/ModelTesting.jl/commit/0bbe9e06540c5ced151fa73aa9190099736cdd2d#commitcomment-143112952\n- Description: A simple package for MTK-based model testing\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cb459ef326afa1508e2dbea01453d7eae5b884b18c2bc28f9ed999792f16b5038f86b9f8b15809c63326bf93bdfb1389fccb71c68cd3b962af0f0f5111974ea6434c4d1ab2c830d4fe8b8be640e8483e7732301b7f48d61ebdf116fe1b65e45e650360468ea4dff48a7bdaa05a28d3656b34930b0afba2dd14ad18a98bd246238f3302f576e2e6da20534b3e325b219d2334a0a7abe0448de41c5c4f06d9c093f4ea652f9f9a8851a6157436092fd4ae -->",
+  "package_name": "ModelTesting",
+  "closed_at": "2024-07-25T12:23:22Z",
+  "title": "New package: ModelTesting v0.1.0"
+}

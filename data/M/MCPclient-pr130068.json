@@ -1,0 +1,364 @@
+{
+  "created_at": "2025-04-30T14:52:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130068,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86pab3C",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Found files or directories in `src` which will cause problems on case insensitive filesystems: `/tmp/jl_YoRuY4/src/MCPClient.jl` and `/tmp/jl_YoRuY4/src/MCPclient.jl`\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-04-30T14:59:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2842279362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pge9o",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I still think that `MCPclient` would be a very unexpected spelling, see https://github.com/JuliaRegistries/General/pull/130064#issuecomment-2842235442. Ultimately, it's up to you, but the normal convention that most people would expect would definitely be `MCPClient`.",
+      "createdAt": "2025-05-01T01:18:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2843864936",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pjVGf",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please consider plural, `MCPClients` as the package name.",
+      "createdAt": "2025-05-01T10:29:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844610975",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pjoEi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "~~The package does not provide a type `MCPClient` so I would consider the pluralized name to be inappropriate. However, `MCPClientCollectors` would be an option, given that the package provides the type `MCPClientCollector`. A bit of a weird name, though. Maybe `MCPCollector` is a better type name, with `MCPCollectors` as the package name?~~",
+      "createdAt": "2025-05-01T11:39:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844688674",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pj7A8",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "If there is no client type, I would guess the author got the API design wrong - that could also be a criteria for rejecting registration.\r\n\r\nSorry for being a bit blunt.",
+      "createdAt": "2025-05-01T12:40:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844766268",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pj7Gw",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "In terms of MCP, there is obvious client and server architecture at play, so it would make most sense that any such package should have a `*Client` type.",
+      "createdAt": "2025-05-01T12:40:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844766640",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pj7pg",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "How does this project relate to https://github.com/svilupp/ModelContextProtocol.jl and https://github.com/JuliaSMLM/ModelContextProtocol.jl ?",
+      "createdAt": "2025-05-01T12:41:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844768864",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pkDQQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> If there is no client type, I would guess the author got the API design wrong - that could also be a criteria for rejecting registration.\r\n\r\nWe're here to give guidance, helping package authors to ensure that registrations go smoothly and fit well into the existing ecosystem. This includes flagging things that are easily fixed, like missing documentation or inappropriate version numbers. Package names in particular are also part of that, because with a single General registry as a shared community resource, good names are slightly scarce, and also reflect on the ecosystem as a whole. But I would say second-guessing API design goes a bit too far. We don't reject packages just because the API isn't designed perfectly. While there are few somewhat hard rules for what belongs in General and some minimum standards for a package to be ready for registration, \"rejection\" is never a goal. By all means, feel free to give people input when you see something that can be improved. But ultimately, it's up to the package author to make decisions like that.",
+      "createdAt": "2025-05-01T12:55:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844800016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pkKf1",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz True. And sorry for the blunt comment, @Cvikli.",
+      "createdAt": "2025-05-01T13:16:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844829685",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pkNyN",
+      "author": {
+        "login": "stemann"
+      },
+      "authorAssociation": "NONE",
+      "body": "However, @goerz, I think we are also here for the community - the single shared registry / namespace. If we let common names be registered for projects which end up being not what we would want or expect from such a name, we are not servicing the community - though we may serve the creator of the registration PR.\r\n\r\nSo I would argue for some level of scrutiny - e.g. referencing the other MCP projects - and perhaps getting some input from the community regarding whether the registration **aims** to fulfill the promise you would expect from the name (aims - not that it has to be complete at registration time).\r\n\r\nWhen it comes to `*Client` packages, I am a bit scarred by the existence of packages such as `MLFlowClient` (which should have had a `MLFlowClient` type: It has a \"`MLFlow`\" type which is a type that connects to an MLFlow **server**, and thus the type should have been called `MLFlowClient`, and the package should have been called `MLFlowClients`).",
+      "createdAt": "2025-05-01T13:25:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2844843149",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmCiR",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry for the big delay! Yeah I had a lot of problem with the naming. I will try to follow. So I have MCPClient type and that's why I renamed the package to MCPclient but I totally feel it isn't perfect. :( \r\nMCPCollector is little bit misleading I believe. As in the ecosystem everyone is looking for MCP MCPClient or ModelContextProtocolClient. I could tell you that each of them a little bit bad. MCP is just too general. This is only to be the MPCClient and this project isn't intended to provide the MCP Server creating as it is really opinionated and I don't know which would be the best and that's why I don't bother with the MCPServer here, anyone can use any MCPServer design as time goes by. \r\n\r\nMaybe I should rename the types MCPClient type to Client? And the MCPClientCollector to ClientCollector?\r\n\r\nhttps://github.com/svilupp/ModelContextProtocol.jl  is intended to be the Client and the Server but Svilupp didn't find the way to figure out the protocol so he let the project go. \r\nhttps://github.com/JuliaSMLM/ModelContextProtocol.jl is for creating MCP Server. It is really nicely written package IMO but I didn't test it to be honest, maybe for me the TextContent and these types isn't too good pattern but I am happy to see that there is a MCP Server pattern that can be used.\r\n\r\nSo MCPClients or MCPClient with type rename? Which one to do, or do you guys have better idea?  ",
+      "createdAt": "2025-05-01T17:31:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845321361",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmHvE",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "AI-s suggested:\r\nModelContextProtocolClient (which sounds good but maybe too long?)\r\nModelContextClient (but I think the protocol is key... nobody search for Model context client we need MCP Client)\r\nMCPClients sounds a good choice also btw. \r\n![image](https://github.com/user-attachments/assets/1c663a69-c016-4d29-8671-95ba1c8d31e3)\r\n\r\n",
+      "createdAt": "2025-05-01T17:42:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845342660",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmIYT",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "![image](https://github.com/user-attachments/assets/53cab7e3-7481-4bc7-ac5f-0e58e3669b54)\r\nMaybe these two also important.\r\n",
+      "createdAt": "2025-05-01T17:44:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845345299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmJAs",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> So I have `MCPClient` type and that's why I renamed the package to `MCPclient` but I totally feel it isn't perfect.\r\n\r\nOh, you do? I didn't realize that from the [Quick Example in the README](https://github.com/Cvikli/MCPclient.jl?tab=readme-ov-file#quick-example). (Should you update that example?) So do I understand correctly that you tried to rename the package to `MCPclient` with a lowercase `c` to get around the restriction that a package cannot contain a type of the same name?\r\n\r\nThe guideline that \"packages that provide most of their functionality in association with a new type should have pluralized names\" in the  [Package naming rules](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules) is _exactly_ intended to get around that problem. If the package name is pluralized, there is no clash with the type name, and it's also a very natural convention. Certainly _much_ better than trying to get around the problem by tweaking the capitalization in surprising ways.\r\n\r\nSo based on that, I would _definitely_ recommend `MCPClients` as the name.\r\n\r\nThe rest of the conversation that @stemann is trying to have with you is a bit over my head, so I'll leave it to you judgement whether the API should be redesigned in other ways, and if there is another, better, package name.\r\n\r\nIn any case, pluralized package names are definitely a good idea when there is a specific data type that the package centers around. \"`DataFrames` provides the `DataFrame` type\", as the guidelines say in the example.\r\n\r\nBy the way: if you're still struggling with naming things, it's a bit unusual to have a version >1.0. According to [semantic versioning](https://semver.org) (which we encourage following), a 1.0 release indicates a \"stable\" API. I don't know if you've already made releases in some other context. If not, you may want to rethink the initial version, start with `v0.1`, and then go to `v1.0` once the API has proven itself to be useful. \r\n",
+      "createdAt": "2025-05-01T17:45:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845347884",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmLGy",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see, in the example there is no mention about the MCPClient... Sorry! But yes that is the core of the whole stuff, so we have that type sadly. So we have MCPClientCollector which is a list of the MCPClient. It act as a manger of multiple clients.\r\n",
+      "createdAt": "2025-05-01T17:51:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845356466",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmLhV",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "okay! MCPClients!",
+      "createdAt": "2025-05-01T17:51:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845358165",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmMGA",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay! I will start with 0.x.y :D",
+      "createdAt": "2025-05-01T17:53:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845360512",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmMNe",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Really thank you for the help guys!",
+      "createdAt": "2025-05-01T17:53:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845360990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pmNa1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I see, in the example there is no mention about the MCPClient... Sorry! But yes that is the core of the whole stuff, so we have that type sadly. So we have MCPClientCollector which is a list of the MCPClient. It act as a manger of multiple clients.\r\n\r\nMakes sense, but it would probably be a good idea to have that explained, as a concept, in the README and/or documentation. That doesn't necessarily have to be there before the registration. ~~Although, again, if you're starting >= 1.0, there's a bit of an expectation that the package is pretty polished and has complete documentation.~~",
+      "createdAt": "2025-05-01T17:56:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845365941",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pnwQD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/130145",
+      "createdAt": "2025-05-01T21:02:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130068#issuecomment-2845770755",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MCPclient\n- Repository: https://github.com/Cvikli/MCPclient.jl\n- Created by: @Cvikli\n- Version: v1.1.0\n- Commit: 82b192223729421259298a66b815f8e7b1c59cae\n- Git reference: HEAD\n- Description: Simplest MCP layer. \n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nMCP client for julia to reach EVERYTHING ;)\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "MCPclient",
+  "closed_at": "2025-05-01T21:02:08Z",
+  "title": "New package: MCPclient v1.1.0"
+}

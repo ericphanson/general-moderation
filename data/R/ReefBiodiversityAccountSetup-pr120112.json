@@ -1,0 +1,46 @@
+{
+  "created_at": "2024-11-24T22:48:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 120112,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86UyqCM",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArchGDAL, CSV, DataFrames, DimensionalData, Distances, GLMakie, GeoDataFrames, GeoFormatTypes, GeoMakie, Glob, GraphMakie, MAT, NCDatasets, PkgTemplates, Rasters, YAXArrays\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Found no OSI-approved licenses. Found non-OSI license(s): CC0-1.0 license in LICENSE, CC0-1.0 license in LICENSE.md, and CC0-1.0 license in LICENSE.md.\n- I was not able to load the package (i.e. `import ReefBiodiversityAccountSetup` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-24T23:05:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120112#issuecomment-2496307340",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Uz3r4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/120122",
+      "createdAt": "2024-11-25T03:49:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120112#issuecomment-2496625400",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ReefBiodiversityAccountSetup\n- Repository: https://github.com/open-AIMS/ReefBiodiversityAccountSetup\n- Created by: @Rosejoycrocker\n- Version: v0.1.0\n- Commit: 98502707c504849066341a27d2f45345369ae0ee\n- Reviewed by: @Rosejoycrocker\n- Reference: https://github.com/open-AIMS/ReefBiodiversityAccountSetup/issues/2#issuecomment-2496298200\n- Description: Spatial analyses and plots using open access data to inform setup of a reef biodiversity account.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598c8d355df55368ee9df34328f758cd361b5394acef64db8370b5e2dc9b93ea776dd76051452b4bcd495eefdf87831b18b3593d857cc0ac1e2b349ac4e56aab49cef736f4115c3c9252b3208ad4135ae8f5167c6ca34fa867a5102c2058c380eb83253a5a289e543e2c183c15efe87f4746ac39bd21cd69aa8747e8cf4e4c39fa8c7d4ecddc6b5362dacb2f8bbcf08b3cb -->",
+  "package_name": "ReefBiodiversityAccountSetup",
+  "closed_at": "2024-11-25T03:49:40Z",
+  "title": "New package: ReefBiodiversityAccountSetup v0.1.0"
+}

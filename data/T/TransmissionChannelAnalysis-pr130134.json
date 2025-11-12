@@ -1,0 +1,113 @@
+{
+  "created_at": "2025-05-01T17:12:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130134,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86pl872",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-01T17:20:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2845298422",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ptlH-",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks you for submitting your package! Could you make sure that [the documentation](https://enweg.github.io/TransmissionChannelAnalysis.jl/dev/) is linked from the README?\r\n\r\nAlso, while the API documentation is particularly important (especially with an initial v1.0 version), there is very little in terms of usage information, like a tutorial or a complete example. I'm not sure someone coming across this would be able to figure out how to make use the package.",
+      "createdAt": "2025-05-02T14:08:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2847298046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pt2Q_",
+      "author": {
+        "login": "enweg"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz, \r\n\r\nThe package is part of a bigger project and the documentation has moved to the website linked in the README file. The other documentation will be completely deleted soon. The linked website is still largely under construction but already includes details about the package, its internals, etc. Examples are coming soon. ",
+      "createdAt": "2025-05-02T14:37:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2847368255",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pt8tX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Okay, that sounds good. I would be a little bit cautious with tagging this as `v1.0` while the documentation and other parts of the project are still under construction. While completing that work (and also while the general public gets its first interactions with the package), you may find that you still need to tweak the API. My recommendations would be to register as `v0.1` and then go to `v1.0` when everything is done. If it turns out you don't need significant changes to the API, there isn't a problem with going from `v0.x` to `v1.0` simply to indicate that the package is now \"stable\" in the sense of [semantic versioning](https://semver.org). It's fine to treat `v0.x` as `v1.0-dev`.\r\n\r\nIf you want to adjust the version number, just repeat the registration, which will create a new PR, and I'll close this PR in favor of the new one. Alternatively, let me know if I should unblock this. Potentially after making further fixes that should go into a `v1.0` release, such as removing the obsolete documentation files.",
+      "createdAt": "2025-05-02T14:50:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2847394647",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pyURp",
+      "author": {
+        "login": "enweg"
+      },
+      "authorAssociation": "NONE",
+      "body": "I liked your recommendation and opened a [new PR](https://github.com/JuliaRegistries/General/pull/130240). Thanks for the help. ",
+      "createdAt": "2025-05-03T09:29:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2848539753",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86pyYS2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/130240",
+      "createdAt": "2025-05-03T10:17:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130134#issuecomment-2848556214",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TransmissionChannelAnalysis\n- Repository: https://github.com/enweg/TransmissionChannelAnalysis.jl\n- Created by: @enweg\n- Version: v1.0.0\n- Commit: 23a4bb0b2e0fe8aa8bdbfb73580f0d7341b8d32f\n- Reviewed by: @enweg\n- Reference: https://github.com/enweg/TransmissionChannelAnalysis.jl/commit/23a4bb0b2e0fe8aa8bdbfb73580f0d7341b8d32f#commitcomment-156185513\n- Description: Transmission Channel Analysis in Dynamic Models\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65441829a407c7f7fe0ac26dd5939338b63b9ff9737bab76522ecd12f35824fe7dd0ac3125f28ac13df97562b1e24bb148b05a1e29f7751e94c72910c574bdb49bb39b5e5d879f4e90954177c5d07816654972249389ffaa5154e5ce607dbf221d25399c837d5a79e2d00cf303032128a86f36d0d37590b7f1c64cb1058bc5d8417b5227c8250412cf3d95540d55b5adf6daca03993546b12a6a2fc003dacfbc0d69e94ef4fd69fee5a7f95f0bfb377d055ac6ecbe75a9c5364a60ceed597ee63 -->",
+  "package_name": "TransmissionChannelAnalysis",
+  "closed_at": "2025-05-03T10:17:57Z",
+  "title": "New package: TransmissionChannelAnalysis v1.0.0"
+}

@@ -1,0 +1,106 @@
+{
+  "created_at": "2022-04-25T13:09:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 59089,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85CEzDd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 6 existing packages.\n  1. Similar to SIAN. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to SEAL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to FLAC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SHA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Stan. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-25T13:12:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1108553949",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CE2U_",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The name STAC was choosen because the package implements the [STAC specification](https://stacspec.org/) where STAC stands for SpatioTemporal Asset Catalog. STAC.jl is similar to the python module [pySTAC](https://pypi.org/project/pystac/).\r\n\r\nThe standard specifies several types like (catalog, item, assets,...) which are available in Julia as `STAC.Catalog`, `STAC.Item`, `STAC.Asset` (the types `Catalog`, `Item` and `Asset` are not explicitly exported). A short module name is desirable in my opinion.\r\n\r\n",
+      "createdAt": "2022-04-25T13:23:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1108567359",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85D3Nlf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-26T12:56:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1138547039",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EEdv_",
+      "author": {
+        "login": "Alexander-Barth"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would appreciate a review to see if the name STAC is acceptable. Thanks !",
+      "createdAt": "2022-05-31T11:39:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1142021119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FzuvK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-06-30T12:58:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1171188682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GMImj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-07-07T13:07:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59089#issuecomment-1177586083",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: STAC\n- Repository: https://github.com/JuliaClimate/STAC.jl\n- Created by: @Alexander-Barth\n- Version: v0.1.0\n- Commit: de31f1f4bffc7c575bca088d9f55bb933ff7eb15\n- Reviewed by: @Alexander-Barth\n- Reference: https://github.com/JuliaClimate/STAC.jl/commit/de31f1f4bffc7c575bca088d9f55bb933ff7eb15#commitcomment-72082193\n- Description: SpatioTemporal Asset Catalog (STAC) julia client\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd61bdca3216623f0362f257d0839dea838a118a3daafc0ed8882b04e25f645804e45ddab4f059b289040a1da37531d470447446d12707183bcaee8daf33b0e0dc4fa470b0a8740b3c6a013970fb1e7ec0f4b4a4f70b4d2a32e83811ec455c28f6a02a537d69b3874c1da359b511b568a51dad56a83d3a8cfa45e8e8d9b355e77b799efd4fda756986ffc3300e1fa4c20184cc9852372b6ea4d3125d61b7edfccee09c221660becd67fd6c1a661343f702b -->",
+  "package_name": "STAC",
+  "closed_at": "2022-07-07T13:07:51Z",
+  "title": "New package: STAC v0.1.0"
+}

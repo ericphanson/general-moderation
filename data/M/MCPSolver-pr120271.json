@@ -1,0 +1,150 @@
+{
+  "created_at": "2024-11-27T15:54:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 120271,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86VQ5W-",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on the package! Since the acronym is not standard, can I suggest the name MixedComplementarityProblems.jl?",
+      "createdAt": "2024-11-27T15:56:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504234430",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VQ6_H",
+      "author": {
+        "login": "dfridovi"
+      },
+      "authorAssociation": "NONE",
+      "body": "If possible, I'd like to keep it with the `MCP` acronym for two reasons. First, my sense is that this is one of two standard acronyms in the OR community for these problems (the other being MiCP) - cf. the textbook from Facchinei and Pang [here](https://link.springer.com/book/10.1007/b97543). Second, I am basing this package off of [ParametricMCPs](https://github.com/JuliaGameTheoreticPlanning/ParametricMCPs.jl), and the naming scheme should probably be consistent. Thoughts?",
+      "createdAt": "2024-11-27T15:59:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504241095",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VQ-I2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- Package name similar to 2 existing packages.\n  1. Similar to DCISolver. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MPSolve. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-27T16:05:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504254006",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VQ-Vc",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I understand your concerns.\r\n\r\n> First, my sense is that this is one of two standard acronyms in the OR community for these problems\r\n\r\nThe reason behind my suggestion is that acronyms like this are only standard in one specific community, in this case OR. I also belong to that community and the acronym wasn't even obvious to me. It is never hurtful to have a longer package name. For instance, I developped a package called HiddenMarkovModels.jl and I didn't call it HMM.jl even though the abbreviation is pretty standard too. The only spelled out word in your package name is \"Solver\", and it is a pretty generic one.\r\n\r\n> Second, I am basing this package off of [ParametricMCPs](https://github.com/JuliaGameTheoreticPlanning/ParametricMCPs.jl), and the naming scheme should probably be consistent.\r\n\r\nThat is a more valid reason, although I would also have objected to the registration of ParametricMCPs.jl for the same reasons.",
+      "createdAt": "2024-11-27T16:05:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504254812",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VRE9P",
+      "author": {
+        "login": "dfridovi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Fair enough. I'll change it to something like `MixedComplementarityProblems.jl` per your initial suggestion.",
+      "createdAt": "2024-11-27T16:17:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504281935",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VRRdf",
+      "author": {
+        "login": "dfridovi"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok package is renamed as requested.",
+      "createdAt": "2024-11-27T16:42:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504333151",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VRiAy",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks!",
+      "createdAt": "2024-11-27T17:15:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504400946",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86VRlTB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/120277",
+      "createdAt": "2024-11-27T17:22:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120271#issuecomment-2504414401",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MCPSolver\n- Repository: https://github.com/CLeARoboticsLab/MCPSolver.jl\n- Created by: @dfridovi\n- Version: v0.1.0\n- Commit: e4d82f24d615bbbf69f77c434881f39f77901503\n- Reviewed by: @dfridovi\n- Reference: https://github.com/CLeARoboticsLab/MCPSolver.jl/issues/6\n- Description: A custom interior point solver for mixed complementarity problems.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835982d39a7cc65d293f076435046233be2345930449ea106938334d27cc0b68a6b297c677156ad0ac15be22a5a8328e32015cc7e76b5ec7fbf5d58307e45e7bb3d0f647689106f2990e192e92031460742952bba0f47535f40e6b6380808f0f4222e8a04ff0c06fec5d3ad89a311d0b0a1e5149dd756679b66975f3daabd41d39b8b -->",
+  "package_name": "MCPSolver",
+  "closed_at": "2024-11-27T17:22:41Z",
+  "title": "New package: MCPSolver v0.1.0"
+}

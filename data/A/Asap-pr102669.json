@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-03-11T14:12:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102669,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q852htac",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Repo URL does not end with /name.jl.git, where name is the package name\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-11T14:16:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1988548252",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852idkv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name seems ok to me, with the explanation in the README, but the repo URL needs to be fixed, and it’ll need a manual merge because of the short name",
+      "createdAt": "2024-03-11T15:40:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1988745519",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852wojH",
+      "author": {
+        "login": "keithjlee"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks--repo URL should be changed now.",
+      "createdAt": "2024-03-12T19:58:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1992460487",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852xDH9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] you probably have to retrigger the registration",
+      "createdAt": "2024-03-12T20:58:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1992569341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8525Lp_",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, it needs a new registration and with the updated repo URL a different branch will be used and thus a new PR will be opened.\r\n",
+      "createdAt": "2024-03-13T15:39:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1994701439",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853IL5i",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102897",
+      "createdAt": "2024-03-14T23:21:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102669#issuecomment-1998634594",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Asap\n- Repository: https://github.com/keithjlee/Asap\n- Created by: @keithjlee\n- Version: v0.1.0\n- Commit: 20e96b39b1162551ca7b004977b1457942763b0c\n- Reviewed by: @keithjlee\n- Reference: https://github.com/keithjlee/Asap/issues/4\n- Description: Another structural analysis package\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359810dc11d5c8d58c5714a592c84bd7f77e2f1fd57763db0ae26cbfe1360b0c5d7b84f0ef5754b004820aa1b0e3644d655b63a7af84fd4475c3b74dad9324e9de7a5b6b1315ddc5a446b0f1116bc971eb433879fc08ff326e987897cd77b31dd9c684b054ea8e0384ba1d1c53c9998f3827 -->",
+  "package_name": "Asap",
+  "closed_at": "2024-03-14T23:21:11Z",
+  "title": "New package: Asap v0.1.0"
+}

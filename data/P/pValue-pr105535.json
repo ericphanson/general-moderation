@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-04-24T12:16:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105535,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857qzWr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, Distributions, Documenter\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-24T12:20:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074817963",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rE4M",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, and congrats on the registration!\r\nCan I suggest a more specific name? Without functional docs it's hard to understand what your package does, but the general registry namespace is rather precious and `pvalue` would be a very coveted spot",
+      "createdAt": "2024-04-24T12:58:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074889740",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rHKq",
+      "author": {
+        "login": "stefanocovino"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi!\r\n\r\nI'll think about it. Indeed it is package providing functions to compute\r\np-values. Do you have any suggestions? I have just changed the name to\r\nPValue to comply with the guidelines.\r\n\r\nBye,\r\n Stefano\r\n\r\nIl giorno mer 24 apr 2024 alle ore 14:58 Guillaume Dalle <\r\n***@***.***> ha scritto:\r\n\r\n> Hi, and congrats on the registration!\r\n> Can I suggest a more specific name? Without functional docs it's hard to\r\n> understand what your package does, but the general registry namespace is\r\n> rather precious and pvalue would be a very coveted spot\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074889740>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAGVYHF77ORIHG5YIRVY4WLY66T7VAVCNFSM6AAAAABGWZUPACVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDANZUHA4DSNZUGA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n\r\n\r\n-- \r\n———————————————————————————\r\n\r\nIl miglior modo per avere una buona idea è avere tante idee.\r\n\r\n\r\nLinus Pauling\r\n\r\n\r\n\r\nStefano Covino\r\n\r\nINAF / Osservatorio Astronomico di Brera\r\n\r\nVia Emilio Bianchi 46, 23807\r\n\r\nMerate (LC) - Italy\r\n\r\nTel.: +39 02 72320475 (office)\r\n\r\nFAX: +39 02 72320401\r\n\r\nCell: +39 331 6748534\r\n\r\nE-mail: ***@***.***\r\n\r\nURL: http://www.merate.mi.astro.it/∼covino\r\n-----------------------------------------------------------------------------------\r\n",
+      "createdAt": "2024-04-24T13:03:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074899114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rSZT",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "After a quick look, I found that\r\n\r\n- [StatsBase.jl](https://juliastats.org/StatsBase.jl/0.19.1/statmodels.html) already implements AIC, BIC, etc.\r\n- [HypothesisTests.jl](https://juliastats.org/HypothesisTests.jl/stable/methods/#p-value) has one type of $p$-value\r\n- the other functions like RMS and SSR are simple enough that they don't need to be in a package\r\n\r\nIf you're up for it, my suggestion would be to try and contribute your alternative $p$-values to HypothesisTests.jl in order to make one library better instead of creating a new one. What do you think?",
+      "createdAt": "2024-04-24T13:24:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074945107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rgfy",
+      "author": {
+        "login": "stefanocovino"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear Guillamme,\r\n\r\nIndeed, it is good advice. I'll contact the HypothesisTests maintainers.\r\n\r\nThanks a lot for you time,\r\n  Stefano\r\n\r\n\r\n\r\nIl giorno mer 24 apr 2024 alle ore 15:25 Guillaume Dalle <\r\n***@***.***> ha scritto:\r\n\r\n> After a quick look, I found that\r\n>\r\n>    - StatsBase.jl\r\n>    <https://juliastats.org/StatsBase.jl/0.19.1/statmodels.html> already\r\n>    implements AIC, BIC, etc.\r\n>    - HypothesisTests.jl\r\n>    <https://juliastats.org/HypothesisTests.jl/stable/methods/#p-value>\r\n>    has one type of $p$-value\r\n>    - the other functions like RMS and SSR are simple enough that they\r\n>    don't need to be in a package\r\n>\r\n> If you're up for it, my suggestion would be to try and contribute your\r\n> alternative $p$-values to HypothesisTests.jl in order to make one library\r\n> better instead of creating a new one. What do you think?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2074945107>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAGVYHA2FKIIETF4ED45S6TY66XDTAVCNFSM6AAAAABGWZUPACVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDANZUHE2DKMJQG4>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n\r\n\r\n-- \r\n———————————————————————————\r\n\r\nIl miglior modo per avere una buona idea è avere tante idee.\r\n\r\n\r\nLinus Pauling\r\n\r\n\r\n\r\nStefano Covino\r\n\r\nINAF / Osservatorio Astronomico di Brera\r\n\r\nVia Emilio Bianchi 46, 23807\r\n\r\nMerate (LC) - Italy\r\n\r\nTel.: +39 02 72320475 (office)\r\n\r\nFAX: +39 02 72320401\r\n\r\nCell: +39 331 6748534\r\n\r\nE-mail: ***@***.***\r\n\r\nURL: http://www.merate.mi.astro.it/∼covino\r\n-----------------------------------------------------------------------------------\r\n",
+      "createdAt": "2024-04-24T13:51:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2075002866",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857srT2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I have just changed the name to `PValue` to comply with the guidelines.\r\n\r\nI'll close this, then. I also agree it would be better that to contribute this functionality to an existing package.",
+      "createdAt": "2024-04-24T16:07:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105535#issuecomment-2075309302",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: pValue\n- Repository: https://github.com/stefanocovino/pValue.jl\n- Created by: @stefanocovino\n- Version: v0.8.2\n- Commit: 9f5dd4dbccf38f2b28080290fb935598d9fac31a\n- Git reference: HEAD\n- Description: A simple package including several Julia functions to compute p-values in a \"frequentist\" or \"Bayesian\" scenario.",
+  "package_name": "pValue",
+  "closed_at": "2024-04-24T16:07:11Z",
+  "title": "New package: pValue v0.8.2"
+}

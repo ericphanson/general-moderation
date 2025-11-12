@@ -1,0 +1,60 @@
+{
+  "created_at": "2024-10-30T17:57:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 118401,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86R6Q1L",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter, DocumenterCitations, Plots, Roots, SpecialFunctions, StaticArrays\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-30T18:08:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118401#issuecomment-2447969611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86SFGYD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/118477\r\n\r\nPlease do not change the version number when fixing automerge issues. When you keep the version the same, it updates the existing request instead of creating a new one.",
+      "createdAt": "2024-10-31T21:02:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118401#issuecomment-2450810371",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FractalIntegrals\n- Repository: https://github.com/AndrewGibbs/FractalIntegrals.jl\n- Created by: @AndrewGibbs\n- Version: v0.0.1\n- Commit: e4ae5fa3cea0318b814b3926e127f92ab6d1a66f\n- Reviewed by: @AndrewGibbs\n- Reference: https://github.com/AndrewGibbs/FractalIntegrals.jl/commit/e4ae5fa3cea0318b814b3926e127f92ab6d1a66f#commitcomment-148562199\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6536f7b63a02e3bc653e774daa267fad08bc0441e2437d2b8e59e8a3d5e7a7606b3a7650263c13abfbb407c75f4dd07b8104a76f32a09f608e1ce8b3e714997d8a3320bfd4ce34e2c40cf5cc2c1ca17354684167d0f09aead271c8106c672fd6647beff53b6a566faca72c1ff25323c9929be6ea393e009a773aafad16d30aaff0c0a03df568393b4367bb10e70f492d6daf7b8851a4402b5f827404a94e2131973adb0a3a813f987f762b48563c67eea -->",
+  "package_name": "FractalIntegrals",
+  "closed_at": "2024-10-31T21:02:26Z",
+  "title": "New package: FractalIntegrals v0.0.1"
+}

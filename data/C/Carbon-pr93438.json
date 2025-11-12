@@ -1,0 +1,327 @@
+{
+  "created_at": "2023-10-15T16:53:45Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 93438,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85pHBFW",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] This looks a bit like a test package ... 🤔",
+      "createdAt": "2023-10-15T16:57:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763447126",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHBHP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Documenter\n- Package name similar to 2 existing packages.\n  1. Similar to Chron. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Carlo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-15T16:57:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763447247",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHCiE",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] This looks a bit like a test package ... 🤔\r\n\r\n@cormullion Please check latest state",
+      "createdAt": "2023-10-15T17:22:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763453060",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHEOQ",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> > [noblock] This looks a bit like a test package ... 🤔\r\n> \r\n> @cormullion Please check latest state\r\n\r\nI don't think code like this needs to be in a package?\r\n\r\n```julia\r\nfunction now()\r\n    return DateTime(2023)\r\nend\r\n```",
+      "createdAt": "2023-10-15T17:51:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763459984",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHE9q",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "@cormullion updated the code.\r\nCan you help me with this how can I remove or solve this error.\r\n\r\nPackage name similar to 2 existing packages.\r\nSimilar to Chron. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\nSimilar to Carlo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n",
+      "createdAt": "2023-10-15T18:04:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763463018",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHH3n",
+      "author": {
+        "login": "cormullion"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> @cormullion updated the code. Can you help me with this how can I remove or solve this error.\r\n> \r\n> Package name similar to 2 existing packages. Similar to Chron. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Similar to Carlo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n\r\nThere's nothing you can do now - you have to wait 3 days before a submitted package can be registered - if it's considered to be a useful addition to the registry. You can discuss the naming of your package on the Slack channel mentioned above\r\n",
+      "createdAt": "2023-10-15T18:55:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763474919",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHV7B",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What does this package do? How is it related to [carbon](https://en.wikipedia.org/wiki/Carbon)?",
+      "createdAt": "2023-10-15T23:13:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763532481",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHYRw",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "Here is the explanation of the package name. Why did I choose this package name as `Carbon`?\r\n\r\nThere is a very good library in a different language community called [Carbon](https://carbon.nesbot.com/docs/) , From where I was inspired to take the name and it has a very friendly implementation of the `DateTime` \r\n\r\nThere is no actual `Carbon` relating to this package nor relating to any chemical or substance relating in this package name\r\n\r\ncc: @cormullion @briochemc \r\n",
+      "createdAt": "2023-10-15T23:52:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763542128",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHY-7",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think there are a few problems here:\r\n\r\n1. This package looks empty. No point in registering it at this stage. \r\n2. It is not clear what this package intends to do. Please add some description/example of what people might use this for in your ReadMe at least.\r\n3. The name choice is not good. If you call a package \"Carbon.jl\", people will expect it to have something to do with the most common definition of carbon, not a very specific PHP API. Try to think of a name that will be meaningful to a random Julia user.\r\n",
+      "createdAt": "2023-10-16T00:03:02Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763545019",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHaLX",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "noted with thanks @briochemc , I have just changed the package name.",
+      "createdAt": "2023-10-16T00:16:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763549911",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHaM0",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator \r\nThis issue should be closed now.",
+      "createdAt": "2023-10-16T00:16:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763550004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHbEx",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "FYI, I have changed that package name to `TZ` Hope this will works [foryou @briochemc ](https://github.com/JuliaRegistries/General/pull/93457)",
+      "createdAt": "2023-10-16T00:24:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763553585",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHcc9",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "No, sorry, but it does not work: The new name, \"Tz\", is just as confusing if not worse. But this does not matter at this stage anyway, because your package is basically empty and thus not ready for registration.",
+      "createdAt": "2023-10-16T00:36:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763559229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHt4u",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "Now I am really confused about what is the definition of an empty package here.?",
+      "createdAt": "2023-10-16T02:30:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763630638",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pHwMk",
+      "author": {
+        "login": "briochemc"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm sorry that this is confusing to you. There's no formal definition as far as I know, but your package provides close to zero functionality. It merely contains four \"Hello World!\"-printing types of functions or aliases:\r\n- `greet` just prints \"hello\". Not useful.\r\n- `version` just prints the package version. Not useful since this functionality is built in the package manager.\r\n- `now` just prints the current time with a static format. Not really useful and overwriting the standard library's `now` function seems like a bad idea.\r\n- `p` is an alias for `printf`. Not useful. Probably errors since `printf` is not defined.\r\n\r\nAnyway, What is the intended purpose of the package? Even this is not clear...",
+      "createdAt": "2023-10-16T02:44:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1763640100",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pZQ7B",
+      "author": {
+        "login": "vrkansagara"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator  Give up this PR and close it",
+      "createdAt": "2023-10-18T11:14:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1768230593",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sQs8-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-11-17T12:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1816317758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85s0HmD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-24T12:23:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93438#issuecomment-1825601923",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Carbon\n- Repository: https://github.com/vrkansagara/Carbon.jl\n- Created by: @vrkansagara\n- Version: v1.0.0\n- Commit: 11203da3791766f702943b6c7d9f36c904710a1b\n- Reviewed by: @vrkansagara\n- Reference: https://github.com/vrkansagara/Carbon.jl/issues/4#issuecomment-1763540323\n- Description: A simple Julia API extension for DateTime.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835987d7431d7409bf301207a09ee814c9ceee03bf831fa5471bb893adbe807cf5d52893c1bb927f389eeae4d10e735966abeeb8477279df627605bd5b5490d98c2713f758ea8eccd6c723f8df22ec8af58a062ce781acbc29b991043a655ea642b8c9430d68c26d54a2814148ff4847854b154a46e1e6f174de0e1a19981c947e95f -->",
+  "package_name": "Carbon",
+  "closed_at": "2023-11-24T12:23:12Z",
+  "title": "New package: Carbon v1.0.0"
+}

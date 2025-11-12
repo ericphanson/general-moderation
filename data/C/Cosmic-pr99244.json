@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-01-21T05:36:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 99244,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xZjEk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Version number is not allowed to contain prerelease data\n- Package name similar to 1 existing package.\n  1. Similar to LACosmic. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-21T05:48:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1902522660",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xZ5GJ",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "How does this package intent differs from the already existing and used https://github.com/JuliaAstro/Cosmology.jl?",
+      "createdAt": "2024-01-21T12:25:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1902612873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xZ5Ph",
+      "author": {
+        "login": "aburousan"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes.. although for now no... Other than some extra functions it's same. But It's intended to also add thermal properties and also perturbations... \r\n\r\n",
+      "createdAt": "2024-01-21T12:27:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1902613473",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xchrD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe it would be better to contribute these additional features to [Cosmology.jl](https://github.com/JuliaAstro/Cosmology.jl)?\r\n\r\nI'd be cautious about registering a new package that has a large overlap with an existing package. Also, especially with a \"nice\" and short name like \"Cosmic\": would this be a package that is maintained in the long term? I noticed the \"MS-Project\" in the description, and very often, thesis projects are one-offs that are abandoned as the student moves on. In such a case, it might be better not to register it / register it in a `LocalRegistry`, or else use a very distinctive name.",
+      "createdAt": "2024-01-22T05:47:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1903303363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q850nl3Y",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-02-21T12:22:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1956535768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851e3cS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-02-29T12:22:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99244#issuecomment-1971025682",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Cosmic\n- Repository: https://github.com/aburousan/Cosmic.jl\n- Created by: @aburousan\n- Version: v1.0.0-DEV\n- Commit: 3809d83c44f6ce85317b79b2f51681c2a5235841\n- Git reference: HEAD\n- Description: MS-Project",
+  "package_name": "Cosmic",
+  "closed_at": "2024-02-29T12:22:45Z",
+  "title": "New package: Cosmic v1.0.0-DEV"
+}

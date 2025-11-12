@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-07-21T13:08:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 111451,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86FnDeP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import SagbiGbDetection` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-07-21T13:15:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111451#issuecomment-2241607567",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86F2wsU",
+      "author": {
+        "login": "elimashehu"
+      },
+      "authorAssociation": "NONE",
+      "body": "The GitHub action failed due to a precompilation error of the `SagbiGbDetection` package. The error log indicates that the library `libcxxwrap_julia.so` could not be loaded due to an undefined symbol `small_typeof `related to Julia version 1.10. This caused the precompilation of several dependencies,` including libsingular_julia_jll`, `libpolymake_julia_jll`, and `Polymake,` to fail, ultimately leading to the `SagbiGbDetection` package not being importable. ",
+      "createdAt": "2024-07-23T16:38:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111451#issuecomment-2245724948",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86JgcO1",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-08-23T12:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111451#issuecomment-2306982837",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86KWMD9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-08-30T12:23:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/111451#issuecomment-2321072381",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SagbiGbDetection\n- Repository: https://github.com/elimashehu/SagbiGbDetection.jl\n- Created by: @elimashehu\n- Version: v0.1.0\n- Commit: a7cb69bbe4283cff7b3db51fa960cffc0800f170\n- Reviewed by: @elimashehu\n- Reference: https://github.com/elimashehu/SagbiGbDetection.jl/issues/4\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980b5105f62dce7059d16e049eba559f965ccea152369863f5fbe3e6310fc0c1a458c60fcc0ab685cad3a01869643cfb84983bdfd1039e261d1fc25bfea33f4e42047adf1af236948db6c019a23dfb60b3958da320ccc0bc473cdcca2aea04a797cbbebd0f0b6aeb3771d71b2f201ca8b78a4c090094018300cd63c14d3b3f621a -->",
+  "package_name": "SagbiGbDetection",
+  "closed_at": "2024-08-30T12:23:34Z",
+  "title": "New package: SagbiGbDetection v0.1.0"
+}

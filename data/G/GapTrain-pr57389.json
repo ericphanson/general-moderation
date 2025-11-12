@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-03-27T01:40:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 57389,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85AXKLC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: PyCall\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- I was not able to load the package (i.e. `import GapTrain` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-03-27T01:48:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57389#issuecomment-1079812802",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ArphF",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is an _extremely_ simple package which is only importing a Python package: https://github.com/Leticia-maria/GapTrain/blob/010558de279b3b456d48f8d460fdd8d426004aae/src/GapTrain.jl.  There are no tests nor documentation.  Please, read https://github.com/JuliaRegistries/General/blob/9d2894c62c5f52a4b260f3a12f7641fc4f54c884/README.md#do-i-need-to-register-a-package-to-install-it",
+      "createdAt": "2022-03-31T22:19:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57389#issuecomment-1085184069",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CacLi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-01T12:48:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57389#issuecomment-1114227426",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85C0hD8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-05-09T12:54:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/57389#issuecomment-1121063164",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GapTrain\n- Repository: https://github.com/Leticia-maria/GapTrain\n- Created by: @Leticia-maria\n- Version: v0.1.0\n- Commit: 010558de279b3b456d48f8d460fdd8d426004aae\n- Reviewed by: @Leticia-maria\n- Reference: https://github.com/Leticia-maria/GapTrain/issues/1#issuecomment-1079811859\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598490ae48f80273d3cee67625052240e371156071ba8f57f1259eeb930d3c5e92929f3a1d37b457efab9fac1f4d4ff656f98c85e4daee0161367e069b85e4a309728e45f0a20b5c6cef85d70a4fef6ad8bf94943564377d9dca347ce4de9563b372e55daf405e3f91eb548652eebbf073f306afe6d3ff12f9d0318eb26253a737c -->",
+  "package_name": "GapTrain",
+  "closed_at": "2022-05-09T12:54:53Z",
+  "title": "New package: GapTrain v0.1.0"
+}

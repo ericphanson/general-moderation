@@ -1,0 +1,309 @@
+{
+  "created_at": "2023-08-14T01:02:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 89562,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85j7dck",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-14T01:10:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1676531492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j76aB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you put something in the README about how this relates and compares to [TidyTable](https://github.com/kdpsingh/TidyTable.jl)?\r\n\r\n",
+      "createdAt": "2023-08-14T04:21:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1676650113",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j9L6P",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Thanks for your comment. Added:\r\n\r\nTidyTable2.jl implements the function of merge, cbind, fread, fwrite, expand_grid, and other frequent used functions in R package [data.table](https://github.com/Rdatatable/data.table).\r\n\r\nTidyTable2.jl is substantially different from the [TidyTable.jl](https://github.com/kdpsingh/TidyTable.jl), which is a interface of R package [dplyr](https://github.com/tidyverse/dplyr).",
+      "createdAt": "2023-08-14T09:21:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1676983951",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j-hzd",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Do you happen to be aware of https://github.com/TidierOrg/Tidier.jl ?\r\n\r\n[noblock]",
+      "createdAt": "2023-08-14T13:38:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1677335773",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j-ks3",
+      "author": {
+        "login": "EvoArt"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\n\nThat's cool. Nice work on this package. Perhaps this package could use a different name, since it is substantially different and because it is not associated with the other Tidier.jl packages. It's fairly confusing as is.",
+      "createdAt": "2023-08-14T13:45:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1677347639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j-rC0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I agree. It would be better to rename this.",
+      "createdAt": "2023-08-14T14:01:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1677373620",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kB9FZ",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nIn the R language, data processing can be divided into two main genres, namely `data.table` and `tidyverse`. The basic data type of `data.table` and `tidyverse` are `data.table` and `tibble` respectively. `TidyTable2` belongs the former, [Tidier.jl](https://github.com/TidierOrg/Tidier.jl) and `TidyTable` belongs the latter.\r\n\r\n[TidyTable.jl](https://github.com/kdpsingh/TidyTable.jl) is a interface of R package [dplyr](https://github.com/tidyverse/dplyr). TidyTable is more related with `tibble`, other than `table`. Hence, I believe that it is `TidyTable` should be renamed, other than this package.\r\n\r\nOut of politeness, I didn't snatch the package name `TidyTable`. \r\n",
+      "createdAt": "2023-08-14T23:42:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1678233945",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kCWu5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I just basically have a problem with the package name `TidyTable2` if there's a package `TidyTable`, and the two aren't related in some very direct way, by the original authors or with the original author's blessing – as in \"`TidyTable2` is a rewrite of `TidyTable`\".\r\n\r\nI didn't initially realize that [`TidyTable`](https://github.com/kdpsingh/TidyTable.jl) wasn't actually registered. That makes things *more* confusing, though: I really don't think there should be a `TidyTable2` package in the Registry if there's no `TidyTable` package.\r\n\r\nNow, if `TidyTable` turns out to be an appropriate name for the new package (possibly not, see below), I think you should actually register it as `TidyTable`. Certainly, the polite thing to do in that case would be to let @kdpsingh weigh in. It doesn't seem like the original `TidyTable` is very actively developed, and also @kdpsingh seems to be the lead for [Tidier.jl](https://github.com/TidierOrg/Tidier.jl) / the [Tidier Org](https://github.com/TidierOrg). So, maybe the original `TidyTable` was just a prototype and the name is actually available now?\r\n\r\nI have zero background in R, and specifically, I don't really know what the \"tidy-verse\" and \"data.table\" are. So I can't tell if `TidyTable` would be an appropriate name for this package. But from your own description (unless I'm misunderstanding what you're saying)\r\n\r\n> In the R language, data processing can be divided into two main genres, namely data.table and tidyverse. The basic data type of data.table and tidyverse are data.table and tibble respectively. TidyTable2 belongs the former\r\n\r\nit sounds like `TidyTable` is very much the wrong name for this package, as it emulates `data.table` and *not* the \"tidyverse\" — so why is there \"Tidy\" in the name?\r\n\r\nI'd really like for @kdpsingh and maybe some other people with an R background to take a look at this to sort out the `TidyTable`/`TidyTable2` question and maybe to propose a suitable package name.\r\n\r\nNone of this touches in any way on the functionality of the package. Again, I'm in no position to judge, but this definitely looks to me like it should be registered, the only question being the package name.",
+      "createdAt": "2023-08-15T02:22:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1678339001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kCYy6",
+      "author": {
+        "login": "kdpsingh"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\n\nThanks for looping me into the discussion.\n\nTidyTable.jl (which I developed but never registered) was named TidyTable because it directly wraps an R package named \"tidytable\" (see here: https://github.com/markfairbanks/tidytable). The R tidytable package uses the R data.table package as a backend, but the syntax is designed to match the R tidyverse syntax. I may register this package in the future simply as a teaching tool for how to wrap R code in Julia macros, but it's not intended for serious use (and has been replaced by Tidier.jl).\n\nTidyTable2.jl appears to implement aspects of the R data.table R package using a 100% Julia approach. This is great because data.table in R has many fans. However, in my opinion, the name TidyTable2 is confusing mainly because R's data.table package is very different from the tidyverse in terms of its syntax, so there's no reason to include the word \"Tidy\" in the package name. I don't have any issues with the name conflicting with TidyTable -- more that there's no need to refer to it as \"tidy\" when it's not related to the tidyverse in any way.\n\nI'd suggest naming this package after the data.table package, or some play on words like DataChairs.jl.\n\nWill let you take the discussion from here -- just wanted to share my thoughts. Thanks, and nice work again.",
+      "createdAt": "2023-08-15T02:36:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1678347450",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kEizi",
+      "author": {
+        "login": "kescobo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I agree that TidyTable[2].jl is confusing esp if it has no relation to the R tidyverse. That said, I don't think the tidyverse has a monopoly on the idea of tidiness, and we have plenty of `SomePackage2.jl`s that have no development history in common (see eg JSON.jl, JSON2.jl, JSON3.jl, Parquet.jl, Parquet2.jl).\r\n\r\nI would argue that if @kongdd prefers the name they have, or disagrees with the arguments about user confusion, these arguments should not prevent registration [noblock]\r\n\r\nAnd yet, because I agree that it would be good for the name to change, here are some suggestions:\r\n\r\n---\r\n\r\n- `RTables.jl`\r\n- `RDataTables.jl`\r\n- `RLikeTables.jl`\r\n- `NoRDataTables.jl`\r\n\r\n---\r\n\r\nIf you would like to retain some link to tidiness (though frankly, I don't see why you would):\r\n\r\n- `KondoTables.jl` (https://en.wikipedia.org/wiki/Marie_Kondo)\r\n- `KonMariTables.jl`\r\n\r\n---\r\n\r\nWord play ideas (a la @kdpsingh )\r\n\r\n- `DataChairs.jl` (suggested above)\r\n- `DataSpoons.jl`\r\n- `DataCups.jl`",
+      "createdAt": "2023-08-15T13:10:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1678912738",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kIBet",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I don't want to taking possession of the `RDataTables.jl` like. Because `TidyTable2` only implements about 10% of all data.table functions.\r\n\r\nI have to delay the registration until I find a appropriate package name or implement more data.table functions.\r\n\r\nThanks for the discussions and suggestions, and reviewments above.\r\n\r\nThis branch can be closed now. Thank u.\r\n",
+      "createdAt": "2023-08-16T01:12:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1679824813",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kM_mz",
+      "author": {
+        "login": "kescobo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That feels like the _least_ desirable outcome :-( [noblock]",
+      "createdAt": "2023-08-16T19:01:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1681127859",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kNWuc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would certainly hope that @kongdd resubmits this once they have a chance to think about a suitable package name",
+      "createdAt": "2023-08-16T20:23:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1681222556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kPWxN",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Package has been named as `RTableTools.jl` https://github.com/JuliaRegistries/General/pull/89811. Thanks for all the suggestions above, especially for @kescobo's package name candidates.\r\nThis branch can be closed now.\r\n",
+      "createdAt": "2023-08-17T07:08:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1681747021",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mpvmh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-09-16T12:22:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1722218913",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nRMAf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-09-24T12:22:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89562#issuecomment-1732558879",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TidyTable2\n- Repository: https://github.com/jl-spatial/TidyTable2.jl\n- Created by: @kongdd\n- Version: v0.1.0\n- Commit: 272e8609ccc36ff79f8440767c3d7d7971aab333\n- Reviewed by: @kongdd\n- Reference: https://github.com/jl-spatial/TidyTable2.jl/issues/1#issuecomment-1676984342\n- Description: Tidy data.table in Julia \n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e23d2bff8322c7ac146a862329ad9a866292eca91b42f898bb115ac2552eacd49fd7a0782040ed31ded6d28fccdf701cfce71cc611624ff1dd5cfbfbe00aa8897d7025005fa108a671eab1feb4c1c842b4fb45665865941f4e814c7563892194cb6c0c394bbd4181c0288d2ba0984f8520f82f61d95212f2c1258139d3f0fec8 -->",
+  "package_name": "TidyTable2",
+  "closed_at": "2023-09-24T12:22:43Z",
+  "title": "New package: TidyTable2 v0.1.0"
+}

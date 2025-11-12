@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-08-28T09:11:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 113999,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86J-K4N",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-28T09:13:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113999#issuecomment-2314776077",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86J-oIj",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi! Congrats on the registration! I was just wondering how this differs from `Returns`?\r\n\r\n```julia\r\njulia> f = Returns(2)\r\nReturns{Int64}(2)\r\n\r\njulia> f()\r\n2\r\n```",
+      "createdAt": "2024-08-28T10:09:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113999#issuecomment-2314895907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86J-u4u",
+      "author": {
+        "login": "olivierverdier"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for asking this, I was not aware of `Returns`. \r\n\r\nThe only difference it the multiplication operation: `f = ConstantFunction(2); 2*f`.\r\n\r\nThis is not worth a whole new package just for that. You can cancel this registration.",
+      "createdAt": "2024-08-28T10:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/113999#issuecomment-2314923566",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86J_ARI",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "If we leave our comments here, registration won't proceed. I think there was a package for treating functions as elements of a vector space (adding and scaling them), I can't remember the name though.\nEDIT: I found it, it's https://github.com/Jutho/VectorInterface.jl",
+      "createdAt": "2024-08-28T10:58:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113999#issuecomment-2314994760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86J_dWq",
+      "author": {
+        "login": "olivierverdier"
+      },
+      "authorAssociation": "NONE",
+      "body": "Interesting, thank you!",
+      "createdAt": "2024-08-28T11:50:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/113999#issuecomment-2315113898",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ConstantFunctions\n- Repository: https://github.com/olivierverdier/ConstantFunctions.jl\n- Created by: @olivierverdier\n- Version: v0.1.0\n- Commit: 67a219730364712d1336f46ebe1a8e4bde1c5c49\n- Reviewed by: @olivierverdier\n- Reference: https://github.com/olivierverdier/ConstantFunctions.jl/commit/67a219730364712d1336f46ebe1a8e4bde1c5c49#commitcomment-145933398\n- Description: Constant functions\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6acf3448a636c8f6ed659282a3284b1542fa728b36a861ae68c91766c62355d5c56633ad29cb1fad011969843bb5dde79249f1f3e135d66168efa34d493feb76fc2a56b5cfa62caa543218f5209dec7ddea3295acd66fa2db0bd7f4a95d94194797581a3d629f01b9baf965944e6a1e003376001c8c642d37bb640f0fe6f5019b5cb273eefaaaea087be2f2e4a31fac5096316de53249493f83b2e5fbf93bd75d6e8824b909881e077d70f078cb6f0ba2efb48a4188fbd04e4e22844728299699 -->",
+  "package_name": "ConstantFunctions",
+  "closed_at": "2024-08-28T11:40:36Z",
+  "title": "New package: ConstantFunctions v0.1.0"
+}

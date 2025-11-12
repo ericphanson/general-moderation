@@ -1,0 +1,128 @@
+{
+  "created_at": "2023-10-05T19:04:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 92849,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85oRynI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 13 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to HAML. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to HTML5. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  3. Similar to CZML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to SBML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to YAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to HTTP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to TSML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to TOML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to HSL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to KML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to XML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to QML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to TMLE. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-05T19:10:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1749494216",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oSyIB",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This feels like a very generic package name. Would it be possible to make it a bit more specific? Even something like HTMLGen.jl?",
+      "createdAt": "2023-10-05T22:44:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1749754369",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oS2k4",
+      "author": {
+        "login": "Dale-Black"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm not opposed although I do think HTML.jl is a little more clear, so if there is something missing from this package that needs to be added before taking such a generic name then I'd prefer to do that instead. \n\nI think the example of HTTP.jl is a good one. That's much more clear (to me) than something like HTTProtocol.jl for example. ",
+      "createdAt": "2023-10-05T23:04:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1749772600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oS4JL",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "HTTP.jl got registered in the early days, which is why it got away with it - and it has sort of become a default package for working with HTTP. I would imagine there are a lot of things you could do with HTML, which may not belong in one package.",
+      "createdAt": "2023-10-05T23:13:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1749779019",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oTvXl",
+      "author": {
+        "login": "Dale-Black"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It's probably simple enough to switch to something like HTMLStrings.jl since it really just outputs a string in the end. ",
+      "createdAt": "2023-10-06T05:28:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1750005221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85q6gay",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-11-05T12:22:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1793722034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85rtlPk",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-12T12:22:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/92849#issuecomment-1807111140",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HTML\n- Repository: https://github.com/Dale-Black/HTML.jl\n- Created by: @Dale-Black\n- Version: v0.1.0\n- Commit: b54be4741231f32c24474388570a52ef0fdd257c\n- Reviewed by: @Dale-Black\n- Reference: https://github.com/Dale-Black/HTML.jl/commit/b54be4741231f32c24474388570a52ef0fdd257c#commitcomment-129266886\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b15f9574bbc93792d65f4350e6f2f1bbcb2591da22e01cd01ee0950175e51b83d5ffb8f1c89d7b788d9dbed89e2d990b1f215e649fd6eb6e502390e61c2bb2f42bd8b1ebddf1545e21e51ffa87bd19b28b44cf5dcdc9e2a2cbc3db1e7e9b9bfe98bf126972134fd063729030190b7d85be0d0fb88dc19e8ecce0d80449401ef4a831d99ba1672aa563a4771f5dc2139dec5aabd60c3fc8d2b078d99e742d380fe619d89f0c26d9263cb46ebb82e823dc -->",
+  "package_name": "HTML",
+  "closed_at": "2023-11-12T12:22:54Z",
+  "title": "New package: HTML v0.1.0"
+}

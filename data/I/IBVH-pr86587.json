@@ -1,0 +1,150 @@
+{
+  "created_at": "2023-06-30T14:29:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 86587,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85gPxRg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-30T14:35:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1614746720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gPz49",
+      "author": {
+        "login": "anicusan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\nBVH is the commonly used acronym for \"Bounding Volume Hierarchy\"; as there are no other BVH-related packages in Julia, and this \"Implicit BVH\" formulation is fairly unique, I think the name \"IBVH\" is specific enough that it will not collide with any future package.\r\n\r\nIf anyone thinks the longer and more verbose \"ImplicitBVH\" is worth the trouble, I'm happy to hear your ideas and change its name.",
+      "createdAt": "2023-06-30T14:43:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1614757437",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gRdgt",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nWhy not even `ImplicitBoundingVolumeHierarchy`? It's not that much trouble at all, since you only import it once. Plus you can even define an internal alias to avoid the lengthy copypaste (I did that in my recent package by setting `const HMMs = HiddenMarkovModels`).",
+      "createdAt": "2023-06-30T20:58:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1615190061",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gSS2G",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`ImplicitBVH` is definitely better than `IBVH`, which I'd say is a no-go. At least \"Bounding Volume Hierarchy\" is the first hit on Google for \"BVH\". On the other hand, BVH could also be \"Biovision Hierarchy\", which has the associated file extension `.bvh`. In any case, \"BVH\" is not a commonly understood acronym.\r\n\r\nI'd very much support `ImplicitBoundingVolumeHierarchy`, with `ImplicitBVH` as a fallback if you absolutely can't stomach the long package name.",
+      "createdAt": "2023-07-01T03:20:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1615408518",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gTw2s",
+      "author": {
+        "login": "anicusan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you for your input! I find `ImplicitBoundingVolumeHierarchy` quite painful to write - it'd fill an entire code line just to `using ImplicitBoundingVolumeHierarchy: BSphere` (which I wouldn't want to export directly as there are other `BBox` and `BSphere` in geometry-related libraries); I'm also trying not to burden users with import boilerplate - the package is very focused so I'd like to keep the API as minimalistic as possible.\r\n\r\nIn computer graphics / simulation / geometry, BVH - with this name - is the current standard in ray-tracing, collision detection, ambient occlusion, etc. On GitHub, most results for searching [`bvh` refer to that](https://github.com/search?q=bvh&type=repositories) - so I'd argue `BVH` is even clearer for its use than `BoundingVolumeHierarchy`.\r\n\r\nFollowing from @goerz , I'll rename the library `ImplicitBVH` and try to re-register - thank you.",
+      "createdAt": "2023-07-01T09:37:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1615793580",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85gULBp",
+      "author": {
+        "login": "anicusan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Following the discussion above, I renamed the library to `ImplicitBVH.jl` and created a new [registration attempt](https://github.com/JuliaRegistries/General/pull/86654). This pull request can now be closed.",
+      "createdAt": "2023-07-01T13:06:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1615900777",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85i9L4P",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-01T12:23:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1660206607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jgrpe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-08T12:23:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/86587#issuecomment-1669511774",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IBVH\n- Repository: https://github.com/StellaOrg/IBVH.jl\n- Created by: @anicusan\n- Version: v0.2.0\n- Commit: 5ce9794bf18269f0b2e6880aef7b881bb19c5b01\n- Reviewed by: @anicusan\n- Reference: https://github.com/StellaOrg/IBVH.jl/commit/5ce9794bf18269f0b2e6880aef7b881bb19c5b01#commitcomment-120256189\n- Description: Fast Bounding Volume Hierarchy for Collision Detection in Dynamic Scenes\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f7a81b31eeb3657f5039060f1d1d811eda179cdf233535b8172059ec59349b693aa0495620825a2f79820468041b5bc76603fd99c43ef11090ce6cbba330e41b3d152c9d15a2549ca5c8d3fbea9f53d94bf6e243274c7a58d12e94a220d992487f723e50eafa033b87a687fc97e44d1c7d5055d2cc3353d97b53cdfe9eafcd49649de889c149ef3706653b710c3564f71be4f86dd640d0fffbe35b4ddee5f1609490361fdad080fa000c2114569d52d4 -->",
+  "package_name": "IBVH",
+  "closed_at": "2023-08-08T12:23:24Z",
+  "title": "New package: IBVH v0.2.0"
+}

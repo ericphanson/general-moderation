@@ -1,0 +1,620 @@
+{
+  "created_at": "2024-02-28T12:56:25Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101894,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851W4h-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-28T12:59:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1968932990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851W6OO",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, and congrats on the new package! In my opinion, the name is too short, and too close to the type name `Expr`. Longer package names are never a bad thing in Julia, so I encourage you to consider something like `NumericalExpressions`",
+      "createdAt": "2024-02-28T13:02:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1968939918",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851XBnH",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As another datapoint: from the name, I thought it's a Julia port of (quite popular) https://github.com/pydata/numexpr. Was interested and clicked.\r\nBut it isn't, right?\r\n[noblock]",
+      "createdAt": "2024-02-28T13:19:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1968970183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851XiMw",
+      "author": {
+        "login": "DeevsDeevs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle Thank you for your feedback on the proposed package name. I understand your concerns regarding its length and similarity to existing names. However, I’d like to offer some considerations in favor of retaining the chosen name, “NumExpr”:\r\n\r\n1. Brevity and Functionality: A shorter name facilitates easier function overloading without the need for additional aliasing logic. This enhances usability and code readability, which are core tenets of Julia’s design philosophy.\r\n2. Conventional Abbreviations: “Num” and “Expr” are widely recognized abbreviations for “Numerical” and “Expression,” respectively. This naming convention is intuitive for users familiar with mathematical and programming terminologies, ensuring the package’s purpose is immediately clear.\r\n3. Distinctive Functionality: While our package shares a name resemblance with the Python ‘numexpr’, it is not a port nor directly inspired by it. Our work is poised to introduce a powerful backend for reactive mathematical computations, distinguishing itself in functionality and scope. The name “NumExpr” succinctly reflects our package’s focus on numerical expressions, aligning with its innovative approach.\r\n\r\nOur intention is not to confuse but to maintain a clear and functional identity within the Julia ecosystem.\r\n[noblock]",
+      "createdAt": "2024-02-28T14:27:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969103664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851X1FG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Brevity and Functionality\r\n\r\nBrevity is not desirable in Julia packages, and it does not affect functionality. (Sometimes there are good short package names, but you really have to get off this “brevity” train)\r\n\r\nThis name in particular would be pretty much okay. But the existence of https://github.com/pydata/numexpr is a problem. So we have the exact same situation as with Serde now. This is what I meant with you having to do some research on your proposed package names.\r\n\r\nThe best thing to do is to avoid another long discussion and to rename to something like `NumericalExpressions`",
+      "createdAt": "2024-02-28T15:05:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969180998",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851X5GU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@FrancescAlted As the maintainer of https://github.com/pydata/numexpr, would you like to weigh in here? In a situation like this, your “yes” or “no” would likely be the deciding factor for whether this Julia package will be accepted ",
+      "createdAt": "2024-02-28T15:12:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969197460",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851X8Lx",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Does NumExpr violate any copyrights?",
+      "createdAt": "2024-02-28T15:18:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969210097",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851YILV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's not the point. We don't go by legalities here. A Julia package `NumExpr` could be considered misrepresenting itself as being associated with the existing https://github.com/pydata/numexpr. And at the very least, it's polite to check with the existing project whether they see this as impinging on their \"brand\" (not in the sense of a trademark, just basic common sense).",
+      "createdAt": "2024-02-28T15:41:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969259221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851YQth",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Hi, and congrats on the new package! In my opinion, the name is too short, and too close to the type name `Expr`. Longer package names are never a bad thing in Julia, so I encourage you to consider something like `NumericalExpressions`\r\n\r\nThanks for your comment on the package. The Julia community should not hinder individual preferences, as doing so could limit our self-expression and the creative freedom that's essential.\r\n\r\n@gdalle cc",
+      "createdAt": "2024-02-28T15:57:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 4
+          }
+        },
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969294177",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851YXTa",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The Julia community should not hinder individual preferences, as doing so could limit our self-expression and the creative freedom that's essential.\r\n\r\nThe General registry is a shared community resource. If you cannot follow the guidelines, the best course of action might be to use a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl) for your organization.",
+      "createdAt": "2024-02-28T16:10:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969321178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Yx0M",
+      "author": {
+        "login": "dmitrii-doronin"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > The Julia community should not hinder individual preferences, as doing so could limit our self-expression and the creative freedom that's essential.\r\n> \r\n> The General registry is a shared community resource. If you cannot follow the guidelines, the best course of action might be to use a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl) for your organization.\r\n\r\nSpeaking about guidelines, the name satisfies all the points in [juliadocs](https://web.mit.edu/julia_v0.6.0/julia/share/doc/julia/html/en/manual/packages.html#Guidelines-for-naming-a-package-1). If there're more of them, then they all should be very explicit and in one place. \r\n\r\nAlso the other [package naming guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines-1) in [CONTRIBUTING.md](https://github.com/JuliaRegistries/General/blob/master/CONTRIBUTING.md) is unfortunately broken. \r\n\r\n[noblock]",
+      "createdAt": "2024-02-28T16:58:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969429772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Y5Kh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`NumExpr` as a name doesn't specifically violate any guidelines. It would probably be fine if it wasn't for the existing https://github.com/pydata/numexpr\r\n\r\nBut part of the registration process is the community review. With the https://github.com/bhftbootcamp/ organization, you have a pattern of brushing up against the expectations of the community. In fact, not just the Julia community, but the larger open-source community, by reusing the names of existing projects without any relation to those projects. It feels like you just want to do your own thing. That's fine! But, I really think you would be better served by managing your own [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl)",
+      "createdAt": "2024-02-28T17:11:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969459873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Z7tQ",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I have proposed a new package naming guideline that will be relevant to this discussion if it receives community approval. (https://github.com/JuliaLang/julia/pull/53514)\r\n\r\n> Also the other package naming guidelines in CONTRIBUTING.md is unfortunately broken.\r\n\r\nThank you for pointing that out. #101935",
+      "createdAt": "2024-02-28T19:49:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1969732432",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851gUE4",
+      "author": {
+        "login": "FrancescAlted"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey, that's a bit late, but I personally don't have inconvenient in other projects using the same name.  I agree in that perhaps, and provided how close Julia and Python ecosystems are, using the same name wouldn't be the wisest of the decisions, and can lead to some confusion. But again, this not posing a particular problem or inconvenience to me.",
+      "createdAt": "2024-02-29T15:38:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1971405112",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851grbz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> provided how close Julia and Python ecosystems are, using the same name wouldn't be the wisest of the decisions, and can lead to some confusion\r\n\r\nYeah, personally, I would lean towards keeping the `NumExpr` name open for a future Julia package that *is* directly related to the Python package. On the other hand, we usually have a first-come-first-serve policy. So, this is pretty much a maintainer decision at this point.\r\n\r\nOf course, if @DeevsDeevs comes around to renaming to the recommended `NumericalExpressions`, or to use a `LocalRegistry` for their organization (so we don’t have this situation again for the next package registration), the point is moot.\r\n\r\n",
+      "createdAt": "2024-02-29T16:26:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1971500787",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851jl4e",
+      "author": {
+        "login": "DeevsDeevs"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz  So if FrancesAlted has no problems with us using this package name, i believe we want to continue with it.\r\n[noblock]",
+      "createdAt": "2024-03-01T01:12:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1972264478",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851o9Of",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I oppose this name for 3 reasons:\r\n\r\n1. Package naming guideline 4 says\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n>\r\n>   RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nThis applies directly to this case. NumericalExpressions is a better name than NumExpr for the General registry.\r\n\r\n2. In Julia, the abbreviation `Expr` refers most commonly to `Base.Expr`. This package is for working with numerical expressions, rather than the Julia `Expr` type, so using the `Expr` abbreviation is confusing/possibly misleading.\r\n\r\n3. Also relevant, though less of a blocker imo is the new guideline 8 on https://docs.julialang.org/en/v1.12-dev/tutorials/creating-packages/#Package-naming-guidelines (link should be valid after the next documentation deployment within a few hours)\r\n\r\n>  Avoid using a distinctive name that is already in use in a well known, unrelated project.\r\n\r\nI think that each of 1 and 2 alone would be sufficient to warrant renaming. 3 is more ambiguous.",
+      "createdAt": "2024-03-01T18:10:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1973670815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851pwbh",
+      "author": {
+        "login": "DeevsDeevs"
+      },
+      "authorAssociation": "NONE",
+      "body": " @LilithHafner @goerz  Thank you again for your feedback, however i don't really agree with your proposal. Some key factors for that are:\r\n\r\n1. Community Consensus: Getting FrancescAlted's nod was about ensuring community buy-in. If that's not a key factor, what is?\r\n2. Guideline Timing: The new guidelines came in mid-discussion. They should apply to future packages, not retroactively affect ours. Changing rules midway shouldn't impact already submitted proposals.\r\n3. Practical Naming: \"Expr\" in our name is practical and specific. With clear documentation, any confusion is minimal.\r\n\r\nLet's aim for a balanced and fair approach, respecting the collaborative spirit and the timing of guideline updates.\r\n[noblock]",
+      "createdAt": "2024-03-01T20:37:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1973880545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851p5oK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Community Consensus: Getting FrancescAlted's nod was about ensuring community buy-in.\r\n\r\n`FrancescAlted` definitely had an absolute veto on this name, which they didn't exercise. But the more relevant community is the Julia community, and there's no consensus there. Actually, there is: the consensus in the community is that you should rename the package, but you are refusing to do so.\r\n\r\nSo at this point, the question is whether there's a maintainer who feels \"the author should have the last word\" outweighs the interests of the community.\r\n\r\n> Guideline Timing: The new guidelines came in mid-discussion.\r\n\r\nBeing the cause of a new community guideline is about the strongest rebuke you could possibly get.\r\n\r\n> Let's aim for a balanced and fair approach,\r\n\r\nYou've not given an inch here, so I don't see how this is \"balanced\". Why are you so resistant to `NumericalExpressions`?",
+      "createdAt": "2024-03-01T21:06:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1973918218",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851p9k6",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Your points 1 & 2 address my point 3. Honestly, my point 3 is not particularly strong anyway.\r\n\r\nWith respect to the Concision/Clarity tradeoff, we try to situate ourselves on the side of clarity. Ideally, we want folks to get a reasonably accurate picture of what the package does from the name alone. Documentation is great and essential, but it's not a substitute for this.\r\n\r\nAdditionally, it is nice for folks to be able to easily guess/remember package names by always using the canonical (i.e full) representation of words. That way you just remember the concepts in the name and don't have to remember the abbreviations too.",
+      "createdAt": "2024-03-01T21:20:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1973934394",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851qXim",
+      "author": {
+        "login": "dmitrii-doronin"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Your points 1 & 2 address my point 3. Honestly, my point 3 is not particularly strong anyway.\r\n> \r\n> With respect to the Concision/Clarity tradeoff, we try to situate ourselves on the side of clarity. Ideally, we want folks to get a reasonably accurate picture of what the package does from the name alone. Documentation is great and essential, but it's not a substitute for this.\r\n> \r\n> Additionally, it is nice for folks to be able to easily guess/remember package names by always using the canonical (i.e full) representation of words. That way you just remember the concepts in the name and don't have to remember the abbreviations too.\r\n\r\nIt's not simply about concision and clarity. We are having this discussion in part because of the current naming guidelines. They are simply too rigid and they seem to not follow trends of the modern languages. I don't see people complaining about package names in Rust, Golang or even C++. And in case of the general registry it significantly undermines the goals of being a 'shared community space'.\r\n\r\nMoreover, using full names hinders creativity and makes the namespace limited and ugly. What if somebody wants to register a package with similar functionality? Are they going to call it 'ExpressionsNumerical' or 'NumericalExpressions2'? Both of these names seem underwhelming to say the least. \r\n\r\nLastly, I'm yet to come to a moment where I forget a name of a package I'm actively developing with. IMO, it's easier to remember a good and catchy name than something so general it can be considered terminology. \r\n[noblock]",
+      "createdAt": "2024-03-01T22:54:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974040742",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851qZWM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> [The current naming guidelines] are simply too rigid and they seem to not follow trends of the modern languages. I don't see people complaining about package names in Rust, Golang or even C++. And in case of the general registry it significantly undermines the goals of being a 'shared community space'.\r\n\r\nThat's the whole point we're trying to get across! The package naming conventions are *deliberately* different from the conventions in these other languages. Different languages have different conventions, and you should follow the conventions of the language you are using. `NumericalExpressions` would not be a good name for a Python or C++ package, but it would, for a Julia package.\r\n\r\n> Moreover, using full names hinders creativity and makes the namespace limited and ugly.\r\n\r\nIt is the strong consensus of the Julia community that we want packages to be named that way (with some specific exceptions). We still very much allow for creative names; not every package name has to be of the explicit form of `NumericalExpressions`. But `NumExpr` is in no way an example of a creative package name. It is simply a *short* name, which does not match the guidelines.\r\n\r\nYour ideas on package naming are just not compatible with the General registry, which is why every package registration coming out of your organization has been problematic. If you are unwilling to adapt, please create a `LocalRegistry` for your organization that meets your expectations.\r\n",
+      "createdAt": "2024-03-01T23:02:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974048140",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851qcaS",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> We are having this discussion in part because of the current naming guidelines. They are simply too rigid and they seem to not follow trends of the modern languages.\r\n\r\nIf you would like to change the current naming guidelines, feel free to make a proposal and solicit community support (e.g. https://github.com/JuliaLang/julia/pull/53514)",
+      "createdAt": "2024-03-01T23:18:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974060690",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851qhEA",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also point out that when package names deviate from the normal conventions, that in itself has connotations that can be quite informative. For example, I would expect an `NumExpr` to be \"close to core\" (due to [the connection to the `Base.Expr`](https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1973670815)), or, even more likely, to have some relation to an existing non-Julia project (like the Python-`numexpr`). Wrapping or re-implementing an existing library is the most common reason to choose a \"non-Julian\" name (and is quite routine). In fact, a Julia translation of the Python-`numexpr` *should* use the name `NumExpr`.\r\n\r\nFor this package, it has none of the connotations that would justify deviating from the conventions.",
+      "createdAt": "2024-03-01T23:39:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974079744",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tKWB",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "Оkay, If the main problem is using a reserved name in Python, what do you think about the name `VarExpr`?\r\n@DeevsDeevs  @goerz cc\r\n\r\n",
+      "createdAt": "2024-03-02T11:41:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974773121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tKjp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "USE A LONG DESCRIPTIVE NAME. How many times do we have to explain this?\r\n\r\nYou are clearly not getting the point, so please do not register your packages in General. You should use a `LocalRegistry`.\r\n\r\n> the main problem is using a reserved name in Python\r\n\r\nNo, the main problem is that you think you are exempt from the community guidelines, simply because you don't like them.",
+      "createdAt": "2024-03-02T11:45:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974773993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tK2Y",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "> so please do not register your packages in General\r\n\r\nOkay \r\n![449c876c26c420d1](https://github.com/JuliaRegistries/General/assets/33372067/0c2a68f5-7518-43b8-93a8-efc313ffea2f)\r\n",
+      "createdAt": "2024-03-02T11:52:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974775192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tLBV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Great. So can I close this?",
+      "createdAt": "2024-03-02T11:55:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974775893",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tLKa",
+      "author": {
+        "login": "gryumov"
+      },
+      "authorAssociation": "NONE",
+      "body": "ok, close it",
+      "createdAt": "2024-03-02T11:58:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974776474",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851tL0y",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please note that if you come around to the community guidelines in the future, you will always be welcome again",
+      "createdAt": "2024-03-02T12:08:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101894#issuecomment-1974779186",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NumExpr\n- Repository: https://github.com/bhftbootcamp/NumExpr.jl\n- Created by: @DeevsDeevs\n- Version: v1.0.0\n- Commit: 6f570155fbd0d72c0b11ab7e602cbd67e358efea\n- Reviewed by: @DeevsDeevs\n- Reference: https://github.com/bhftbootcamp/NumExpr.jl/commit/6f570155fbd0d72c0b11ab7e602cbd67e358efea#commitcomment-139158660\n- Description: The NumExpr library is designed to handle and evaluate arithmetic expressions. It enables parsing and analyzing expressions, as well as performing calculations with user-defined functions\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60fd2c70c38dfbd2031636fbeaa334bf00467adb3900bd088287983ebee9b4dff7a10a04d7c22fb2f19f51a50b12b8548ed3d87ef65428e63f4b145ed5941cd54337a14b9d6ff1555f1f4fe3ee1ac16cc752339e5ab22c266abd5be9a8454103f2a857e9f257c2e9bdda76d75a880f2cd1ead8df6a4b11cc1276edc36ec3600abb8443a1cee7fad18206a71c64bde9551b4a667379ff8c07435011d9819c3e450e6a786f448be89629868353d56fdf82a -->",
+  "package_name": "NumExpr",
+  "closed_at": "2024-03-02T12:02:58Z",
+  "title": "New package: NumExpr v1.0.0"
+}

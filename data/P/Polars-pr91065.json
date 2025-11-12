@@ -1,0 +1,113 @@
+{
+  "created_at": "2023-09-08T15:25:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 91065,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85mCMmu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Colors. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.97 is at or below cutoff of 2.50.\n  2. Similar to Solaris. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-09-08T15:30:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1711851950",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mCmNU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This looks nice in principle, but I would put a package with this name under a bit more scrutiny: The Python `polars` seems like a pretty high-profile package, and having a `Polars` Julia package as a wrapper (with that name) signals that it's the authorative package for `polars` in Julia.\r\n\r\nIs this package prepared to live up to that expectation? Usually, for \"authorative\" packages, I would consider criteria like the following:\r\n\r\n* The package should be hosted under a Github Organization, not a personal account, ideally with multiple people\r\n* There should be maintainer with a permanent position or long-term funding, or a company/group that intends to fund someone as a future maintainer\r\n* The package should have reasonably complete documentation\r\n\r\nIf the package isn't expected to have a long-term maintainer, a less authoritative sounding name would be more appropriate\r\n\r\n[noblock]",
+      "createdAt": "2023-09-08T16:45:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1711956820",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nNxAm",
+      "author": {
+        "login": "Pangoraw"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for taking a look at the registration. I personally don't think we should hold package registration to leave the name for an hypothetical \"authoritative\" package. Indeed, it seems quite a few packages in the ecosystem started as individual contributions (Arrow, DuckDB) and I think that's great. A few more data-points for polars case:\r\n\r\n - [a polars Julia wrapper has been requested for a while.](https://github.com/pola-rs/polars/issues/547)\r\n - [polars maintainers stated they have no bandwidth to maintain such package.](https://github.com/pola-rs/polars/issues/547#issuecomment-820225539)\r\n - the new polars frontends such as [r-polars](https://github.com/pola-rs/r-polars) are also community maintained.\r\n - I found no existing Julia wrapper.\r\n\r\nNow I also understand the concern for the bus-factor. I added more features and [docs](https://pangoraw.github.io/Polars.jl/docs) in the package since the initial registration attempt and I am looking forward to collaborating with other interested contributors/users. \r\n\r\nFor posterity, any long-term position maintainer in a company or group who is looking to take over the maintenance of the package (or rewrite it from scratch) can contact me, my email is in the Project.toml.",
+      "createdAt": "2023-09-22T15:58:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1731661862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nOSZQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Fair enough! This was more about nudging awareness, and to potentially allow other members of the community to weigh in.\r\n\r\nThe name similarity is clearly a false positive, but unfortunately still blocks the automatic merge. You'll have to post a message on the `#pgk-registration` channel on Slack to get a maintainer to merge it manually.\r\n\r\n[noblock]",
+      "createdAt": "2023-09-22T17:38:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1731798608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85q1QB9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-11-03T12:23:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1792344189",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85rsZ9U",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-11-11T12:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/91065#issuecomment-1806802772",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Polars\n- Repository: https://github.com/Pangoraw/Polars.jl\n- Created by: @Pangoraw\n- Version: v0.1.0\n- Commit: 1860f4dd5a8750ffe2ab78268b72e7008cfe169d\n- Reviewed by: @Pangoraw\n- Reference: https://github.com/Pangoraw/Polars.jl/commit/1860f4dd5a8750ffe2ab78268b72e7008cfe169d#commitcomment-129076209\n- Description: :bear: Julia wrapper around the polars library\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65c1b67d31f948d66f7c2a2bed178b130294a895a76fdadad4de36b91f286dfc7ac2617141188d7a7e762168f7b7190be45fc14ca15b4759a0a52685c3aaefa46df02ab5c236e024c79ed23dde1600411a03d9d43bebadd9ee113d889278eeff837e72f482e4421905b592aae8eaa02f7319de4e0c4bd6db764c72367b6b8333ea83e0f4a8271c6eac1fc67c7e7be24a6da49f5309cb9bda6416e0eb8a65b9faea94335dff7f7284a43c544ad9bceec9b -->",
+  "package_name": "Polars",
+  "closed_at": "2023-11-11T12:23:03Z",
+  "title": "New package: Polars v0.1.0"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2021-03-10T10:45:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 31629,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NTIzNjk0Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, FFTW, Interpolations, SpecialFunctions, julia\n- Package name similar to 5 existing packages.\n1. Similar to SRCWA. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n2. Similar to DCCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to LTWA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to ORCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n5. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-10T10:49:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/31629#issuecomment-795236947",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NTkzOTUyNg==",
+      "author": {
+        "login": "jonschlipf"
+      },
+      "authorAssociation": "NONE",
+      "body": "I renamed the package, pull request is at:\r\nhttps://github.com/JuliaRegistries/General/pull/31662\r\nThis can be closed.",
+      "createdAt": "2021-03-10T19:16:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31629#issuecomment-795939526",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RCWA\n- Repository: https://github.com/jonschlipf/RCWA.jl\n- Created by: @jonschlipf\n- Version: v1.0.0\n- Commit: 45d98054df36d5855ca03e2cc6425db633b1e3b3\n- Reviewed by: @jonschlipf\n- Reference: https://github.com/jonschlipf/RCWA.jl/commit/45d98054df36d5855ca03e2cc6425db633b1e3b3#commitcomment-48084423\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6750b6c624cd1844f1bd8537eef1ad27b30dfc34152ec5b58581691284074caf22225734a0d20860a80f0d0253c0559e611b762b0fd16453e81a523981f46c4bcece620cf0f111a45eaed40302473d686d185c01eb29d015673ea844f947e411d340de1d7a8b85349fa49943a1d88fd79f644e8cf24edf731449a4de8815b1f4f882f203d1d4d51c7bd59ec5c7d82d8b274e3599ce666e7a5259b133431e4ddab8a00bee1737e80702a476d22d7698cba -->",
+  "package_name": "RCWA",
+  "closed_at": "2021-03-10T19:26:51Z",
+  "title": "New package: RCWA v1.0.0"
+}

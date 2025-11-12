@@ -1,0 +1,128 @@
+{
+  "created_at": "2019-08-14T15:14:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "StefanKarpinski",
+  "merged_at": null,
+  "pr_number": 2687,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTI5MTMwNg==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What is lacking in the MKL support in Pardiso.jl?",
+      "createdAt": "2019-08-14T15:18:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-521291306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTI5NTY2NA==",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @KristofferC \r\n\r\nPardiso.jl is great! I am not trying to replicate its functionality. \r\n\r\nI need direct access to the low level fortran routines in Pardiso to have fine control. I haven't found so thin wrappers in Pardiso.jl (e.g., is it possible to access `pardiso_64`?) That's why I have written the repo, mainly for my own purposes, but it can be also useful for someone else.\r\n\r\n",
+      "createdAt": "2019-08-14T15:28:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-521295664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTM5OTk1NQ==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, it would be useful if you could open up an issue on Pardiso.jl with what you need. We could eg add a layer for direct access to the Fortran functions there if you want. \r\n\r\nIt personally feels a bit unnecessary to spread out too much code over different packages about something as specific as just wrapping Pardiso.\r\n\r\nNot that this PR can't be merged, it is just a good long term goal to try have a Pardiso package that works for everyone. ",
+      "createdAt": "2019-08-14T20:11:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-521399955",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTUzMzU2NQ==",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @KristofferC \r\n\r\nthanks for your comments. I see your point. It would be much better if Pardiso.jl provides also low level access to the pardiso mkl  subroutines (this is actually what I was looking for at the beginning but didn't find it in the package). \r\n\r\nFirst, I thought to create a fork of Pardiso.jl, add what I needed, and then open a PR. However, two things prevented me of doing this:\r\n\r\n1) I was not able to properly install Pardiso.jl in my system. I think that gcc-6 is not supported. And custom installations of gcc are not supported neither.\r\n\r\n2) The Pardiso.jl does not have Project.toml and a Manifest.toml files. I am quite new in Julia and I don't know how to work with packages that don't follow the new project structure.\r\n\r\nWe can work together to solve these two issues.  Then I can add the functionality of `PardisoMKL.jl` into `Pardiso.jl` (essentially the functions in the API section of the [README.md](https://github.com/fverdugo/PardisoMKL.jl/blob/master/README.md) file with perhaps slightly different names if you wish)\r\n\r\nFor me would be nice to contribute to Pardiso.jl and for you would be nice to have Pardiso.jl improved.\r\n\r\nWhat is your opinion?\r\n",
+      "createdAt": "2019-08-15T06:41:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-521533565",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMTk3MDQ3Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Seems like a good idea to me.",
+      "createdAt": "2019-08-16T10:54:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-521970477",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjA4NTc5OQ==",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I am currently on a vacation trip. Once I am back, I’ll try to patch Pardiso.jl so that it can be installed in my machine and open a PR. Once this is done, I can add the low level functions I need and open another PR.  Regards!",
+      "createdAt": "2019-08-16T17:20:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-522085799",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUyMjU5ODAwMg==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm going to close this for now. If you want to register, just re-trigger with registrator.",
+      "createdAt": "2019-08-19T14:23:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/2687#issuecomment-522598002",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PardisoMKL\n- Repository: https://github.com/fverdugo/PardisoMKL.jl\n- Created by: @fverdugo\n- Version: v0.1.0\n- Commit: 78c67a45088a135f67da288074c3a2fefe9e77e0\n- Reviewed by: @fverdugo\n- Reference: https://github.com/fverdugo/PardisoMKL.jl/commit/78c67a45088a135f67da288074c3a2fefe9e77e0#commitcomment-34691120\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae479d07aa403a820a60befc6e15c8b115759d3edb57580be8f63d2df6ac77aa103994bb19bb0818abde408f0b1a8c596a1a5eb4aedd42a049f10f3ee677961f4a1ca78828236e63558ee3805a33b0131031b8a05c1ec1a558cf6af4eeb1919e78f6c7f413539f5ad678d8137fbd6256cccbc64695c21e1047dd7737ddcb05431d31e114bd0ef02f3b74831023210be2b4a6dad1fa3d3978a4f4a48ef512ccfa11f9734633c2c6eeca0f0fa5bf8b6e2011c -->",
+  "package_name": "PardisoMKL",
+  "closed_at": "2019-08-19T14:23:34Z",
+  "title": "New package: PardisoMKL v0.1.0"
+}

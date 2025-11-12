@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-01-05T23:15:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 75212,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85R1RH3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import ItuRjl` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-05T23:19:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75212#issuecomment-1372918263",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R1U9u",
+      "author": {
+        "login": "HillaryKchao"
+      },
+      "authorAssociation": "NONE",
+      "body": "I received this message when trying to merge my commit to general:\r\n\r\n- I was not able to load the package (i.e. `import ItuRjl` failed). See the CI logs for details.\r\n\r\nMy initial thought was that my package name did not match my main module name, so I changed that, but the same test still did not pass. Any insight to what I would need to do to fix this would be much appreciated. Thank you!",
+      "createdAt": "2023-01-05T23:40:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75212#issuecomment-1372933998",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R3X9W",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you import the package yourself locally? This is what I get:\r\n```\r\n(@v1.7) pkg> activate --temp\r\n  Activating new project at `/tmp/jl_waNdg2`\r\n\r\n(jl_waNdg2) pkg> add https://github.com/HillaryKchao/ItuRjl.jl.git\r\n     Cloning git-repo `https://github.com/HillaryKchao/ItuRjl.jl.git`\r\n    Updating git-repo `https://github.com/HillaryKchao/ItuRjl.jl.git`\r\n    Updating registry at `/tmp/foo29/registries/General.toml`\r\n   Resolving package versions...\r\n    Updating `/tmp/jl_waNdg2/Project.toml`\r\n  [ec3d9ab2] + ItuRjl v0.1.1 `https://github.com/HillaryKchao/ItuRjl.jl.git#master`\r\n    Updating `/tmp/jl_waNdg2/Manifest.toml`\r\n  [ec3d9ab2] + ItuRjl v0.1.1 `https://github.com/HillaryKchao/ItuRjl.jl.git#master`\r\nPrecompiling project...\r\n  ✗ ItuRjl\r\n  0 dependencies successfully precompiled in 1 seconds\r\n  1 dependency errored. To see a full report either run `import Pkg; Pkg.precompile()` or load the package\r\n\r\njulia> import ItuRjl\r\n[ Info: Precompiling ItuRjl [ec3d9ab2-5917-4511-a826-b453e688014f]\r\nERROR: LoadError: EOFError: read end of file\r\nStacktrace:\r\n  [1] unsafe_read(s::IOStream, p::Ptr{UInt8}, nb::UInt64)\r\n    @ Base ./iostream.jl:427\r\n  [2] unsafe_read\r\n    @ ./io.jl:724 [inlined]\r\n  [3] read!\r\n    @ ./io.jl:742 [inlined]\r\n  [4] #366\r\n    @ ./io.jl:446 [inlined]\r\n  [5] open(f::Base.var\"#366#367\"{Array{Float64, 3}}, args::String; kwargs::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})\r\n    @ Base ./io.jl:330\r\n  [6] open\r\n    @ ./io.jl:328 [inlined]\r\n  [7] read!(filename::String, a::Array{Float64, 3})\r\n    @ Base ./io.jl:446\r\n  [8] top-level scope\r\n    @ /tmp/foo29/packages/ItuRjl/Z1OWD/src/iturP840.jl:24\r\n  [9] include(mod::Module, _path::String)\r\n    @ Base ./Base.jl:418\r\n [10] include(x::String)\r\n    @ ItuRjl /tmp/foo29/packages/ItuRjl/Z1OWD/src/ItuRjl.jl:1\r\n [11] top-level scope\r\n    @ /tmp/foo29/packages/ItuRjl/Z1OWD/src/ItuRjl.jl:30\r\n [12] include\r\n    @ ./Base.jl:418 [inlined]\r\n [13] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt64}}, source::Nothing)\r\n    @ Base ./loading.jl:1318\r\n [14] top-level scope\r\n    @ none:1\r\n [15] eval\r\n    @ ./boot.jl:373 [inlined]\r\n [16] eval(x::Expr)\r\n    @ Base.MainInclude ./client.jl:453\r\n [17] top-level scope\r\n    @ none:1\r\nin expression starting at /tmp/foo29/packages/ItuRjl/Z1OWD/src/iturP840.jl:1\r\nin expression starting at /tmp/foo29/packages/ItuRjl/Z1OWD/src/ItuRjl.jl:1\r\nERROR: Failed to precompile ItuRjl [ec3d9ab2-5917-4511-a826-b453e688014f] to /tmp/foo29/compiled/v1.7/ItuRjl/jl_Zt2IQ0.\r\nStacktrace:\r\n [1] error(s::String)\r\n   @ Base ./error.jl:33\r\n [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IO, internal_stdout::IO, ignore_loaded_modules::Bool)\r\n   @ Base ./loading.jl:1466\r\n [3] compilecache(pkg::Base.PkgId, path::String)\r\n   @ Base ./loading.jl:1410\r\n [4] _require(pkg::Base.PkgId)\r\n   @ Base ./loading.jl:1120\r\n [5] require(uuidkey::Base.PkgId)\r\n   @ Base ./loading.jl:1013\r\n [6] require(into::Module, mod::Symbol)\r\n   @ Base ./loading.jl:997\r\n```\r\nFrom the backtrace it seems like something goes bad with the `read!` at `iturP840.jl:24`. A size mismatch?\r\n\r\nRegarding the package name, as an outsider `ITURecommendations` would make a lot more sense to me than `ItuRjl`.\r\n",
+      "createdAt": "2023-01-06T10:59:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75212#issuecomment-1373470550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85R5GdP",
+      "author": {
+        "login": "HillaryKchao"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you! I'm going to remake the package with a new name and clean up some small errors then reupload it; hopefully, that will fix the issue.",
+      "createdAt": "2023-01-06T17:29:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75212#issuecomment-1373923151",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ItuRjl\n- Repository: https://github.com/HillaryKchao/ItuRjl.jl\n- Created by: @HillaryKchao\n- Version: v0.1.1\n- Commit: 01f3535f16f8d42e4dfa1b6fd89a68f5d37787e5\n- Git reference: master\n- Description: A Julia implementation of the ITU-Recommendations for space links covering cloud, gaseous, rain, and scintillation attenuations.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> v0.1.1 for studying impact due to climate change.\n<!-- END RELEASE NOTES -->",
+  "package_name": "ItuRjl",
+  "closed_at": "2023-01-08T16:30:07Z",
+  "title": "New package: ItuRjl v0.1.1"
+}

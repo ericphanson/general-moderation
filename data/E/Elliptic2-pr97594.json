@@ -1,0 +1,254 @@
+{
+  "created_at": "2023-12-21T21:42:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 97594,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vR7VD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- Package name similar to 1 existing package.\n  1. Similar to Elliptic. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-21T21:46:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1866970435",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vR7m_",
+      "author": {
+        "login": "archermarx"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, I'm trying to register this fork of Elliptic (which appears to be unmaintained) so that I can register my other package, LoopFieldCalc, which relies on it. This package improves upon Elliptic by adding autodiff compatability, as well as by modernizing the CI and workflows. I tried to make a PR to the original package, but it has gone un-looked-at for months. ",
+      "createdAt": "2023-12-21T21:47:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1866971583",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vS3fe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "When a package is unmaintained, and the owner @nolta has not been responsive in months, there is precedence for forking the package into an organization and continuing the development there. The fork could then take over the registration of the package to continue making releases under the same package name. Obviously, this needs to be signed off on by the registry and org maintainers. Maybe https://github.com/JuliaMath would be a suitable organization to host this package?",
+      "createdAt": "2023-12-22T04:11:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867216862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vS4wS",
+      "author": {
+        "login": "archermarx"
+      },
+      "authorAssociation": "NONE",
+      "body": "It seems like a lot of the functionality would be at home in SpecialFunctions. I'm happy with whatever. My main goal is to register a different package which relies on this fork. In the meantime, would it make more sense to maybe just incorporate the functionality I need directly into my package?\r\n \r\nOn Thu, Dec 21, 2023, 9:11 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> When a package is unmaintained, and the owner @nolta\r\n> <https://github.com/nolta> has not been responsive in months, there is\r\n> precedence for forking the package into an organization and continuing the\r\n> development there. The fork could then take over the registration of the\r\n> package to continue making releases under the same package name. Obviously,\r\n> this needs to be signed off on by the registry and org maintainers. Maybe\r\n> https://github.com/JuliaMath would be a suitable organization to host\r\n> this package?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867216862>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AOP3QGTDKOB4JING5HPJPD3YKUB6RAVCNFSM6AAAAABA67US7GVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTQNRXGIYTMOBWGI>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2023-12-22T04:21:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867222034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vVMQi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\"In the meantime\" (as in, you need it as a dependency for something else, right now), you could put `Elliptic2` in a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl).\r\n\r\nIn the medium/longer term, I'd see the following options (in the order from \"best from a community standpoint, but requiring buy-in from other people and potential delays\", to \"easiest for you to get this over with\"):\r\n\r\n1. Get the original https://github.com/nolta/Elliptic.jl transferred/forked to the JuliaMath organization and yourself added as its maintainer, and release a new version from there. I've tried to find people on Slack, but I'm not sure who in the JuliaMath community would be best to reach out to. It's Christmas, too, so it might be hard to get a hold of people until the new year.\r\n2. Contribute your functionality to https://github.com/JuliaMath/SpecialFunctions.jl. It seems that @stevengj and @devmotion are the two most active/recent developers in that repo, so they might be able to help you with that (or possibly with option 1)\r\n3. In principle, I'm also okay to keep going with `Elliptic2.jl`, but you'll have to keep trying to get the attention of a General registry maintainer on Slack (I don't have merge permissions).\r\n4. If you took `Elliptic.jl` and just made it differentiable, something like `DifferentiableElliptic.jl` would probably be a better package name than `Elliptic2.jl`. I assume it would pass the automatic checks, too, so there's only the three-day-waiting period, but no other people involved.",
+      "createdAt": "2023-12-22T15:40:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867826210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vVUFN",
+      "author": {
+        "login": "archermarx"
+      },
+      "authorAssociation": "NONE",
+      "body": "Wow, thanks for the detailed explanation! I'll give it some thought.\r\n\r\nOn Fri, Dec 22, 2023, 8:40 AM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> \"In the meantime\" (as in, you need it as a dependency for something else,\r\n> right now), you could put Elliptic2 in a LocalRegistry\r\n> <https://github.com/GunnarFarneback/LocalRegistry.jl>.\r\n>\r\n> In the medium/longer term, I'd see the following options (in the order\r\n> from \"best from a community standpoint, but requiring buy-in from other\r\n> people and potential delays\", to \"easiest for you to get this over with\"):\r\n>\r\n>    1. Get the original https://github.com/nolta/Elliptic.jl\r\n>    transferred/forked to the JuliaMath organization and yourself added as its\r\n>    maintainer, and release a new version from there. I've tried to find people\r\n>    on Slack, but I'm not sure who in the JuliaMath community would be best to\r\n>    reach out to. It's Christmas, too, so it might be hard to get a hold of\r\n>    people until the new year.\r\n>    2. Contribute your functionality to\r\n>    https://github.com/JuliaMath/SpecialFunctions.jl. It seems that\r\n>    @stevengj <https://github.com/stevengj> and @devmotion\r\n>    <https://github.com/devmotion> are the two most active/recent\r\n>    developers in that repo, so they might be able to help you with that (or\r\n>    possibly with option 1)\r\n>    3. In principle, I'm also okay to keep going with Elliptic2.jl, but\r\n>    you'll have to keep trying to get the attention of a General registry\r\n>    maintainer on Slack (I don't have merge permissions).\r\n>    4. If you took Elliptic.jl and just made it differentiable, something\r\n>    like DifferentiableElliptic.jl would probably be a better package name\r\n>    than Elliptic2.jl. I assume it would pass the automatic checks, too,\r\n>    so there's only the three-day-waiting period, but no other people involved.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867826210>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AOP3QGUVMUN5PITQSV3XYRDYKWSWHAVCNFSM6AAAAABA67US7GVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTQNRXHAZDMMRRGA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2023-12-22T16:13:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867858253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vVXLy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually, given https://github.com/nolta/Elliptic.jl/issues/4, which I only saw now, maybe \"option 2\" (open a PR for SpecialFunctions.jl) would be the most preferable outcome from a community standpoint. Since @nolta isn't available anymore, maybe it's just time for the `Elliptic` package to sunset (not sure if @Datseris objections about dependencies still apply). Having new functionality in the bigger, multiple-maintainer SpecialFunctions.jl seems like a much more future-proof solution, overall.",
+      "createdAt": "2023-12-22T16:28:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867870962",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vVZOs",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> My main goal is to register a different package which relies on this fork.\r\n\r\nI should add that my suggestion of using a `LocalRegistry` actually won't help with that: All packages in General can only have dependencies that are also in General. A `LocalRegistry` would be useful for local development and \"private\" workflows.\r\n\r\nAdding the new `Elliptic` functionality directly to your main package seems like a good idea. So my overall recommendation would probably be: get your new package registered (including the new `Elliptic` functionality), and then (assuming you feel generous towards the community and think that other people would benefit from your changes to `Elliptic`) prepare a PR for `SpecialFunctions.jl`. Once that's accepted and released, you can refactor your package to depend on `SpecialFunctions.jl`, and remove the code that's now in `SpecialFunctions`.",
+      "createdAt": "2023-12-22T16:38:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867879340",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vVsPW",
+      "author": {
+        "login": "stevengj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Contribute your functionality to https://github.com/JuliaMath/SpecialFunctions.jl\r\n\r\nWe're hoping to go in the opposite direction — splitting SpecialFunctions into multiple subsidiary packages, with the main SpecialFunctions package merely re-exporting those features.  That way you won't have to load the whole package if you just want e.g. Bessel functions.",
+      "createdAt": "2023-12-22T18:17:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1867957206",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vXLQx",
+      "author": {
+        "login": "Datseris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, thank you for tagging me. It is no problem at all for me change my dependency to a new package, it will only be a simple PR provided the API does not change in the transfer. However, I would argue, just like @stevengj has done, and just like I have also argued in this comment https://github.com/nolta/Elliptic.jl/issues/4#issuecomment-419671532 that lightweight specialized special function packages do have their use and role. My vote therefore is for Elliptic to transfer to the Math org and someone to become a more active maintainer! (if possible)",
+      "createdAt": "2023-12-23T18:24:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1868346417",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vXROu",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Makes sense! @stevengj: Would you be able to copy the repository to the JuliaMath organization, then? Or, can you find out who has owner status? It would probably be best to reach out to @nolta one more time by email to see if they can just transfer the repository. Otherwise, I suppose you'd have to do a \"hard fork\", like we did when we transferred [ali-ramadhan/DocumenterCitations.jl](https://github.com/ali-ramadhan/DocumenterCitations.jl) to [JuliaDocs/DocumenterCitations.jl](https://github.com/JuliaDocs/DocumenterCitations.jl) when that was in a similar situation: Clone the original repo, create a new project `JuliaMath/Elliptic`, add it as a remote, and push it. That should prevent any problems that might result if one were to use Github's \"fork\" button. After that, someone would have to make a manual PR to the General registry to change the project URL for the package.",
+      "createdAt": "2023-12-23T21:11:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1868370862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vXlMW",
+      "author": {
+        "login": "archermarx"
+      },
+      "authorAssociation": "NONE",
+      "body": "This all sounds good to me. By registering this package, I was already signing up to maintain it so I'm definitely ok with taking on a maintenance role with a rebased version of this package within JuliaMath",
+      "createdAt": "2023-12-24T07:31:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1868452630",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xmnrp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-23T12:23:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1905949417",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yYaq4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-01-31T12:22:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97594#issuecomment-1919003320",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Elliptic2\n- Repository: https://github.com/archermarx/Elliptic2.jl\n- Created by: @archermarx\n- Version: v0.2.0\n- Commit: e757de789cb7ae4d55450d7f0a6d206fafff863b\n- Reviewed by: @archermarx\n- Reference: https://github.com/archermarx/Elliptic2.jl/issues/3\n- Description: Differentiable fork of Elliptic\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359883169f151d70c12e5b97b185bbfae993fe16098f3f4ac20f5382ec527f29a4b400f928804205c65f9280bcbab31e2463437789789c4d1cb5f7df8b26372d600d058445f12cd3fe87a39baa52839e681aaa4a907e16c48c7c78e4e80aa1603b6c19da9990139a90d8241208926410af36ba3a4adc6affc5d4b3bea45f2824855a -->",
+  "package_name": "Elliptic2",
+  "closed_at": "2024-01-31T12:22:53Z",
+  "title": "New package: Elliptic2 v0.2.0"
+}

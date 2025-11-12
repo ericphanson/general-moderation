@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-06-04T10:36:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 108218,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85_-8DO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import RBiQuaternions` failed). See the AutoMerge logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-04T10:39:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2147205326",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85__AI2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README",
+      "createdAt": "2024-06-04T10:49:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2147222070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ABr8h",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also point out that a version 1.0 implied a stable package (with full documentation, tests, etc). You probably want to tag the initial version as 0.1.",
+      "createdAt": "2024-06-04T16:16:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2147925793",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ADfZI",
+      "author": {
+        "login": "ivanslapnicar"
+      },
+      "authorAssociation": "NONE",
+      "body": "Michael,\r\n\r\nthanks a lot.\r\nI edited README (at the very least, as you say), changed the version to 0.1.0, and started a new issue.\r\nI hope this is now fine.\r\n\r\nBest, Ivan\r\n\r\n\r\n\r\nProf. dr. sc. Ivan Slapničar\r\nSveučilište u Splitu / University of Split\r\nFESB\r\nR. Boškovića 32\r\nHR-21000 Split\r\nHrvatska / Croatia\r\nPhone: + 385 21 305893\r\nUred/Office: B803\r\n________________________________\r\nŠalje: Michael Goerz ***@***.***>\r\nPoslano: 4. lipnja 2024. 12:49\r\nPrima: JuliaRegistries/General ***@***.***>\r\nKopija: Ivan Slapničar ***@***.***>; Mention ***@***.***>\r\nPredmet: Re: [JuliaRegistries/General] New package: RBiQuaternions v1.0.0 (PR #108218)\r\n\r\n\r\nThank you for submitting your package! However, please make sure to add some documentation before registering. At the very least<https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4>, that would be a description of the package's purpose and a small usage example in the README\r\n\r\n—\r\nReply to this email directly, view it on GitHub<https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2147222070>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ACCGXMBHWNEPJ3XX5BGZSMTZFWLTVAVCNFSM6AAAAABIYHOEL2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDCNBXGIZDEMBXGA>.\r\nYou are receiving this because you were mentioned.Message ID: ***@***.***>\r\n",
+      "createdAt": "2024-06-04T20:53:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2148398664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86AGc0X",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #108271.",
+      "createdAt": "2024-06-05T08:16:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/108218#issuecomment-2149174551",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RBiQuaternions\n- Repository: https://github.com/ivanslapnicar/RBiQuaternions.jl\n- Created by: @ivanslapnicar\n- Version: v1.0.0\n- Commit: b3830dbc6485532b5e39cb0063a907c8424e0fb8\n- Reviewed by: @ivanslapnicar\n- Reference: https://github.com/ivanslapnicar/RBiQuaternions.jl/issues/3\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b77b0bb8a5129d372136d34fa27c8a06a256621a7d0db4b2cf8e1a0f0ac63e62bc432534a78a2f5b14dc95cfb07bc90303c15c3ffec14d81c10f1ce4ff38ed0fbe9337b6a23f536e93b8e98bf790d18ac27c7fa2260dad6108da79868aa12805b0eeba57f7f6cdc8b0e2e945c084b501d6d34a75ff710eb20dea8af313a27d00 -->",
+  "package_name": "RBiQuaternions",
+  "closed_at": "2024-06-05T08:16:37Z",
+  "title": "New package: RBiQuaternions v1.0.0"
+}

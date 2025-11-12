@@ -1,0 +1,121 @@
+{
+  "created_at": "2022-10-17T22:37:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 70454,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85MY2_3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-10-17T22:41:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1281585143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MY6RG",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "but everything is already data class in Julia?",
+      "createdAt": "2022-10-17T22:49:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1281598534",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MY9Nh",
+      "author": {
+        "login": "adamferreira"
+      },
+      "authorAssociation": "NONE",
+      "body": "> but everything is already data class in Julia?\r\n\r\nSure !\r\nBut this package exposes tools to have default fields values, and update them with dict just like you would with dataclasses in Python.",
+      "createdAt": "2022-10-17T23:06:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1281610593",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85MZDCo",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">have default fields values\r\n\r\ncheck out `Base.@with_kw` and https://mauro3.github.io/Parameters.jl/dev/manual/#Types-with-default-values-and-keyword-constructors\r\n\r\n>update them with dict just like you would with dataclasses\r\n\r\nprobably anti-pattern when read by most Julia users who don't think of class (types) as arbitrarily changeable dictionary",
+      "createdAt": "2022-10-17T23:41:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1281634472",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ma0xN",
+      "author": {
+        "login": "adamferreira"
+      },
+      "authorAssociation": "NONE",
+      "body": "I do use `Base.@with_kw` in the `@dataclass` macro.\r\nThe fields of a DataClass are not changeables, only their values.\r\nA DataClass can be transformed to a Dict and vice-versa.",
+      "createdAt": "2022-10-18T09:29:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1282100301",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85OmDAK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-11-17T12:56:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1318596618",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PHwvB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-11-25T12:49:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/70454#issuecomment-1327434689",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DataClasses\n- Repository: https://github.com/adamferreira/DataClasses.jl\n- Created by: @adamferreira\n- Version: v0.1.0\n- Commit: f2cf24f97561e9b3c1b8d564738277b659a82426\n- Git reference: HEAD\n- Description: Data Classes",
+  "package_name": "DataClasses",
+  "closed_at": "2022-11-25T12:49:20Z",
+  "title": "New package: DataClasses v0.1.0"
+}

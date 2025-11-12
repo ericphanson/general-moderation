@@ -1,0 +1,113 @@
+{
+  "created_at": "2024-03-06T13:39:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102391,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q852EjAe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-06T13:42:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-1980903454",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852FUe6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Wouldn’t `MomentOptimization` be more descriptive?",
+      "createdAt": "2024-03-06T15:17:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-1981106106",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8521uhj",
+      "author": {
+        "login": "bmourrain"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Wouldn’t `MomentOptimization` be more descriptive?\r\n\r\nThere is a package MomentOpt. I would like to avoid the confusion with it.\r\nMoreover, it contains tools to extract minimizers from moment sequences.\r\n\r\nIs it the obstacle to see it as a registered package ?",
+      "createdAt": "2024-03-13T08:20:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-1993795683",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853CfRM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]. It's just that \"Tools\" is an extremely non-descriptive word. I'd generally avoid it in package names, except maybe for packages that directly relate to a framework of packages (similar to how \"Base\" is used: you could have \"Tools\" for utilities shared by the packages in a specific organization).\r\n\r\nSo `MomentTools` doesn't really give much of an indication of what this package is about. My suggestion was based on the sentence in the README \"This a Julia package for solving polynomial optimization problems, via moment matrix relaxations\".\r\n\r\n> There is a package MomentOpt\r\n\r\nSo then how does this package compare to that package? That might be something to mention in the README, and something to take into account when choosing a more descriptive package name.",
+      "createdAt": "2024-03-14T10:39:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-1997141068",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854se75",
+      "author": {
+        "login": "bmourrain"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I will rename the package MomentPolynomialOpt.jl (which is longer but more descriptive since tools for Moment and Polynomial Optimization are provided by the package) and hope it can be registered.\r\n",
+      "createdAt": "2024-03-28T11:07:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-2024926969",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854vHGy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/103802",
+      "createdAt": "2024-03-28T16:22:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102391#issuecomment-2025615794",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MomentTools\n- Repository: https://github.com/AlgebraicGeometricModeling/MomentTools.jl\n- Created by: @bmourrain\n- Version: v0.2.4\n- Commit: 396a446b56cbf3415673426ee74759d08949272c\n- Git reference: HEAD",
+  "package_name": "MomentTools",
+  "closed_at": "2024-03-28T16:22:35Z",
+  "title": "New package: MomentTools v0.2.4"
+}

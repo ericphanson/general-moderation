@@ -1,0 +1,135 @@
+{
+  "created_at": "2025-05-23T14:11:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 131580,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86tIKl-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, ColorSchemes, DataFrames, FileIO, ImageIO, Interpolations, LaTeXStrings, Plots, SpecialFunctions\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-23T14:23:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2904598910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tIgRw",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This would seem to fall in the category of “personal utility packages” that are not suitable for registration in the General registry, [see the FAQ](https://github.com/JuliaRegistries/General#should-i-register-my-package-now). It would probably be completely fine to instruct readers of the paper to install the package directly from GitHub",
+      "createdAt": "2025-05-23T14:48:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2904687728",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tIoCT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That was just based on the description\r\n\r\n> This is the repository for all my codes related to the paper of diffusion-coupled growth\r\n\r\nBut, looking at the [docs](https://anstroh.github.io/MOBILE.jl/dev/), this actually looks like pretty normal package… So I might withdraw my “personal package” objections.\r\n\r\nThe name seems very non-ideal, though. Would it be possible to come up with a name that better aligns with the [guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules)? I assume MOBILE is an acronym (for what?). It could still be part of the name if prefixed or suffixed with a more descriptive word to give context.",
+      "createdAt": "2025-05-23T14:56:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2904719507",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tI6xD",
+      "author": {
+        "login": "AnStroh"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear goerz,\r\n\r\nthis will be the Repo for my paper (PhD Student in Mainz, Germany). I will add the related publication and detailed documentation after the end of May (deadline of the paper). The acronym is for MOving Boundary problem in dIffusion coupLEs. It is related to a petrological problem (geosciences). Hope with that information and some more work in around a week, the Release will be fine",
+      "createdAt": "2025-05-23T15:20:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2904796227",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tJyYf",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> this will be the Repo for my paper\r\n\r\nWhen you put it like that, i.e., if the it's just some code accompanying a paper, that would indicate that it shouldn't be registered. In such a situation, the only people who would need to install the package would be those who want to reproduce the paper. In that situation, it's fine to have them install it via `] add https://github.com/AnStroh/MOBILE.jl.git#main`. The critical point is that it wouldn't be used as a dependency of some other project. Something that's not intended as a dependency doesn't necessarily need to be in the General registry, and \"code accompanying a paper\" or similar one-off projects, per the guidelines, should not be registered, to avoid filling up the package namespace with packages that have no general utility.\r\n\r\nBut I don' think that's your situation: from the documentation, it seems more to me like this is a library implementing a specific diffusion model, and that model will also be detailed in a paper. That means it could absolutely be used as a dependency of future projects, and I would indeed encourage you to register it.\r\n\r\nPersonally, I feel that pronounceable acronyms (which `MOBILE` is) should be fine as package names, in principle. They fall into the category of what the guidelines consider \"less systematic names\", same as Makie, JuMP, and many other very popular packages. Still, my recommendation if you want to make the registration go through without any problems would be to [rename the package](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name) to maybe `DiffusionMOBILE`, `PetroMOBILE`, `GeoMOBILE`, or something similar. That would be more descriptive, but keep the acronym you're planning to use in the paper for recognizability as part of the name. If you want to stick to `MOBILE`, I don't have sufficiently high permissions to override the all-caps rule. You would need to go to the #pkg-registration channel in the [Julia Slack](https://julialang.org/slack/) after the end of the three-day review period and convince one of the full registry maintainers to merge it manually.",
+      "createdAt": "2025-05-23T16:23:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2905024031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tJ5zF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "By the way: thank you for registering your package _before_ submitting the paper. When there is a potential problem with a package name, \"we've already published a paper using that name\" is a very unfortunate situation, since that's not always sufficient grounds to make exceptions to the naming rules. Much better to clear the package name beforehand, whether you'll end up renaming or whether a full registry maintainer will make an exception for `MOBILE`.\r\n\r\nOh, and another way to maybe get past the automatic all-caps check (which I can't override) might be to adjust the capitalization to `MoBile` (capitalize letters that would be capitals in the title-cased expanded acronym) or `MoBILe` (capitalize letter when they appear in a new word in the expanded acronym). I'm not sure how strongly I would really recommend that approach, since it might be hard for users to remember which letters are capitalized and which are not. I would definitely _not_ recommend `Mobile`, as that loses any indication that the name is an acronym/retronym, and would be much too general/non-descriptive to be suitable for any package.",
+      "createdAt": "2025-05-23T16:35:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2905054405",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tcWgZ",
+      "author": {
+        "login": "aelligp"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz thank you for your input. We have addressed the name change and therefore opened a new registration PR (#131737 ) and this PR can be closed. \r\n\r\nI agree with you that at first it looks like a personal package, however the method and package should/can be used as dependencies in the future. Especially when you consider that the next step in the pkg development will be the 3D implementation.  This way the user can switch between fast 1D and more expensive 3D diffusion calculations that take growth into account. ",
+      "createdAt": "2025-05-26T14:12:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131580#issuecomment-2909890585",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MOBILE\n- Repository: https://github.com/AnStroh/MOBILE.jl\n- Created by: @AnStroh\n- Version: v0.1.0\n- Commit: a50f7a39766b9f552def1de9fd803d26f59364d1\n- Reviewed by: @AnStroh\n- Reference: https://github.com/AnStroh/MOBILE.jl/commit/a50f7a39766b9f552def1de9fd803d26f59364d1#commitcomment-157842126\n- Description: This is the repository for all my codes related to the paper of diffusion-coupled growth\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c6408c8e0658d2973f0c7cb77cd68789d035bbd77ab49c61c426a2e774b4e2dbeeed1b9c5ec68e660105fbe615862918bde2e6c23b5851a156d68e58c2b3ae425fa54f9c991ef8d8a17defebb00b000fe7a236f8e3449d62abd4e2b3b4db97f24f1b63d710a4cb719a07085f440339890a79e0e69f6a84a732937efec4f2037f8e6c131d9a23a5b1772f52f2d3558fbe1830791f4612b0a67f040392bdfc7471af5d0e9a7966d6445436feee69713153 -->",
+  "package_name": "MOBILE",
+  "closed_at": "2025-05-26T14:41:36Z",
+  "title": "New package: MOBILE v0.1.0"
+}

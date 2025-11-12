@@ -1,0 +1,121 @@
+{
+  "created_at": "2023-12-30T20:42:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 97955,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vnakQ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-30T20:46:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1872603408",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vncMW",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Is this meant for General? It looks like it might be a personal repo with a toy implementation of a simple algorithm? (and MH methods are available eg in https://github.com/TuringLang/AdvancedMH.jl) ",
+      "createdAt": "2023-12-30T21:25:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1872610070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vndDb",
+      "author": {
+        "login": "marcsgil"
+      },
+      "authorAssociation": "NONE",
+      "body": "It is in fact a simple implementation of Metropolis-Hastings. At first, i wrote it for learning purposes and when I began working on a serious project, I actually checked out AdvancedMH. I found out, nonetheless, that this implementation is actually faster! Using `@benchmark`, the usage example in the README of AdvancedMH takes about 72ms, while the same example, but in this implementation, only takes 55ms. Add that to a much simpler interface, and that it worked for everything that I tried (mainly Monte Carlo integration), I actually prefer using this implementation.\r\n\r\nWhat prompted me do add it to the General Registry is that I want to use it in another package that I'm developing, and there are known problems to add an unregistered package as a dependency.",
+      "createdAt": "2023-12-30T21:53:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1872613595",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vns1_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name does make it seem like this would be a \"canonical\" implementation of MH. Maybe name the package `SimpleMetropolisHastings`? I would also recommend adding / extending the documentation a bit, including a discussion of how this implementation differs from `AdvancedMH` (which would also be where you could show off a benchmark comparing the two packages). Such in-depth documentation isn't a prerequisite for registration, obviously.",
+      "createdAt": "2023-12-31T05:47:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1872678271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vovYd",
+      "author": {
+        "login": "marcsgil"
+      },
+      "authorAssociation": "NONE",
+      "body": "I actually agree with your points. I will make the proposed changes and then open a new PR. Thank you for your suggestions!",
+      "createdAt": "2023-12-31T13:37:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1872950813",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yYapr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-31T12:22:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1919003243",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85zJwFg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-02-07T12:22:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97955#issuecomment-1931936096",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MetropolisHastings\n- Repository: https://github.com/marcsgil/MetropolisHastings.jl\n- Created by: @marcsgil\n- Version: v0.1.0\n- Commit: 88927c5e29c74dcc2e4331f21d3fb375b51cf69f\n- Git reference: HEAD",
+  "package_name": "MetropolisHastings",
+  "closed_at": "2024-02-07T12:22:54Z",
+  "title": "New package: MetropolisHastings v0.1.0"
+}

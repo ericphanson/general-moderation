@@ -1,0 +1,158 @@
+{
+  "created_at": "2021-03-17T17:16:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 32201,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMTI2Mzg4Mw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import BinomialGPU` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-17T17:19:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-801263883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMTQzNjQ3OA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@simsurace thanks for your package!  Please, see the message above.  It looks like your package has some syntax errors.\r\n\r\n[noblock]",
+      "createdAt": "2021-03-17T20:54:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-801436478",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMTk0NjA5MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@simsurace Can you delete the https://github.com/simsurace/BinomialGPU.jl repo and register https://github.com/JuliaGPU/BinomialGPU.jl instead?",
+      "createdAt": "2021-03-18T13:51:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-801946091",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjExMDg2MA==",
+      "author": {
+        "login": "simsurace"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yes, that's what I'm planning to do. I will register version 0.2.1 from the new repo. The package should then be passing all tests from BuildKite.",
+      "createdAt": "2021-03-18T16:58:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802110860",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjExMzYzNQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The concern is that if we first register BinomialGPU at https://github.com/simsurace/BinomialGPU.jl, and then we have to change the URL from https://github.com/simsurace/BinomialGPU.jl to https://github.com/JuliaGPU/BinomialGPU.jl, we have to make sure that https://github.com/JuliaGPU/BinomialGPU.jl contains all of the Git tree SHAs that were registered from https://github.com/simsurace/BinomialGPU.jl.\r\n\r\nIt would be far easier to just register 0.1.0, 0.2.0, and 0.2.1 all from https://github.com/JuliaGPU/BinomialGPU.jl ",
+      "createdAt": "2021-03-18T17:01:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802113635",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjIyODc2Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #32298",
+      "createdAt": "2021-03-18T19:31:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802228766",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjIzODIwNw==",
+      "author": {
+        "login": "simsurace"
+      },
+      "authorAssociation": "NONE",
+      "body": "So do I need to run the registrator again in the respective commits, or what action is required on my part?\r\n",
+      "createdAt": "2021-03-18T19:43:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802238207",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjIzOTUyMA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Nothing :slightly_smiling_face:  Unless you _really_ want to have also this revision registered",
+      "createdAt": "2021-03-18T19:45:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802239520",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjMwNTU5NQ==",
+      "author": {
+        "login": "simsurace"
+      },
+      "authorAssociation": "NONE",
+      "body": "Great, thanks for confirming! ",
+      "createdAt": "2021-03-18T21:16:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32201#issuecomment-802305595",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BinomialGPU\n- Repository: https://github.com/simsurace/BinomialGPU.jl\n- Created by: @simsurace\n- Version: v0.2.0\n- Commit: a582a7d524632c0f6e3d3bb4f29d6fa73c0369d4\n- Reviewed by: @simsurace\n- Reference: https://github.com/simsurace/BinomialGPU.jl/commit/a582a7d524632c0f6e3d3bb4f29d6fa73c0369d4#commitcomment-48363839\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66f05f98fc465f13343ec9116c12d8226e0597d85af68c5db20dae7acfb8de6a7a4e3fcef214d95860e16c8c3b88f1514ca607a45cd4a102c68a6d09f9a11afbc136d9ae497fd0d3beed138bad982958ec01897f757869e58460d834814600345e84e38f55ad4b96858e4b606f9d7bd33cbf60b3dfeefd0e14df0f3d2236fbe88b78e5c09edf13a47f0daad0c086788fa3ba2a4e2d356e1f72956ccd8424ecfebc3da78f8d799a7b5b3b43b9ce649c893 -->",
+  "package_name": "BinomialGPU",
+  "closed_at": "2021-03-18T19:31:15Z",
+  "title": "New package: BinomialGPU v0.2.0"
+}

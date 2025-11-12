@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-08-28T17:55:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 137531,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87Ayd6M",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Accessors, Colors, DataFrames, DataFramesMeta, DataStructures, Distances, FLoops, Fontconfig, Parameters, StatsBase\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-28T18:05:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137531#issuecomment-3234455180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IVDY8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-02T12:24:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137531#issuecomment-3360962108",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JzJJd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-10-09T12:24:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137531#issuecomment-3385627229",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TSCSMethods\n- Repository: https://github.com/human-nature-lab/TSCSMethods.jl\n- Created by: @emfeltham\n- Version: v2.0.1\n- Commit: 3bccf6257eaff9d4e06f19d4985af4a0b9e4d3cd\n- Reviewed by: @emfeltham\n- Reference: https://github.com/human-nature-lab/TSCSMethods.jl/issues/17#issuecomment-3243004280\n- Description: Non-parametric generalized differences-in-differences estimation, with covariate matching.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n# Release Notes\n\n## v2.0.1 (August 2025)\n\n### Summary\nProduction-ready release with comprehensive statistical validation and professional code organization. This version transforms TSCSMethods.jl from an experimental implementation into robust statistical software suitable for causal inference research.\n\n### Key Features\n- **Statistical Validation**: Complete validation suite with coverage (96%), placebo tests (6.87%), and noiseless recovery verification\n- **Comprehensive Testing**: 8,146 tests with 99.4% success rate across all subsystems\n- **Professional Architecture**: Clean modular design with 6 logical subsystems\n- **Complete Documentation**: Full API documentation, tutorials, methodology explanations, and validation reports\n- **Bootstrap Inference**: Robust weighted block-bootstrap for uncertainty quantification\n- **Advanced Features**: Calipers, stratification, refinement, auto-balancing\n\n### Breaking Changes\n- **Julia Version**: Minimum requirement updated to Julia 1.10+\n- **API Standardization**: Function signatures standardized across the package\n- **Parameter Validation**: Enhanced input validation with informative error messages\n\n### New Features\n- **Automatic Balancing**: `autobalance()` function for p-value optimization\n- **Enhanced Matching**: Improved distance calculation and ranking utilities\n- **Stratified Models**: Full support for stratified causal inference\n- **Multiple Outcomes**: Analyze several dependent variables simultaneously\n- **Memory Optimization**: Efficient algorithms for large time-series cross-sectional datasets\n\n### Improvements\n- **Error Messages**: More informative validation and error reporting\n- **Performance**: Optimized matching and estimation algorithms\n- **Type Safety**: Comprehensive type validation throughout the package\n- **Documentation**: Visual diagrams, interactive workflows, and comprehensive tutorials\n\n### Dependencies\n- **R Dependencies Optional**: Bayesian factor calculation can be disabled with `dobayesfactor=false`\n- **Minimal External Dependencies**: Core functionality works with Julia standard library and carefully selected packages\n\n### Migration Guide\n- Update Julia to version 1.10 or later\n- Use `dobayesfactor=false` in `estimate!()` to avoid R dependencies\n- Review function call syntax for any custom scripts (standardized parameter passing)\n\n### Validation Results\n- **Coverage Test**: 96% confidence interval coverage ✓\n- **Placebo Test**: 6.87% Type I error rate ✓  \n- **Noiseless Recovery**: Exact ATT recovery in synthetic data ✓\n- **Test Suite**: 8,146 tests passing (99.4% success rate) ✓\n\n### Citation\nIf you use TSCSMethods.jl v2.0.1 in your research, please cite:\n\n```bibtex\n@misc{feltham_tscsmethods_2023,\n  title={TSCSMethods.jl: Matching methods for causal inference with time-series cross-sectional data},\n  author={Feltham, Eric Martin},\n  year={2023},\n  url={https://github.com/human-nature-lab/TSCSMethods.jl}\n}\n```\n\n### Contributors\n- Eric Martin Feltham (Primary Developer)\n\n---\n\n## Previous Versions\n\n### v2.0.0\n- Initial production release\n- Basic statistical validation\n- Core matching methodology implementation\n\n### v1.x\n- Experimental development versions\n- Research prototype implementations\n- Limited validation and testing\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e9df5d72092cd668136ccdb6b9b14e57b8f6396d2c7961f3ee0e3c9e853e5105597e5add983440136f86701765f1be49d7f3970a90451cc16d9540de1bb778f469fb2410b57634c1d819d1e15510c285f14d38ef8964f58000cd76ae0a0c4e8cd7ca19f21acafc4f73743505d9e8e5571a320c570693859e040699ed1ca5a38e -->",
+  "package_name": "TSCSMethods",
+  "closed_at": "2025-10-09T12:24:22Z",
+  "title": "New package: TSCSMethods v2.0.1"
+}

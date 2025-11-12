@@ -1,0 +1,143 @@
+{
+  "created_at": "2022-04-10T18:55:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 58295,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85BOnK7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- There is no compat entry for `julia`.\n- I was not able to load the package (i.e. `import RAPIDS` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-10T19:05:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1094349499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BSTQ4",
+      "author": {
+        "login": "tylerjthomas9"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n>     * Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\r\nIt is all upper-case to match the name that NVIDIA calls it. https://rapids.ai/\r\n\r\n>     * There is no compat entry for `julia`.\r\nJust added this, and tagged @JuliaRegistrator \r\nhttps://github.com/tylerjthomas9/RAPIDS.jl/commit/713fbf19261aff48a4c12fda0a1e75cdfad2bf97\r\n \r\n>     * I was not able to load the package (i.e. `import RAPIDS` failed). See the CI logs for details.\r\nImport will fail with the python library unless there is a compatible cuda device. Not sure if I should add something to the library module to avoid this error or what. It wont import on any cpu only systems\r\n",
+      "createdAt": "2022-04-11T17:11:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1095316536",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CZvx3",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Just added this, and tagged JuliaRegistrator\r\nhttps://github.com/tylerjthomas9/RAPIDS.jl/commit/713fbf19261aff48a4c12fda0a1e75cdfad2bf97\r\n\r\nThat didn't work though, you have to try again\r\n\r\n> Import will fail with the python library unless there is a compatible cuda device. Not sure if I should add something to the library module to avoid this error or what. It wont import on any cpu only systems\r\n\r\nPlease read https://github.com/JuliaRegistries/General/blob/7383e1536ee3f56af722cd34247e9a5a5aa4ede1/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do\r\n\r\n[noblock]",
+      "createdAt": "2022-04-30T19:59:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114045559",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ca0KD",
+      "author": {
+        "login": "tylerjthomas9"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Please read https://github.com/JuliaRegistries/General/blob/7383e1536ee3f56af722cd34247e9a5a5aa4ede1/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do\r\n\r\nThank you for the information. I made some changes, so that it'll load on non-gpu systems. Also added some CI to make sure that I wasn't wasting the registry CI. https://github.com/tylerjthomas9/RAPIDS.jl/actions/runs/2254667220\r\n\r\nHow do I close this PR, so that I can retrigger the registrator? `Please update the version number in the package's Project.toml before registering a new version. The current version number is already tagged to a different commit`\r\n\r\n[noblock]\r\n",
+      "createdAt": "2022-05-01T20:10:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114325635",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ca4sg",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> How do I close this PR, so that I can retrigger the registrator? `Please update the version number in the package's Project.toml before registering a new version. The current version number is already tagged to a different commit`\r\n\r\nWhether this pull request is open or not doesn't have anything to do with that.  The fact is that you manually created a git tag for [`v0.1.0`](https://github.com/tylerjthomas9/RAPIDS.jl/releases/tag/v0.1.0) ***before*** that version had actually been successfully registered, so the bot is pointing that out.  You should delete the tag, trigger registration again and then let TagBot, which [you actually have already set up](https://github.com/tylerjthomas9/RAPIDS.jl/blob/e9c3426cea757c255dae58f0c578887216f5c759/.github/workflows/TagBot.yml), let automatically create the git tags for your ***after*** registration.\r\n\r\n[noblock]",
+      "createdAt": "2022-05-01T21:50:53Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114344224",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ca5Ip",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To be clear, if you want to keep the git tag intact you can also change version number and try to register, say, v0.1.1 or v0.2.0, or whatever you want.  We'll simply close this pull request.  I was merely explaining the origin of the error your were facing and how to address it for the future.  And I presume doing less manual work by having a bot creating git tags for you is always good :slightly_smiling_face: \r\n\r\n[noblock]",
+      "createdAt": "2022-05-01T22:02:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114346025",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ca8yY",
+      "author": {
+        "login": "tylerjthomas9"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Whether this pull request is open or not doesn't have anything to do with that. The fact is that you manually created a git tag for [`v0.1.0`](https://github.com/tylerjthomas9/RAPIDS.jl/releases/tag/v0.1.0) _**before**_ that version had actually been successfully registered, so the bot is pointing that out. You should delete the tag, trigger registration again and then let TagBot, which [you actually have already set up](https://github.com/tylerjthomas9/RAPIDS.jl/blob/e9c3426cea757c255dae58f0c578887216f5c759/.github/workflows/TagBot.yml), let automatically create the git tags for your _**after**_ registration.\r\n\r\nAh, that makes more sense. Thank you for clearing it up. \r\n\r\n> To be clear, if you want to keep the git tag intact you can also change version number and try to register, say, v0.1.1 or v0.2.0, or whatever you want. We'll simply close this pull request. I was merely explaining the origin of the error your were facing and how to address it for the future. And I presume doing less manual work by having a bot creating git tags for you is always good 🙂\r\n\r\nAwesome, thank you for the help! I still have a lot to learn about package registration... Just bumped the version to v0.1.1\r\n\r\n[noblock]",
+      "createdAt": "2022-05-01T23:08:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114360984",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ca845",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No problem, I'm going to close this PR then",
+      "createdAt": "2022-05-01T23:09:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/58295#issuecomment-1114361401",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RAPIDS\n- Repository: https://github.com/tylerjthomas9/RAPIDS.jl\n- Created by: @tylerjthomas9\n- Version: v0.1.0\n- Commit: 92755a85c009f8a9d14e88f55801ac9a2a1996c0\n- Git reference: main\n- Description: A Unofficial Julia wrapper for the RAPIDS.ai ecosystem\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial release\n<!-- END RELEASE NOTES -->",
+  "package_name": "RAPIDS",
+  "closed_at": "2022-05-01T23:09:26Z",
+  "title": "New package: RAPIDS v0.1.0"
+}

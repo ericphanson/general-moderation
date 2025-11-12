@@ -1,0 +1,98 @@
+{
+  "created_at": "2025-07-30T22:59:00Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 135660,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q867C1ks",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-30T23:16:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135660#issuecomment-3138083116",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867DbmH",
+      "author": {
+        "login": "kadinelbak"
+      },
+      "authorAssociation": "NONE",
+      "body": "Looks all green, let me know if you need anything else from me :)",
+      "createdAt": "2025-07-31T00:48:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135660#issuecomment-3138238855",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867KSIq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would probably recommend the name `GrowthParameterEstimation`. As [the guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines) say:\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\nThis also does not seem like it's quite ready for a 1.0 release:\r\n\r\n- The link to the documentation is broken\r\n- The CI is failing, and you are not collecting coverage information\r\n- You will want to remove the references to the old name `V1SimpleODE`\r\n\r\nNote that if you intend to follow [semantic versioning](https://semver.org), a version 1.0 must specify a public API and henceforth track breaking and non-breaking changes to that API. I would strongly recommend a [Documenter-based](https://documenter.juliadocs.org/stable/) API documentation for that that is generated from the docstrings of the functions, as opposed to API documentation is the README, which can easily become outdated or incomplete.",
+      "createdAt": "2025-07-31T13:43:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135660#issuecomment-3140035114",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BIB8X",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-08-31T12:23:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135660#issuecomment-3240107799",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CiLCI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-09-07T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135660#issuecomment-3263737992",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GrowthParamEst\n- Repository: https://github.com/kadinelbak/GrowthParamEst.jl\n- Created by: @kadinelbak\n- Version: v1.0.0\n- Commit: 860b5aed53b04982cfe50812d5bd26709f620ee0\n- Reviewed by: @kadinelbak\n- Reference: https://github.com/kadinelbak/GrowthParamEst.jl/issues/11\n- Description: Exciting simple ode solver that allows for clean outputs in a jupyter notebooks.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## GrowthParamEst v1.0.0 - Initial Release\n\n### 🎉 New Package Features\n\n**GrowthParamEst** is a comprehensive Julia package for fitting and analyzing ordinary differential equation (ODE) models to biological growth data.\n\n### 📊 Core Functionality\n\n- **Parameter Estimation**: Robust ODE parameter fitting using BlackBoxOptim.jl\n- **Model Comparison**: Statistical comparison of multiple growth models with BIC scoring\n- **Cross-Validation**: K-fold and leave-one-out validation for model reliability assessment\n- **Sensitivity Analysis**: Parameter sensitivity analysis for understanding model behavior\n- **Residual Analysis**: Diagnostic tools for model validation and outlier detection\n\n### 🧬 Available Growth Models (8 total)\n\n- **Logistic Growth**: `du/dt = r*u*(1 - u/K)`\n- **Logistic with Death**: `du/dt = r*u*(1 - u/K) - δ*u`\n- **Gompertz Growth**: `du/dt = r*u*log(K/u)`\n- **Gompertz with Death**: `du/dt = r*u*log(K/u) - δ*u`\n- **Exponential Growth**: `du/dt = r*u`\n- **Exponential with Delay**: Exponential growth with lag time\n- **Logistic with Delay**: Logistic growth with lag time\n- **Exponential with Death and Delay**: Combined death and lag effects\n\n### 🔧 Key Functions\n\n- `run_single_fit()`: Fit single ODE model to data\n- `compare_models()`: Compare two models on same dataset\n- `fit_three_datasets()`: Analyze multiple experimental replicates\n- `k_fold_cross_validation()`: Validate model reliability\n- `parameter_sensitivity_analysis()`: Assess parameter importance\n- `residual_analysis()`: Diagnostic analysis for model quality\n- `enhanced_bic_analysis()`: Comprehensive model selection\n\n### 📦 Dependencies\n\n- Julia ≥ 1.6\n- DifferentialEquations.jl for ODE solving\n- BlackBoxOptim.jl for optimization\n- StatsBase.jl for statistical analysis\n- No plotting dependencies (clean statistical analysis focus)\n\n### 🎯 Target Applications\n\n- Microbial growth analysis\n- Cell culture dynamics\n- Population modeling\n- Biological time series analysis\n- Parameter estimation for growth experiments\n\n### 📖 Usage Example\n\n```julia\nusing GrowthParamEst\n\n# Fit logistic growth to experimental data\ntime_data = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0]\nmeasurement_data = [100.0, 150.0, 230.0, 350.0, 520.0, 720.0]\n\nresult = run_single_fit(time_data, measurement_data, [0.5, 1000.0])\nprintln(\"Growth rate: \", result.params[1])\nprintln(\"Carrying capacity: \", result.params[2])\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835988e290e04bbde4f5963196e9e638053b3488a0f0acd51c6b072935fa58f38cb0216f2808fc0b0d80ca955f0d485affd45584c8c0b75d89a2b57adcf25f9aca0a37b55f4c759963c6c13dd963246046b057f5a6734e7bc9d84b2c8eebdb064edebbbc19c1a68c95bc3dbce3bde64559af98cafc37205fc275d95940a1e98ac1498 -->",
+  "package_name": "GrowthParamEst",
+  "closed_at": "2025-09-07T12:23:54Z",
+  "title": "New package: GrowthParamEst v1.0.0"
+}

@@ -1,0 +1,495 @@
+{
+  "created_at": "2024-01-12T11:00:07Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 98771,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85wloAs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import Ahead` failed). See the CI logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to Fread. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-12T11:18:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1888911404",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wlqU0",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@JuliaRegistrator `Ahead`similar to `Fread`? :open_mouth:\r\n\r\n> Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\r\n> \r\n> * Package name similar to 1 existing package.\r\n>   \r\n>   1. Similar to Fread. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\r\n> \r\n> Note that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\r\n> \r\n> After you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\r\n> \r\n> If you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\r\n> \r\n> Since you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\r\n> \r\n> If you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\r\n\r\n",
+      "createdAt": "2024-01-12T11:25:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1888920884",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wl7Pj",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes, it is - the difference is only 2 charatcters, which is the cutoff. \r\n\r\nName similarity isn't an issue though, this is just an automated check to prevent typosquatting. More broadly though did you really intent to register this package with the General registry? It has no documentation so isn't really useful for anyone at this point. I see that this is a wrapper package around an R package that you maintain, maybe have a look at other R wrapper packages like https://github.com/jmboehm/Alpaca.jl to get an idea of how people usually do this in Julia. \r\n\r\n",
+      "createdAt": "2024-01-12T11:59:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1888990179",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wl-oL",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@nilshg Technically, yes. Semantically...\r\n\r\nThe 'General registry'. Warm welcome. Not sure. The -- existing -- documentation was aimed to be gathered in the same place . On PyPI I don't document. I can just keep it on my GitHub organization too, if this is some kind of examination. I wouldn't say that 40k downloads isn't useful to anyone. \r\n\r\n> Yes, it is - the difference is only 2 charatcters, which is the cutoff.\r\n> \r\n> Name similarity isn't an issue though, this is just an automated check to prevent typosquatting. More broadly though did you really intent to register this package with the General registry? It has no documentation so isn't really useful for anyone at this point. I see that this is a wrapper package around an R package that you maintain, maybe have a look at other R wrapper packages like https://github.com/jmboehm/Alpaca.jl to get an idea of how people usually do this in Julia.\r\n\r\n",
+      "createdAt": "2024-01-12T12:05:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1889004043",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wmYc6",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As I said, this is an automated check to prevent typosquatting, so all it is designed to do is detect technical naming conflicts. As I also said, it shouldn't be an issue in this case - it simply prevents automerging, but as the name is actually not very similar and you have a good reason to stick with this particular name given it wraps an existing package, it won't prevent a manual merge.\r\n\r\nHow you document the functionality of your package is of course up to you, but you probably should at least allow Julia users to somehow find that documentation, e.g. by stating in the Readme and docstrings to your package where actual documentation (which shows how to use the Julia wrapper) can be found. I see you have a Python wrapper as well which has a good Readme that shows a Python user how to use the package from Python, so that's probably what's needed for the Julia version as well. \r\n\r\n",
+      "createdAt": "2024-01-12T12:50:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1889109818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85woHSO",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "I can update the README, and provide a link to the documentation (which mirrors the R version). \r\n\r\n> As I said, this is an automated check to prevent typosquatting, so all it is designed to do is detect technical naming conflicts. As I also said, it shouldn't be an issue in this case - it simply prevents automerging, but as the name is actually not very similar and you have a good reason to stick with this particular name given it wraps an existing package, it won't prevent a manual merge.\r\n> \r\n> How you document the functionality of your package is of course up to you, but you probably should at least allow Julia users to somehow find that documentation, e.g. by stating in the Readme and docstrings to your package where actual documentation (which shows how to use the Julia wrapper) can be found. I see you have a Python wrapper as well which has a good Readme that shows a Python user how to use the package from Python, so that's probably what's needed for the Julia version as well.\r\n\r\n",
+      "createdAt": "2024-01-12T16:02:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1889563790",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yO4XI",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@nilshg @JuliaRegistrator @JuliaHubRegistrator  Hi, any update on this? Also (this might not be the best place for it), any tips of any existing CI templates for  testing on more platforms? Having various errors depending on the platform.  ",
+      "createdAt": "2024-01-30T10:11:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916503496",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yO5zL",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Readme looks fine, but this can't be automerged due to the name similarity. It needs a manual merge, easiest is probably to ping the #pkg-registration channel on the Julia lang slack",
+      "createdAt": "2024-01-30T10:13:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916509387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yO7cb",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "What if I don't use slack (which is the case) ? :)",
+      "createdAt": "2024-01-30T10:17:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916516123",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPYxV",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Slack isn't required, maintainers also check on PRs without them being bumped on Slack. In this case however I have put a message in the Slack channel to hopefully speed things up.",
+      "createdAt": "2024-01-30T11:25:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916636245",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPaPB",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "I appreciate it. Cheers",
+      "createdAt": "2024-01-30T11:28:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916642241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPaR8",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[The package can't be loaded](https://github.com/JuliaRegistries/General/actions/runs/7652346290/job/20851927611?pr=98771#step:16:14391):\r\n```\r\nERROR: LoadError: REvalError: Error in library(ahead, lib.loc = \".\") : \r\n  there is no package called 'ahead'\r\n```\r\nPlease read https://github.com/JuliaRegistries/General/blob/8edde9cccb3bc49ced997525a7b607ef61aac5f7/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do, but the best solution would really be to make this actually work.",
+      "createdAt": "2024-01-30T11:29:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916642428",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPbBN",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano this is a workaround for cases when the package can't be installed by a 'non-staff' member. GitHub Actions tests won't pass without it. Or maybe you'd suggest something else? All I see below is green checks ;)",
+      "createdAt": "2024-01-30T11:31:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916645453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPbqR",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Slack isn't required, maintainers also check on PRs without them being bumped on Slack.\r\n\r\nDo they really? Not my experience ;-) But you might be able to get a non-maintainer to post on your behalf on Slack. As @nilshg did, in this case.",
+      "createdAt": "2024-01-30T11:32:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916648081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPby9",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Or maybe you'd suggest something else?\r\n\r\nYes, reading https://github.com/JuliaRegistries/General/blob/8edde9cccb3bc49ced997525a7b607ef61aac5f7/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do.  Or making loading the R package work.",
+      "createdAt": "2024-01-30T11:33:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916648637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPcIG",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Or maybe you'd suggest something else?\r\n> \r\n> Yes, reading https://github.com/JuliaRegistries/General/blob/8edde9cccb3bc49ced997525a7b607ef61aac5f7/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do. Or making loading the R package work.\r\n\r\n@giordano All I see below is green checks. What do green checks mean?",
+      "createdAt": "2024-01-30T11:33:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916649990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPcty",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "“2 failing and 9 successful checks”\r\n\r\n???",
+      "createdAt": "2024-01-30T11:35:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916652402",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPc4o",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> All I see below is green checks.\r\n\r\nI don't \r\n![image](https://github.com/JuliaRegistries/General/assets/765740/19412dfe-a13e-42ff-93bc-4c29009fe1e1)\r\n\r\nAlso, quoting from https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1888911404\r\n\r\n> I was not able to load the package (i.e. import Ahead failed). See the CI logs for details.",
+      "createdAt": "2024-01-30T11:35:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916653096",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPdAt",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "> “2 failing and 9 successful checks”\r\n> \r\n> ???\r\n\r\n@goerz failing to merge **AUTOMATICALLY**, that means. All the others tests do pass on Ubuntu. Read carefully.",
+      "createdAt": "2024-01-30T11:36:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916653613",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPd5p",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > All I see below is green checks.\r\n> \r\n> I don't ![image](https://private-user-images.githubusercontent.com/765740/300791027-19412dfe-a13e-42ff-93bc-4c29009fe1e1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2MTQ4NTcsIm5iZiI6MTcwNjYxNDU1NywicGF0aCI6Ii83NjU3NDAvMzAwNzkxMDI3LTE5NDEyZGZlLWExM2UtNDJmZi05M2JjLTRjMjkwMDlmZTFlMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxMTM1NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NTIwN2I0YmQ2YmFmYmQ0YjY4YjRmZGEzY2FmYzJjNTE2NzNlYWI0ZjU5ZTg5MTY5ZDUxN2JkZjJjZTE3ODRjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.72EXzGkwu_9qvprqXl0kUJOlXhp4sTkXzupqYfWL3uc)\r\n> \r\n> Also, quoting from [#98771 (comment)](https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1888911404)\r\n> \r\n> > I was not able to load the package (i.e. import Ahead failed). See the CI logs for details.\r\n\r\n@giordano indeed, on some platforms it fails randomly. But not on your official template. Quoting 'can't be automerged due to the name similarity'. ",
+      "createdAt": "2024-01-30T11:38:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916657257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPeci",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Read carefully\r\n\r\nGood luck with your registration. I’m out.",
+      "createdAt": "2024-01-30T11:40:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916659490",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPe_1",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Read carefully\r\n> \r\n> Good luck with your registration. I’m out.\r\n\r\n@goerz Ha ha. Honesty is disturbing right? :smiley_cat: Bye",
+      "createdAt": "2024-01-30T11:41:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916661749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPfjz",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is what I see:\r\n\r\n![image](https://github.com/JuliaRegistries/General/assets/11753998/cae25049-389c-41d6-8b63-75f3374510b1)\r\n\r\nThe log is also the AutoMerge CI job (see [here](https://github.com/JuliaRegistries/General/actions/runs/7652346290/job/20851927611?pr=98771#step:16:14391)), which tries to ultimately install the package too. Note that the original message by the bot also reported that it can't load the package:\r\n\r\n> * I was not able to load the package (i.e. import Ahead failed). See the CI logs for details.",
+      "createdAt": "2024-01-30T11:43:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916664051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPfka",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Honesty is disturbing right? 😺 Bye\r\n\r\n@thierrymoudiki This isn't working very well, please refrain from further comments like that.\r\n\r\n> indeed, on some platforms it fails randomly.\r\n\r\nIt's not random, the R package isn't installed.  I'm not going to repeat it a fourth time as I'm not interested in wasting more time in this discussion, please read https://github.com/JuliaRegistries/General/blob/8edde9cccb3bc49ced997525a7b607ef61aac5f7/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do.",
+      "createdAt": "2024-01-30T11:43:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916664090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPgia",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Honesty is disturbing right? 😺 Bye\r\n> \r\n> @thierrymoudiki This isn't working very well, please refrain from further comments like that.\r\n> \r\n> > indeed, on some platforms it fails randomly.\r\n> \r\n> It's not random, the R package isn't installed. I'm not going to repeat it a fourth time as I'm not interested in wasting more time in this discussion, please read https://github.com/JuliaRegistries/General/blob/8edde9cccb3bc49ced997525a7b607ef61aac5f7/README.md#my-package-fails-to-load-because-it-needs-proprietary-softwareadditional-setup-to-work-what-can-i-do.\r\n\r\n@giordano More factual details here ;) : https://github.com/Techtonique/Ahead.jl/actions/runs/7710059555",
+      "createdAt": "2024-01-30T11:45:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916668058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yPi6f",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Not sure why this thread has disintegrated to this extent, but just to clarify:\r\n\r\n>  failing to merge AUTOMATICALLY, that means. All the others tests do pass on Ubuntu. Read carefully.     \r\n\r\n\"All the other tests\" are just the CI of the General registry (which this is a PR to), *not* the CI of your package. In short, all they tell us is that the General registry is not broken if `Ahead` is added to it. \r\n\r\nThe one check that is failing is automerge which as you rightly point out is checking whether the package can automatically be merged or needs human intervention. Here as discussed earlier the check failed due to name similarity, which is not an issue for this package so that it could be merged manually.\r\n\r\nHowever if you look into the failed action as @Seelengrab shows above what you'll see is that the check failed because the package can't be loaded, i.e. it is not currently working. This is also confirmed by your own CI, which is the relevant one here:\r\n\r\n![image](https://github.com/JuliaRegistries/General/assets/7264491/d366962a-aa25-429e-823b-1199e11668df)\r\n\r\nThis doesn't look like random failures, but rather consistent failures to do with an apparent issue with how the package is built. This should be fixed before a merge to General - all that the automerge action is doing here is checking that a package registered in General can actually be sucessfully installed, which is imho a low bar.\r\n\r\n",
+      "createdAt": "2024-01-30T11:52:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916677791",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yQnXU",
+      "author": {
+        "login": "thierrymoudiki"
+      },
+      "authorAssociation": "NONE",
+      "body": "More facts on the facts, just in case. Windows, macOS, Ubuntu, Julia 1.6 and 1.10: \r\n\r\nhttps://github.com/Techtonique/Ahead.jl/actions/runs/7711922129/job/21018276042\r\n\r\nThe most accurate answer for all of us wasn’t [‘it doesn’t work on my machine’](https://builtin.com/software-engineering-perspectives/it-works-on-my-machine-bug)\r\nor ‘you can’t read’ , but rather ‘it doesn’t work **on Windows right now**’. Or maybe... **testing more OSes in the official CI template**. \r\n",
+      "createdAt": "2024-01-30T14:13:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1916958164",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yROct",
+      "author": {
+        "login": "Seelengrab"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Or maybe... testing more OSes in the official CI template.\r\n\r\nJust in case it got missed above - what is called `CI` in the list at the end of this thread is the CI for the entire registry, i.e. that a single PR can't break the invariants of the registry. As those checks have nothing to do with user packages, it's not necessary to run them on more than one OS. That is, this `CI` section is not your package CI, and also not the checks run against your package, which are under the `AutoMerge` CI job. I've opened a [PR](https://github.com/JuliaRegistries/General/pull/99844) for renaming the section to make that distinction a bit more discoverable.",
+      "createdAt": "2024-01-30T15:09:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1917118253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yTjCm",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Looks like you've sorted the installation issues - if you trigger the registration bot again (without changing version number or anything else) the PR should update and the automerge check should be re-run.",
+      "createdAt": "2024-01-30T19:19:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1917726886",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yUAuS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "In this specific case, it actually might be better to update the version and to submit a new registration. Even if the automerge issue is solved, there are a lot of blocking comments on this one. Mosè isn't going to be back to unblock his, and I'm not sure another maintainer is going to merge this manually (future tip: don't be rude to registry maintainers when you need their help).\r\n\r\nI can override the name similarity check on a new submission.",
+      "createdAt": "2024-01-30T20:36:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1917848466",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851mw7l",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-01T12:22:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98771#issuecomment-1973096165",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Ahead\n- Repository: https://github.com/Techtonique/Ahead.jl\n- Created by: @thierrymoudiki\n- Version: v0.1.0\n- Commit: 204df83475f0ecfb601100e42d013273c621d7d8\n- Git reference: HEAD\n- Description: Univariate and multivariate time series with uncertainty quantification",
+  "package_name": "Ahead",
+  "closed_at": "2024-03-01T15:06:15Z",
+  "title": "New package: Ahead v0.1.0"
+}

@@ -1,0 +1,120 @@
+{
+  "created_at": "2025-06-03T10:21:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 132206,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86u6pkA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-03T10:37:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2934610176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vCWxz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nThe statement in the README\r\n\r\n> This is work in progress.\r\n\r\nis a little bit at odds with releasing a version `>1.0.0`, if it's meant to indicated that the API hasn't fully been worked out, as opposed to the trivial statement that pretty much any package will continue to develop in the future.\r\n\r\nHowever, based on [the documentation](https://martinmikkelsen.github.io/TensorTrainNumerics.jl/dev/), I would say that the project is perfectly fine to be declared \"stable\". So unless you're planning major revisions of the API in the near future, I'd just remove the \"work in progress\" notices. Why `v1.0.1`, though? Wouldn't you want to start with `v1.0.0`?",
+      "createdAt": "2025-06-03T18:25:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2936630387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vLJ9O",
+      "author": {
+        "login": "MartinMikkelsen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz, thank you for your comments. I have already removed the work in progess on [this branch](https://github.com/MartinMikkelsen/TensorTrainNumerics.jl/tree/solvers) which I plan to merge soon. I wanted to keep the work in progress until I have tested the package with Aqua and added coverage. \r\nYou are completely right about the version -- should I change the version to `v1.0.0` and call the register bot again?",
+      "createdAt": "2025-06-04T07:33:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2938937166",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vLkBJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> should I change the version to v1.0.0 and call the register bot again?\r\n\r\nI would! And yes, you just call the bot the same way you called it originally.\r\n\r\n> I removed the work in progess on [this branch](https://github.com/MartinMikkelsen/TensorTrainNumerics.jl/tree/solvers) which I plan to merge soon.\r\n\r\nI’d retrigger the registration after that merge, then, presumably.\r\n\r\n> I wanted to keep the work in progress until I have tested the package with Aqua and added coverage.\r\n\r\nThat’s definitely a good idea. Unless you’re absolutely sure that that additional testing won’t discover any problems that require breaking changes to the API, I’d wait with 1.0 until they’re in place. You could also make the initial release a 0.1 version and then tag 1.0 as soon as the extra tests are in place and have shown the API to be okay. Personally, I often like to treat registered 0.x versions as “release candidates” for 1.0, to make sure the API has no major problems that are revealed as people start using it. That doesn’t mean getting stuck on 0.x: Definitely tag 1.0 as soon as the library is “stable” by any reasonable definition. It certainly doesn’t require any breaking change to go from 0.x to 1.0.\r\n\r\nThese things are ultimately up to you, though.",
+      "createdAt": "2025-06-04T08:08:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2939043913",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vLrE9",
+      "author": {
+        "login": "MartinMikkelsen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Cool! I've changed the version to `v1.0.0` and removed the work in progress in [this PR](https://github.com/MartinMikkelsen/TensorTrainNumerics.jl/pull/7). Once the tests pass I'll merge it and call the register bot again. Thank you for your comments!\r\n\r\nedit: https://github.com/JuliaRegistries/General/pull/132272",
+      "createdAt": "2025-06-04T08:17:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2939072829",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vON98",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/132272",
+      "createdAt": "2025-06-04T11:50:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/132206#issuecomment-2939740028",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TensorTrainNumerics\n- Repository: https://github.com/MartinMikkelsen/TensorTrainNumerics.jl\n- Created by: @MartinMikkelsen\n- Version: v1.0.1\n- Commit: e8166812a8143c9bc3cd0bfc882999adcbec5686\n- Reviewed by: @MartinMikkelsen\n- Reference: https://github.com/MartinMikkelsen/TensorTrainNumerics.jl/commit/e8166812a8143c9bc3cd0bfc882999adcbec5686#commitcomment-158955624\n- Description: General package to compute tensor train representations\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6129be74a789bb560d31b156eb7e6fff7f6ac6f6bdbb5cb5c42f630d9c293b84653922525d254b39ca45fbd75595c793ef3497ac2b9467297f17b3731bf0d46ff20c6291df79a545b67d1fcd99b02850ab8e6f7b05acb5c942a77028c085fb1c412a9b9b79721d2f34916ff8a5b1784ef8096d6396bbdc5c5534139806dc6b6c1c6759d8d51aedb24b5a75f61681ff3292b6500db83c4dc589f63f34b5f863a4c0bcf69520f295e6393c0fa93991557b6510045d3ab6bc4bd156270ec307ab619 -->",
+  "package_name": "TensorTrainNumerics",
+  "closed_at": "2025-06-04T11:50:43Z",
+  "title": "New package: TensorTrainNumerics v1.0.1"
+}

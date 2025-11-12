@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-01-01T09:55:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 122240,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ZAFyV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import StrassOPen` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-01T10:01:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122240#issuecomment-2566937749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZAP6B",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The package doesn't have any code? https://github.com/bakerte/StrassOPen.jl/blob/main/src/StrassOPen.jl it's importing files that don't exist and fails on `using`?",
+      "createdAt": "2025-01-01T12:02:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122240#issuecomment-2566979201",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZBK6t",
+      "author": {
+        "login": "bakerte"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi Chris,\r\n\r\nSorry about that. I didn’t even think about it. We are adding a dependency onto TensorPACK.jl (itself a dependency of DMRjulia for reasons of better version control), and I figured to just register the package so I could ensure I got the UUIDs and everything set up correctly for TensorPACK (I’ve never added a dependency after the fact like this before). Then I had it in mind to add the real source code afterwards. Maybe I should have made it simpler.\r\n\r\nIf you would prefer, I could push the rest of the code for the initial commit. I just thought having nothing there would make it easier to ensure that I got everything tied together correctly. If not, we are likely to push everything next week and submit a paper sometime this month. This package should have much wider use than the others that have a dependency on it, hence the split of the code.\r\n\r\nPS You gave an introduction to Julia at UCI that I attended approximately many years ago. Great to reconnect with you.\r\n\r\n> On Jan 1, 2025, at 04:03, Christopher Rackauckas ***@***.***> wrote:\r\n> \r\n> \r\n> The package doesn't have any code? https://github.com/bakerte/StrassOPen.jl/blob/main/src/StrassOPen.jl it's importing files that don't exist and fails on using?\r\n> \r\n> —\r\n> Reply to this email directly, view it on GitHub <https://github.com/JuliaRegistries/General/pull/122240#issuecomment-2566979201>, or unsubscribe <https://github.com/notifications/unsubscribe-auth/AB3JZYXLCNHTD3LOMLUMIIT2IPKP5AVCNFSM6AAAAABUOPC2QSVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDKNRWHE3TSMRQGE>.\r\n> You are receiving this because you were mentioned.\r\n> \r\n\r\n",
+      "createdAt": "2025-01-02T01:55:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122240#issuecomment-2567220909",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZhGmj",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #122510.",
+      "createdAt": "2025-01-07T15:33:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122240#issuecomment-2575591843",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: StrassOPen\n- Repository: https://github.com/bakerte/StrassOPen.jl\n- Created by: @bakerte\n- Version: v0.1.0\n- Commit: 79c4245f416137c20e0ee3e319f146da472f035b\n- Git reference: v0.4.0\n- Description: An open source implementation of the Strassen algorithm\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nBasic implementation of the Strassen algorithm (non-recursive)\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "StrassOPen",
+  "closed_at": "2025-01-07T15:33:45Z",
+  "title": "New package: StrassOPen v0.1.0"
+}

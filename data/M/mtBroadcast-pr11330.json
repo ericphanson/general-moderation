@@ -1,0 +1,46 @@
+{
+  "created_at": "2020-03-22T08:53:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 11330,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMjE2NzM1Mw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- The following dependencies do not have a compat entry that has an upper bound: julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-03-22T08:55:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11330#issuecomment-602167353",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYwMjE3NjE2NA==",
+      "author": {
+        "login": "AbhinavPraveen"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm guessing that JuliaRegistrator did not notice that I changed the name to meet the guidelines. I changed the version number to v1.0.0 which seems to have solved the issue. https://github.com/JuliaRegistries/General/pull/11333",
+      "createdAt": "2020-03-22T10:21:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/11330#issuecomment-602176164",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MTBroadcast\n- Repository: https://github.com/AbhinavPraveen/MTBroadcast.jl\n- Created by: @AbhinavPraveen\n- Version: v0.1.0\n- Commit: 7df61db04163a411859a2c620ea895fccb36b7e4\n- Reviewed by: @AbhinavPraveen\n- Reference: https://github.com/AbhinavPraveen/MTBroadcast.jl/commit/7df61db04163a411859a2c620ea895fccb36b7e4#commitcomment-37969957\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4b168576e18c004d4f44a1795f331349976ca9ed3cfcf3ae121320cac88455103dbb78c7e8c887d4b9a11528e7ca0ead4c51e6a1242f315f5140c45c6f2f1a1e282d32e09a4a40b560f2a4caae7d2e8d04b45e26a9189c44332ca29bf414ad014585cc8f3e6fbb7de24a2a40452dc88d1e119dd0232c7ea9c5547f662bca15d24f707143aa3e8edec502965764fa83d89d9ffd5de6b5375e64298dfe8acf7701bc0513dcf2f779568d465f58e42418e02327067d832fabd585a4ddd7a29f5e508 -->",
+  "package_name": "mtBroadcast",
+  "closed_at": "2020-03-22T10:41:07Z",
+  "title": "New package: mtBroadcast v0.1.0"
+}

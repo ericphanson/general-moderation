@@ -1,0 +1,106 @@
+{
+  "created_at": "2021-06-30T12:24:56Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 39946,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3MTM1OTU1Mg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- Package name similar to 3 existing packages.\n  1. Similar to Fread. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.92 is at or below cutoff of 2.50.\n  2. Similar to Persa. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Arena. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-30T12:27:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-871359552",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3MjE1MjM1OQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi @ericsfraga!  Note that in your  [`Project.toml`](https://github.com/ericsfraga/Fresa.jl/blob/574776950ec940d4653511cda5d29f1e455934f0/Project.toml) you should have a section like\r\n```toml\r\n[compat]\r\njulia = \"1\"\r\n```\r\nto specify which versions of Julia your package is compatible with.  For example, `\"1\"` means \"all versions in the 1.x series\", while `\"1.6\"` means \"all versions in the 1.6.x series and all following minor versions in 1.x\".\r\n\r\nOnce you change that you can trigger registration again without changing the version number and this pull request will be automatically updated.  Note also that the Julia package manager works on the assumption that packages follow [semantic versioning](https://semver.org/).\r\n\r\n\r\n[noblock]",
+      "createdAt": "2021-07-01T11:13:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-872152359",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NDA4MDg3Ng==",
+      "author": {
+        "login": "ericsfraga"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you. I have made all the changes requested and updated the repository for my software. How do I \"trigger registration again\" especially given that I have had to change the version numbering for my package?",
+      "createdAt": "2021-07-05T12:39:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-874080876",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NDA4MjIxMg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Repeat what you did before to register the package.  I suspect you used JuliaHub?",
+      "createdAt": "2021-07-05T12:41:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-874082212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NDA5MzYzMg==",
+      "author": {
+        "login": "ericsfraga"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you. I just did but note that the version number has changed as it's picked up automatically...",
+      "createdAt": "2021-07-05T13:00:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-874093632",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3NDA5NTcyNw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "That's right, no problem, I'm going to close this pull request",
+      "createdAt": "2021-07-05T13:03:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/39946#issuecomment-874095727",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Fresa\n- Repository: https://github.com/ericsfraga/Fresa.jl\n- Created by: @ericsfraga\n- Version: v2021.5.28\n- Commit: 574776950ec940d4653511cda5d29f1e455934f0\n- Git reference: HEAD",
+  "package_name": "Fresa",
+  "closed_at": "2021-07-05T13:03:04Z",
+  "title": "New package: Fresa v2021.5.28"
+}

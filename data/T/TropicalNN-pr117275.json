@@ -1,0 +1,105 @@
+{
+  "created_at": "2024-10-14T20:10:05Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 117275,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86PxveV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-14T20:26:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117275#issuecomment-2412181397",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Pzf94",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n\r\nFor a version 1.0, there would be additional requirements:\r\n\r\n* Must define the stable API. That generally means _complete_ documentation.\r\n* Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly\r\n* Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n\r\nYou probably want to register at `v0.1`, not `v1.0`",
+      "createdAt": "2024-10-15T01:39:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117275#issuecomment-2412642168",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P28wu",
+      "author": {
+        "login": "Paul-Lez"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n> \r\n> For a version 1.0, there would be additional requirements:\r\n> \r\n> * Must define the stable API. That generally means _complete_ documentation.\r\n> * Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly\r\n> * Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n> \r\n> You probably want to register at `v0.1`, not `v1.0`\r\n\r\nHi @goerz, thanks for the advice! I'll start adding these now and change the registered version to `v0.1`.",
+      "createdAt": "2024-10-15T10:48:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117275#issuecomment-2413546542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P7Lyg",
+      "author": {
+        "login": "Paul-Lez"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > Thank you for submitting your package! However, please make sure to add some documentation before registering. [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README.\r\n> > For a version 1.0, there would be additional requirements:\r\n> > \r\n> > * Must define the stable API. That generally means _complete_ documentation.\r\n> > * Must have tests with reasonable coverage (on the order of 80%). Otherwise, there's no way to know if the package actually implements its API correctly\r\n> > * Should somewhat reasonably fill the described scope of the package. No _major_ gaps in functionality.\r\n> > \r\n> > You probably want to register at `v0.1`, not `v1.0`\r\n> \r\n> Hi @goerz, thanks for the advice! I'll start adding these now and change the registered version to `v0.1`.\r\n\r\nHi again @goerz! I've updated the repository to give a description of what this package does in the README, as well as some examples of how this code should be used. A large portion of the code is also documented (in the files) with additional examples. \r\nDo let me know if I should add any extra stuff for the `v0.1` release. (I do plan add a substantial amount of unit tests for the following release).",
+      "createdAt": "2024-10-15T17:51:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/117275#issuecomment-2414656672",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86P7MWh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/117343",
+      "createdAt": "2024-10-15T17:52:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/117275#issuecomment-2414658977",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TropicalNN\n- Repository: https://github.com/Paul-Lez/TropicalNN.jl\n- Created by: @Paul-Lez\n- Version: v1.0.0\n- Commit: 055c7f4c894f05d800cca4747f77ef4cdaa587b4\n- Reviewed by: @Paul-Lez\n- Reference: https://github.com/Paul-Lez/TropicalNN.jl/issues/1#issuecomment-2412258485\n- Description: Tropical Geometric Computations for Neural Networks\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835989f0429975d64ad5bdc575fda02bc266ffe0ae9cb4ef85ce4aabeb9b549cd2c10b8c639eb4dda9a779dc92771eac4f0a4fe05395c48d6f5ab8a1e8c5dc8064a1b819c3b5e71278f044df9581fa1ec51eee444d7c3015b56226d62630c3b68ecf0810d11385c20810129ab4b48f579fe5a72995364c0a0d837dbaa9a21584f3729 -->",
+  "package_name": "TropicalNN",
+  "closed_at": "2024-10-15T17:52:45Z",
+  "title": "New package: TropicalNN v1.0.0"
+}

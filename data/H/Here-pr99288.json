@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-01-22T09:30:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 99288,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85xdocV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 9 existing packages.\n  1. Similar to Herb. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.28 is at or below cutoff of 2.50.\n  2. Similar to Mera. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.12 is at or below cutoff of 2.50.\n  3. Similar to Hose. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.23 is at or below cutoff of 2.50.\n  4. Similar to Serd. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Nerf. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Fire. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Hive. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Term. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to Hecke. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-22T09:34:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99288#issuecomment-1903593237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xdtLr",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't want to change the name of this package. The name \"Here\" is used because it is the same as the R package with the same functionality, which I think will make it easier to find for users. The other names that are listed in the error are also not really close in a lexical sense, like \"Herb\" or \"Hecke\", so I don't think this should lead to any confusion.",
+      "createdAt": "2024-01-22T09:45:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99288#issuecomment-1903612651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xep9b",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "Actually, nevermind. I'll change the name and create a new PR.",
+      "createdAt": "2024-01-22T12:03:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99288#issuecomment-1903861595",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xfGnq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`HereMacro` might also be an option",
+      "createdAt": "2024-01-22T13:11:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99288#issuecomment-1903978986",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Here\n- Repository: https://github.com/jolars/Here.jl\n- Created by: @jolars\n- Version: v0.1.0\n- Commit: d147a0a25a88574f456f646ce8aa98cdae3091ba\n- Git reference: HEAD\n- Description: Easy file-referencing for project-oriented workflows",
+  "package_name": "Here",
+  "closed_at": "2024-01-29T14:13:55Z",
+  "title": "New package: Here v0.1.0"
+}

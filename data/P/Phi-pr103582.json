@@ -1,0 +1,686 @@
+{
+  "created_at": "2024-03-25T17:58:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 103582,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q854UVHE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 6 existing packages.\n  1. Similar to Fri. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.40 is at or below cutoff of 2.50.\n  2. Similar to Pkg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to PWF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to PEG. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Why. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to FMI. Normalized visual distance 2.17 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-25T18:02:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018595268",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854UoWF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I didn't mind `Taped.jl`, but `Phi.jl` seems just way too nondescriptive and short. While there is ample precedent for AD-packages in Julia using *relatively* short and \"nice\" (\"non-systematic\") names, just \"Phi\" feels a bit too extreme. Especially since I have no association between \"Phi\" and AD, and \"Phi\" is one of the most overloaded letters in all of science.\r\n\r\nCf. https://github.com/JuliaRegistries/General/pull/103548#issuecomment-2018682499",
+      "createdAt": "2024-03-25T18:46:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018674053",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U39h",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Justification for nonstandard name: https://github.com/withbayes/Phi.jl/tree/main?tab=readme-ov-file#project-name",
+      "createdAt": "2024-03-25T19:20:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018738017",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U6yC",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I did see that, but I don't buy it. It's just too short, and `phi-nodes in SSA-IR` is too obscure a connection. At least in my opinion; maybe there's a maintainer consensus that the name is OK.\r\n\r\nDon't you like `Untaped.jl`?",
+      "createdAt": "2024-03-25T19:26:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018749570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U-HE",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Phi.jl seems like a much nicer name than Untaped.jl. The group has released several high quality packages with long term support - which personally makes me more comfortable with a shorter memorable name here.\r\n\r\nBut this is just my personal view (and is subjective).",
+      "createdAt": "2024-03-25T19:34:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018763204",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U-Ui",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Oops, accidentally clicked the close button instead...",
+      "createdAt": "2024-03-25T19:34:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018764066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U-tu",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do not have merge rights but I agree that Phi is pushing it with the shortness, regardless of package and contributor quality. How about Pullback.jl cause it's the main thing the package offers?",
+      "createdAt": "2024-03-25T19:36:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018765678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854VAYS",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We have other packages with short memorable names - for example - Lux.jl. I feel Phi.jl sounds much nicer than Pullback.jl (and there could perhaps be a slightly longer memorable name too).",
+      "createdAt": "2024-03-25T19:40:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018772498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854VCxt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Like I was saying,\r\n\r\n> Phi\" is one of the most overloaded letters in all of science\r\n\r\nwhich makes it worse name than `Lux`.\r\n\r\n> The group has released several high quality packages with long term support - which personally makes me more comfortable with a shorter memorable name here.\r\n\r\nI agree, and I'd take that as a prerequisite to considering something like `Phi`. I'm certainly not \"vetoing\" the name (not that I could). If there's a consensus that we want \"Phi\" to be the brand name for a new Julia AD package, go for it!",
+      "createdAt": "2024-03-25T19:46:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018782317",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854VH1F",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Phi\" is one of the most overloaded letters in all of science\r\n\r\nI say this only tongue in cheek - but multiple dispatch is (somewhat) about giving new meanings to existing names. If Phi becomes an amazing new Julia AD package, it would be worth overloading.",
+      "createdAt": "2024-03-25T19:58:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018803013",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854V1B0",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Jacob.jl / Jack.jl, for vector-Jacobian products?",
+      "createdAt": "2024-03-25T21:56:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018988148",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854V1kj",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Or the variant HiJack.jl, cause you hijack compilation?",
+      "createdAt": "2024-03-25T21:57:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2018990371",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854Wmxe",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I for one like the name Phi. Many of the other AD packages have similarly cute names, that are undescriptive (Lux / Enzyme) or minimally descriptive (Diffractor). \n\nWhen a name is *wrong*, like if Symbolics.jl was named Dictionaries.jl for some reason, I think that's a fair block. \n\nBut when a name has plenty of meanings, or it's not directly contradictory, I see no reason to reserve names like this. Enzyme for instance has little to do with enzymes for a biologist using Julia. But it's a great and recognizable name. \n\nI also would never have associated Flux, Lux, Enzyme, Umlaut, Avalon, Torch, Jax, etc with AD and ML before they existed. So I'm not sure why that should be a strict criteria. ",
+      "createdAt": "2024-03-26T00:49:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2019191902",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854WpNH",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Pullbacks.jl, HiJack.jl, Jacob.jl, Untaped.jl\n\nRespectfully these all feel very dry to me. There's a tendency in our community to name things very literally, like ReverseDiff or Symbolics. But that naming style isn't everyone's cup of tea, and I find punchy names like Torch or JAX a lot more memorable than long Matlab toolkit style names like ReverseDiff. ",
+      "createdAt": "2024-03-26T01:02:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2019201863",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854XhVc",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think using existing short package names to justify new ones is a bit dubious, because many of those predecessors were registered a long time ago. Back then, I assume registration was less strict, because the space of possible names felt unlimited. But now we know it isn't, and the space of possible 3-letter packages in particular is not that big. This is especially true when accounting for edit distance constraints.\nI also don't see why there should be an exception for AD / ML packages, or packages from well-regarded developers, who would somehow get a quirkiness pass.\n\nPersonally, I think it's cool that packages have quirky and memorable names. But as a community I feel we may need to draw a line somewhere, and three letters is a good spot for it. If someome came in and wanted to register the quantum physics package Psi.jl, because Psi is the symbol of the wave function, would that be a yes too? Arguably the name has a stronger case for it. But what if the dev were unknown to the people watching the \"new packages\" feed? Regardless of package quality, would they get the same treatment?",
+      "createdAt": "2024-03-26T05:36:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2019431772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854X7Hc",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "To be clear, I'm not fundamentally opposed to this package name in particular, and if the consensus is against me I'll noblock my comments. I just thought it was an opportunity to discuss the spirit of the rules we try to apply here",
+      "createdAt": "2024-03-26T07:10:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2019537372",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854a1Hn",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Phi is an annoyingly obscure name, that is hard to google (even googling Phi + Julia might not hit it).\r\nI worry it will harm this package.\r\n\r\nI also think a portly justified name will bias people against the package. At least Lux has the cleverness that it is Flux without the Functors, and names like CSV.jl refer to well known things.\r\n\r\nI don't hate it, but i feel its not the best call when there is a world of other names.\r\n",
+      "createdAt": "2024-03-26T12:28:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2020299239",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854dpjo",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks all for the suggestions. As an experiment for naming new packages, I outsourced this challenging decision to LLM. \r\n\r\nGoogle Gemini seems to believe `Jaco` (abbreviation of Jacobian) strikes the optimal balance. https://g.co/gemini/share/3bb48156166f\r\n\r\nEDIT: Further comments on the pronunciation of Jaco: https://g.co/gemini/share/21cdd2b784eb",
+      "createdAt": "2024-03-26T17:19:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        },
+        {
+          "content": "LAUGH",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2021038312",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854e1LL",
+      "author": {
+        "login": "willtebbutt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What are people's thoughts on `Tapas.jl`? It's a very loose food-based pun on tape, mirroring the fact that the package makes use of a tape only in the loosest sense. It has the advantage of paying tribute to the C / Fortran AD tool \"tapenade\", whose name is also a food-based pun.\r\n",
+      "createdAt": "2024-03-26T19:56:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 7
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2021348043",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854e7Vm",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I love it!",
+      "createdAt": "2024-03-26T20:09:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2021373286",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854kKWE",
+      "author": {
+        "login": "willtebbutt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Additionally, thoughts on `Tapir.jl`? @yebai pointed out that there doesn't seem to be an AD package using it yet.",
+      "createdAt": "2024-03-27T13:18:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2022745476",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854kkYW",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I like `Tapas` better.",
+      "createdAt": "2024-03-27T14:02:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2022852118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854k3C2",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@willtebbutt  and I liked the name `Tapas`, but I thought its connection to the project was remote. Neither Will nor I had any Tapas during the project. \r\n\r\nPersonally, I think `Tapir`, i.e. Tape-IR, provides a much stronger connection with the technical core of the project. It also happens that the development team thinks Tapir is a cute mammal. https://en.wikipedia.org/wiki/Tapir",
+      "createdAt": "2024-03-27T14:33:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2022928566",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854k4Vd",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I love it!",
+      "createdAt": "2024-03-27T14:35:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2022933853",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854mAVQ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Neither Will nor I had any Tapas during the project.\r\n\r\nThat's easily fixed! 😉\r\n\r\nBoth names are perfectly fine, so it's really up to you whatever you decide on",
+      "createdAt": "2024-03-27T16:32:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2023228752",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854oxkR",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Tapir sounds like a familiar name. I guess I was thinking of https://github.com/wsmoses/Tapir-LLVM.",
+      "createdAt": "2024-03-27T20:45:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2023954705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854o69Y",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Tapir sounds like a familiar name.\r\n\r\nThat's actually a somewhat more serious reason to avoid the name `Tapir`. We actually [very recently added an explicit guideline related to that](https://github.com/JuliaLang/julia/pull/53514), even though whether that really applies here is pretty arguable.",
+      "createdAt": "2024-03-27T21:08:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2023993176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854o_rU",
+      "author": {
+        "login": "yebai"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I don't think `Tapir-LLVM` should be a serious blocker since \r\n\r\n1. the last Git commit was five years ago\r\n2. the software name is called `Tapir-LLVM` instead of `Tapir`, although the technique was referred to as `Tapir` by the paper\r\n",
+      "createdAt": "2024-03-27T21:22:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024012500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854pK3U",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, like I said, \"arguable\" 😉",
+      "createdAt": "2024-03-27T21:55:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024058324",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854qYXy",
+      "author": {
+        "login": "rayegun"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is the successor, which still mentions Tapir frequently: https://github.com/OpenCilk/opencilk-project",
+      "createdAt": "2024-03-28T04:32:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024375794",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854qZ5O",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To be fair, there are also a couple of projects using the name TAPAS: https://github.com/search?q=tapas&type=repositories\r\n\r\nThey're all uppercase, though, and seem reasonably obscure that I would not consider them a blocker to Tapas.jl at all. Tapir.jl, maybe, because of how closely tied Julia and LLVM are, but even that is pretty tenuous, so I wouldn't seriously have a problem with either Tapir or Tapas",
+      "createdAt": "2024-03-28T04:41:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024382030",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854qmUg",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Also the Tapir-LLVM package seems unregistered?\n\nhttps://juliahub.com/ui/Search?q=Tapir&type=packages",
+      "createdAt": "2024-03-28T05:24:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024432928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854sRNG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Neither name has any conflict with an existing *Julia* project. The [Tapir-LLVM is just the C++ project](https://github.com/wsmoses/Tapir-LLVM) and then [other obscure stuff](https://github.com/search?q=Tapir&type=repositories)",
+      "createdAt": "2024-03-28T10:31:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2024870726",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854vgTQ",
+      "author": {
+        "login": "willtebbutt"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We can close this in favour of https://github.com/JuliaRegistries/General/pull/103806 .\r\n\r\nThanks everyone for your feedback -- @yebai and I greatly appreciate it.",
+      "createdAt": "2024-03-28T17:11:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2025718992",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855lYum",
+      "author": {
+        "login": "vchuravy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name `Tapir` did have some precedent in the Julia world in particular as the name for a proposed standard library https://github.com/JuliaLang/julia/pull/39773",
+      "createdAt": "2024-04-05T13:44:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103582#issuecomment-2039843750",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Phi\n- Repository: https://github.com/withbayes/Phi.jl\n- Created by: @willtebbutt\n- Version: v0.1.0\n- Commit: b803b4944e773312cc54e40cb3ce1fef12abce69\n- Reviewed by: @willtebbutt\n- Reference: https://github.com/withbayes/Phi.jl/commit/b803b4944e773312cc54e40cb3ce1fef12abce69#commitcomment-140206554\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd66059c3501356154cc640eabc77e5bccdb7337c1260a1e804e520ad3aad46b3beb19b0539d55b95daaff8825eab00a66a21e45de21108a4a3c54296c4fbf4dc1bedd24f86436db8166cc5d0b6d71d123b5c880a5d2f7b3f1e264d278a28f0983777c779eeaffdad1ab34db08771bd2633af59fb61c74ab7d82850d0f37db07fcbfcc4fd5ceaa3daf4df008246cb23afe4156d5a8da32ad71a978a730d58cd8d5044814c188cd00c883be2adf65997b2ad -->",
+  "package_name": "Phi",
+  "closed_at": "2024-03-28T17:19:47Z",
+  "title": "New package: Phi v0.1.0"
+}

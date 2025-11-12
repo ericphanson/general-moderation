@@ -1,0 +1,143 @@
+{
+  "created_at": "2024-10-07T19:24:03Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 116783,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86O6lwe",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-07T19:31:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2397723678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PNPhH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! I don't see any fundamental isues with this, but I just want to double check on the description \"Home of all my lattice dynamics codes written in Julia\". That sounds a lot like a \"personal package\", which we [discourage](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now) for registration in General.\r\n\r\nIt does seem like `ForceConstants` is a fairly general name. I don't have the necessary background to decide whether the package is \"complete\" in terms of its scope, \"calculate interatomic force constants\". Or at least, if it's heading there / will be maintained in the future. If this is just packaging up code from your PhD (especially if you are moving on), please consider whether you want to \"use up\" the name `ForceConstants`. It may not even be necessary to register the package: unregistered packages can be installed directly from GitHub, so registration is only absolutely necessary if any registered package will have `ForceConstants` as a dependency. You could also use a `VeryLongAndDistinctiveName`, and that will receive very little scrutiny, and will not clash with future package registrations.\r\n\r\nIf you feel that your package is \"complete\", or if you are planning to maintain this in the long term (accepting PRs from other people interested in interatomic force constants), I don't see a problem with merging this. I'd just ask you to confirm so that I can unblock the registration.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-09T15:09:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2402613319",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PPcHl",
+      "author": {
+        "login": "ejmeitz"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah this is a part of my PhD, I submitted it to the registry since I just submitted the paper that goes with this. I did have plans of working on this package beyond the paper to make it more generic, so maybe I should just register it then.\r\n\r\nA question when just adding the package directly git though. How can I instruct users to install a specific tag? When I use `add <git-string>` right now I just get the current main branch which is not really the behavior I'd want for an end user. If I remember right there is a kwarg in `Pkg.add` for the branch but I can't find it in the docs right now.",
+      "createdAt": "2024-10-09T19:06:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2403189221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PZHGf",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> A question when just adding the package directly git though. How can I instruct users to install a specific tag?\r\n\r\nYes, I think so. You can give `rev` to [`Pkg.add`](https://pkgdocs.julialang.org/v1/api/#Pkg.add). See also: [Github - How to clone/install specific branch?](https://discourse.julialang.org/t/github-how-to-clone-install-specific-branch/23572)\r\n\r\n[noblock]",
+      "createdAt": "2024-10-10T17:56:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2405724575",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PgiTN",
+      "author": {
+        "login": "ejmeitz"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't think this works to grab the latest tag though, which is how the package manager would operate. I'll just live with manual for now I guess as I can't really change the name due to it being called ForceConstants.jl in my paper. \r\n\r\nYou can close or remove this PR or whatever is needed.\r\n",
+      "createdAt": "2024-10-11T15:39:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2407670989",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PgtpX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not saying this can't be merged with the name. It's sort of up to you to decide what you want to do, whether it's useful to register. If you're going to be around to develop this further and to potentially accept PRs from people working in that domain, I certainly don't see a reason to block this.\r\n\r\n> I can't really change the name due to it being called ForceConstants.jl in my paper.\r\n\r\nJust for future packages: It's a big no-no to publish a paper before registering the package. Always register first, precisely to avoid this kind of situation.\r\n\r\nBut having a paper, you probably want to add citation information to your project (in the README and maybe in a [CITATION file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)). Having a published paper about a package is also something that might tilt the scale in favor of registering in General.\r\n\r\n> I don't think this works to grab the latest tag though\r\n\r\nThe way around that would be to register it in a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl). General is just the _default_ registry, and it's pretty easy to set up an alternative registry for not-quite-ready packages or packages for limited use (personal, group internal).\r\n\r\nBut again, I'm not fundamentally opposed to having this in General. If you edit all your existing comments to contain `[noblock]`, this package will be automatically merged without any further input (so it's really up to you to decide). Otherwise, the bot will close the PR after 30 days of inactivity (but you can always come back after that and make a new registration)\r\n\r\n[noblock]",
+      "createdAt": "2024-10-11T16:07:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2407717463",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z7zxj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-10T12:24:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2582592611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86a9DXu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-18T12:23:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/116783#issuecomment-2599695854",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ForceConstants\n- Repository: https://github.com/ejmeitz/ForceConstants.jl\n- Created by: @ejmeitz\n- Version: v0.1.4\n- Commit: 969d90d3e04fb2ac6c5a601da764c9d06f172d0b\n- Reviewed by: @ejmeitz\n- Reference: https://github.com/ejmeitz/ForceConstants.jl/commit/969d90d3e04fb2ac6c5a601da764c9d06f172d0b#commitcomment-147674020\n- Description: Home of all my lattice dynamics codes written in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd698cfa21f0b962ad8f64579d618bdb9a3855376a6fb6b31e1dcccf75add747426b53a1958119ef809122ae6ccea255322f93ee134efdca88f245544232009c8856e8fe65dcd7bb2fe883114ac549d6d43075157dbc37f7aec3ac050c487dd0c8a08a9d90c87ba25d740231bdb22b58b6492a6d88798870613e61396958eb96609487ee78749a824718fa23dbac1a5c8f8cdcfade10039f5de103a095d9781ba473a9a3206bc4c76bd62efb256bad82091 -->",
+  "package_name": "ForceConstants",
+  "closed_at": "2025-01-18T12:23:39Z",
+  "title": "New package: ForceConstants v0.1.4"
+}

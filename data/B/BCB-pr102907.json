@@ -1,0 +1,68 @@
+{
+  "created_at": "2024-03-15T02:23:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102907,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q853I7_w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, Documenter, Gumbo, HTTP, StringEncodings\n- Package name similar to 16 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n\n  1. Similar to XCB. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.43 is at or below cutoff of 2.50.\n  2. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.76 is at or below cutoff of 2.50.\n  3. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.86 is at or below cutoff of 2.50.\n  4. Similar to BED. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.93 is at or below cutoff of 2.50.\n  5. Similar to GCP. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.96 is at or below cutoff of 2.50.\n  6. Similar to BDF. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.44 is at or below cutoff of 2.50.\n  7. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.50 is at or below cutoff of 2.50.\n  8. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to UCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to FIB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to Bio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to BAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  14. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  15. Similar to ROS. Normalized visual distance 2.20 is at or below cutoff of 2.50.\n  16. Similar to ODE. Normalized visual distance 2.49 is at or below cutoff of 2.50.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-15T02:27:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102907#issuecomment-1998831600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853I-WM",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The shortest name you could possibly get away with would probably be `BCBrasilAPI` but don't shy away from even longer names like `BrasilCentralBankAPI` (which would be my recommendation)",
+      "createdAt": "2024-03-15T02:41:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102907#issuecomment-1998841228",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q853Jqps",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102910",
+      "createdAt": "2024-03-15T06:29:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102907#issuecomment-1999022700",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BCB\n- Repository: https://github.com/azeredo-e/BCB.jl\n- Created by: @azeredo-e\n- Version: v0.1.0\n- Commit: f6e60ecfadd5e2dc4df589becc2455325e3f061e\n- Reviewed by: @azeredo-e\n- Reference: https://github.com/azeredo-e/BCB.jl/issues/1\n- Description: BCB.jl is an interface in the Julia programming language for the data API of Brazil's Central Bank (BCB)\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598966f82105d65ad63732c55d55b571b78f0a5cb91cbd82fbf83394151575c179b8163a9626160ba6469cd7d4142039846c63ac01224706ff9746e450de00d14667d109b564fbc88db34051240910d02289a39c4805201338e314b95a369ee48a958c4ba1ca22a3adf3567e70a8edc4210 -->",
+  "package_name": "BCB",
+  "closed_at": "2024-03-15T06:29:21Z",
+  "title": "New package: BCB v0.1.0"
+}

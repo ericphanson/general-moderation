@@ -1,0 +1,169 @@
+{
+  "created_at": "2025-02-01T21:10:24Z",
+  "review_comments": [
+    {
+      "id": 2596659958,
+      "node_id": "PRR_kwDOBhF1q86axeL2",
+      "user": {
+        "login": "mscroggs",
+        "id": 9850599,
+        "node_id": "MDQ6VXNlcjk4NTA1OTk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/9850599?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mscroggs",
+        "html_url": "https://github.com/mscroggs",
+        "followers_url": "https://api.github.com/users/mscroggs/followers",
+        "following_url": "https://api.github.com/users/mscroggs/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mscroggs/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mscroggs/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mscroggs/subscriptions",
+        "organizations_url": "https://api.github.com/users/mscroggs/orgs",
+        "repos_url": "https://api.github.com/users/mscroggs/repos",
+        "events_url": "https://api.github.com/users/mscroggs/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mscroggs/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "update name",
+      "state": "COMMENTED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/124176#pullrequestreview-2596659958",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/124176",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/124176#pullrequestreview-2596659958"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/124176"
+        }
+      },
+      "submitted_at": "2025-02-05T18:36:54Z",
+      "commit_id": "06636c737c43cf44e49347c2c381db576c1d90ae"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 124176,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ctSbs",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-01T21:16:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2629117676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86cvvX0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My first reaction was: Given the names of the library in other languages, why the `DotOrg`? Wouldn't this package be perfectly fine as `QuadratureRules`?\r\n\r\nBut it unfortunately seems like there already is [QuadratureRules.jl](https://juliagni.github.io/QuadratureRules.jl/stable/). Maybe @michakraus can weight in on this? Does it make sense to have these two libraries, or would it be better to somehow combine efforts?\r\n\r\nIn any case, I would also recommend linking to or including the information in https://github.com/quadraturerules/quadraturerules/blob/main/website/pages/libraries/julia.md in the package README.",
+      "createdAt": "2025-02-03T02:30:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2629760500",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86cxu7Q",
+      "author": {
+        "login": "michakraus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As far as I can see the code in the repo is auto-generated by some python code from the parent repo [quadraturerules](https://github.com/quadraturerules/quadraturerules) using tabulated coefficients.\r\n\r\nWhile it is conceivable to generate code that is then used in [QuadratureRules.jl](https://github.com/JuliaGNI/QuadratureRules.jl), it is a bit against the spirit of the package. QuadratureRules.jl is intentionally not using tabulated coefficients but instead allows to compute all coefficients of a quadrature rule to arbitrary accuracy.",
+      "createdAt": "2025-02-03T08:34:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2630282960",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86czlNS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay… I still wonder if there’s a better name for this package. But if we can’t come up with anything, I’ll just unblock this and let the merge proceed ",
+      "createdAt": "2025-02-03T12:08:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2630767442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86czqx_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `TabulatedQuadratureRules`. That seems appropriate by itself, but of course no longer strongly connects to the source project. Alas, the source project name just isn’t available. Personally, the `DotOrg` rubs me the wrong way, and I would go with a more descriptive name. But ultimately, I think this is just going to be @mscroggs decision.",
+      "createdAt": "2025-02-03T12:18:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2630790271",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c4hC_",
+      "author": {
+        "login": "mscroggs"
+      },
+      "authorAssociation": "NONE",
+      "body": "`TabulatedQuadratureRules` is a much better name than `DotOrg`. I'll update the name to that, thanks for the suggestion!",
+      "createdAt": "2025-02-03T20:58:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2632061119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dONnH",
+      "author": {
+        "login": "mscroggs"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can now be closed in favour of https://github.com/JuliaRegistries/General/pull/124398",
+      "createdAt": "2025-02-05T18:48:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124176#issuecomment-2637748679",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuadratureRulesDotOrg\n- Repository: https://github.com/quadraturerules/QuadratureRulesDotOrg.jl\n- Created by: @mscroggs\n- Version: v0.7.3\n- Commit: de256bdbacac774383bcbc2084182f87b835e1d8\n- Reviewed by: @mscroggs\n- Reference: https://github.com/quadraturerules/QuadratureRulesDotOrg.jl/issues/1\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f5acfbce06c9277846036a7e40f1373aac1aadae4d58d239d03d53bf467621d180c2e501bbb85dd44fbe8f0f288a304fe005a0cd25bf4d26c25dd59fc2fdee9bb49e8e2df99a30fe14ff837ab2cf462698b32a3910dc42915a481c275dca7203f8a4fb223b6f366040868b59979f9fd43d0f73a3ca92c2222229b1d44a8817a89417be17f3c6fbee1d22e2b23cce9902 -->",
+  "package_name": "QuadratureRulesDotOrg",
+  "closed_at": "2025-02-05T19:49:10Z",
+  "title": "New package: QuadratureRulesDotOrg v0.7.3"
+}

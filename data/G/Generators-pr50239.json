@@ -1,0 +1,91 @@
+{
+  "created_at": "2021-12-09T14:06:00Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 50239,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847AHfN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to FGenerators. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-09T14:09:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50239#issuecomment-989886413",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847F3q3",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@zot please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.  Also, it'd be good for your package to have some tests, at the moment it doesn't have any.\r\n\r\n[noblock]",
+      "createdAt": "2021-12-11T00:45:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50239#issuecomment-991394487",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847GyAa",
+      "author": {
+        "login": "zot"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @giordano, I have a `jldoctest` that automatically runs for me from make.jl. Isn't this run by CI?",
+      "createdAt": "2021-12-11T12:53:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50239#issuecomment-991633434",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848MlXl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-01-11T12:47:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50239#issuecomment-1009931749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q848hXN2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-01-18T12:48:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50239#issuecomment-1015378806",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Generators\n- Repository: https://github.com/zot/Generators.jl\n- Created by: @zot\n- Version: v0.1.0\n- Commit: 8dadfb01933422f08696af716b64ec0f8cdc3ad7\n- Reviewed by: @zot\n- Reference: https://github.com/zot/Generators.jl/commit/8dadfb01933422f08696af716b64ec0f8cdc3ad7#commitcomment-61741790\n- Description: Lightweight, task-based generators for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b07d52926113b535d00bd526682a5234c5c74927cd840707bf40e041f8dc26e49b6e1180cb4d74ada3a0579ddf2c12b9be1efda6e185b149f0ff50da5e2683812c913bf2acc59c2fefb9a8d41bf175c5c8f2826488aa7a28fb14ac76e0464e4eaf54e51e773276777ab167a17677caaf5c78d9af6b6861fda7a8c875a1774c660df713d126de6139334525f47083c21c41161cb17622539119775c6633b716df8cf06c736cfbbe0aac13a810a1f09435 -->",
+  "package_name": "Generators",
+  "closed_at": "2022-01-18T12:48:54Z",
+  "title": "New package: Generators v0.1.0"
+}

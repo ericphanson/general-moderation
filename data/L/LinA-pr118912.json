@@ -1,0 +1,121 @@
+{
+  "created_at": "2024-11-07T17:15:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 118912,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Sy7z7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CDDLib, Calculus, DataDeps, ForwardDiff, GeneralizedGenerated, Polyhedra, Roots\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-07T17:25:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2462825723",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Sy9eW",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @Codsilla, congrats on the package registration!\nUnfortunately, the name LinA.jl doesn't really fit the [package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules). Typically, Julia package names are longer and more descriptive, without domain-specific shortcuts or acronyms. For this one, can I recommend PiecewiseLinearApproximation.jl?\nI understand it's a bummer if you already published papers referring to the package by name, but if you rename the repo then GitHub will redirect all the old URLs to the new one. And you can always add a note to the README mentioning the original name.",
+      "createdAt": "2024-11-07T17:29:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2462832534",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86SzOeC",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] This one might be a bit more complicated, assuming `LinA` is the name of a specific method.\r\n\r\nUsing that kind of domain-specific method name as a package name really does not fit in the Julia package naming guidelines, as @gdalle points out. On the other hand, `PiecewiseLinearApproximation.jl` would imply something more general than an implementation of this particular method. One option would be to keep `LinA` as *part* of the package name, but add a prefix/suffix to give the name context. I'm struggling to come up with a suggestion, though (which I suppose means I would be open to keeping the name `LinA`).\r\n\r\nAnother option, and that's probably the one that would be ideal from a community perspective, is for `LinA` to be a submodule in a more general package `PiecewiseLinearApproximation.jl` (or something similar) that also implements alternative methods in the same domain. Assuming that [LICO-labs](https://github.com/LICO-labs) is a somewhat long-lived organization that would have the ability to maintain such a package and be open to having contributors add implementations of alternative methods, that could be a good solution.\r\n\r\nIn any case, never publish a paper (or even a preprint) without registering the package _first_.",
+      "createdAt": "2024-11-07T18:03:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2462902146",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zoj3d",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-08T12:24:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2577546717",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86as0mO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-16T12:24:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2595441038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ksbP5",
+      "author": {
+        "login": "Codsilla"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sorry, I took so long to get back to you on this.\r\n\r\nWould the name PiecewiseLinApprox.jl do the trick? It still contains LinA as a substring but conveys the package's goal.\r\n\r\n",
+      "createdAt": "2025-03-29T05:19:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2763109369",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ktVe8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Would the name PiecewiseLinApprox.jl do the trick?\r\n\r\nYes, that should pass the the automatic checks, and is very unlikely to raise any kind of objections. ",
+      "createdAt": "2025-03-29T12:42:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118912#issuecomment-2763347900",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LinA\n- Repository: https://github.com/LICO-labs/LinA.jl\n- Created by: @Codsilla\n- Version: v1.0.1\n- Commit: 0edd0e079d88d08321081780c85f68393565b6b1\n- Reviewed by: @Codsilla\n- Reference: https://github.com/LICO-labs/LinA.jl/commit/0edd0e079d88d08321081780c85f68393565b6b1#commitcomment-148842829\n- Description: Optimal piecewise linear approximation package for the Julia programming language\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f09d64e8075376a02e6e3473a49f919592464281ed176107b70c7d53673e4911b5e6a56b29a13ed5f56989b12d9cfd0df22a38b79db6beb1f67a35931137c99cf889185942ad96101c4ac0580780c97a8788ebdb63f1247356ecd5e6ab67fedef73026af55d7897c6e3065621996db1b349903f24ed88b7f4beb03ac9cf8a6adaacf7319059c7f58664fdffa586def02164f34e489e5c2cd65c3d15fd9774de0bcf98dc5cf104f89f3478542b1d40712 -->",
+  "package_name": "LinA",
+  "closed_at": "2025-01-16T12:24:18Z",
+  "title": "New package: LinA v1.0.1"
+}

@@ -1,0 +1,379 @@
+{
+  "created_at": "2019-12-21T00:57:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 6993,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODEzNzA4MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n- The following dependencies do not have a compat entry that has an upper bound: julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.\n\nNote: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versionsyour package is compatible with. See [https://julialang.github.io/Pkg.jl/v1/compatibility/.] for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-21T00:59:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568137080",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODEzNzY3Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n\nNote: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versionsyour package is compatible with. See [https://julialang.github.io/Pkg.jl/v1/compatibility/.] for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-12-21T01:05:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568137676",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODEzNzY3OA==",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd like to petition to allow the shorter package name in this case; DBI is fairly common acronym (DataBase Interface) in other languages for database interface definitions.",
+      "createdAt": "2019-12-21T01:05:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568137678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI2NDU1Nw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The more I think about this, the less I like the name.\r\n\r\nHow about `DBInterface.jl` or `DBInterfaces.jl`? Or maybe something like `AbstractDatabase.jl` or `AbstractDatabases.jl`\r\n\r\nI’m trying to move us away from three letter package names except in the most glaringly obvious cases.\r\n\r\n@StefanKarpinski @KristofferC @fredrikekre ",
+      "createdAt": "2019-12-22T13:52:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568264557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMwOTg2MQ==",
+      "author": {
+        "login": "randyzwitch"
+      },
+      "authorAssociation": "NONE",
+      "body": "I feel like you need to go with DBI.jl just based on prior art",
+      "createdAt": "2019-12-22T22:53:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568309861",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMwOTk2NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I feel like you need to go with DBI.jl just based on prior art\r\n\r\nAny prior art in particular?",
+      "createdAt": "2019-12-22T22:55:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568309965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMDA2Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I know that the General registry has multiple three-letter packages, but I wouldn't recommend using them as examples. In hindsight, I don't think all of them were good decisions. And moving forward, I think it's best to minimize the number of new three-letter packages that we allow.",
+      "createdAt": "2019-12-22T22:57:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568310063",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMDExMA==",
+      "author": {
+        "login": "randyzwitch"
+      },
+      "authorAssociation": "NONE",
+      "body": "Perl, R and Python all have DBI packages. If I were to guess if Julia had one, I’d start by searching “DBI Julia”",
+      "createdAt": "2019-12-22T22:58:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568310110",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMDIzNw==",
+      "author": {
+        "login": "randyzwitch"
+      },
+      "authorAssociation": "NONE",
+      "body": "https://db.rstudio.com/dbi/\r\nhttps://www.python.org/dev/peps/pep-0249/\r\nhttps://dbi.perl.org/\r\nhttps://rubygems.org/gems/dbi/versions/0.4.5\r\nhttps://crates.io/crates/dbi",
+      "createdAt": "2019-12-22T23:00:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568310237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMzE4MA==",
+      "author": {
+        "login": "nickrobinson251"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Let's choose to have better naming conventions than other languages. `DBInterface.jl` is much clearer. ",
+      "createdAt": "2019-12-22T23:42:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568313180",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMxMzgwNw==",
+      "author": {
+        "login": "randyzwitch"
+      },
+      "authorAssociation": "NONE",
+      "body": "What benefit does it give to intentionally use a different name than other people are will be searching for? In the standard library, zeros() and ones() are just as arbitrary about what they do, but are around because the audience is used to those conventions\r\n\r\nTo me, the biggest mistake is to do something like this https://pypi.org/project/JayDeBeApi/",
+      "createdAt": "2019-12-22T23:52:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568313807",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODMyODkwOA==",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`DBInterface.jl` seems really nice to me. Relatively short, super clear to everyone, even those that aren't familiar with acronyms from other languages. Plus, this package probably won't be used directly by end users, it mostly targets other package authors, right? So having something short is maybe even less important?",
+      "createdAt": "2019-12-23T02:06:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568328908",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODQ5NjkzNw==",
+      "author": {
+        "login": "iamed2"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Python's is actually DBAPI (or DB-API), and until I encountered DBI.jl I had no idea that was a name used in other languages. I had interacted with databases in Java, C, MATLAB, and Python. \r\n\r\nI like DBInterface since you can guess what it is from the name. I'd say DatabaseInterface is better. That said, I support every option proposed so far!",
+      "createdAt": "2019-12-23T14:57:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568496937",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU0MTg5Nw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Here is one counterexample: If you search for `Matlab DBI`, all the results that come up are either about clustering, directivity, or decibals - not databases. In contrast, if you search for either `Matlab database` or `Matlab database interface`, the first result is the Matlab Database Toolbox.\r\n\r\nIn fact, if I go to https://dbi.r-dbi.org/, then I see this:\r\n\r\n> The interface defines a small set of classes and methods similar in spirit to Perl’s DBI, Java’s JDBC, Python’s DB-API, and Microsoft’s ODBC. It supports the following operations:\r\n\r\nSo R and Perl call it `DBI`, but Python calls it `DB-API`, Java calls it `JDBC`, Microsoft calls it `ODBC`, and Matlab calls it `Database Toolbox`. So there is already precedent for different languages to have different names for these kinds of packages.",
+      "createdAt": "2019-12-23T18:04:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568541897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU0MTk0NQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "~~Here's another suggestion: `Databases.jl`~~",
+      "createdAt": "2019-12-23T18:04:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568541945",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU0MjE3Nw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also be fine with `DatabaseAPI.jl` or `DatabasesAPI.jl`.",
+      "createdAt": "2019-12-23T18:05:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568542177",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU0NDE2OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@quinnj Are you amenable to any of the suggested names?",
+      "createdAt": "2019-12-23T18:13:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568544168",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU1MTQxMg==",
+      "author": {
+        "login": "davidanthoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think Databases.jl would not be good. The package does not have databases in it, it defines an interface for databases.",
+      "createdAt": "2019-12-23T18:48:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568551412",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU1ODU0NQ==",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think @davidanthoff's suggestion of DBInterface.jl is my favorite, so let's go with that.",
+      "createdAt": "2019-12-23T19:17:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HOORAY",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568558545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU4ODQwMg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I think @davidanthoff's suggestion of DBInterface.jl is my favorite, so let's go with that.\r\n\r\nSounds great. I’ll close this PR and you can make a new registration with the new name.",
+      "createdAt": "2019-12-23T21:41:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/6993#issuecomment-568588402",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DBI\n- Repository: https://github.com/JuliaDatabases/DBI.jl\n- Created by: @quinnj\n- Version: v1.0.0\n- Commit: 08284bbca204b152fe3e9b681db178959eb685eb\n- Reviewed by: @quinnj\n- Reference: https://github.com/JuliaDatabases/DBI.jl/commit/08284bbca204b152fe3e9b681db178959eb685eb#commitcomment-36531189\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae4e0efc346c3bef60eb0b2b48c6364c06e4e34589ba1a8ea670a710dc15d6ee958d76907ecbd40c57314a00192f902469631b4c362b9470ec87a56bfc37ed4ae35be4237d54a8aeb494e5cf97b3ed11c002481c8fc4d58f9e771888c7e0662f838c43fb9e9bea4dbf01f5d8e98d24a544e908a1926ea02b20664d656157604295de992e6f8197401d39e01ac0abe963ad367f3018fb491fa889063fecd5e53966ab64fc739fc5ba7af2f234e932fa504e3 -->",
+  "package_name": "DBI",
+  "closed_at": "2019-12-23T21:41:13Z",
+  "title": "New package: DBI v1.0.0"
+}

@@ -1,0 +1,128 @@
+{
+  "created_at": "2020-04-17T05:09:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 13151,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNTA0NjA1NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, ends in a lowercase letter. **Important note: It is okay to have a package name that ends in an uppercase letter. However, you will need to wait until a registry maintainer manually approves the name.**\n- Name is not at least five characters long\n- I was not able to install the package (i.e. `Pkg.add(\"BLP\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import BLP` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-04-17T05:12:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-615046054",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNTA1MDA5MA==",
+      "author": {
+        "login": "felipenoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "* Naming: I assumed the name `BLPAPI` (or `Blpapi`) was taken by JuliaComputing, so I used BLP. This package does not have an obvious alternative name, and I accept suggestions.\r\n\r\n* build fails: the CI tried to install on linux. Currently this is a Windows-only package in this initial release.",
+      "createdAt": "2020-04-17T05:26:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-615050090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjI5MjU1Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">     * build fails: the CI tried to install on linux. Currently this is a Windows-only package in this initial release.\r\n\r\nThat is fine.\r\n\r\n>     * Naming: I assumed the name `BLPAPI` (or `Blpapi`) was taken by JuliaComputing, so I used BLP. This package does not have an obvious alternative name, and I accept suggestions.\r\n\r\nI would **very strongly** recommend a longer and more descriptive package name.\r\n\r\nHow about:\r\n- `Bloomberg.jl`\r\n- `BloombergAPI.jl`\r\n- `BloombergData.jl`\r\n- `BloombergFinance.jl`",
+      "createdAt": "2020-04-20T03:47:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-616292556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjI5NDY1OQ==",
+      "author": {
+        "login": "felipenoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@DilumAluthge , I'm afraid those names are Bloomberg trademarks. Most packages go with Blpapi name.",
+      "createdAt": "2020-04-20T03:58:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-616294659",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjI5NTExMQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "- `BLPData.jl`\r\n- `BLPdata.jl`\r\n- `BLPFinance.jl`\r\n- `BLPfinance.jl`",
+      "createdAt": "2020-04-20T04:01:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-616295111",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjI5ODc4MQ==",
+      "author": {
+        "login": "felipenoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'll go with BLPData.jl. ",
+      "createdAt": "2020-04-20T04:19:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-616298781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxNjMwNzkzMw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Cool. I'll close this PR, and you can make a new registration after you have renamed the package.",
+      "createdAt": "2020-04-20T04:53:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13151#issuecomment-616307933",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BLP\n- Repository: https://github.com/felipenoris/BLP.jl\n- Created by: @felipenoris\n- Version: v0.0.1\n- Commit: f141d349da373c228e797918d0d7ae8800106523\n- Reviewed by: @felipenoris\n- Reference: https://github.com/felipenoris/BLP.jl/commit/f141d349da373c228e797918d0d7ae8800106523#commitcomment-38552548\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae43bec9718f64d1cb937df5ad405cd9c1669ffda2a56e08585c50c4e1710732e5ffeafb430808d056e049def9f0c97fa2c4ce2c34aa5666add79cf7febeaf8d5771d555fd58e5e14fdba1f857f8f9d84ee445586b2b4b1fad689b726d1db8ab7220ac6ba35b1674a29b79c0ddca5ea8197ab5ad5291d88d57d85f7e33f291d58ccadb5ed8e7dc2a576fb904a68aaecbb955bb7953cf33cede3b199200bfe13707e7016da0113673f8cf2677e1590c40bca -->",
+  "package_name": "BLP",
+  "closed_at": "2020-04-20T04:53:41Z",
+  "title": "New package: BLP v0.0.1"
+}

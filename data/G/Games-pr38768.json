@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-06-13T14:04:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 38768,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2MDIxNzQwMw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The compat entry for `julia` is unbounded.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Clp, Combinatorics, LRSLib, LightGraphs, Parameters, Polyhedra, QuantEcon\n- Package name similar to 6 existing packages.\n  1. Similar to Dates. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Gaius. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Mazes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Pages. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Vimes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to GAMS. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-13T14:10:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38768#issuecomment-860217403",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg2MDIzNzg5Nw==",
+      "author": {
+        "login": "dpsanders"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This name seems too generic. How about `GameTheory.jl`?",
+      "createdAt": "2021-06-13T16:30:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38768#issuecomment-860237897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg3OTg2MTQ2Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-07-14T12:47:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38768#issuecomment-879861466",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q840vkGg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-07-22T12:46:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38768#issuecomment-884883872",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Games\n- Repository: https://github.com/QuantEcon/Games.jl\n- Created by: @oyamad\n- Version: v0.1.0\n- Commit: 09f9c0718e67485a5bb7eb147ca385d49e40dfaf\n- Reviewed by: @oyamad\n- Reference: https://github.com/QuantEcon/Games.jl/commit/09f9c0718e67485a5bb7eb147ca385d49e40dfaf#commitcomment-52110321\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6a662408769dc657692fe7d85d4be4e73cfaa28e1253a2712312d4e1c78e2a6ed8ce1f0190839f192096861ed0776e4053806925a03b21e1223e30914992385408486972870e987dc75d261104a4599f6ebb22b53ec949b9d93cce279c14044891d4b6bd93e48efb1513ed8d27fb93478f047c9643184af2b618483ff0ec747986b37ec9f0ad0b4555abde5561e0c5caa3db0ecd06e3bac8329d3dbf01cac61941330ec97b5dc8ff6d8f2bf34e72236c6 -->",
+  "package_name": "Games",
+  "closed_at": "2021-07-22T12:46:37Z",
+  "title": "New package: Games v0.1.0"
+}

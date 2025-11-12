@@ -1,0 +1,83 @@
+{
+  "created_at": "2021-03-31T19:02:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 33276,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMTM1MzgyMQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 13 existing packages.\n  <details>\n  <summary>Similar package names</summary>\n  \n  1. Similar to MCVI. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to SVR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to BBI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to ADI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Cbc. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to CRC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  11. Similar to Clp. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  12. Similar to NCEI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  13. Similar to MGVI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n  </details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-31T19:05:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33276#issuecomment-811353821",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMTM4MjIyMg==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The package is empty at the moment: https://github.com/AP6YC/CVI.jl/blob/8055c2c463cd9e34b6f90e4196339bd249007978/src/CVI.jl.  Besides, it'd be nice to have a more descriptive name, what about `ClusterValidityIndices`? :slightly_smiling_face: ",
+      "createdAt": "2021-03-31T19:34:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33276#issuecomment-811382222",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMTQxNTYyMw==",
+      "author": {
+        "login": "AP6YC"
+      },
+      "authorAssociation": "NONE",
+      "body": "> The package is empty at the moment: https://github.com/AP6YC/CVI.jl/blob/8055c2c463cd9e34b6f90e4196339bd249007978/src/CVI.jl. Besides, it'd be nice to have a more descriptive name, what about `ClusterValidityIndices`? 🙂\r\n\r\nWhoopsy! About the project files, they are added to the repo and are passing unit tests. Should I create a new submission request with the populated project?\r\n\r\nAlso, about the name, I considered was worried about package name length. If the name `CVI` is a poor name and `ClusterValidityIndices` is _not_ too long, then I will be fine with changing the project name.",
+      "createdAt": "2021-03-31T20:02:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/33276#issuecomment-811415623",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgxMTQ1NjcxOQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Generally speaking we prefer long and descriptive names to short and hard-to-understand ones :wink:  After you rename the package, register it again and a new pull request will be opened.  I'm going to close this one.  Thanks!",
+      "createdAt": "2021-03-31T20:51:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/33276#issuecomment-811456719",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CVI\n- Repository: https://github.com/AP6YC/CVI.jl\n- Created by: @AP6YC\n- Version: v0.1.0\n- Commit: 8055c2c463cd9e34b6f90e4196339bd249007978\n- Git reference: master\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> Initial submission of the CVI.jl \n<!-- END RELEASE NOTES -->",
+  "package_name": "CVI",
+  "closed_at": "2021-03-31T20:51:15Z",
+  "title": "New package: CVI v0.1.0"
+}

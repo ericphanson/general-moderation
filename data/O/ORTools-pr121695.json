@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-12-19T21:38:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 121695,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86YVt7x",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- I was not able to load the package (i.e. `import ORTools` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-12-19T21:47:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121695#issuecomment-2555830001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86YX_HH",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\nJust swinging by to say that the name similarity should be okay. This is a very well-established package by Google",
+      "createdAt": "2024-12-20T07:17:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121695#issuecomment-2556424647",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86YaxNF",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> I was not able to load the package (i.e. import ORTools failed). See the AutoMerge logs for details.\r\n\r\nThis file https://github.com/google/or-tools/blob/stable/ortools/julia/ORToolsGenerated.jl/src/ORToolsGenerated.jl must be named `ORTools.jl` and define `module ORTools`. (And in general, match the name given in `Project.toml`. The directory containing `Project.toml`, on the other hand, may have any name)",
+      "createdAt": "2024-12-20T14:48:58Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121695#issuecomment-2557154117",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86YbnAS",
+      "author": {
+        "login": "dourouc05"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I fixed several errors detected in this PR, I thus had to make a new one: https://github.com/JuliaRegistries/General/pull/121735. For instance, the name of the package wasn't right… (We'll have ORTools.jl in the near future.)",
+      "createdAt": "2024-12-20T16:50:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121695#issuecomment-2557374482",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Yc3kJ",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #121735.",
+      "createdAt": "2024-12-20T20:55:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/121695#issuecomment-2557704457",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ORTools\n- Repository: https://github.com/google/or-tools\n- Created by: @dourouc05\n- Version: v0.0.1\n- Commit: e9ccb8e73bd4aeb688fb2a62d7f4918607d74ad6\n- Reviewed by: @dourouc05\n- Reference: https://github.com/google/or-tools/commit/e9ccb8e73bd4aeb688fb2a62d7f4918607d74ad6#commitcomment-150583729\n- Description: Google's Operations Research tools:\n<!-- ae9404edfd72f1de901db3e818bff6d68e1033f2a40e4f25e4af6c579aabbd89dfa5a40efacf6336f6f89800aaa8d234c46f2d0ac3b9eb8d004644ae89b40bb44f4ab3dd3840c73d55c63753fb1a69682566705f95e59a14ff5156a7610c6b9cd24e829971780afb61db3257a0b2f40f6463c74dac0430f2c2607a2cf82d037c9d364593257162a5bb7ca6916bdb695212f5fc10e17d2237f82baabe99afe0ba5e808716e108e677ea8f7d4787307da6060d7a708909b8021de50e0181f40e8158067eb7582f0ee9bd66a3f4557b4c6f97c9e5af9d8c54a9cf4dcbde0350ebdc2eea2203a49922ae46b592f43dadf4f21214b178fcb9512bff317602c7c3359f -->",
+  "package_name": "ORTools",
+  "closed_at": "2024-12-20T20:55:12Z",
+  "title": "New package: ORTools v0.0.1"
+}

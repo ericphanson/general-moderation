@@ -1,0 +1,91 @@
+{
+  "created_at": "2025-03-21T20:10:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 127448,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86jk8ny",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-21T20:21:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127448#issuecomment-2744371698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jsnBL",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Personally, I would consider the comment in the README\r\n\r\n> A detailed documentation is planned to be available soon.\r\n\r\nto be at odds with registering as a `v1.0.0` version. If you are following [semantic versioning](https://semver.org), a `v1.0` promises a stable API, which must be well-specified so that you can track breaking and non-breaking changes, going forward.\r\n\r\nYour intuition to start with `v1.0.0-dev` in https://github.com/JuliaRegistries/General/pull/127447 was probably a good one. In my opinion, it would be totally fine to tag `v0.1` when making a package public that's on it's way to being stable, as \"pre-1.0\". That then allows you to refine the API after people have had a chance to actually use it, and to further work on the documentation. Then, you can directly tag `v1.0` in the near future. There's no requirement that a `v1.0` version somehow has to be \"breaking\" with respect to the last `v0.x` release; it's fine to use the `v1.0` label to designate the package as \"stable\" (at least in my opinion).\r\n\r\nSo, I would recommend either adding full documentation (and, ideally, also tests with coverage) before continuing with the v1.0 registration, or changing the version number to something pre-1.0. But it's up to you. The README is already in pretty good shape, so I can unblock if you want to keep going with v1.0.",
+      "createdAt": "2025-03-23T19:29:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127448#issuecomment-2746380363",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jzbBy",
+      "author": {
+        "login": "manuhuth"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks a lot for your review and suggestion. Using v0.1 sounds like a good option. What is the preferred way of uploading the v0.1-labeled version?",
+      "createdAt": "2025-03-24T13:37:57Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127448#issuecomment-2748166258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jzecr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You just change the version in your project (in `Project.toml`), and retrigger the registration the same way you triggered this one. With a change in version number, that will create a new registration PR, and we'll just close this PR in favor of the new one. Exactly the same process as for https://github.com/JuliaRegistries/General/pull/127447",
+      "createdAt": "2025-03-24T13:42:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127448#issuecomment-2748180267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86jztdH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/127577",
+      "createdAt": "2025-03-24T14:03:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/127448#issuecomment-2748241735",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Coconots\n- Repository: https://github.com/manuhuth/Coconots.jl\n- Created by: @manuhuth\n- Version: v1.0.0\n- Commit: 7ea6738e00f5478201690e8a777fe5c57f420068\n- Git reference: HEAD\n- Description: Likelihood-based methods for model fitting, assessment and prediction analysis of some convolution-closed count time series model are provided. The marginal distribution can be Poisson or Generalized Poisson. Regression effects can be modelled via time varying innovation rates.",
+  "package_name": "Coconots",
+  "closed_at": "2025-03-24T14:03:12Z",
+  "title": "New package: Coconots v1.0.0"
+}

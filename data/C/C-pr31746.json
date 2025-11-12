@@ -1,0 +1,112 @@
+{
+  "created_at": "2021-03-11T21:18:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 31746,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NzA1NzM3MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\n- Name is not at least five characters long\n- Package name similar to 20 existing packages.\n<details>\n<summary>Similar package names</summary>\n\n1. Similar to GR. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n2. Similar to Cxx. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n3. Similar to Z3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n4. Similar to H3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n5. Similar to Tk. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n6. Similar to CSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n7. Similar to Clp. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n8. Similar to Cbc. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n9. Similar to GCP. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n10. Similar to CRC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n11. Similar to UCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n12. Similar to C3D. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n13. Similar to ECC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n14. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n15. Similar to FCA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n16. Similar to SMC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n17. Similar to TCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n18. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n19. Similar to XCB. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n20. Similar to VQC. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n</details>\n\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-11T21:21:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/31746#issuecomment-797057370",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NzU1MTEzNg==",
+      "author": {
+        "login": "krrutkow"
+      },
+      "authorAssociation": "NONE",
+      "body": "This package brings rather comprehensive C syntax and interfacing support to Julia (similar to Cxx.jl).",
+      "createdAt": "2021-03-12T15:10:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/31746#issuecomment-797551136",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NzY3OTAxNw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi @krrutkow, thanks for the package, looks very interesting!\r\n\r\nSingle-letter package names aren't a good idea, and are hard to discover.  Examples set by old packages like `Cxx.jl` don't help, probably we wouldn't have accepted it today.  How about making this a new breaking version of `Cbindings.jl` instead?",
+      "createdAt": "2021-03-12T18:48:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 5
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31746#issuecomment-797679017",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc5NzY4MTY2Mg==",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Almost all our current packages with names under 5 letters are grandfathered, (CSV.jl, HTTP.jl, JSON.jl)being packages from the ancient days long before julia 1.0 (MPI.jl is pre-0.1).\r\nSometimes things get registered still, because e.g. the correpond to a well known product (though generally we push those those to add a descriptor `SCPSolver`) , or because they match to a fill extension (though often we get those to add something like `FITSFormat`)\r\n\r\nWhile, C is a known and established thing, i think this is really pushing it.\r\n\r\nI would also like to requet programming languages stop being single letters long.\r\nB, and C i can forgive as grandfathered. Less so D, and definately not ok with V.\r\n\r\nSingle letter package names feel like a pathway to trouble.\r\nThey are are so rare.\r\nConsider the [drama around single letter twitter user names](https://www.thesun.co.uk/tech/6103393/twitter-rarest-handles-names-worth-value-money/)\r\n",
+      "createdAt": "2021-03-12T18:52:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31746#issuecomment-797681662",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMDQ2MDYwOA==",
+      "author": {
+        "login": "krrutkow"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR can be closed since #32123 merges the C.jl package into CBinding.jl",
+      "createdAt": "2021-03-16T17:26:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/31746#issuecomment-800460608",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: C\n- Repository: https://github.com/analytech-solutions/C.jl\n- Created by: @krrutkow\n- Version: v0.1.0\n- Commit: a5cb96ba1f36c9e2f250b11880b72a56e3cb356a\n- Reviewed by: @krrutkow\n- Reference: https://github.com/analytech-solutions/C.jl/commit/a5cb96ba1f36c9e2f250b11880b72a56e3cb356a#commitcomment-48154003\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd640e27ce6dd1d5625f0bc7bdbceaa69bc9b301bfd6d139e7ab42d87e2a0ede3ae1dcb0f16c062eb98130785115cb415f1c873352846dc8cdf8db7de835316c948135779e143f606f9e6a7c1572cf4a2f3916504baf502c32b01ade2051e931c7d384deb85d257f6eee8593320c9d1b973051fd97614624efe32f7d9c21f9f64a10a50e1d10afe2039210fe37e22645797657637a2b180b7fba985e3050f21a89f8edfdcda93221b69ddb67aed3da42b48 -->",
+  "package_name": "C",
+  "closed_at": "2021-03-16T17:42:57Z",
+  "title": "New package: C v0.1.0"
+}

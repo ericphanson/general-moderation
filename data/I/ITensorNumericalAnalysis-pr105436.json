@@ -1,0 +1,196 @@
+{
+  "created_at": "2024-04-23T12:36:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105436,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q857g0zA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Dictionaries, Glob, Graphs, ITensors, NamedGraphs\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-23T12:43:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2072202432",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857hQpx",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nSome of the AutoMerge guidelines it claims are not being met are met?\r\nThere are compat entries for all of those packages and a LICENSE file in the repo?\r\n\r\nAlso I am not sure how to edit the Repo URL at this point? Should I close this and re-register?",
+      "createdAt": "2024-04-23T13:24:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2072316529",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857hpRU",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nThe reason for the AutoMerge disconnect is that you can see in the description at the top:\r\n\r\n> Commit: 7f91ebc6869b5000ba392fd2a868e7095065b29a\r\n\r\nwhich is the commit before you added license and compat. Now why that commit was registered is a mystery to me; it doesn't seem to match your registrator invocation. Maybe Registrator became confused by a repo name change?\r\n\r\nMy best suggestion is to try to trigger registrator again from the latest commit. It's more likely that it updates your other PR, which is fine.",
+      "createdAt": "2024-04-23T14:09:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2072417364",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857j4VT",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nThe repo URL is actually really weird:\r\n\r\n> repo = \"https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl?tab=readme-ov-file.git\"\r\n",
+      "createdAt": "2024-04-23T17:36:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2073003347",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857j9HI",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah not sure why the REPO URL is so wrong. I just tried to retriever the Registrator from my latest commit: https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl/commit/e8425503767ef801f35599e4d6740a1e48c3c485 so hopefully that works?\r\n\r\n[noblock]",
+      "createdAt": "2024-04-23T17:45:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2073022920",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857j_mC",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nDid you by any chance do your registrations through the GitHub web page? If that's the case my guess is that you pasted a bad URL on the second attempt. I see you have a ` @JuliaRegistrator register` comment in https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl/commit/e8425503767ef801f35599e4d6740a1e48c3c485#comments but if you haven't activated Registrator for your account that won't do anything.",
+      "createdAt": "2024-04-23T17:50:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2073033090",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857kuoN",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nYes I did the registration via there, so that seems to be where the issue came from.\r\n\r\nOkay let me activate Registrator for my account and recommend.",
+      "createdAt": "2024-04-23T19:11:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2073225741",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rVYp",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nI activated the Registrator for my account and made a new commit, tag and release to try to register (see https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl/commit/6af5036719368246d84dc3db423cd59810163417) and it gives me the error \"Tag with name v0.1.0 already exists and points to a different commit\".\r\n\r\nNot sure I understand what is going wrong here, I changed the tag to v0.1.2 to try to avoid that. ",
+      "createdAt": "2024-04-24T13:30:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2074957353",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857rcI4",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] \r\n\r\nI guess when I call the Registrator it is trying to update this PR instead of making a new one?\r\n\r\nMaybe if we close this one and I prompt it again it will make a new one and everything works?",
+      "createdAt": "2024-04-24T13:43:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2074985016",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857sNHZ",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nNo, Registrator is referring to the v0.1.0 tag in your repository, which you can see here: https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl/tags. That is pointing to another commit than you are trying to register.\r\n\r\nThe general idea is that you shouldn't make a tag in your repository until after the registration is complete, a task which the TagBot action can help you with.",
+      "createdAt": "2024-04-24T15:12:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2075185625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857sodh",
+      "author": {
+        "login": "JoeyT1994"
+      },
+      "authorAssociation": "NONE",
+      "body": "Okay I removed the tags and releases so the Registrator starts from scratch. A new PR has been created.\r\n\r\nSo this can be closed.",
+      "createdAt": "2024-04-24T16:01:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2075297633",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857spox",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/105552",
+      "createdAt": "2024-04-24T16:03:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105436#issuecomment-2075302449",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ITensorNumericalAnalysis\n- Repository: https://github.com/JoeyT1994/ITensorNumericalAnalysis.jl\n- Created by: @JoeyT1994\n- Version: v0.1.0\n- Commit: 7f91ebc6869b5000ba392fd2a868e7095065b29a\n- Git reference: v0.1.0",
+  "package_name": "ITensorNumericalAnalysis",
+  "closed_at": "2024-04-24T16:03:43Z",
+  "title": "New package: ITensorNumericalAnalysis v0.1.0"
+}

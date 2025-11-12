@@ -1,0 +1,120 @@
+{
+  "created_at": "2021-02-17T18:25:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 30282,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4MDc1Nzc2MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"XCBased\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import XCBased` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-17T18:28:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-780757761",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4Mjc2MjMwOQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@MasFlam [this line](https://github.com/MasFlam/XCBased.jl/blob/81444aa4dd7143f74b0c38fde638e4280602fab6/Project.toml#L13) should be\r\n```toml\r\njulia = \"1.5.0\"\r\n```\r\nYou're currently claiming that the package is compatible only with Julia v1.5.x.  See [Pkg documentation](https://julialang.github.io/Pkg.jl/v1/compatibility/#Tilde-specifiers) for more details about the meaning of the tilde specifier.\r\n\r\nPlease, fix the compat with julia _without changing the version number of the package_ and register again, so that this pull request will be automatically updated\r\n\r\n[noblock]",
+      "createdAt": "2021-02-20T23:00:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-782762309",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4Mjc3MTA3OQ==",
+      "author": {
+        "login": "MasFlam"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have already created another tag/release on the GitHub repo though, so I think I'll just maybe close this pull request and use Registrator to register the newer one along with the Project.toml changed, is that okay?\n[noblock]",
+      "createdAt": "2021-02-21T00:28:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-782771079",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4Mjc3MjQzNw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It wasn't necessary to change the version number, but it's OK.\r\n\r\nNote that git tags/releases should be created _**after**_ registration, this avoids inconsistencies with the registry in case something needs to be changed (as it happened for example in this case).  [TagBot](https://github.com/JuliaRegistries/TagBot) is a useful GitHub Action workflow which creates automatically the tag/release for you, to be sure to keep them in sync with the registry",
+      "createdAt": "2021-02-21T00:40:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-782772437",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NzA3MDc4NA==",
+      "author": {
+        "login": "MasFlam"
+      },
+      "authorAssociation": "NONE",
+      "body": "Is there a way for me to close this pull request, or can I just use Registrator to create a new one?",
+      "createdAt": "2021-02-27T13:11:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-787070784",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc4NzA3MTExOA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You can use registrator to start a new one. I'm going to close this",
+      "createdAt": "2021-02-27T13:14:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/30282#issuecomment-787071118",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: XCBased\n- Repository: https://github.com/MasFlam/XCBased.jl\n- Created by: @MasFlam\n- Version: v0.1.1\n- Commit: 90e3395a7bff3bcf8b5b4c25b5629063e431cc8b\n- Git reference: master",
+  "package_name": "XCBased",
+  "closed_at": "2021-02-27T13:14:36Z",
+  "title": "New package: XCBased v0.1.1"
+}

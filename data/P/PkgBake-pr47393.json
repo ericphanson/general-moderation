@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-10-23T23:56:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 47393,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844o2vK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ProgressMeter\n- Package name similar to 1 existing package.\n  1. Similar to PkgPage. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-24T00:00:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47393#issuecomment-950234058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844rd9m",
+      "author": {
+        "login": "sjkelly"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please close in favor of: https://github.com/JuliaRegistries/General/pull/47452",
+      "createdAt": "2021-10-25T13:16:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47393#issuecomment-950919014",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PkgBake\n- Repository: https://github.com/sjkelly/PkgBake.jl\n- Created by: @sjkelly\n- Version: v0.1.0\n- Commit: 8e99c81b95e4dfcc6b686ef69c91294f3eb4adf2\n- Reviewed by: @sjkelly\n- Reference: https://github.com/sjkelly/PkgBake.jl/commit/8e99c81b95e4dfcc6b686ef69c91294f3eb4adf2#commitcomment-58552872\n- Description: Manage and sanitize Precompile files\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67c07461ac8f902b968f9312c8d9a60a6f5934c3512e3836fd30d32e82c629a8a1f158c9cf1f4b811a8fe7c0ed20f82ff8d052a20a344dc2f166646b7d9432851b4902f793fe36a8b5b8ca6fcaa805a538dcc363c71bd2f61ae2ac755311a176bcf74a9b28bd41f0030c61be00a89ef3c0d49853e293ea5857eed11866c0c8806658040f7478320e454a97cc7c7937f3bd05968c5741ca3f92b7fee695b1f594783c875d6f1a8e09e8a07433fc642df90 -->",
+  "package_name": "PkgBake",
+  "closed_at": "2021-10-25T13:21:13Z",
+  "title": "New package: PkgBake v0.1.0"
+}

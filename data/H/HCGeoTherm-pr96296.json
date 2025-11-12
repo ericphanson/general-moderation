@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-12-01T14:53:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 96296,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85tcySd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, Formatting, Interpolations, Optim\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-01T14:58:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96296#issuecomment-1836262557",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85teLg6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by https://github.com/JuliaRegistries/General/pull/96299",
+      "createdAt": "2023-12-01T19:02:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96296#issuecomment-1836628026",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vqF6Z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-01T12:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96296#issuecomment-1873305241",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wHEbA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-01-08T12:23:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96296#issuecomment-1880901312",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HCGeoTherm\n- Repository: https://github.com/eugeneai/HCGeoTherm.jl\n- Created by: @eugeneai\n- Version: v1.0.2\n- Commit: 4ec2a762bfec69604261f5254f0a5b20c3adcd24\n- Reviewed by: @eugeneai\n- Reference: https://github.com/eugeneai/HCGeoTherm.jl/issues/1#issuecomment-1836252455\n- Description: Geotherm calculation routines according to Dr. Derrek Hasterok and Dr. David Chapman\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n##Possibly the final renaming\r\n\r\n- Change name to HCGeoTherm\r\n-\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598985d272f9568c341fdd152988a8b501987ae9d7387d1ec546e80dd67f3d120a16269b9b92bc23bac86eaa852a4965b4b1d33cba03f830e90dcba371a2bcf5989c7ac2b5be93ec603a8b335de5cf9738639476a0f79925bfea6860da050f338c7dc684af61e5c40dd6a07505f2d8f50bb678b68baba7293bd9da920235531ceb5 -->",
+  "package_name": "HCGeoTherm",
+  "closed_at": "2024-01-08T12:23:35Z",
+  "title": "New package: HCGeoTherm v1.0.2"
+}

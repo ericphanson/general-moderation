@@ -1,0 +1,98 @@
+{
+  "created_at": "2025-01-10T01:11:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 122725,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Z3003",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-01-10T01:19:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122725#issuecomment-2581548343",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z9Zdt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Congratulations on the new package! However, I feel like the name `SimUtils` is much too general. This package has a very specific context and is not a collection of utilities for \"simulation\" in general. While `SimUtils` may be clear within the context of a particular organization (with maybe its own [local registry](https://github.com/GunnarFarneback/LocalRegistry.jl)), in the General registry, the package name would have to sufficiently descriptive for the wider audience of all Julia users.\r\n\r\nOne obvious way to provide context would for a \"Utils\" package would be to prefix it with the name of the package it is affiliated with, e.g., `SciBmadSimUtils` in this particular case.",
+      "createdAt": "2025-01-10T15:47:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122725#issuecomment-2583009133",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z9doV",
+      "author": {
+        "login": "DavidSagan"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] @goerz Since the package will be useful outside of SciBmad, `SciBmadSimUtils` is a bit misleading. How about `AcceleratorSimUtils`?",
+      "createdAt": "2025-01-10T15:52:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/122725#issuecomment-2583026197",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Z9eCe",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure, that sounds good to me!",
+      "createdAt": "2025-01-10T15:52:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122725#issuecomment-2583027870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86aAYuD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/122764",
+      "createdAt": "2025-01-10T19:38:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/122725#issuecomment-2583792515",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SimUtils\n- Repository: https://github.com/bmad-sim/SimUtils.jl\n- Created by: @DavidSagan\n- Version: v0.4.0\n- Commit: ef1fbb41e67f29ed3eb4c82f61abceebc211d495\n- Git reference: HEAD\n- Description: Utility functions for scientific simulations.",
+  "package_name": "SimUtils",
+  "closed_at": "2025-01-10T19:38:18Z",
+  "title": "New package: SimUtils v0.4.0"
+}

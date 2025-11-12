@@ -1,0 +1,239 @@
+{
+  "created_at": "2024-01-02T15:00:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "LilithHafner",
+  "merged_at": null,
+  "pr_number": 98055,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85vtSTp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to IterativeLearningControl. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.18 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-02T15:05:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1874142441",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v0htQ",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What is the relationship between this and https://github.com/makzator/IterativeLearningControl.jl? Would it be possible to productively combine the two efforts?\r\n\r\ncc @baggepinnen, @aarontrowbridge, @a7b, @makzator, @glcroberts",
+      "createdAt": "2024-01-03T22:14:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1876040528",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v0mIE",
+      "author": {
+        "login": "aarontrowbridge"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey Lilith and Frederik,\r\n\r\nThe current status is complicated, but I'd imagine we can work something out. I'll get back with a more robust response tonight or tomorrow as soon as I converse with people.",
+      "createdAt": "2024-01-03T22:30:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1876058628",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85v1_z-",
+      "author": {
+        "login": "baggepinnen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "There is no relationship between the two packages, and I cannot easily judge the similarity between them since all links at [makzator/IterativeLearningControl.jl](https://github.com/makzator/IterativeLearningControl.jl) lead to 404. \r\n\r\nI don't think there is any need to combine the two packages, no more than there is to combine the hundreds of packages that exist for optimization. ILC2.jl relies heavily on ControlSystems.jl in order to smoothly interface with this package, and makes zero attempts at being useful for quantum systems, which appears to be the focus of [makzator/IterativeLearningControl.jl](https://github.com/makzator/IterativeLearningControl.jl)",
+      "createdAt": "2024-01-04T06:07:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1876425982",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wBGGy",
+      "author": {
+        "login": "aarontrowbridge"
+      },
+      "authorAssociation": "NONE",
+      "body": "frederik,\r\n\r\ni \"own\" the IterativeLearningControl.jl name and i'm happy to hand it off to you, as it's not a focus of ours at the moment. i'm not sure how exactly I can do that though. whatever you need me to do, let me know.",
+      "createdAt": "2024-01-05T22:32:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1879335346",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wBKbU",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If this is acceptable to everyone involved, we could register https://github.com/baggepinnen/IterativeLearningControl2.jl at version 0.2.0 under the name IterativeLearningControl, seeing as how IterativeLearningControl currently has no dependents and has been yanked from github.",
+      "createdAt": "2024-01-05T22:52:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1879353044",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wBL8u",
+      "author": {
+        "login": "aarontrowbridge"
+      },
+      "authorAssociation": "NONE",
+      "body": "yes, beautiful! can't wait to give the new ILC.jl a whirl!",
+      "createdAt": "2024-01-05T23:00:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1879359278",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wD_Lc",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think taking over an abandoned name/uuid seems fine here. It’s intentional that the git histories don’t need to connect, let’s take advantage of that design!",
+      "createdAt": "2024-01-07T15:41:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1880093404",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wFRvC",
+      "author": {
+        "login": "baggepinnen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> If this is acceptable to everyone involved, we could register https://github.com/baggepinnen/IterativeLearningControl2.jl at version 0.2.0 under the name IterativeLearningControl, seeing as how IterativeLearningControl currently has no dependents and has been yanked from github.\r\n\r\nThanks for the suggestion, Lilith and thanks for your cooperation Aaron, this sounds like a good solution to me.\r\n\r\nIs this an accurate list of things I need to do to make this happen?\r\n\r\n- Change the name of the repo and package to IterativeLearningControl.jl\r\n- Change the UUID to the one used by the existing IterativeLearningControl.jl\r\n- Set the version to 0.2\r\n- Create a manual PR to general that updates the [`Package.toml`](https://github.com/JuliaRegistries/General/blob/master/I/IterativeLearningControl/Package.toml) file?\r\n- Trigger the JuliaRegistrator bot to register the 0.2 version pointing to the new repo.",
+      "createdAt": "2024-01-08T06:07:46Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1880431554",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wK5IF",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The old releases should be available from the new repository as well, e.g. in a separate branch.",
+      "createdAt": "2024-01-08T22:12:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1881903621",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wM9EH",
+      "author": {
+        "login": "baggepinnen"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> The old releases should be available from the new repository as well, e.g. in a separate branch.\r\n\r\nHow do I obtain the old releases? The old repo has been yanked from github. Seeing how the old repo isn't even available anymore, what's the motivation for hosting this code in the new repo, holding the new repo to a higher standard regarding the old code than the old repo itself? Adding the old package using the package manager, it seems the old repo also contains binary files of several megabytes that I'm not interested in adding to my repo, I'd rather register under a new name then.",
+      "createdAt": "2024-01-09T05:40:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1882444039",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wQaEP",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I wouldn't worry about it for now, we'd have to recover from the package servers and they may not be there.",
+      "createdAt": "2024-01-09T16:13:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1883349263",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852gRX_",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-11T11:00:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/98055#issuecomment-1988171263",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IterativeLearningControl2\n- Repository: https://github.com/baggepinnen/IterativeLearningControl2.jl\n- Created by: @baggepinnen\n- Version: v0.1.0\n- Commit: 7d4566d647de292f24147a0c83cf2f1b3f525d7a\n- Reviewed by: @baggepinnen\n- Reference: https://github.com/baggepinnen/IterativeLearningControl2.jl/commit/7d4566d647de292f24147a0c83cf2f1b3f525d7a#commitcomment-136061604\n- Description: Like reinforcement learning, but it works in practice\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63c20baa622775d45cd676bb337cb6971cab9f80f1eda6892d5b6414b59ece8be56b42c7788925d2a86329559d5106a5097454c666cea75a8bbb5d182e7d5b0a8df6d702d37afb0a36b5a54afdb96157a838c857dfe0ac2ad4e2a25f199c7bf2dafdabb04b4170aa37e1ea2a6280516ad8ee0e299abe8d93a5b8de9f2c95e00402666ece6eab88b804bc819f99dfbe88bf0f458d2965dd6d5b509c63b347568768f6d1e1d2ba2aa2cda6cfe9764a397fc300ad9ab3bd5e7a4d6c879cd169b41b9 -->",
+  "package_name": "IterativeLearningControl2",
+  "closed_at": "2024-03-11T14:34:00Z",
+  "title": "New package: IterativeLearningControl2 v0.1.0"
+}

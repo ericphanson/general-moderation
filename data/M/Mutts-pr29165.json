@@ -1,0 +1,46 @@
+{
+  "created_at": "2021-02-02T00:37:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 29165,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3MTI2MTk5MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n- Package name similar to 2 existing packages.\n1. Similar to Matte. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.70 is at or below cutoff of 2.50.\n2. Similar to Metis. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-02-02T00:39:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29165#issuecomment-771261990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3MTg0MDA0OA==",
+      "author": {
+        "login": "millerjoey"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can be closed. I renamed the package and repo, and it looks like the Registration bot created a different PR that can be auto-merged:\r\nhttps://github.com/JuliaRegistries/General/pull/29211",
+      "createdAt": "2021-02-02T17:54:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/29165#issuecomment-771840048",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Mutts\n- Repository: https://github.com/RelationalAI-oss/Mutts.jl\n- Created by: @millerjoey\n- Version: v0.1.0\n- Commit: 0892acfa53e849e42cfe48152f04feebd41676a4\n- Reviewed by: @millerjoey\n- Reference: https://github.com/RelationalAI-oss/Mutts.jl/commit/0892acfa53e849e42cfe48152f04feebd41676a4#commitcomment-46629814\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67e750f2e3c1752863dd4bbd0a23d9dd4baddc2b2cf2effef325e30d111d76e65e7fbd0a897705196fb014223976ba05292e47f7f46da9282a35f7955c40c4414c8b36245e179382d01450670925c6377ec963a67f767c6aa6f4cdfc548a5087ff0992c98950ccaad177c2599cb6528ec91187f1d461236fe1af9d40b2599d9a4ab28fb9fb036434ae9ab3dfc5fc335b62b5eef8c4bd9dc6158d798d6ca1581d5bbb19651c78d7d0a323ee4209ed35b7e -->",
+  "package_name": "Mutts",
+  "closed_at": "2021-02-02T19:13:30Z",
+  "title": "New package: Mutts v0.1.0"
+}

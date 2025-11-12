@@ -1,0 +1,233 @@
+{
+  "created_at": "2023-05-06T15:17:22Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 83025,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85bn0dx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataStructures, Genie, GenieFramework, Stipple, StippleUI\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-05-06T15:28:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1537165169",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bn0jQ",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I object to registration on two grounds. I'm not sure the name is good, and I'm not sure it's helpful to others (WIP) already:\r\n\r\n> What is it?\r\n> This is initial scaffolding for a\r\n> \r\n> * reactive Webapp for Life Insurance Contracts\r\n> [..]\r\n> It is built with Genie Builder, which at the moment cannot be used in GITPOD. But the app can be run in GITPOD as shown below. To run it under GenieBuilder You have to use a non-cloud computer. This app is not runnable in Genie Cloud, as it builds on postgres and cannot be run with mysql.\r\n> \r\n> MVVM Architecture\r\n> This app leverages the great Genie Framework\r\n\r\nI'm a bit confused, is it an \"app\" (those should not be registered I think, in general) or \"scaffolding\" for one.\r\n\r\n@essenciary made Genie, and while I'm not sure it's a trademark, I'm not sure it should be used in the name of packages/products using it. I would at least like to know what he thinks about it. It seems like an implementation detail of your package, and while it might never change, I could see it hypothetically happening, so would you want to be stuck with it then as part of the package's name?\r\n\r\nI like packages registered, the ecosystem growing, so if/when the package is useful for others (then OSI-licenced a requirement), please do (with some good name).\r\n\r\nFYI you can do:\r\n```\r\n(@v1.9) pkg> add https://github.com/Actuarial-Sciences-for-Africa-ASA/GenieBuiltLifeProto\r\n```\r\n\r\nThere's no need to register all packages (and for some a local registry makes sense).",
+      "createdAt": "2023-05-06T15:30:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1537165520",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bqnU7",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you @PallHaraldsson - Genie is not a trademark but from a naming perspective, inside the GenieFramework organisation, we use the `Genie` prefix to name Genie plugins (packages that provide additional functionality to build Genie apps). \r\n\r\nFor other use cases (non Genie plugins), but also as a general approach, I agree with your point and I would also recommend against using the names of the dependencies. Ex lots of packages use HTTP.jl but we don't prefix them with HTTP.",
+      "createdAt": "2023-05-08T07:37:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1537897787",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85brglS",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "hi I take it I should rename my package?\n\n@adrian\nI meant to give credit rather than free ride on Your reputation🥰\n\n@PallHaraldsson\nHow do we proceed? Rename or You delete and I register to another name?\n\nFor the new name I would want\nBitemporalReactiveLifeProto\n\nBitemporal is not a dependency but an important feature.\n\nRegards\nMichael Fliegner\n\n\n\n\n\n\nAdrian Salceanu ***@***.***> schrieb am Mo., 8. Mai 2023,\n09:37:\n\n> Thank you @PallHaraldsson <https://github.com/PallHaraldsson> - Genie is\n> not a trademark but from a naming perspective, inside the GenieFramework\n> organisation, we use the Genie prefix to name Genie plugins (packages\n> that provide additional functionality to build Genie apps).\n>\n> For other use cases (non Genie plugins), but also as a general approach, I\n> agree with your point and I would also recommend against using the names of\n> the dependencies into the packages. Ex Genie lots of packages use HTTP.jl\n> but we don't name it HTTPGenie.\n>\n> —\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1537897787>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AC6Y2UVEKXW6KPNM6JLT3D3XFCPEPANCNFSM6AAAAAAXYFZRUQ>\n> .\n> You are receiving this because you were mentioned.Message ID:\n> ***@***.***>\n>\n",
+      "createdAt": "2023-05-08T10:21:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1538132306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85br0i-",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": ">@adrian\r\n>I meant to give credit\r\n\r\nNote, it's his first name but you pinged some other Adrian, not @essenciary :)\r\n\r\nI suggest you do what's simplest for you, I think it's first rename at your Github repo (not sure how, I doubt you need to delete there and recreate), then here I'm ok with just closing here and registering again. Rename if you can here, by making another commit, but it's not the first time I see deleting and then a new registration, and it's only if you want to keep the history which is fine by me to drop. If you register again, then you have to wait 3 days again, but maybe also if you change name here (it seems justified).\r\n\r\nAlso consider registering at v1.0.0 if already useful to others (see a thread on Discourse on starting with 1.0.0 instead of 0.x, note, not all agree on this advise).",
+      "createdAt": "2023-05-08T11:35:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1538214078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bsR86",
+      "author": {
+        "login": "essenciary"
+      },
+      "authorAssociation": "NONE",
+      "body": "> @adrian I meant to give credit rather than free ride on Your reputation🥰 \r\n> […](#)\r\n\r\n@michaelfliegner I know, I appreciate it ♥️\r\n\r\n",
+      "createdAt": "2023-05-08T13:08:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1538334522",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85btnOw",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Please do delete. I will register anew later. Renaming a github repo is a\nbreeze.\n\nBut I got an answer from @essenciary. Did foward my compliments to him?\n\nregards Michael Fliegner\n\n\nPáll Haraldsson ***@***.***> schrieb am Mo., 8. Mai 2023,\n13:39:\n\n> @adrian <https://github.com/adrian>\n> I meant to give credit\n>\n> Note, it's his first name but you pinged some other Adrian, not\n> @essenciary <https://github.com/essenciary> :)\n>\n> I suggest you do what's simplest for you, I think it's first rename at\n> your Github repo (not sure how, I doubt you need to delete there and\n> recreate), then here I'm ok with just closing here and registering again.\n> Rename if you can here, by making another commit, but it's not the first\n> time I see deleting and then a new registration, and it's only if you want\n> to keep the history which is fine by me to drop. If you register again,\n> then you have to wait 3 days again, but maybe also if you change name here\n> (it seems justified).\n>\n> Also consider registering at v1.0.0 if already useful to others (see a\n> thread on Discourse on starting with 1.0.0 instead of 0.x, note, not all\n> agree on this advise).\n>\n> —\n> Reply to this email directly, view it on GitHub\n> <https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1538214078>,\n> or unsubscribe\n> <https://github.com/notifications/unsubscribe-auth/AC6Y2UVMC6KRGIV3BNI5CG3XFDLPPANCNFSM6AAAAAAXYFZRUQ>\n> .\n> You are receiving this because you were mentioned.Message ID:\n> ***@***.***>\n>\n",
+      "createdAt": "2023-05-08T16:23:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1538683824",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b7Git",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@PallHaraldsson \nPlease do delete this package.",
+      "createdAt": "2023-05-10T13:31:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1542219949",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b7xg6",
+      "author": {
+        "login": "PallHaraldsson"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I can't close the PR. Since you started it, or at least done in your name, I thought you could. I only see \"Comment\" button, maybe you see another next to it. Nothing though will really happens if it hangs around, since it will not me automerged.",
+      "createdAt": "2023-05-10T15:18:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1542395962",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b8ENs",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "has been automerged already.\ncan one get rid of it?",
+      "createdAt": "2023-05-10T16:09:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1542472556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b8LWM",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I can also only see a comment button. There would have to be a `@JuliaRegistrator close` command to do that, as technically it's not me but JuliaRegistrator who wants to merge. See above:\r\n\r\n [JuliaRegistrator](https://github.com/JuliaRegistrator) wants to merge 1 commit into",
+      "createdAt": "2023-05-10T16:33:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1542501772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85b8Oxp",
+      "author": {
+        "login": "michaelfliegner"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Will rename using\r\nhttps://github.com/JuliaRegistries/General#how-do-i-rename-an-existing-registered-package",
+      "createdAt": "2023-05-10T16:46:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1542515817",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85egwiF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-06-10T12:22:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1585645701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fHOnr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-06-17T12:23:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/83025#issuecomment-1595730411",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GenieBuiltLifeProto\n- Repository: https://github.com/Actuarial-Sciences-for-Africa-ASA/GenieBuiltLifeProto\n- Created by: @michaelfliegner\n- Version: v0.1.0\n- Commit: 76fe87310ff7d0b5b8be22a2b487390f41bcee1a\n- Git reference: HEAD",
+  "package_name": "GenieBuiltLifeProto",
+  "closed_at": "2023-06-17T12:23:26Z",
+  "title": "New package: GenieBuiltLifeProto v0.1.0"
+}

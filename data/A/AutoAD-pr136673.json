@@ -1,0 +1,253 @@
+{
+  "created_at": "2025-08-14T05:19:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 136673,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8699ST-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-14T05:26:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3186959614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8699j61",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "empty package 👀? [noblock]",
+      "createdAt": "2025-08-14T05:44:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3187031733",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-BCd6",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think the bigger thing is, we were going to register a package with this name to JuliaDiff probably over the weekend. You can see the plan for it here: https://github.com/JuliaDiff/DifferentiationInterface.jl/issues/820#issuecomment-3078794878 . So I don't know about this name/domain being taken by EnzymeAD. While I would make this match the SciMLSensitivity auto-choice algorithm which does have an explicit preference for Enzyme (https://github.com/SciML/SciMLSensitivity.jl/blob/master/src/concrete_solve.jl#L9-L77), it has fallbacks to ReverseDiff, Zygote, and FiniteDiff as a way to help make sure it finds something that works.\r\n\r\nI would like to work with folks like @wsmoses on this one, as you can see from that other very long thread that we have been in need of this for awhile. But I think that with this open of a name, it should really be dedicated to something like JuliaDiff that is a guiding maintainer organization for all AD usage rather than being tied to a specific set of maintainers because if it is done right, I think it needs to be a benchmark-based data-driven collaboration with Enzyme, Mooncake, ForwardDiff, ReverseDiff, etc. maintainers and not directly tied to one.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-14T10:26:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3187943290",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-E2_m",
+      "author": {
+        "login": "wsmoses"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yeah the intention here is to explicitly build infrastructure for taking a function, performing microbenchmarking and picking the fastest (not necessarily enzyme) way to autodiff it -- taking into account backend, batch sizes, device (e.g. cpu vs gpu), feature flags (e.g. runtime activity), etc.\r\n\r\nI put it there because it needs some place to start (happy to move when it makes sense -- most other things in JuliaDiff started in personal accounts), but since we want to include hardware backend in addition to AD backend as part of the benchmarking process, this needs to have access to nice CI (and the EnzymeAD org has that set up -- and to my knowledge is the only place in JuliaLang with TPU CI runners atm).\r\n\r\n[noblock]",
+      "createdAt": "2025-08-14T15:49:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3188944870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-L9fU",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nAs a preamble, I know that you probably won't want to use this because it relies on DifferentiationInterface, and therefore I won't insist. I just wanted to point out that this \"infrastructure for taking a function, performing microbenchmarking and picking the fastest (not necessarily enzyme) way to autodiff it\" already exists, inside [DifferentiationInterfaceTest](https://github.com/JuliaDiff/DifferentiationInterface.jl/tree/main/DifferentiationInterfaceTest). In fact, it was a big motivation for developing DI in the first place, because cross-testing and benchmarking several backends requires a common way to hook into their individual APIs. Here's a demo:\r\n\r\n```julia\r\nusing DifferentiationInterface\r\nusing DifferentiationInterfaceTest\r\nusing Enzyme: Enzyme\r\nusing Mooncake: Mooncake\r\nusing Zygote: Zygote\r\n\r\nf(x) = sum(sin, x)\r\n∇f(x) = cos.(x)\r\n\r\nx = rand(3)\r\n\r\nscenarios = [Scenario{:gradient,:out}(f, x; res1=∇f(xv))];\r\n\r\nbackends = [AutoEnzyme(), AutoMooncake(), AutoZygote()]\r\n\r\ndata = benchmark_differentiation(\r\n    backends,\r\n    scenarios;\r\n    benchmark=:full,\r\n    benchmark_seconds=1,\r\n    benchmark_aggregation=minimum,\r\n    logging=true,\r\n)\r\n```\r\n\r\nwhich produces the following dataframe (the measurements come from [Chairmarks](https://github.com/LilithHafner/Chairmarks.jl))\r\n\r\n| **backend**<br>`ADTypes.AbstractADType` | **scenario**<br>`Scenario{:gradient, :out, :out, typeof(f), Vector{Float64}, Float64, Nothing, Tuple{}, Vector{Float32}, Nothing, @NamedTuple{x::Vector{Float64}, contexts::Tuple{}}}` | **operator**<br>`Symbol` | **prepared**<br>`U{Nothing, Bool}` | **calls**<br>`Int64` | **samples**<br>`Int64` | **evals**<br>`Int64` | **time**<br>`Float64` | **allocs**<br>`Float64` | **bytes**<br>`Float64` | **gc\\_fraction**<br>`Float64` | **compile\\_fraction**<br>`Float64` |\r\n|----------------------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-------------------------:|-----------------------------------:|---------------------:|-----------------------:|---------------------:|----------------------:|------------------------:|-----------------------:|------------------------------:|-----------------------------------:|\r\n| AutoEnzyme()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | true                               | 1                    | 41870                  | 496                  | 3.84738e-8            | 2.0                     | 80.0                   | 0.0                           | 0.0                                |\r\n| AutoEnzyme()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | true                               | 1                    | 29274                  | 864                  | 2.80671e-8            | 2.0                     | 80.0                   | 0.0                           | 0.0                                |\r\n| AutoEnzyme()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | prepare\\_gradient        | nothing                            | 0                    | 64373                  | 14922                | 9.82844e-10           | 0.0                     | 0.0                    | 0.0                           | 0.0                                |\r\n| AutoEnzyme()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | false                              | 1                    | 33177                  | 636                  | 3.85865e-8            | 2.0                     | 80.0                   | 0.0                           | 0.0                                |\r\n| AutoEnzyme()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | false                              | 1                    | 33564                  | 843                  | 2.81234e-8            | 2.0                     | 80.0                   | 0.0                           | 0.0                                |\r\n| AutoMooncake{Nothing}(nothing)          | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | true                               | 0                    | 33191                  | 305                  | 7.63639e-8            | 4.0                     | 208.0                  | 0.0                           | 0.0                                |\r\n| AutoMooncake{Nothing}(nothing)          | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | true                               | 0                    | 32192                  | 263                  | 8.47605e-8            | 4.0                     | 208.0                  | 0.0                           | 0.0                                |\r\n| AutoMooncake{Nothing}(nothing)          | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | prepare\\_gradient        | nothing                            | 0                    | 30452                  | 11                   | 2.41673e-6            | 76.0                    | 3648.0                 | 0.0                           | 0.0                                |\r\n| AutoMooncake{Nothing}(nothing)          | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | false                              | 0                    | 35464                  | 9                    | 2.537e-6              | 81.0                    | 3888.0                 | 0.0                           | 0.0                                |\r\n| AutoMooncake{Nothing}(nothing)          | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | false                              | 0                    | 35363                  | 9                    | 2.52778e-6            | 80.0                    | 3856.0                 | 0.0                           | 0.0                                |\r\n| AutoZygote()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | true                               | 1                    | 29482                  | 58                   | 4.90672e-7            | 25.0                    | 720.0                  | 0.0                           | 0.0                                |\r\n| AutoZygote()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | true                               | 1                    | 33975                  | 63                   | 3.79635e-7            | 23.0                    | 656.0                  | 0.0                           | 0.0                                |\r\n| AutoZygote()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | prepare\\_gradient        | nothing                            | 0                    | 64640                  | 15082                | 9.8349e-10            | 0.0                     | 0.0                    | 0.0                           | 0.0                                |\r\n| AutoZygote()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | value\\_and\\_gradient     | false                              | 1                    | 30102                  | 57                   | 4.9414e-7             | 25.0                    | 720.0                  | 0.0                           | 0.0                                |\r\n| AutoZygote()                            | Scenario{:gradient,:out} f : Vector{Float64} -> Float64                                                                                                                                | gradient                 | false                              | 1                    | 29983                  | 66                   | 3.75621e-7            | 23.0                    | 656.0                  | 0.0                           | 0.0                                |\r\n\r\nAs for the features you've mentioned:\r\n\r\n- runtime activity can be activated or deactivated by changing the `mode` kwarg to `AutoEnzyme`\r\n- batch size can also be set for a given backend, including Enzyme if we decide to act on https://github.com/SciML/ADTypes.jl/issues/114\r\n- device can be changed by providing the correct array type (e.g. `CuArray`) as input\r\n\r\nAt the moment, DITest is focused on the needs of the DI test suite, and I am aware that it probably doesn't do everything you want, but I'd be glad to extend it to fit more user needs. Let me know if you want to work together on this.",
+      "createdAt": "2025-08-15T07:05:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3190806484",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-NmMg",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nAnd that's integrated into https://docs.sciml.ai/SciMLBenchmarksOutput/stable/AutomaticDifferentiation/JuliaAD/. Currently needs an update but it's blocked by some (mostly Enzyme?) performance regressions (though I will maybe just merge it next week if they can't be figured out, if the regressions are real then that is so), and there will be small grant bounties going out to add more benchmark problems to that set to make it more detailed. Also https://docs.sciml.ai/SciMLBenchmarksOutput/stable/AutomaticDifferentiation/BrussScaling/ gives a very detailed scaling comparison between reverse mode ADs in a real context.\r\n\r\nSo we have an evolving set of benchmarks maintained by the community, with SciML and JuliaDiff (at least @gdalle) working together to establish a common ground. I'd hope this name would reflect that.\r\n\r\n> this needs to have access to nice CI (and the EnzymeAD org has that set up -- and to my knowledge is the only place in JuliaLang with TPU CI runners atm).\r\n\r\nIt would be nice to get those setup in JuliaDiff and SciML. Where do I find more information on that?",
+      "createdAt": "2025-08-15T10:47:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3191235360",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-PvxW",
+      "author": {
+        "login": "wsmoses"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n@gdalle sure that sounds like a good thing to use -- and clearly no designs are set in stone yet. Feel free to open an issue, make a PR, etc (and happy to add you to the repo if you like). I think for our intended use cases the thing we'd need on the device front is something that say assumes you have a CPU julia array, and then benchmarks copying that to GPU, differentiating that (now on GPU), then copying the result back -- and so on. In other words, ideally automating the question of \"where do we want this to run\"\r\n\r\n@ChrisRackauckas that's unrelated to this PR, but obviously if you have any perf problems with Enzyme definitely open an issue (I'm unaware of what you're referring to there atm). I think one distinction between that PR and above is that here we're not trying to be a benchmarking set (aka a website with benchmarks), but for whatever given function is provided, benchmark the inputs (perhaps with DITest if @gdalle you're interested in contributing), and figuring out a reasonable way to run.\r\n\r\nAs for CI you'd to make a google cloud account, allocate some Cloud TPU VMs, and make some self hosted runners. we currently have some fancy kubernetes setup that will autoscale/create the vms with github CI demand. As a forewarning though accelerator allocations on cloud servers can get expensive.",
+      "createdAt": "2025-08-15T15:25:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3191798870",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87ANGt-",
+      "author": {
+        "login": "wsmoses"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nFollowing back up here, since it seems like there's no complaints as to the name being too similar to `AutoGP` for automerge to be happy, I'm going to ask those with admin bits to manually merge.\r\n\r\nLooking forward to working with everyone here to make a cool package that can autoselect the best AD setup!",
+      "createdAt": "2025-08-26T15:26:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3224660862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87ANntl",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "isn't the package empty still? as @Moelf pointed out first.\r\n\r\n> Some types of packages should not be registered, or are not yet ready for registration:\r\n> ...\r\n> \"Empty\" packages that do not yet have functionality are not ready to be registered.",
+      "createdAt": "2025-08-26T15:57:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3224796005",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87AOEOt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, this isn't ready yet for registration by the standards we normally apply. At a minimum, it would have to have some useful functionality and enough documentation that a user can get started with using the package.\r\n\r\nThe _name similarity_ as such is clearly a false positive, so I'm just going to override that. As for the larger discussion about how this package fits into the ecosystem and whether it should be managed as part of Enzyme or within SciML, I have absolutely no horse in that race. But with a name this general, I would say there should be a clear consensus among the people involved in this part of the ecosystem. I'm not sure that's the case here yet, but this probably depends mainly on @ChrisRackauckas (who would also be in a position to merge this manually)",
+      "createdAt": "2025-08-26T16:30:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3224912813",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87AO_bR",
+      "author": {
+        "login": "wsmoses"
+      },
+      "authorAssociation": "NONE",
+      "body": "note, intentionally marking this as blocking as well pending resolution (not that it would merge anways atm):\r\n\r\nYeah that's fair (and apologies for my ignorance on the order of operations for registering / building, which I should've remembered when registering Reactant last year with a similar level of bare-bones ness: https://github.com/JuliaRegistries/General/pull/106843 ).\r\n\r\nThat said, taking a step back to make sure we proceed in a manner the community would be behind, does the current plan for building the package sound reasonable to folks?\r\n\r\nSpecifically, that being building a package which can take various autodiff settings, and device offloading capabilities, benchmarks these for a given function, and returns a thunk or other object which specifies what was found to be the most effective. Probably will use DI for autodiff codegen. And will add any/everyone to the repo interested in helping.\r\n\r\nIf folks are behind this plan (and other parts of the package seem fine to folks), I can go ahead and make an extremely minimal (and subject to change for all API parts/etc) implementation, and then re-ping the thread once we have a good placeholder to build off of?",
+      "createdAt": "2025-08-26T17:53:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3225155281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G_Kwv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-09-26T12:24:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3338447919",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87ImUHa",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-10-03T12:24:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136673#issuecomment-3365487066",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AutoAD\n- Repository: https://github.com/EnzymeAD/AutoAD.jl\n- Created by: @wsmoses\n- Version: v0.1.0\n- Commit: 79ab8e5a81b8b14448515805feb9f4549dc362e5\n- Reviewed by: @wsmoses\n- Reference: https://github.com/EnzymeAD/AutoAD.jl/commit/79ab8e5a81b8b14448515805feb9f4549dc362e5#commitcomment-164059497\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60c3c73de98068164a69817d6bb86f1da734855fc22a24ffb92ca13d51eacf717a049e0afa5184bb3b7c773c89e9d232127cfb1cba1b68532261037588f5a46a824dbb2c86a53ccea116e292c7f99781433cf628f34229bc1060b3691c82dfe235b784710fccc636d36fe0f9c96f54d11c074a51b5007e4f79430332e1ed4f3480e26cee2dcf250757af55bc4696bfb39991eb126a741790d716f9bacc52d69790e037badcd563f886c4d0a0a3c2e0dd5 -->",
+  "package_name": "AutoAD",
+  "closed_at": "2025-10-03T12:24:22Z",
+  "title": "New package: AutoAD v0.1.0"
+}

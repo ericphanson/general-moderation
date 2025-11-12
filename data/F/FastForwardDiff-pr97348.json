@@ -1,0 +1,259 @@
+{
+  "created_at": "2023-12-18T16:51:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 97348,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85u7V73",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-18T16:55:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1861050103",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u7lu3",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @gerlero and congrats on the package!\r\nSince it is a very small package, have you considered contributing the code to ForwardDiff instead?\r\nPS: This comment is voluntarily blocking the registration but I can make it non blocking afterwards so no worries.",
+      "createdAt": "2023-12-18T17:21:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1861114807",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u74VJ",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle Yes, it's very small (at least for now—I may add more features later), but I wanted a standalone package given that I'm using undocumented ForwardDiff functionality (which means it needs its own testing), plus I'm using it already in various projects—including the registered [Fronts](https://github.com/gerlero/Fronts.jl) package for which it'd be a direct dependency.\r\n\r\nAs for contributing the code here to ForwardDiff, and these were just my own thoughts, but I'm not sure they'll be able to take the changes given the fact that ForwardDiff already offers a different API for single-pass value and derivative via [DiffResults](https://github.com/JuliaDiff/DiffResults.jl), plus this package's current dependency on Unitful (which could be made a weakdep, but I'm not able to work on that for now) which might very likely be a dealbreaker for ForwardDiff. FWIW there are open issues at ForwardDiff for these features @ https://github.com/JuliaDiff/ForwardDiff.jl/issues/328 & https://github.com/JuliaDiff/ForwardDiff.jl/issues/610 where some of this stuff has been discussed.\r\n\r\nIs the package still acceptable for registration under these circumstances?\r\n\r\n[noblock]",
+      "createdAt": "2023-12-18T17:54:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1861190985",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u_-5A",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Hi there,\r\ngreat that you are registering a package! I feel that your first argument of using ForwardDiff internals is even an argument more for _including_ your part into ForwardDiff, since now you might just have broken code with a patch release of forward diff, since they would probably consider their internals something nonbreaking to change.\r\n\r\nConcerning the second part – you could maybe ask for help concerning the weak dependency and maybe first ask whether it _is_ a dealbreaker for them?\r\nI personally would prefer if you try that first – as well as if this would be within ForwardDiff – but I am not involved in that package _and_ @gdalles comment is already blocking, so I trust his final decision to unblock – hence this is nonblocking :)",
+      "createdAt": "2023-12-19T07:42:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1862266432",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vA904",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle @kellertuer All right, I'll take the suggestion. As much as I'd prefer a simple wrapper package for this (it's how I've been doing it for a while), I understand your points and will try to open a PR at ForwardDiff for the `value_and_derivative(s)` functions in the next few days (AFAIC the Unitful compatibility part is nice to have, but for now can wait).",
+      "createdAt": "2023-12-19T10:43:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1862524216",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vBXQ2",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you!\nI could definitely see Unitful compatibility as a package extension of either Unitful or ForwardDiff (probably Unitful if I had to pick)",
+      "createdAt": "2023-12-19T11:59:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1862628406",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vBngd",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I could definitely see Unitful compatibility as a package extension of either Unitful or ForwardDiff (probably Unitful if I had to pick)\r\n\r\n~~I actually did think about extending Unitful for that, but unfortunately we can't rely on simply adding new methods, as the differentiated function can have units on its output but not on its input.~~\r\n\r\n~~So, for doing the transparent unit unwrapping with `Unitful.ustrip` that this package does, one would have to redefine the base ForwardDiff methods depending on whether Unitful is present (not sure if that's possible/easy to do with a weakdep). I thought of other alternatives for stripping units generically such as doing `x/oneunit(x)`, but these are also suboptimal.~~\r\n\r\nEDIT: I ended up finding a way to add Unitful support as a plain extension.",
+      "createdAt": "2023-12-19T12:45:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1862694941",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vLoR_",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks again for the feedback and suggestions. I've taken the time and effort and have opened the relevant PRs at `ForwardDiff`. I'm hoping the `ForwardDiff` maintainers find them acceptable and the changes can be merged there; if that happens then I won't have a reason to pursue this further.",
+      "createdAt": "2023-12-21T00:39:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1865319551",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vN4Re",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Very cool, thank you!\r\nI don't have much experience with ForwardDiff internals but I'm hoping someone will help review your contributions.",
+      "createdAt": "2023-12-21T09:11:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1865909342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vsmsn",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "Bump to avoid this being closed (`ForwardDiff` PRs are still pending review).",
+      "createdAt": "2024-01-02T12:25:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1873963815",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xvBeD",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "Bump",
+      "createdAt": "2024-01-24T13:44:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1908152195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85y2vVv",
+      "author": {
+        "login": "gerlero"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks again for the feedback. I'd like to close this one for now in favor of the changes merged into `AbstractDifferentiation`.",
+      "createdAt": "2024-02-05T13:03:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1926952303",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852gRa5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-03-11T11:00:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/97348#issuecomment-1988171449",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FastForwardDiff\n- Repository: https://github.com/gerlero/FastForwardDiff.jl\n- Created by: @gerlero\n- Version: v1.0.0\n- Commit: 5f39551848862ea7f372c37a9a4997a1ad9f388f\n- Reviewed by: @gerlero\n- Reference: https://github.com/gerlero/FastForwardDiff.jl/commit/5f39551848862ea7f372c37a9a4997a1ad9f388f#commitcomment-135258406\n- Description: Fast automatic derivatives of scalar functions in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b1a18ca0584976f6e097c068ad5e753d59504ee6fcb1542bbc5a4faa688898e1270ea28ecd58129195e8d7aa9c98055fa4efc7eff403a403be0dafca84f3ab458848fd4152a961c56fd61f84751f261d974036620562634c729059174d6b1e32cf5db831fe251643741a8bacfbfc9d921616a7a550b69e0c0564127b194a93952b41bd7ea41e1037a85774b611198bd4981b471e508f9b6fc94732864c799ca9d0e3fe66e054d720d96d4e5efc3e225f -->",
+  "package_name": "FastForwardDiff",
+  "closed_at": "2024-03-11T11:24:00Z",
+  "title": "New package: FastForwardDiff v1.0.0"
+}

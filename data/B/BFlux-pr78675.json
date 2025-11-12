@@ -1,0 +1,83 @@
+{
+  "created_at": "2023-02-28T13:38:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "StefanKarpinski",
+  "merged_at": null,
+  "pr_number": 78675,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85WUf9u",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Flux. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to GPFlux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-02-28T13:51:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78675#issuecomment-1448214382",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WWNxw",
+      "author": {
+        "login": "enweg"
+      },
+      "authorAssociation": "NONE",
+      "body": "The only reason why automatic merge did not work seems to be name similarity. Given the purpose of BFlux to extend Flux in a Bayesian way, I believe that the name is appropriate though and therefore think that this request should still be merged. ",
+      "createdAt": "2023-02-28T18:27:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78675#issuecomment-1448664176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85WXJdT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As discussed on Slack, `BayesianFlux` or `BayesFlux` might be a better name for this package",
+      "createdAt": "2023-02-28T21:00:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/78675#issuecomment-1448908627",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XCQr5",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I really think that BFlux is not a good name and one of the more descriptive variations would be better. These things are always a judgement call, but this fails the edit distance test and doesn't seem like a good name from a human perspective either.",
+      "createdAt": "2023-03-08T14:08:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/78675#issuecomment-1460210425",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BFlux\n- Repository: https://github.com/enweg/BFlux.jl\n- Created by: @enweg\n- Version: v0.2.1\n- Commit: 87f52b9d96fe13f39f29913f91ea851cb74aa8be\n- Reviewed by: @enweg\n- Reference: https://github.com/enweg/BFlux.jl/commit/87f52b9d96fe13f39f29913f91ea851cb74aa8be#commitcomment-102422191\n- Description: Bayesian addition to Flux.jl\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6361a4089eded80e12e70028e992f09698152e3891379fcb0a7186576dfdbc7fedac957b24094ee69748435e944bda6b3e39edd441037f6f10a8499a33366c7fec6a087ecf17dc588d77ef1e2b4b33fd4ae051c9e5b6e7cb33a35dfd27df6cbabbc2f0b3db4159437c4ceedbef0bac779047d6ac6217b41d3b5af935e06e963e0b4c2aa973e111d36acfab4698cc9861410da7a4aac68e13e2aca5bd7a5e1ebc2 -->",
+  "package_name": "BFlux",
+  "closed_at": "2023-03-08T14:08:40Z",
+  "title": "New package: BFlux v0.2.1"
+}

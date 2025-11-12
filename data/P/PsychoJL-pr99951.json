@@ -1,0 +1,83 @@
+{
+  "created_at": "2024-01-31T14:30:18Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 99951,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85yZT66",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ArgParse, CEnum, Documenter, DocumenterTools, Images, JET, Observables, QML, Revise, SimpleDirectMediaLayer, StaticArrays\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-01-31T14:39:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99951#issuecomment-1919237818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yaRD9",
+      "author": {
+        "login": "cjdoris"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You're also not supposed to put Julia or JL etc in the name since it's self evident it is a Julia package.",
+      "createdAt": "2024-01-31T16:42:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/99951#issuecomment-1919488253",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yaeeZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I would not block the registration based on that, due to the explicit relationship with PsychoPy.",
+      "createdAt": "2024-01-31T17:10:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99951#issuecomment-1919543193",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85yxCOr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/100209",
+      "createdAt": "2024-02-03T21:13:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/99951#issuecomment-1925456811",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PsychoJL\n- Repository: https://github.com/mpeters2/PsychoJL.jl\n- Created by: @mpeters2\n- Version: v1.0.0\n- Commit: 8ceb3cf4a73344da333e3a9aae4e86c9d7cd7c81\n- Reviewed by: @mpeters2\n- Reference: https://github.com/mpeters2/PsychoJL.jl/issues/12#issuecomment-1919218848\n- Description: API for writing Psychology Experiments\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598abb68144b8d320babb63ca669336e3d73ce3b1e5d8f3e0433bae2982bec17a65235646518fc6d2ec5cbcdaf02426a8fda87c1c43567ef33dc1c9720334539615d7af8e87aeecb4c1868c91948a25c005f75fa7833db5de2925d57bd7e6a1ebfbe963152a1c9181a16eb124c7aee7e9c3d79c75bdeeac73aa30629c967dcc273f -->",
+  "package_name": "PsychoJL",
+  "closed_at": "2024-02-03T21:13:47Z",
+  "title": "New package: PsychoJL v1.0.0"
+}

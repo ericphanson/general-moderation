@@ -1,0 +1,98 @@
+{
+  "created_at": "2021-04-15T16:37:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 34395,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMDU3MzYwOA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import TensegrityEquilibria` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-04-15T16:43:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34395#issuecomment-820573608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMDU4NzkyNA==",
+      "author": {
+        "login": "matthiashimmelmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] I don't understand, why this doesn't work. Locally, I can import the module. Can someone help me please? @JuliaRegistrator ",
+      "createdAt": "2021-04-15T17:04:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34395#issuecomment-820587924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMDYxMDY0Ng==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@matthiashimmelmann the file [`src/tensegrityEquilibria.jl`](https://github.com/matthiashimmelmann/TensegrityEquilibria.jl/blob/d69d4c42a7ea47c4e38ba7d60aabeb4cae1a7007/src/tensegrityEquilibria.jl) should be named `src/TensegrityEquilibria.jl`.  The entry point of the package must match the name of the package, and cases are relevant.\r\n\r\n[noblock]",
+      "createdAt": "2021-04-15T17:38:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/34395#issuecomment-820610646",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMTAxMjY2NA==",
+      "author": {
+        "login": "matthiashimmelmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano Thanks a lot for your help! Locally, I met the naming convention, but it appears that automatic lower-casing happened during upload. I'll have to look into my Git upload manager and find out why this occured.",
+      "createdAt": "2021-04-16T08:28:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34395#issuecomment-821012664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgyMTA4NDMyOQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favour of #34460.  However note that, as explained in the message by the bot above, if you don't change the version number, registering again would simply update the present pull request.",
+      "createdAt": "2021-04-16T10:36:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/34395#issuecomment-821084329",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: TensegrityEquilibria\n- Repository: https://github.com/matthiashimmelmann/TensegrityEquilibria.jl\n- Created by: @matthiashimmelmann\n- Version: v0.1.1\n- Commit: d69d4c42a7ea47c4e38ba7d60aabeb4cae1a7007\n- Reviewed by: @matthiashimmelmann\n- Reference: https://github.com/matthiashimmelmann/TensegrityEquilibria.jl/commit/d69d4c42a7ea47c4e38ba7d60aabeb4cae1a7007#commitcomment-49565579\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6e7b657646f04a8e1dbd7522627cb04a8fab7a8379ed013871daf00dbd122abb2a566fa13f1246e7f9696e48f7df407e031d13e50990d91ecbf914a104da5094ebaf8fa92900ab1302a5477cfb63db97679d081bc8a84017b16ef10ede05e69546eb32c7344ea32bd5decfcb6efe4db24c8c1538f582f5021d70259b23ee8e3b95b8f012a4859fe09b03653410ff13bb5c10f8b438828a2cbc36b99b2d6d0d1add26f93dd7b6316c9df5808330370bf773305c0bbd8fa4038358c3d2c0fd9aa26 -->",
+  "package_name": "TensegrityEquilibria",
+  "closed_at": "2021-04-16T10:36:01Z",
+  "title": "New package: TensegrityEquilibria v0.1.1"
+}

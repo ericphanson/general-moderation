@@ -1,0 +1,91 @@
+{
+  "created_at": "2022-06-26T10:17:11Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 63131,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Fhx33",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Lowercase package name juliapythonadaptor contains the string \"julia\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-06-26T10:20:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63131#issuecomment-1166482935",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FxjHN",
+      "author": {
+        "login": "thautwarm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think containing a string `julia` in the name of this package is valid. \r\n\r\nI suppose the users could import `JuliaPythonAdaptor` from the both languages, so it should be either `JuliaPythonAdaptor` or `PythonJuliaAdaptor`. I prefer the first, and using abbreviations like `JlPyAdaptor` here is IMO not a good option. \r\n\r\n[noblock]",
+      "createdAt": "2022-06-30T00:20:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63131#issuecomment-1170616781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85FxjQJ",
+      "author": {
+        "login": "thautwarm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]",
+      "createdAt": "2022-06-30T00:21:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63131#issuecomment-1170617353",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HjPCi",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-07-31T12:50:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63131#issuecomment-1200418978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85IAhiv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-08-08T13:00:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/63131#issuecomment-1208096943",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuliaPythonAdaptor\n- Repository: https://github.com/thautwarm/JuliaPythonAdaptor.jl\n- Created by: @thautwarm\n- Version: v0.1.0\n- Commit: 97a09d87cad8b7a9519ffadeb9ef6e3a0708dcfa\n- Reviewed by: @thautwarm\n- Reference: https://github.com/thautwarm/JuliaPythonAdaptor.jl/commit/97a09d87cad8b7a9519ffadeb9ef6e3a0708dcfa#commitcomment-77434036\n- Description: Relocatable Julia-Python bidirectional bridging solution. \n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6eec582772c775f38fccfab08ea3dfc98a4bc615f0b52d9cb12d749b5dec53ea0d202c6d4776c9494903483af60e8ae6db0631a82d71e2164f5dd851dee00daff8bc48cff746246b99c9fba412931b7316052173d1c4bb8754ca6e1235259bac497efd42c9c68183905d848dc558a395cdeb412f44bc1ac45ac2b0a9b4647cfb722e0ff78c790645f34fb7bb70ccab28cb034f24ede612fdd0432ef683270e278ac33d72b90e4ffed633901938ccb9534 -->",
+  "package_name": "JuliaPythonAdaptor",
+  "closed_at": "2022-08-08T13:00:15Z",
+  "title": "New package: JuliaPythonAdaptor v0.1.0"
+}

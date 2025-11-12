@@ -1,0 +1,105 @@
+{
+  "created_at": "2025-02-06T15:59:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124462,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86dX1yL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-06T16:09:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124462#issuecomment-2640272523",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dhoiR",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Your README still refers to the name `XPalm` in several places.\r\n\r\nFor the record, there was nothing wrong with https://github.com/JuliaRegistries/General/pull/124449. It is easy to override the name similarity check, which is usually (such as in this case) a false positive.",
+      "createdAt": "2025-02-07T12:55:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124462#issuecomment-2642839697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86dirAp",
+      "author": {
+        "login": "VEZY"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hooo, in this case I would prefer keeping XPalm, as it was already published with this name and the implementations in C and Python have this name too. I'll roll back to it and make a new release, thanks!",
+      "createdAt": "2025-02-07T14:34:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124462#issuecomment-2643111977",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86djPS6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sounds good!\r\n\r\nAs a general lesson for future packages, though:\r\n\r\n> as it was already published with this name\r\n\r\nNever publish a paper without registering the package _first_. There are circumstances where an override is not so easy, or at least, \"we already published a paper\" is not the most welcome argument when asking for an exception on a registration that violates the guidelines in the General registry. Mostly, this happens with obscure acronyms, which are _very_ frowned upon in the Julia community and should not be used as package names.\r\n\r\n>  I'll roll back to it and make a new release\r\n\r\nNote that you can keep the version to 0.1.0 when doing that (just in case that's not clear). It's best to not bump version numbers when fixing automerge issue. In many cases (not a rename), fixes can _update_ an existing registration instead of creating a new one, as long as the version number is unchanged.",
+      "createdAt": "2025-02-07T15:33:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124462#issuecomment-2643260602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86djVQK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124544",
+      "createdAt": "2025-02-07T15:44:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124462#issuecomment-2643285002",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: XPalmModel\n- Repository: https://github.com/PalmStudio/XPalmModel.jl\n- Created by: @VEZY\n- Version: v0.1.0\n- Commit: ea404db52c61fc93332d6c6b844022bf984b6b4c\n- Reviewed by: @VEZY\n- Reference: https://github.com/PalmStudio/XPalmModel.jl/commit/ea404db52c61fc93332d6c6b844022bf984b6b4c#commitcomment-152234160\n- Description: A crop model for Oil Palm\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis is the first release of the package. It is now in a stable enough version to register. Be careful though, it is not fully validated yet, nor properly calibrated.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f22e08efa37374c2242cc50b95f74a4df4c9f303516617d3c768f5fe418e2e42861ec314e2a7b04c385663464899ad854e74faef612ab9e0e05c4e7fd25e50e0438901bde9d8e84fa60365bbf02bc209366855a1b536afddc1d02341abed6936f90a0dd687c3092e2e73da73c88abd8ed95609583f0889c4810476040f3a47676915f115b4000aabf3bcab3452672746d21969a4cf97b878185613edff42ce9f7c35c4aba3a053a95405c3667e285ab0 -->",
+  "package_name": "XPalmModel",
+  "closed_at": "2025-02-07T15:44:30Z",
+  "title": "New package: XPalmModel v0.1.0"
+}

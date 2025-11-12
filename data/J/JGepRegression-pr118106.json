@@ -1,0 +1,98 @@
+{
+  "created_at": "2024-10-26T00:30:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 118106,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86RYYYr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-26T00:39:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439087659",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RYgUy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please stop spamming the registry with repeated PRs",
+      "createdAt": "2024-10-26T00:59:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439120178",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RZtg2",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Specifically, do not bump the version number while addressing auto-merge issues.",
+      "createdAt": "2024-10-26T08:48:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439436342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RZ5qc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Indeed! And also, @maxreiss123, in future similar circumstances, please fix the issue\r\n\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n\r\n**first**, since fixing a URL mismatch is something that requires a new PR.\r\n\r\nIn terms of the package name, assuming the initial `J` is for \"Julia\", please avoid that. The `.jl` extension already marks the project as a Julia package. From the README, it seems that you may have contemplated the name `VectorizedGeneExpressionProgramming`. That would probably be a suitable package name, as long and descriptive package names are encouraged.\r\n\r\nThe \"How to use it?\" section in the README is not up-to-date, and also does not reflect the normal usage of a Julia package: People would generally not clone a package and instantiate the package project. Rather, they would add the package to their own project (`Pkg.add`).\r\n\r\nI'm also not sure that the current description is really sufficient for an interested potential user to get started with the package. That would be the minimum level of documentation required for a package registration.",
+      "createdAt": "2024-10-26T10:42:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439486108",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RaLaB",
+      "author": {
+        "login": "maxreiss123"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi, thanks for your feedback. I'll fix the open issues.\r\n\r\nAm Sa., 26. Okt. 2024 um 21:42 Uhr schrieb Michael Goerz <\r\n***@***.***>:\r\n\r\n> Indeed! And also, @maxreiss123 <https://github.com/maxreiss123>, in\r\n> future similar circumstances, please fix the issue\r\n>\r\n> Repo URL does not end with /name.jl.git, where name is the package name\r\n>\r\n> *first*, since fixing a URL mismatch is something that requires a new PR.\r\n>\r\n> In terms of the package name, assuming the initial J is for \"Julia\",\r\n> please avoid that. The .jl extension already marks the project as a Julia\r\n> package. From the README, it seems that you may have contemplated the name\r\n> VectorizedGeneExpressionProgramming. That would probably be a suitable\r\n> package name, as long and descriptive package names are encouraged.\r\n>\r\n> The \"How to use it?\" section in the README is not up-to-date, and also\r\n> does not reflect the normal usage of a Julia package: People would\r\n> generally not clone a package and instantiate the package project. Rather,\r\n> they would add the package to their own project (Pkg.add).\r\n>\r\n> I'm also not sure that the current description is really sufficient for an\r\n> interested potential user to get started with the package. That would be\r\n> the minimum level of documentation required for a package registration.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439486108>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AHUWZPBWSNRH3BE5K2GOGELZ5NW2RAVCNFSM6AAAAABQUHXOQGVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDIMZZGQ4DMMJQHA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2024-10-26T12:25:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118106#issuecomment-2439558785",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JGepRegression\n- Repository: https://github.com/maxreiss123/GEP_SBP_\n- Created by: @maxreiss123\n- Version: v0.3.4\n- Commit: 45d3c83654f840c7e19716dc4a47a8927fa1ca6e\n- Reviewed by: @maxreiss123\n- Reference: https://github.com/maxreiss123/GEP_SBP_/issues/4#issuecomment-2439082321\n- Description: Gene Expression Programming for symbolic regression in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359866cdc776ee047298a91578ef0be3dc9c2158d48e2096aacacec23bc944610e0697d5a1e619de0e04d34327c126253ba920a730b72e691f92c41a984e3eb3d9032c4b8e62b4b669fc28eb6c2a61788fb57c87d78a1f6df3770039570af7b6dce30deaa47db73230ceba7f3c5182ec56622dd9742527564f061b731cb537f58e0f -->",
+  "package_name": "JGepRegression",
+  "closed_at": "2024-10-26T00:59:34Z",
+  "title": "New package: JGepRegression v0.3.4"
+}

@@ -1,0 +1,98 @@
+{
+  "created_at": "2020-06-06T09:54:27Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 15956,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDAyNjExOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-06-06T09:57:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15956#issuecomment-640026119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDUzMzA1MQ==",
+      "author": {
+        "login": "aviks"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "wouldn't this be a PR to Distributions.jl? I'm not sure having a package for each distribution is the way to go. ",
+      "createdAt": "2020-06-08T11:01:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15956#issuecomment-640533051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MDU1NzY1Ng==",
+      "author": {
+        "login": "severinson"
+      },
+      "authorAssociation": "NONE",
+      "body": "> wouldn't this be a PR to Distributions.jl? I'm not sure having a package for each distribution is the way to go.\r\n\r\nI elected to submit a separate package since the Soliton distribution is quite niche. As far as I know it's only used for erasure correcting codes. I've opened an issue with Distributions.jl to ask for their opinion.\r\nhttps://github.com/JuliaStats/Distributions.jl/issues/1129",
+      "createdAt": "2020-06-08T11:55:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/15956#issuecomment-640557656",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MzA1NzA2NA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@severinson Based on https://github.com/JuliaStats/Distributions.jl/issues/1129, it looks like perhaps this might be added to Distributions.jl.\r\n\r\nIn that case, do you still want to register this package? Or would you like to close this PR in favor of adding the Soliton distribution to the Distributions.jl package?",
+      "createdAt": "2020-06-12T04:23:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15956#issuecomment-643057064",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDY0MzE0MzYwNQ==",
+      "author": {
+        "login": "severinson"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm closing this PR in favour of adding it to Distributions.jl. Thanks for the reminder. Cheers.",
+      "createdAt": "2020-06-12T08:24:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/15956#issuecomment-643143605",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SolitonDistribution\n- Repository: https://github.com/severinson/SolitonDistribution.jl\n- Created by: @severinson\n- Version: v0.1.0\n- Commit: 3b8e1931f605dc853f626a13b6ae93645d5e7e86\n- Reviewed by: @severinson\n- Reference: https://github.com/severinson/SolitonDistribution.jl/commit/3b8e1931f605dc853f626a13b6ae93645d5e7e86#commitcomment-39712486\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd63c2996c181f3b9367c3c620a42d5fa283b7ecdac942e93c54dd2563da2e11964662d4ac72d0dbda55fa0f942c6a75ae9e006ef5bf64113733936f850e9076cdb6c1a9500a7a72541e852bf0978339da349b00994e9510f9a9d7dc1b23d7891cf6a83e06e1ab6c6ca40aa9bdd494a7853caf1eb55c57600703e1911ba439808d868a903b1faa287239abdcec654114898a7d66f95e76f6ffab1a6f7a24be9aa9dbd59fbe891255ca4d58eedbd7159b372b70b520b15e32218cf44fee5ba04b010 -->",
+  "package_name": "SolitonDistribution",
+  "closed_at": "2020-06-12T08:26:32Z",
+  "title": "New package: SolitonDistribution v0.1.0"
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2022-04-28T11:32:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 59295,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85CSWIp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to install the package (i.e. `Pkg.add(\"GalacticNonconvex\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import GalacticNonconvex` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-28T11:45:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59295#issuecomment-1112105513",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CZxA2",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Vaibhavdixit02 please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-04-30T20:39:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59295#issuecomment-1114050614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CaOiY",
+      "author": {
+        "login": "Vaibhavdixit02"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The test failures are due to upstream compat bounds, it will take time to trickle through, we want to register this as it is if possible. \n\nOther option would be to not release this, which could also work and we can revisit this PR later. cc: @ChrisRackauckas ",
+      "createdAt": "2022-05-01T08:31:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59295#issuecomment-1114171544",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85EExtx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-31T12:58:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59295#issuecomment-1142102897",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Eicj3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-06-08T12:57:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/59295#issuecomment-1149880567",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GalacticNonconvex\n- Repository: https://github.com/SciML/GalacticOptim.jl\n- Created by: @Vaibhavdixit02\n- Version: v0.1.0\n- Commit: 53e7b90d14ce3e8a0c0345dea09a4328861ae94b\n- Reviewed by: @Vaibhavdixit02\n- Reference: https://github.com/SciML/GalacticOptim.jl/issues/16#issuecomment-1112646046\n- Description: Local, global, and beyond optimization for scientific machine learning (SciML)\n<!-- fd4428376af2fb5a2a11d718b16181b1d1d14b45528dda52d046f7bff1daf3eb48f5172af8199d2ee5dfbdf7c1cc5248d85861bda7dede3dcf9bd98b958d9f6868b5bf72085954ed6330da8b308689c6e2c1d8bafd131cfa970d91e17c11e08dc0af64acccf03125141ac87d78b20c654092754666670a739b9480892affdfce9aca6e924f59e40e9dce44dfb53f020aff1f0ac6e3df0d517ca20e8146122234abd9d919a51673e8b476deb2a599dbcaa77aaf5941684e525f492f50855137e2 -->",
+  "package_name": "GalacticNonconvex",
+  "closed_at": "2022-06-08T12:57:06Z",
+  "title": "New package: GalacticNonconvex v0.1.0"
+}

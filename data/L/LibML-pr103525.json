@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-03-24T20:01:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 103525,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q854N-MP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 7 existing packages.\n  1. Similar to Libdl. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Libxc. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to LibPQ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to KitML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to LibDLF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Libz. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to LibYAML. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-24T20:06:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103525#issuecomment-2016928527",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854N-gl",
+      "author": {
+        "login": "cirobr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Done by mistake from JuliaHub. Don`t know how to pull this back. Apologies for the mistake.",
+      "createdAt": "2024-03-24T20:11:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103525#issuecomment-2016929829",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854OBq5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No problem. For what it’s worth, and without having looked into it more, my immediate reaction was: Shouldn’t this be `LibFluxML`?",
+      "createdAt": "2024-03-24T21:05:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103525#issuecomment-2016942777",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854OINw",
+      "author": {
+        "login": "cirobr"
+      },
+      "authorAssociation": "NONE",
+      "body": "> No problem. For what it’s worth, and without having looked into it more, my immediate reaction was: Shouldn’t this be `LibFluxML`?\r\n\r\nIt definitely should, thanks for the hint. Will repost after adding some other functions.",
+      "createdAt": "2024-03-24T22:33:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/103525#issuecomment-2016969584",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LibML\n- Repository: https://github.com/cirobr/LibML.jl\n- Created by: @cirobr\n- Version: v0.3.12\n- Commit: 9249c32115c915a57b216f1273a76953a2d7605b\n- Git reference: HEAD\n- Description: Machine Learning extension functions to Flux.jl",
+  "package_name": "LibML",
+  "closed_at": "2024-03-24T21:05:14Z",
+  "title": "New package: LibML v0.3.12"
+}

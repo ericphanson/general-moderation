@@ -1,0 +1,165 @@
+{
+  "created_at": "2024-09-09T13:11:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 114832,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86LXKc9",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This seems like a bit of a weird name. I'd read it as \"Regions of Computing\", which I don't think is what you're intending. A present-participle verb as part of a package name would be unusual: I think package names should work grammatically with \"using <name>\".\r\n\r\n(It also seems too general: there's a lot of \"regions\" in science that could be computed, presumably)",
+      "createdAt": "2024-09-09T13:18:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338105149",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXK0b",
+      "author": {
+        "login": "PBrdng"
+      },
+      "authorAssociation": "NONE",
+      "body": "Would \"HypersurfaceComplement\" or \"ComplementOfHypersurface\" be more suitable?\r\n\r\nIn our case, \"regions\" is the complement of a hypersurface. There is not really a mathematical term for this, unfortunetaly.",
+      "createdAt": "2024-09-09T13:18:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338106651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXNij",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-09T13:23:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338117795",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXOKw",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My recommendation would be something more specific, like `HyperplaneRegions`. I'm not in on the math, so that's probably not an optimal name, but you get the picture: describe what kind of region the package deals with, if that's possible with one or two words. The more mathematically specialized it is, the more specific the package name should be. We very much encourage long package names (three or even four words), if necessary. As the [guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines) say, \"Err on the side of clarity, even if clarity seems long-winded to you.\"",
+      "createdAt": "2024-09-09T13:24:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338120368",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXOu2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> In our case, \"regions\" is the complement of a hypersurface. There is not really a mathematical term for this, unfortunetaly.\r\n\r\n`HyperComplementRegions`? But again, you're probably in a much better position than me to come up with a suitable name.",
+      "createdAt": "2024-09-09T13:25:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338122678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXPei",
+      "author": {
+        "login": "PBrdng"
+      },
+      "authorAssociation": "NONE",
+      "body": "> My recommendation would be something more specific, like `HyperplaneRegions`. I'm not in on the math, so that's probably not an optimal name, but you get the picture: describe what kind of region the package deals with, if that's possible with one or two words. The more mathematically specialized it is, the more specific the package name should be. We very much encourage long package names (three or even four words), if necessary. As the [guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines) say, \"Err on the side of clarity, even if clarity seems long-winded to you.\"\r\n\r\n\r\n\r\n> > In our case, \"regions\" is the complement of a hypersurface. There is not really a mathematical term for this, unfortunetaly.\r\n> \r\n> `HyperComplementRegions`? But again, you're probably in a much better position than me to come up with a suitable name.\r\n\r\nWhat about `HypersurfaceComplementRegions`? Would that work?",
+      "createdAt": "2024-09-09T13:26:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338125730",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXREO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, sorry, I didn't see your edit\r\n\r\n> Would \"HypersurfaceComplement\" or \"ComplementOfHypersurface\" be more suitable?\r\n\r\n`HypersurfaceComplement` and `HyperplaneComplementRegions` or any variation like that would be totally fine\r\n",
+      "createdAt": "2024-09-09T13:29:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338132238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LXSbt",
+      "author": {
+        "login": "PBrdng"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Yes, sorry, I didn't see your edit\r\n> \r\n> > Would \"HypersurfaceComplement\" or \"ComplementOfHypersurface\" be more suitable?\r\n> \r\n> `HypersurfaceComplement` and `HyperplaneComplementRegions` or any variation like that would be totally fine\r\n\r\nOkay, I will discuss with my coauthors what name to choose.",
+      "createdAt": "2024-09-09T13:31:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338137837",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LYN7E",
+      "author": {
+        "login": "PBrdng"
+      },
+      "authorAssociation": "NONE",
+      "body": "You can close this. See #114840",
+      "createdAt": "2024-09-09T15:07:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114832#issuecomment-2338381508",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ComputingRegions\n- Repository: https://github.com/JuliaAlgebra/ComputingRegions.jl\n- Created by: @PBrdng\n- Version: v0.1.0\n- Commit: b939a914a9469cec02892c2e593c91b5aeba04ec\n- Reviewed by: @PBrdng\n- Reference: https://github.com/JuliaAlgebra/ComputingRegions.jl/commit/b939a914a9469cec02892c2e593c91b5aeba04ec#commitcomment-146430741\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6247a0ef5af7b67099bfbc68e55a35e681c4b9b463dc6e3f0a48d258d4ac346ff667e2fac9ebbce27c3fbefda18f7c1c37a713d7f3a3ada479b7883f4f7d3f0802ce8e3e3821501abd766af7f899a35817d9716f866b66738daf5d1493fc2296b9717e13e1a9e331ea41219f080f0081fd0a3427b6388324ef21cfa20097854a0c8fe5a4846d6e7c42c632257a2ad3845334f2ea2eaae0e3651fa58e2d07d3347d391ebfe662415912a136569acc035fc5a8bd7111d583264455cef87f8a3778d -->",
+  "package_name": "ComputingRegions",
+  "closed_at": "2024-09-09T15:33:36Z",
+  "title": "New package: ComputingRegions v0.1.0"
+}

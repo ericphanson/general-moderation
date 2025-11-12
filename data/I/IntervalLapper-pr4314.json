@@ -1,0 +1,134 @@
+{
+  "created_at": "2019-10-12T21:20:13Z",
+  "review_comments": [
+    {
+      "id": 307989500,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzA3OTg5NTAw",
+      "user": null,
+      "body": "<!---approved_pr_head_commit_sha=\"0b6cc3d2a9a675b9889b5d097e2519805da29d8c\"--->",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/4314#pullrequestreview-307989500",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/4314",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/4314#pullrequestreview-307989500"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/4314"
+        }
+      },
+      "submitted_at": "2019-10-28T16:40:53Z",
+      "commit_id": "0b6cc3d2a9a675b9889b5d097e2519805da29d8c"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": null,
+  "merged_at": "2019-10-28T17:02:41Z",
+  "pr_number": 4314,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MjkwMjUzOA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please add (at least)\r\n```\r\n[compat]\r\njulia = \"1\"\r\n```\r\nto your project file and retrigger the bot.\r\n\r\n[noblock]",
+      "createdAt": "2019-10-16T21:38:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-542902538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg1MDYzOQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "bump @sstadick\r\n\r\n[noblock]",
+      "createdAt": "2019-10-28T08:54:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-546850639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzAxOTA1MA==",
+      "author": {
+        "login": "sstadick"
+      },
+      "authorAssociation": "NONE",
+      "body": "I think I retriggered it. I added a comment to my commit that updates the compat section: https://github.com/sstadick/IntervalLapper.jl/commit/31523c51383f4962d7b560d9155c9f2f29d3b3c6#r35694551\r\n\r\n[noblock]",
+      "createdAt": "2019-10-28T16:05:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-547019050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzAyMjUzNA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Have you installed the github bot? It looks like you used the web interface the first time you triggered the bot so you might not have it installed.\r\n\r\n[noblock]",
+      "createdAt": "2019-10-28T16:13:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-547022534",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzAzNTAzMQ==",
+      "author": {
+        "login": "sstadick"
+      },
+      "authorAssociation": "NONE",
+      "body": "Yep! You are correct! It was longer than a week so I forgot how it worked. I've retriggered via the web interface. Thanks for the reminders.\r\n\r\n[noblock]",
+      "createdAt": "2019-10-28T16:39:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-547035031",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0NzAzNTg3NA==",
+      "author": {
+        "login": ""
+      },
+      "authorAssociation": "NONE",
+      "body": "Your `new package` pull request met all of the guidelines for automatic merging.\n\nI will automatically merge this pull request after the mandatory waiting period has elapsed.\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment.\n\n(If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.)\n\n---\nOn a separate note, I see that you are registering a release with a version number of the form `v0.X.Y`.\n\nDoes your package have a stable public API? If so, then it's time for you to register version `v1.0.0` of your package. (This is not a requirement. It's just a recommendation.)\n\nIf your package does not yet have a stable public API, then of course you are not yet ready to release version `v1.0.0`.\n\n---\n[noblock]",
+      "createdAt": "2019-10-28T16:40:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/4314#issuecomment-547035874",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IntervalLapper\n- Repository: https://github.com/sstadick/IntervalLapper.jl\n- Created by: @sstadick\n- Version: v0.1.0\n- Commit: 31523c51383f4962d7b560d9155c9f2f29d3b3c6\n- Git reference: master",
+  "package_name": "IntervalLapper",
+  "closed_at": "2019-10-28T17:02:41Z",
+  "title": "New package: IntervalLapper v0.1.0"
+}

@@ -1,0 +1,128 @@
+{
+  "created_at": "2022-07-26T20:49:59Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 65046,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85HSQ6M",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to Lehmann. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-07-26T20:53:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1195970188",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HSSx2",
+      "author": {
+        "login": "thchr"
+      },
+      "authorAssociation": "NONE",
+      "body": "Any chance to have this bypass the naming conflict guidelines? There's a lot of `*mann`s out there (Lehmann, Kleinmann, Neumann, etc.)... \r\nThis package is named after a [well-established concept](https://onlinelibrary.wiley.com/iucr/itc/Ac/ch3o2v0001/sec3o2o2o1o1/) in symmetry analysis of materials (due to [Franz Neumann](https://books.google.com/books?id=lmUSAAAAIAAJ&printsec=frontcover&hl=de&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)).\r\n\r\n[noblock]",
+      "createdAt": "2022-07-26T21:02:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1195977846",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85HbV2W",
+      "author": {
+        "login": "jishnub"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Tbh the name Neumann is a bit ambiguous here, due to the commonly used Neumann boundary condition in differential equations. Perhaps something like `NeumannSymmetry` might be less ambiguous?",
+      "createdAt": "2022-07-28T16:05:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1198349718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JR-3v",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-08-28T12:50:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1229450735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85JWBt2",
+      "author": {
+        "login": "thchr"
+      },
+      "authorAssociation": "NONE",
+      "body": "I can change the name, of course - but I'm a little puzzled by why this particular package name is sufficiently special that it warrants this? There's countless other packages in the ecosystem that are named after some person - with that person having many distinct contributions (to mention a few: Hilbert.jl, Lehmann.jl, Turing.jl, Fermi.jl, Erdos.jl, Keldysh.jl, etc. - and I have a few as well: Brillouin.jl and Bravais.jl).\r\n\r\nI'm not sure what makes Neumann particularly special in this regard? This was only flagged initially due to Levenstein similarity with Lehmann.jl - not due to anything related to boundary conditions etc.\r\n\r\nThis is a small package so the name doesn't matter terribly to me; but I'm wondering if there is something broader about package naming policy I've missed here?\r\n\r\n[noblock]",
+      "createdAt": "2022-08-29T15:58:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1230510966",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85LPHKr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-09-29T13:06:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1262252715",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85LsuIN",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-10-06T13:08:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/65046#issuecomment-1270014477",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Neumann\n- Repository: https://github.com/thchr/Neumann.jl\n- Created by: @thchr\n- Version: v0.1.0\n- Commit: f627c562bd754c737be6d389a113b3f459762164\n- Reviewed by: @thchr\n- Reference: https://github.com/thchr/Neumann.jl/commit/f627c562bd754c737be6d389a113b3f459762164#commitcomment-79488477\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b90f5a950d67e7fcd138510fb5d9fc8b28a78449fe1b23ea76d96d51cceca07a9757e1b23d00a3c2b013974e6fd9b570a179f3a798e7dd0d22aa87bb8c4079ab376c2de34240b35b8ddfb22278945aeb2304b752c5ef603017dba2e9157d68158b97baff0ed5270c8089716a766f017ecaad60014f2714295d721c4a5cb0c832f8b852aa36d061b721a2641dd36b75b90cce75a12d41fd55020df03956920dbcbdde7593cdd21198eb99d0177e9b2d13 -->",
+  "package_name": "Neumann",
+  "closed_at": "2022-10-06T13:08:14Z",
+  "title": "New package: Neumann v0.1.0"
+}

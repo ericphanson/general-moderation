@@ -1,0 +1,157 @@
+{
+  "created_at": "2024-09-07T23:18:08Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 114746,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86LQ9YY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-09-07T23:21:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336478744",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LQ94N",
+      "author": {
+        "login": "JoshuaBillson"
+      },
+      "authorAssociation": "NONE",
+      "body": "**Reason for Manual Merge:** `DataViews` is sufficiently different from `CatViews` to be easily distinguished.",
+      "createdAt": "2024-09-07T23:31:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336480781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRChK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name *similarity* certainly isn’t an issue, but my gut feeling is that `DataViews` would be something much more general than “defining lazy views over machine learning datasets.”  Making it more specific as maybe `MLDataViews` might be more appropriate ",
+      "createdAt": "2024-09-08T00:54:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336499786",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRD1q",
+      "author": {
+        "login": "JoshuaBillson"
+      },
+      "authorAssociation": "NONE",
+      "body": "> The name _similarity_ certainly isn’t an issue, but my gut feeling is that `DataViews` would be something much more general than “defining lazy views over machine learning datasets.” Making it more specific as maybe `MLDataViews` might be more appropriate\r\n\r\nThat's a good point, but the package is actually written in such a way as to work with any data structure that defines `Base.length` and `Base.getindex`. My thinking was that it could be used to define lazy views over any generic iterable, which has use cases outside of machine learning. For example, it could be used for data engineering or statistical analysis. Maybe modifying the package description could help clarify this?",
+      "createdAt": "2024-09-08T01:25:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336505194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LREER",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe. It would be good to get some more community feedback on the name (probably best done on Slack). I’m not even quite sure what I would really expect of a `DataViews` package. Probably some kind of query language on top of DataFrames. But if you type “DataViews” into Google, there is *a lot* of “prior art” with different contexts. My recommendation would be to try to avoid the confusion and to come up with a more unique and descriptive name.",
+      "createdAt": "2024-09-08T01:29:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336506129",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86LRET8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To determine a good package name, it might also be helpful to extend the documentation with a discussion of concepts and philosophies, in addition to just the API.",
+      "createdAt": "2024-09-08T01:33:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2336507132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86PLj_o",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-10-09T12:23:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2402172904",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86QC6-9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-10-16T12:23:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/114746#issuecomment-2416684989",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DataViews\n- Repository: https://github.com/JoshuaBillson/DataViews.jl\n- Created by: @JoshuaBillson\n- Version: v0.0.1\n- Commit: e22d756912e28d39f7944e2b6526d244367c005f\n- Reviewed by: @JoshuaBillson\n- Reference: https://github.com/JoshuaBillson/DataViews.jl/issues/2#issuecomment-2336478017\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598c110bb80e2fabe028c1076f63817148cfbe86c74c8c9d5a21f0013813becf573f9d52c3346fc590c56507eaaa44bb1b713e9a4465a4a9b0ccb3e1ea5a2b0e084686f2308aafd0993ae16047001bd5877cf28d5b823c8bebaf13edda32978e19e227523af2b3e7c25498f0276269d4e6f26b73fb0df3ceac0f7a9073df6347f75 -->",
+  "package_name": "DataViews",
+  "closed_at": "2024-10-16T12:23:51Z",
+  "title": "New package: DataViews v0.0.1"
+}

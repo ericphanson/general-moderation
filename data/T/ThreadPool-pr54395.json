@@ -1,0 +1,61 @@
+{
+  "created_at": "2022-02-10T23:23:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 54395,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q849upVl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- Package name similar to 2 existing packages.\n  1. Similar to ThreadPools. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.25 is at or below cutoff of 2.50.\n  2. Similar to ThreadTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-02-10T23:26:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54395#issuecomment-1035638117",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849uprC",
+      "author": {
+        "login": "Moelf"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "as the bot says, we already have https://github.com/tro3/ThreadPools.jl . Which looks like a more feature rich / robust package. Is this a toy / personal project? If so you don't need to register it in order to share it with your group",
+      "createdAt": "2022-02-10T23:28:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54395#issuecomment-1035639490",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849zTFj",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The repository has been deleted: https://github.com/Borisd93/ThreadPool.jl",
+      "createdAt": "2022-02-12T00:41:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/54395#issuecomment-1036857699",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ThreadPool\n- Repository: https://github.com/Borisd93/ThreadPool.jl\n- Created by: @Borisd93\n- Version: v1.0.0\n- Commit: 16e2b6e9683a29dfd619c5e2fce8b7173f9c84a1\n- Reviewed by: @Borisd93\n- Reference: https://github.com/Borisd93/ThreadPool.jl/issues/1\n- Description: A ThreadPool written in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359878a34659e4ae6e8d888faf58a7c86927adef46386ad4158c4ec4846e2b08c99e8602f7b96ff11dc07c6b1fa3ad44b130ca06d0e5994bad9686191402c1f11168f3ee3366186ab14e615387e2aaed1f871e7c37edadf264862c78287aa2d71fc7ce14b5ea280b96ceca94122468423ba98161ef8f8d5f01fd6b6dd2a43547589a -->",
+  "package_name": "ThreadPool",
+  "closed_at": "2022-02-12T00:45:02Z",
+  "title": "New package: ThreadPool v1.0.0"
+}

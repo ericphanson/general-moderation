@@ -1,0 +1,217 @@
+{
+  "created_at": "2023-07-12T19:14:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 87354,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85hVuPu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to Korg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Norg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-07-12T19:21:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633084398",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hVu7x",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @Scurrra, thanks for the contribution!\r\nCould you explain a little better how your framework differs from established ones like [MLJ.jl](https://github.com/alan-turing-institute/MLJ.jl) ?\r\nAt the moment it only seems to contain a few preprocessing utilities, with no docs or readme.\r\n",
+      "createdAt": "2023-07-12T19:23:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633087217",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hVxlp",
+      "author": {
+        "login": "Scurrra"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Hi @Scurrra, thanks for the contribution! Could you explain a little better how your framework differs from established ones like [MLJ.jl](https://github.com/alan-turing-institute/MLJ.jl) ? At the moment it only seems to contain a few preprocessing utilities, with no docs or readme.\r\n\r\nHi @gdalle, Yes for now it only contains some preprocessing tools, but in next versions it will contain some very custom things I've not seen in other packages.\r\n\r\n[noblock]\r\n\r\nP. S. could you explain one thing: I can't release package because of its name is to similar to packages Norg and Korg?\r\n┌ Info: Name is not too similar to existing package names\r\n│   meets_this_guideline = false\r\n└   message = \"Package name similar to 2 existing packages.\\n  1. Similar to Korg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\\n  2. Similar to Norg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\"\r\nERROR: LoadError: RegistryCI.AutoMerge.AutoMergeGuidelinesNotMet(\"The automerge guidelines were not met.\")",
+      "createdAt": "2023-07-12T19:33:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633098089",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV2BH",
+      "author": {
+        "login": "Scurrra"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nCould you explain one thing: I can't release package because of its name is to similar to packages Norg and Korg?\r\n\r\n```julia\r\n┌ Info: Name is not too similar to existing package names\r\n│ meets_this_guideline = false\r\n└ message = \"Package name similar to 2 existing packages.\\n 1. Similar to Korg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\\n 2. Similar to Norg. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\"\r\nERROR: LoadError: RegistryCI.AutoMerge.AutoMergeGuidelinesNotMet(\"The automerge guidelines were not met.\")\r\n```",
+      "createdAt": "2023-07-12T19:48:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633116231",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV2VA",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Yes for now it only contains some preprocessing tools, but in next versions it will contain some very custom things I've not seen in other packages.\r\n\r\nThanks for your answer. I'm not sure this package is ready to be registered yet, maybe add a few more things to it beforehand? See the [guidelines](https://github.com/JuliaRegistries/General#should-i-register-my-package-now) here.\r\n\r\n> I can't release package because of its name is to similar to packages Norg and Korg?\r\n\r\nExactly, that is expected behavior. Most Julia package registrations are automatic, and to prevent namespace pollution or accidental installation of wrong packages, a minimum distance between names is enforced. If this minimum distance check fails, a human has to merge the PR.\r\n\r\nI personally don't have merge rights, I just happen to be invested in the Julia ML community, and so I took the liberty to ask for details :)",
+      "createdAt": "2023-07-12T19:50:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633117504",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV3B-",
+      "author": {
+        "login": "Scurrra"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n@gdalle , and one more question. Doesn't your comments block merging without \"[noblock]\" attribute? ",
+      "createdAt": "2023-07-12T19:52:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633120382",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV39_",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> @gdalle , and one more question. Doesn't your comments block merging without \"[noblock]\" attribute?\r\n\r\nIn theory they are indeed blocking, but since this PR has failed automatic merging it doesn't change anything (as far as I know) because a human would have to look at it anyway.",
+      "createdAt": "2023-07-12T19:55:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633124223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV4ot",
+      "author": {
+        "login": "Scurrra"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > @gdalle , and one more question. Doesn't your comments block merging without \"[noblock]\" attribute?\r\n> \r\n> In theory it does, but since this PR has failed automatic merging it doesn't change anything (as far as I know) because a human would have to look at it anyway.\r\n\r\nOh, thanks for your help and interest anyway!\r\n\r\nBut I at least leave it in my comment [noblock]",
+      "createdAt": "2023-07-12T19:57:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633126957",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hV4_X",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "In some cases you can change the package and relaunch the PR, leading the automatic tests to succeed. Then my comments would be problematic.\r\nBut here the name is a problem, and if you change the package name and re-register it will be a new PR anyway :)",
+      "createdAt": "2023-07-12T19:59:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633128407",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85hWQoG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name really isn’t a problem. The distance check is 95% false positives. I agree though that the functionality and documentation isn’t quite ready yet for registering in General, and I’d leave a blocking comment based on that. But you can definitely retrigger registration once you add a little bit more content, keeping the same package name.",
+      "createdAt": "2023-07-12T21:16:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1633225222",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j5AAG",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-08-12T12:22:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1675886598",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85kczI4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-08-20T12:22:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/87354#issuecomment-1685271096",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Corgi\n- Repository: https://github.com/Scurrra/Corgi.jl\n- Created by: @Scurrra\n- Version: v0.0.1\n- Commit: 7151f8cf9db53841fe680670d4a6b160e8f2886b\n- Reviewed by: @Scurrra\n- Reference: https://github.com/Scurrra/Corgi.jl/commit/7151f8cf9db53841fe680670d4a6b160e8f2886b#commitcomment-121432280\n- Description: ML Algorithms from scratch in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd69edac2a2edc7ac8e285f370724c2005b179414748c64c77d1e68125e419eb3a456ad0cd7dc656c95f997f1a2d5259074c67c3ce7a041e9bdc1cdd1f31f174f5de38b8d1229c19abfcc00f6563efbf70c1edc243bc9a026b0f88eb67f1fb6230e9cf0582477d03dfdf836cbb7fc61ee5a92abdc405ef5bbb3238953de1a7e13f7f70f5036680bde48e6aee8666f7cd7fddcd5cf614346ba7afdb7f7beb68051dfa6754fb572897f33ff91ee5e1c8af0c3 -->",
+  "package_name": "Corgi",
+  "closed_at": "2023-08-20T12:22:33Z",
+  "title": "New package: Corgi v0.0.1"
+}

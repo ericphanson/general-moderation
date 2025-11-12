@@ -1,0 +1,120 @@
+{
+  "created_at": "2019-10-01T12:53:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 3977,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUzNzA2MDM5Ng==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Needs a `[compat]` section in `Project.toml` with at least an entry for `julia` itself, e.g.:\r\n```toml\r\n[compat]\r\njulia = \"1\"\r\n```\r\nwould mean that the package is compatible with Julia versions `[1.0.0, 2.0.0)`.\r\n\r\nThis is a bit of a generic name. Perhaps something a bit more descriptive `ThreadedReductions` or `ThreadedMapReduce`?",
+      "createdAt": "2019-10-01T14:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-537060396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDUzNzQzOTMxNQ==",
+      "author": {
+        "login": "marekdedic"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've added the `[compat]` section for julia (no dependencies).\r\n\r\nI agree thet the name is a bit too generic. Originally, I called the package `ThreadedMap`, but over the time as I added more functions the name was less and less fitting. I thought about something like `ThreadedFunctions` but that seemed too general. `ThreadedMapReduce` on the other hand seems unfitting because there are more functions than just the two... (And I can see more yet to come). So far, I've been mainly thinking about [functions on iterable collections](https://docs.julialang.org/en/v1.2/base/collections/#Iterable-Collections-1), so maybe something like `ThreadedIterables`?",
+      "createdAt": "2019-10-02T10:49:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-537439315",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Mjg5NDc0OQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Are you happy with the name @marekdedic ?",
+      "createdAt": "2019-10-16T21:15:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-542894749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MzE5MTcxMw==",
+      "author": {
+        "login": "marekdedic"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre Which one? :smile: I think @StefanKarpinski had some (correct) remarks about it being too general, so I proposed some alternatives, hoping for a guidance on which would fix the ecosystem the best...",
+      "createdAt": "2019-10-17T14:07:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-543191713",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0MzMyODY5Ng==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Personally, I like `ThreadedCollections` the best.\r\n\r\n`ThreadedIterables` is also good.",
+      "createdAt": "2019-10-17T19:36:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-543328696",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU0Njg0ODc0NQ==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks like #4688 replaces this.",
+      "createdAt": "2019-10-28T08:48:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/3977#issuecomment-546848745",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Threaded\n- Repository: https://github.com/marekdedic/Threaded.jl\n- Created by: @marekdedic\n- Version: v0.2.0\n- Commit: a588768a7a5f7d7f3f95b20097bd365c68f47846\n- Reviewed by: @marekdedic\n- Reference: https://github.com/marekdedic/Threaded.jl/issues/26#issuecomment-539997299\n<!-- aa9d7facc4d4bafb5421b09a92ec4a1394fee6b864e9e5a06ba50cc0f044ebaf8e3a032767258279f7e318954e0bde08066318a2f7d1ac3324b381b1b97344901c9b4afe78aea518db2407427a0915ff912928727c8f417c433b324ab3b68678acd4e7bdfe674d7e92da774274f7a8e1b102f8269c6313c2dff1285eae29e24642be955fc3ddad255d4d3a37c834b954334e41f547a0cce9ce336bbacde90986 -->",
+  "package_name": "Threaded",
+  "closed_at": "2019-10-28T08:48:39Z",
+  "title": "New package: Threaded v0.2.0"
+}

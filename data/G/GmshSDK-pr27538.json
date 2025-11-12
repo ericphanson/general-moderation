@@ -1,0 +1,286 @@
+{
+  "created_at": "2021-01-07T21:57:35Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 27538,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjQxMzY3MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-07T22:00:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756413671",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjYzODYwNw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Are you aware of https://github.com/JuliaFEM/Gmsh.jl and https://github.com/JuliaRegistries/General/pull/27173? Would be good to combine efforts.",
+      "createdAt": "2021-01-08T09:04:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756638607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjY2ODk1Mg==",
+      "author": {
+        "login": "jaakkor2"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Are you aware of https://github.com/JuliaFEM/Gmsh.jl and #27173? Would be good to combine efforts.\r\n\r\nThere is also https://github.com/shipengcheng1230/GmshTools.jl.",
+      "createdAt": "2021-01-08T10:08:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756668952",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjY3NzE2Nw==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for the links! I am of aware of [Gmsh.jl](https://github.com/JuliaFEM/Gmsh.jl), but had some issues building it in the past. I have also used [GmshTools.jl](https://github.com/shipengcheng1230/GmshTools.jl) a while back, but I don't feel I need the extra functionality it provides. If I recall correctly there were also some issues with building for windows at some point. \r\n\r\nFor my use case, I have found the easiest solution to be to just download the SDK from the *gmsh* website, and add the path of the `gmsh.jl` file that comes with it to my Julia load path. This package was just a way to more-or-less automatically handle that within the Julia package's ecosystem using artifacts. The solution is simple, works on linux, macOS, and windows, and avoids having to do a somewhat complex build if you want to use some advanced gmsh functionalities such as integration with Open Cascade or Metis.\r\n\r\nHaving said that, I would be happy to combine efforts, use another package if it fulfils my current needs, or to just keep this unregistered if having yet-another-gmsh-package is undesirable...",
+      "createdAt": "2021-01-08T10:23:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756677167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcwMjk5MA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What's wrong with https://github.com/JuliaBinaryWrappers/gmsh_jll.jl?  *Edit*: oh, the SDK is something different?",
+      "createdAt": "2021-01-08T11:20:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756702990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcwODg3OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No, the jll package wraps that part, but there is an additional `.jl` file which these packages essentially wraps https://gitlab.onelab.info/gmsh/gmsh/-/blob/master/api/gmsh.jl.\r\n\r\nSo you currently need (i) gmsh_jll to provide the library (ii) some julia package that loads the file above and possibly (iii) a julia package with a nice Julian interface. (ii) and (iii) could possibly be combined, but might be nice to keep them separate such that (iii) could be MIT licensed IIUC.",
+      "createdAt": "2021-01-08T11:34:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756708878",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcxMDk5MQ==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I just tried the `gmsh_jll` and the `Gmsh.jl` package. Here is a *MWE* of something I need to do and was not able to using the included suggestions:\r\n\r\n```julia\r\n# add the package\r\ngmsh.initialize() # ok\r\ngmsh.model.occ.addSphere(0,0,0,1) # throws an error\r\n``` \r\n\r\nThe artifact built through `gmsh_jll` throws `ERROR: Gmsh requires OpenCASCADE to add sphere`. I assume it was not built with *OpenCascade*.\r\n\r\nThe `Gmsh.jl` package throws `ERROR: gmshModelOccAddSphere returned non-zero error code: 1`. Not sure that the problem is here. \r\n\r\nNote that **both** work if I try instead `gmsh.model.geo.addPoint(0,0,0)`, which uses `gmsh` internal CAD representation (somewhat limited). ",
+      "createdAt": "2021-01-08T11:39:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756710991",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcxODM2Mg==",
+      "author": {
+        "login": "koehlerson"
+      },
+      "authorAssociation": "NONE",
+      "body": "That's correct `OpenCASCADE` is not built right now in `gmsh_jll`. It needs to be included as a dep in the future",
+      "createdAt": "2021-01-08T11:58:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756718362",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcxODQ1MQ==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> So you currently need (i) gmsh_jll to provide the library (ii) some julia package that loads the file above and possibly (iii) a julia package with a nice Julian interface. (ii) and (iii) could possibly be combined, but might be nice to keep them separate such that (iii) could be MIT licensed IIUC.\r\n\r\nI like this idea, as it would clearly delineate various usages, with (i) being just the built package, (ii) begin just a simple wrapper to link with the `gmsh_jll`, and (iii) providing a more *Julian* interface.\r\n\r\nI glanced over the [build_tarball for `gmsh_jll`](https://github.com/JuliaPackaging/Yggdrasil/blob/4a06858cd917fc5bd8b3d45530fa1dbb4ae3566e/G/gmsh/build_tarballs.jl), and it seems to provide a rather basic build. But I have never used `BinaryBuilder`, so I don't really know what is going on there 😄 ",
+      "createdAt": "2021-01-08T11:58:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756718451",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcxOTQ3NQ==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> That's correct `OpenCASCADE` is not built right now in `gmsh_jll`. It needs to be included as a dep in the future\r\n\r\nThanks, that is I thought. My (probably naive) question is: why not just download the `gmsh` which was built by the `gmsh` developers with all the deps already?",
+      "createdAt": "2021-01-08T12:00:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756719475",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjcyOTQ3Nw==",
+      "author": {
+        "login": "koehlerson"
+      },
+      "authorAssociation": "NONE",
+      "body": "Tbh I'm too unexperienced to judge what is better. I initiated `gmsh_jll` because I was in the need for a basic working version on all platforms with a proper documentation. Further, I wanted to boost reproducibility in Julian way for scientific computing projects, i.e. `Manifest.toml` + `Project.toml` and a julia executable is all that is needed to reproduce the code. For my personal taste I dislike to have local installations and environment variables. But for sure, its a very basic build, that needs to be extended, if it wants to compete with already built versions",
+      "createdAt": "2021-01-08T12:25:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756729477",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjczMzQwNw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Btw, my Julia crashes when I try to use this package on Ubuntu.",
+      "createdAt": "2021-01-08T12:35:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756733407",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjczODEzNQ==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Btw, my Julia crashes when I try to use this package on Ubuntu.\r\n\r\nOk, that is a problem! I am running macOS, so let me add some more tests to the CI, and see if they pass on ubuntu.  ",
+      "createdAt": "2021-01-08T12:46:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756738135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjczODg5NQ==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre can you tell me which version of Julia you are running?",
+      "createdAt": "2021-01-08T12:49:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756738895",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjczOTA3NA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I have used their sdk before so not sure why it is a problem here. Julia just freezes for me and then dies without any message.",
+      "createdAt": "2021-01-08T12:49:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756739074",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1Njc0MTAzMw==",
+      "author": {
+        "login": "maltezfaria"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Indeed, things are failing on Ubuntu and Windows if not on the nightly Julia build (which was the only version I was testing!). I am on macOS, so I did not notice. No idea what the problem is for the moment...\r\n\r\nhttps://github.com/WaveProp/GmshSDK/actions/runs/471745918",
+      "createdAt": "2021-01-08T12:54:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-756741033",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NTExOTQ2MA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-02-08T12:39:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-775119460",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3OTE5ODI4Mw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-02-15T12:40:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27538#issuecomment-779198283",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GmshSDK\n- Repository: https://github.com/WaveProp/GmshSDK\n- Created by: @maltezfaria\n- Version: v4.7.0\n- Commit: 74b383b381d85963cb1d96f547da73eecb5ce5dd\n- Reviewed by: @maltezfaria\n- Reference: https://github.com/WaveProp/GmshSDK/commit/74b383b381d85963cb1d96f547da73eecb5ce5dd#commitcomment-45757904\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cae146914d613c28910d69d6d59dea12c74240f10c559753d0213b22e240c7dd6da5bb75b302278558617ad692e651d3b705b88e9d2801af06d16b489a987118de736ec13ac16227a5e19c6ed68adb8a7b8363ed999511ad2315168ec203ba026ae9a9fbd5cdeef841e8f7e5e807ac5dfc505e43ef910e0d8ade54d18d4768bba9f5a8afeab2a69377051a0495198660ab317e21084ef4d69698791d103b1927ddc16b7ddd4c3011f32bbc873f69eed6 -->",
+  "package_name": "GmshSDK",
+  "closed_at": "2021-02-15T12:40:50Z",
+  "title": "New package: GmshSDK v4.7.0"
+}

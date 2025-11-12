@@ -1,0 +1,46 @@
+{
+  "created_at": "2022-01-22T15:25:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 52981,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q848wStz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import Yasol` failed). See the CI logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to Yao. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to Anasol. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-01-22T15:30:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52981#issuecomment-1019292531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849AGcv",
+      "author": {
+        "login": "hendrikbecker99"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "cancel",
+      "createdAt": "2022-01-27T16:54:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/52981#issuecomment-1023436591",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Yasol\n- Repository: https://github.com/hendrikbecker99/Yasol.jl\n- Created by: @hendrikbecker99\n- Version: v0.1.1\n- Commit: e7515867c66630a48d9da879725ba51591e35f69\n- Reviewed by: @hendrikbecker99\n- Reference: https://github.com/hendrikbecker99/Yasol.jl/issues/13#issuecomment-1019297361\n- Description: Julia interface for the Yasol solver (http://tm-server-2.wiwi.uni-siegen.de/t3-q-mip/index.php?id=1)\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e12021bf657084c298db29239795ddcc42a4311abd3a71d36b27fc8fdbd7e7c923e38a5c7e62173e19e9f9ae3f9e879c2d221fee5dbe1b2615dd28e329470e5dec89ebafb502e83b7bddfbb0b23ae230558a19edc8ebb7ef712eb9bd0c2cf581176de3a5b1d24144d34a96955ece5adcb4c4429918cc3d2b09c85bcfcd1acc2b -->",
+  "package_name": "Yasol",
+  "closed_at": "2022-02-03T22:54:39Z",
+  "title": "New package: Yasol v0.1.1"
+}

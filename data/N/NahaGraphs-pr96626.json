@@ -1,0 +1,420 @@
+{
+  "created_at": "2023-12-06T16:11:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 96626,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85t3U-g",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to DataGraphs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-06T16:14:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1843220384",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85t3bui",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, and congrats on the new package! There are already plenty of options for graph formats, can I maybe ask why you needed to roll out a new one? Also the fact that the package seems named after yourself makes me doubt whether it's intended for wider use.",
+      "createdAt": "2023-12-06T16:31:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1843248034",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85t4yBq",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle: The reason I'm considering registering NahaGraphs.jl is that I'm using it in PanelCutting.jl, which I would eventually like to register.\r\n\r\nI'm looking at MetaGraphs to see if it will meet that use case.  It's a bit annoying in that I need to maintain a mapping between that application's objects, which the graph nodes represent, and integers, which seem to be the only things that Graphs.jl and its friends understand.\r\n\r\nThere would still be the question of where to put the code that, given a graph, writes a GraphViz dot file.  Maybe I can get it added to https://github.com/JuliaGraphs/GraphViz.jl.  I expect the maintainers of that package might welcome code to write dot files, but might not want to support another package's graph representation when that package has its own, which, sadly, is not documented.  Lookiing at the source code, this appears to just be a vaneer over a C library.  I wich they outright said that.\r\n\r\nUntil I either resolve these or give up on them, registration of NahaGraphs.jl should be blocked.\r\n",
+      "createdAt": "2023-12-06T20:00:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1843601514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uNs64",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've looked at replacing [PanelCutting's](https://github.com/MarkNahabedian/PanelCutting.jl) use of [NahaGraphs](https://github.com/MarkNahabedian/NahaGraphs.jl) with MetaGraphs and Graphs.\r\n\r\nNeither Graphs nor MetaGraphs provide an efficient way to map between objects of the application and nodes of the graph.  I don't understand how those packages can be at all useful without such a mechanism.\r\n\r\nI can wrap a MetaGraph with a struct that provides a Dict which maps from application objects to graph node numbers.  I can't imagine ever using Graohs or MetaGraphs without such a wrapper.  Thus, I'd need to put that wrapper and the related code into a package so that it's available where needed.  That package might as well be NahaGraphs or whatever I rename it to.\r\n",
+      "createdAt": "2023-12-10T21:09:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1849085624",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uSxd0",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Neither Graphs nor MetaGraphs provide an efficient way to map between objects of the application and nodes of the graph. I don't understand how those packages can be at all useful without such a mechanism.\r\n\r\nActually, both MetaGraphs.jl and its successor MetaGraphsNext.jl do provide this functionality.\r\n\r\n- In MetaGraphs.jl, it is done with an \"indexing property\", declared as follows: `set_indexing_prop!(G, :name)`\r\n- In MetaGraphsNext.jl, it is done with \"vertex labels\" (not to be confused with \"vertex codes\" which are the integers). See the [documentation](https://juliagraphs.org/MetaGraphsNext.jl/stable/tutorial/1_basics/) for examples.\r\n\r\nDoes that answer your needs?",
+      "createdAt": "2023-12-11T16:21:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1850414964",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uTZhW",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your help.\r\n\r\nI find the documentation in the form of examples unrelated to my needs to be useless.  There's no conceptual overview.  The only thing left is to take stabs in the dark using `@doc`.\r\n\r\nI want to include arbitrary Julia objects as nodes in a graph. Here's a minimal example:\r\n\r\n````\r\nusing Graphs\r\nusing MetaGraphs\r\n\r\ng = MetaGraph()\r\n\r\nset_indexing_prop!(g, :object)\r\n\r\nlet\r\n    next_thingy_id = 1\r\n\r\n    struct Thingy\r\n        id\r\n        \r\n        function Thingy()\r\n            t = new(next_thingy_id)\r\n            next_thingy_id += 1\r\n            t\r\n        end\r\n    end\r\nend\r\n\r\nt1 = Thingy()\r\nt2 = Thingy()\r\nt3 = Thingy()\r\n\r\nadd_vertex!(g, t1)\r\nadd_vertex!(g, t2)\r\nadd_vertex!(g, t3)\r\n\r\nadd_edge!(g, t1, t2)\r\nadd_edge!(g, t1, t3)\r\n\r\n# Now find all of the edges of g that lead to t3.\r\n```\r\n\r\nThe above code gets the error\r\n\r\n```\r\nERROR: LoadError: MethodError: no method matching add_vertex!(::MetaGraph{Int64, Float64}, ::Thingy)\r\n```\r\n\r\nHow do I use MetaGraphs, or whatever, in order to bdo the above?",
+      "createdAt": "2023-12-11T17:49:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1850579030",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uXt6k",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I find the documentation in the form of examples unrelated to my needs to be useless.\r\n\r\nWhile I agree that the documentation is lacking, please remember that no one is paid to take care of it, and that volunteer time is also lacking.\r\nI can help you if you want to try and improve it. My point of view is that contributing to a flawed, but widely used, package, is often more impactful than rolling out your own.",
+      "createdAt": "2023-12-12T09:59:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1851711140",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uXv-M",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> How do I use MetaGraphs, or whatever, in order to do the above?\r\n\r\nHere's a working example using MetaGraphsNext.jl, which is more efficient than MetaGraphs.jl.\r\n\r\n```julia\r\nusing Graphs\r\nusing MetaGraphsNext\r\n\r\nlet\r\n    next_thingy_id = 1\r\n\r\n    struct Thingy\r\n        id\r\n        \r\n        function Thingy()\r\n            t = new(next_thingy_id)\r\n            next_thingy_id += 1\r\n            t\r\n        end\r\n    end\r\nend\r\n\r\nBase.isless(t1::Thingy, t2::Thingy) = isless(t1.id, t2.id)\r\n\r\ng = MetaGraph(Graph(); label_type=Thingy)\r\n\r\nt1 = Thingy()\r\nt2 = Thingy()\r\nt3 = Thingy()\r\n\r\nadd_vertex!(g, t1)\r\nadd_vertex!(g, t2)\r\nadd_vertex!(g, t3)\r\n\r\nadd_edge!(g, t1, t2)\r\nadd_edge!(g, t1, t3)\r\n\r\nneighbors(g, code_for(g, t3))\r\n```",
+      "createdAt": "2023-12-12T10:04:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1851719564",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uaMLk",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the working example.\r\n\r\nIs an `isless` method required for the specified `label_type`?  In some applications it might be difficult to come up with a total ordering, even an arbitrary one.  I don't think of total ordering as being  intrinsic to the concept of graph\r\nnodes.\r\n\r\n`neighbors` gives me a vector of integers.  How do I get to my objects from those?\r\n\r\n`code_for` and `neighbors` seem to expose the user of the package to internal implementation details (integers) when all they want to code about are their application objects (represented by nodes in the graph) and the relationships among them (represented by edges).\r\n\r\nI'd still need to implement methods as an abstraction barrier to those implementation details.\r\n\r\nI would still also need code for generating a GraphViz dot file from such a graph.  GraphViz_jll is poorly documented and does not appear to implement the same graph interface as other graph packages.  Based on the documentation, I don't know if it will write dot files or only read them.  I'm happy to either trim down (and rename) NahaGraphs to just provide the dot writing code if another graph package meets my other needs.  The dot code requires that the graph expose interfaces which iterate over all nodes and all edges of the graph.  In addition, it requires the application to provide methods which\r\n\r\n* return a unique id for a node\r\n* return style attributes for the graph as a whole, each node, and each edge.\r\n\r\nI see you're a JuliaGraphs contributor.  If you feel that writing GraphViz dot files fits in to that family of packages, wecan talk about integrating it there.  I'd need the abstraction barrier described above first though.\r\n\r\nI look forward to your response.\r\n",
+      "createdAt": "2023-12-12T16:16:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1852359396",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uaM2U",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "Regarding the quality of documentation and the lack of volunteer time:\r\n\r\nWhen one registers a package -- unleashes it to the community for broader use -- the community has a right to expect that the package will have a stated purpose which it meets, and is adequately documented and tested.  If the developer doesn't have time to do this, they shouldn't register the package.\r\n\r\nThat is at least my expectation.  Given what I've seen on the Julia Slack #new-packages-feed, these expectationas are rately met.\r\n\r\nBefore I submitted NahaGraphs for registration, I improved the documentation and made sure it would build and deploy properly on GitHub.\r\n\r\n\"contributing to a flawed, but widely used, package, is often more impactful than rolling out your own\" and yet, there are `Graphs`, `MetaGraphs` and `MetaGraphsNext`.\r\n\r\nMy first impression from the Graphs documentation was \"these people are interested in exploring graph algorithms on graphs that are totally abstract and have no grounding in real data or applications.  I don't recall if I looked at Graphs.jl before doing my own implementation.  Haviing an application in mind, this was off-putting.\r\n\r\nI expect I searched for graph packages in julia and either only found plotting packages, or found Graphs.jl and decided it would be easier to write my own than to figure out how to use it.  The very nature of my application imposed a small node and edge count, so efficiency was not a concern.\r\n",
+      "createdAt": "2023-12-12T16:17:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1852362132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uggY9",
+      "author": {
+        "login": "bvdmitri"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> the package will have a stated purpose which it meets, and is adequately documented and tested\r\n\r\nWho decides that? IMO `MetaGraphsNext.jl` has quite a good documentation already and it has 93% coverage.\r\n\r\n[noblock]",
+      "createdAt": "2023-12-13T14:25:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1854015037",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85ugu5M",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "About the example\r\n\r\n> Is an isless method required for the specified label_type?\r\n\r\nYes because of the way undirected graphs are stored by MetaGraphsNext.jl. You're right, it's not a fundamental requirement in theory, but for our current implementation it seems necessary.\r\n\r\n> neighbors gives me a vector of integers. How do I get to my objects from those?\r\n\r\nIt depends whether your \"objects\" are the vertex labels or the vertex data. If they are the labels, you can either use [`label_for`](https://juliagraphs.org/MetaGraphsNext.jl/stable/api/#MetaGraphsNext.label_for-Tuple{MetaGraph,%20Integer}) after `neighbors`, or directly [`neighbor_labels`](https://juliagraphs.org/MetaGraphsNext.jl/stable/api/#MetaGraphsNext.neighbor_labels-Tuple{MetaGraph,%20Any}). \r\n\r\n> code_for and neighbors seem to expose the user of the package to internal implementation details (integers)\r\n\r\nIntegers may be an implementation detail in theory, but in practice they are pretty central to the way [Graphs.jl and its ecosystem](https://juliagraphs.org/Graphs.jl/stable/ecosystem/interface/) work (for performance reasons). That means all packages for graphs with metadata had to find a way around them somehow.\r\nThere are efforts to move away from this integer requirement, but it's a huge amount of work (see the [GraphsBase.jl](https://github.com/JuliaGraphs/GraphsBase.jl) repo)",
+      "createdAt": "2023-12-13T14:58:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1854074444",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uidVo",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "About the documentation\r\n\r\n> When one registers a package -- unleashes it to the community for broader use -- the community has a right to expect that the package will have a stated purpose which it meets, and is adequately documented and tested. If the developer doesn't have time to do this, they shouldn't register the package.\r\n\r\nIn principle I agree. In practice, many of the packages we're talking about have been around for years, since before current standards were widely applied. Besides, their history is rather bumpy. I joined the JuliaGraphs crew later on, so me and others are trying to do our best with what we inherited, even though it's sometimes not ideal.\r\n\r\n> \"contributing to a flawed, but widely used, package, is often more impactful than rolling out your own\" and yet, there are Graphs, MetaGraphs and MetaGraphsNext.\r\n\r\nAgain a product of the incremental development of graph formats and ideas. It's easier to criticize with hindsight, and that's also why we're currently reflecting on other ways to do things.\r\n\r\n> My first impression from the Graphs documentation was \"these people are interested in exploring graph algorithms on graphs that are totally abstract and have no grounding in real data or applications. I don't recall if I looked at Graphs.jl before doing my own implementation. Haviing an application in mind, this was off-putting.\r\n\r\nIf you take a look at the [graphs ecosystem](https://juliagraphs.org/ecosystem/), you will find that Graphs.jl actually has a lot of applications. By nature it is indeed an abstract, foundational package, but many people have used it in many different ways.\r\nThe fact that it doesn't suit your own application perfectly doesn't mean the same applies to everyone.\r\n\r\n> I expect I searched for graph packages in julia and either only found plotting packages, or found Graphs.jl and decided it would be easier to write my own than to figure out how to use it.\r\n\r\nThat is your choice, and I won't prevent you from registering this package. I have also registered my own package for metagraphs in the past, but I regret it now. Because as I underlined on Discourse recently, there are literally [tons of similar libraries](https://discourse.julialang.org/t/the-graphs-ecosystem/99463) with slightly different takes on what an ideal graph should be.\r\n\r\nMy goal is to reduce duplication of efforts and enhance collaboration, which is why I'm still here trying to convince you.\r\nThe upside for you would be to depend on a more widely used family of packages, where people presumably find bugs more quickly (even though they take some time to be solved).\r\nBut of course that means having to put up with code that is not exactly written the way you would have written it.",
+      "createdAt": "2023-12-13T18:49:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1854526824",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uieyu",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As a side note, I kindly advise you to try a softer approach when talking to open source contributors. We're all volunteers here, doing the best we can because we believe it's useful to the community.\r\nWhen you barge in and say things like\r\n\r\n> I don't understand how those packages can be at all useful without such a mechanism.\r\n\r\n> I find the documentation in the form of examples unrelated to my needs to be useless. There's no conceptual overview. \r\n\r\n> My first impression from the Graphs documentation was \"these people are interested in exploring graph algorithms on graphs that are totally abstract and have no grounding in real data or applications.\r\n\r\nI must say it is slightly disheartening, and does not put people in the right mood to help you.\r\nThese packages are flawed, and I know it better than most. But instead of just criticizing them, offering to contribute even modest improvements to the docs would be very much appreciated.",
+      "createdAt": "2023-12-13T18:53:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1854532782",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uqxL7",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'm sorry my remarks were offensive.  It was not my intent to offend.  I did intend to communicate my furstrations though.  Rather than making sweeping generalizations, I will point out specific cases as I experience them.  For example:\r\n\r\n`add_vertex!` adds a vertex to a graph.  It does not return that vertex.  How does the caller know what that vertex is so that it could add an edge or set a property?\r\n\r\nFortunately MetaGraphs provides a way around this if one provides \"labels\".",
+      "createdAt": "2023-12-14T21:49:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1856705275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85urU7C",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "it seems I'm beiing encouraged to write documentation for a package I know very little about :-).  Ok, with your help I'll bite.\r\n\r\nI'm working on a simple example that is in line with my envisioned use cases for a graph package.  I'm having a bit of difficulty with `set_prop!` though.  The example is a bit over 80 lines of code, 30 lines of which are data.  The example is based on MetaGraphsNext and implements a family tree.\r\n\r\nThe error is\r\n\r\n```\r\nERROR: LoadError: MethodError: no method matching set_prop!(::MetaGraphsNext.MetaGraph{Int64, Graphs.SimpleGraphs.SimpleDiGraph{Int64}, Person, Nothing, Nothing, Nothing, MetaGraphsNext.var\"#11#13\", Float64}, ::Int64, ::Int64, ::Symbol, ::Symbol)\r\n```\r\n\r\nI believe the problem is that `set_prop!(!Matched::AbstractMetaGraph{T}, ::Integer, ::Integer, ::Symbol, ::Any) where T` isn't applicable because `MetaGraphsNext.MetaGraph{Int64, Graphs.SimpleGraphs.SimpleDiGraph{Int64}, Person, Nothing, Nothing, Nothing, MetaGraphsNext.var\"#11#13\", Float64}` is not a subtype of `AbstractMetaGraph`.  The graph was constructed as `MetaGraphsNext.MetaGraph(DiGraph(); label_type=Person)`.\r\n\r\nApparently I need to use all three of Graphs, MetaGraphs, and MetaGraphsNext because some functions are not exported from MetaGraphsNext.\r\n\r\nI could post the code in this thread or open a PR to add it as an example in the docs directory.\r\n",
+      "createdAt": "2023-12-14T22:45:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1856851650",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uuhy1",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> add_vertex! adds a vertex to a graph. It does not return that vertex. How does the caller know what that vertex is so that it could add an edge or set a property?\r\n\r\nIt is definitely not clear enough in the docs, but most functions in Graphs.jl assume that the vertices are numbered from $1$ to $n$. That is why the default `add_vertex!(g)` takes no argument, because the added vertex is always $n+1$. Note that this gets trickier with `rem_vertex!(g, v)` because maintaining the invariant requires implicit numbering changes.\r\n\r\nIf you're interested, I have started a project [GraphsInterfaceChecker.jl](https://github.com/gdalle/GraphsInterfaceChecker.jl) to formalize these implicit assumptions as proper Julia code that can be used to test new graph formats.",
+      "createdAt": "2023-12-15T11:02:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1857690805",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uuin0",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> it seems I'm beiing encouraged to write documentation for a package I know very little about :-)\r\n\r\nI agree it does look like a trap, but it turns out new users are often the best people to spot holes in the documentation, precisely because they're not accustomed to the code yet.\r\n\r\n> Ok, with your help I'll bite.\r\n\r\nThat's the spirit, thank you! :)\r\n\r\n> Apparently I need to use all three of Graphs, MetaGraphs, and MetaGraphsNext because some functions are not exported from MetaGraphsNext.\r\n\r\nActually the issue is that MetaGraphsNext is not a complement to MetaGraphs but a full replacement. That explains why `MetaGraphs.set_prop!` does not exist for the format `MetaGraphsNext.MetaGraph`.\r\n\r\nIn all likelihood, you should only use one of the two packages. If you don't care about performance, MetaGraphs.jl might be easier, but since it's the older and less efficient one, the documentation has received less love.\r\n\r\n",
+      "createdAt": "2023-12-15T11:04:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1857694196",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85uvliL",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "When a node is removed then other nodes are renumbered?  This would mean that the approach I was taking before you introduced me to MetaGraphs was doomed to failure.  I can't imagine how I would function as a programmer in an environment where data objects don't have identity.  How does MetaGraphsNext cope with that?  Probably takes too long to explain .\r\n\r\n\r\n\r\nOn Dec 15, 2023 6:02 AM, Guillaume Dalle ***@***.***> wrote:\r\n\r\nadd_vertex! adds a vertex to a graph. It does not return that vertex. How does the caller know what that vertex is so that it could add an edge or set a property?\r\n\r\nIt is definitely not clear enough in the docs, but most functions in Graphs.jl assume that the vertices are numbered from $1$ to $n$. That is why the default add_vertex!(g) takes no argument, because the added vertex is always $n+1$. Note that this gets trickier with rem_vertex!(g, v) because maintaining the invariant requires implicit numbering changes.\r\n\r\n—\r\nReply to this email directly, view it on GitHub<https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1857690805>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AIBY3EYXUHFSINV436LFH6LYJQU3NAVCNFSM6AAAAABAJUEOIOVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTQNJXGY4TAOBQGU>.\r\nYou are receiving this because you were mentioned.Message ID: ***@***.***>\r\n",
+      "createdAt": "2023-12-15T14:25:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1857968267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u0nzb",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "I forked MetaGraphsNext to add documentation: https://github.com/MarkNahabedian/MetaGraphsNext.jl.\r\n\r\nThis test was failing on my fresh clone\r\n\r\n```\r\n    @testset verbose = false \"Code formatting (JuliaFormatter.jl)\" begin\r\n        @test format(MetaGraphsNext; verbose=false, overwrite=false)\r\n    end\r\n```\r\nso I commented it out for now.\r\n\r\nI added a first draft of a new tutorial (Family Tree) that addresses the kinds of use cases I envision.\r\n\r\nI wonder if there's a way to fix the URI in the README file to refer to the fork's github pages instead of the root's.\r\n",
+      "createdAt": "2023-12-17T21:23:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1859288283",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u6REe",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> When a node is removed then other nodes are renumbered?\r\n\r\nIndeed, in a `Graphs.Simple(Di)Graph` when you remove a node `i` it is permuted with the last one to retain a set of vertices corresponding to `1:n`. But that is an \"implementation detail\", in the sense that other graph structures may choose to proceed differently\r\n\r\n> I can't imagine how I would function as a programmer in an environment where data objects don't have identity.\r\n\r\nIt sure is a strong argument for MetaGraphsNext, or for constructing a graph once and for all before analysis (which in some situations may not be feasible)",
+      "createdAt": "2023-12-18T15:11:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1860768030",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u6RRr",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> I forked MetaGraphsNext to add documentation: https://github.com/MarkNahabedian/MetaGraphsNext.jl.\r\n\r\nCool, thanks!\r\nWanna open a pull request so that we can discuss the changes there?",
+      "createdAt": "2023-12-18T15:11:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1860768875",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85u6wt0",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "https://github.com/JuliaGraphs/MetaGraphsNext.jl/pull/75\r\n\r\nI look forward to your comments there.",
+      "createdAt": "2023-12-18T16:00:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1860897652",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xJv_G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-18T12:23:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1898381254",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xKlLZ",
+      "author": {
+        "login": "MarkNahabedian"
+      },
+      "authorAssociation": "NONE",
+      "body": "With much help I was able to get MetaGraphsNext to work in my applications.\r\n\r\nI'd like to withdraw this pull request, but I don't see a UI component for that.",
+      "createdAt": "2024-01-18T14:35:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1898599129",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85xNYf2",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You can just leave it there, it will close automatically.\nI still haven't gotten around to reviewing your docs PR for MetaGraphsNext (thanks for that!) but it's on my to do list ☺️",
+      "createdAt": "2024-01-18T22:39:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96626#issuecomment-1899333622",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NahaGraphs\n- Repository: https://github.com/MarkNahabedian/NahaGraphs.jl\n- Created by: @MarkNahabedian\n- Version: v0.1.0\n- Commit: 0dc1de3f3f4b5dc54c2a523445ec9a2861862aed\n- Reviewed by: @MarkNahabedian\n- Reference: https://github.com/MarkNahabedian/NahaGraphs.jl/issues/1#issuecomment-1843238119\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis is the first version of NahaGraphs to be registered.\r\n\r\nNahaGraphs provides a simple representation for directed graphs and an interface for rendering them using GraphViz.\r\n\r\nThis implementation is simple-mined and will be inefficient for large graphs.\r\n\r\nOne use for NahaGraphs is to construct a miror of your application's tree of immutable structs in order to be able to follow reverse edges.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835983f8c9aa7fafc74be05fc0b8373e442c4907eb62169cee9dcc5aaed971e440e006c57eca5ebb009feb3e7cc91f309c4ec6c439aabf09d722e7c833f03927e1ee3ef4e23217074de4abf54f1a3af831325ecc9508deafb5cf65b8001f3f716e45628cd9fd8bd3611c280e5d5b772372db4ea5d395f6352e79df7b615f415626785 -->",
+  "package_name": "NahaGraphs",
+  "closed_at": "2024-01-30T08:01:01Z",
+  "title": "New package: NahaGraphs v0.1.0"
+}

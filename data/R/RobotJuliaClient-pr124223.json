@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-02-03T01:46:17Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 124223,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86cvl8G",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Lowercase package name robotjuliaclient contains the string \"julia\".\n- I was not able to load the package (i.e. `import RobotJuliaClient` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-03T01:54:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124223#issuecomment-2629721862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86cvs88",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I might actually recommend using `ROS2` as the package name, see https://github.com/JuliaRegistries/General/pull/124209#issuecomment-2629744992\r\n\r\nAlternatively, I would go with `ROS2Client`, which probably even passes the automatic checks. You'll definitely want to make the connection to \"ROS\" for recognizability. Also, the [guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-rules) recommend not using \"Julia\" as part of a package name. So I don't think `RobotJuliaClient` would be the best name for this package.",
+      "createdAt": "2025-02-03T02:23:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124223#issuecomment-2629750588",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86cvxj-",
+      "author": {
+        "login": "Michi-Tsubaki"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your reply.\r\n\r\nAs you say, ROS.jl is a wrapper for the ROS1 cpp client, but it seems that this julia package is not maintained. Also, ROS1 will be out of support in May of this year, and there have been considerable specification changes between ROS1 and ROS2, such as communication protocols between programs and making programs (nodes) object-oriented.\r\n\r\nIf possible, it is best to use ROS2.jl. Now I have joined slack, so I will propose the name later.",
+      "createdAt": "2025-02-03T02:40:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/124223#issuecomment-2629769470",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86c6pMy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/124282",
+      "createdAt": "2025-02-04T02:29:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/124223#issuecomment-2632618802",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RobotJuliaClient\n- Repository: https://github.com/Michi-Tsubaki/RobotJuliaClient.jl\n- Created by: @Michi-Tsubaki\n- Version: v0.1.1\n- Commit: 9e38b34c90612ec82ac37bd6e9184e9f1ceb6bf3\n- Reviewed by: @Michi-Tsubaki\n- Reference: https://github.com/Michi-Tsubaki/RobotJuliaClient.jl/issues/6#issuecomment-2629714798\n- Description: Robot Operating tool using Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e3c4a9a36d9d61ef83868942b5358504a275570fd3e6a285058726b997879c4556ba8ec3fc7c7a0c25f61217c66ca82e1e9a558c689413ba5cfd4310dda08a949a287ac23107e18646b089942634ab02c3e3d919532828407419d19fc75ab3d3e2d3b5b01257e140606feb81df93023533b76a024d2a11653acf90863fe6c251 -->",
+  "package_name": "RobotJuliaClient",
+  "closed_at": "2025-02-04T02:29:18Z",
+  "title": "New package: RobotJuliaClient v0.1.1"
+}

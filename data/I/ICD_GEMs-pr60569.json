@@ -1,0 +1,76 @@
+{
+  "created_at": "2022-05-19T17:06:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 60569,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85DeIis",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, DataStructures\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-05-19T17:11:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60569#issuecomment-1131972780",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DeNsb",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Error while trying to register: **Register Failed**\n@InterdisciplinaryPhysicsTeam, it looks like you are not a publicly listed member/owner in the parent organization (JuliaRegistries).\nIf you are a member/owner, you will need to change your membership to public. See [GitHub Help](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership)",
+      "createdAt": "2022-05-19T17:32:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60569#issuecomment-1131993883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DeNyk",
+      "author": {
+        "login": "JuliaRegistrator"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Error while trying to register: **Register Failed**\n@InterdisciplinaryPhysicsTeam, it looks like you are not a publicly listed member/owner in the parent organization (JuliaRegistries).\nIf you are a member/owner, you will need to change your membership to public. See [GitHub Help](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership)",
+      "createdAt": "2022-05-19T17:32:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60569#issuecomment-1131994276",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DkSZL",
+      "author": {
+        "login": "InterdisciplinaryPhysicsTeam"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Block.",
+      "createdAt": "2022-05-21T09:15:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/60569#issuecomment-1133585995",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ICD_GEMs\n- Repository: https://github.com/InPhyT/ICD_GEMs.jl\n- Created by: @InterdisciplinaryPhysicsTeam\n- Version: v1.0.0\n- Commit: b7642f4a470b339a7e0e725eb92a8a04075951f7\n- Reviewed by: @InterdisciplinaryPhysicsTeam\n- Reference: https://github.com/InPhyT/ICD_GEMs.jl/commit/b7642f4a470b339a7e0e725eb92a8a04075951f7#commitcomment-74048398\n- Description: A Julia package that allows to translate ICD-9 in ICD-10 codes and viceversa via the International Classification of Diseases (ICD) General Equivalence Mappings (GEMs).\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd611f4f54990dede68a5d0d15928dae3a5dc3147459381d9a31123bd24499edc9581ed2e2de3dc4ab7dc2be61eb7354eadc04c1b4983116b4675ee07b26d526e796510f0c0ba02dc69e5c3a0ed8914ef1e3375bc9a149e89772ca0ec20e14b9f465a073b2825b7b0fa2ec72777e4065363a3ec8d1e054eae00cf30130fc1bd56e24939f3c18b4cafaee32b5fc376659a56980cd17d0762ace0fae15218e0dfae024447a5431b2bd9a95f7fbd46aa2ad8f2 -->",
+  "package_name": "ICD_GEMs",
+  "closed_at": "2022-05-21T09:33:09Z",
+  "title": "New package: ICD_GEMs v1.0.0"
+}

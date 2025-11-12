@@ -1,0 +1,128 @@
+{
+  "created_at": "2025-05-24T16:07:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 131642,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86tQ-xE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-24T16:13:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2906909764",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86td-fz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I just wanted to note that \"personal utility packages\" (which this appears to be) are not really suitable for registration in General, see the [guidelines in the FAQ](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now). Personally, if the package name is sufficiently distinctive (which this one probably is), I don't care enough about this \"rule\" to leave a blocking comment. But still, something to be aware of 😉",
+      "createdAt": "2025-05-26T17:23:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2910316531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tmYNV",
+      "author": {
+        "login": "eloualiche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok. I split this from the other one which is actually more general. I held off adding this to registry for a while.\r\nCorrect me if I am wrong but the reason I eventually did this is that it makes life a lot easier with project environment and multiple people collaborating to the code. \r\n\r\nIf you think this does not pass the bar (which I agree it might not) I think you should block it and I will just pull it from github. \r\n\r\nThanks for the comment\r\n\r\n",
+      "createdAt": "2025-05-27T13:28:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2912518997",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tmmEP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Correct me if I am wrong but the reason I eventually did this is that it makes life a lot easier with project environment and multiple people collaborating to the code.\r\n\r\nHaving a package _registered somewhere_ is indeed pretty essential even for basic development workflows. Anything that involves multiple interdependent unregistered packages quickly becomes a nightmare (although the recently [added `[sources]` feature](https://pkgdocs.julialang.org/v1/toml-files/#The-%5Bsources%5D-section) improves the situation considerably). But \"registered somewhere\" can (and often should) be a [`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl). In contrast, the `General` registry is for when a package is ready to be used by a wider audience. There is also the rule that packages registered in `General` can only depend on other packages also registered in `General`. But until that point, registration in `General` is, strictly speaking, \"optional\".  Of course, when a package is sufficiently \"useful\" and \"stable\", it is nice to register it in `General` even if it is not a dependency for some other package, just to make it easily available to the wider community.\r\n\r\n> If you think this does not pass the bar (which I agree it might not) I think you should block it\r\n\r\nIt's probably an edge case. Personally, I don't see any immediate _harm_ in letting the registration go through (especially given the non-general name that is unlikely to cause any conflicts with future registered packages). I just wanted to clarify the role of the `General` registry, and then you're probably in a much better position to decide what the best course of action is.\r\n\r\nSo, it's up to you. [Your comment](https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2912518997) is currently blocking, so unless you edit it to contain [noblock], the registration will remain unmerged until the bot closes it after 30 days of inactivity.",
+      "createdAt": "2025-05-27T13:44:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2912575759",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86tnUza",
+      "author": {
+        "login": "eloualiche"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok. Let's keep this package to a private registry then. I understand this will probably give me more flexibility. \r\nI think the other one is actually of general interest and I will comment to have it registered. \r\n\r\nThanks for help and clarifications. ",
+      "createdAt": "2025-05-27T14:37:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-2912767194",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86zlJdz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-06-27T12:24:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-3012859763",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8609gL3",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-07-04T12:24:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/131642#issuecomment-3036021495",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BazerUtils\n- Repository: https://github.com/LouLouLibs/BazerUtils.jl\n- Created by: @eloualiche\n- Version: v0.7.1\n- Commit: 6e7698fd13888481abd3905626dd9da55b722203\n- Reviewed by: @eloualiche\n- Reference: https://github.com/LouLouLibs/BazerUtils.jl/issues/4#issuecomment-2906907362\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ebd268ca2a924a7b2b1a4c878f094895e4066045bc0c52d901143bcca289a5771aa1c0dca7bd72ff015e6ac330884e4c5f4ce243738b98c5c1292cc1c8f8ad3de17f13db073414ee76ab41acc1e96145c7061d0afebfcf7838e208e38f434542b2fa0325eeb309b8bdc5e772058c830a0c3557f8dfc6196d5a3fd19b22933899 -->",
+  "package_name": "BazerUtils",
+  "closed_at": "2025-07-04T12:24:11Z",
+  "title": "New package: BazerUtils v0.7.1"
+}

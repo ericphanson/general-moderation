@@ -1,0 +1,91 @@
+{
+  "created_at": "2023-08-11T23:34:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 89471,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85j3p26",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Graphs, JuMP, MathOptInterface\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-11T23:44:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89471#issuecomment-1675533754",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85j7Rnr",
+      "author": {
+        "login": "Robbybp"
+      },
+      "authorAssociation": "NONE",
+      "body": "`[noblock]` I fixed the AutoMerge issues, then re-triggered JuliaRegistrator in https://github.com/lanl-ansi/MathProgIncidence.jl/issues/25, but this seemed to open a \"patch release\" PR to this repo, https://github.com/JuliaRegistries/General/pull/89558, rather than updating this PR.",
+      "createdAt": "2023-08-13T22:44:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89471#issuecomment-1676483051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85k4qcv",
+      "author": {
+        "login": "Robbybp"
+      },
+      "authorAssociation": "NONE",
+      "body": "This PR has been superseded and should be closed",
+      "createdAt": "2023-08-25T00:15:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89471#issuecomment-1692575535",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85nRMAo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-09-24T12:22:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89471#issuecomment-1732558888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85n1csd",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-10-01T12:22:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89471#issuecomment-1742064413",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MathProgIncidence\n- Repository: https://github.com/lanl-ansi/MathProgIncidence.jl\n- Created by: @Robbybp\n- Version: v0.1.0\n- Commit: b5c9d4e51592b685592b13e9fc1cb3dba0b9c511\n- Reviewed by: @Robbybp\n- Reference: https://github.com/lanl-ansi/MathProgIncidence.jl/issues/25\n- Description: Tools for constructing and analyzing the incidence graph or matrix of variables and constraints in a JuMP model\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598a90444f510984a71af376448e2081a10788f7bd07e95780321842f6a85f182dc90fff85866d50a2e1b6c79346f8e7dd416138bd76362001fba12e2ce10609417e348213ce8d483c2cc810c0aa3242826ee21cef9460b36b4569310c6de665268e7ba5148647bc4aeeeb93eed65ba1af082bd549c8dd1f754dae4ad3676bde844 -->",
+  "package_name": "MathProgIncidence",
+  "closed_at": "2023-10-01T12:22:51Z",
+  "title": "New package: MathProgIncidence v0.1.0"
+}

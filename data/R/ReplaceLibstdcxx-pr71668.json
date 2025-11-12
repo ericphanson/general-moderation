@@ -1,0 +1,106 @@
+{
+  "created_at": "2022-11-04T19:51:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 71668,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Nuwq7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-04T19:54:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304103611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nvnw6",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Are you aware this is going to be made obsolete by https://github.com/JuliaLang/julia/pull/46976?  And https://github.com/JuliaLang/julia/pull/45582 will alleviate the troubles in 1.9 (and will probably be also backported to 1.6 and 1.8)",
+      "createdAt": "2022-11-04T23:14:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304329274",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nw2Z6",
+      "author": {
+        "login": "hhaensel"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Are you aware this is going to be made obsolete by [JuliaLang/julia#46976](https://github.com/JuliaLang/julia/pull/46976)? And [JuliaLang/julia#45582](https://github.com/JuliaLang/julia/pull/45582) will alleviate the troubles in 1.9 (and will probably be also backported to 1.6 and 1.8)\r\n\r\nI am aware of that PR. But I  think it will not help on systems that come with an older version of libstdc++. Currently I work with a micromamba docker file that does not have the latest libstdc++ installed and I was forced to symlink a newer one that I installed via micromamba.",
+      "createdAt": "2022-11-05T22:14:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304651386",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Nw2dp",
+      "author": {
+        "login": "hhaensel"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understood that julia will check on startup whether the system's libstdc++ is newer, or did I misunderstand?",
+      "createdAt": "2022-11-05T22:16:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304651625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NxKkB",
+      "author": {
+        "login": "hhaensel"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano I was only aware of the first of the PRs. The second one does indeed make this package obsolete.\r\nMaybe I don't register this package then but just leave as is ...",
+      "createdAt": "2022-11-06T07:06:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304733953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85NxzBf",
+      "author": {
+        "login": "hhaensel"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano So please abort the merging of this package. Thanks for pointing me to your PRs.",
+      "createdAt": "2022-11-06T21:35:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/71668#issuecomment-1304899679",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ReplaceLibstdcxx\n- Repository: https://github.com/hhaensel/ReplaceLibstdcxx.jl\n- Created by: @hhaensel\n- Version: v0.1.0\n- Commit: db16755b719a21d761cd95f8b8a95bcc9996a0fb\n- Reviewed by: @hhaensel\n- Reference: https://github.com/hhaensel/ReplaceLibstdcxx.jl/commit/db16755b719a21d761cd95f8b8a95bcc9996a0fb#commitcomment-88915133\n- Description: Replace symlinks of Julia's libstdc++.so for programs that require a newer version, e.g. python packages\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ffa7490a92769075a641e6e7a159b52eeb3f817d05efd1dcd6f99bd3a5c51438b675ed6f033e5bb0e0b7316e33183d19b5c747b90382bd3b4bcf96bd0abc81c5ade37a77b208d240c49df1da5045dfd947a539495b9521abc977e1c425dbbba8f0db5bfb828d87bb65c45d9c5afe4dda25e442218a4ab31f1025801b3353b12fc924571ae1d182ed5929ccb59949d7bfb444c5f9f3d2b272a5295ba56071e473875c1ccc8b8f5305d30e9767af7ece75 -->",
+  "package_name": "ReplaceLibstdcxx",
+  "closed_at": "2022-11-06T22:16:03Z",
+  "title": "New package: ReplaceLibstdcxx v0.1.0"
+}

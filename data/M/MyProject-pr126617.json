@@ -1,0 +1,128 @@
+{
+  "created_at": "2025-03-10T08:16:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 126617,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86hg8gt",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Dash\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- I was not able to install the package (i.e. `Pkg.add(\"MyProject\")` failed). See the AutoMerge logs for details.\n- Cloning repository failed.\n- Could not check license because could not access package code. Perhaps the `can_download_code` check failed earlier.\n- `src` directory not found\n- I was not able to load the package (i.e. `import MyProject` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-03-10T08:22:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2709768237",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hj0Ws",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz it seems that this user is a bot trying to register a package repeatedly. Perhaps we need to report it to GitHub?",
+      "createdAt": "2025-03-10T13:00:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2710521260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hj4w9",
+      "author": {
+        "login": "abhis9102"
+      },
+      "authorAssociation": "NONE",
+      "body": "@juliohm @goerz \r\n\r\nI m not a bot i was working on a vulnerability thats why i created this kind of packages and the vulnerability is confirmed and on my way to report it. \r\nAlso sorry for all the trouble i cause but its part of my job.",
+      "createdAt": "2025-03-10T13:06:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2710539325",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hj5ab",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "GitHub won't do anything about this, as it's not in violation of their terms of service. What we need to do is implement blocking on the registry side. There has been some initial work in that direction.",
+      "createdAt": "2025-03-10T13:07:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2710541979",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hj8YG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@abhis9102 \r\n\r\n> Also sorry for all the trouble i cause but its part of my job.\r\n\r\nThat's not an excuse. What do you mean by \"job\"? Did someone (JuliaHub?) hire you to do penetration testing? If so, who is your point of contact? If this is officially sanctioned, there is still a discussion to be had about avoiding such disruptions in the future.",
+      "createdAt": "2025-03-10T13:11:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2710554118",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hx-H-",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": " We could at least ban @abhis9102 from registering packages. ",
+      "createdAt": "2025-03-11T13:24:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2714231294",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86hy0bF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Right… but we don't yet have a full mechanism in place for banning specific usernames from registering packages. There's now a block list that @DilumAluthge set up, but it's not yet hooked up to the registration bot, or whatever other sources for PRs to `General` we have, to actually prevent those PRs being created.",
+      "createdAt": "2025-03-11T14:12:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126617#issuecomment-2714453701",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MyProject\n- Repository: https://github.com/abhis9102/test-js\n- Created by: @abhis9102\n- Version: v0.0.1\n- Commit: 6fc5a7d42225c98c9282bdfc6bac69a515f9eabc\n- Git reference: HEAD",
+  "package_name": "MyProject",
+  "closed_at": "2025-03-10T11:46:37Z",
+  "title": "New package: MyProject v0.0.1"
+}

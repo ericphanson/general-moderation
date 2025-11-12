@@ -1,0 +1,120 @@
+{
+  "created_at": "2023-03-14T20:07:50Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 79575,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Xi5sF",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to ToQUBO. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to ODBC. Normalized visual distance 1.85 is at or below cutoff of 2.50.\n  3. Similar to COBS. Normalized visual distance 2.35 is at or below cutoff of 2.50.\n  4. Similar to CUDD. Normalized visual distance 2.44 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-14T20:13:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1468766981",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XoiIw",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It is really difficult to imagine what this package does, unless you already know. Is it possible to pick a more descriptive name?",
+      "createdAt": "2023-03-15T15:26:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1470243376",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Xozfo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Independent of the name, I don’t think this package is suitable for the General registry at this point, as it does not seem to have any functionality (unless I missed something). The General registry does not allow “placeholder” registrations. I would recommend to resubmit when this is more developed",
+      "createdAt": "2023-03-15T16:03:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1470314472",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XqGKd",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It is not a placeholder - it is an umbrella package that pulls in the packages listed in the Project.toml, which are quite well developed. But it definitely appears to be empty package. If this is an umbrella package, I think it would help to include the integrated docs and README etc. in this package, before registration.\r\n\r\nAs I said on slack, the name, while obvious to users in the field, also could be a bit more descriptive, which will help with discoverability.",
+      "createdAt": "2023-03-15T19:14:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1470653085",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XqYCd",
+      "author": {
+        "login": "pedromxavier"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "You're right, @ViralBShah! We're looking forward to address those concerns.\r\nThanks for the careful eye!",
+      "createdAt": "2023-03-15T19:39:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1470726301",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XqjkO",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing for now. Please resubmit as it gets ready.",
+      "createdAt": "2023-03-15T20:11:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79575#issuecomment-1470773518",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QUBO\n- Repository: https://github.com/psrenergy/QUBO.jl\n- Created by: @pedromxavier\n- Version: v0.1.0\n- Commit: afda15f57edf94b28490a65be4afd339387067c6\n- Reviewed by: @pedromxavier\n- Reference: https://github.com/psrenergy/QUBO.jl/commit/afda15f57edf94b28490a65be4afd339387067c6#commitcomment-104443030\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6ce1157e918b38c479220a3b7011bf6ca684bdf53b2e9c306ec8a464e8ec3b76adb48f5168f1d3a0ec16e447a91a22d7686e1dc0a7e72b4d59a446e9ae2a3912546ba5815c1e2d2980bbe0283407e67d82be6894ae49cb79d955dfff142152a3fb3be16de8d9e6955817b673e4895ddc8e8f2cbaea14662d8b25fd4dd3993e524bbdc3e2d796fd7e0343f50b13fe7d1765bebea45aac70ea2cff1047a09d1d1a214a2b5467c2beba63e3e3ba375bd1456 -->",
+  "package_name": "QUBO",
+  "closed_at": "2023-03-15T20:11:15Z",
+  "title": "New package: QUBO v0.1.0"
+}

@@ -1,0 +1,83 @@
+{
+  "created_at": "2024-04-29T15:58:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "timholy",
+  "merged_at": null,
+  "pr_number": 105820,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858KdZ4",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "FYI @timholy this is part of the plan discussed [here](https://github.com/HolyLab/RFFT.jl/pull/17#issuecomment-1999889289) and [here](https://github.com/HolyLab/RFFT.jl/pull/17#issuecomment-2047178576) ",
+      "createdAt": "2024-04-29T16:01:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105820#issuecomment-2083116664",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858Kd4q",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- Package name similar to 10 existing packages.\n  1. Similar to NFFT. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.30 is at or below cutoff of 2.50.\n  2. Similar to STFT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to GFF3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to EFIT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to RAFF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to NFFT3. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to FFTA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to FFTW. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to CLFFT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  10. Similar to BERT. Normalized visual distance 2.48 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-29T16:02:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105820#issuecomment-2083118634",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858Kinm",
+      "author": {
+        "login": "IanButterworth"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think it would be reasonable to rename to something like `ReusableFFTs.jl`, if others agree",
+      "createdAt": "2024-04-29T16:11:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105820#issuecomment-2083138022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858N2u0",
+      "author": {
+        "login": "timholy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #105861",
+      "createdAt": "2024-04-30T00:58:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105820#issuecomment-2084006836",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RFFT\n- Repository: https://github.com/JuliaMath/RFFT.jl\n- Created by: @IanButterworth\n- Version: v1.0.0\n- Commit: 5402b9677a35996502faf6e8587042623e235fc0\n- Reviewed by: @IanButterworth\n- Reference: https://github.com/JuliaMath/RFFT.jl/commit/5402b9677a35996502faf6e8587042623e235fc0#commitcomment-141481440\n- Description: In-place real FFTs for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6af9cd2a2a39d7785f30e6b1fd92edb2e0b97e0cf2c9f0b7b74cbebb0f06e406ce607ff7cf56413fcce0c7f100867ec2f5e511290b88f9a957e1f197dcf47368d119fc45f6b4d67385ac4918d405fe57fb376b297fd68ea868e23e332cb4ece904e56e9bf87ded264890da19b731e71f9e4d556c711ab89150cc1584339acaf7e0cb5fd46b9d2da4407dc1f42466f38842905c7ca5ef42b1a3204820d6989efcd3298b7019f28318aa7a196065f18d54b -->",
+  "package_name": "RFFT",
+  "closed_at": "2024-04-30T00:58:13Z",
+  "title": "New package: RFFT v1.0.0"
+}

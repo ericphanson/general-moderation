@@ -1,0 +1,46 @@
+{
+  "created_at": "2023-06-14T19:47:13Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 85609,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85e4kLE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Dagger, MemPool\n- Package name similar to 5 existing packages.\n  1. Similar to MCTS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to MDCT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to MAT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to MMTF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to MIRT. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-06-14T19:54:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85609#issuecomment-1591886532",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85fO42h",
+      "author": {
+        "login": "NickMcSweeney"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "package was renamed to comply with naming guidelines. this pr can be discarded.",
+      "createdAt": "2023-06-19T20:46:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/85609#issuecomment-1597738401",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MQTT\n- Repository: https://github.com/NickMcSweeney/MQTT.jl\n- Created by: @NickMcSweeney\n- Version: v0.1.0\n- Commit: bb1ea9564418cd5ee0c027fa58f65c12cfe5fc4c\n- Reviewed by: @NickMcSweeney\n- Reference: https://github.com/NickMcSweeney/MQTT.jl/commit/bb1ea9564418cd5ee0c027fa58f65c12cfe5fc4c#commitcomment-118069520\n- Description: Multi-Threaded MQTT interface for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6269cffe625b3351b440e8c1ffc9224087b403ae0bd090a089d18dd068f56c47f261c84ca14659a21516fed5c7df8059c4b64cd7a1e65cbd55b35fa980a6e9e609a6c80e2271a9c18058ab307fd3d7938dedc202e4f1332b5bbc618e13dcab532650a0bdfd21a2ba239ed91946cbddfcedcb880c9b08eb787a985a92ae9031dff33f08aaf5e51ff9ffd29f9a22ec597a9c0171cad78fee95800da44134ff8e34b990a9a112cd47d14cb85d7819d0cc84c -->",
+  "package_name": "MQTT",
+  "closed_at": "2023-06-24T17:56:19Z",
+  "title": "New package: MQTT v0.1.0"
+}

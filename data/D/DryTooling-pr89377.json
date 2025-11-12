@@ -1,0 +1,143 @@
+{
+  "created_at": "2023-08-10T10:13:31Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 89377,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85jtzvT",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-10T10:18:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1672952787",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jueqc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks cool! Can you add some documentation to show the details a bit more before registering?",
+      "createdAt": "2023-08-10T12:30:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1673128604",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lW6H8",
+      "author": {
+        "login": "wallytutor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Documentation in the oven: https://wallytutor.github.io/DryTooling.jl/dev/\r\nTagged added for this first release.",
+      "createdAt": "2023-08-31T07:23:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1700504060",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lYKjA",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The code looks good, but this is pretty much the definition of a personal package, for which General usually isn't considered appropriate (See the bottom of [Should I register my package now](https://github.com/JuliaRegistries/General#should-i-register-my-package-now)).\r\n\r\nThe usual recommendation is to put it in a personal registry ([`LocalRegistry`](https://github.com/GunnarFarneback/LocalRegistry.jl)), but maybe get some more opinions on the Julia Slack `#pgk-registration` channel on how people, especially the maintainers, feel about this package in particular.\r\n\r\nPersonally, I'd actually be more open to \"personal packages\" in General than the guidelines suggest, provided the package name is sufficiently unique. `DryTooling` is already a pretty clever name (and I like clever names), but still: There could be many people who might like to register their own DRY tooling. If you made the name even more unique, e.g., by prefixing it with your initials, I would have no problem with it being in General.\r\n\r\nIf this package is intended to be a dependency of some other package(s) in General, you could also rename it to `<NameOfOrgOrOtherPackage>Base` or `<NameOfOrgOrOtherPackage>Tools` (or `<NameOfOrgOrOtherPackage>DryTooling`).\r\n\r\nOr, find a name that is more descriptive of the package context. After all, the code seems somewhat thematically focused on thermochemistry, and isn't just a completely random collection of tools.\r\n\r\nJust as an aside: I saw you're defining a number of \"model\" types. If you want to make it dramatically easier for someone else to reuse the code, I would recommend including a list of methods that are defined for those types in their docstring. At least in the absence of tutorials/examples in the documentation, that makes it so much easier to figure out what I can actually do with these types.",
+      "createdAt": "2023-08-31T11:05:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1700833472",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lYK1V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'll put a message on the Slack… if there's a bunch of people saying \"this is totally fine\", I'll be happy to make my comments non-blocking and let the auto-merge proceed",
+      "createdAt": "2023-08-31T11:06:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1700834645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85lZmqi",
+      "author": {
+        "login": "stillyslalom"
+      },
+      "authorAssociation": "NONE",
+      "body": "I'd love to see a full-featured Cantera interface in Julia, and this looks like a good start, but I agree that the intent appears to be building a grab-bag of tools that would be more appropriately kept in a local registry. The primary functionality of the package at the moment (based on the documentation) seems to be solving kiln models - maybe you could rename the package KilnDryTooling? I think the Cantera interface would probably be best to spin out as its own package once it's sufficiently mature. Most potential users of a Cantera interface package wouldn't want to take on the heavyweight dependencies in your Project.toml.\r\n\r\nAlso note that there are several Julia packages that provide species and mixture thermodynamic properties ([Clapeyron.jl](https://github.com/ClapeyronThermo/Clapeyron.jl), [CoolProp.jl](https://github.com/CoolProp/CoolProp.jl), [PyThermo.jl](https://github.com/stillyslalom/PyThermo.jl)), and you may want to rely on one of them instead of rolling your own property package.  It'd be lovely to get everyone unified around [ThermoState.jl](https://github.com/longemen3000/ThermoState.jl) for state/property specification, but that's a work in progress.",
+      "createdAt": "2023-08-31T14:57:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1701210786",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85n1csr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-10-01T12:22:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1742064427",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85obZ-t",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-10-08T12:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89377#issuecomment-1752014765",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DryTooling\n- Repository: https://github.com/wallytutor/DryTooling.jl\n- Created by: @wallytutor\n- Version: v1.0.0\n- Commit: b2b233caa9014a1956e1e28c837ad6e75497a766\n- Reviewed by: @wallytutor\n- Reference: https://github.com/wallytutor/DryTooling.jl/issues/2\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598e1f8289f8fa0ec001902bfb2325cb3f66f5741f2062a28f79d81b6b926962aa6fa41290167905b47c3b19c733245b2fef2a7ceb35be445a9fd962f386e545d3f3507e43b572436b127872f9a6173e09923cc6fa7f53c8d4b46e69c83301437672283d06393715c1ab511f4e30191a350af2a604f6389559a099a374b90e73950 -->",
+  "package_name": "DryTooling",
+  "closed_at": "2023-10-08T12:22:59Z",
+  "title": "New package: DryTooling v1.0.0"
+}

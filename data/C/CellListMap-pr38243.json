@@ -1,0 +1,128 @@
+{
+  "created_at": "2021-06-05T20:51:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 38243,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTI5NDUzNA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-06-05T20:53:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855294534",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMwOTMzMQ==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@lmiq [all](https://github.com/JuliaRegistries/General/pull/38240) [these](https://github.com/JuliaRegistries/General/pull/38241) [pull requests](https://github.com/JuliaRegistries/General/pull/38243) will inevitably conflict with #38208....\r\n\r\n[noblock]",
+      "createdAt": "2021-06-05T23:21:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855309331",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMwOTYwNw==",
+      "author": {
+        "login": "lmiq"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah... I don't know what happens at the end. Is the final version of the repository registered only, even if I do not register the new versions? Or the versions will be all registered? ",
+      "createdAt": "2021-06-05T23:24:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855309607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMwOTg2Nw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Pull requests are merged in order (as long as they pass tests), so #38208 will be merged and all subsequent pull requests will have merge conflicts and won't be able to be merged.  If you do _**not**_ change the version number and trigger registration again, the corresponding pull request will be automatically updated, instead of spawning multiple clashing pull requests.",
+      "createdAt": "2021-06-05T23:27:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855309867",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMxMDU0MA==",
+      "author": {
+        "login": "lmiq"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "\r\nUhm... but why the subsequent pull requests conflict? If they are merged in order it would be like if they were various packages updates (this has been always confusing to me, what to do if I have sent a register update request and before it is merged I want to release a new patch version). ",
+      "createdAt": "2021-06-05T23:36:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855310540",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMxMDk2Mw==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "All the `Versions.toml` files will inevitably conflict, because after v0.2.3 is merged, there will be only v0.2.3 in it.  But then v0.2.4 only has v0.2.4 in it, so that git doesn't know how to merge it.  Same for v0.2.5.  Same for v0.2.6.\r\n\r\nIn case it wasn't still clear at this point, if you now downgrade the version of your package to v0.2.3 and trigger registration, #38208 will be updated to the latest revision of the package.\r\n\r\nThe alternative is to let #38208 be merged as it is, then _**after**_ #38208 is merged, you trigger registration again for the revision corresponding to v0.2.4, so that #38240 will be automatically updated and the merge conflict resolved.  But then you'll need to do the same for v0.2.5 _**after**_ #38240 is merged.\r\n\r\nIn general, it doesn't make any sense to register a version _**before**_ the previous one is merged, because merge conflicts are inevitable.  Either wait for the previous pull request to be actually merged, or update it",
+      "createdAt": "2021-06-05T23:42:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855310963",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg1NTMxMTU5Mg==",
+      "author": {
+        "login": "lmiq"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, I will downgrade then.",
+      "createdAt": "2021-06-05T23:49:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/38243#issuecomment-855311592",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CellListMap\n- Repository: https://github.com/m3g/CellListMap.jl\n- Created by: @lmiq\n- Version: v0.2.6\n- Commit: 25749b76ee5e896711dc5c928d3e9cc95b146ae2\n- Reviewed by: @lmiq\n- Reference: https://github.com/m3g/CellListMap.jl/commit/25749b76ee5e896711dc5c928d3e9cc95b146ae2#commitcomment-51774238\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6c626232f79f8dc159149d5949beb9407a657a895f455770518f6459690994301cab041ad71b319a069f314d67365148f7bc6800927610a99abe9daa4a9efc5687ec87eac019b864b69d8889713302ca0dc5c98d8ac3226cb097751e473c4a78b92ee5c1607cd637a0791baec001cdc843c4fd7acb5ddb7a69bfef84c8328bb2d03f9010d78fc29020574eebfe4b02938ce9a6597eb482595aa255fe7fd324209e74a7e7027954929580f0736c4f452a5 -->",
+  "package_name": "CellListMap",
+  "closed_at": "2021-06-05T23:51:21Z",
+  "title": "New package: CellListMap v0.2.6"
+}

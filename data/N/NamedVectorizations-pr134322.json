@@ -1,0 +1,149 @@
+{
+  "created_at": "2025-07-07T13:55:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 134322,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q861g-sf",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-07T14:01:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3045321503",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861i-6-",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Wecome @nicomignoni!\r\n\r\nGenerally in the julia space, when people hear \"vectorization\", they're thinking of [SIMD vectorization](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data). I'll admit when I saw this go up for registration, my first thought was that it was related to that, and then I thought \"Oh, maybe this is vectorization in the sense used by Numpy / Matlab people for what we call 'broadcast\". It took me a while to realize this was for stacking vectors together and assigning each component a name for some reason. \r\n\r\nDefinitely not a 'hard requirement', but I'd perhaps recommend choosing another name that is perhaps a bit clearer to readers what it's for. I think even something like \r\n* NamedVecCat\r\n* ComponentVecCat\r\n\r\ncould make it a significantly clearer, since `vec` is already the julia function for making a linear vector out of  `N` dimensional structures, and `cat` is the term we use for con**cat**enation.\r\n\r\n_____\r\n\r\nIn terms of functionality, I'll also point out that this package has **significant** overlap with the [ComponentArrays.jl](https://github.com/SciML/ComponentArrays.jl) package. Here's how you'd do the [examples from the README](https://nicomignoni.github.io/NamedVectorizations.jl/dev/) with ComponentArrays using essentially identical syntax:\r\n```julia\r\njulia> using ComponentArrays\r\n\r\njulia> begin\r\n           A = [4 5; 2 1]\r\n           b = [9; -2]\r\n           c = 7\r\n\r\n           ca = ComponentArray(A=A, b=b, c=c)\r\n       end\r\nComponentVector{Int64}(A = [4 5; 2 1], b = [9, -2], c = 7)\r\n```\r\n```julia\r\njulia> ca.A\r\n2×2 reshape(view(::Vector{Int64}, 1:4), 2, 2) with eltype Int64:\r\n 4  5\r\n 2  1\r\n\r\njulia> ca.b\r\n2-element view(::Vector{Int64}, 5:6) with eltype Int64:\r\n  9\r\n -2\r\n\r\njulia> ca.c\r\n7\r\n```\r\n```julia\r\njulia> Vector(ca)\r\n7-element Vector{Int64}:\r\n  4\r\n  2\r\n  5\r\n  1\r\n  9\r\n -2\r\n  7\r\n```\r\n```julia\r\njulia> getaxes(ca)\r\n(Axis(A = ViewAxis(1:4, ShapedAxis((2, 2))), b = ViewAxis(5:6, Shaped1DAxis((2,))), c = 7),)\r\n```\r\n\r\nIs there anything you can do with this package that one can't do in ComponentArrays.jl or can't be easily added to ComponentArrays.jl with a PR? There's generally no problem with having multiple packages with significant overlap, but when there is, it's important to clarify why a new package is needed in this space and in what circumstances it should be used over the older pre-existing packages. \r\n\r\nSo if there is something that makes this shine relative to ComponentArrays, I would ask you to add something about that to your README / docs. ",
+      "createdAt": "2025-07-07T16:31:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3045846718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861ktTY",
+      "author": {
+        "login": "nicomignoni"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello @MasonProtter and thank you for the quick review!\r\n\r\nI apologize for the documentation being extremely terse, `NamedVectorization.jl` is a small package that I need for a larger project about variational inequalities (VIs), but I find it useful as standalone for some of my optimization and mathematical modelling needs. \r\n\r\nIn the optimization / VIs / convex analysis areas, [this](https://en.wikipedia.org/wiki/Vectorization_(mathematics)) is what people means by *vectorization*, although I agree that it might be confused with different but homonymous concepts. What about `NamedVec`? It is available on the registry, and it is maybe a bit easier to pronounce than `NamedVecCat` :) . \r\n\r\nAs for the overlap with `ComponentArrays`, the main difference is that `NamedVectorizations` tries to preserve the `NV` structure \"as much as possible\" falling back to an `Array` only when the `layout` changes or becomes ambiguous. `ComponentArrays` seems to do it for most cases: going back to the quickstart example, we have\r\n```julia\r\nusing NamedVectorizations, ComponentArrays\r\n\r\nA = [4 5; 2 1]\r\nb = [9; -2]\r\nc = 7\r\n\r\nca = ComponentArray(A=A, b=b, c=c)\r\nnv = NV(A=A, b=b, c=c)\r\n```\r\nThe `ComponentArray` structure is preserved for scalar broadcasting and `vcat` (when the  `layout` is different)\r\n```julia\r\njulia> 2ca\r\nComponentVector{Int64}(A = [4 5; 2 1], b = [9, -2], c = 7)\r\n\r\njulia> ca .+ 1\r\nComponentVector{Int64}(A = [5 6; 3 2], b = [10, -1], c = 8)\r\n\r\njulia> ca2 = ComponentArray(d=[2 3; 0 -5], e=3, f=[1, 3]);\r\njulia> vcat(ca, ca2) \r\nComponentVector{Int64}(A = [4 5; 2 1], b = [9, -2], c = 7, d = [2 3; 0 -5], e = 3, f = [1, 3])\r\n```\r\n\r\nhowever, in case of, e.g., matrix multiplication, this is not the case anymore\r\n```julia\r\nM = rand(7, 7)\r\n\r\njulia> M * ca\r\n7-element Vector{Float64}:\r\n 20.544664037807415\r\n 17.19027701311383\r\n  9.691286477849847\r\n 16.50403192545688\r\n 19.77931411723072\r\n  8.254524946757265\r\n 12.704243794353575\r\n```\r\nWith an `NV`, instead, the vectorized structure is preserved, as the `layout` remains unaltered\r\n\r\n```julia\r\njulia> M * nv\r\n7-element NV{Float64} with layout: \r\n├ A: Matrix 2x2, [1-4]\r\n├ b: 2-element Vector, [5-6]\r\n└ c: Number, [7]:\r\n 20.544664037807415\r\n 17.19027701311383\r\n  9.691286477849847\r\n 16.50403192545688\r\n 19.77931411723072\r\n  8.254524946757265\r\n 12.704243794353575\r\n```\r\nIf we were to multiply by a rectangular matrix, the result would fall back to a `Vector`, as the `layout` would be altered in length\r\n```julia\r\nM = rand(5, 7)\r\n\r\njulia> M * nv\r\n5-element Vector{Float64}:\r\n 13.32959886623553\r\n 16.728508642760282\r\n 18.20024574308967\r\n 12.139114738780965\r\n 15.120611176597235\r\n```\r\nThis is the only difference (as far as I can tell for now) that makes `NamedVectorizations` preferable for me over `ComponentArray`, although I will try to open a PR on the matter before continuing developing `NamedVectorizations` and re-applying for registering. There is also a future line of work for making `NV` preservable under `ChainRules`; if I build up enough differences with `ComponentArray`, I will try to register `NamedVectorizations` (or `NamedVecCat`) again.\r\n\r\n\r\n\r\n",
+      "createdAt": "2025-07-07T19:29:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3046298840",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861kxga",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "FWIW, I think that in general it's not a great idea for the return type of `*` to depend on whether or not the matrix is square. That will cause a type instability because it's not knowable at the type level if a matrix is square.\r\n\r\nOne way around this with ComponentArrays would be:\r\n```julia\r\njulia> ComponentArray(M * ca, getaxes(ca))\r\nComponentVector{Float64}(A = [14.567553140727663 13.913403407962338; 22.48457510149916 12.000061249958662], b = [22.698551310711647, 20.91248345463166], c = 9.1369921469342)\r\n```",
+      "createdAt": "2025-07-07T19:36:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3046316058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861k0TF",
+      "author": {
+        "login": "MasonProtter"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Also no need to apologize for the terse documentation, I think for a small package like this with a small API, that's a more or less normal amount of documentation. It's always nice to see new people registering packages and exploring concepts!\r\n\r\n> What about NamedVec? It is available on the registry, and it is maybe a bit easier to pronounce than NamedVecCat :) .\r\n\r\nYeah that's definitely a possibility, and was actually originally going to be my suggestion. I decided to suggest `NamedVecCat` because it seemed less ambiguous with packages like NamedDims.jl or whatever, but I think it's also not a big deal, and NamedVec is probably fine. \r\n\r\nBest of luck with your development!",
+      "createdAt": "2025-07-07T19:42:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3046327493",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q868llAl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-08-07T12:24:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3163967525",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-OLGc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-08-15T12:24:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134322#issuecomment-3191386524",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NamedVectorizations\n- Repository: https://github.com/nicomignoni/NamedVectorizations.jl\n- Created by: @nicomignoni\n- Version: v0.1.0\n- Commit: cfde89cbf562dd3dd1608705405f4f61348ef278\n- Git reference: HEAD\n- Description: Vectorization in Julia, made convenient.",
+  "package_name": "NamedVectorizations",
+  "closed_at": "2025-08-15T12:24:16Z",
+  "title": "New package: NamedVectorizations v0.1.0"
+}

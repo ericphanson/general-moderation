@@ -1,0 +1,173 @@
+{
+  "created_at": "2023-04-15T01:17:40Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 81647,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Z-FLc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 2 existing packages.\n  1. Similar to Jute. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Cuba. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-04-15T01:21:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1509446364",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Z-FqP",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": "block this pr",
+      "createdAt": "2023-04-15T01:28:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1509448335",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Z_vFT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "For what it’s worth, I think the name is fine, given that it refers to the Nvidia framework. You could have this manually merged by asking on Slack",
+      "createdAt": "2023-04-15T16:02:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1509880147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85aAMWg",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": " I'm not in a hurry to register, it's still very far away from Nvidia's CuTe.",
+      "createdAt": "2023-04-15T23:28:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1510000032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85acH-m",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Is this at all related to Nvidia's CuTE, like is it a wrapper of it? Or does it just aim to produce similar functionality. If the latter, isn't it a bit confusing to use their exact name for the package?",
+      "createdAt": "2023-04-21T06:18:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1517322150",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85acH_y",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Now the package offers a very useful product call `CuTeArray`. So I think it a strong motivation for merging.\r\n```julia\r\njulia> function gpu_kernel()\r\n          a = CuTeArray{Float32}(undef, (static(3), static(5)))\r\n          b = CuTeArray{Float32}(undef, (static(3), static(5)))\r\n          fill!(a, 1f0)\r\n          fill!(b, 2f0)\r\n        axpby!(2f0, a, 3f0, b)\r\n        @cushow sum(b)\r\n           return nothing\r\n           end\r\ngpu_kernel (generic function with 1 method)\r\n\r\njulia> @cuda gpu_kernel()\r\nsum(b) = 120.000000\r\nCUDA.HostKernel{typeof(gpu_kernel), Tuple{}}(gpu_kernel, CuFunction(Ptr{CUDA.CUfunc_st} @0x000001bfbb797e40, CuModule(Ptr{CUDA.CUmod_st} @0x000001bfbb848570, CuContext(0x000001bf996ef870, instance 22bbfddb2fa6b18))), CUDA.KernelState(Ptr{Nothing} @0x0000000205000000))\r\n```",
+      "createdAt": "2023-04-21T06:18:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1517322226",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85acKEf",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": "The latter. NVIDIA's CuTe is not a standalone library, according to their official description: *CuTe is a collection of C++ CUDA template abstractions for defining and operating on hierarchically multidimensional layouts of threads and data.*\r\n\r\nI understand your point, for example naming it CUTLASS.jl would be quite confusing. However, I believe that almost no one is \"just using NVIDIA's CuTe\", and there is little sense in creating a wrapper for it.",
+      "createdAt": "2023-04-21T06:28:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1517330719",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85a0v4c",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": "What should I do if I want to rename the package?",
+      "createdAt": "2023-04-26T17:11:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1523777052",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85a1iKT",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think you just rename it on Github and retrigger registration. Worst case, change the package UUID, but I don't think that's necessary if the package isn't in the Registry yet.",
+      "createdAt": "2023-04-26T20:07:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1523982995",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85bIQPR",
+      "author": {
+        "login": "YichengDWu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Renamed in https://github.com/JuliaRegistries/General/pull/82567",
+      "createdAt": "2023-04-29T22:55:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/81647#issuecomment-1528890321",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CuTe\n- Repository: https://github.com/YichengDWu/CuTe.jl\n- Created by: @YichengDWu\n- Version: v1.0.0\n- Commit: 7dc18e9045f59fd3ce0ff0222c3a7a1560f0d25c\n- Reviewed by: @YichengDWu\n- Reference: https://github.com/YichengDWu/CuTe.jl/commit/7dc18e9045f59fd3ce0ff0222c3a7a1560f0d25c#commitcomment-109036244\n- Description: CuTe is cuter in Julia \n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd666a456e3152258beaa5125b56e9e523032c30754c3674b94bd63490697c7b93256ae605138c7181be90c473ef3bc61a41ac4c5a480f1c9c8cec0ce7626792e3cb8d4b00d14ea727042ba763ec0922dc9e2007b940da5a9e9eac358d4d7e07ed8b233e7571f059190ca3f2ec35d4f1d3c8dca06c39a19a1fd24089ffc503eba335d1c45ca11e36c069af0a89f4ac34a10c724d67195db51d5600a7839fd640726fca86567451d25dbe42a313f30a64df6 -->",
+  "package_name": "CuTe",
+  "closed_at": "2023-05-08T17:43:15Z",
+  "title": "New package: CuTe v1.0.0"
+}

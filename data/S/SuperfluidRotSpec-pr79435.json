@@ -1,0 +1,31 @@
+{
+  "created_at": "2023-03-12T10:23:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 79435,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85XVHX5",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: ForwardDiff\n- I was not able to load the package (i.e. `import SuperfluidRotSpec` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-12T10:29:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79435#issuecomment-1465153017",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SuperfluidRotSpec\n- Repository: https://github.com/GDufenshuoo/SuperfluidRotSpec.jl\n- Created by: @GDufenshuoo\n- Version: v0.1.0\n- Commit: 1878a6d7331b8906e2006ca0fe90de21777483a5\n- Reviewed by: @GDufenshuoo\n- Reference: https://github.com/GDufenshuoo/SuperfluidRotSpec.jl/issues/1#issuecomment-1465225383\n- Description: try to use moden tools\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598eed5f3830cd5141e830ae13f435c56cf81b2240c08904463fccc187fe6b050f41b3e7d63a05625872c7e63c1e07a139089cc86389aff4392e2a504860f9f28b142dcb3b9b7a17431e88a464d6613ee4ccca1086e3f79f37f90d987f3efe78260bc035539d2f8a080c4594855d172b7f85fedd1800ab64e0b4de9eb01211ec2b4 -->",
+  "package_name": "SuperfluidRotSpec",
+  "closed_at": "2023-03-18T17:46:07Z",
+  "title": "New package: SuperfluidRotSpec v0.1.0"
+}

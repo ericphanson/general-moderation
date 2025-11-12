@@ -1,0 +1,622 @@
+{
+  "created_at": "2024-08-12T13:01:30Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 112958,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86IIgPr",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nI am sorry to opening this topic again. But I feel Boilerplate package contains essential functions that is actually missing from the Base Julia library or it improve the Base Julia library. This would be really useful for everyone in the space.\r\n\r\nI am really open to any suggestion if it doesn't get adopted to make this available in the registry.  ",
+      "createdAt": "2024-08-12T13:03:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2283930603",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IIgqC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-12T13:04:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2283932290",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IImp7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It looks to me like this package is committing a lot of [type piracy](https://docs.julialang.org/en/v1/manual/style-guide/#Avoid-type-piracy) (defining methods for functions you don't own for types you don't own), with things like\r\n\r\n```\r\nBase.String(x) = \"$x\"\r\n```\r\n\r\nThat's an absolute no-go. You should not be doing things like that. It may seem convenient, but you will shoot yourself in the foot sooner or later.\r\n\r\nIt is absolutely not something that can be registered.",
+      "createdAt": "2024-08-12T13:15:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2283956859",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86II6Uh",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "I remove those, it is no problem! There are other really important helpful functions in it! \r\n[noblock]",
+      "createdAt": "2024-08-12T13:45:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284037409",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86II_Jv",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "I removed all the [Type Piracy](https://docs.julialang.org/en/v1/manual/style-guide/#Avoid-type-piracy) issues! I totally understand the point and my intentions is to improve the general usage so those function can be missed! I will put those into an ExtremBoilerplate package, where it will be pointed out that there are unsafe Type piracy issues in it. Also I don't plan to register that as these are the most important in this package.  \r\n\r\nThank you for pointing this out! \r\nI am totally open for any other advice on this, how could we merge this package! \r\n\r\n[noblock]",
+      "createdAt": "2024-08-12T13:54:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284057199",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IJBCb",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'd say you have a much better chance of getting it into General if you made an effort to scope the package properly and rename it accordingly. From the readme it seems that there's some random stuff in there but also a focus on providing macro versions of functions used for debugging to make typing easier? If that's the case maybe focus on those and rename the package `DebuggingMacros` or something. \r\n\r\nThere's a long standing policy in General against the registration of personal collections of utility functions which this in its current state seems to be a clear case of. ",
+      "createdAt": "2024-08-12T13:57:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284064923",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IJBrf",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nHowever I have to register this package as it is already a blocker at registering many of my other packages as those depends from this already. \r\n\r\nSo please take a second look and help me to administer this package! ",
+      "createdAt": "2024-08-12T13:58:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284067551",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IJK8S",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "> I'd say you have a much better chance of getting it into General if you made an effort to scope the package properly and rename it accordingly. From the readme it seems that there's some random stuff in there but also a focus on providing macro versions of functions used for debugging to make typing easier? If that's the case maybe focus on those and rename the package `DebuggingMacros` or something.\r\n> \r\n> There's a long standing policy in General against the registration of personal collections of utility functions which this in its current state seems to be a clear case of.\r\n\r\nYou are right. But there are many more then just debugging! So that's why I wanted to give Boilerplate to it as it actually remove Boilerplate codes all in all. \r\n\r\nAlso please if these are the available function, which actually could be useful for anyone, so it really not only for me. Then, can these be accepted:\r\n\r\n- `@sizes`: Very simple size print for \"any\" structure\r\n- `@typeof`: Simplest type print for \"any\" structure\r\n- `findfirst_typed`: Typesafe find first\r\n- `idxI`: Extract elements at specific index from array of arrays\r\n- `@async_showerr` and `@asyncsafe`: Error-handling for async operations\r\n- `@display` and `@println`: Simplest print\r\n- `clear_line_up`: Terminal line clearing utility\r\n- `@dtime`: Simple execution time measurement\r\n- `available_memory`: Very simple available system memory query\r\n\r\nSo the list doesn't want to be personal utility functions. These are really boilerplate functions that solves everyone problem in general. So these are actually patterns that everyone run in, no customization for my needs. Maybe the available_memory? I can remove that too if that would be better? \r\n\r\nIf it doesn't work anyway, then can I give BoilerplateCvikli or BoilerplateProposal to it? Or some suffix that allow me to register? ",
+      "createdAt": "2024-08-12T14:14:47Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284105490",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IJP1X",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Also I would be happy to take the responsibility to maintenance this codebase and allow any good advice on how to extend this with general boilerplate cases. \r\n\r\nSo anyone who has an observed very simple Boilerplate method, I would be happy to extend this library with their advice if that's also really a boilerplate code which isn't just a custom solution for a specific problem! \r\n[noblock]",
+      "createdAt": "2024-08-12T14:22:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284125527",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ILlbm",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> However I have to register this package as it is already a blocker at registering many of my other packages as those depends from this already.\r\n\r\nSome of these functions/macros could definitely be part of a package. However, they also seem like they'd be mostly useful for development workflows and testing, rather than actual package code. Utilities for development workflows generally wouldn't be dependencies, and don't absolutely need to be registered. There's no rule against it, of course, so if it's generally useful, it's fine to register it.\r\n\r\nA lot of these are also small one-liners. It's often better to copy in one-liners into a package code rather than adding a dependency. At least for anything that doesn't fit into a `DebuggingMacros` package. Or, if you have some kind of \"Base\" package for many of your packages, put it in there.\r\n\r\n> If it doesn't work anyway, then can I give `BoilerplateCvikli`\r\n\r\nEven though there's a general rule against registering personal utility packages, in my book, registering with a name like that is perfectly fine. It's going to pass auto-merge checks, and at least I would put very little scrutiny on a package like that.\r\n\r\nBut I just want to stress again that anything that overrides the behavior of Base or another package cannot be registered under any circumstances, so be careful with that if you're adding more functionality.\r\n\r\nYou can maybe do things like that in a local project, but be very very careful (you can easily introduce impossible-to-find correctness bugs that way), and keep it out of any kind of package.",
+      "createdAt": "2024-08-12T19:16:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284738278",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ILorK",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I would also advise against registering something with your own name. The idea of the general registry is that packages in there should be useful to everyone. The main problem here is not only the name, but also the fact that your Boilerplate.jl is a mixed bag of individual utility functions, which others may not find relevant. And even if they do find it relevant, it may be better suited in a `startup.jl` file than in a registered package.",
+      "createdAt": "2024-08-12T19:25:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284751562",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ILsel",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I would also advise against registering something with your own name.\r\n\r\nYeah, but who cares whether a package with a name like that exists? It's not going to clash with anything. I don't think we should interpret the rule against \"personal utility packages\" that strictly. These packages, with an appropriate and specific name, can serve as dependencies for other more broadly useful packages someone may want to register (since all dependencies of registered packages must also be registered). Organizations often have various packages that really only serve as dependencies. I have a `QuantumControlTestUtils` myself! Why not give individuals similar leeway? If it's useful as a dependency for something useful, that should be good enough, assuming the name is highly specific.",
+      "createdAt": "2024-08-12T19:35:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284767141",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ILtB4",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "All that being said, it's definitely *better* to pull out functions/macros into a coherent package with a descriptive name.",
+      "createdAt": "2024-08-12T19:36:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2284769400",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IPBJn",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Really thank you!\r\n\r\nYes, the reason I want to register is because I use this in like 10 other module and I want to register now the AISH.jl and some more later on as there are already great advancements in some of them that will be useful for the community I believe. :D\r\n\r\nI am open to break it down if `Boilerplate.jl` isn't good fit. \r\nBut my problem is that:\r\n`@sizes` and `@typeof` is like salt in the life. So these are not debugmacro to be honest... I cannot explain it any better. It is literally equivalent with `@show` and it would be really ugly to call it debugmacro. :( You will understand later on when you use these function how extremly useful these two are! \r\nSo I try to find something else. \r\n\r\n`EasyPrint.jl`\r\n\r\n- `@sizes`: Very simple size print for \"any\" structure\r\n- `@typeof`: Simplest type print for \"any\" structure\r\n- `@display` and `@println`: Simplest print \r\n- `@dtime`: Simple execution time measurement\r\n- `clear_line_up`: Terminal line clearing utility\r\n\r\n`SafeAsync.jl`\r\n\r\n- `@async_showerr` and `@asyncsafe`: Error-handling for async operations\r\n\r\nArrayManipulation.jl\r\n\r\n- `findfirst_typed`: Typesafe find first\r\n- `idxI`: Extract elements at specific index from array of arrays\r\n\r\nWould this 3 package fit? \r\n\r\nI would plan to register the `EasyPrint.jl` and the `SafeAsync.jl` if that is okay?\r\nIt will be extremely big refactor on my side... Some of them will be even left out I believe due to thes are somewhat too big work and somewhat unused atm...\r\n\r\nI don't give any name to the `available_memory`. I use it only very rarely in production only.\r\n\r\n\r\n",
+      "createdAt": "2024-08-13T08:15:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2285638247",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IQBee",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can't honestly say that I'm a huge fan of these…\r\n\r\nI just checked out `AISH.jl`. As far as I can tell, out of the macros listed above, it only uses `@async_showerr`, and only in one place. I would never add a dependency in such a situation. Dependencies are not \"for free\". Not for your users, where additional dependencies increase project instantiation time and open up the possibilities of conflicts, but also not for you. I think you might underestimate the overhead of having to manage the development workflows of multiple packages.\r\n\r\nI can say pretty confidently that none of the relatively simple macros currently in Boilerplate justify that kind of trouble.\r\nI would copy in the one or two definitions of these macros that you're actually using into each package, not load them as a dependency. Actually, I'm not even sure the `@async_showerr` macro / avoiding boilerplate is a good idea in general. Now, when I look at your code, I have to figure out what `@async_showerr` does. It would be much better to just write out that boilerplate.\r\n\r\nIt seems all of your current work is AI related. Maybe you want to think about which packages you'll really want to push out, and put them into an organization (and remember: maintaining too many packages adds *a lot* of overhead for you, so it might be best to consolidate). Then *maybe* that org could have a `<OrgName>Core` or `<OrgName>Utils` package that collects these common boilerplate utilities, for use by all the packages in the org. I think that would be a much better solution than `EasyPrint` or some similar package name that's both relatively general and non-descriptive and probably wouldn't be used by anyone but you.\r\n\r\nBy the way, you'll run into problems with the package name `AISH` when you try to register. I would recommend renaming it to `AIShell` or something similar that matches the package naming guidelines.",
+      "createdAt": "2024-08-13T10:21:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2285901726",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRFH-",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for taking a look on `AISH.jl`!\r\n\r\nI understand, it seems like there is rare usage of that macro in the `AISH.jl`. But during development and anything like that I use it a lot. And this is just one package. Also just noting that `Anthropic.jl` would also use that `@async_showerr` macro, but I removed and now it send silent errors with the `@async ` which is very dangerous. And all due to I want that package to be available. \r\n\r\nI use these `@show @sizes @typeof @display` functions very frequently. \r\nI understand that you are not huge fan of these. It is similar like `@show`. Are you fan of `@show` or you go with `println` most of the time? It will be the same with these, please take my word for this as I cannot give you better proof now enough easily!\r\n\r\nI really have to push these package up. Also I am open to maintenance as much package as possible. \r\n\r\nRegarding the dependency issues, I understand your concern. But it isn't a must. So if a person want to clean down his code base it is up to his decision. I can also clean down. But to be honest the `@async_showerr` reduce the code lines from extra +4-5 lines to zero extra line. It is REALLY decreasing the cognitive load when it comes to Julia developing and it worth the trade off. \r\nI don't know what can I do, but I really want to use these macros. I am open to anything, just let me know what is the way to accept these in the General registry, so I can move forward and help the community much better. \r\n\r\nAlso I can assure you I won't allow any type piracy as I am well aware of what that is, as I was already involved in many things with that due to the `RelevanceStacktrace` and many other Stacktrace modifier module.  \r\n",
+      "createdAt": "2024-08-13T12:46:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286178814",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRwNe",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do believe you when you say that these macros are useful for you. But I think that\r\n\r\n- The registration process is designed to get feedback from the community, and the feedback sofar does not show wide support.\r\n- If you want to put these development tools in a package and we disagree, perhaps you need to take a look at where Julia developers typically put their tooling and config. I don't know your level of experience, but perhaps the default environment `@v1.10` and `startup.jl` file are worth exploring?",
+      "createdAt": "2024-08-13T14:08:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286355294",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRwg-",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "@gdalle the problem is with startup.jl.\r\n\r\nIf I put my macros into that, then the @async_showerr and everything will cause err for other users. \r\n",
+      "createdAt": "2024-08-13T14:09:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286356542",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRw_M",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "These are EasyPrint.jl where anyone can print things with style.\r\n\r\nI really don't understand why did we decide here that it won't be useful to anyone, if I already has two developer who uses this. And only literally 4-5 of them knows about this. This is getting ridiculous...",
+      "createdAt": "2024-08-13T14:10:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286358476",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRyPH",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> In my view most of the macros we're talking about are development tools, which belong in your startup.jl?\r\n\r\nThat's exactly what I was thinking… These do not need to be registered to use them for development (and I can totally see that they can be useful during development for you personally)\r\n\r\nIf you really think you must use these in the actual code of a registered package, just include what you need in one of those packages. If you want to use in another package, import them from the existing package, or just add a *copy* of your `boilerplate.jl` file to the new package. That is a much better approach than putting these types of functions into a separate package.\r\n\r\nSplitting it into multiple packages probably only makes this worse. We definitely don't want NPM-style \"is_odd\" packages in Julia, and especially not for something that's unequivocally personal utilities.",
+      "createdAt": "2024-08-13T14:12:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286363591",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRzmZ",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "There is like hundreds of package out there that does very simple stuffs. Lot of them doesn't even used. And it worth to block really useful scripts. It is really a joke already. I mean... I wouldn't argue if I wouldn't know it is really useful. But... This is really sad.",
+      "createdAt": "2024-08-13T14:14:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286369177",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IRz5A",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I really don't understand why did we decide here that it won't be useful to anyone\r\n\r\nI'm not saying it's not useful for anyone. I'm saying that for anyone who finds this useful, the best thing to do is to *copy* that kind of code into their package, instead of importing it from some package",
+      "createdAt": "2024-08-13T14:15:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286370368",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR0WE",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "So I will have 10 package with Boilerplate.jl code. And if I find a new thing, then I will replace every file again again and again. \r\n",
+      "createdAt": "2024-08-13T14:16:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286372228",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR1zk",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Can you explain to us where you would need, say, a variant of `@show` in an actual, finished package? I have developed several packages and I have never used it except for debugging.",
+      "createdAt": "2024-08-13T14:18:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286378212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR36L",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "It isn't nice to have it in the finished project. But it can be actually happen. We could argue then why do we have `@show` in Base right? I want to extend the Base with this basically.  \r\n\r\nThere is boost library in C++ which also had extensions for the Base of C++. It was one of the most well used package. \r\nBoost library was known to be the future of C++ because there were experimental features in it which was later adopted by the standard. Boilerplate is no different, except maybe less ambitious like that. But I am not arguing to have Boilerplate as is. I said I can split these to two package above: `EasyPrint.jl` and `SafeAync.jl`",
+      "createdAt": "2024-08-13T14:22:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286386827",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR4hq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't know if you really plan to maintain 10 publicly facing packages. That seems like a lot, and I would recommend putting some thought into potentially consolidating this into fewer packages, or some coherent structure. If they're all related to AI, maybe they can all share some common \"Core\"/\"Utils\"/\"Base\" package (as I was proposing before) that can include these kinds of functions, and nobody will bat an eye.\r\n\r\nBut otherwise, yeah, just keep these few lines of code in every one of your 10 packages. You only need to include the definitions you actually use in the released code. I'm going to guess you won't end up using the majority of these functions except for debugging. So you also don't really need to keep them in sync between projects. If you find a new boilerplate macro, you don't have to backport this into existing code.\r\n\r\nI think you're treating whether this is in a registered package as far too much of a blocker. There are many ways for you to use the definitions you like in any of your packages that don't involve registering a `Boilerplate.jl`.",
+      "createdAt": "2024-08-13T14:23:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286389354",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR7H9",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "I am really here because these are useful snipets. Also I want to register packages that actually use Boilerplate.jl. And There is AISH.jl which uses Anthropic.jl which uses Boilerplate.jl... So it is again a blocker. \r\n\r\n> I think you're treating whether this is in a registered package as far too much of a blocker. There are many ways for you to use the definitions you like in any of your packages that don't involve registering a `Boilerplate.jl`.\r\n\r\nWhat do you recommend how can I register package like this then?\r\n\r\nI am working on/in julia 50-60 hours a week. So I would be open up to maintain 10 packages. Also I have a version control system workspace that track the issues at all of my packages.  ",
+      "createdAt": "2024-08-13T14:28:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286399997",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR8dt",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I said I can split these to two package above: EasyPrint.jl and SafeAync.jl\r\n\r\nIf you add another word to these names so that the package names are extremely specific and won't clash with anything that might exist in the future, we're at a point where I wouldn't care to object to it. (Not that I think it's a really great idea).\r\n\r\nPersonally, I absolutely wouldn't mind (and even recommend) `CvikliEasyPrint.jl`, and `CvikliSafeAync.jl`, where \"Cvikli\" is basically your brand/org name. Other orgs do things like that routinely for internal non-user-facing packages. I would argue that we should give personal usernames a pass for this kind of thing. It seems like @gdalle was a little more opposed than me to these kinds of personalized package names, but maybe he can come around to this being a way forward that least stressful and disappointing for everyone involved.",
+      "createdAt": "2024-08-13T14:30:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286405485",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR9AV",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "Really Thank you for this! I will create the Cvikli version from those!",
+      "createdAt": "2024-08-13T14:31:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286407701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR-eN",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I still don't think it's a good idea, and I invite @Cvikli to strongly consider leveraging `startup.jl` instead, for instance with the ideas in https://discourse.julialang.org/t/what-is-in-your-startup-jl/18228.\r\nBut I won't actively oppose the registration of a `BoilerplateCvikli` at this point because it would be a waste of everyone's time.",
+      "createdAt": "2024-08-13T14:34:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286413709",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR_GO",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> There is AISH.jl which uses Anthropic.jl which uses Boilerplate.jl... So it is again a blocker.\r\n\r\n`Anthropic` can't be using `Boilerplate`, since you already submitted the registration. But you *could* add these macros to `Anthropic` and then import them from `Anthropic` into `AISH`. Especially if `Anthropic` is going to be a natural dependency of most of your planned packaged.\r\n\r\nOr go with with personalized package names.\r\n\r\n@gdalle Are you okay with giving him a pass on `CvikliEasyPrint.jl`? I wouldn't derive a general precedent from this exception. But it's not going to clash with anything, and resolve the frustration here. To me, that seems worth not being a stickler about the rule against personal utilities.",
+      "createdAt": "2024-08-13T14:35:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286416270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IR_u3",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As I said, I won't stand in the way if the package bears a unique name that makes it clear it is personal. But I think this is in general an awful idea, and that's what local registries are for, not the General registry.",
+      "createdAt": "2024-08-13T14:36:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286418871",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ISC13",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "I will send them tomorrow as I don't want to rush into this and make mistakes. And I want to finish the AISH backend-frontend communication today.\r\n\r\nThank you guys for the option I can choose!  ",
+      "createdAt": "2024-08-13T14:42:01Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2286431607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86IZSR7",
+      "author": {
+        "login": "Cvikli"
+      },
+      "authorAssociation": "NONE",
+      "body": "We can close this PR. \r\n\r\nI opened the [BoilerplateCvikli](https://github.com/JuliaRegistries/General/pull/113124) package registration finally! <3 \r\nThank you!",
+      "createdAt": "2024-08-14T09:52:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/112958#issuecomment-2288329851",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Boilerplate\n- Repository: https://github.com/Cvikli/Boilerplate.jl\n- Created by: @Cvikli\n- Version: v1.0.5\n- Commit: 692563d109d63d2db216e4c6e0834e1e6e2e6408\n- Git reference: HEAD\n- Description: Useful boilerplate snippets for productivity ;)\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nVery simple snippets that could be actually in the Base too!\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "Boilerplate",
+  "closed_at": "2024-08-14T10:35:53Z",
+  "title": "New package: Boilerplate v1.0.5"
+}

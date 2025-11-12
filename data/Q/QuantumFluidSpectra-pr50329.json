@@ -1,0 +1,136 @@
+{
+  "created_at": "2021-12-10T20:39:02Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 50329,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847Fb6A",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-10T20:42:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991280768",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847FhyC",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@AshtonSBradley I'm not sure what you want to do, but this pull request will be merged before #50330 just because they're merged in order, and #50330 won't ever be merged because it'll conflict with this one.  If your intent when creating #50330 was to override this one, well, that won't happen unless you explicitly block this pull request and explain what you want to do.\r\n\r\n[noblock]",
+      "createdAt": "2021-12-10T21:25:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991304834",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847Fia9",
+      "author": {
+        "login": "AshtonSBradley"
+      },
+      "authorAssociation": "NONE",
+      "body": "ok, I just followed the registrator advice which was to reset version number to 0.1.0 for first registration. Maybe I didn't update the PR properly. I think this comment will block this one, so now I will comment on the other one that I want that one to be automerged?",
+      "createdAt": "2021-12-10T21:29:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991307453",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847Fivi",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">  I just followed the registrator advice which was to reset version number to 0.1.0 for first registration\r\n\r\nwhat???\r\n\r\n> so now I will comment on the other one that I want that one to be automerged?\r\n\r\nNot sure, what'd be the purpose?  If you want this PR to be closed please say so explicitly and we'll do it.\r\n\r\n[noblock]",
+      "createdAt": "2021-12-10T21:31:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991308770",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847FjIF",
+      "author": {
+        "login": "AshtonSBradley"
+      },
+      "authorAssociation": "NONE",
+      "body": "> > I just followed the registrator advice which was to reset version number to 0.1.0 for first registration\r\n> \r\n> what???\r\n\r\nThe JuliaRegistrator bot told me to reset the version number by updating and running `register` again. So I did it. \r\n\r\n> \r\n> > so now I will comment on the other one that I want that one to be automerged?\r\n> \r\n> Not sure, what'd be the purpose? If you want this PR to be closed please say so explicitly and we'll do it.\r\n> \r\n> [noblock]\r\n\r\nYes, please close this one. \r\n",
+      "createdAt": "2021-12-10T21:34:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991310341",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847FjgU",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The JuliaRegistrator bot told me to reset the version number by updating and running register again. So I did it.\r\n\r\nOh, I found it: https://github.com/AshtonSBradley/QuantumFluidSpectra.jl/commit/bab78aedcdae50607b19543daa94b267abd4dc9c#commitcomment-61717320.  You may have missed \"This can be safely ignored\" (suggestion that I'd have personally followed).  However the sentence \"This will update the Pull request\" is blatantly false since it created a conflicting pull request.  @DilumAluthge either this sentence or the whole section should be deleted, it's totally useless and confusing",
+      "createdAt": "2021-12-10T21:36:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991311892",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847Fj9X",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah. That language should be fixed or removed.\r\n\r\nThat particular language is in the Registrator.jl repository.",
+      "createdAt": "2021-12-10T21:39:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991313751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q847FkI8",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We should just remove this language from Registrator.jl:\r\n\r\n> Also, note the warning: This looks like a new registration that registers version 0.1.1.\r\nIdeally, you should register an initial release with 0.0.1, 0.1.0 or 1.0.0 version numbers\r\n\r\nAfter all, AutoMerge no longer cares about initial version numbers. So it doesn't make much sense for Registrator.jl to still give this warning.",
+      "createdAt": "2021-12-10T21:40:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/50329#issuecomment-991314492",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuantumFluidSpectra\n- Repository: https://github.com/AshtonSBradley/QuantumFluidSpectra.jl\n- Created by: @AshtonSBradley\n- Version: v0.1.1\n- Commit: bab78aedcdae50607b19543daa94b267abd4dc9c\n- Reviewed by: @AshtonSBradley\n- Reference: https://github.com/AshtonSBradley/QuantumFluidSpectra.jl/commit/bab78aedcdae50607b19543daa94b267abd4dc9c#commitcomment-61717312\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b272ae8e1da96d15ea1f358243316936caad22e38d56399cda74ce8aa7c54d3910d69e24595ec1df9e1445caeb89c370184ec15952d59de7a10e2c80fbc8801dd57650f8b9d18a9d3a04b75df922cf6fba4a96196a8900f7ce528d3cba69fbb72147542bb103076a0debd0f19648ddeb3373fa9cece042e83db27e9c29aac74ed6b2cad88c49c7eacda7eac7c60f611545e6b1e9bd03e42f790ef42a62346a2ac8bf4a734b4fa1dc9642adf9dff2ceba89390eba42cfa7059e9cc7dd21eff37e -->",
+  "package_name": "QuantumFluidSpectra",
+  "closed_at": "2021-12-10T21:36:33Z",
+  "title": "New package: QuantumFluidSpectra v0.1.1"
+}

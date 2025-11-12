@@ -1,0 +1,136 @@
+{
+  "created_at": "2025-07-13T08:13:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 134655,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q862yluw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-13T08:21:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3066715056",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862z_IP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The \"name similarity\" flag in https://github.com/JuliaRegistries/General/pull/134652 and https://github.com/JuliaRegistries/General/pull/134654 is a false positive. So, in principle, https://github.com/JuliaRegistries/General/pull/134652 would probably be the way to go.\r\n\r\nHowever,\r\n\r\n> # ⚠️ Educational Use Warning\r\n>\r\n> **This HPACK module has made for educational purposes.**\r\n>\r\n> - If you use this code in production, you must ensure strict compliance with the HPACK and HTTP/2 \r\n>\r\n> **Author's intent:** This module is designed as a reference implementation and as a foundation for a full HTTP/2 protocol stack in Julia. Use with care in production environments.\r\n\r\nraises the question of whether the package should be registered in the General registry at all. Packages in the General registry are intended to serve as dependencies for other packages in the ecosystem. Thus, an `HPACK` package should be able to serve as a fully functional and robust dependency for the \"HTTP/2 protocol stack in Julia\", not just a proof-of-concept.\r\n\r\nIs there a particular reason this should be in General, as opposed to being installed directly, or via a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl)?\r\n\r\n[noblock]",
+      "createdAt": "2025-07-13T14:30:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3067081231",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8620GmA",
+      "author": {
+        "login": "Grasimos"
+      },
+      "authorAssociation": "NONE",
+      "body": "This module is a core part of a full http2 protocol stack implementation! [Http2Proto.jl](https://github.com/Grasimos/Http2Proto.jl)(Http2Frames and Http2Proto are the other parts). \r\nEDIT: I removed the warning (it was left from the beginning of the project) [noblock]",
+      "createdAt": "2025-07-13T15:26:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3067111808",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8629d7q",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Alright…\r\n\r\nGenerally speaking, implementations of fundamental protocols is something where I would put a relatively high bar. These packages should be authoritative (`HTTP2.jl`, `HPACK.jl`, etc.) and from a trusted source, i.e., under the umbrella of the JuliaWeb organization.\r\n\r\nHowever, while none of `Http2Proto`, `Http2Frames`, and `Http2Hpack` are good package names from that perspective, that might work in their benefit: these don't give the appearance of being \"authoritative\" and the name prefix creates its own little ecosystem. These could co-exist with more \"official\" implementations.\r\n\r\nSo, tentatively, I would lean towards unblocking this (and closing https://github.com/JuliaRegistries/General/pull/134652), but I'd also want to give the JuliaWeb folks a chance to chime in… It might help if you give a little bit more background about yourself and the goals of this project. I don't really know anything about different version of the HTTP protocol, i.e., HTTP/1 vs HTTP/2. Does [`HTTP.jl`](https://github.com/JuliaWeb/HTTP.jl) not already include HTTP/2, and if not, should/could it?\r\n\r\n[noblock]",
+      "createdAt": "2025-07-14T13:10:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3069566698",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863AAy8",
+      "author": {
+        "login": "Grasimos"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have no intent to confuse any user with the official JuliaWeb implementations. Thats why I believe this should be closed and stay unregister under development :)",
+      "createdAt": "2025-07-14T16:37:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3070233788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863APGh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok... although at least as far as I'm concerned, I'm fine with `Http2Proto`, `Http2Frames`, and `Http2Hpack`, and I don't really think that they cause confusion. Of course, I'm also completely on board with keeping this outside of `General` for the time being, as the packages mature. Hopefully, it's not just the initial scrutiny on the PRs dissuading you from registering.\r\n\r\nFor workflow issues around developing interdependent unregistered packages, I'd once more highlight [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) as the recommended solution for packages that need to be \"registered\", but aren't ready for registration in the `General` registry.\r\n\r\nI'll keep this open for a bit in case you change your mind (the bot will close it automatically after 30 days of inactivity).\r\n\r\n[noblock]",
+      "createdAt": "2025-07-14T16:58:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3070292385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-CR1y",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-08-14T12:24:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3188268402",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86_WpgI",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-08-21T12:24:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134655#issuecomment-3210385416",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Http2Hpack\n- Repository: https://github.com/Grasimos/Http2Hpack.jl\n- Created by: @Grasimos\n- Version: v0.2.3\n- Commit: d1ef25790f98c7be9d547b69812aef09865629b8\n- Git reference: HEAD\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nA pure Julia implementation of HPACK (HTTP/2 Header Compression), suitable for use in HTTP/2 clients, servers, and proxies.\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "Http2Hpack",
+  "closed_at": "2025-08-21T12:24:28Z",
+  "title": "New package: Http2Hpack v0.2.3"
+}

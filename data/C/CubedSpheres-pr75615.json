@@ -1,0 +1,121 @@
+{
+  "created_at": "2023-01-13T07:35:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 75615,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85SVuEQ",
+      "author": {
+        "login": "navidcy"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This is a rename of package CubedSphere.jl to CubedSpheres.jl. PR #75614 changes the GitHub URL.",
+      "createdAt": "2023-01-13T07:36:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1381425424",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SVujr",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- I was not able to load the package (i.e. `import CubedSpheres` failed). See the CI logs for details.\n- Package name similar to 1 existing package.\n  1. Similar to CubedSphere. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.19 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-01-13T07:39:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1381427435",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SV4oG",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> This is a rename of package CubedSphere.jl to CubedSpheres.jl. PR https://github.com/JuliaRegistries/General/pull/75614 changes the GitHub URL.\r\n\r\nIs it really worth it? It will be pretty confusing to have those two packages, and e.g. autocomplete in the REPL would complete the old package first",
+      "createdAt": "2023-01-13T08:23:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1381468678",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SZI2B",
+      "author": {
+        "login": "navidcy"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "oh I thought that the old would \"go away\".",
+      "createdAt": "2023-01-13T19:51:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1382321537",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SZSG5",
+      "author": {
+        "login": "simonbyrne"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We can make it work either way, but honestly I don't think the rename is worth the effort.",
+      "createdAt": "2023-01-13T20:34:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1382359481",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SZfTu",
+      "author": {
+        "login": "navidcy"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have converged to this conclusion myself. See https://github.com/CliMA/CubedSphere.jl/pull/25\r\n",
+      "createdAt": "2023-01-13T21:30:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1382413550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85SZfZs",
+      "author": {
+        "login": "navidcy"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Let's close this PR?",
+      "createdAt": "2023-01-13T21:31:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/75615#issuecomment-1382413932",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: CubedSpheres\n- Repository: https://github.com/CliMA/CubedSpheres.jl\n- Created by: @navidcy\n- Version: v0.3.0\n- Commit: f6b88641e7272453bfaa1449f1974bb62acea355\n- Reviewed by: @navidcy\n- Reference: https://github.com/CliMA/CubedSpheres.jl/commit/f6b88641e7272453bfaa1449f1974bb62acea355#commitcomment-96044351\n- Description: Tools for generating cubed sphere grids and solving partial differential equations on the sphere.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd65a30a98667933f951ca2a273aaf70bcd55f396691b77d3a6793b9fd5441b2dcdddd80b995f6b6a721af97f98bde6f102ef9c84b9528c8d39b0653b71756e91854f0463a3bd477d1336bb15e429966fadf59a6482da14a0d4a4ff19bbaa38729a12abbb03caed945fd409a7388f8a43f9704d579a38775a8afd7c59f56ef6c911c349e2a3a40acd2c3c2a102956cdf03f3432281a013446a71a33d65ec0c4a2ea28f040c10628d2d14c8d709ad36884b1 -->",
+  "package_name": "CubedSpheres",
+  "closed_at": "2023-01-14T22:21:26Z",
+  "title": "New package: CubedSpheres v0.3.0"
+}

@@ -1,0 +1,318 @@
+{
+  "created_at": "2024-03-12T23:05:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 102767,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q852xn6w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 9 existing packages.\n  1. Similar to Luna. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.03 is at or below cutoff of 2.50.\n  2. Similar to Juno. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Jute. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to TSne. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Dance. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Deneb. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Run. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to Duff. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  9. Similar to Cuba. Normalized visual distance 2.31 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-03-12T23:08:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-1992720048",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852xuY8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] This seems to fall into the category of “personal packages”. In particular, I can’t see this as a dependency for any other package, which would be the only reason to register it in General. For ease of installation, I would recommend registering this in a `LocalRegistry`",
+      "createdAt": "2024-03-12T23:44:27Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-1992746556",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8526je7",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Would be nice to have a few of such (\"playful\") packages from time to time :) There are some already, does @goerz's reaction mean that they aren't welcome in General anymore?\r\nI personally would vote for the Arrakis name, that is even less likely to collide with anything.\r\n\r\n> I can’t see this as a dependency for any other package, which would be the only reason to register it in General.\r\n\r\nThis cannot be the criterion, can it? Surely General has lots of enduser packages that aren't really expected to be depended upon.",
+      "createdAt": "2024-03-13T17:19:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-1995061179",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8527dDo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\n> does @goerz's reaction mean that they aren't welcome in General anymore?\r\n\r\nThat would be something to discuss at the community level. I'm in no position to set any kind of \"policy\" on this. In the past, I've pushed back against some other toy packages, but those did end up being merged. In my personal opinion, I don't think these toy packages are a great fit for General.  It doesn't do much for such a package to be registered. And you could have an infinite number of packages that print quotes from different works of fiction. I think these are fun, but do they need to be registered?\r\n\r\n>> I can’t see this as a dependency for any other package\r\n>\r\n> This cannot be the criterion, can it?  Surely General has lots of enduser packages…\r\n\r\nNot a criterion by itself, I would say, but maybe in combination with other factors.\r\n\r\nI don't know. For most existing \"end user\" packages, they'd still be a dependency in some `Project.toml` in a \"serious\" context. I don't really see that for `Dune`. I would assume it's something people might want to set up in their `startup.jl` for amusements, very much like the classic `fortune` utility in Unix. For such as case, does it make any difference whether the installation instructions are \"Run `Pkg.add(\"Dune\")` or `Pkg.add(url=\"...\")`? Or, if you want to have a bunch of similar such packages and make installing them really easy, put them in a personal `LocalRegistry`?\r\n\r\nActually, I'd be fine with a registered \"Fortunes.jl\" package that reimplements the classic fortune system, but not as much with a different package for any work of fiction.\r\n\r\nIs it worth taking up Dune-themed package names for this? These could otherwise still be a nice \"less systematic\" name for some, I don't know, ecology framework.\r\n\r\nP.S.: I've asked on `#pkg-registration` on Slack whether we have any sort of community consensus on this question",
+      "createdAt": "2024-03-13T18:28:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-1995297000",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8527yg7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I might lean to the policy of \"Try to get the author (@mmkim1210) to reconsider whether these packages really need to be registered, or whether it might be nice to keep the name open for others\".\r\n\r\nBut, ultimately, I'd probably let the author have the last word, apart from other potential issues like \"name too short\".",
+      "createdAt": "2024-03-13T18:54:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-1995384891",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854O2HB",
+      "author": {
+        "login": "mmkim1210"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hey @goerz, I share the same sentiment as @aplavin, unless there is a strong sentiment or consensus shared among the community that goes against it. Keep me posted, but in the meantime can you noblock your comment for Arrakis.jl so that it can be added to the general registry. ",
+      "createdAt": "2024-03-25T03:47:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2017157569",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854PDh7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There is definitely no consensus that packages like this should not be allowed. I would still appeal to you to reconsider whether registering this really gives you that much benefit, compared to maybe keeping it open for some future \"more serious\" package. But it's up to you. I'm not going to stand in the way of this getting merged.\r\n\r\nIt will need a manual merge from a full maintainer, though, just because of the name length. I do consider this package and `Arrakis` to be a pair, so I'd prefer for them to be merged together (or not merged, if there's no maintainer willing to merge; although I'm not really expecting that kind of opposition anymore, based on the reactions so far). ~~You may want to ping the Slack again to get someone's attention~~. As soon as a maintainer merges this, I'll be happy to unblock `Arrakis` as well (if I miss the notification about a merge, definitely feel free to remind me).\r\n\r\nEdit: I pinged the Slack for you, so presumably, a maintainer will take care of this",
+      "createdAt": "2024-03-25T04:55:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2017212539",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854PFl3",
+      "author": {
+        "login": "oxinabox"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I am broadly pro this being registered.\nAs someone who has a publication related to performing Natural Language Processing  on literary sources.\nI can see this being useful for tutorials.\nI mean it could be used in tutorials as an unregistered package. :shrug:\n\nI would rather a longer more descriptive name like DuneQuotes.jl\n\n[noblock]",
+      "createdAt": "2024-03-25T05:05:39Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2017220983",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854PIcI",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd have exactly zero problems with `DuneQuotes` and `ArrakisQuotes`. That would definitely take care of my \"these nice package names should probably be kept open for something more useful\" concern.\r\n\r\nWould that be something you'd be willing to consider, @mmkim1210?",
+      "createdAt": "2024-03-25T05:14:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2017232648",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854Rcc-",
+      "author": {
+        "login": "dmitrii-doronin"
+      },
+      "authorAssociation": "NONE",
+      "body": "What about WhispersOfDune? It still conveys the message, but it's not as bland. \r\n\r\n@mmkim1210, really love the package, btw. Would love to have more quotes from other dune books!\r\n[noblock]",
+      "createdAt": "2024-03-25T11:56:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2017838910",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854SZMB",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would be ok with registering with one of the various names suggested above. ",
+      "createdAt": "2024-03-25T14:07:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2018087681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854Ux-7",
+      "author": {
+        "login": "mmkim1210"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz DuneQuotes.jl sounds reasonable, but I do not want to limit myself to sharing lines from the book. In fact, I was planning to add ColorSchemes based on the recent Dune pictures/movies for my own scientific figures, which may be interesting for some other folks. Along this line, I am pretty hesitant about creating another repo with the name DuneColors.jl. ",
+      "createdAt": "2024-03-25T19:07:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2018713531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854U1Xb",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I am pretty hesitant about creating another repo with the name DuneColors.jl.\r\n\r\nI would strongly prefer a separate `DuneColors` (and I would find that package name completely unobjectionable).\r\n\r\nIn general, it's much better to have packages with a clear focus. \"Printing quotes from `Dune`\", and \"Providing a Dune color scheme\" does not sound like something that really belongs in the same package.\r\n\r\nI mean, you could have a `DuneColors` with the color scheme as the primary focus that also does the printing of quotes as a little Easter egg… but then there's still the `Arakis` package.\r\n\r\nSo I'd recommend `DuneQuotes`, `ArrakisQuotes`, `DuneColors` all as separate package.",
+      "createdAt": "2024-03-25T19:14:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2018727387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q854VH4c",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Well, I don't really want to put \"more obstacles\" on this, and I apologize if I've injected too many of my personal opinions about package naming here, or having been too unwelcoming. I can certainly live with \"Dune\" and \"Arrakis\" being registered under these names.\r\n\r\nI especially would like to apologize for any inappropriate \"value judgement\" of \"fun packages\" being less important or less worthy of registration than \"serious packages\". I'm fully in favor of \"fun\" Julia packages, so that is not a position I would want to hold.\r\n\r\nI don't have merge permissions, though, so I can't make the final decision on this.",
+      "createdAt": "2024-03-25T19:58:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2018803228",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q857zVlm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-04-25T12:22:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2077055334",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858mHiy",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-05-02T12:23:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102767#issuecomment-2090367154",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Dune\n- Repository: https://github.com/mmkim1210/Dune.jl\n- Created by: @mmkim1210\n- Version: v0.1.0\n- Commit: 4b68ec96007e6475c0a792fb9707d69cd7b53c17\n- Reviewed by: @mmkim1210\n- Reference: https://github.com/mmkim1210/Dune.jl/commit/4b68ec96007e6475c0a792fb9707d69cd7b53c17#commitcomment-139701810\n- Description: 🏜️🪨 🐛👳🧕🏻🗡🌏🌞🌕🐭More ⊃⋃⋂⪽ for your headtop\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd67bf63f8506b1104702f1becc8cbfdd81b7021eafa2b09d695a6be32e70d10a744a76a8b485c80cadb104e2ce000ed1664ad1fba0ec3f249d81388e158ca6d634e6b5a20c04495f94389f28bf6bfc9de0473bb544d631d30086c5e265b02dd637ff65657a92a8f49229d3641245a47724f7ce1acd762e9d41ded243b420d5398fd8c797fa19bcd22dcb7aaa95572e91d2c6972600a76a2524ce4f026880c162c4a2b45c8cb21dae7117e7a95073266b31 -->",
+  "package_name": "Dune",
+  "closed_at": "2024-05-02T12:23:09Z",
+  "title": "New package: Dune v0.1.0"
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2021-05-03T16:07:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 35967,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzMTM3MDAyMg==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to CORBITS. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-03T16:16:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35967#issuecomment-831370022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzMTQzNzYzMg==",
+      "author": {
+        "login": "cadojo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`[noblock]` This package name is similar to `CORBITS.jl`. That package is a wrapper for a `C` library. This package is a pure Julia package, which provides astrodynamics calculations. It's the (final) rename and refactor for `UnitfulAstrodynamics.jl`. If anyone has any comments or concerns about this new package, or rename, please let me know!",
+      "createdAt": "2021-05-03T18:14:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35967#issuecomment-831437632",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzMzk5NTE2MA==",
+      "author": {
+        "login": "cadojo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "`[noblock]` To give a bit more context for the name change, there are several other astrodynamics-related packages, including `SatelliteToolbox.jl`, `OrbitalTrajectories`, and currently un-registered `Astrodynamics.jl` and `AstroBase.jl`. \r\n\r\nMy package (currently named `Orbits.jl`) provides structures, calculations, propagations, and plotting for Restricted Two-body Problem orbits, Circular Restricted Three-body Problem orbits and N-body Problem orbits. It also provides some simple ephemeris interpolation, and Halo orbit, Lambert, and Kepler solvers.\r\n\r\nThis is to say, this package isn't specific to one sub-domain of astrodynamics, it's a general package for astrodynamics problems. At my highest aspiration (it's nowhere near this), this package is similar to Python's `poliastro`. I hope to add maneuver and mission planning features this coming year. \r\n\r\nHope the name is accepted, but of course open to other name suggestions & comments.",
+      "createdAt": "2021-05-07T01:38:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35967#issuecomment-833995160",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgzNTg0NzY3MQ==",
+      "author": {
+        "login": "cadojo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've renamed this package `GeneralAstrodynamics`, and I've added a PR [here](https://github.com/JuliaRegistries/General/pull/36377). This PR can be closed.",
+      "createdAt": "2021-05-09T17:21:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/35967#issuecomment-835847671",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Orbits\n- Repository: https://github.com/cadojo/Orbits.jl\n- Created by: @cadojo\n- Version: v0.9.1\n- Commit: 060237b8b7b1faff2c8e08f675e148061f57180e\n- Reviewed by: @cadojo\n- Reference: https://github.com/cadojo/Orbits.jl/commit/060237b8b7b1faff2c8e08f675e148061f57180e#commitcomment-50332514\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6d4588c36a1cbe7ffa7978874def51b245bcd3f86412cca3d588747f45923d87ed38af73b3702bfbe4be9db6194b5a72d4dd378944215bf1263d09bd47e70ad968f714be46714be0b223c20ba0ac989093a7996cf5d7b2d73ec07a0a8e0278b4a495151eb6ae65fd39586c4612601af2eed9942bcc6a4bd2f20f1e4040bbb39cc6a1393fc60002e5c7f0b3a5d919c3a16f3f58f6f86cdec76f68b33bbbd9ecbd9c628a356b6c1af12bbf662826221635f -->",
+  "package_name": "Orbits",
+  "closed_at": "2021-05-10T10:29:55Z",
+  "title": "New package: Orbits v0.9.1"
+}

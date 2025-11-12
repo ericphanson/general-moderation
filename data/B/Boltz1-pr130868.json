@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-05-13T15:19:20Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 130868,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86reyhb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 1 existing package.\n  1. Similar to Boltz. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.24 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-05-13T15:26:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130868#issuecomment-2876975195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86re4Ul",
+      "author": {
+        "login": "AntonOresten"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Automerge should fail since [Boltz.jl](https://github.com/LuxDL/Boltz.jl) is already registered with a similar name. The name 'Boltz1.jl' has been [approved by Avik](https://github.com/MurrellGroup/Boltz1.jl/issues/3#issuecomment-2876772641), author of Boltz.jl.\r\n\r\nTests are currently failing on GitHub's CI since it only has CPU, and the last registered version of [boltz](https://github.com/jwohlwend/boltz) seems to generally fail on CPU, but the package still loads and runs fine on GPU:\r\n\r\n![image](https://github.com/user-attachments/assets/bcf4819f-1e17-4401-8293-5ae21ff6207c)\r\n\r\nSee https://github.com/MurrellGroup/Boltz1.jl/issues/2 for an issue tracking this, with a link to the Python repo issue. It seems it's fixed on main, but they haven't yet registered a new version on PyPI. I could potentially point the version to their main, but it might not be stable. For GPU testing I could also ask the JuliaGPU folks for CI servers with GPUs.",
+      "createdAt": "2025-05-13T15:34:31Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130868#issuecomment-2876998949",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86riWEX",
+      "author": {
+        "login": "AntonOresten"
+      },
+      "authorAssociation": "NONE",
+      "body": "can be closed.\r\nnew PR: #130900 \r\nsee https://julialang.slack.com/archives/C6M4DQA5P/p1747166341838319",
+      "createdAt": "2025-05-13T20:48:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130868#issuecomment-2877907223",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86rjKe_",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/130900",
+      "createdAt": "2025-05-13T22:43:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/130868#issuecomment-2878121919",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Boltz1\n- Repository: https://github.com/MurrellGroup/Boltz1.jl\n- Created by: @AntonOresten\n- Version: v0.1.0\n- Commit: 0f29f43a3d213f7071754bacfd64609bfc6bfd28\n- Reviewed by: @AntonOresten\n- Reference: https://github.com/MurrellGroup/Boltz1.jl/commit/0f29f43a3d213f7071754bacfd64609bfc6bfd28#commitcomment-156928582\n- Description: Julia bindings for Boltz-1\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- Add exported `predict` function.\r\n- Add public `Boltz1.Schema` submodule.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6182f50ef05d0d15001eabfe10007324cc4744937804e9d43938516df4263d1e769642cb8b147f2f8fd10da9540f22048a7d082114011dddc1b41f54212a151b808157897ecc090dc365091680a0c69ffd98f06b054e7cb00c3205926f6e970e4ed6e62d449ea06e9d1746458f05e01406f19e2ab3d820e2a5305df77497d3b32ab6d508ca6770f2b7f38532379ee68c8041871b02fb4c242afca3716c40c685b7c91c3f554d36b76554faa380769ffaf -->",
+  "package_name": "Boltz1",
+  "closed_at": "2025-05-13T22:43:12Z",
+  "title": "New package: Boltz1 v0.1.0"
+}

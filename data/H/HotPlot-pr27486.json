@@ -1,0 +1,106 @@
+{
+  "created_at": "2021-01-07T01:18:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 27486,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NTgyMzA0Ng==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-07T01:22:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-755823046",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjA0NzIzMg==",
+      "author": {
+        "login": "KristofferC"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I tried to use this package, e.g. `plot_bar()` but it doesn't work:\r\n\r\n```jl\r\njulia> plot_bar()\r\nERROR: MethodError: no method matching PlotlyBase.Plot(::Array{Any,1}, ::PlotlyBase.Layout{Dict{Symbol,Any}})\r\nClosest candidates are:\r\n  PlotlyBase.Plot(::TT, ::TL, ::TF, ::Base.UUID, ::PlotlyBase.Style) where {TT<:(AbstractArray{var\"#s54\",1} where var\"#s54\"<:PlotlyBase.AbstractTrace), TL<:PlotlyBase.AbstractLayout, TF<:(AbstractArray{var\"#s55\",1} where var\"#s55\"<:PlotlyBase.PlotlyFrame)} at /home/kc/.julia/packages/PlotlyBase/NxSlF/src/PlotlyBase.jl:35\r\n  PlotlyBase.Plot(::AbstractArray{var\"#s13\",1} where var\"#s13\"<:PlotlyBase.AbstractTrace, ::Any) at /home/kc/.julia/packages/PlotlyBase/NxSlF/src/PlotlyBase.jl:60\r\n  PlotlyBase.Plot(::AbstractArray{var\"#s12\",1} where var\"#s12\"<:PlotlyBase.AbstractTrace, ::Any, ::AbstractArray{var\"#s81\",1} where var\"#s81\"<:PlotlyBase.PlotlyFrame; style) at /home/kc/.julia/packages/PlotlyBase/NxSlF/src/PlotlyBase.jl:60\r\n  ...\r\nStacktrace:\r\n [1] plot(::Array{Any,1}, ::Vararg{Any,N} where N; options::Dict{Any,Any}, kwargs::Base.Iterators.Pairs{Union{},Union{},Tuple{},NamedTuple{(),Tuple{}}}) at /home/kc/.julia/packages/PlotlyJS/m2Lzd/src/display.jl:145\r\n [2] plot(::Array{Any,1}, ::Vararg{Any,N} where N) at /home/kc/.julia/packages/PlotlyJS/m2Lzd/src/display.jl:145\r\n [3] plot_bar() at /home/kc/.julia/packages/HotPlot/JvD6w/src/plot_bar.jl:9\r\n [4] top-level scope at REPL[3]:1\r\n```\r\n\r\nHow is it meant to be used?",
+      "createdAt": "2021-01-07T11:02:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-756047232",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjMyMjI0OQ==",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "plot_x_y\r\n\r\nYou can look at the notebook/example.ipynb for example. All things there should work.\r\n\r\nI plan to add those missing functions gradually.",
+      "createdAt": "2021-01-07T19:14:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-756322249",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc1NjMzOTkxNA==",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "@fredrikekre , this one I hope to keep. plot_x_y and style works. Other functions are coming gradually.",
+      "createdAt": "2021-01-07T19:44:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-756339914",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3NDY2NzcyNQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2021-02-07T12:38:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-774667725",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc3ODc3MjIxMA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2021-02-14T12:39:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/27486#issuecomment-778772210",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HotPlot\n- Repository: https://github.com/KwatME/HotPlot.jl\n- Created by: @KwatME\n- Version: v0.1.0\n- Commit: b93e6a2956c3e0f099a25168f2dd5b9f8dddda04\n- Git reference: master",
+  "package_name": "HotPlot",
+  "closed_at": "2021-02-14T12:39:35Z",
+  "title": "New package: HotPlot v0.1.0"
+}

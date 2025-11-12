@@ -1,0 +1,120 @@
+{
+  "created_at": "2023-11-16T23:34:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 95468,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85sNlN-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-11-16T23:37:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1815499646",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sOxMJ",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Wouldn't a more descriptive and less generic name be better? DefaultKeywords?",
+      "createdAt": "2023-11-17T06:25:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1815810825",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sS5Es",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Or, because \r\n\r\n> Default.jl is a package to handle _default keyword arguments_ in Julia\r\n\r\n([emphasis in original](https://github.com/PdIPS/Default.jl/blob/15fc08fa72ccd6b98aec9a2ae95a348858d6e262/README.md))\r\n\r\nMaybe `DefaultKeywordArguments` is ideal? IIUC all public functionality is exported so users are not going to be typing the package name more than once in their code.\r\n\r\nDefaultKeywordArguments.jl is obviously a package to handle default keyword arguments in Julia and it's nice if the name makes the purpose of the package obvious.",
+      "createdAt": "2023-11-17T18:23:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1816891692",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85sVVyo",
+      "author": {
+        "login": "rafaelbailo"
+      },
+      "authorAssociation": "NONE",
+      "body": "DefaultKeywordArguments.jl seems appropriate, I will update the package.\r\n\r\nNew pull request at: https://github.com/JuliaRegistries/General/pull/95568",
+      "createdAt": "2023-11-18T15:10:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1817533608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vBfum",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-12-19T12:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1862663078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85veeNw",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-12-27T12:23:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/95468#issuecomment-1870259056",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Default\n- Repository: https://github.com/PdIPS/Default.jl\n- Created by: @rafaelbailo\n- Version: v1.0.0\n- Commit: 15fc08fa72ccd6b98aec9a2ae95a348858d6e262\n- Reviewed by: @rafaelbailo\n- Reference: https://github.com/PdIPS/Default.jl/issues/1#issuecomment-1815496866\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598b1653636ca990784c5ce037cfa34679d1bdb57a196248e9b030fbd77fe2dc3478e5d869af869b03590a017306e64d9a9e2339f97ac9bf7196fbe81ee0d30e9c0172e8fe69197f79bfd008aae4826319fd23832e629aeb4963c77a0e5b9e6e6debda9671bb4cb312fde9316ff0d02f58b -->",
+  "package_name": "Default",
+  "closed_at": "2023-12-27T12:23:16Z",
+  "title": "New package: Default v1.0.0"
+}

@@ -1,0 +1,593 @@
+{
+  "created_at": "2019-11-22T08:46:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "DilumAluthge",
+  "merged_at": null,
+  "pr_number": 5733,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1NzYxOTk4MQ==",
+      "author": {
+        "login": "dpsanders"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Maybe a package name like `MassSpectrometryData.jl` would be easier to discover?",
+      "createdAt": "2019-11-22T17:24:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-557619981",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1Nzg3OTQ5OQ==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "There is well known R package called mzR.  MS is the usual acronym for mass spectrometry. That's how I arrived to msJ. ",
+      "createdAt": "2019-11-24T11:24:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-557879499",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODc2MTYzMw==",
+      "author": {
+        "login": "ararslan"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I understand the desire for symmetry with R, which has a more free-for-all approach to package naming, but I really think this could do with an expanded name, per our naming guidelines. Even searching msr in Google only brings up \"Mountain Safety Research\" for me.",
+      "createdAt": "2019-11-26T18:33:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-558761633",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODgxNDc4OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Package naming guidelines: https://julialang.github.io/Pkg.jl/v1/creating-packages/#Package-naming-guidelines-1",
+      "createdAt": "2019-11-26T20:59:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-558814788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODgxNTM0OA==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "I checked the guidelines and changed the package name to capital letters (MSJ). I would like to keep that short name. There some types which are not public and it is easier to call for example MSJ.Precurso() that something like MassSpectrometryData.Precursor().\r\nActually if you google mzR, you get the right link in first occurences.\r\n\r\nBy the way, would you have any ideas how I could fix the automerge issue ?\r\nBest,\r\nAlex",
+      "createdAt": "2019-11-26T21:01:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-558815348",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3MDY4OA==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "MassSpectrometry seems like a good name, and more typical to Julia packages. Not even that long, so IMO the acronym is not needed.\r\n\r\nAnyway, do you want to add the bounds? https://github.com/bcbi/CompatHelper.jl might be of interest. [noblock]",
+      "createdAt": "2019-11-27T00:10:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-558870688",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2MTk3OTI1MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you want something even shorter, how about `MassSpec.jl`?",
+      "createdAt": "2019-12-05T05:42:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-561979251",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2Mzg4NDI5Nw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Name does not meet all of the following: starts with a capital letter, ASCII alphanumerics only, ends in lowercase\n- Name is not at least five characters long\n- Version number is not 0.0.1, 0.1.0, or 1.0.0\n- The following dependencies do not have a compat entry that has an upper bound: Codecs, Combinatorics, DSP, DataStructures, FFTViews, Interpolations, LightXML, LsqFit, Plots, RecipesBase, julia. You may find [CompatHelper](https://github.com/bcbi/CompatHelper.jl) helpful for keeping your compat entries up-to-date.Note: If your package works for the current version `x.y.z` of a dependency `foo`, then a compat entry `foo = x.y.z` implies a compatibility upper bound for packages following semver. You can additionally include earlier versions your package is compatible with. See https://julialang.github.io/Pkg.jl/v1/compatibility/ for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2019-12-10T06:24:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-563884297",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2Mzg4NDYzNg==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I recommend that you add the upper-bounded compat entries as requested by the automerge bot.\r\n\r\nYou may find [CompatHelper.jl](https://github.com/bcbi/CompatHelper.jl) helpful.\r\n\r\n[noblock]",
+      "createdAt": "2019-12-10T06:25:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-563884636",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2Mzg4NTg1OA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From the naming guidelines:\r\n\r\n> In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\nSo I really don’t think that MSJ is a good name.\r\n\r\nI know that we have some three-letter package names already registered in the General registry. But I don’t necessarily think it was a good idea to register those. Regardless, I don’t think we should add any more three letter package names unless it is a very well known name or acronym.\r\n\r\nI think `MassSpec.jl`, `MassSpectra.jl`, and `MassSpectrometry.jl` are three very good options.",
+      "createdAt": "2019-12-10T06:29:34Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-563885858",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2NDU4NjI0MA==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "I am sorry that the name I picked  does not allow me to register the package. I selected a name that could be remembered by a potential mass spec user. Now, after discussing with some colleagues, I switched to `MSj`. This is easy to remember as MS is a widely used acronym in the field.",
+      "createdAt": "2019-12-11T15:04:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-564586240",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI2MjYwOA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is my opinion: we should not register any more new packages with 3 letter names unless the acronym is unambiguous and well-known.\r\n\r\nSo I still think something like `MassSpec.jl` is much better.\r\n\r\nhttps://julialang.github.io/Pkg.jl/v1/creating-packages/index.html#Package-naming-guidelines-1\r\n\r\n> Avoid jargon. In particular, avoid acronyms unless there is minimal possibility of confusion.\r\n> It's ok to say USA if you're talking about the USA.\r\n> It's not ok to say PMA, even if you're talking about positive mental attitude.\r\n\r\n> Err on the side of clarity, even if clarity seems long-winded to you.\r\n> RandomMatrices is a less ambiguous name than RndMat or RMT, even though the latter are shorter.\r\n\r\n@StefanKarpinski @KristofferC @fredrikekre What do you think?",
+      "createdAt": "2019-12-22T13:36:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568262608",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI5ODQ3Ng==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand. I didn't pay enough attention to the guidelines. However, MassSpec.jl is already registered (https://github.com/JuliaSpect/MassSpec.jl) and I would like to avoid ending up with a long package name. Other options such as MassSpectrometry or so would be quite similar to MassSpec.",
+      "createdAt": "2019-12-22T19:58:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568298476",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI5OTA4Mw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Here are some options:\r\n\r\n- `MassSpec2.jl`\r\n- `MassSpecX.jl`\r\n- `MassSpecData.jl`\r\n- `MassSpecXml.jl`\r\n\r\nJust for reference, in the registry we have both:\r\n- `PGFPlots.jl`\r\n- `PGFPlotsX.jl`",
+      "createdAt": "2019-12-22T20:08:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568299083",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODI5OTEzNQ==",
+      "author": {
+        "login": "dpsanders"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "That preexisting package seems to have almost nothing in it. Maybe you can combine the functionality and reuse that name? ",
+      "createdAt": "2019-12-22T20:08:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568299135",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODM5NzY4Mw==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "@DilumAluthge , this exactly what I would like to avoid. I will try to give you clearer explanations about my choice.\r\nThis package is made for mass spectrometry users not for Julia package maintainers. At the moment, its main goal is to treat tandem mass spectrometry data. For the targeted audience, tandem mass spectrometry is abbreviated as MS/MS or MS^{2}. Multistage tandem MS is referred to as MS^{n} (https://en.wikipedia.org/wiki/Tandem_mass_spectrometry). Hence, the name of the package refers to tandem MS and to Julia with the letter J. I believe, this name might be easily remembered by the potential user's.  Other well-known packages are mzR (https://bioconductor.org/packages/release/bioc/html/mzR.html) and OpenMS (https://www.openms.de/) and both uses established acronyms in the field.\r\nThis explains why I believe anything like MassSpec of MassSpecSomehting is not a good name.\r\n ",
+      "createdAt": "2019-12-23T08:15:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568397683",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU2ODU0MzIxMw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Unfortunately I cannot support this package name.\r\n\r\nIf another registry maintainer wants to merge this PR, I will not stop them. But I cannot merge this PR with the current name `MSJ`.",
+      "createdAt": "2019-12-23T18:09:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-568543213",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MDg4NzcxMQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Here are four additional suggestions for names:\r\n- `MSData.jl`\r\n- `MsData.jl`\r\n- `MZData.jl`\r\n- `MzData.jl`",
+      "createdAt": "2020-01-05T08:01:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-570887711",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MTg0OTM3Nw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’ll leave this open for two more weeks. If another registry maintainer has not merged it by then, I’ll close this.",
+      "createdAt": "2020-01-08T01:24:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-571849377",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3MjQ5ODQ3MQ==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your suggestions. I'll get the opinion of colleagues on that. ",
+      "createdAt": "2020-01-09T10:34:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-572498471",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NDg1MzY0NA==",
+      "author": {
+        "login": "Balinus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What about `OpenMSJ.jl` ? ",
+      "createdAt": "2020-01-15T20:59:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-574853644",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NDk4NTcyNw==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> What about `OpenMSJ.jl` ?\r\n\r\nSure.",
+      "createdAt": "2020-01-16T05:08:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-574985727",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NDk4NjM0Mw==",
+      "author": {
+        "login": "dpsanders"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I personally still would prefer say OpenMassSpec.jl.  It makes it so much clearer to everybody to understand. ",
+      "createdAt": "2020-01-16T05:11:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 4
+          }
+        },
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-574986343",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NDk4NjcxNQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I personally still would prefer say OpenMassSpec.jl. It makes it so much clearer to everybody to understand.\r\n\r\nI agree.",
+      "createdAt": "2020-01-16T05:13:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-574986715",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NTEzMTIzOA==",
+      "author": {
+        "login": "Balinus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I'm not affiliated, I was just proposing to the authors a solution that would be adequate for both parties 😁",
+      "createdAt": "2020-01-16T12:32:13Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-575131238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NTE2ODYzNw==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks that could be an option as well. MStools (in ref. to ClimateTools could also do it ).\r\nI'm still waiting for some feedback.",
+      "createdAt": "2020-01-16T14:11:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-575168637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NTE5Njk1NA==",
+      "author": {
+        "login": "dpsanders"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "What we are objecting to is the abbreviation (MS). E.g. This is not a package for studying multiple sclerosis (also abbreviated MS). Abbreviations are just too confusing.",
+      "createdAt": "2020-01-16T15:13:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-575196954",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3NTM5NDU4OQ==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand that. However, some packages name are not related to their functionality either. Googling \"Gadfly\" and \"Winston\" doesn't lead to anything related to computer graphics, just like  \"MS\" as you proved it. However, the latter is meaningful for any mass spectrometrist, which the targeted audience. Now when I google \"MS analysis\",  I get : Mass spectrometry - Wikipedia.",
+      "createdAt": "2020-01-16T23:26:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-575394589",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Njc2ODU5OA==",
+      "author": {
+        "login": "ajgiuliani"
+      },
+      "authorAssociation": "NONE",
+      "body": "After asking some colleagues it seems that MSTools is preferred.\r\nSo would you agree to register this package name ?\r\n",
+      "createdAt": "2020-01-21T16:39:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-576768598",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Njc2OTk3NA==",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It doesn't seem like a great name to be honest (Microsoft Tools? Multiple Sclerosis Tools? Management Systems Tools?), but you've already gotten a lot of pushback here and ultimately, it's your call what you want to name your package, so if that's what you want, go for it.",
+      "createdAt": "2020-01-21T16:42:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-576769974",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Njk5Nzc2MA==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> After asking some colleagues it seems that MSTools is preferred.\r\n> So would you agree to register this package name ?\r\n\r\nI’m fine with `MSTools.jl`.",
+      "createdAt": "2020-01-22T04:04:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-576997760",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU3Njk5Nzg4MQ==",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I’ll close this PR, and then you can make a new package registration once you have renamed the package.",
+      "createdAt": "2020-01-22T04:04:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5733#issuecomment-576997881",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MSJ\n- Repository: https://github.com/ajgiuliani/MSJ.jl\n- Created by: @ajgiuliani\n- Version: v0.3.0\n- Commit: 188a814734fb820d95a60ee674db07928eebcd85\n- Reviewed by: @ajgiuliani\n- Reference: https://github.com/ajgiuliani/MSJ.jl/commit/188a814734fb820d95a60ee674db07928eebcd85#commitcomment-36148532\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae48b921996ac808d101afeae10918fa42a17ad10adc4544697d05fdb4e1d0b9ffde2e575dc6757f63b787d5d6ed96c8e28ed45dc56b8204a26815bd2de7716b2a32e9d772aef7a4a52f64bd2abbb39bba57b3aee0932b56f803341e1d424f32fee10e89aa3340795acc175e12b655199f8775850373756f80030dd080ab434b50b0a644a297fd8d27f2bb121cf223b2c3fec9bc24b548ff67a070c2676b84f041e335bf2ff5398b4aea1111805a2179c28 -->",
+  "package_name": "MSJ",
+  "closed_at": "2020-01-22T04:04:48Z",
+  "title": "New package: MSJ v0.3.0"
+}

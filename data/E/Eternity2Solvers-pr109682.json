@@ -1,0 +1,136 @@
+{
+  "created_at": "2024-06-24T16:11:36Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 109682,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86CWh04",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to load the package (i.e. `import Eternity2Solvers` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-24T16:16:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2186943800",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CY8_d",
+      "author": {
+        "login": "jwortmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello, I can't reproduce the precompile failures of the GameZero and SimpleDirectMediaLayer dependencies using Julia 1.10.4 on Windows 11.\r\n\r\n~~However, I noticed that there is another blocking problem which prevents the dependencies to be loaded when my package is loaded in an arbitrary environment - this didn't manifest in my dev environment where I used `using Eternity2Solvers` directly from within my package directory. I will try to find a workaround for that, but I guess this PR could be closed for now.~~\r\n\r\nAnd if anybody knows how to fix the precompile failures, tips would be welcome!",
+      "createdAt": "2024-06-24T23:08:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2187579357",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CzKmg",
+      "author": {
+        "login": "jwortmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "According to the open issue at https://github.com/JuliaMultimedia/SimpleDirectMediaLayer.jl/issues/80 it seems that the SimpleDirectMediaLayer.jl dependency is currently incompatible with Julia 1.10 on Ubuntu. Is there anything I could do so that my package could still be added to the registry? I guess there is no mechanism to restrict packages to certain operating systems, e.g. only Windows?",
+      "createdAt": "2024-06-27T11:37:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2194450848",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86EgSVQ",
+      "author": {
+        "login": "jwortmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I decided to rename the package to Eternity2Puzzles.jl and initiated a new PR #110870. So this PR here can be closed now (I'm unable to do that myself because it was opened by the registrator bot).\r\n\r\nUnfortunately the CI runner indicates that the SimpleDirectMediaLayer.jl dependency is still broken on Ubuntu (failed to precompile). Does it mean that the registration of my package is blocked indefinitely, and that other packages using SimpleDirectMediaLayer.jl as a dependency (e.g. GameZero.jl) are blocked from doing new releases? I would appreciate any guidance about how to proceed.",
+      "createdAt": "2024-07-11T14:15:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2223056208",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Eimpo",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You could upper bound Julia to 1.9 for now, but it's hardly ideal. Otherwise I don't know. There is always an option of manual merges, but that's also not ideal.",
+      "createdAt": "2024-07-11T18:50:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2223663720",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Ffgm8",
+      "author": {
+        "login": "Kyjor"
+      },
+      "authorAssociation": "NONE",
+      "body": "@jwortmann , I know this is closed now, but this issue was fixed this morning\r\n",
+      "createdAt": "2024-07-19T16:51:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2239629756",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Flccm",
+      "author": {
+        "login": "jwortmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you very much, I pushed an update in my other PR and indeed the package is successfully registered now. 👍 \r\n\r\nAs a sidenote @Kyjor, it was actually reading one of your forum threads what motivated me to create this package. So thanks for the inspiration :)",
+      "createdAt": "2024-07-20T15:32:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2241185574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Fm8vC",
+      "author": {
+        "login": "Kyjor"
+      },
+      "authorAssociation": "NONE",
+      "body": "@jwortmann Awesome, glad you were finally able to get it registered. \r\n\r\nAnd that makes me so happy to hear! :) When I see things like that, it motivates me to keep doing what I'm doing",
+      "createdAt": "2024-07-21T11:45:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109682#issuecomment-2241579970",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Eternity2Solvers\n- Repository: https://github.com/jwortmann/Eternity2Solvers.jl\n- Created by: @jwortmann\n- Version: v0.1.0\n- Commit: fe4f36481a36ea214034777afbe0a62b647fa20a\n- Reviewed by: @jwortmann\n- Reference: https://github.com/jwortmann/Eternity2Solvers.jl/commit/fe4f36481a36ea214034777afbe0a62b647fa20a#commitcomment-143599575\n- Description: An implementation of the Eternity II puzzle in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60de81f2b1d1c3972aae27b3459550b4a7e4ef9b6ecc21d3091d52525cbcedd6968f04b2e134ceef637ea07c5ec1dd72ca23e4d5263a97ba67f419070ffe8794354bd0b4d81bc291ff5fb2632014f202b133d0e094ffc160be12a05b8a1c6216dd247551007fa2e12076bce499a132100475255f196f4f5df267ec1159237c0132eb061cb5e663929cc798d2cd21cfde3c0ea4c7bdf2e63013b83f27f51d843d7cfefdf898a61d9bd641eb204c6e7b3ec -->",
+  "package_name": "Eternity2Solvers",
+  "closed_at": "2024-07-11T18:50:26Z",
+  "title": "New package: Eternity2Solvers v0.1.0"
+}

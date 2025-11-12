@@ -1,0 +1,128 @@
+{
+  "created_at": "2024-12-06T22:35:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 120874,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86Wd4pm",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Package name similar to 2 existing packages.\n  1. Similar to DZOptimization. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.34 is at or below cutoff of 2.50.\n  2. Similar to Optimization. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-12-06T22:41:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2524416614",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86WftTP",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi, congrats on the new package! Can I suggest a more specific name, like QualityDiversityOptimization?",
+      "createdAt": "2024-12-07T05:09:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2524894415",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Wg7sa",
+      "author": {
+        "login": "p-w-rs"
+      },
+      "authorAssociation": "NONE",
+      "body": "I don't really like the idea of such a long package name. The one it is similar to ([DZOptimization.jl](https://github.com/dzhang314/DZOptimization.jl)) the \"DZ\" literally is the users initials, where here QD is the common abbreviation in the field and widely used in published papers. QD is also sometimes called  illumination, so would Illumination.jl could work but I think it would be less searchable. [noblock]",
+      "createdAt": "2024-12-07T15:43:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2525215514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86WhATL",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Package registration rules used to be much less strict, which is not necessarily a good thing.\nQD may be the standard abbreviation in your field, but you want to make it clear also to people outside your field. I'm in operations research, so not exactly a stranger to optimization, and QD means nothing to me. Plus there is the searchability aspect you mentioned.\nLonger, more explicit package names are never a bad thing and they are part of the official guidelines. Users can always \"import as\" if they find it too long.",
+      "createdAt": "2024-12-07T16:23:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2525234379",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86WhBD5",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "See the guidelines here: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules",
+      "createdAt": "2024-12-07T16:32:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2525237497",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ZojuH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-08T12:23:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2577546119",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86as0FX",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-16T12:23:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/120874#issuecomment-2595438935",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QDOptimization\n- Repository: https://github.com/p-w-rs/QDOptimization.jl\n- Created by: @p-w-rs\n- Version: v0.1.0\n- Commit: 3e54061acd89f02be945fa846c319ad216ae804b\n- Git reference: HEAD",
+  "package_name": "QDOptimization",
+  "closed_at": "2025-01-16T12:23:50Z",
+  "title": "New package: QDOptimization v0.1.0"
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-05-24T09:28:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 107554,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85-5y1V",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Combinatorics, ITensorMPS, ITensors, NBInclude, PastaQ, Plots, ProgressBars, StatsBase\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-24T09:35:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107554#issuecomment-2129079637",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-5z8f",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Why not `RandomMeasurements` – or, I would have said `RandomQuantumMeasurements` is even better. But that lead me to find [QuantumMeasurements.jl](https://github.com/pasqal-io/QuantumMeasurements.jl). How does this package compare to the existing package? Maybe there would be an opportunity to combine efforts here?",
+      "createdAt": "2024-05-24T09:38:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107554#issuecomment-2129084191",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85-6FC1",
+      "author": {
+        "login": "bvermersch"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks Michael for the quick feedback! Yes, the package is quite different,  and we shall make it clear in the updated documentation. I will make another attempt for registering the package as soon as this is ready. In the mean time, any other feedback is highly appreciated. Thanks!\r\n",
+      "createdAt": "2024-05-24T10:07:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107554#issuecomment-2129154229",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CO_c4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-06-23T12:23:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107554#issuecomment-2184967992",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86DCyH0",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-06-30T12:23:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/107554#issuecomment-2198544884",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: RandomMeas\n- Repository: https://github.com/bvermersch/RandomMeas.jl\n- Created by: @bvermersch\n- Version: v0.1.0\n- Commit: 3738a4e839e2e6c715409a65ce95d3317e384b04\n- Git reference: HEAD\n- Description: Julia codes for randomized measurements",
+  "package_name": "RandomMeas",
+  "closed_at": "2024-06-30T12:23:13Z",
+  "title": "New package: RandomMeas v0.1.0"
+}

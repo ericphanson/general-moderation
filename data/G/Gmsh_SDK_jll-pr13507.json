@@ -1,0 +1,76 @@
+{
+  "created_at": "2020-04-23T03:43:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "staticfloat",
+  "merged_at": null,
+  "pr_number": 13507,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxODE1OTY3OQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- Version number is not allowed to contain prerelease or build data\n- I was not able to load the package (i.e. `import Gmsh_SDK_jll` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2020-04-23T03:45:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13507#issuecomment-618159679",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxODE2MDk4MQ==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ideally, it should go to JuliaBinaryWrappers through [Yggdrasil](https://github.com/JuliaPackaging/Yggdrasil/). However, building Gmsh was painful and my experience was not successful. It requires too many dependencies and some are not available at hand. So, I thought I could just wrap the official SDK and did some small tweaks to make it work on windows on Julia 1.4, in such case to make life easier. So I have `SDK` inside the name, in case someone else succeeds to compile Gmsh itself someday. Please let me know if it can stay here or move.\r\n",
+      "createdAt": "2020-04-23T03:51:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13507#issuecomment-618160981",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxODU2NDUzOA==",
+      "author": {
+        "login": "shipengcheng1230"
+      },
+      "authorAssociation": "NONE",
+      "body": "Please delete this PR. Until it carries `libglu` itself, it will not pass the AutoMerge.",
+      "createdAt": "2020-04-23T18:16:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13507#issuecomment-618564538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDYxODg0MTE4NQ==",
+      "author": {
+        "login": "staticfloat"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you're having issues, I suggest opening a PR against Yggdrasil; even half-baked, we can help you work through the issues there.",
+      "createdAt": "2020-04-24T07:03:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/13507#issuecomment-618841185",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Gmsh_SDK_jll\n- Repository: https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl\n- Created by: @shipengcheng1230\n- Version: v4.5.6+0\n- Commit: 5fab4898315e9d4f1d7ce6f1a4ca5a8cc5f58fbf\n- Reviewed by: @shipengcheng1230\n- Reference: https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/commit/5fab4898315e9d4f1d7ce6f1a4ca5a8cc5f58fbf#commitcomment-38683441\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae467563724c8c8be404fd3375a68d8bac8b5fbc7741ce0c7980d924882ccc2199d524aa93e8a3c965cd343ae5317cfb55af4690b1652b1b4f4e9abcf9ff39ae7d1af34b91be5f05bb278679a0775709bdd37cad4484134d82b4e4ad63a7cb47abd53db5ee58e8a051637a716fdd037176595ec80bb0553b2cb430992a2539bb5928d33ba2c1654f47b5373624f023cbb8ade790a7c7a2999ec13bd24cc23c759e30c0d64173a28f7c9a61fd2553a66fb52a638cbfce3fe7f8eea647787713b5b16 -->",
+  "package_name": "Gmsh_SDK_jll",
+  "closed_at": "2020-04-24T07:03:57Z",
+  "title": "New package: Gmsh_SDK_jll v4.5.6+0"
+}

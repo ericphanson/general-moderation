@@ -1,0 +1,162 @@
+{
+  "created_at": "2019-11-24T05:29:45Z",
+  "review_comments": [
+    {
+      "id": 322299769,
+      "node_id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzIyMjk5NzY5",
+      "user": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period has elapsed.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\napproved_pr_head_commit_sha=\"8aee0ab6884d09d2bca4b8886fc8c60a2dfff125\"\n--->\n",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/5806#pullrequestreview-322299769",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/5806",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/5806#pullrequestreview-322299769"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/5806"
+        }
+      },
+      "submitted_at": "2019-11-25T14:05:50Z",
+      "commit_id": "8aee0ab6884d09d2bca4b8886fc8c60a2dfff125"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "staticfloat",
+  "merged_at": null,
+  "pr_number": 5806,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1Nzg1OTUwOQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the following guidelines for auto-merging:\n\n- The following dependencies do not have a compat entry that has an upper bound: CodecZlib, HTTP, JSON, Revise\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->",
+      "createdAt": "2019-11-24T05:31:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-557859509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1ODg3MjI3Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe StackOverflow instead? Thats how you capitalize it in the readme.",
+      "createdAt": "2019-11-27T00:17:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-558872277",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTU2MDk1NA==",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I did what you suggested, but now I get \r\n\r\n```\r\njulia> using StackOverflow\r\nERROR: ArgumentError: Package StackOverflow [1a8df32f-26ad-40b8-8029-212bc012bd57] is required but does not seem to be installed:\r\n - Run `Pkg.instantiate()` to install all recorded dependencies.\r\n\r\nStacktrace:\r\n [1] _require(::Base.PkgId) at ./loading.jl:993\r\n [2] require(::Base.PkgId) at ./loading.jl:922\r\n [3] require(::Module, ::Symbol) at ./loading.jl:917\r\n```\r\n\r\nWhich makes no sense to me at all since it shows up when I do `] st`. ",
+      "createdAt": "2019-11-28T16:58:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-559560954",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTU2NTMzMA==",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yeah, this broke it, but I don't understand why.\r\n",
+      "createdAt": "2019-11-28T17:16:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-559565330",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTU2NTQyMg==",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "```julia\r\njulia> pwd()\r\n\"/Users/logankilpatrick\"\r\n\r\n(v1.3) pkg> st\r\n    Status `~/.julia/environments/v1.3/Project.toml`\r\n  [c52e3926] Atom v0.11.3\r\n  [944b1d66] CodecZlib v0.6.0\r\n  [a93c6f00] DataFrames v0.19.4\r\n  [cd3eb016] HTTP v0.8.8\r\n  [682c06a0] JSON v0.21.0\r\n  [e5e0dc1b] Juno v0.7.2\r\n  [14b8a8f1] PkgTemplates v0.6.3\r\n  [295af30f] Revise v2.3.1\r\n→ [1a8df32f] StackOverflow v0.1.0 [`~/.julia/dev/StackOverflow`]\r\n┌ Warning: Some packages (indicated with a red arrow) are not downloaded, use `instantiate` to instantiate the current environment\r\n└ @ Pkg.Display /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.3/Pkg/src/Display.jl:233\r\n\r\n(v1.3) pkg> activate StackOverflow\r\nActivating environment at `~/.julia/dev/StackOverflow/Project.toml`\r\n\r\n(StackOverflow) pkg> instanitate\r\nERROR: Could not determine command\r\n\r\n(StackOverflow) pkg> instantiate\r\n  Updating registry at `~/.julia/registries/General`\r\n  Updating git-repo `https://github.com/JuliaRegistries/General.git`\r\n  Updating registry at `~/.julia/registries/JuliaPOMDP`\r\n  Updating git-repo `https://github.com/JuliaPOMDP/Registry`\r\n Resolving package versions...\r\n  Updating `~/.julia/dev/StackOverflow/Project.toml`\r\n  [944b1d66] + CodecZlib v0.6.0\r\n  [cd3eb016] + HTTP v0.8.8\r\n  [682c06a0] + JSON v0.21.0\r\n  Updating `~/.julia/dev/StackOverflow/Manifest.toml`\r\n  [b99e7846] + BinaryProvider v0.5.8\r\n  [944b1d66] + CodecZlib v0.6.0\r\n  [cd3eb016] + HTTP v0.8.8\r\n  [83e8ac13] + IniFile v0.5.0\r\n  [682c06a0] + JSON v0.21.0\r\n  [739be429] + MbedTLS v0.7.0\r\n  [69de0a69] + Parsers v0.3.10\r\n  [3bb67fe8] + TranscodingStreams v0.9.5\r\n  [2a0f44e3] + Base64 \r\n  [ade2ca70] + Dates \r\n  [8ba89e20] + Distributed \r\n  [b77e0a4c] + InteractiveUtils \r\n  [8f399da3] + Libdl \r\n  [56ddb016] + Logging \r\n  [d6f4376e] + Markdown \r\n  [a63ad114] + Mmap \r\n  [de0858da] + Printf \r\n  [9a3f8284] + Random \r\n  [ea8e919c] + SHA \r\n  [9e88b42a] + Serialization \r\n  [6462fe0b] + Sockets \r\n  [8dfed614] + Test \r\n  [4ec0a83e] + Unicode \r\n\r\njulia> using StackOverflow\r\nERROR: ArgumentError: Package StackOverflow [1a8df32f-26ad-40b8-8029-212bc012bd57] is required but does not seem to be installed:\r\n - Run `Pkg.instantiate()` to install all recorded dependencies.\r\n\r\nStacktrace:\r\n [1] _require(::Base.PkgId) at ./loading.jl:993\r\n [2] require(::Base.PkgId) at ./loading.jl:922\r\n [3] require(::Module, ::Symbol) at ./loading.jl:917\r\n\r\njulia> pwd()\r\n\"/Users/logankilpatrick\"\r\n\r\njulia> cd(\".julia/dev/StackOverflow\")\r\n\r\njulia> pwd()\r\n\"/Users/logankilpatrick/.julia/dev/StackOverflow\"\r\n\r\njulia> using StackOverflow\r\nERROR: ArgumentError: Package StackOverflow [1a8df32f-26ad-40b8-8029-212bc012bd57] is required but does not seem to be installed:\r\n - Run `Pkg.instantiate()` to install all recorded dependencies.\r\n\r\nStacktrace:\r\n [1] _require(::Base.PkgId) at ./loading.jl:993\r\n [2] require(::Base.PkgId) at ./loading.jl:922\r\n [3] require(::Module, ::Symbol) at ./loading.jl:917\r\n\r\njulia> pwd()\r\n\"/Users/logankilpatrick/.julia/dev/StackOverflow\"\r\n\r\n(StackOverflow) pkg> st\r\nProject StackOverflow v0.1.0\r\n    Status `~/.julia/dev/StackOverflow/Project.toml`\r\n  [944b1d66] CodecZlib v0.6.0\r\n  [cd3eb016] HTTP v0.8.8\r\n  [682c06a0] JSON v0.21.0\r\n\r\n(StackOverflow) pkg> activate\r\nActivating environment at `~/.julia/environments/v1.3/Project.toml`\r\n\r\n(v1.3) pkg> st\r\n    Status `~/.julia/environments/v1.3/Project.toml`\r\n  [c52e3926] Atom v0.11.3\r\n  [944b1d66] CodecZlib v0.6.0\r\n  [a93c6f00] DataFrames v0.19.4\r\n  [cd3eb016] HTTP v0.8.8\r\n  [682c06a0] JSON v0.21.0\r\n  [e5e0dc1b] Juno v0.7.2\r\n  [14b8a8f1] PkgTemplates v0.6.3\r\n  [295af30f] Revise v2.3.1\r\n→ [1a8df32f] StackOverflow v0.1.0 [`~/.julia/dev/StackOverflow`]\r\n┌ Warning: Some packages (indicated with a red arrow) are not downloaded, use `instantiate` to instantiate the current environment\r\n└ @ Pkg.Display /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.3/Pkg/src/Display.jl:233\r\n\r\n```",
+      "createdAt": "2019-11-28T17:16:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-559565422",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTg1MzM1Mg==",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Per https://github.com/logankilpatrick/StackOverflow.jl/commit/0d10c88ebd2ca92e2bc27928d7f8ab6fefdd3d7a\r\n\r\nThis is now ready to merge @fredrikekre Thanks for pointing the issue out. ",
+      "createdAt": "2019-11-29T17:42:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-559853352",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDU1OTk5ODAwNA==",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@fredrikekre can you close this PR. It's failing since I renamed it. ",
+      "createdAt": "2019-11-30T17:14:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/5806#issuecomment-559998004",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: StackOverflow\n- Repository: https://github.com/logankilpatrick/StackOverflow.jl\n- Created by: @logankilpatrick\n- Version: v0.1.0\n- Commit: 3c07039b65851264809688605b01f120aeabcc1d\n- Reviewed by: @logankilpatrick\n- Reference: https://github.com/logankilpatrick/StackOverflow.jl/commit/3c07039b65851264809688605b01f120aeabcc1d#commitcomment-36204675\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae483a0fbe3196f9857cc0dc5350f7183752943e7767813a362062de3ec62ed9bd7958d7691f09b7136306e6c5192ab50d1f2046d656df0a7eed80c578190cbfaf8a4a5df544b6dbcdf98887293bc0ad42dc43a606532ec7de474ca152a33ff7ab664c0e32292e668a5a778ba1d4b7a96d44359bb1cb176073d3e50d30375f81c51ba9dbceef820fa8afcbf93d3bcb5260c1e70844c42461ec89b6f20f5f3efb034bff058c8606591d224df31b0f91d2b108d63e797c1bcc2ce216b70a7a8dffca8 -->",
+  "package_name": "Stackoverflow",
+  "closed_at": "2019-11-30T23:17:53Z",
+  "title": "New package: Stackoverflow v0.1.0"
+}

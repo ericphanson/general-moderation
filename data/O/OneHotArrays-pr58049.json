@@ -1,0 +1,166 @@
+{
+  "created_at": "2022-04-06T17:28:44Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 58049,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85BACyL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-04-06T17:32:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1090530443",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BFrYj",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "There is also https://github.com/cossio/OneHot.jl, which is already registered. Would it make sense to merge the two into a single package?",
+      "createdAt": "2022-04-07T17:26:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092007459",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BFy4z",
+      "author": {
+        "login": "darsnack"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nDo you mean merge OneHotArrays.jl into OneHot.jl?",
+      "createdAt": "2022-04-07T17:59:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092038195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BF-DW",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Given that OneHot.jl was registered first, maybe that's the easiest solution? I'd be happy take a PR, or give you commit permission on OneHot.jl",
+      "createdAt": "2022-04-07T18:44:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092083926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BGAhf",
+      "author": {
+        "login": "darsnack"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nDo you care about backwards compat for OneHot.jl? OneHotArrays.jl has a different underlying implementation. I don't mind merging...though I do think OneHotArrays is a clearer name.\r\n\r\ncc @mcabbott @ToucheSir @CarloLucibello for thoughts on this",
+      "createdAt": "2022-04-07T18:56:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092094047",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BGCJJ",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Not really, can do a breaking release of OneHot.jl.\r\nAlthough the name OneHotArrays is more explicit, right now if someone tries  to install it they will be presented with OneHot first.\r\n\r\nThe implementations are not that different. Even the constructor of `OneHotArray` has the same signature in both cases. Though I wonder you put `L` (the number of categories?) as part of the type?",
+      "createdAt": "2022-04-07T19:04:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092100681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85BGCp3",
+      "author": {
+        "login": "ToucheSir"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nI don't have a particular preference for the path to take here, but I agree that OneHotArrays is clearer unless we plan to add more functionality that is not related to the array type in the future.",
+      "createdAt": "2022-04-07T19:06:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1092102775",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85CyCUK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-05-08T12:48:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1120412938",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DK6dl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2022-05-15T12:55:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1126934373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85DK7im",
+      "author": {
+        "login": "cossio"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I forgot about this. I guess there is also nothing wrong with having both OneHotArrays.jl and OneHot.jl registered.",
+      "createdAt": "2022-05-15T13:12:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/58049#issuecomment-1126938790",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OneHotArrays\n- Repository: https://github.com/FluxML/OneHotArrays.jl\n- Created by: @darsnack\n- Version: v0.1.0\n- Commit: d44a239928bdb14517cdb9c1963d1deeed31c714\n- Reviewed by: @darsnack\n- Reference: https://github.com/FluxML/OneHotArrays.jl/commit/d44a239928bdb14517cdb9c1963d1deeed31c714#commitcomment-70630772\n- Description: Memory efficient one-hot array encodings\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd668156cf3b9b57d0ec8adf8be9a46a7482761b889e2b12d6e8312f3fa636f8c897291b1e999593acc1ce4b9acd41df10ef047724ec52c0137bb6a33b1a0509143c22314dd858c3ddb8ad37842438cfae1e11d7492465398690a0b4379d001dafd4779b4252b2a33c4a4a2020a48b0ab9fd38d8a7d20a333037c2ca624624a55167cecf922b5ca557b4e5b432ae49be759b3da8042735253195ed5fb91cd39fa2e0ab13b52e3e073410e858404536d56eb -->",
+  "package_name": "OneHotArrays",
+  "closed_at": "2022-05-15T12:55:09Z",
+  "title": "New package: OneHotArrays v0.1.0"
+}

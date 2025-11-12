@@ -1,0 +1,91 @@
+{
+  "created_at": "2021-03-17T08:48:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 32155,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMDkwOTU1NA==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-03-17T08:51:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32155#issuecomment-800909554",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjIzNTc0MA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dm3 thanks for your package!  After [renaming the repository](https://docs.github.com/en/github/administering-a-repository/renaming-a-repository) and adding the missing compat version for julia, trigger again registration without changing the version number, and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2021-03-18T19:39:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32155#issuecomment-802235740",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjU5NTIxMQ==",
+      "author": {
+        "login": "dm3"
+      },
+      "authorAssociation": "NONE",
+      "body": "@giordano hey - I've renamed the repo and added `[compat]`. However I've also re-created the 0.1.0 tag to point to the latest commit which seems to have broken the registration process. Registrator complains the tag already exists. Should I re-create the tag on the previous commit or is there another way to resume the registration?",
+      "createdAt": "2021-03-19T06:39:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32155#issuecomment-802595211",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMjYwMjgwNA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You should _never_ manually create git tags, especially not _before_ actual registration, because maybe you need to fix something and then you'd have a mismatch. Which is exactly what happened here. Delete the git tag and try again. If you use [TagBot](https://github.com/JuliaRegistries/TagBot) it'll automatically create a git tag for you _after_ a successful registration\r\n\r\n[noblock] ",
+      "createdAt": "2021-03-19T06:58:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32155#issuecomment-802602804",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDgwMzQ0MjQwMw==",
+      "author": {
+        "login": "dm3"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've created a registration request with a 0.1.1 version. Please cancel this one.",
+      "createdAt": "2021-03-20T18:43:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/32155#issuecomment-803442403",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BranchTests\n- Repository: https://github.com/dm3/BranchTests\n- Created by: @dm3\n- Version: v0.1.0\n- Commit: b26fa96f358d1ab72abb2d68f206ed6b98771122\n- Reviewed by: @dm3\n- Reference: https://github.com/dm3/BranchTests/commit/b26fa96f358d1ab72abb2d68f206ed6b98771122#commitcomment-48343364\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6581dc6a632831c1724d593f666ef9f4e37e2520de95573c446348f6781e2d8c8f44ad874511bf9f3b7555931a6bf8e23902349e1a0dc2a2257b34d711bed2b2ff4579aa899bec01725efa1cd754d2c7c41e90c318acd3e1c89e5832dc8af6feecc554ce62cf299871b959d861f0f39340a67e376464198735bdf34b88e83c1017c4798ade980b58c6b07c99d19071ef4ea10d6701922937815db1139c3dc951d -->",
+  "package_name": "BranchTests",
+  "closed_at": "2021-03-20T18:44:05Z",
+  "title": "New package: BranchTests v0.1.0"
+}

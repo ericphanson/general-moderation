@@ -1,0 +1,106 @@
+{
+  "created_at": "2024-06-22T10:08:12Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 109566,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86CLLnS",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- I was not able to install the package (i.e. `Pkg.add(\"MemViews\")` failed). See the AutoMerge logs for details.\n- I was not able to load the package (i.e. `import MemViews` failed). See the AutoMerge logs for details.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-06-22T10:11:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2183969234",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86CLLyG",
+      "author": {
+        "login": "jakobnissen"
+      },
+      "authorAssociation": "NONE",
+      "body": "AutoMerge fails because this package requires Julia 1.11 (from the latest release branch, _not_ 1.11-beta2), or current Julia master. This is allowed according to https://github.com/JuliaRegistries/General?tab=readme-ov-file#can-my-package-be-registered-if-it-requires-a-version-of-julia-that-is-not-yet-released.\r\n\r\n[noblock]",
+      "createdAt": "2024-06-22T10:14:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2183969926",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Cx04A",
+      "author": {
+        "login": "jakobnissen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Bump :) [noblock]",
+      "createdAt": "2024-06-27T08:30:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2194099712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Cy8hx",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can merge, but did you consider the name MemoryViews (and for the type MemoryView)? I like that a bit better.",
+      "createdAt": "2024-06-27T11:02:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2194393201",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Cy9qL",
+      "author": {
+        "login": "jakobnissen"
+      },
+      "authorAssociation": "NONE",
+      "body": "That's actually a good suggestion. Let me rename it when I get time",
+      "createdAt": "2024-06-27T11:05:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2194397835",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86C2uvo",
+      "author": {
+        "login": "jakobnissen"
+      },
+      "authorAssociation": "NONE",
+      "body": "Superseded by https://github.com/JuliaRegistries/General/pull/109947 - the package with the new name",
+      "createdAt": "2024-06-27T18:12:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/109566#issuecomment-2195385320",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MemViews\n- Repository: https://github.com/BioJulia/MemViews.jl\n- Created by: @jakobnissen\n- Version: v0.1.0\n- Commit: db442ba30329a884c195339785feaac8df3a62a0\n- Reviewed by: @jakobnissen\n- Reference: https://github.com/BioJulia/MemViews.jl/commit/db442ba30329a884c195339785feaac8df3a62a0#commitcomment-143421161\n- Description: Experimental repo for a memory view type in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd62155a85dafd21d55edc932f1455c1d2b6ca412e08e7091831a8bb4c5c2fad7cbe919012e83d5440bc55429215d3ba57f147811002dd132c9213ff9cdf81bc6b672444e8a352fec93499b45b6d15ef0e1eb59e5e90570a8bfd2655b64159981b1d40275deaaf94cdc3f1d39b6cb352852fd28eae08517f221b3c435e824eecc9726654980df89b1579577f0a1cb4d3ac6004ec933fd3d4f9f21b0b89461edb5415c859d8553427af5af3428018ab921e3 -->",
+  "package_name": "MemViews",
+  "closed_at": "2024-06-27T19:40:27Z",
+  "title": "New package: MemViews v0.1.0"
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-08-04T05:18:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 112372,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86HJO0P",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. \n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-08-04T05:21:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112372#issuecomment-2267344143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HJ8nj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It would be preferable to go with https://github.com/JuliaRegistries/General/pull/112370. The name similarity is a false positive and can be overridden.\r\n\r\nHowever, the package still lacks a README that describes the purpose of the package and documents the available functionality, with a usage example.\r\n\r\nI’m also not quite sure if Julia packages are supposed to wrap DLL files in this way… let me see if I can get back to you on that.",
+      "createdAt": "2024-08-04T12:48:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112372#issuecomment-2267531747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HKZPS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Even though the bot doesn't catch it, but JL as a prefix in the name is in the same category as \"Ju\" and similar redundant prefixes that generally are not allowed for Julia packages. Closing in favor of https://github.com/JuliaRegistries/General/pull/112370",
+      "createdAt": "2024-08-04T19:46:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112372#issuecomment-2267648978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HQjCo",
+      "author": {
+        "login": "shuaixing86"
+      },
+      "authorAssociation": "NONE",
+      "body": "> 最好选择#112370。名称相似性是误报，可以被覆盖。\r\n> \r\n> 但是，该包仍然缺少一个自述文件，该自述文件描述了包的用途并记录了可用的功能，并提供了一个使用示例。\r\n> \r\n> 我也不太确定 Julia 包是否应该以这种方式包装 DLL 文件......让我看看我是否可以就此回复您。\r\n\r\nI can't use \"wintun.jl\"，Its name is very similar to a certain package, which caused Julia's review to fail",
+      "createdAt": "2024-08-05T14:48:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112372#issuecomment-2269261992",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86HRXz3",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As you can see in https://github.com/JuliaRegistries/General/pull/112370, I've overridden the name similarity check. So `Wintun.jl` (starting with a capital letter!) is fine as a package name. The other issues (lack of documentation, not using BinaryBuilder) definitely need to be addressed, though.",
+      "createdAt": "2024-08-05T16:37:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/112372#issuecomment-2269478135",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JLWintun\n- Repository: https://github.com/shuaixing86/JLWintun.jl\n- Created by: @shuaixing86\n- Version: v0.1.0\n- Commit: d7d4a9bb70ec5ccb06b25b9e070ec198c924893a\n- Git reference: main\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nIn the windows system, Julia drives the TUN/TAP driver for Wireguard - wintun\n`````\n<!-- END RELEASE NOTES -->",
+  "package_name": "JLWintun",
+  "closed_at": "2024-08-04T19:46:45Z",
+  "title": "New package: JLWintun v0.1.0"
+}

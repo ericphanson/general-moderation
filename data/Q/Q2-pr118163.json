@@ -1,0 +1,239 @@
+{
+  "created_at": "2024-10-27T18:13:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 118163,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86RcV5i",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DataFrames, Missings, Revise, Tables, TimesDates\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-10-27T18:21:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440126050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RcWHF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The package serves as a replacement to the unmaintained and outdated [Q.jl](https://github.com/enlnt/Q.jl)\r\n\r\nWhile by today’s standards, there is probably no way that a package `Q` could be registered, given that it exists, the name `Q2` seems reasonable.\r\n\r\n[noblock]",
+      "createdAt": "2024-10-27T18:24:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440126917",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rck0w",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Maybe we could actually replace Q without a new package, just by making the general registry point to this new repo? The last release of Q was 7 years ago",
+      "createdAt": "2024-10-27T21:50:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440187184",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rcm3E",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@p-casgrain Did you at any point try to reach out to @abalkin or anyone else associated with the original `Q.jl`?",
+      "createdAt": "2024-10-27T22:19:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440195524",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RcvoZ",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't think Q.jl is registered; I don't see it here: https://github.com/JuliaRegistries/General/tree/master/Q\r\n\r\nTherefore I don't think the name Q.jl is taken in General. However both Q.jl and Q2.jl seem very short and non-descriptive to me. I guess since I didn't know there was a programming language called Q. What about QLang.jl or something like that?",
+      "createdAt": "2024-10-28T00:04:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440231449",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rc4He",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Good catch! Yeah, if `Q` isn’t currently registered, I would definitely push for a longer name.",
+      "createdAt": "2024-10-28T00:41:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440266206",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rek1o",
+      "author": {
+        "login": "p-casgrain"
+      },
+      "authorAssociation": "NONE",
+      "body": "> @p-casgrain Did you at any point try to reach out to @abalkin or anyone else associated with the original `Q.jl`?\r\n\r\nI haven't, though I can do it if you think it's worth it.",
+      "createdAt": "2024-10-28T07:04:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440711528",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Relbp",
+      "author": {
+        "login": "p-casgrain"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Good catch! Yeah, if `Q` isn’t currently registered, I would definitely push for a longer name.\r\n\r\nOk, I'll think of something.\r\n\r\nWhat's the procedure if I change the name? I rename the repo and resubmit the request for registration?",
+      "createdAt": "2024-10-28T07:06:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440713961",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RemAy",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> What's the procedure if I change the name? I rename the repo and resubmit the request for registration?\r\n\r\nExactly, and the present PR will be blocked anyway because of our comments (but someone will probably close it manually).",
+      "createdAt": "2024-10-28T07:08:15Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440716338",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RewN_",
+      "author": {
+        "login": "p-casgrain"
+      },
+      "authorAssociation": "NONE",
+      "body": "I have two suggestions here in order of preference\r\n- JuliaKdb.jl\r\n- QConnect.jl\r\n\r\nAre there any objections to either?\r\n",
+      "createdAt": "2024-10-28T07:35:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440758143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RfUkc",
+      "author": {
+        "login": "Azzaare"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Jumping in with my 2-cents ...\r\n\r\nI believe that you should avoid having `julia` in the name, as it is already implied to be a julia thing by the `.jl` extension. The second name is more likely to fit the current usage.\r\n\r\nSide note, what name would be the easier to understand for the users? If there are more related packages, can they share a common subname? (such as QConnect, QLang, QParse, etc.)",
+      "createdAt": "2024-10-28T08:51:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2440907036",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Rf6w6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/118193",
+      "createdAt": "2024-10-28T09:37:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2441063482",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86RhLau",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> > @p-casgrain Did you at any point try to reach out to @abalkin or anyone else associated with the original `Q.jl`?\r\n> \r\n> I haven't, though I can do it if you think it's worth it.\r\n\r\nNot necessary… this was under the assumption that `Q2.jl` would \"take over\" an existing (registered) `Q.jl`. That generally requires a serious effort to get consent from the original maintainer. But since `Q.jl` was, in fact, never registered, and we've moved on to a more descriptive package name, the point is moot.",
+      "createdAt": "2024-10-28T12:02:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118163#issuecomment-2441393838",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Q2\n- Repository: https://github.com/p-casgrain/Q2.jl\n- Created by: @p-casgrain\n- Version: v0.2.0\n- Commit: ce1b73dd8ca47ff5de69bb2b1934cc6e55626482\n- Git reference: HEAD\n- Description: Connect Julia and kdb",
+  "package_name": "Q2",
+  "closed_at": "2024-10-28T09:37:24Z",
+  "title": "New package: Q2 v0.2.0"
+}

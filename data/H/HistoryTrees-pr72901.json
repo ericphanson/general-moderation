@@ -1,0 +1,68 @@
+{
+  "created_at": "2022-11-25T21:30:00Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 72901,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85PJhAC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-25T21:33:23Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72901#issuecomment-1327894530",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PJh6U",
+      "author": {
+        "login": "JanisErdmanis"
+      },
+      "authorAssociation": "NONE",
+      "body": "I need a help to understand the error message which was given by AutoMerge. ",
+      "createdAt": "2022-11-25T21:45:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72901#issuecomment-1327898260",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Pi-NZ",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There is no compat entry for Julia in https://github.com/JanisErdmanis/HistoryTrees.jl/blob/7a2d5cc7bbaa6e2c1cb4d96aec6a460df8c5c218/Project.toml.  Also, `Test` is a [test-only dependency](https://pkgdocs.julialang.org/v1/creating-packages/#Adding-tests-to-the-package), it shouldn't be under `[deps]`\r\n\r\n[noblock]",
+      "createdAt": "2022-12-01T23:14:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72901#issuecomment-1334567769",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HistoryTrees\n- Repository: https://github.com/JanisErdmanis/HistoryTrees.jl\n- Created by: @JanisErdmanis\n- Version: v0.1.0\n- Commit: 896538a5c4d850822a238871c42f2525181b3d7d\n- Reviewed by: @JanisErdmanis\n- Reference: https://github.com/JanisErdmanis/HistoryTrees.jl/commit/896538a5c4d850822a238871c42f2525181b3d7d#commitcomment-92472264\n- Description: An implementation of history trees in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd669f973a7f3f8d22e6db8723f5c43daf49dbcf0701bdc5614610ec9e902b022093fc8decc8eed668989f57d98c3d098b323da1e1711bbf860d61be9b93a565ea1b93472dd8d4108feb7799a4aac202c814fb5ae0d1a6420643ad5fc2e5b0dde36463272d423baaf43f3b63bbbc7e7797945333c971aae0d871627851cd08617f244486065ec336b52a502006af1fe0fa2e46d5eb3bce3853bc5d291d9c6e0eadf3557fd181335f23a2cc1e1a7f95a27b5 -->",
+  "package_name": "HistoryTrees",
+  "closed_at": "2023-02-24T23:42:17Z",
+  "title": "New package: HistoryTrees v0.1.0"
+}

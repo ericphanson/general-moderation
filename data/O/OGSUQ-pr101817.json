@@ -1,0 +1,91 @@
+{
+  "created_at": "2024-02-27T16:33:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 101817,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851Pl1a",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- I was not able to install the package (i.e. `Pkg.add(\"OGSUQ\")` failed). See the AutoMerge logs for details.\n- I was not able to load the package (i.e. `import OGSUQ` failed). See the AutoMerge logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-27T16:36:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101817#issuecomment-1967021402",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851P58O",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `OpenGeoSysUQ`? If you think that “UQ” is easily understood by users of `OpenGeoSys`. Unless you want to spell it out fully, which would be even better.",
+      "createdAt": "2024-02-27T16:53:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101817#issuecomment-1967103758",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851P8dh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`OGSUncertaintyQualification` might work, too, if you want to flip the emphasis around.",
+      "createdAt": "2024-02-27T16:55:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101817#issuecomment-1967114081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851VqRG",
+      "author": {
+        "login": "baxmittens"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Thank you for your comment. I never thought my package name went against naming conventions.\r\n`OpenGeoSysUncertaintyQuantification.jl` is a bit lengthy, but I think I'll go with it since it is what it is.\r\n\r\n\r\n[noblock]",
+      "createdAt": "2024-02-28T09:51:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101817#issuecomment-1968612422",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851W6SE",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #101885.",
+      "createdAt": "2024-02-28T13:02:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101817#issuecomment-1968940164",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OGSUQ\n- Repository: https://github.com/baxmittens/OGSUQ.jl\n- Created by: @baxmittens\n- Version: v0.1.0\n- Commit: b2bc9f14c09a47c5db85fe2be576ba6dcbb863a5\n- Reviewed by: @baxmittens\n- Reference: https://github.com/baxmittens/OGSUQ.jl/issues/1#issuecomment-1967002301\n- Description: An uncertainty quantification toolbox for OpenGeoSys 6\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598227418186af82edc6b902db6d8cdb5b3d0a3a78841a2d766d24d84603c854610b276a29f6a9340d32c11849771c1b23e904cb30afd0ff8f4d3802f015fbea6b11dc1e175cca7a3bbe5615e7f0bcad48fe207be877caba0416647913a7af1903c70cbbd1f0bfc58a7e55636b1c34da75503c4a99019552b9e4ca6a7d2617cf845 -->",
+  "package_name": "OGSUQ",
+  "closed_at": "2024-02-28T13:02:43Z",
+  "title": "New package: OGSUQ v0.1.0"
+}

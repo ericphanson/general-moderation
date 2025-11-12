@@ -1,0 +1,150 @@
+{
+  "created_at": "2024-05-15T21:33:01Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 106898,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q859-WCZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Package name similar to 2 existing packages.\n  1. Similar to PAPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to StrAPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-05-15T21:36:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113495193",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-bMl",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "`[noblock]` Would prefer not to change the name `SFAPI` -- this is an acronym that is well known to NERSC users. Confusion with `PAPI` and `StrAPI` should be really really unlikely.",
+      "createdAt": "2024-05-15T21:53:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113516325",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-cab",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> this is an acronym that is well known to NERSC users\r\n\r\nThe general registry does not just address NERSC users, and I'm afraid the acronym would not be known to the average Julia user, which would be the prerequisite for using it as a package name.\r\n\r\nThe package also currently does not have any documentation (primarily some explanation in the README what the purpose of the package is, and giving or linking to some usage examples)",
+      "createdAt": "2024-05-15T21:58:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113521307",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-dbv",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It could still be a submodule name, so that\r\n\r\n```\r\nusing NERSCSuperfaciltyAPI: SFAPI\r\n```\r\n\r\ncould be a recommended usage (assuming the package would be named `NERSCSuperfaciltyAPI`, which seems like a suitable name).",
+      "createdAt": "2024-05-15T22:02:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113525487",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-dkO",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "The docs are a WIP, and will be added soon. The Superfacility API will be eventually be extended to ALCF and OLCF (which is a WIP).\r\n\r\nI will note that AWS.jl (https://github.com/JuliaCloud/AWS.jl) is considered a valid name.",
+      "createdAt": "2024-05-15T22:02:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113526030",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-eGS",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "I cringe at `NERSCSuperfaciltyAPI` -- especially when similar APIs become available to other (non-NERSC) sites",
+      "createdAt": "2024-05-15T22:04:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113528210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-k0j",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I will note that AWS.jl (https://github.com/JuliaCloud/AWS.jl) is considered a valid name.\r\n\r\nYes, but that's the rarest of exceptions, even with \"AWS\" definitely being recognizable to the average Julia user. It should not be used as an example for an acceptable Julia package name.\r\n\r\n> I cringe at `NERSCSuperfaciltyAPI`\r\n\r\nThat's the kind of name we have a community consensus on, though, while `SFAPI` is contrary to all of the package naming guidelines, and something I would strongly push back against.\r\n\r\n> The Superfacility API will be eventually be extended to ALCF and OLCF (which is a WIP).\r\n\r\nIf those are going to be separate packages, `ALCFSuperfacilityAPI` etc are conceivable. If they are going to be submodules of this package (which seem preferable), I would go with something like `HPCSuperFacilityAPIs`, or the slightly whimsical (but good, IMO) `SuperFacilities`, or some other name that's not an acronym.\r\n\r\n> The docs are a WIP, and will be added soon. \r\n\r\nA full package documentation is not a prerequisite for registration, but a somewhat complete README is.",
+      "createdAt": "2024-05-15T22:14:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113555747",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q859-y50",
+      "author": {
+        "login": "JBlaschke"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the feedback. I prefer brevity. Renamed to \"Superfacility\", which includes basic docs in the README.\r\n\r\nPlease close in favor of #106903  ",
+      "createdAt": "2024-05-15T22:54:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/106898#issuecomment-2113613428",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SFAPI\n- Repository: https://github.com/NERSC/SFAPI.jl\n- Created by: @JBlaschke\n- Version: v0.1.0\n- Commit: 9c74645dc8641104afeddb94f816423cea33a1f7\n- Git reference: HEAD\n- Description: Julia Client for the NERSC Superfacilty API",
+  "package_name": "SFAPI",
+  "closed_at": "2024-05-15T23:12:46Z",
+  "title": "New package: SFAPI v0.1.0"
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2024-02-29T16:26:42Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 102003,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851gtMc",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name starts with \"Ju\".\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-29T16:29:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102003#issuecomment-1971507996",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851gxHS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`PopulationMortalityModels` (or `MortalityModels`) would be the preferred name for this. People coming to Julia from other languages often bring “short package name” expectations with them, but in the Julia community “long and explicit” is very much the norm.",
+      "createdAt": "2024-02-29T16:37:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102003#issuecomment-1971524050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851gz3B",
+      "author": {
+        "login": "jbshannon"
+      },
+      "authorAssociation": "NONE",
+      "body": "You can check out the [official package naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines) before choosing a new name. Also, I see you have tagged the version as 1.0.0, but this seems like a very preliminary package with only one function exported, so perhaps a 0.1.0 or 0.0.1 release would be better (see the [versioning guidelines](https://pkgdocs.julialang.org/v1/toml-files/#The-version-field)).",
+      "createdAt": "2024-02-29T16:42:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102003#issuecomment-1971535297",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851hBoJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102008",
+      "createdAt": "2024-02-29T17:11:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/102003#issuecomment-1971591689",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: JuMoMo\n- Repository: https://github.com/sveekelen/JuMoMo.jl\n- Created by: @sveekelen\n- Version: v1.0.0\n- Commit: 042147a956cccef2ee576dc75e5f252e9f96a5e2\n- Reviewed by: @sveekelen\n- Reference: https://github.com/sveekelen/JuMoMo.jl/issues/1#issuecomment-1971501610\n- Description: Mortality models for the Julia programming language\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598af45e86ee52881e9ee874c381bb0757a10fd10e64e3e691839d363e01f5c5f161d831e7fb56f947c027a5a3ca53975265d248a87e50188b0fe2977dae1f710cdaf2cfa300e7b8082ec0b6241082d3cd19c51e7d385bf8b060b5ef8756f4970224d110bd74bf8f8a51e463d4ee42676a66961894dd51fad4341ec4e50a7edce0c -->",
+  "package_name": "JuMoMo",
+  "closed_at": "2024-02-29T17:11:40Z",
+  "title": "New package: JuMoMo v1.0.0"
+}

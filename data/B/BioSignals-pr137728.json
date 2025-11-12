@@ -1,0 +1,154 @@
+{
+  "created_at": "2025-09-01T11:55:03Z",
+  "review_comments": [
+    {
+      "id": 3173372394,
+      "node_id": "PRR_kwDOBhF1q869JdHq",
+      "user": {
+        "login": "microcassidy",
+        "id": 7576025,
+        "node_id": "MDQ6VXNlcjc1NzYwMjU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7576025?u=aae02d848895423245ed5e723423453e24d8a14d&v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/microcassidy",
+        "html_url": "https://github.com/microcassidy",
+        "followers_url": "https://api.github.com/users/microcassidy/followers",
+        "following_url": "https://api.github.com/users/microcassidy/following{/other_user}",
+        "gists_url": "https://api.github.com/users/microcassidy/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/microcassidy/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/microcassidy/subscriptions",
+        "organizations_url": "https://api.github.com/users/microcassidy/orgs",
+        "repos_url": "https://api.github.com/users/microcassidy/repos",
+        "events_url": "https://api.github.com/users/microcassidy/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/microcassidy/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "body": "",
+      "state": "APPROVED",
+      "html_url": "https://github.com/JuliaRegistries/General/pull/137728#pullrequestreview-3173372394",
+      "pull_request_url": "https://api.github.com/repos/JuliaRegistries/General/pulls/137728",
+      "author_association": "NONE",
+      "_links": {
+        "html": {
+          "href": "https://github.com/JuliaRegistries/General/pull/137728#pullrequestreview-3173372394"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/JuliaRegistries/General/pulls/137728"
+        }
+      },
+      "submitted_at": "2025-09-01T12:02:39Z",
+      "commit_id": "27fcbd3c96b733fe7ee9d58fd587f2e6a996407d"
+    }
+  ],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 137728,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87BPo9I",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-01T12:02:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3242102600",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BRwn2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! Could you add a little bit of documentation before registering? [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is no documentation.\r\n\r\nIn the longer term, I definitely recommend setting up a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation. Before a `v1.0` release, or for smaller packages that can be effectively described entirely with their `README`, that's not a requirement, though.\r\n\r\nThe README and \"About\" box still mentions \"WFDB\", without giving any indication what \"WFDB\" means. It would also be good to fix the failing CI before registration.",
+      "createdAt": "2025-09-01T14:56:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3242658294",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BdNRo",
+      "author": {
+        "login": "microcassidy"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @goerz, my intention was for it to be called Wfdb (or something similar) but the registrator CI was tripped off because the package has fewer than 5 characters (if I remember correctly). I am a little confused because I am taking on a dependency for EDF (European Data Format), has something changed? WFDB is the most logical name as it is https://wfdb.io/ the common name of the format (HDF5.jl springs to mind). \r\n\r\nThanks for your suggestions, I'll fix it up.",
+      "createdAt": "2025-09-02T14:44:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3245659240",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Bem-V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> WFDB is the most logical name as it is https://wfdb.io/ the common name of the format\r\n\r\nBased on that, it seems that `WaveformDatabase` or `WaveformDB` could also be suitable package names. For packages that implement reading and writing specific file formats, my default recommendation tends to be `<Format>Files` or `<Format>Format`, so `WFDBFiles` or `WFDBFormat` in this case. If your package is indeed strictly for input/output of the WFDB format, then having either WFDB as _part_ of the package name, or expanding the acronym, is probably a more descriptive package name than `BioSignals`.\r\n\r\n> I am a little confused because I am taking on a dependency for EDF (European Data Format), has something changed?\r\n\r\nYes, `EDF.jl` was registered in 2019, which was before any of the naming guidelines in the General registry were enforced, either automatically or by manual review. Even though none of the guidelines are completely hard rules, I don't think there is a realistic chance that a package `EDF` would make it through the registration process today\r\n\r\n[noblock]\r\n",
+      "createdAt": "2025-09-02T16:28:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3246026645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87ImT8l",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-03T12:24:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3365486373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87KDGQW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-10-10T12:24:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137728#issuecomment-3389809686",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BioSignals\n- Repository: https://github.com/microcassidy/BioSignals.jl\n- Created by: @microcassidy\n- Version: v0.0.1\n- Commit: 5eaeb3328fe973e238b3584264e96b7b5bb71899\n- Reviewed by: @microcassidy\n- Reference: https://github.com/microcassidy/BioSignals.jl/issues/1#issuecomment-3242081089\n- Description: A wfdb library for julia\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## Breaking changes\n\n- N/A\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359855d85eab3a75d964f92ddff3490d8c82cb2059569396c19365987d0976a6b1528644084e38a1ac71f0002b5010572e04ea11f61536b6f9f144a9f61ea5b5d038645f39767307e027b173e00bdd9d9635ce9da2aefb865864feccf55ca4901df19e66778bc9876b98a41a408ac1a86523e9766fceb2e9ac7e1ec8d2f1d4718e40 -->",
+  "package_name": "BioSignals",
+  "closed_at": "2025-10-10T12:24:25Z",
+  "title": "New package: BioSignals v0.0.1"
+}

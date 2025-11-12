@@ -1,0 +1,61 @@
+{
+  "created_at": "2019-05-03T18:47:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": "2019-05-05T21:14:05Z",
+  "pr_number": 522,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4OTMyODYzNg==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can you add some compatibility constraints on your dependencies and Julia?",
+      "createdAt": "2019-05-04T13:47:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/522#issuecomment-489328636",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4OTMzMzcxNg==",
+      "author": {
+        "login": "fverdugo"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes sure! I am new in julia (this is the first package I register). Can you provide a link on how to add the dependency constraints? Thanks in advance!",
+      "createdAt": "2019-05-04T14:51:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/522#issuecomment-489333716",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDQ4OTMzNDc4Nw==",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Welcome to Julia! Here are some notes about compatibility constraints: https://julialang.github.io/Pkg.jl/v1/compatibility/ In your case I think that this would work great:\r\n```toml\r\n[compat]\r\nWriteVTK = \"1\"\r\njulia = \"1\"\r\n```\r\n\r\nWhen you have added this you can just retrigger the bot and this PR will be updated.",
+      "createdAt": "2019-05-04T15:04:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/522#issuecomment-489334787",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": "fredrikekre",
+  "body": "Registering: UnstructuredGrids\nRepository: https://github.com/lssc-team/UnstructuredGrids.jl\nVersion: v0.1.1\nCommit: 1dfb929b5dd9d8742a16f014041327869e40bc5e\nProposed by: @fverdugo\nReviewed by: @fverdugo\nReference: [https://github.com/lssc-team/UnstructuredGrids.jl/commit/1dfb929b5dd9d8742a16f014041327869e40bc5e#commitcomment-33411892](https://github.com/lssc-team/UnstructuredGrids.jl/commit/1dfb929b5dd9d8742a16f014041327869e40bc5e#commitcomment-33411892)\n\n<!-- aa9d7facc4d4bafb5421b09a92ec4a13d01e00e6295f6813f6fdc201ab225ae43340a1fc98510c3cbdc79ae1355bcb51b0889502e7f78ca264aeb194b76789627c97f3090fd34c3cb33d98e08455004f92f4bef1ce8ca623a34b0a037ef420217a42ca2528a84fd361f57f9b2c89aad024a3bb683f517a510ce4c57695da831b349ed279f1d8986301971df5bb72225253806b6d644f5c192131c50e4272bf2a6d808048211394afa3e6eaf6beb140a6cd13972db7b97ff417a8e71d643397e05e962f59962bda654b3b70e2b9462af46fdb094927e69bbe847120d9a23a36de -->\n",
+  "package_name": "UnstructuredGrids",
+  "closed_at": "2019-05-05T21:14:05Z",
+  "title": "New package UnstructuredGrids: 0.1.1"
+}

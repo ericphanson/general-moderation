@@ -1,0 +1,188 @@
+{
+  "created_at": "2023-08-06T10:22:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 89134,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85jWXXK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 5 existing packages.\n  1. Similar to NDTools. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 0.88 is at or below cutoff of 2.50.\n  2. Similar to QXTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to IRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to VCFTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to NMRTools. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-08-06T10:30:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1666807242",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jXl_x",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also, please make sure to add some documentation before registering",
+      "createdAt": "2023-08-07T03:25:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1667129329",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jeUgg",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz Thanks for your suggestion. Document is added at <https://jl-spatial.github.io/NCTools.jl/dev/>. In my free time, I will try my best to add more.\r\n\r\nThis package is a collection of netcdf tools. `nc` is the suffix of the netcdf file. Hence, about the package name, I prefer to use NCTools.",
+      "createdAt": "2023-08-08T04:34:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1668892704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jhHwx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Why not `NetCDFTools`, then?",
+      "createdAt": "2023-08-08T13:32:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1669626929",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jhLUd",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Just `NC` is too ambiguous: https://en.m.wikipedia.org/wiki/NC",
+      "createdAt": "2023-08-08T13:40:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1669641501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jhMDx",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks for your reviewment and suggestion. About the package name, I have the following two reasons:\r\n\r\n- `NCTools.jl` is mainly on the top of `NCDatasets.jl`. `NCDatasets.jl` also begins from `NC`. Uses should understand the meaning of the name.\r\n\r\n- `NCTools` is also the name of my netcdf package in R language <https://github.com/rpkgs/nctools>. It is great if I could keep those two package names same.\r\n",
+      "createdAt": "2023-08-08T13:42:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1669644529",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jhQIp",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "But `Datasets` is a lot more descriptive than `Tools`.\r\n\r\nIs this `NCTools` a direct and complete port of the R package? If yes, I’d say the name is okay, but if not, you definitely should rename it: someone else might want to use the name for an actual port/wrapper of the R package.",
+      "createdAt": "2023-08-08T13:50:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1669661225",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jhdt-",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Most functions in nctools has been immigrated to `NCTools.jl`. As julia is much faster and high-efficient, nctools in R will be gradually deprecated.\r\n",
+      "createdAt": "2023-08-08T14:22:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1669716862",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85jtXzA",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Package name has been changed, <https://github.com/JuliaRegistries/General/pull/89374>. \r\nThis branch can be closed now. Thank you.",
+      "createdAt": "2023-08-10T09:02:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1672838336",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mEqmJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-09-09T12:22:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1712499081",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85mpvm9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-09-16T12:22:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/89134#issuecomment-1722218941",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NCTools\n- Repository: https://github.com/jl-spatial/NCTools.jl\n- Created by: @kongdd\n- Version: v0.1.7\n- Commit: f39779b913e4563e673dc765a2f933916db59fca\n- Reviewed by: @kongdd\n- Reference: https://github.com/jl-spatial/NCTools.jl/issues/13#issuecomment-1667549649\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986dfd4a1fcf9061031cdc393ae9a2ed64c00dae8a09ead70bfc8bb677cce93641be49d24fd99feae35c3636e275d921c8bd570c5be64b3617d00fd7125fa3abc38f61191ca3fd2bd9e8ddf31b53c526c1f09e32db229a46cdc0f2340198f69f2afb86dc6690a59b894cfd9a8db3c5df9a3a62189c654b7bacb99c5bef342723e4 -->",
+  "package_name": "NCTools",
+  "closed_at": "2023-09-16T12:22:54Z",
+  "title": "New package: NCTools v0.1.7"
+}

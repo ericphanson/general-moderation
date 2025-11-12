@@ -1,0 +1,208 @@
+{
+  "created_at": "2023-10-09T16:45:24Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 93099,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85ogfWB",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 2 existing packages.\n  1. Similar to SumTypes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to SubTypes. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-10-09T16:50:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1753347457",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85og51K",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please make sure to add some documentation before registering, at least a basic usage example in the README\r\n\r\n[noblock]",
+      "createdAt": "2023-10-09T18:21:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1753455946",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oiqim",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@goerz thank you for the feedback. Example added to the README.",
+      "createdAt": "2023-10-09T21:35:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1753917606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85oirLT",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Regarding the similarity with SumTypes.jl and SubTypes.jl, it shouldn't be an issue. These packages have very different purpose.",
+      "createdAt": "2023-10-09T21:38:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1753920211",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pJ94L",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> with a more sensible set of defaults for data science\r\n\r\nDataSciTypes?",
+      "createdAt": "2023-10-16T10:56:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764220427",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pJ-rX",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think SciTypes.jl is fine and shorter to type. Thanks for the suggestion\r\nthough.\r\n\r\nEm seg., 16 de out. de 2023 07:56, Christopher Rackauckas <\r\n***@***.***> escreveu:\r\n\r\n> with a more sensible set of defaults for data science\r\n>\r\n> DataSciTypes?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764220427>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAZQW3OGWTNCMZVOS3ZHLOLX7UHG3AVCNFSM6AAAAAA5ZCOU2WVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTONRUGIZDANBSG4>\r\n> .\r\n> You are receiving this because you are subscribed to this thread.Message\r\n> ID: ***@***.***>\r\n>\r\n",
+      "createdAt": "2023-10-16T10:58:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764223703",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pJ_52",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's just very non-descriptive. The package name and the abstract type has nothing to do with the actual contents, so it's quite confusing. `scitype(::Type{<:Number}) = Continuous` `scitype(::Type{<:Integer}) = Categorical`, Integers are categorical yes, but is that... science? NumberTypes or better yet, NumberTraits or something would be a more descriptive name. I wouldn't block this but given that the naming is so odd, I wouldn't choose to merge it myself.",
+      "createdAt": "2023-10-16T11:01:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764228726",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pKBHS",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The traits apply to non-number types as well so NumberTypes or NumberTraits\r\nare not good names. Scientific types is the name adopted in the ecosystem\r\nalready, and we are simply reusing it.\r\n\r\nEm seg., 16 de out. de 2023 08:02, Christopher Rackauckas <\r\n***@***.***> escreveu:\r\n\r\n> It's just very non-descriptive. The package name and the abstract type has\r\n> nothing to do with the actual contents, so it's quite confusing. scitype(::Type{<:Number})\r\n> = Continuous scitype(::Type{<:Integer}) = Categorical, Integers are\r\n> categorical yes, but is that... science? NumberTypes or better yet,\r\n> NumberTraits or something would be a more descriptive name. I wouldn't\r\n> block this but given that the naming is so odd, I wouldn't choose to merge\r\n> it myself.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764228726>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAZQW3M6P47LXUWMR7XPDZ3X7UH25AVCNFSM6AAAAAA5ZCOU2WVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMYTONRUGIZDQNZSGY>\r\n> .\r\n> You are receiving this because you are subscribed to this thread.Message\r\n> ID: ***@***.***>\r\n>\r\n",
+      "createdAt": "2023-10-16T11:05:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764233682",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pKlh3",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Reading through this, I found ScientificTypes itself not easy to understand as a name. The issue here is that now that I read about ScientificTypes, SciTypes would create confusion - as in which one came first, and which one is the lightweight version.\r\n\r\nWhat do you think about LightScientificTraits.jl, if that describes the intention of the package? Alternatively, how about DataScienceTraits.jl, if based on the README, this is a package with better defaults for DataScience? Traits sounds better to me than Types, but if we have a better prefix, we could then still keep Types in the name.",
+      "createdAt": "2023-10-16T12:37:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764382839",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85pK2kA",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We will go with DataScienceTypes.jl, thank you for the suggestion.",
+      "createdAt": "2023-10-16T13:08:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/93099#issuecomment-1764452608",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SciTypes\n- Repository: https://github.com/JuliaML/SciTypes.jl\n- Created by: @eliascarv\n- Version: v0.1.0\n- Commit: 7e9403ff094a1c8ea2cf97c17f02fb0bb6ac53a7\n- Reviewed by: @eliascarv\n- Reference: https://github.com/JuliaML/SciTypes.jl/commit/7e9403ff094a1c8ea2cf97c17f02fb0bb6ac53a7#commitcomment-129640205\n- Description: Scientific types for data science\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd610e536691739724d995d5af37e117ef0b422b90f1220d5ab9a977741182275c7292cd6f7c6eb7570082609accb6d76d7ae6c1259c15fd38eee3190e37e69ac1aed1884e3af8284f318d5c97080163b95fce4360003f16c1fb1dbe5fa4b1e541e364f95c7525de0bd2287517ee93c02572d0b2b6c29b1397dce95d560d6ad2ad4dbead3931941a4ad1211332ef01676c182c81ba7295af54d0e158080166d8772f50c1b033f28d42e1ba5b1420bf05ce8 -->",
+  "package_name": "SciTypes",
+  "closed_at": "2023-10-16T13:52:00Z",
+  "title": "New package: SciTypes v0.1.0"
+}

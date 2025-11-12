@@ -1,0 +1,187 @@
+{
+  "created_at": "2022-11-22T22:13:21Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 72714,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85O72Al",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-11-22T22:19:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1324310565",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PAkkb",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "How is it related to bioinformatics? From a cursory look, I don't see any bio-specific function in the package.\r\n\r\nSome functions already exist in Base, some in dedicated packages with a cleaner interface, some are trivial, and none seem documented at all.",
+      "createdAt": "2022-11-23T19:15:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1325549851",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PA8VR",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\nIt is related because it is already being used in a few public software, one of them being popular: `GSEA.jl`, `Immunogram.jl`, `TCRGram.jl`, `BioGPS.jl`, and a few other packages.\r\nYour suggestions about commenting are noted already and queued to be done later. Thank you.",
+      "createdAt": "2022-11-23T20:54:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1325647185",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PJ78V",
+      "author": {
+        "login": "SyxP"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] You say that it has been used in various public software, but I can only find `GSEA.jl`. Could you provide some links to the rest?",
+      "createdAt": "2022-11-26T08:24:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1328004885",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKMKf",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Hi @SyxP, thanks for looking into this. Links for `.jl` repositories other than mine are not available because they are private not mine. These are their most public status. `BioGPS.jl` is the newer version of https://github.com/UCSD-CCAL/onco_gps_paper_analysis . `Immunogram.jl` and `TCRGram.jl` are current projects at our lab and co-developed by Azam M at Mark Davis Lab at Stanford. https://github.com/immunogram is the organization these will migrate to. `GSEA.jl` is ready and will be transferred to https://github.com/GSEA-MSigDB. We just submitted a grant, which requires this to be done as well. Finally, https://github.com/guardiome 's new backend relies on this package as well. This is why I wanted to register this package so that I can get to them one by one. ",
+      "createdAt": "2022-11-26T16:01:42Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1328071327",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKOuY",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I see the concern that perhaps BioinformaticsCore.jl is a general name, but GSEACore.jl may be too specific. I feel that given the other packages that are going to come after this one, perhaps BioinformaticsCore.jl is ok to register.",
+      "createdAt": "2022-11-26T17:09:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1328081816",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKPPt",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "My original point was basically the opposite: the name BioinformaticsCore suggests that this package contains fundamental bio-related functions, but most/all of them actually seem arbitrary utility functions.\r\nI could pick basically any source file as an example to illustrate this, but here are a few specifics: \r\nhttps://github.com/KwatMDPhD/BioinformaticsCore.jl/blob/main/src/Array/error_duplicate.jl\r\nhttps://github.com/KwatMDPhD/BioinformaticsCore.jl/blob/main/src/FeatureXSample/target.jl\r\nhttps://github.com/KwatMDPhD/BioinformaticsCore.jl/blob/main/src/Vector/sort_like.jl\r\nhttps://github.com/KwatMDPhD/BioinformaticsCore.jl/blob/main/src/Table/read.jl\r\n\r\nMaybe, a better name is something like UCSDUtilities?\r\n\r\n_disclaimer: I'm not a `General` maintainer_",
+      "createdAt": "2022-11-26T17:24:33Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1328083949",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PKQni",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the comment. I see your points. I agree with you. And I have made issues based on your comments. Thank you.\r\n\r\nBut I think this package is valid to register.\r\n\r\nFirst, by choice, we tried to have as many small functions, making it easy to split it as needed later. The API-level functions are not in the \"Core\" package by design.\r\n\r\nNext, no package is perfect, especially in the early days. Often packages evolve, compartmentalize, and mature. I believe this is the case for `BioinformaticsCore.jl`. The bioinformatics ecosystem needs work in Julia. And it does not come near perfect overnight. The good ecosystems develop - as needed - one part at a time. Often, they start as a person's personal repository and then get community feedback, branching into more packages and even into an organization. I wish for such a trajectory for this package. Yet now, the most important thing is that we keep going forward and make things people want to use.\r\n\r\nI believe that this package should have the right to develop into an echo system slowly, as needed. Over time, this should contain lower-level functions, reusing others' stable ones as much, while enabling higher-level bioinformatics functions.\r\n\r\n\"Premature optimization is the beginning of all evil\" is a famous quote in computer science. A perfectly organized package that no one uses does not grow. But a package that is used more and scrutinized more can develop into one with a elegant structure. I hope you could give our community a chance.",
+      "createdAt": "2022-11-26T18:02:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1328089570",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PRF2p",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@KwatMDPhD In browsing the package, the code appears to be utilities being prepared in support of bioinformatics capabilities - and perhaps a name that suggests that is better. Later as the package grows, it should be possible to refactor it and have a BioinformaticsCore.jl.\r\n\r\nAlso, the other reason to avoid calling this Core is that it has a large footprint in terms of package dependencies. The Project.toml will pull in a lot of dependencies, and you probably want a tighter core package with core computational capabilities.\r\n\r\nThe other thing is that when coming up with an opinionated set of packages for a domain, people often use a name for the whole project - like Flux.jl, Turing.jl, JuMP.jl, SciML, etc. Then as interfaces standardize, a core package is often refactored out to allow multiple implementations of the abstract APIs.\r\n\r\nIs it possible to come up with a different name for this ecosystem of packages you mentioned? I think it may serve the purpose better. Apologies, that this may need some refactoring and renaming.",
+      "createdAt": "2022-11-28T23:25:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1329880489",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85PROt3",
+      "author": {
+        "login": "KwatMDPhD"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the messages. Feel free to close this. I will respond to the feedback and retry. Thank you @aplavin and @ViralBShah 🙏",
+      "createdAt": "2022-11-29T00:25:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/72714#issuecomment-1329916791",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BioinformaticsCore\n- Repository: https://github.com/KwatMDPhD/BioinformaticsCore.jl\n- Created by: @KwatMDPhD\n- Version: v0.11.22\n- Commit: b27546a5a769fa4d0bdfed5504e52116337820f5\n- Git reference: HEAD\n- Description: Core functions for bioinformatics packages and projects such as gene set enrichment analysis (GSEA.jl) 🧰",
+  "package_name": "BioinformaticsCore",
+  "closed_at": "2022-11-29T02:08:19Z",
+  "title": "New package: BioinformaticsCore v0.11.22"
+}

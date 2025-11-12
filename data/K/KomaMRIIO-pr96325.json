@@ -1,0 +1,91 @@
+{
+  "created_at": "2023-12-01T21:18:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 96325,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85te03r",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to KomaMRI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-12-01T21:24:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96325#issuecomment-1836797419",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tgBqj",
+      "author": {
+        "login": "lgoettgens"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This subdir does not seem to exist anymore. ",
+      "createdAt": "2023-12-02T10:18:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96325#issuecomment-1837111971",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85tlaJP",
+      "author": {
+        "login": "beorostica"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "The previous subpackage name did not meet the merging standards automatically. Consequently, we have decided to change the name. We will soon register a new subpackage with the revised name.",
+      "createdAt": "2023-12-04T12:20:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96325#issuecomment-1838522959",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85vxqdZ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-01-03T12:23:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96325#issuecomment-1875289945",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85wehV4",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2024-01-11T12:23:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/96325#issuecomment-1887049080",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: KomaMRIIO\n- Repository: https://github.com/cncastillo/KomaMRI.jl\n- Created by: @beorostica\n- Version: v0.7.7\n- Commit: 879894a7cfd7eb3dd4d4085361c3f33f06c17516\n- Reviewed by: @beorostica\n- Reference: https://github.com/cncastillo/KomaMRI.jl/commit/879894a7cfd7eb3dd4d4085361c3f33f06c17516#commitcomment-134005256\n- Description: Koma is a Pulseq-compatible framework to efficiently simulate Magnetic Resonance Imaging (MRI) acquisitions. The main focus of this package is to simulate general scenarios that could arise in pulse sequence development.\n<!-- 03794981fd4b889bc14d4266f8101749ecb84314e69ece6b7dc66dd357838a78d3e25b2f316911dda87624fd2908495064cddf93bc3c35f751f371293032c8ccf2a11e7f3347f95d01f9236d9182de420e7f90c8c2443edaf0c7a19e2f87a53fa1826c465821c3ab02a1282588bb59f1537769abb7c013661b76219985519fd32d6fd7260c55a749c3f1e075b9b123495656d36d0d8e9888046f41b206b575b055d230de6ae8b324aebc48f8d9f03f9ce0272beaa44ea8cac349670104ead31000a8c58f6d5d6be4d32a560760c0bcb250dc4ce6e6b087661f85a7fb2e719c75 -->",
+  "package_name": "KomaMRIIO",
+  "closed_at": "2024-01-11T12:23:11Z",
+  "title": "New package: KomaMRIIO v0.7.7"
+}

@@ -1,0 +1,106 @@
+{
+  "created_at": "2023-02-16T22:12:46Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 77846,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85Ve5Bx",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- Package name similar to 1 existing package.\n  1. Similar to DistributedFlux. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-02-17T06:31:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1434161265",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ve5kV",
+      "author": {
+        "login": "DilumAluthge"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually, what is the difference between this package (`DistributedFluxML`) and the `DistributedFlux` package that already exists in the registry?",
+      "createdAt": "2023-02-17T06:34:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1434163477",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VrhDt",
+      "author": {
+        "login": "asaxton"
+      },
+      "authorAssociation": "NONE",
+      "body": "There is a Distributed Flux that’s for Heat Flux. This one is for using Flux ML. At least that’s what I could with a little poking around.",
+      "createdAt": "2023-02-20T19:36:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1437470957",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85VrlCd",
+      "author": {
+        "login": "asaxton"
+      },
+      "authorAssociation": "NONE",
+      "body": "I just went and looked up more details. At one point there was a DistributedFlux package that was about heat flux. I can't find it anymore. This package uses Distributed.jl as its backend where the other uses MPI.",
+      "createdAt": "2023-02-20T19:54:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1437487261",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85YYHWh",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2023-03-24T12:23:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1482716577",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Y681d",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2023-03-31T12:23:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/77846#issuecomment-1491848541",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: DistributedFluxML\n- Repository: https://github.com/asaxton/DistributedFluxML\n- Created by: @asaxton\n- Version: v0.1.0\n- Commit: f9586ab54da232b7c19d2f7394dd2e0f1be71a4c\n- Reviewed by: @asaxton\n- Reference: https://github.com/asaxton/DistributedFluxML/commit/f9586ab54da232b7c19d2f7394dd2e0f1be71a4c#commitcomment-101504573\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6cb4292b210e35038439471607f2046ff11c0520794f6a5c140609fd8b636a18b15946988367948134856755576206de95872c8b5db80e80c6305cc00e6ec3563bfedaac93ac85057ef414ee533adac24b13748998bedbb33d6445ad27e94314dd37c8c9722b5dcccdbc69001dfaa997818bf21b86ad86a5920e3b91410f6425efb84659638d6ad11563dcb98205483e4908f4e8a4978ae097dffe8383a69ddf621359e98eb96b7ed28582845388b03fd -->",
+  "package_name": "DistributedFluxML",
+  "closed_at": "2023-03-31T12:23:24Z",
+  "title": "New package: DistributedFluxML v0.1.0"
+}

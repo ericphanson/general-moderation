@@ -1,0 +1,188 @@
+{
+  "created_at": "2024-02-27T22:25:15Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 101851,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851ScJu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 1 existing package.\n  1. Similar to AWS. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-27T22:29:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1967768174",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Sy_1",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `AWSCCommon`?",
+      "createdAt": "2024-02-27T23:02:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1967861749",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851TLbd",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hmmmm......I really like how short and sweet it is. Maybe AwsCommon. I have a couple of packages coming like AwsIO, AwsHTTP, etc. Doing all caps AWS just feels like way too many caps for some of these names.",
+      "createdAt": "2024-02-28T00:25:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1967961821",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851TsmX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\"Short\" tends to be a quite problematic these days, and especially if you have to name a set of packages with a common prefix. We're getting pretty close to all the \"good\" short names being taken. So I would not make that a goal. In principle, AWS is also an acronym, so it would actually be better if it stays in caps. To avoid the \"too many caps\", I would consider a naming scheme like `AWSToolsIO`, `AWSToolsHTTP`, and then maybe `AWSToolsC` for this package. (Maybe there's a better word than \"Tools\", but you get the idea)",
+      "createdAt": "2024-02-28T02:54:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1968097687",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851TtDF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Although given your track record, I'd give you some leeway ;-)\r\n\r\nIf you really want `AwsC`, there's probably someone who can merge it. Likewise, `AwsHTTP` etc.",
+      "createdAt": "2024-02-28T02:56:54Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1968099525",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852ZsWf",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sorry I forgot about this. Let's ping @fredrikekre, @StefanKarpinski, @KristofferC, and @Octogonapus to get their opinions. Namely, I have a suite of packages I'd like to register, mirroring the aws-c-X set of C libraries (https://docs.aws.amazon.com/sdkref/latest/guide/common-runtime.html). Doing AWSCommon, AWSIO, AWSHTTP, AWSS3 all feel excessively capitalized, so I think my preference is to do AwsC, AwsIO, AwsHTTP, AwsS3. These aren't meant to necessarily be widely used public packages, but more as building blocks for higher-level interfaces (like replacing the internals of HTTP w/ AwsHTTP).  ",
+      "createdAt": "2024-03-08T21:30:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1986446751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852ZslB",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "(also thanks for the quick review/feedback @goerz!)",
+      "createdAt": "2024-03-08T21:30:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1986447681",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q852ZxED",
+      "author": {
+        "login": "Octogonapus"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Doing AWSCommon, AWSIO, AWSHTTP, AWSS3 all feel excessively capitalized, so I think my preference is to do AwsC, AwsIO, AwsHTTP, AwsS3.\r\n\r\nI think it is not clear, especially for `AwsS3`, that these package names refer to generated C bindings and a little filler, and not something higher level. I'd want to adopt a naming scheme like `AwsCrt*` e.g. `AwsCrtS3`, `AwsCrtIO`, etc. Also I agree with the `AwsCrt*` scheme instead of the `AwsC*` scheme because some of the CRT packages do not have `-c-` in their names, e.g. `aws-lc` which could be registered as `AwsCrtLC`.\r\n\r\nThis package also mixes high and low level functionality. Some decisions are made for the user, [like in this init function](https://github.com/JuliaServices/AwsC.jl/blob/698120bc9bf44afad222be740e26b050676ba240/src/LibAwsC.jl#L116-L130), which makes these packages less composable. For example, my AWSCRT work would not compose well with this package. It would be better if you registered the generated bindings as separate `LibAwsCrt*` packages (containing only bindings).",
+      "createdAt": "2024-03-08T21:47:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-1986466051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855v7-u",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2024-04-08T12:22:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-2042609582",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q855yb_n",
+      "author": {
+        "login": "quinnj"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@Octogonapus and I have come up w/ a new plan outlined in [this slack thread](https://julialang.slack.com/archives/C03R6JMQYUX/p1709951326201449) where we'll implement LibAwsCommon, LibAwsIO, LibAwsHTTP etc libraries.\r\n\r\nThis PR can be closed.",
+      "createdAt": "2024-04-08T17:12:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-2043264999",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8555tbD",
+      "author": {
+        "login": "StefanKarpinski"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Replying late, but LibAws prefix is a good approach 👍🏻 ",
+      "createdAt": "2024-04-09T13:23:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101851#issuecomment-2045171395",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: AwsC\n- Repository: https://github.com/JuliaServices/AwsC.jl\n- Created by: @quinnj\n- Version: v1.0.0\n- Commit: 5aedad30ba06f8349c4e8b580a6a19824e5af8bc\n- Reviewed by: @quinnj\n- Reference: https://github.com/JuliaServices/AwsC.jl/commit/5aedad30ba06f8349c4e8b580a6a19824e5af8bc#commitcomment-139133199\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd681af6ae1bf7c7b2c1235eef6422fe7138ba48108f249ec29254fc57da180463b51da03eb73bb4e4c3a825514a950e5c8736bd3fe382701137fe7b3b2f1286c58b4f6c8b3b39c6ac5034d30de9ed207e49ad7e095e5f90544c8d936baa2430c3e92cf1036bebd22c788d2ae0c39367c8faa16237c902bd934107d391da087a7b2e98e65d11f74603768aafb423e5e937a7512e93c79ab079912cf0d18af461687ce2d072d45b9675285e9da439ed8a2dc -->",
+  "package_name": "AwsC",
+  "closed_at": "2024-04-08T17:26:46Z",
+  "title": "New package: AwsC v1.0.0"
+}

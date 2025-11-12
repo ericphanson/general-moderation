@@ -1,0 +1,76 @@
+{
+  "created_at": "2023-03-08T01:44:26Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 79121,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85W-LuE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 8 existing packages.\n  1. Similar to Try. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.10 is at or below cutoff of 2.50.\n  2. Similar to SPH. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to ISL. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to XPA. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to ITK. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to Why. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to NPZ. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  8. Similar to MPI. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2023-03-08T01:48:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79121#issuecomment-1459141508",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XCvuJ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Maybe `IPynbParser` would be a suitable package name?",
+      "createdAt": "2023-03-08T15:30:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79121#issuecomment-1460337545",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XFbJx",
+      "author": {
+        "login": "emmaccode"
+      },
+      "authorAssociation": "NONE",
+      "body": "It is more of a cell-structure focused package, would `IPyCells` work? Or `NotebookCells` perhaps?",
+      "createdAt": "2023-03-08T23:40:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79121#issuecomment-1461039729",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85XFf-x",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Either of those seems fine to me",
+      "createdAt": "2023-03-09T00:05:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/79121#issuecomment-1461059505",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IPy\n- Repository: https://github.com/ChifiSource/IPy.jl\n- Created by: @emmettgb\n- Version: v0.1.0\n- Commit: 06fd11cde2539acd27179792f94efffc2a5e640a\n- Reviewed by: @emmettgb\n- Reference: https://github.com/ChifiSource/IPy.jl/issues/2#issuecomment-1459138661\n- Description: A simple IPython notebook to Julia code parser.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598f1a5aaeea92df5e990ab8e4827bfeff20385675f8d72bc48561eaabfef7055721aff02b5936580b294d4e52997d72f01719015a1845ba9484e8ac372762768f9776b2ad722355f505d06d84a3886d40ae611ab61ec9b741657b0a98c032562ceb568ae7e3282d5690ffb0c67ff5de742e4a83020262dff055353e353b22ddbe8 -->",
+  "package_name": "IPy",
+  "closed_at": "2023-03-18T17:49:47Z",
+  "title": "New package: IPy v0.1.0"
+}

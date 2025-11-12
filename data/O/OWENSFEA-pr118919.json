@@ -1,0 +1,143 @@
+{
+  "created_at": "2024-11-07T19:04:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 118919,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86SzrxL",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-11-07T19:12:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2463022155",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S1TcK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The name of this package seems problematic, and there also seems to be an issue with the documentation: I can't access the [API page](https://github.com/sandialabs/OWENSFEA.jl/blob/master/docs/src/reference/reference.md). Is this using a custom (broken) CSS file?\r\n\r\nIn theory, the bot could be made happy by changing the spelling to `OwensFEA`, but that might have the smell of a (discouraged) [\"personal package\"](https://github.com/JuliaRegistries/General?tab=readme-ov-file#should-i-register-my-package-now), and more importantly: What is \"FEA\"? Generally speaking, acronyms that are not widely known should be avoided in package names.",
+      "createdAt": "2024-11-07T23:51:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2463446794",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S1eWt",
+      "author": {
+        "login": "kevmoor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks @goerz!  This is part of the Sandia National Labs OWENS.jl toolkit (Offshore Wind Energy Simulator), so it isn't a personal package.  I'm hopeful to register this and several others like it in the coming weeks, so it will be good to address these issues now.   My IP folks required me to label all of the packages with the OWENS name, but we might be able to change them if required. \r\n\r\n- OWENS.jl a generalized aero-servo-hydro-elastic wind turbine or hydrokinetic turbine simulator\r\n- OWENSAero.jl very similar to CCBlade.jl but for vertical axis wind turbines as opposed to horizontal axis turbines\r\n- OWENSFEA.jl generalized multi-body beam finite analysis very similar to GXBeam.jl but using a different beam model\r\n- OWENSOpenFASTWrappers.jl a wrapper to the OpenFAST fortran libraries for floating platforms and wind turbine aerodynamics, which we're nearly complete porting the binary creation over to yggdrasil/builarybuilder\r\n- OWENSPreComp.jl generalized classical laminate theory sectional property generator to go from blade shapes and thicknesses to values usable by the finite element emthods, translated from the fortran PreComp, which is similar to VABS.\r\n\r\nApologies on the docs not building correctly, I'll get that fixed soon.",
+      "createdAt": "2024-11-08T00:35:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2463491501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S1kul",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ah! Sorry, I got confused by the thesis by B. C. Owens referenced in the README.\r\n\r\n`OWENS.jl` seems okay to me, which means additional `OWENSSomething.jl` (including this package) should be fine, too.\r\n\r\nDefinitely make sure you update the documentation and the README, including with an explanation of the acronym.\r\n\r\nThen, after the end of the waiting period, ask for a manual merge on Slack.",
+      "createdAt": "2024-11-08T00:46:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2463517605",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S1oTz",
+      "author": {
+        "login": "kevmoor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Roger that, sounds good.  Thanks!",
+      "createdAt": "2024-11-08T00:53:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2463532275",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86S8XYv",
+      "author": {
+        "login": "kevmoor"
+      },
+      "authorAssociation": "NONE",
+      "body": "Block until documentation gets rebuilt properly\r\n",
+      "createdAt": "2024-11-08T17:06:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2465297967",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86Zoj24",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-01-08T12:24:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2577546680",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86as0iK",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-01-16T12:24:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/118919#issuecomment-2595440778",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OWENSFEA\n- Repository: https://github.com/sandialabs/OWENSFEA.jl\n- Created by: @kevmoor\n- Version: v1.0.0\n- Commit: 9ebca16c54a34efb0a26582d5093610a7685bd5f\n- Reviewed by: @kevmoor\n- Reference: https://github.com/sandialabs/OWENSFEA.jl/issues/15#issuecomment-2463280352\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## Initial Registration of the FEA package used by the OWENS toolkit (OWENS.jl)\r\n\r\n- This package can be used standalone as a beam FEA solver, or in conjunction with the OWENS toolkit\r\n- See tests and docs for usage\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598dcef39407e594ecfe9f857864d06eb65007292c2a8a6ea663c0ed5738d6f4358e00d3ca6450881ed58f6f5b68837863654b3377551419735a564017a3cf248a74406a9dd423cf4a71e836c34d76ab938826f710e6d1d9a2085bb31a0cb17c24f5e1040b43edd781425a903340c4202fb52beda1d057338f6561cbaae055484bb -->",
+  "package_name": "OWENSFEA",
+  "closed_at": "2025-01-16T12:24:15Z",
+  "title": "New package: OWENSFEA v1.0.0"
+}

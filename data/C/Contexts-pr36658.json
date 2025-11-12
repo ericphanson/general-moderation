@@ -1,0 +1,83 @@
+{
+  "created_at": "2021-05-13T09:02:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 36658,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MDQyNTc3MQ==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to QXContexts. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-05-13T09:05:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36658#issuecomment-840425771",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MDQ2NDQ0Mg==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ah the good old naming similarity check strikes again!  I seem to have a knack for angering it :sweat_smile: \r\n\r\n`QXContexts` Is really different from `Contexts` so I seen no reason to block merging this on those grounds.\r\n\r\n[noblock]",
+      "createdAt": "2021-05-13T10:19:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36658#issuecomment-840464442",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0MTczNDIxMg==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Let's put this on hold for a short while — I want to consider the name more carefully.\r\n\r\n(In particular, this is a very generic name and I'd like to do some more experiments to determine whether the central design premise lives up to it.)",
+      "createdAt": "2021-05-15T22:31:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/36658#issuecomment-841734212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDg0Mzk3OTQ2NA==",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I've decided to rename this package before registering, so feel free to close this.\r\n\r\n(See https://github.com/JuliaRegistries/General/pull/37043)",
+      "createdAt": "2021-05-19T10:43:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/36658#issuecomment-843979464",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Contexts\n- Repository: https://github.com/c42f/Contexts.jl\n- Created by: @c42f\n- Version: v0.1.0\n- Commit: 4fb2e015f17a0e34819f697c9277654629c6d294\n- Reviewed by: @c42f\n- Reference: https://github.com/c42f/Contexts.jl/commit/4fb2e015f17a0e34819f697c9277654629c6d294#commitcomment-50759699\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd614961a10f2d65f67ea1eedef7de343277c8172384d9cddc7de0a341a51563f01575c6877c51bff749f52ca8754add78fa8b0065443acf6ab538fb2c3b175d9e176aeddd4d8651b2ffed02884bcd1f7727f8065f1dbc5b61d163c2cf969684d0bd3d57eb183fe7712357e2955af9c0074a17ea810fdeca42e37beb4b75118933ab456e5e454c9fe22c24ed7faf2afefeed6249164c3e7346ecdb997aa78642ab99c8e9f832106f194560db2bccf491d9a -->",
+  "package_name": "Contexts",
+  "closed_at": "2021-05-19T10:49:45Z",
+  "title": "New package: Contexts v0.1.0"
+}

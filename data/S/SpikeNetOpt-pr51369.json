@@ -1,0 +1,91 @@
+{
+  "created_at": "2021-12-29T08:48:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 51369,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q847wGon",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: Conda, DataStructures, Distributions, Evolutionary, JLD, LightGraphs, Metaheuristics, OrderedCollections, Parameters, PyCall, SpikeSynchrony, SpikingNeuralNetworks, UnPack, UnicodePlots\n- I was not able to install the package (i.e. `Pkg.add(\"SpikeNetOpt\")` failed). See the CI logs for details.\n- I was not able to load the package (i.e. `import SpikeNetOpt` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-12-29T08:50:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51369#issuecomment-1002465831",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8475QW8",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@russelljjarvis please see the message above.  Once you fix the automerge issues you can register again the new revision without changing the version number and this pull request will be automatically updated.\r\n\r\n[noblock]",
+      "createdAt": "2022-01-04T14:38:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51369#issuecomment-1004864956",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8476avH",
+      "author": {
+        "login": "russelljjarvis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hi @giordano, sorry yes. I have been abusing the Julia Register bot (I have been using its messages to try to debug package conflicts). I have been having a lot grief with package conflicts, that didn't exist when I installed modules and developed code, but do exist when I try to re-install my code as a Julia package.\r\n\r\n\r\nIn the meantime, I think I have fixed all of the package conflicts, so I will try one more time. Sorry again, I didn't mean to escalate a problem up to the level of human interaction.",
+      "createdAt": "2022-01-04T21:05:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51369#issuecomment-1005169607",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849Y8Fz",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2022-02-04T12:35:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51369#issuecomment-1029947763",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q849bFjo",
+      "author": {
+        "login": "russelljjarvis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "It's fine to close for now, under the assumption fix problems and try to make package later I think.",
+      "createdAt": "2022-02-05T03:14:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/51369#issuecomment-1030510824",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SpikeNetOpt\n- Repository: https://github.com/russelljjarvis/SpikeNetOpt.jl\n- Created by: @russelljjarvis\n- Version: v0.1.0\n- Commit: 2dfd4a9d0cbd532b77d5c693fed5c0f16b3d287b\n- Reviewed by: @russelljjarvis\n- Reference: https://github.com/russelljjarvis/SpikeNetOpt.jl/issues/18#issuecomment-1005441795\n- Description: Julia has enough tools to support fitting spiking neural network models to data. Python speed necessitates external simulators to do network simulation. As much as possible it would be nice to do fast, efficient data fitting of spike trains to network models in one language, lets try to do that here.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598192e7e9f2cf531246fd514fa5c33d12f1a4af5fa1497d3838667824889b3b06411b3f1fd5dfe9d4907e1315106dfc8f5b9445741b425d271134104f736ea19a638556f88509124ca851a7d5b2232159480dacd195f3719959e623d91ba6787079e33afe3cd355806469197d501f16324f48f7baf692dd31f03f57a928b3d70d0 -->",
+  "package_name": "SpikeNetOpt",
+  "closed_at": "2022-02-05T09:55:54Z",
+  "title": "New package: SpikeNetOpt v0.1.0"
+}

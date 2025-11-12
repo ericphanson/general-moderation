@@ -1,0 +1,68 @@
+{
+  "created_at": "2025-06-19T14:04:51Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 133251,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86yHQJA",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: SpelledOut, StatsBase\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-19T14:11:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133251#issuecomment-2988245568",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yHnSk",
+      "author": {
+        "login": "jakewilliami"
+      },
+      "authorAssociation": "NONE",
+      "body": "This is superseded by #133255",
+      "createdAt": "2025-06-19T14:39:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/133251#issuecomment-2988340388",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86yILoB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/133255\r\n\r\nPlease avoid changing the version number when fixing automerge issues; that way, the registrator would update the existing PR instead of creating a new one.",
+      "createdAt": "2025-06-19T15:26:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/133251#issuecomment-2988489217",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Reflexicons\n- Repository: https://github.com/jakewilliami/Reflexicons.jl\n- Created by: @jakewilliami\n- Version: v0.1.0\n- Commit: 7f21a1440c2800b949c6a003c1a7706c3bf91689\n- Reviewed by: @jakewilliami\n- Reference: https://github.com/jakewilliami/Reflexicons.jl/commit/7f21a1440c2800b949c6a003c1a7706c3bf91689#commitcomment-160391206\n- Description: Reflexive lexicons and self-enumerating sentences (autograms) in Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd662ab18d5029824ece0f1c65f6304796f89379c1f5b2d5537be637908e148b894feb3650528b089e409e8966151f86fb03d372d8d4db9dca6fbfb45f100b05f4c5e6449bbff1dff762e935c749f82f05cfd8dafca50e0ba2b750cba48d12fdc99f66dffd8cfa3ea699347475973f4b505bbe8a86128402def17463a44e39e9bdf89b167779a120d1a5d7a13af7622eb7dcf16a21551b929749fff1aec5f1c5bdd048dda827b3e9de22ae2e1954bbe8b8d -->",
+  "package_name": "Reflexicons",
+  "closed_at": "2025-06-19T15:26:39Z",
+  "title": "New package: Reflexicons v0.1.0"
+}

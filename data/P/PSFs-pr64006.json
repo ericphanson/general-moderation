@@ -1,0 +1,202 @@
+{
+  "created_at": "2022-07-11T13:42:57Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 64006,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q85GW_hD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Name is not at least 5 characters long\n- Package name similar to 4 existing packages.\n  1. Similar to PSIS. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to PSID. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to PWF. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to NPCFs. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2022-07-11T13:47:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1180432451",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GXRwk",
+      "author": {
+        "login": "RainerHeintzmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I would prefer to stick to the name `PSFs.jl`. The clashes with existing names are minor and the acronym \"PSF\" for \"Point Spread Function\" is universally common. Also the talk on JuliaCon2022 is already announced with this package name. [noblock]",
+      "createdAt": "2022-07-11T14:49:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1180507172",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GeJUy",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Why not `OpticalPSFs.jl`, according to the package readme? There are many other kinds of PSFs.",
+      "createdAt": "2022-07-12T19:08:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182307634",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ge5ZK",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "From Slack, the name PointSpreadFunctions.jl was suggested. I'm not sure how to best address the JuliaCon 2022 related matter at the moment though. Preferably we would like people who view the presentation to be able to find the package.\r\n\r\n[noblock]",
+      "createdAt": "2022-07-12T21:11:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182504522",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ge7NS",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The JuliaCon 2022 talk title and abstract can be easily updated (@logankilpatrick can help with that). \r\n\r\nTo be honest, while PSF may be common in the field, I thought it was Python Software Foundation. PointSpreadFunctions.jl will IMO be much more discoverable and descriptive.\r\n\r\nSearching now, I also found PSFModels.jl.",
+      "createdAt": "2022-07-12T21:21:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182511954",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ge7WL",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Can we hold the merging of this a couple of days to see if my proposal is acceptable (and if using the longer package name is)? How would one hold off the merging?",
+      "createdAt": "2022-07-12T21:22:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182512523",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GfCZQ",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@ViralBShah I believe automerge has already been blocked if not by the name distance detection, then by comments here without indicating `[noblock]`.\r\n\r\n[noblock]",
+      "createdAt": "2022-07-12T22:03:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182541392",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GfiIj",
+      "author": {
+        "login": "logankilpatrick"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes, please email JuliaCon at JuliaLang.org and we can update the title of the talk!",
+      "createdAt": "2022-07-13T01:54:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182671395",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Gf1Q8",
+      "author": {
+        "login": "Keno"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Note that PSF is also a common file format for waveform data.",
+      "createdAt": "2022-07-13T04:22:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182749756",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85GgSC9",
+      "author": {
+        "login": "RainerHeintzmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks to all for the suggestions! Then I rename it to `PointSpreadFunctions.jl` and change my talk title and re-record the talk and ask for a title change.",
+      "createdAt": "2022-07-13T07:31:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1182867645",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q85Ghjir",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for re-recording and renaming.",
+      "createdAt": "2022-07-13T13:07:20Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/64006#issuecomment-1183201451",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PSFs\n- Repository: https://github.com/RainerHeintzmann/PSFs.jl\n- Created by: @RainerHeintzmann\n- Version: v0.1.0\n- Commit: 670306e8fd82de529b8ed4e7139c1212b1ef7f5d\n- Reviewed by: @RainerHeintzmann\n- Reference: https://github.com/RainerHeintzmann/PSFs.jl/commit/670306e8fd82de529b8ed4e7139c1212b1ef7f5d#commitcomment-78200930\n- Description: Toolbox for calculating optical PSFs\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64422aa3ee272ba8ec638ad401b5248d2b2ced378b1550ca8bf6503c67eb8f58671c6f6109426e3732f3ff7ae9edd897886d91d8406d7d77b5b27b1d5550cfdaebc9ce63fb8e30c8383076dfda508218dd53721f667ee41c488a39e5c1476f06003a70b27293747b23bdfbb77db4daae7917579d0fcf3bca07e21711dbfef664f1d92bdd97841f4e72019222df488a6b2376dded29f7cea8e0ac6c1ddb36411276d3f11efa2d6b64a62c24aca015d3b63 -->",
+  "package_name": "PSFs",
+  "closed_at": "2022-07-13T13:07:20Z",
+  "title": "New package: PSFs v0.1.0"
+}

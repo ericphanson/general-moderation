@@ -1,0 +1,68 @@
+{
+  "created_at": "2021-01-25T23:56:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "giordano",
+  "merged_at": null,
+  "pr_number": 28663,
+  "comments": [
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzE4OTkwMw==",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md). The following guidelines were not met:\n\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: julia\n- I was not able to load the package (i.e. `import PolyhedralOmega` failed). See the CI logs for details.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-01-25T23:59:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28663#issuecomment-767189903",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzU0NDUwMQ==",
+      "author": {
+        "login": "kevseryolcu"
+      },
+      "authorAssociation": "NONE",
+      "body": "Init\r\n\r\n[noblock]",
+      "createdAt": "2021-01-26T13:35:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/28663#issuecomment-767544501",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "MDEyOklzc3VlQ29tbWVudDc2NzY5ODQyNA==",
+      "author": {
+        "login": "giordano"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@kevseryolcu note that\r\n\r\n1. your package doesn't have a license file: the [General registry only accepts OSI-approved licenses](https://github.com/JuliaRegistries/General/blob/6f67ea73e2d08b6ebbb1eed7d161ca77eed83a1f/README.md#registering-a-package-in-general)\r\n2. the package [can't be loaded](https://github.com/JuliaRegistries/General/pull/28663/checks?check_run_id=1765837377):\r\n```julia\r\n┌ Warning: Package PolyhedralOmega does not have LinearAlgebra in its dependencies:\r\n│ - If you have PolyhedralOmega checked out for development and have\r\n│   added LinearAlgebra as a dependency but haven't updated your primary\r\n│   environment's manifest file, try `Pkg.resolve()`.\r\n│ - Otherwise you may need to report an issue with PolyhedralOmega\r\n└ Loading LinearAlgebra into PolyhedralOmega from project dependency, future warnings for PolyhedralOmega are suppressed.\r\nERROR: LoadError: ArgumentError: Package PolyhedralOmega does not have IterTools in its dependencies:\r\n- If you have PolyhedralOmega checked out for development and have\r\n  added IterTools as a dependency but haven't updated your primary\r\n  environment's manifest file, try `Pkg.resolve()`.\r\n- Otherwise you may need to report an issue with PolyhedralOmega\r\nStacktrace:\r\n [1] require(into::Module, mod::Symbol)\r\n   @ Base ./loading.jl:880\r\n [2] include\r\n   @ ./Base.jl:386 [inlined]\r\n [3] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt64}}, source::Nothing)\r\n   @ Base ./loading.jl:1209\r\n [4] top-level scope\r\n   @ none:1\r\n [5] eval\r\n   @ ./boot.jl:360 [inlined]\r\n [6] eval(x::Expr)\r\n   @ Base.MainInclude ./client.jl:446\r\n [7] top-level scope\r\n   @ none:1\r\nin expression starting at /tmp/jl_BnHGFB/packages/PolyhedralOmega/LMgAC/src/PolyhedralOmega.jl:1\r\nERROR: Failed to precompile PolyhedralOmega [cb40c8c0-6f69-4117-9a87-8a763eccf627] to /tmp/jl_BnHGFB/compiled/v1.6/PolyhedralOmega/jl_by50XN.\r\nStacktrace:\r\n [1] error(s::String)\r\n   @ Base ./error.jl:33\r\n [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::IOContext{Base.PipeEndpoint}, internal_stdout::IOContext{Base.PipeEndpoint})\r\n   @ Base ./loading.jl:1356\r\n [3] compilecache(pkg::Base.PkgId, path::String)\r\n   @ Base ./loading.jl:1302\r\n [4] _require(pkg::Base.PkgId)\r\n   @ Base ./loading.jl:1017\r\n [5] require(uuidkey::Base.PkgId)\r\n   @ Base ./loading.jl:910\r\n [6] require(into::Module, mod::Symbol)\r\n   @ Base ./loading.jl:897\r\n```\r\n3. you should have a [compat section for your dependencies](https://github.com/JuliaRegistries/General/blob/6f67ea73e2d08b6ebbb1eed7d161ca77eed83a1f/README.md#automatic-merging-of-pull-requests) in `Project.toml`, including Julia (but excluding standard libraries, because they follow the version in Julia itself)\r\n\r\n[noblock]",
+      "createdAt": "2021-01-26T17:24:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/28663#issuecomment-767698424",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PolyhedralOmega\n- Repository: https://github.com/kevseryolcu/PolyhedralOmega\n- Created by: @kevseryolcu\n- Version: v0.1.0\n- Commit: 3f7c8f52acd48997fb9b800034a173c5e7e9c4f6\n- Git reference: main\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n> added rational function\n<!-- END RELEASE NOTES -->",
+  "package_name": "PolyhedralOmega",
+  "closed_at": "2021-01-27T12:44:23Z",
+  "title": "New package: PolyhedralOmega v0.1.0"
+}

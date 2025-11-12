@@ -1,0 +1,150 @@
+{
+  "created_at": "2024-04-28T12:23:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 105760,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q858ELBE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\nSince you are registering a new package, please make sure that you have read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-04-28T12:26:24Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2081468484",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858FE-b",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for making this package!\r\n\r\nBecause everyone who uses Julia shares the General registry namespace, we try to make sure the names are accessible to everyone (even folks who are not going to be using your package). When it comes to abbreviations, we try pretty hard to avoid non-obvious abbreviations. ([more detailed/official explanation here](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines))\r\n\r\nThinking about IPF, specifically,\r\n\r\nFrom https://search.brave.com\r\nIdiopathic pulmonary fibrosis (\"IPF\")\r\nInformation Presentation Facility (\"programming IPF\")\r\n\r\nFrom https://www.acronymfinder.com/IPF.html\r\nInternational Polar Foundation\r\nInternal Protection Fault\r\n\r\nFrom the README of the package\r\n\"ESA/ESOC interpolation files or IPF\"\r\n\r\nSo I'm guessing IPF stands for \"interpolation files\", in which case IPFFiles is redundant (files twice).\r\n\r\nPerhaps `ESAInterpolationFiles.jl`? I think ESA is reasonably unambiguous. European space agency is the first result on brave,  google, bing, and yahoo; and esa is a direct redirect to https://en.wikipedia.org/wiki/European_Space_Agency  on wikapedia (not even a disambiguation page).\r\n\r\n---\r\n\r\nThe repo description \"ESA Intepolation Files made easy\" makes the package name `ESAInterpolationFiles.jl` sound quite appealing.",
+      "createdAt": "2024-04-28T23:58:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2081705883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858YHQ5",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\nThank you for the answer.\r\n\r\nUnfortunately, my initial assumption is to avoid including ``ESA`` in the package name as this is not associated with the agency and I don't want to \"block\" any ESA-associated potential name, just in case at some points there are some open source packages from the agency itself. \r\n\r\n``InterpolationFiles.jl`` would be too generic as a name and ``Ipf.jl`` too short, that is why I went for ``IPFFiles.jl`` as suggested in https://github.com/JuliaRegistries/General/pull/105181.  ",
+      "createdAt": "2024-04-30T19:11:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2086695993",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858ZhUR",
+      "author": {
+        "login": "LilithHafner"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ah, I see @goerz's first suggestion was also ESAInterpolationFiles, which means it is a pretty guessable name.\r\n\r\n> my initial assumption is to avoid including ESA in the package name as this is not associated with the agency\r\n\r\nWe have no requirement that package authors are affiliated with agencies or organizations that appear in their package names. For example, AWS.jl, OpenAI.jl, etc.\r\n\r\n> I don't want to \"block\" any ESA-associated potential name, just in case at some points there are some open source packages from the agency itself.\r\n\r\nThank you for your concern. I appreciate this respect for the namespace. We do have a bit of a first-come-first served policy and you're first so ¯\\_(ツ)_/¯. Also, and more importantly, there is plenty of ESAXxxxYxxx.jl namespace left even with ESAInterpolationFiles.jl registered.\r\n\r\n> InterpolationFiles.jl would be too generic as a name\r\n\r\nI agree that `InterpolationFiles.jl` would be too generic a name, but if I am correct that IPFFiles is an abbreviation for InterpolationFileFiles, then that would also be too generic. Because the package only handles ESA files, it is appropriate to include ESA in the name.",
+      "createdAt": "2024-04-30T20:16:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2087064849",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858fxNL",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "> We have no requirement that package authors are affiliated with agencies or organizations that appear in their package names.\r\n\r\nThis is exactly my point here, since I am affiliated with the ESA (I work there as a consultant) :) but since this package has been developed during my free time, I would prefer not to use any “affiliative” name.\r\n\r\nIn case this is not possible, I will evaluate re-registering the package as suggested. ",
+      "createdAt": "2024-05-01T16:16:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2088702795",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q858iPgr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There’s absolutely no implication of “affiliativeness” by having ESA as part of the package name. I would treat descriptiveness and clarity as pretty much the only consideration for choosing the package name.",
+      "createdAt": "2024-05-02T00:49:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2089351211",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8580WYh",
+      "author": {
+        "login": "andreapasquale94"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can be closed. Registration was re-triggered with the required changes.",
+      "createdAt": "2024-05-04T09:39:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2094097953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8580XPo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/106167",
+      "createdAt": "2024-05-04T09:53:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/105760#issuecomment-2094101480",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: IPFFiles\n- Repository: https://github.com/andreapasquale94/IPFFiles.jl\n- Created by: @andreapasquale94\n- Version: v0.1.0\n- Commit: bb401587882d44890cb7f5a7589bee4ae879819a\n- Reviewed by: @andreapasquale94\n- Reference: https://github.com/andreapasquale94/IPFFiles.jl/commit/bb401587882d44890cb7f5a7589bee4ae879819a#commitcomment-141441260\n- Description: ESA Intepolation Files made easy.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- initial release of IPFFiles.ij, a lightweight package for providing allocation-free access to binary ESA interpolation files.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6b26cfb4193f78d4b208498c8fab9f5099a4cbfaab42a1d8b184be55ab4e3fab10a3ba43e04def1ac34b3a1bea1daa7ab641d6c9f61f6337e818698d64cec4659da9d2c5828a45fedd55f01241ed25454d2b4a55c3ba544774dbd5c2dca0c1408ae5f2bf61070cb9f11e88ca504c5604ea3d878a8767498aa56805437032ffe6f1e0b94e59014ca026747287aca7fbf7faac773fb037fb581156e5ec40aa8c2cc4bf122b118103653ae6aa0a4abf20590 -->",
+  "package_name": "IPFFiles",
+  "closed_at": "2024-05-04T09:53:54Z",
+  "title": "New package: IPFFiles v0.1.0"
+}

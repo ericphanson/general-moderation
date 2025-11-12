@@ -1,0 +1,111 @@
+{
+  "created_at": "2024-02-27T22:34:48Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 101854,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q851Sig2",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to ExprParsers. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 2.24 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simply retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [Julia Slack](https://julialang.org/slack/) to ask for help. Include a link to this pull request.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-guidelines\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment. You can edit blocking comments, adding `[noblock]` to them in order to unblock auto-merging.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2024-02-27T22:38:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101854#issuecomment-1967794230",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851Sz-8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd say that's a no-go. The existing `ExprParsers` blocks the name `ExprParser`",
+      "createdAt": "2024-02-27T23:04:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101854#issuecomment-1967865788",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851S1uX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would recommend `ArithmeticExpressionParser` (or `ArithmeticExprParser`)",
+      "createdAt": "2024-02-27T23:06:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101854#issuecomment-1967872919",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851S3Tc",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "You are really going to have to rethink the naming policies in your organization. I know you're going for \"short\", but the Julia community really favors \"long and descriptive\". It shouldn't require maintainer attention every time you register a new package.\r\n\r\nAnd please look at what package names exist (in Julia or other languages) before you decide on the name of a new package.",
+      "createdAt": "2024-02-27T23:10:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        },
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/101854#issuecomment-1967879388",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q851XF78",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Superseded by #101894.",
+      "createdAt": "2024-02-28T13:30:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/101854#issuecomment-1968987900",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ExprParser\n- Repository: https://github.com/bhftbootcamp/ExprParser.jl\n- Created by: @DeevsDeevs\n- Version: v1.0.0\n- Commit: 22f1a3f2de34b2175c00dbb17d84cf57dac19629\n- Reviewed by: @DeevsDeevs\n- Reference: https://github.com/bhftbootcamp/ExprParser.jl/commit/22f1a3f2de34b2175c00dbb17d84cf57dac19629#commitcomment-139133603\n- Description: The ExprParser library is designed to handle and evaluate arithmetic expressions. It enables parsing and analyzing expressions, as well as performing calculations with user-defined functions\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd655a7c23d1ac5015de236812f9d808cbdc404e074914891a4d58c87f130ee6a5ef4d79937a734c1a107ec72605c495a657fb718bfed8e61b76661c2b18653a81ded16c5b72abe5fa417c8a3aaeeeac118afb48eece17e7bd84dda0ace6eb9cb783698140b8cd70887bc76690b22443394e802244846e03c2f81e8e17ba0173cd848bc9ffc9f5250c91b8c26e7ca8ac72aced1ecbafabbc5da0bfc495e89fa050937fd567d8516e473012e60d6fd81902a -->",
+  "package_name": "ExprParser",
+  "closed_at": "2024-02-28T13:30:02Z",
+  "title": "New package: ExprParser v1.0.0"
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2025-09-11T19:09:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 138393,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87DpE7V",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-11T19:17:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138393#issuecomment-3282325205",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87DpQ6o",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See https://github.com/JuliaRegistries/General/pull/138380#issuecomment-3281893070\r\n\r\nThis still does not have any documentation!\r\n\r\nThat is, none that's accessible (but you're getting there): You'll have to set up building and deploying the documentation in your CI script, and add a badge/link to the docs to your README, once it's working.\r\n\r\nI would also recommend adding at least a small paragraph of text to the README to give some context for the package (in addition to the link to the full documentation)",
+      "createdAt": "2025-09-11T19:34:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138393#issuecomment-3282374312",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87DpXfq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Don't commit the [`docs/build` directory](https://github.com/michaelakubica/MarketModels.jl/tree/main/docs/build). Typicaly, you build on the CI runner, and then deploy to the `gh-pages` branch ([GitHub Pages](https://docs.github.com/en/pages)).\r\n\r\nUnrelated, but you'll also want to make sure that `.DS_Store` files are in your `.gitignore`, and are not comitted to the repository.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-11T19:43:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138393#issuecomment-3282401258",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87KUOL-",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-10-12T12:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138393#issuecomment-3394298622",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L01t8",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-10-19T12:24:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138393#issuecomment-3419626364",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: MarketModels\n- Repository: https://github.com/michaelakubica/MarketModels.jl\n- Created by: @michaelakubica\n- Version: v0.1.0\n- Commit: bb2f991f5e13fcedaf0de67ff95578646f15644a\n- Reviewed by: @michaelakubica\n- Reference: https://github.com/michaelakubica/MarketModels.jl/commit/bb2f991f5e13fcedaf0de67ff95578646f15644a#commitcomment-165635055\n- Description: Functions to simplify creation of strategic market models.\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6dbc964cfbd79654b0db0ec02b5b7066c7f0ef8048c7113da59c71965fdf5eb9e73b9bfa9c64e07bab206281e3b0ded2af3a9921be4c5c0f60e763bdcc496b7a049bc6910d40cd216ae13f6e65489567987961283ae43b1824f692b2a9f348bc6ddccbce164d0b6eb5127c58c937511dd4544b5a63b65c5aee31c5b61b0244e70d4f919acdec086f9e18b014ff4b91aaa73505782e2daa4ef7e87ad9dc554486af16d9c85a8819d89fabb051dc82100e3 -->",
+  "package_name": "MarketModels",
+  "closed_at": "2025-10-19T12:24:04Z",
+  "title": "New package: MarketModels v0.1.0"
+}

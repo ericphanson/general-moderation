@@ -1,0 +1,165 @@
+{
+  "created_at": "2025-06-01T18:46:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 132126,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ugRXl",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-06-01T18:53:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2927695333",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ugSI9",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] See the discussion regarding the name at https://github.com/JuliaRegistries/General/pull/131898. In short, I would like to use SLOPE as a name because this package is a wrapper around the C++ library slope and because it's an acronym (for Sorted L-One Penalized Estimation). I think \"Slope\" would be more confusing. \r\n\r\nThis version of the package uses `RecipesBase` instead of invoking `Plots` as a dependency, after @giordano's suggestion.",
+      "createdAt": "2025-06-01T18:56:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2927698493",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86utyOX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Any version of a Julia package should be registered before it is tagged. Never create a tag before the registration has gone through. Typically, people use [TagBot](https://github.com/JuliaRegistries/TagBot). The workflow is to start by registering a new version, by commenting `@JuliaRegistrator register` on the commit that should be tagged. Once the registration goes through, TagBot will be notified automatically and create the tag in the repository. This will then trigger the continuous integration to, e.g., deploy the documentation for the newly tagged version. The principle applies to new versions of registered packages just like for the original registration. In this case, there was no need to create a `v2.0.0`, since `v1.0.0` was never released. You should generally not tag any new version of a package while its original registration is still pending. Instead, just update the package (without changing the version number), and retrigger the registration. That will then update the existing PR.\r\n\r\nMy recommendation would be to delete [all tags in the SLOPE repo](https://github.com/jolars/SLOPE.jl/tags), to roll back the version to `v1.0.0` (or maybe `v0.1.0`, see below), and to retrigger the registration to update the existing https://github.com/JuliaRegistries/General/pull/131898.\r\n\r\nI would also say that if you are tagging a version `v1.0.0` and then a `v2.0.0` just a few days after, your API really isn't \"stable\" yet. Technically, this is within the rules of semantic versioning, but the usual social convention is that when a package is indicated to  be \"stable\" (by tagging `v1.0.0`), backwards compatibility should be a significant concern, and should not be broken without strong justification. If you are still experimenting with the design of the API, I would recommend a `v0.1.0` version number, and then going to `v1.0.0` once that API design has proven itself useful.",
+      "createdAt": "2025-06-02T15:21:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2931237783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uxEGb",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock]\r\n\r\n> [noblock] Any version of a Julia package should be registered before it is tagged. Never create a tag before the registration has gone through. Typically, people use [TagBot](https://github.com/JuliaRegistries/TagBot). The workflow is to start by registering a new version, by commenting `@JuliaRegistrator register` on the commit that should be tagged. Once the registration goes through, TagBot will be notified automatically and create the tag in the repository. This will then trigger the continuous integration to, e.g., deploy the documentation for the newly tagged version. The principle applies to new versions of registered packages just like for the original registration. In this case, there was no need to create a `v2.0.0`, since `v1.0.0` was never released. You should generally not tag any new version of a package while its original registration is still pending. Instead, just update the package (without changing the version number), and retrigger the registration. That will then update the existing PR.\r\n\r\nI understand your reasoning, but why would it be a problem that there is a previous tag for the package? I would be surprised if mine was the first Julia package to feature (github) releases before registration in the package registry. I also understand that the usual workflow is to tag the release after it's been registered in the Julia package registry, but why is it not a valid strategy to register the package it has been tagged? This could lead the Julia registry to miss a version of the package, but is that in fact a problem? (I could be missing some critical aspect here.)\r\n\r\n> My recommendation would be to delete [all tags in the SLOPE repo](https://github.com/jolars/SLOPE.jl/tags), to roll back the version to `v1.0.0` (or maybe `v0.1.0`, see below), and to retrigger the registration to update the existing #131898.\r\n\r\nIf this is a requirement I'll of course comply, but I would prefer not to rewrite the repo's git history.\r\n\r\n> I would also say that if you are tagging a version `v1.0.0` and then a `v2.0.0` just a few days after, your API really isn't \"stable\" yet. Technically, this is within the rules of semantic versioning, but the usual social convention is that when a package is indicated to be \"stable\" (by tagging `v1.0.0`), backwards compatibility should be a significant concern, and should not be broken without strong justification. If you are still experimenting with the design of the API, I would recommend a `v0.1.0` version number, and then going to `v1.0.0` once that API design has proven itself useful.\r\n\r\nI mostly agree, but I am not experimenting with the API. The breaking change was an unfortunate consequence of having to change the plot functionality when moving from extensions to RecipesBase. My position, on the contrary, is that the unstable versioning scheme is often more confusing and leads to more problems with compatibility since users have no way of knowing whether a minor bump represents a breaking change or a new feature. I absolutely worry a lot about backwards compatibility, so I think \"If you’re worrying a lot about backward compatibility, you should probably already be 1.0.0.\" already applies :smiling_face_with_tear: ",
+      "createdAt": "2025-06-02T19:11:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2932097435",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86ux57N",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> but why would it be a problem that there is a previous tag for the package?\r\n\r\nThe only \"source of truth\" for the version of packages is the registry. That's how a dependency you may list in some `Project.toml` gets evaluated. The tags that may or may not exist in the underlying repository are irrelevant for this. Their only purpose is to communicate to GitHub users which commit corresponds to a release, and to do things like triggering documentation builds. You could (but absolutely should not) delete and recreate tags for released versions and it won't affect what gets installed.\r\n\r\nThe \"problem\" is that you have no control over whether a commit that was submitted to the Registrator will be accepted and end up as the actual release. There might very well be a problem (like in invalid `compat` specification) that slipped through. If that happens, you would have to fix it by making more commits, or amending the release commit, and then retriggering the registration to update the registration PR. You'll only want to tag the commit that is actually the release.\r\n\r\nIf you already created a tag for the first attempt, you'll have to delete that, and you'll also have to deal with deleting, e.g., the documentation built that the tag might have triggered.\r\n\r\nIf you're lucky and the registration goes through on the first try, **and if you don't have TagBot installed**, then you're okay, of course. However, if you have `TagBot` installed (which all Julia guides recommend and tools like [PkgTemplates](https://github.com/JuliaCI/PkgTemplates.jl) set up automatically), then you will get an error in your repository when `TagBot` tries to run after the registration goes through (\"tag already exists\").\r\n\r\n> I would be surprised if mine was the first Julia package to feature (github) releases before registration in the package registry. \r\n\r\nWell, you're not the first one to have made that mistake 😉. That's probably because this entire registration process is a bit idiosyncratic to Julia. Other languages handle this differently, and, e.g., in Python, it is not uncommon to trigger a release via the creation of a tag. I'm not even 100% sure that I think Julia's way of doing things a great idea, but it's what we have.\r\n\r\nI think almost all packages use TagBot, though, so to a first approximation, no, there are no other packages that tag GitHub releases before registration. It's definitely a _mistake_ to do so. Even for projects that do not use TagBot, [the `JuliaRegistrator` bot gives very clear instructions]( https://github.com/jolars/SLOPE.jl/commit/3dece352a9edbd4c6e2dc8719c21831d83b9b39d#commitcomment-158831236) to create the tags after the registration has gone through.\r\n\r\n> This could lead the Julia registry to miss a version of the package, but is that in fact a problem?\r\n\r\nYes, that is not allowed. The Registrator will reject registrations that skip versions (although it can be overridden by an admin – sometimes packages have special needs like tracking the version of some upstream package). The only reason it works in this case is that this is an _initial_ registration. So the Registrator sees `v2.0.0` as the initial release. It has no idea about the `v1.0.0` tag / prior registration PR.\r\n\r\n> If this is a requirement I'll of course comply\r\n\r\n_Technically_, it's not a hard requirement, but I would certainly frown upon the initial release of a package to be version `v2.0.0`, and maybe ask for a full registry maintainer for their 2 cents on this – one of them has to do a manual merge on this registration anyway. The only situation where I would think that's okay is for well-established package that's been using a [private registry](https://github.com/GunnarFarneback/LocalRegistry.jl) and now wants to move to `General` for a 2.0 release.\r\n\r\n> I would prefer not to rewrite the repo's git history.\r\n\r\nYou're not really, you're just deleting \"accidentally\" created tags. Whether that's \"rewriting history\" is debatable. I would say no: it doesn't create the usual issue that people who have a checkout of your repo have to do a forced reset.\r\n\r\nThe main thing though, is that the existing `v1.0.0` is a _lie_. That version simply does not exist. It would create _a lot_ of confusion to keep that tag around (unless https://github.com/JuliaRegistries/General/pull/131898 was still merged to create `v1.0.0`, that is).\r\n\r\n> The breaking change was an unfortunate consequence of having to change the plot functionality when moving from extensions to RecipesBase\r\n\r\nOkay, but you haven't actually made a 1.0 release. So, luckily, you now have the opportunity to still include that \"breaking\" change in the 1.0 release.\r\n\r\nOne things that _is_ possible is for https://github.com/JuliaRegistries/General/pull/131898 to be merged. Then, simply retriggering this PR would register `v2.0.0` as an update. At least I think that would work with how all the bots are set up on `General`. Normally, while an original registration is pending, one should never submit newer versions.\r\n\r\nThat's being _extremely_ strict about \"preserving\" history, though. I would not recommend essentially \"throwing away\" the `v1.0.0` release like that. But it's up to you. In any case, https://github.com/JuliaRegistries/General/pull/131898 is the PR that should be merged manually. Either in its current form, or (preferably, from my perspective), updated to reflect the current `main` branch.\r\n\r\n> My position, on the contrary, is that the unstable versioning scheme is often more confusing and leads to more problems with compatibility since users have no way of knowing whether a minor bump represents a breaking change or a new feature\r\n\r\nI'm all in favor of moving to 1.0 as soon as the API is reasonably \"stable\". The [SemVer FAQ has some good guidelines on this](https://semver.org/#how-do-i-know-when-to-release-100). For me, what primarily distinguishes pre-stable vs stable releases is that the emphasis of backwards-compatibility changes. Pre-1.0, backwards-compatibility should not be a concern. Afterwards, there should be a relatively high bar for breaking changes (how high is a matter of personal taste).\r\n\r\nOf course, `Pkg` treats `0.x` versions as \"breaking\", even if that is not covered by the SemVer specification, and the `General` registry requires keeping a CHANGELOG for breaking releases. The argument is that by registering a package, you are inviting others to use it as a dependency, which requires keeping track of the API. In the context of the `General` registry, I think a good approach is to treat `v0.x` releases as \"release candidates\" of a `v1.0` release that should be made as soon as the API has proven itself in the wild.\r\n\r\n>  I absolutely worry a lot about backwards compatibility, so I think \"If you’re worrying a lot about backward compatibility, you should probably already be 1.0.0.\" already applies 🥲\r\n\r\nRight, that's fine, but then you should in fact make a `v1.0.0` release before you make a `v2.0.0` release. Right now, there simply isn't a `v1.0.0`.\r\n\r\nDoes all of that make sense?",
+      "createdAt": "2025-06-02T20:11:18Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2932317901",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uyjou",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, I have no problem complying with all of this. Thanks for the detailed comments! I'm still not sure I fully understand why the Julia registry needs to correspond one-to-one in terms of version with the github repository, but if that's how it is then that's how it is. And I understand that since skipping releases is out of the question, there's really no alternative.\r\n\r\nFeel free to close this PR now. I'll remove the tags etc and update the original one. Thanks again!",
+      "createdAt": "2025-06-02T21:05:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2932488750",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86uyo0m",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of the (still to be updated) PR https://github.com/JuliaRegistries/General/pull/131898",
+      "createdAt": "2025-06-02T21:13:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2932509990",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vbPUr",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I think almost all packages use TagBot, though, so to a first approximation, no, there are no other packages that tag GitHub releases before registration.\r\n\r\nI'm fairly sure Registrator rejects a registration attempt if there's already a tag on a different commit, regardless whether you use TagBot. (And an error from TagBot doesn't have any real consequences, other than a tag not being created.)\r\n\r\n> Technically, it's not a hard requirement, but I would certainly frown upon the initial release of a package to be version v2.0.0, and maybe ask for a full registry maintainer for their 2 cents on this – one of them has to do a manual merge on this registration anyway.\r\n\r\nI think this is unwarranted. Automerge used to complain about unusual initial version numbers but that check has been disabled and even when it was active, `X.0.0` was not considered as non-standard.\r\n\r\n> > This could lead the Julia registry to miss a version of the package, but is that in fact a problem?\r\n\r\n> Yes, that is not allowed. The Registrator will reject registrations that skip versions (although it can be overridden by an admin – sometimes packages have special needs like tracking the version of some upstream package).\r\n\r\nNo, *Registrator* will accept such registrations. Automerge, on the other hand, will complain, but if I remember correctly the author can self-override this with a PR label if it is intentional.",
+      "createdAt": "2025-06-05T08:00:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2943153451",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86vujpO",
+      "author": {
+        "login": "jolars"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for the clarifications, @GunnarFarneback!",
+      "createdAt": "2025-06-06T06:16:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/132126#issuecomment-2948217422",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SLOPE\n- Repository: https://github.com/jolars/SLOPE.jl\n- Created by: @jolars\n- Version: v2.0.0\n- Commit: 3dece352a9edbd4c6e2dc8719c21831d83b9b39d\n- Reviewed by: @jolars\n- Reference: https://github.com/jolars/SLOPE.jl/commit/3dece352a9edbd4c6e2dc8719c21831d83b9b39d#commitcomment-158831235\n- Description: Julia package for Sorted L-One Penalized Estimation (SLOPE)\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd606aee1a3bd3ab4d4226ea3c71e248426e124376a177f72145508acdfef0284a377f6bb4aab459353368f2ceb7b222d70368ef5ced9e89e390ec552e9e44cd7feb39eef59d412e9628974a11b674351a85b061e7eac54e4a2e2abc1ca5a93469cc4086cbf64b4f15377f53104ab89ea0eb9d191182408ab7b7315e74e62597adda52927fc74df6f74f8c02ac00c07f2b66fa5e88ad9074af6a0f0d4af542dbde0 -->",
+  "package_name": "SLOPE",
+  "closed_at": "2025-06-02T21:13:20Z",
+  "title": "New package: SLOPE v2.0.0"
+}

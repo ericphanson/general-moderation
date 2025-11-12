@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-02-28T19:30:10Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "github-actions[bot]",
+  "merged_at": null,
+  "pr_number": 126050,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86ga7W9",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n- I was not able to load the package (i.e. `import LightORM` failed). See the AutoMerge logs for details.\n- Package name similar to 2 existing packages.\n  1. Similar to LightOSM. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.20 is at or below cutoff of 2.50.\n  2. Similar to LightGBM. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 1.23 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-02-28T19:38:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126050#issuecomment-2691413437",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86gc0JV",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would strongly recommend against using `ORM` as part of the package name, although I could _maybe_ see `DatabaseORM` working (where \"Database\" gives sufficient context). Otherwise, the guidelines encourage writing out acronyms. Long and descriptive package names are expected in Julia, so `ObjectRelationalMapping` is perfectly fine as a package name, or part of a package name. Although from what I can see, \"object–relational mapping\" is a fairly general concept, so you might want to choose a name that highlights what is specific to your implementation.\r\n\r\nAlso in your README, you should definitely write out the ORM acronym, as it is not a commonly understood term for the audience of the General registry.\r\n\r\nThere also seems to be an issue with your documentation: all links to the documentation from the README appear to be dead at the moment.",
+      "createdAt": "2025-03-01T03:46:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/126050#issuecomment-2691908181",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86k3s3z",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for 30 days and will be automatically closed 7 days from now. If this pull request should not be closed, please either (1) fix the AutoMerge issues and re-trigger Registrator, which will automatically update the pull request, or (2) post a comment explaining why you would like this pull request to be manually merged. [noblock]",
+      "createdAt": "2025-03-31T12:24:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126050#issuecomment-2766065139",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86l4547",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "This pull request has been inactive for more than 30 days and has automatically been closed. Feel free to register your package or version again once you fix the AutoMerge issues. [noblock]",
+      "createdAt": "2025-04-07T12:24:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/126050#issuecomment-2783157819",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LightORM\n- Repository: https://github.com/Thiago-Simoes/LightORM.jl\n- Created by: @Thiago-Simoes\n- Version: v0.2.0\n- Commit: b543f480bc3a461b095495e3bae41dbf06c4a29a\n- Reviewed by: @Thiago-Simoes\n- Reference: https://github.com/Thiago-Simoes/LightORM.jl/issues/3#issuecomment-2691399741\n- Description: Easy and modern ORM for Julia\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359810955b2f23594c7c424dd46c5e3a1a51af6f25e5b648e75e87a861e179ead005cdc35c272becc4fa96069ce76578814db2a3ee64f68be345251a5c6fb2ce3cd8ffd48c820712e938cbb363c0ce0e817a8f39682578fa9eeab4673059142cae493f854b00f06fddd6915af70fdf95bedccec153bb9c8d7206f28152fa027d01dd -->",
+  "package_name": "LightORM",
+  "closed_at": "2025-04-07T12:24:17Z",
+  "title": "New package: LightORM v0.2.0"
+}

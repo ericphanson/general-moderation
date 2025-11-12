@@ -1,0 +1,226 @@
+{
+  "created_at": "2021-10-26T07:38:55Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "fredrikekre",
+  "merged_at": null,
+  "pr_number": 47508,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q844uQZu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Your `new package` pull request does not meet the guidelines for auto-merging. Please make sure that you have read the [General registry README](https://github.com/JuliaRegistries/General/blob/master/README.md) and the [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). The following guidelines were not met:\n\n- Package name similar to 1 existing package.\n  1. Similar to GeoStats. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1. Normalized visual distance 1.83 is at or below cutoff of 2.50.\n\nNote that the guidelines are only required for the pull request to be merged automatically. However, it is **strongly recommended** to follow them, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\nAfter you have fixed the AutoMerge issues, simple retrigger Registrator, which will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless of course the AutoMerge issue is that you skipped a version number, in which case you should change the version number).\n\nIf you do not want to fix the AutoMerge issues, please post a comment explaining why you would like this pull request to be manually merged.\n\nSince you are registering a new package, please make sure that you have also read the package naming guidelines: https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1\n\n\n\n---\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2021-10-26T07:44:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951649902",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uSD3",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Dear general registry maintainers, please do **not** merge this PR.\r\n\r\n@kongdd you are forking various packages from JuliaGeo and JuliaEarth into this \"new\" organization geo-julia, and trying to register packages under very similar names. This is plagiarism. I will report this event to the Julia Stewards.",
+      "createdAt": "2021-10-26T07:54:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951656695",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uWJd",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> Dear general registry maintainers, please do **not** merge this PR.\r\n> \r\n> @kongdd you are forking various packages from JuliaGeo and JuliaEarth into this \"new\" organization geo-julia, and trying to register packages under very similar names. This is plagiarism. I will report this event to the Julia Stewards.\r\n\r\n@juliohm Please read the script of GeoStars.jl first, before you get such decision!\r\nI forked the script of JuliaGeo and JuliaEarth just for self learning, but it is not re-publish. If the maintainers unhappy with that, I can delele.\r\n\r\n\r\nGeoStars.jl is build based on [GeoArrays.jl](https://github.com/evetion/GeoArrays.jl). The kernel variable `GeoArray` is from there. The GeoArrays.jl is MIT license. I include the original MIT file and include my name in the license file. I can make necessary change to follow that license.\r\n\r\nThe structure of Stars.jl refers R package stars (https://github.com/r-spatial/stars). The structure of `GeoStars` is substantially different from `GeoArrays`.\r\n\r\nDo you refer to the github organization name is `plagiarism`?\r\n\r\n",
+      "createdAt": "2021-10-26T08:11:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951673437",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uXUM",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@kongdd you do not register packages under a different name to learn, this is plagiarism. Please consider removing this Julia organization, this is not how the Julia community works: https://julialang.org/community/standards/#give_credit",
+      "createdAt": "2021-10-26T08:13:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951678220",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844ucNE",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Furthermore, the README of the package is a copy of the GeoArrays.jl README with a small sentence added:\r\n\r\n> This packages takes its inspiration from R's [GeoStars](https://github.com/r-spatial/stars).\r\n\r\nThe link points to the R package `stars` and calls it `GeoStars`. This is conscious plagiarism to me.\r\n\r\nI've reported the case to the Julia Stewards.",
+      "createdAt": "2021-10-26T08:22:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951698244",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uds1",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Fine. If julia community do not accept this, I kept this package for myself use.",
+      "createdAt": "2021-10-26T08:26:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951704373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uizw",
+      "author": {
+        "login": "nalimilan"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@kongdd The MIT license is very permissive but its almost only requirement is that you keep the copyright notice, including the names of original authors of course. That's for the legal part of it. Now, you should also consider good community practices, which go beyond this. Why not reuse the `GeoArray` type from GeoArrays.jl instead of copying it to your package? This approach is generally favored as it avoids duplication of work and it also makes the contribution of original authors more visible.\r\n\r\nThere's also a problem with the name GeoStars, which is that there's a single-letter difference from the existing GeoStats. This will likely confuse people, which is why the auto-merging has been disabled.",
+      "createdAt": "2021-10-26T08:53:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951725296",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uk90",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you @nalimilan. \r\nI am trying to make R users finding this package package easily. The R package called, `stars`. But both of Stars and GeoStars are not allowed. Any Suggest?\r\n\r\nI didn't get enough Julia knowledge about how to inherit a struct variable from another package. When available, I will rewrite the Stars from ground and the script of GeoArrays will be removed completely.",
+      "createdAt": "2021-10-26T09:04:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951734132",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844ul0n",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Dear Julia maintainer, this branch, including the register of `Stars v0.1.0`, can be deleted now. \r\nMight need a long time to fix problems raised by @juliohm and @nalimilan.\r\n\r\nThanks for all your comments and suggestions.",
+      "createdAt": "2021-10-26T09:08:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951737639",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uppa",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Stars seems like a good name if it is a julia version of a R package called that.",
+      "createdAt": "2021-10-26T09:27:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951753306",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uqeT",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you @fredrikekre . \r\nIf used `Stars`, 9 similar package names detected (https://github.com/JuliaRegistries/General/pull/47507). Is this acceptable?\r\n",
+      "createdAt": "2021-10-26T09:31:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951756691",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844ur7n",
+      "author": {
+        "login": "fredrikekre"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yea thats just an automated check. I will close this in favor of https://github.com/JuliaRegistries/General/pull/47507 then?",
+      "createdAt": "2021-10-26T09:38:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951762663",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844ur9D",
+      "author": {
+        "login": "juliohm"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I think there are two separate issues here:\r\n\r\n1. To improve the discoverability of existing Julia packages you don't fork and register under a different name. GeoArrays.jl is a established package for some users and this only creates noise. You should use a different method to improve discoverability within the R community. Wiki pages, tutorials, notebooks. Not a registered package with a different name, period.\r\n2. The name Stars.jl is not descriptive enough. R packages have terrible naming conventions and we shouldn't be basing our naming conventions that way. Stars.jl can mean astronomical objects, can mean stencil stars in geometric processing (StarTIN.jl), it can mean all sorts of things.\r\n\r\nI keep my suggestion of simply removing the organization and using other methods to improve discoverability.",
+      "createdAt": "2021-10-26T09:38:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951762755",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q844uuwX",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you @fredrikekre",
+      "createdAt": "2021-10-26T09:54:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/47508#issuecomment-951774231",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GeoStars\n- Repository: https://github.com/geo-julia/GeoStars.jl\n- Created by: @kongdd\n- Version: v0.1.0\n- Commit: 3989520d4b81d0b81511344bdc60c8b5c5451c39\n- Reviewed by: @kongdd\n- Reference: https://github.com/geo-julia/GeoStars.jl/issues/3#issuecomment-951645915\n- Description: Julia version of R package stars, https://github.com/r-spatial/stars\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598cff4de0afc1e6c18154cae17be1ce22cb172717468ed2ab15bdf581e72e145767d3d32ea94ab351e4b238edcc366db1531ef6c558d40ea9e1644bf71f4525cc13a48840c20bbc6176e6555a11bb28c2fae4b841f092aa7e485d59691d9d3ad3f7552f55236cd63bbfee6853617fc98c5b829c76f46e04b4891b93b68e38a6a5e -->",
+  "package_name": "GeoStars",
+  "closed_at": "2021-10-26T09:38:51Z",
+  "title": "New package: GeoStars v0.1.0"
+}
