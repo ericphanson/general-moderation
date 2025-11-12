@@ -1,0 +1,65 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 4,
+  "package_author": "technocrat",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 133925,
+  "package_name": "ACS",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "I would not recommend `AmCommSurvey`. Long descriptive package names are strongly encouraged by the guidelines, and I don’t think `AmericanCommunitySurvey` is too long.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`CensusACS` would also be a good option, though… there _is_ value in the recognizability of an acronym if it is given some context ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closed in favor of https://github.com/JuliaRegistries/General/pull/134035",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "r_package_precedent"
+  ],
+  "related_prs": [
+    134035
+  ]
+}

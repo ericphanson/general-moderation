@@ -1,0 +1,48 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 4,
+  "package_author": "FedericoStra",
+  "decision": {
+    "merged": false,
+    "closed_by": "giordano",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 33430,
+  "package_name": "Dbg",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "FedericoStra",
+      "author_association": "NONE",
+      "text": "Seems like the name `Dbg` is not ok. The purpose of the package is to expose a macro `@dbg` similar to Rust [`dbg!`](https://doc.rust-lang.org/std/macro.dbg.html). I can rename the package to `DbgMacro`, if necessary.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": ">  I can rename the package to DbgMacro, if necessary.\r\n\r\nYes, that's probably better, thanks!",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 1,
+      "author": "FedericoStra",
+      "author_association": "NONE",
+      "text": "This PR is superseded by #33446 and can be closed: I renamed `Dbg` -> `DbgMacro`.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    33446
+  ]
+}

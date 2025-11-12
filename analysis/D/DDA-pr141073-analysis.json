@@ -1,0 +1,80 @@
+{
+  "violations": [
+    {
+      "excerpt": "not all letters are upper-case",
+      "type": "all_caps"
+    },
+    {
+      "excerpt": "name too short",
+      "type": "too_short"
+    },
+    {
+      "excerpt": "name does not meet format requirements",
+      "type": "naming_format"
+    },
+    {
+      "excerpt": "package name similar to existing packages",
+      "type": "similar_name"
+    }
+  ],
+  "has_violations": true,
+  "num_comments": 6,
+  "package_author": "sdraeger",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 141073,
+  "package_name": "DDA",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "See https://github.com/JuliaRegistries/General/pull/141032#issuecomment-3436228797",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "> https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules\r\n\r\nOr maybe `DDABinaryWrapper`.\r\n\r\nThree-letter acronyms are pretty much a no-go for package names, under the [naming guidelines](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules)",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "sdraeger",
+      "author_association": "NONE",
+      "text": "@goerz Got it. What about `DelayDifferentialAnalysis`? Currently, the package is a wrapper but may soon contain an actual Julia clone of the existing C implementation.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "`DelayDifferentialAnalysis` seems good to me!",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/141075",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": true,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    141032,
+    141075
+  ]
+}

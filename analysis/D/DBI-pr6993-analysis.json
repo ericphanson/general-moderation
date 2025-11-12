@@ -1,0 +1,151 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 20,
+  "package_author": "quinnj",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 3
+  },
+  "pr_number": 6993,
+  "package_name": "DBI",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "quinnj",
+      "author_association": "CONTRIBUTOR",
+      "text": "I'd like to petition to allow the shorter package name in this case; DBI is fairly common acronym (DataBase Interface) in other languages for database interface definitions.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "The more I think about this, the less I like the name.\r\n\r\nHow about `DBInterface.jl` or `DBInterfaces.jl`? Or maybe something like `AbstractDatabase.jl` or `AbstractDatabases.jl`\r\n\r\nI’m trying to move us away from three letter package names except in the most glaringly obvious cases.\r\n\r\n@StefanKarpinski @KristofferC @fredrikekre ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "randyzwitch",
+      "author_association": "NONE",
+      "text": "I feel like you need to go with DBI.jl just based on prior art",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> I feel like you need to go with DBI.jl just based on prior art\r\n\r\nAny prior art in particular?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I know that the General registry has multiple three-letter packages, but I wouldn't recommend using them as examples. In hindsight, I don't think all of them were good decisions. And moving forward, I think it's best to minimize the number of new three-letter packages that we allow.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "randyzwitch",
+      "author_association": "NONE",
+      "text": "Perl, R and Python all have DBI packages. If I were to guess if Julia had one, I’d start by searching “DBI Julia”",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "randyzwitch",
+      "author_association": "NONE",
+      "text": "https://db.rstudio.com/dbi/\r\nhttps://www.python.org/dev/peps/pep-0249/\r\nhttps://dbi.perl.org/\r\nhttps://rubygems.org/gems/dbi/versions/0.4.5\r\nhttps://crates.io/crates/dbi",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "nickrobinson251",
+      "author_association": "CONTRIBUTOR",
+      "text": "Let's choose to have better naming conventions than other languages. `DBInterface.jl` is much clearer. ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "randyzwitch",
+      "author_association": "NONE",
+      "text": "What benefit does it give to intentionally use a different name than other people are will be searching for? In the standard library, zeros() and ones() are just as arbitrary about what they do, but are around because the audience is used to those conventions\r\n\r\nTo me, the biggest mistake is to do something like this https://pypi.org/project/JayDeBeApi/",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 4,
+      "author": "davidanthoff",
+      "author_association": "MEMBER",
+      "text": "`DBInterface.jl` seems really nice to me. Relatively short, super clear to everyone, even those that aren't familiar with acronyms from other languages. Plus, this package probably won't be used directly by end users, it mostly targets other package authors, right? So having something short is maybe even less important?",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "iamed2",
+      "author_association": "MEMBER",
+      "text": "Python's is actually DBAPI (or DB-API), and until I encountered DBI.jl I had no idea that was a name used in other languages. I had interacted with databases in Java, C, MATLAB, and Python. \r\n\r\nI like DBInterface since you can guess what it is from the name. I'd say DatabaseInterface is better. That said, I support every option proposed so far!",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Here is one counterexample: If you search for `Matlab DBI`, all the results that come up are either about clustering, directivity, or decibals - not databases. In contrast, if you search for either `Matlab database` or `Matlab database interface`, the first result is the Matlab Database Toolbox.\r\n\r\nIn fact, if I go to https://dbi.r-dbi.org/, then I see this:\r\n\r\n> The interface defines a small set of classes and methods similar in spirit to Perl’s DBI, Java’s JDBC, Python’s DB-API, and Microsoft’s ODBC. It supports the following operations:\r\n\r\nSo R and Perl call it `DBI`, but Python calls it `DB-API`, Java calls it `JDBC`, Microsoft calls it `ODBC`, and Matlab calls it `Database Toolbox`. So there is already precedent for different languages to have different names for these kinds of packages.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "~~Here's another suggestion: `Databases.jl`~~",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "I would also be fine with `DatabaseAPI.jl` or `DatabasesAPI.jl`.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 2,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "@quinnj Are you amenable to any of the suggested names?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "davidanthoff",
+      "author_association": "MEMBER",
+      "text": "I think Databases.jl would not be good. The package does not have databases in it, it defines an interface for databases.",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 5,
+      "author": "quinnj",
+      "author_association": "CONTRIBUTOR",
+      "text": "I think @davidanthoff's suggestion of DBInterface.jl is my favorite, so let's go with that.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "> I think @davidanthoff's suggestion of DBInterface.jl is my favorite, so let's go with that.\r\n\r\nSounds great. I’ll close this PR and you can make a new registration with the new name.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

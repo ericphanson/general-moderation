@@ -1,0 +1,65 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "felipenoris",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 3
+  },
+  "pr_number": 13151,
+  "package_name": "BLP",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "felipenoris",
+      "author_association": "CONTRIBUTOR",
+      "text": "* Naming: I assumed the name `BLPAPI` (or `Blpapi`) was taken by JuliaComputing, so I used BLP. This package does not have an obvious alternative name, and I accept suggestions.\r\n\r\n* build fails: the CI tried to install on linux. Currently this is a Windows-only package in this initial release.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": ">     * build fails: the CI tried to install on linux. Currently this is a Windows-only package in this initial release.\r\n\r\nThat is fine.\r\n\r\n>     * Naming: I assumed the name `BLPAPI` (or `Blpapi`) was taken by JuliaComputing, so I used BLP. This package does not have an obvious alternative name, and I accept suggestions.\r\n\r\nI would **very strongly** recommend a longer and more descriptive package name.\r\n\r\nHow about:\r\n- `Bloomberg.jl`\r\n- `BloombergAPI.jl`\r\n- `BloombergData.jl`\r\n- `BloombergFinance.jl`",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "felipenoris",
+      "author_association": "CONTRIBUTOR",
+      "text": "@DilumAluthge , I'm afraid those names are Bloomberg trademarks. Most packages go with Blpapi name.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "- `BLPData.jl`\r\n- `BLPdata.jl`\r\n- `BLPFinance.jl`\r\n- `BLPfinance.jl`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 4,
+      "author": "felipenoris",
+      "author_association": "CONTRIBUTOR",
+      "text": "I'll go with BLPData.jl. ",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 5,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "Cool. I'll close this PR, and you can make a new registration after you have renamed the package.",
+      "stance": "anti_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [],
+  "related_prs": []
+}

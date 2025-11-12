@@ -13,21 +13,21 @@
   "package_name": "AWS",
   "discussion": [
     {
-      "influence": 1,
+      "influence": 2,
       "author": "mattBrzezinski",
       "author_association": "MEMBER",
       "text": "I'm not fully understanding what is happening with AutoMerge here. It's throwing the error:\r\n\r\n> ERROR: LoadError: HTTP.ExceptionRequest.StatusError(404, \"GET\", \"/latest/meta-data/iam/info\",\r\n\r\nThis occurs when setting up some default [aws_config](https://github.com/JuliaCloud/AWS.jl/blob/master/src/AWS.jl#L27). This is due to no AWS Credentials being available. However, this is throwing a 404 instead of a timeout error (what I'm expecting).\r\n\r\nThis file matches for the most part what is in [AWSCore.jl](https://github.com/JuliaCloud/AWSCore.jl/blob/master/src/AWSCredentials.jl) which doesn't have issues with auto merge...",
       "stance": "unrelated"
     },
     {
-      "influence": 3,
+      "influence": 4,
       "author": "oxinabox",
       "author_association": "MEMBER",
       "text": "This package should be exempt to the 5 letter rule as it is a pre-existing package with a name from long before that guideline that is only now being updated to be Julia 1.0 compatible.",
       "stance": "pro_merge"
     },
     {
-      "influence": 2,
+      "influence": 3,
       "author": "fredrikekre",
       "author_association": "MEMBER",
       "text": "Not that this happened on `import AWS`. Is it trying to do something in `__init__` or similar? For example https://github.com/JuliaCloud/AWS.jl/blob/7315174b628ae4298217572a0b90b94d3cac3fbc/src/AWS.jl#L23-L24 looks strange.",
@@ -41,7 +41,7 @@
       "stance": "neutral_merge"
     },
     {
-      "influence": 2,
+      "influence": 3,
       "author": "fredrikekre",
       "author_association": "MEMBER",
       "text": "This is what I get:\r\n```\r\njulia> using AWS\r\n[ Info: Precompiling AWS [fbe9abb3-538b-5e4e-ba9e-bc94f4f92ebc]\r\nERROR: LoadError: MethodError: no method matching parse(::Nothing)\r\nClosest candidates are:\r\n  parse(::AbstractString; dicttype, inttype, allownan, null) at /tmp/tmp.lc3G7tJerH/packages/JSON/d89fA/src/Parser.jl:456\r\n  parse(::IO; dicttype, inttype, allownan, null) at /tmp/tmp.lc3G7tJerH/packages/JSON/d89fA/src/Parser.jl:487\r\nStacktrace:\r\n [1] ec2_instance_credentials() at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSCredentials.jl:314\r\n [2] AWS.AWSCredentials(; profile::Nothing) at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSCredentials.jl:160\r\n [3] AWS.AWSConfig() at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWSConfig.jl:13\r\n [4] top-level scope at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWS.jl:27\r\n [5] include(::Function, ::Module, ::String) at ./Base.jl:380\r\n [6] include(::Module, ::String) at ./Base.jl:368\r\n [7] top-level scope at none:2\r\n [8] eval at ./boot.jl:331 [inlined]\r\n [9] eval(::Expr) at ./client.jl:467\r\n [10] top-level scope at ./none:3\r\nin expression starting at /tmp/tmp.lc3G7tJerH/packages/AWS/YPBcE/src/AWS.jl:27\r\nERROR: Failed to precompile AWS [fbe9abb3-538b-5e4e-ba9e-bc94f4f92ebc] to /tmp/tmp.lc3G7tJerH/compiled/v1.5/AWS/SpCmB_HQTk3.ji.\r\nStacktrace:\r\n [1] error(::String) at ./error.jl:33\r\n [2] compilecache(::Base.PkgId, ::String) at ./loading.jl:1305\r\n [3] _require(::Base.PkgId) at ./loading.jl:1030\r\n [4] require(::Base.PkgId) at ./loading.jl:928\r\n [5] require(::Module, ::Symbol) at ./loading.jl:923\r\n```",
@@ -55,7 +55,7 @@
       "stance": "neutral_merge"
     },
     {
-      "influence": 2,
+      "influence": 3,
       "author": "DilumAluthge",
       "author_association": "MEMBER",
       "text": "AutoMerge sets a unique-to-AutoMerge environment variable. Off the top of my head I don't remember the name - you can check the source code of RegistryCI.jl, look in the src/AutoMerge/guidelines.jl file.\r\n\r\nYou could detect this environment variable and bypass the credentials check.",
@@ -104,7 +104,7 @@
       "stance": "neutral_merge"
     },
     {
-      "influence": 2,
+      "influence": 3,
       "author": "fredrikekre",
       "author_association": "MEMBER",
       "text": "> It looks like @fredrikekre does not have an AWS Credentials on the machine he was using\r\n\r\nYes, that was kind of the point. I should be able to `using AWS` without having credentials set up (yet).",
@@ -139,11 +139,11 @@
       "stance": "unrelated"
     },
     {
-      "influence": 2,
+      "influence": 3,
       "author": "mattBrzezinski",
       "author_association": "MEMBER",
       "text": "Looks like the only AutoMerge failure now is just the package name:\r\n\r\n```\r\n┌ Info: Normal capitalization\r\n│   meets_this_guideline = false\r\n└   message = \"Name does not meet all of the following: starts with an uppercase letter, ASCII alphanumerics only, not all letters are uppercase.\"\r\n```",
-      "stance": "neutral_merge"
+      "stance": "pro_merge"
     },
     {
       "influence": 3,
@@ -180,8 +180,8 @@
   },
   "slack_mentioned": false,
   "justifications": [
-    "minimum_length_satisfied",
-    "established_name"
+    "established_name",
+    "minimum_length_satisfied"
   ],
   "related_prs": [
     20506

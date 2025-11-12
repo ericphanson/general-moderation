@@ -1,0 +1,69 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 7,
+  "package_author": "RenatoGeh",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 121
+  },
+  "pr_number": 19448,
+  "package_name": "BDD",
+  "discussion": [
+    {
+      "influence": 2,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Bump @RenatoGeh.\r\n\r\nRegarding the name, perhaps `BinaryDecisionDiagrams` is a better name?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "RenatoGeh",
+      "author_association": "NONE",
+      "text": "> Bump @RenatoGeh.\r\n> \r\n> Regarding the name, perhaps `BinaryDecisionDiagrams` is a better name?\r\n\r\nSure. My only concern was already existing users that might have their package and code break (plus `using BDD` was such a simple quaint one-liner). But on second thought, I doubt anyone is actually using my package, so why not. Better to have it on the general registry. Is there a way to have both ways? As in, leave the repo as `BDD.jl` but have it on the general registry as `BinaryDecisionDiagrams`?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "> As in, leave the repo as BDD.jl but have it on the general registry as BinaryDecisionDiagrams?\r\n\r\nSure, but why? Pretty confusing when they don't match.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "DilumAluthge",
+      "author_association": "MEMBER",
+      "text": "@RenatoGeh Here is what I would recommend:\r\n1. Rename this package to `BinaryDecisionDiagrams.jl`\r\n2. When users use your package in their code, tell them to do one of these two options:\r\n\r\nOption 1:\r\n```julia\r\nimport BinaryDecisionDiagrams as BDD\r\n```\r\n\r\nOption 2\r\n```julia\r\nusing BinaryDecisionDiagrams\r\nconst BDD = BinaryDecisionDiagrams\r\n```\r\n\r\nThat way, they still get to use the `BDD` abbreviation in their code.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "RenatoGeh",
+      "author_association": "NONE",
+      "text": "Sounds good. Will work on this once I've got the time.",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "RenatoGeh",
+      "author_association": "NONE",
+      "text": "Hi. Could you guys close this PR, please? This package was merged in on PR #25646 with the discussed changes in naming.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    25646
+  ]
+}

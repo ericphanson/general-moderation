@@ -1,0 +1,39 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 3,
+  "package_author": "rafaelbailo",
+  "decision": {
+    "merged": false,
+    "closed_by": "goerz",
+    "merged_by": null,
+    "time_to_decision_days": 0
+  },
+  "pr_number": 102274,
+  "package_name": "CBX",
+  "discussion": [
+    {
+      "influence": 4,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "The name `ConsensusBasedOptimization` seems like it should be okay for this. A short, non-common acronym like `CBX` isn't going to work, I'm afraid. Not even with an existing [CBXpy](https://github.com/PdIPS/CBXpy) package. You might still be able to use the \"CBX\" branding by having `CBX` be a submodule of `ConsensusBasedOptimization` so that the package can be loaded as `using ConsensusBasedOptimization: CBX`, or something like that.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 5,
+      "author": "goerz",
+      "author_association": "MEMBER",
+      "text": "Closing in favor of https://github.com/JuliaRegistries/General/pull/102274",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

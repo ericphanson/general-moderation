@@ -1,0 +1,46 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 4,
+  "package_author": "newptcai",
+  "decision": {
+    "merged": false,
+    "closed_by": "DilumAluthge",
+    "merged_by": null,
+    "time_to_decision_days": 6
+  },
+  "pr_number": 13426,
+  "package_name": "BEE",
+  "discussion": [
+    {
+      "influence": 1,
+      "author": "newptcai",
+      "author_association": "NONE",
+      "text": "Any idea why AutoMerge failed? Is there anything that I need to do?",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "johnnychen94",
+      "author_association": "CONTRIBUTOR",
+      "text": "It's highly recommended to read and follow the practice of https://semver.org/ before registering your package.\r\n\r\nThe name `BEE` isn't appropriate because it's very likely you're the only one that knows what it means.\r\n\r\nI believe the appropriate version is `v0.0.1` since your package is pretty new (3 days old).\r\n\r\n> https://semver.org/#how-do-i-know-when-to-release-100\r\n> If your software is being used in production, it should probably already be 1.0.0. If you have a stable API on which users have come to depend, you should be 1.0.0. If you’re worrying a lot about backwards compatibility, you should probably already be 1.0.0.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 4,
+      "author": "newptcai",
+      "author_association": "NONE",
+      "text": "Aha, it’s a bit tricky for me to change the name now. I think I will leave it unregistered. Thanks for the advice though. Please close this request then.",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}

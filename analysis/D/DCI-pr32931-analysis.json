@@ -1,0 +1,55 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 5,
+  "package_author": "tmigot",
+  "decision": {
+    "merged": false,
+    "closed_by": "giordano",
+    "merged_by": null,
+    "time_to_decision_days": 7
+  },
+  "pr_number": 32931,
+  "package_name": "DCI",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "Please write out the abbreviation in the package name. ",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "tmigot",
+      "author_association": "CONTRIBUTOR",
+      "text": "Thank you for the feedback. DCI is actually the name of the algorithm proposed in a research paper [Bielschowsky, R. H., & Gomes, F. A. (2008)](https://doi.org/10.1007/s10589-020-00201-2) and stands for \"Dynamic Control of Infeasibility\", which is probably too long. We decided to rename it DCISolver and open a new PR #33426.",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 2,
+      "author": "dpsanders",
+      "author_association": "CONTRIBUTOR",
+      "text": "I think DynamicControlOfInfeasibility.jl would be a good name personally. You only type the name once and you can tab complete. ",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 5,
+      "author": "giordano",
+      "author_association": "MEMBER",
+      "text": "Superseded by #33426 (`DCISolver.jl`)",
+      "stance": "unrelated"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": [
+    33426
+  ]
+}
