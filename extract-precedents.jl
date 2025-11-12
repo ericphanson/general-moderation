@@ -239,7 +239,7 @@ function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash
         error_msg = sprint(showerror, e)
 
         # Check for quota/rate limit errors
-        if occursin("quota", lowercase(error_msg)) ||
+        if occursin(r"quota|429|exhausted", lowercase(error_msg)) ||
            occursin("rate limit", lowercase(error_msg)) ||
            occursin("exceeded", lowercase(error_msg))
             @error "Quota or rate limit exceeded!"
