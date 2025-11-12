@@ -27,7 +27,7 @@ function extract_violations(comments)
     end
 
     # Extract violations via regex
-    if occursin(r"not all letters are upper-case", bot_comment)
+    if occursin(r"not all letters are upper-?case", bot_comment)
         push!(violations, Dict(
             "type" => "all_caps",
             "excerpt" => "not all letters are upper-case"
@@ -41,7 +41,7 @@ function extract_violations(comments)
         ))
     end
 
-    if occursin(r"too short", bot_comment) || occursin(r"(?:must|should) be.*(?:5|five)", bot_comment)
+    if occursin(r"too short", bot_comment) || occursin(r"not at least (?:5|five) characters long", bot_comment)
         push!(violations, Dict(
             "type" => "too_short",
             "excerpt" => "name too short"
@@ -52,6 +52,73 @@ function extract_violations(comments)
         push!(violations, Dict(
             "type" => "lowercase_first",
             "excerpt" => "must start with upper-case"
+        ))
+    end
+
+    # General naming format violation (starts capital, ASCII alphanumerics, ends lowercase)
+    if occursin(r"Name does not meet all of the following", bot_comment) ||
+       occursin(r"starts with (?:a |an )?(?:capital|upper-?case) letter.*ASCII alphanumerics", bot_comment)
+        push!(violations, Dict(
+            "type" => "naming_format",
+            "excerpt" => "name does not meet format requirements"
+        ))
+    end
+
+    # Package name similarity
+    if occursin(r"Package name similar to \d+ existing package", bot_comment)
+        push!(violations, Dict(
+            "type" => "similar_name",
+            "excerpt" => "package name similar to existing packages"
+        ))
+    end
+
+    # Package name starts with "Ju"
+    if occursin(r"Package name starts with \"Ju\"", bot_comment)
+        push!(violations, Dict(
+            "type" => "starts_with_ju",
+            "excerpt" => "package name starts with Ju"
+        ))
+    end
+
+    # Version number violations
+    if occursin(r"Version number is not (?:0\.0\.1|0\.1\.0|1\.0\.0)", bot_comment)
+        push!(violations, Dict(
+            "type" => "invalid_version",
+            "excerpt" => "version number not 0.0.1, 0.1.0, or 1.0.0"
+        ))
+    end
+
+    if occursin(r"Version number is not allowed to contain (?:prerelease|build)", bot_comment)
+        push!(violations, Dict(
+            "type" => "version_prerelease_build",
+            "excerpt" => "version contains prerelease or build data"
+        ))
+    end
+
+    # Repo URL violation
+    if occursin(r"Repo URL does not end with /\w+\.jl\.git", bot_comment)
+        push!(violations, Dict(
+            "type" => "repo_url",
+            "excerpt" => "repo URL does not end with /name.jl.git"
+        ))
+    end
+
+    # Compat entry violations
+    if occursin(r"do(?:es)? not have a(?:n)? `?\[?compat\]?`? entry", bot_comment) ||
+       occursin(r"no compat entry", bot_comment)
+        push!(violations, Dict(
+            "type" => "missing_compat",
+            "excerpt" => "missing compat entry"
+        ))
+    end
+
+    # Installation/loading failures
+    if occursin(r"not able to (?:install|load)", bot_comment) ||
+       occursin(r"Pkg\.add.*failed", bot_comment) ||
+       occursin(r"import.*failed", bot_comment)
+        push!(violations, Dict(
+            "type" => "install_load_failure",
+            "excerpt" => "unable to install or load package"
         ))
     end
 
