@@ -1,0 +1,74 @@
+{
+  "violations": [],
+  "has_violations": false,
+  "num_comments": 8,
+  "package_author": "tkf",
+  "decision": {
+    "merged": true,
+    "closed_by": null,
+    "merged_by": "fredrikekre",
+    "time_to_decision_days": 59
+  },
+  "pr_number": 18563,
+  "package_name": "Run",
+  "discussion": [
+    {
+      "influence": 3,
+      "author": "zsunberg",
+      "author_association": "NONE",
+      "text": "Just noticed this as I was dealing with some of my own package registrations - I would vote for a more descriptive name than \"Run\" @tkf  :)",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 3,
+      "author": "tkf",
+      "author_association": "CONTRIBUTOR",
+      "text": "I chose `Run` deliberately to be used as a \"prefix\" of the API as in `Run.test` and `Run.script`. I think they are pretty clear about what they do.\r\n\r\n[noblock]\r\n",
+      "stance": "pro_merge"
+    },
+    {
+      "influence": 3,
+      "author": "zsunberg",
+      "author_association": "NONE",
+      "text": "> I chose `Run` deliberately to be used as a \"prefix\" of the API as in `Run.test` and `Run.script`. I think they are pretty clear about what they do.\r\n\r\nYes, that is very slick :smile: But it seems like there are many other things that could be called \"Run\", and you could also accomplish it by having a submodule called `Run`, i.e.\r\n```julia\r\nimport IsolatedEnvironments: Run\r\nRun.test()\r\n```\r\n\r\nAnyways, this is a subjective decision, so probably the best thing is to get others to weigh in - just registering my opinion.",
+      "stance": "anti_merge"
+    },
+    {
+      "influence": 2,
+      "author": "zsunberg",
+      "author_association": "NONE",
+      "text": "Or even `using IsolatedEnvironments; Run.test()`",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 1,
+      "author": "zsunberg",
+      "author_association": "NONE",
+      "text": "Though naming it `Run` does have the side effect of displaying \"home run\" in many places on the screen :rofl: \r\n\r\n![image](https://user-images.githubusercontent.com/4240491/88840413-41a4bd80-d191-11ea-95ab-35fd9f85dc88.png)\r\n",
+      "stance": "unrelated"
+    },
+    {
+      "influence": 3,
+      "author": "fredrikekre",
+      "author_association": "MEMBER",
+      "text": "Good to go?",
+      "stance": "neutral_merge"
+    },
+    {
+      "influence": 3,
+      "author": "tkf",
+      "author_association": "CONTRIBUTOR",
+      "text": "Good to go from my end (though obviously, I guess). I've been thinking it's up to JuliaRegistries/General members to incorporate the arguments from me and @zsunberg and then decide if the name is appropriate or not. It may be worth considering potential confusion with JuliaRun by JuliaComputing also.\r\n\r\n(In the end, I personally just want to keep using this name since updating the CI for all my packages is PITA. I also don't know how many other people are using this package at this point.)\r\n",
+      "stance": "pro_merge"
+    }
+  ],
+  "wrapper_info": {
+    "is_wrapper": false,
+    "wrapped_library": null
+  },
+  "slack_mentioned": false,
+  "justifications": [
+    "minimum_length_satisfied"
+  ],
+  "related_prs": []
+}
