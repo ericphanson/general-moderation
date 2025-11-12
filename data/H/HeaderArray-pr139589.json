@@ -1,0 +1,164 @@
+{
+  "created_at": "2025-10-02T16:24:52Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ericphanson",
+  "merged_at": null,
+  "pr_number": 139589,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87IZY9g",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-02T16:33:41Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362099040",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IZtMi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think it would be a little clearer to name the package `HeaderArrayFiles`, to make sure this isn't a package providing an \"array of headers\" in some general sense. I had even considered `HARFiles`, but the `.har` extension seems more associated with the [HTTP Archive format](https://en.wikipedia.org/wiki/HAR_(file_format))",
+      "createdAt": "2025-10-02T16:59:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362181922",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IZzW3",
+      "author": {
+        "login": "mitchphillipson"
+      },
+      "authorAssociation": "NONE",
+      "body": "That was my original name, however there is already a package called\r\n`HeaderArrayFile` and the plural is too close. The `HeaderArrayFile` (link\r\n<https://github.com/mivanic/HeaderArrayFile.jl>) package also loads these\r\nGEMPACK HAR files, but it's a direct translation of R code with no\r\ndocumentation or testing. I know the author and have contacted them, but\r\nthey are unresponsive.\r\n\r\nI much prefer the `HeaderArrayFiles` name and would be happy to change it\r\nback, if approved.\r\n\r\nOn Thu, Oct 2, 2025 at 12:00 PM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#139589)\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362181922>\r\n>\r\n> I think it would be a little clearer to name the package HeaderArrayFiles,\r\n> to make sure this isn't a package providing an \"array of headers\" in some\r\n> general sense. I had even considered HARFiles, but the .har extension\r\n> seems more associated with the HTTP Archive format\r\n> <https://en.wikipedia.org/wiki/HAR_(file_format)>\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362181922>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AEVAPXJNKQDIPVH6SNAYWNL3VVK2LAVCNFSM6AAAAACID62NK2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTGNRSGE4DCOJSGI>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-10-02T17:07:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362207159",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IaC-0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I know the author and have contacted them, but they are unresponsive\r\n\r\nThat is very unfortunate… The way forward would definitely be for them to add you as a maintainer to their repository if they don't have the bandwidth to maintain the package further, or, if the can, to manage your contributions to the package.\r\n\r\n@mivanic @MarosIvanic-USDA\r\n\r\n> I much prefer the `HeaderArrayFiles` name\r\n\r\nYes, me too, and it's also unfortunate that the existing https://github.com/mivanic/HeaderArrayFile.jl was registered with the non-pluralized name. But that's not something we can change anymore at this point.\r\n\r\nUnfortunately, I generally consider the failed name similarity check due to a missing/added plural-S one of the rare instances where that check is not a false positive. Having different packages whose name only differs by the plural would cause way too much confusion, and I consider it a no-go.\r\n\r\nBut even beyond that, I think the existing `HeaderArrayFile` pretty much blocks this registration: we try to avoid competing implementations of the exact same scope with basically interchangeable package names. It is much better to have just one canonical registered package. That also means that the maintainers of registered packages generally have a duty to continue that maintenance, or to hand it off to a new maintainer. When a maintainer is unresponsive over several months despite several attempts to contact them, there is precedent to moving their package into an organization and to assign a new maintainer.\r\n\r\nI would recommend reaching out to the original package author again (especially if you know them!)\r\n\r\n\r\n",
+      "createdAt": "2025-10-02T17:25:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3362271156",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IfIiw",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> But even beyond that, I think the existing HeaderArrayFile pretty much blocks this registration\r\n\r\nI think that is going too far; I think it's OK to have multiple competing packages that do more or less the same thing (and we have allowed this many times in the past without issue). Different people will have different approaches, so multiplicity isn't bad. And being a bit abstract, if we add too many synchronization points to the package ecosystem, it won't scale well; we want it to be \"multi-threaded\", and allow parallel exploration. (This is exactly the power of open source!). So I really think we should not limit the package ecosystem to exactly 1 version of X for any given X. This might not be the place to get into this, but some other thoughts:\r\n\r\n- I don't really believe in \"duplication of effort\" concerns, as long as there is visibility (the package author _knows_ about the other package and decides to do their own thing anyway), since \"open source time\" is not an interchangeable commodity; the author having motivation to build another version of packageX does not mean they have motivation to instead build packageY if they are not allowed to make a packageX. The ecosystem is undirected and bottom up, so we can only take what is offered, generally speaking. (That doesn't mean we have to be wasteful with our shared resource, the General registry namespace, but it does mean we can't meaningfully ask \"do something other than X, we've already got one of those\" - we can just say yes/no to X).\r\n- \"which package do I use for X\" is not really a question the registry itself should answer (by imposing 1 possible answer), but rather higher level tooling/opinions/forums/etc. By giving multiple options, folks can compare and come to some opinions, leading to a particular package being recommended, or real-world-benefits-of-both synthesized. Less likely for that to happen if they aren't registered.\r\n- multiple versions by different authors reduces fragility/adds resilience to the ecosystem\r\n\r\n\r\n> The way forward would definitely be for them to add you as a maintainer to their repository if they don't have the bandwidth to maintain the package further, or, if the can, to manage your contributions to the package\r\n\r\nThis is definitely a reasonable outcome, but I don't think it's the only acceptable one.\r\n\r\n---\r\n\r\nIn terms of naming, I agree we should not allow plural and singular forms. HeaderArray doesn't seem that bad to me, but here's a few other ideas:\r\n\r\n- HeaderArrayFormat.jl\r\n- HARFiles.jl (HAR is an acronym, but Files scopes it to a file format, so it doesn't seem to bad, compared to something like just \"HAR.jl\")\r\n- HeaderArrayIO.jl\r\n- HeaderArrayParser.jl\r\n- HeaderArrayReader.jl\r\n\r\nIdeally the name says something specific about the scope of the package and any differentiating factor to other ones, or at least is distinguishable if non-specific (eg Mooncake.jl).",
+      "createdAt": "2025-10-02T23:27:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3363604656",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q87IlXjZ",
+      "author": {
+        "login": "mitchphillipson"
+      },
+      "authorAssociation": "NONE",
+      "body": "I should have replied to this thread, I was able to contact the author of\r\nthe other package and merge my work with theirs. This PR can be closed\r\nwithout merge.\r\n\r\nIn this specific case, this is the best option. The file format we're\r\nworking with is incredibly niche and a single point of entry should be less\r\nconfusing for end users.\r\n\r\nOn Thu, Oct 2, 2025 at 6:28 PM Eric Hanson ***@***.***> wrote:\r\n\r\n> *ericphanson* left a comment (JuliaRegistries/General#139589)\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3363604656>\r\n>\r\n> But even beyond that, I think the existing HeaderArrayFile pretty much\r\n> blocks this registration\r\n>\r\n> I think that is going too far; it's OK to have multiple competing packages\r\n> that do more or less the same thing (and we have allowed this many times in\r\n> the past without issue). Different people will have different approaches,\r\n> so multiplicity isn't bad. And being a bit abstract, if we add too many\r\n> synchronization points to the package ecosystem, it won't scale well; we\r\n> want it to be \"multi-threaded\", and allow parallel exploration. (This is\r\n> exactly the power of open source!). So I really think we should not limit\r\n> the package ecosystem to exactly 1 version of X for any given X. This might\r\n> not be the place to get into this, but some other thoughts:\r\n>\r\n>    - I don't really believe in \"duplication of effort\" concerns, as long\r\n>    as there is visibility (the package author *knows* about the other\r\n>    package and decides to do their own thing anyway), since \"open source time\"\r\n>    is not an interchangeable commodity; the author having motivation to build\r\n>    another version of packageX does not mean they have motivation to instead\r\n>    build packageY if they are not allowed to make a packageX. The ecosystem is\r\n>    undirected and bottom up, so we can only take what is offered, generally\r\n>    speaking. (That doesn't mean we have to be wasteful with our shared\r\n>    resource, the General registry namespace, but it does mean we can't\r\n>    meaningfully ask \"do something other than X, we've already got one of\r\n>    those\" - we can just say yes/no to X).\r\n>    - \"which package do I use for X\" is not really a question the registry\r\n>    itself should answer (by imposing 1 possible answer), but rather higher\r\n>    level tooling/opinions/forums/etc. By giving multiple options, folks can\r\n>    compare and come to some opinions, leading to a particular package being\r\n>    recommended, or real-world-benefits-of-both synthesized. Less likely for\r\n>    that to happen if they aren't registered.\r\n>    - multiple versions by different authors reduces fragility/adds\r\n>    resilience to the ecosystem\r\n>\r\n> ------------------------------\r\n>\r\n> In terms of naming, I agree we should not allow plural and singular forms.\r\n> HeaderArray doesn't seem that bad to me, but here's a few other ideas:\r\n>\r\n>    - HeaderArrayFormat.jl\r\n>    - HARFiles.jl (HAR is an acronym, but Files scopes it to a file\r\n>    format, so it doesn't seem to bad, compared to something like just \"HAR.jl\")\r\n>    - HeaderArrayIO.jl\r\n>    - HeaderArrayParser.jl\r\n>    - HeaderArrayReader.jl\r\n>\r\n> Ideally the name says something specific about the scope of the package\r\n> and any differentiating factor to other ones, or at least is\r\n> distinguishable if non-specific (eg Mooncake.jl).\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3363604656>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AEVAPXJKBUUOXY53DWW5VZL3VWYJDAVCNFSM6AAAAACID62NK2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTGNRTGYYDINRVGY>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-10-03T10:50:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3365239001",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Inu5Q",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm glad we were able to resolve this so easily. I was a bit harsh in my original comment, and I'd like to apologize for that.",
+      "createdAt": "2025-10-03T14:16:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3365858896",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87InxOt",
+      "author": {
+        "login": "mitchphillipson"
+      },
+      "authorAssociation": "NONE",
+      "body": "No worries. I prefer direct/blunt communication so it was kinda perfect.\r\nPlus this solution is better than two distinct packages.\r\n\r\nOn Fri, Oct 3, 2025 at 9:16 AM Michael Goerz ***@***.***>\r\nwrote:\r\n\r\n> *goerz* left a comment (JuliaRegistries/General#139589)\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3365858896>\r\n>\r\n> I'm glad we were able to resolve this so easily. I was a bit hash in my\r\n> original comment, and I'd like to apologize for that.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3365858896>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AEVAPXJR3OPXCSV5NQSMW3D3V2AL7AVCNFSM6AAAAACID62NK2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZTGNRVHA2TQOBZGY>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "createdAt": "2025-10-03T14:18:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139589#issuecomment-3365868461",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HeaderArray\n- Repository: https://github.com/mitchphillipson/HeaderArray.jl\n- Created by: @mitchphillipson\n- Version: v0.1.0\n- Commit: bbca4694f095d1b0c7ac7408c56743dfe7036648\n- Reviewed by: @mitchphillipson\n- Reference: https://github.com/mitchphillipson/HeaderArray.jl/commit/bbca4694f095d1b0c7ac7408c56743dfe7036648#commitcomment-167028309\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6f7b8518ad1fadcd095bb6c1136c77843412c187271ffb932adfea3ad015422c72e2910485a68d1236fc8743dde1a28ecee2cdcb9034fbb0fcd94266fadf2c252d9ed8083a71c83db04736631be35af7302470be6226399bca86ef167657b1b25ee2ae774da3b25d8c65d4ef66869de97f23c2b22171326aa3dd3e2a86366e62e2a97cfb4df03c6252c999c84026227a6ca3293f2a9723f788a148c1319f116369c88ca4a3a604cd9d5d8f382dae0a3cd -->",
+  "package_name": "HeaderArray",
+  "closed_at": "2025-10-03T11:24:48Z",
+  "title": "New package: HeaderArray v0.1.0"
+}

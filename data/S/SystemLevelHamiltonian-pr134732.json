@@ -1,0 +1,158 @@
+{
+  "created_at": "2025-07-14T17:10:41Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 134732,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q863AhMV",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-14T17:23:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3070366485",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863BVjf",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I didn't think that SLH stood for \"System Level Hamiltonian\", does it? Wondering if it might be more recognizable to keep `SLH` as an acronym as part of the name. Something like `QuantumSLH`, `QuantumNetworkSLH`, `QuantumOpticsSLH`, or something along those lines…",
+      "createdAt": "2025-07-14T18:35:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3070580959",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863B2jZ",
+      "author": {
+        "login": "jeffwack"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] That's right, I made up the name as a backronym for SLH and a reference to the linear control technique [system-level synthesis](https://arxiv.org/abs/1904.01634). I would be happy to name the package SLH.jl, but read somewhere that short acronym names are discouraged. I can add an explanation about the name to the readme",
+      "createdAt": "2025-07-14T19:29:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3070716121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863CJop",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Yeah, just `SLH.jl` isn't going to be a possibility, but combining the \"acronym\" `SLH` with something that gives it context would be totally fine. It's up to you, though. But when I first saw just the name `SystemLevelHamiltonian` I definitely didn't make the connection, and just thought \"that's a weird name\". Of course, when I saw \"SLH\", I got pretty excited, since back in the day I worked on [QNET](https://github.com/mabuchilab/QNET) for a while… 😉\r\n\r\nThere _is_ some value in the recognizability of acronyms that gets lost when trying to write it out in a package name. But just `SLH` by itself doesn't mean anything to the broad audience of `General`, which is why we have a pretty hard \"minimum length 5 letters rule\" and a less hard \"no-all-caps rule\".",
+      "createdAt": "2025-07-14T19:59:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3070794281",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863FeP7",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] @danielwe ",
+      "createdAt": "2025-07-15T02:13:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3071665147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863Fm_Z",
+      "author": {
+        "login": "danielwe"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] SLH in Julia, love to see it! But I agree that system-level Hamiltonian is a confusing backronym, not least because an SLH triple doesn't generally describe unitary dynamics. If I stumbled over SystemLevelHamiltonian.jl while searching for a package for doing SLH algebra, I might just dismiss it and keep scrolling without taking a closer look. QuantumSLH.jl looks great to me, and also maximizes discoverability---I imagine the most likely search query for someone looking for a package like this would be \"SLH quantum julia\".",
+      "createdAt": "2025-07-15T02:39:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3071700953",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863Q94T",
+      "author": {
+        "login": "jeffwack"
+      },
+      "authorAssociation": "NONE",
+      "body": "Ok, I am going to change the name. Currently I am thinking SLHQuantumSystems. What is the best way to proceed, simply close this PR and make a new one once I have changed the name of the package and github repo? ",
+      "createdAt": "2025-07-15T17:50:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3074678291",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863RWEP",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "See [the FAQ \"What to do when asked to reconsider/update the package name?\"](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name)\r\n\r\nYou just rename the repo, change the name _inside_ the repo, and then make a new registration. Then we can close this PR in favor of the new one.",
+      "createdAt": "2025-07-15T18:07:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3074777359",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865YyIF",
+      "author": {
+        "login": "jeffwack"
+      },
+      "authorAssociation": "NONE",
+      "body": "This can be closed in favor of https://github.com/JuliaRegistries/General/pull/135303",
+      "createdAt": "2025-07-23T21:40:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134732#issuecomment-3110281733",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SystemLevelHamiltonian\n- Repository: https://github.com/jeffwack/SystemLevelHamiltonian.jl\n- Created by: @jeffwack\n- Version: v0.9.0\n- Commit: c7aba095814ae61b81282faa2d3761ad6b3e3554\n- Reviewed by: @jeffwack\n- Reference: https://github.com/jeffwack/SystemLevelHamiltonian.jl/issues/30\n- Description: Simulation and analysis of SLH systems, a composable framework for quantum systems.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980189642000a5c4eef611e5834f5e5566a2e29c0488b8af785e89171c458f8f1511c8cd490325b47756ba98058cb4c93023f60d8ce17ff589a98064eb6172e927bd179d2b36ca9f0bf772a94019e56c3d717984e6e45053af486b686d0355c439551ee34a32e89171a86de3314ab5f069cd99b3736175b125d6362ebdfb0de2585769859028c66897ecfd7b8ebbfb437a -->",
+  "package_name": "SystemLevelHamiltonian",
+  "closed_at": "2025-07-24T00:42:26Z",
+  "title": "New package: SystemLevelHamiltonian v0.9.0"
+}

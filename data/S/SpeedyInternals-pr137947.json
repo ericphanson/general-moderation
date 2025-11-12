@@ -1,0 +1,217 @@
+{
+  "created_at": "2025-09-04T10:45:39Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "vchuravy",
+  "merged_at": null,
+  "pr_number": 137947,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87B5l82",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- There is no compat entry for `julia`.\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: DocStringExtensions, KernelAbstractions\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-04T10:52:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253100342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B66d1",
+      "author": {
+        "login": "mrufsvold"
+      },
+      "authorAssociation": "NONE",
+      "body": "The name of this registration -- \"SpeedyInternals\" -- doesn't match the repo name, \"SpeedyWeather.\"\r\n\r\nIf you're trying to register an \"Core utilities \" package that is a dependency of SpeedyWeather, maybe you could name it \"SpeedyWeatherInternals\" so it is more descriptive?\r\n\r\n[noblock]",
+      "createdAt": "2025-09-04T12:22:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253446517",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B7EIL",
+      "author": {
+        "login": "milankl"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Okay so for SpeedyInternal/SpeedyWeatherInternals we could do this but there is another 3 submodules coming we're planning to register that shouldn't follow this pattern RingGrids, LowerTriangularArrays but we would like to keep them in a monorepo. Is that a hard no for the Julia registry?\r\n\r\n[noblock]",
+      "createdAt": "2025-09-04T12:33:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253486091",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B7Oyw",
+      "author": {
+        "login": "vchuravy"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There is no requirement that in a monorepo all the packages have a name prefix. \r\n\r\n[noblock]",
+      "createdAt": "2025-09-04T12:44:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253529776",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B7TvY",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't think it's a \"hard no\". Just be mindful of the shared namespace of the General registry. So if these sub-packages are useful only in the context of `SpeedyWeather`, you don't want to block these names more generally, and it might be better to prefix them with something unique. Maybe `Speedy` is already unique enough, but of course,`SpeedyWeather` would be the _most_ unique, with no potential for conflict at all. Secondly, if `RingGrids` and `LowerTriangularArrays` are as general and separately useful as the name implies, then I'm not sure what the rationale is for keeping them in a monorepo. Personally, I would much prefer each package having its own repo, with the associated issue tracker etc. But then, I'm not the biggest fans of monorepos in general, so opinions on this may differ.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-04T12:50:00Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253550040",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B7cYp",
+      "author": {
+        "login": "milankl"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "We want to be able to codevelop these packages without the need of registering the submodules all the time. They are standalone as the name suggests and want to provide them more generally to other users. \n\n[noblock]",
+      "createdAt": "2025-09-04T12:57:52Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253585449",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B7qP3",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nTo be clear, whether the packages are developed in a monorepo or in separate repositories is of no consequence to the registration in General. People may have opinions about the naming of the packages, but that would happen regardless of the repository organization.\r\n",
+      "createdAt": "2025-09-04T13:10:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253642231",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B71nf",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nI will make a comment on the repository organization though. Best practice when you have multiple packages in the same repository is to place all of them in independent subdirectories, also the \"main\" package. The reason is that with one package at the top of the repository, it will be distributed with unused copies of all the packages placed in subdirectories below it.",
+      "createdAt": "2025-09-04T13:19:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3253688799",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87B9dC-",
+      "author": {
+        "login": "milankl"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "> with one package at the top of the repository, it will be distributed with unused copies of all the packages placed in subdirectories below it.\r\n\r\nOkay maybe I'm still confused about how this work, but that sounds actually like what we want, we have\r\n\r\n1. SpeedyWeather, depends on\r\n    2. SpeedyTransforms, depends on LowerTriangularArrays, RingGrids, SpeedyInternals\r\n    3. LowerTriangularArrays, depends on SpeedyInternals\r\n    4. RingGrids, depends on SpeedyInternals\r\n    5. SpeedyInternals\r\n\r\nWe currently only have 1 registered but want to register 2-5 too for general use in other projects but at the same time have SpeedyWeather main always use main of the other packages to ease codevelopment of these\r\n\r\n[noblock]\r\n",
+      "createdAt": "2025-09-04T14:53:55Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3254112446",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CJ5Ri",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\nMy comment does not relate to development but what is distributed by the package servers when a user adds SpeedyWeather from the General Registry and the other packages have also been registered. This will bring in\r\n```\r\nSpeedyWeather/\r\n├── src\r\n├── test\r\n├── LowerTriangularArrays\r\n├── RingGrids\r\n├── SpeedyInternals\r\n└── SpeedyTransforms\r\n```\r\nbut the directories of the other packages just sit there and are unused. (Those packages are of course also installed since they are dependencies, but elsewhere on disk.)\r\n\r\nIf the repo structure instead is\r\n```\r\nrepo\r\n├── LowerTriangularArrays\r\n├── RingGrids\r\n├── SpeedyInternals\r\n├── SpeedyTransforms\r\n└── SpeedyWeather\r\n```\r\nthe package server will just distribute\r\n```\r\nSpeedyWeather/\r\n├── src\r\n└── test\r\n```\r\nin the SpeedyWeather package.\r\n\r\n> at the same time have SpeedyWeather main always use main of the other packages to ease codevelopment of these\r\n\r\nYou can still do that with a `sources` section in `SpeedyWeather/Project.toml`, only it has to point to `../RingGrids` instead of `RingGrids` etc.\r\n\r\nBut arguably better is to have a (non-package) environment at the top of the repository with `sources` pointing to all your packages and use that for development.\r\n",
+      "createdAt": "2025-09-05T07:35:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 3
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3257373794",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CLNqo",
+      "author": {
+        "login": "milankl"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[nonblock] Great, thanks for the explanation I was looking for this in some documentation but thanks for clarifying it so nicely!",
+      "createdAt": "2025-09-05T09:36:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3257719464",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CpMmE",
+      "author": {
+        "login": "milankl"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "superceded by #138125 following the suggested name change here",
+      "createdAt": "2025-09-08T10:11:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137947#issuecomment-3265579396",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SpeedyInternals\n- Repository: https://github.com/SpeedyWeather/SpeedyWeather.jl\n- Created by: @milankl\n- Version: v0.1.0\n- Commit: 91ea402702423a0dcb309be547c9782455c2f259\n- Reviewed by: @milankl\n- Reference: https://github.com/SpeedyWeather/SpeedyWeather.jl/commit/91ea402702423a0dcb309be547c9782455c2f259#commitcomment-165140488\n- Description: Play atmospheric modelling like it's LEGO.\n<!-- adbdae08b8aa94c6d0f9b5ef11e0691772fa101df85d6dbe37e4fede78bad0e8f8b017cbeecabd4f7f5c7a9cd287dc5da0d3e690d8f7640c147e0e19ddf8b67d782fe0aae0aa88a2687ae10045e91bbcc19a7b1cf23d0483528bf4bfb66ce9ce72f155cb3ca9a3f599a6b3815c99f1cff28443f27569676acff64d7fd4d702b861e50af3475936714418581fe628c1402a07c3d51fb29dcd0d9fe1aaa1e5d7a5b6a280d8708725b7637e4b3c2d467c5295662a8584b569842587910227918918069b4cdabf862b166b097c49bf223fb1bc4a0066baca42a56beefc92f1d992c46ab6dd34dc430e16f41add45539cbb26 -->",
+  "package_name": "SpeedyInternals",
+  "closed_at": "2025-09-08T11:03:12Z",
+  "title": "New package: SpeedyInternals v0.1.0"
+}

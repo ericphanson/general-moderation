@@ -1,0 +1,113 @@
+{
+  "created_at": "2025-09-18T11:58:49Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 138773,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87FHioD",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-18T12:04:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3307088387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FIXcU",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I might suggest renaming this to `XMLWalker`. I understand there can be a little bit of a readability issue sometimes when combining acronyms with a word-suffix. But still, I think the expectation for `CamelCase` would be to capitalize the `W`",
+      "createdAt": "2025-09-18T12:56:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3307304724",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FObU0",
+      "author": {
+        "login": "Manarom"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] I might suggest renaming this to `XMLWalker`. I understand there can be a little bit of a readability issue sometimes when combining acronyms with a word-suffix. But still, I think the expectation for `CamelCase` would be to capitalize the `W`\r\n\r\nYes, i agree with your suggestion, will change the name",
+      "createdAt": "2025-09-18T18:08:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3308893492",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FZrnI",
+      "author": {
+        "login": "Manarom"
+      },
+      "authorAssociation": "NONE",
+      "body": "It is not a right place to ask here, but, maybe someone can guide me to the right direction, after renaming the package on github, renaming all usages in code and manually changing the uuid and name in Project.toml. i've ran into problem with CI github worklows (which are just default, generated with PkgTemplates.jl), it fails to run tests with an error:\n\nERROR: LoadError: The following 1 direct dependency failed to precompile: \n\nXMLWalker --code-coverage=@/home/runner/work/XMLWalker.jl/XMLWalker.jl --color=yes --check-bounds=yes --warn-overwrite=yes --depwarn=yes --inline=yes --startup-file=no --track-allocation=none --check-bounds=yes --compiled-modules=yes --depwarn=yes \n\nError: Missing source file for Base.PkgId(Base.UUID(\"d3054cc1-2890-4718-a7c1-478870880212\"), \"XMLWalker\"\n\nWhat can be the reasons?\n",
+      "createdAt": "2025-09-19T11:31:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3311843784",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FdW3N",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "My first guess would be an old Manifest file. Make sure to delete all existing `Manifest.toml` files.\r\n\r\nYou don’t need to (and probably shouldn’t) change the UUID when renaming an unregistered package.",
+      "createdAt": "2025-09-19T16:13:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3312807373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Ffqtx",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/138848",
+      "createdAt": "2025-09-19T18:52:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138773#issuecomment-3313412977",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: XMLwalker\n- Repository: https://github.com/Manarom/XMLwalker.jl\n- Created by: @Manarom\n- Version: v0.1.0\n- Commit: 94ea7d73273b0877e1356a2d070b6c908ca54640\n- Git reference: HEAD\n- Description: Small package to find nodes in xml files read by XML.jl",
+  "package_name": "XMLwalker",
+  "closed_at": "2025-09-19T18:52:58Z",
+  "title": "New package: XMLwalker v0.1.0"
+}

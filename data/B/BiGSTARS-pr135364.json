@@ -1,0 +1,105 @@
+{
+  "created_at": "2025-07-24T21:03:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 135364,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q865qwOp",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-24T21:17:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135364#issuecomment-3114992553",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865sEol",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Please avoid changing the version number while [the original registration](https://github.com/JuliaRegistries/General/pull/135343) is pending. I will have to close either this PR or https://github.com/JuliaRegistries/General/pull/135343. Which one would you like to proceed with? Normally, I would have just closed https://github.com/JuliaRegistries/General/pull/135343, but I'm not sure if you'd really want the initial release of your package to be `v2.0.2`, as opposed to a round `v2.0.0`.",
+      "createdAt": "2025-07-24T23:42:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135364#issuecomment-3115338277",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865sF43",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Note that you can make changes to your package but leave the version number unchanged. When you retrigger registration from the changed commit, it will update the existing PR instead of creating a new one. Of course, this means you should never create a git tag before the registration for the new version has actually gone through. Indeed, [you are using TagBot](https://github.com/subhk/BiGSTARS.jl/blob/main/.github/workflows/TagBot.yml) (as you should), and that automatically creates tags after registration. That would be the normal workflow for Julia packages. I would strongly recommend that you delete any `v2.0.0` and `v2.0.1` tags in your repository, and just amend the `v2.0.0` registration.",
+      "createdAt": "2025-07-24T23:46:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135364#issuecomment-3115343415",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865_Ey2",
+      "author": {
+        "login": "subhk"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks. now I've v2.0.0. ",
+      "createdAt": "2025-07-25T20:53:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135364#issuecomment-3120319670",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q865_Sgi",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/135343",
+      "createdAt": "2025-07-25T21:12:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135364#issuecomment-3120375842",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: BiGSTARS\n- Repository: https://github.com/subhk/BiGSTARS.jl\n- Created by: @subhk\n- Version: v2.0.2\n- Commit: e2a93a2e32712434f575c237af0aedf09cfaee90\n- Reviewed by: @subhk\n- Reference: https://github.com/subhk/BiGSTARS.jl/issues/9#issuecomment-3114938321\n- Description: A Julia toolkit for bi-global linear stability analysis for geophysical flows using Chebyshev-Fourier spectral collocation method.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835986850970ccc7c25489f5434d2c9a0297442efb1c5a421502e677d802c10ad298d7e9173c03b7482dd617bf8498ceadab8a8ccad4b505bedfa1783f98fbf93685eee4ff0e165ce2167f13ec71937cde9a50b47846f59e537082d502b118d0431159cf952f089febd4a779df816b7e94e30 -->",
+  "package_name": "BiGSTARS",
+  "closed_at": "2025-07-25T21:12:42Z",
+  "title": "New package: BiGSTARS v2.0.2"
+}

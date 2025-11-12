@@ -1,0 +1,240 @@
+{
+  "created_at": "2025-10-31T15:30:38Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 141621,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87PC6wu",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-31T15:38:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3473648686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PC7Wx",
+      "author": {
+        "login": "nilshg"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] If you just did this because `UFFReader` didn't pass the name similarity check that's not necessary - name similarity is just an automated check against typo squatting, and can easily be overriden. If you prefer `UFFReader` just ask for name similarity to be overriden in the #pkh-registration slack channel.",
+      "createdAt": "2025-10-31T15:38:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3473651121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PDF4o",
+      "author": {
+        "login": "maucejo"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] If you just did this because `UFFReader` didn't pass the name similarity check that's not necessary - name similarity is just an automated check against typo squatting, and can easily be overriden. If you prefer `UFFReader` just ask for name similarity to be overriden in the #pkh-registration slack channel.\r\n\r\nThank you sincerely. This naming issue made me crazy. After all these iterations, I find UFFio.jl is fine. I keep this last name.",
+      "createdAt": "2025-10-31T15:46:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3473694248",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PLway",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually, I would consider `UFFio` to be quite problematic, as it violates `CamelCase`. The acronym `IO` should still be capitalized, since it's an acronym. `UFFIO` might be okay in principle (although not very readable), but it would require approval and merging from a full registry maintainer, which probably isn't worth the trouble.\r\n\r\nI would _strongly_ recommend going back to `UFFReader` in https://github.com/JuliaRegistries/General/pull/141607. Or, of course, `UniversalFileFormat`, as you had planned to in https://github.com/JuliaRegistries/General/pull/141602#issuecomment-3472942807. Or still `UFFFiles` if you want something shorter and you may implement _writing_ in the future. Note that \"short\" isn't something package names should strive for when it sacrifices clarity. As the [guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1) say, \"Err on the side of clarity, even if clarity seems long-winded to you.\" The name `UFFReader` is definitely fine. It would match the pattern that we often encourage for other file format packages, of `<EXT>(Format|Files|Writer|Reader)`. _Because_ it's a pattern we encourage, that often causes the bot to flag a name similarity issue, but those name similarities are false positives, and I can easily override them\r\n\r\n> This naming issue made me crazy.\r\n\r\nI understand these things can be frustrating, but remember that registrations are permanent. That's well worth the effort of making sure the package name is suitable and matches the guidelines. Don't get too caught up and sleep on it for a night. Changing the name back will only take a few more minutes of your time",
+      "createdAt": "2025-11-01T08:39:10Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3475965618",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PL9Kk",
+      "author": {
+        "login": "maucejo"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Actually, I would consider `UFFio` to be quite problematic, as it violates `CamelCase`. The acronym `IO` should still be capitalized, since it's an acronym. `UFFIO` might be okay in principle (although not very readable), but it would require approval and merging from a full registry maintainer, which probably isn't worth the trouble.\n> \n> I would _strongly_ recommend going back to `UFFReader` in https://github.com/JuliaRegistries/General/pull/141607. Or, of course, `UniversalFileFormat`, as you had planned to in https://github.com/JuliaRegistries/General/pull/141602#issuecomment-3472942807. Or still `UFFFiles` if you want something shorter and you may implement _writing_ in the future. Note that \"short\" isn't something package names should strive for when it sacrifices clarity. As the [guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1) say, \"Err on the side of clarity, even if clarity seems long-winded to you.\" The name `UFFReader` is definitely fine. It would match the pattern that we often encourage for other file format packages, of `<EXT>(Format|Files|Writer|Reader)`. _Because_ it's a pattern we encourage, that often causes the bot to flag a name similarity issue, but those name similarities are false positives, and I can easily override them\n> \n> > This naming issue made me crazy.\n> \n> I understand these things can be frustrating, but remember that registrations are permanent. That's well worth the effort of making sure the package name is suitable and matches the guidelines. Don't get too caught up and sleep on it for a night. Changing the name back will only take a few more minutes of your time\n\nDon't worry, it is fine. I will revert things to UFFReader, even if writing fuctions will be available in a near future. The only question is \"How to submit the PR with UFFReader and avoid the false positive ?\"\n\nBest regards\n\n",
+      "createdAt": "2025-11-01T09:02:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476017828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMA0D",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": ">  I will revert things to UFFReader, even if writing fuctions will be available in a near future.\r\n\r\nUmm... sorry, but no. If the package will implement writing, `UFFReader` would be a misrepresentation. We require that package names accurately reflect the functionality of the package.\r\n\r\n> The only question is \"How to submit the PR with UFFReader and avoid the false positive ?\"\r\n\r\nThat part is easy. If you retrigger the registration after you rename, it will just update the existing https://github.com/JuliaRegistries/General/pull/141607, for which I've already applied the override.\r\n\r\nIn general, for _any_ registration, I will more or less automatically override any name similarity that the bot gets wrong (which is 95% of them)\r\n",
+      "createdAt": "2025-11-01T09:09:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476032771",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMCd8",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Given that `UFFio` is presumably because \"This will also implement writing\", not \"I got too frustrated with the process\", this is something where I'd \"let the author have the last word\". I don't think it's ideal compared to the alternatives (remember we're not aiming for \"short\"), but it's also not something that's so egregious that it can't be merged.\r\n\r\nIn that case, there's be nothing else to do, apart from you confirming that's the way you want to go. Sleep on it for a night, though. As I said, registrations are permanent, so you'd want to put your best foot forward as much as possible.",
+      "createdAt": "2025-11-01T09:13:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476039548",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMgOs",
+      "author": {
+        "login": "maucejo"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Given that `UFFio` is presumably because \"This will also implement writing\", not \"I got too frustrated with the process\", this is something where I'd \"let the author have the last word\". I don't think it's ideal compared to the alternatives (remember we're not aiming for \"short\"), but it's also not something that's so egregious that it can't be merged.\n> \n> In that case, there's be nothing else to do, apart from you confirming that's the way you want to go. Sleep on it for a night, though. As I said, registrations are permanent, so you'd want to put your best foot forward as much as possible.\n\nIdeally, I'd like to name the package UFF.jl, just like CSV.jl or JSON.jl. Is it possible ?\n\n",
+      "createdAt": "2025-11-01T10:31:41Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476161452",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMnMG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ultimately, “possible” comes down to “are you going to find a full registry maintainer willing to merge it”. But realistically, no. There seems to be a pretty strong consensus that short acronyms or file extensions are a no-go, and that these should be combined with an appropriate and descriptive suffix or prefix ",
+      "createdAt": "2025-11-01T10:45:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476189958",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMoaS",
+      "author": {
+        "login": "maucejo"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Ultimately, “possible” comes down to “are you going to find a full registry maintainer willing to merge it”. But realistically, no. There seems to be a pretty strong consensus that short acronyms or file extensions are a no-go, and that these should be combined with an appropriate and descriptive suffix or prefix \n\nSo, if I propose UFFIO, is it acceptable ?\n\nI really thank you for your patience and your help \n\n",
+      "createdAt": "2025-11-01T10:48:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476194962",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PM1ul",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`UFFIO` has the benefit of being proper `CamelCase`, but two significant drawbacks: it’s not particularly readable, and it also needs a full registry maintainer to merge (but you could probably find one, if you prefer that route). Personally (after some reflection) I’m not even sure if I’d prefer `UFFIO` or `UFFio`. Both have their benefits. I think the “use proper `CsmelCase`” might be a particular pet peeve of mine; others might say “`UFFio` is totally fine”. You could ask on Slack for more community opinions. I’m warming up to it a little.\r\n\r\nStill, what’s wrong with `UFFFiles`?",
+      "createdAt": "2025-11-01T11:13:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476249509",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PM3N2",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "So, in short: I’ll unblock `UFFio` if that’s what you want, but I’d be happier with `UFFFiles` or `UniversalFileFormat`. But this is all in the realm of “author should have the last word”. So it’s up to you",
+      "createdAt": "2025-11-01T11:16:46Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476255606",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PNLDp",
+      "author": {
+        "login": "maucejo"
+      },
+      "authorAssociation": "NONE",
+      "body": "> So, in short: I’ll unblock `UFFio` if that’s what you want, but I’d be happier with `UFFFiles` or `UniversalFileFormat`. But this is all in the realm of “author should have the last word”. So it’s up to you\n\nI was initially reluctant to name the package UFFFiles (because of the three Fs), but I think it is a good compromise. So, I will name the package UFFFiles. \n\n",
+      "createdAt": "2025-11-01T12:22:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476336873",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87POpCl",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/141659",
+      "createdAt": "2025-11-01T19:28:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141621#issuecomment-3476721829",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: UFFio\n- Repository: https://github.com/maucejo/UFFio.jl\n- Created by: @maucejo\n- Version: v0.1.0\n- Commit: dc570cae8a37028da481e7fdf9a65972c34b0865\n- Reviewed by: @maucejo\n- Reference: https://github.com/maucejo/UFFio.jl/commit/dc570cae8a37028da481e7fdf9a65972c34b0865#commitcomment-169371082\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis new package aims at providing tools for reading Universal File Format files.\r\nIt currently supports only reading functionalities for datasets: 15, 18, 55, 58, 82, 151, 164, 2411, 2412, 2414.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6093ebd20eb65b2421c3f2d48ff93f763018b963b2dcc19413e7e2952608918ae3bd1fea074771f6b5186da991bb217acd0eddf1ef0038fcf8b9fa7654cb221e42fe9f74638cc2676e6f93f6cecbdffcd4be63559cfcf6fd2cc4b47cc5170661cfbb6210a8a48843407815591875ceff2a7fbec9186d6e84235a9ea121de294e586bdfc27f308e5cb18a191a731c3cbf8c9d0e32ed6270744ef09d62b4c0db7d8730ccb71ce3a8c3805d1b4d5af949569 -->",
+  "package_name": "UFFio",
+  "closed_at": "2025-11-01T19:28:45Z",
+  "title": "New package: UFFio v0.1.0"
+}

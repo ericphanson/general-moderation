@@ -1,0 +1,210 @@
+{
+  "created_at": "2025-10-17T19:03:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "ViralBShah",
+  "merged_at": null,
+  "pr_number": 140653,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87LqANb",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Lowercase package name kimjulia contains the string \"julia\".\n- Package name similar to 3 existing packages.\n  1. Similar to IJulia. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  2. Similar to OMJulia. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to SimJulia. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-17T19:14:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3416785755",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87LqI3e",
+      "author": {
+        "login": "ilia-nikiforov-umn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Dear Julia team,\r\n\r\nWe would like for an exception to be made to the naming guidelines to accept the name \"KIMJulia\", to stay consistent with the Python bindings to the [KIM API](https://openkim.org/kim-api/), `kimpy`: https://pypi.org/project/kimpy/, as well as the in-development `kimrust`. This is analogous to how `SimJulia` is inspired by `simpy`.\r\n\r\nCheers, ilia Nikiforov",
+      "createdAt": "2025-10-17T19:27:35Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3416821214",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87LtySl",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This will be up to one of the full registry maintainers to decide, but I would be pretty strongly against this. This is a _rename_ of the existing package `KIMPortableModels` originally registered in https://github.com/JuliaRegistries/General/pull/138615 (it would have been good for you to mention this). I'd generally say there should be a pretty high bar to renames, as these effectively \"abandon\" an existing package, with all the user confusion that entails. I also think that the original `KIMPortableModels` is a _much_ better name. Julia has very a very different naming culture than Python or Rust, so I'd be pretty hesitant about aiming for \"consistency\" with corresponding packages in those languages",
+      "createdAt": "2025-10-18T04:00:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3417777317",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Lxd32",
+      "author": {
+        "login": "ilia-nikiforov-umn"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz understandable, but regarding the rename -- KIMPortableModels has been out for only a few days and hasn't been announced anywhere.",
+      "createdAt": "2025-10-18T18:58:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3418742262",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87LxidD",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The General registry is intended to be permanent, and makes very strong and explicit guarantees for reproducibility. We really only revert registrations under very extreme circumstances (most recently for a package that was deleted before the package servers could snapshot it, such that the package was never actually installable). For all intents and purposes, once a package is registered, it cannot (and should not) be \"unregistered\". I would also say that renaming should be extremely rare, although it's clearly possible with sufficiently strong reasons. The badly named `SimJulia` you cite was renamed to `ConcurrentSim`, for example.\r\n\r\nOf course, in this case, it would be the other way around: `KIMPortableModels` is a perfectly fine name, while `KIMJulia` violates virtually all of the package naming guidelines. So I _really_ don't think we should move from the former to the latter. But as I said, this is ultimately up to one of the full registry maintainers.",
+      "createdAt": "2025-10-18T19:34:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3418761027",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L17tf",
+      "author": {
+        "login": "ilia-nikiforov-umn"
+      },
+      "authorAssociation": "NONE",
+      "body": "I understand that renaming is bad practice, however in this case I think it may be necessary regardless. After internal discussion, we don't think \"KIMPortableModels\" will be an accurate name for this package in the long term. Eventually, we expect to extend the Julia package to be a general wrapper to the KIM API, similar to the kimpy Python wrapper. This means it will support features of the KIM API beyond \"Portable Models\", most importantly \"Simulator Models\", which are a crucially different type of KIM content. We feel it is better to rename that package now, before it has been announced and before it has any users, rather than rename or deprecate it later.",
+      "createdAt": "2025-10-19T19:54:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3419913055",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L1_if",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "What about `OpenKIM.jl`? One reason we don't like `KIMJulia.jl` is because `.jl` already indicates Julia (but `KIM.jl` is a no-go: too short).\r\n\r\n`OpenKIM.jl` would pass automatic checks and I'm not going to object to the rename under the reasoning you just gave.\r\n\r\nAnything else, you'll have to advocate for with a full registry maintainer (on Slack; they do not monitor the GitHub issues).",
+      "createdAt": "2025-10-19T20:18:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3419928735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87MBtKP",
+      "author": {
+        "login": "ilia-nikiforov-umn"
+      },
+      "authorAssociation": "NONE",
+      "body": "Unfortunately, `OpenKIM.jl` is also too restrictive. In KIM branding, \"OpenKIM\" refers to content hosted on openkim.org, our organization, and our open science efforts. The KIM API, and therefore this Julia package, can be used independently of the repository, to interface with non-public interatomic models, and therefore does not fit under the OpenKIM brand. I will try to reach out to one of the maintainers on Slack, thank you for the suggestion.",
+      "createdAt": "2025-10-20T17:06:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3422999183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87MQfm7",
+      "author": {
+        "login": "ilia-nikiforov-umn"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz do you know if `KIM_API.jl` would pass the automatic checks? After reading the [package naming rules](https://pkgdocs.julialang.org/v1/creating-packages/#Package-naming-rules), especially rule 6: \"Packages that wrap external libraries or programs can be named after those libraries or programs.\", it seems that `KIMAPI.jl` or `KIM_API.jl` is the correct name for a wrapper to the KIM API. The only issue is that the [stylistic conventions](https://docs.julialang.org/en/v1/manual/variables/#Stylistic-Conventions), which the package names must follow, discourage underscores unless they significantly increase readability. In this case, I think the underscore does so.",
+      "createdAt": "2025-10-21T14:08:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3426875835",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87MQ-09",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "No, it does not. Underscores are prohibited in Julia packages name. `KIMAPI` will trigger the no-all-caps rule (which, unfortunately, I can't override). So that will also require merging by a full registry maintainer.\r\n\r\nPersonally, I'm not a fan of meaningless suffixes like `API`, `SDK`, etc. Quite honestly, if I was a registry maintainer, I'd probably respond with the usual recommendation to write out the acronym (`KnowledgebaseOfInteratomicModels`), but that's a little too long even for my tastes and loses the recognizability of your \"KIM\" brand. I would then probably allow myself to be convinced the `KIM.jl` is worth the exception. Certainly, I'd approve `KIM.jl` before approving `KIMJulia.jl`. But I also know that there are at least some registry maintainers who are quite strongly opposed to package names < 5 letters and 3-letter acronyms in particular. Still worth having a conversation over... Good luck! :-)",
+      "createdAt": "2025-10-21T14:31:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3427003709",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87M8OKN",
+      "author": {
+        "login": "ViralBShah"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I suggest we go ahead with KIM_API or KIM_SDK, since OpenKIM.jl and KIMJulia.jl are both not ideal. The full name would be a huge mouthful for sure.\r\n\r\nClosing this so that a new PR can be opened with the new name. ",
+      "createdAt": "2025-10-23T17:48:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3438338701",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Nrz02",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Followup in https://github.com/JuliaRegistries/General/pull/141278",
+      "createdAt": "2025-10-27T11:29:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140653#issuecomment-3450813750",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: KIMJulia\n- Repository: https://github.com/openkim/KIMJulia.jl\n- Created by: @ilia-nikiforov-umn\n- Version: v1.0.1\n- Commit: 0b2df707f91d28dc09c65ab5ccdb2274665c4eda\n- Reviewed by: @ilia-nikiforov-umn\n- Reference: https://github.com/openkim/KIMJulia.jl/issues/7#issuecomment-3416750915\n- Description: Julia bindiangs for KIM-API\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- Added kwargs for Molly compatibility\n\n- Rename\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598319dfffc81b98493d40aef7a8ba90b3a8ac7a57ada2f53fc67e8505ec9786b094c57a601dc5fa56c4702e8cbfb1e4fd9f9e1b25489c45f1ded1e2324280141e3d6b61e37658f6800fdf57fa892019e85680a0dc0c220eb61007912f7dd124e497d188d2cd03098dc74915b63b6115e82b3e4662fc4f6c32e75e6d375bd3302b1 -->",
+  "package_name": "KIMJulia",
+  "closed_at": "2025-10-23T17:49:28Z",
+  "title": "New package: KIMJulia v1.0.1"
+}

@@ -1,0 +1,185 @@
+{
+  "created_at": "2025-10-08T18:55:54Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 139982,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87JogmP",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name is not at least 5 characters long\n- Package name similar to 7 existing packages.\n  1. Similar to Juno. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to Yao. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  3. Similar to Bio. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to Glo. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to Ant. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  6. Similar to UCX. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  7. Similar to Cbc. Normalized visual distance 2.23 is at or below cutoff of 2.50.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-08T19:02:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3382839695",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JorIP",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n[Uno.jl](https://github.com/cvanaret/Uno/tree/main/interfaces/Julia) is the Julia interface for the nonlinear solver [`Uno`](https://github.com/cvanaret/Uno) and directly relies on the JLL package `Uno_jll.jl`.\r\nOther optimization solvers also have a name with only 3 characters and used a JLL with similar name :\r\n- https://github.com/jump-dev/Clp.jl\r\n- https://github.com/jump-dev/Cbc.jl\r\n- https://github.com/jump-dev/SCS.jl\r\n\r\ncc @cvanaret",
+      "createdAt": "2025-10-08T19:16:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3382882831",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JqN0c",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "`UnoSolver` seems like the most obvious name that would pass the naming guidelines.\r\n\r\nBased on my impression of current sentiments among registry maintainers, I’m not sure if there is any realistic chance to get `Uno` merged.\r\n\r\n> Other optimization solvers also have a name with only 3 characters\r\n\r\nThese were registered before there was any enforcement of the guidelines. We have gotten much stricter about package naming",
+      "createdAt": "2025-10-08T21:22:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "CONFUSED",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3383287068",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Jq1Ce",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Based on my impression of current sentiments among registry maintainers, I don't think there is any realistic chance to get Uno merged.\r\n\r\nJust to be clear: I have no authority whatsoever to \"reject\" the name, and you're more than welcome to see what kind of response you get on Slack. Personally, I'm actually somewhat more open to short names (as long as they're not acronyms) than some of the registry maintainers seem to be, but I think even I would advocate for a _hard_ limit at 4 letters.\r\n\r\nRenaming would certainly be the _easiest_ way forward.",
+      "createdAt": "2025-10-08T22:31:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3383447710",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Jq3yi",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks, @goerz! I completely understand. I have posted a message on Slack to get the optimization community’s thoughts on the name.",
+      "createdAt": "2025-10-08T22:38:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3383458978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JrvwM",
+      "author": {
+        "login": "odow"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] FWIW: Cbc and Clp are circa 2012. It was a much more chill time for naming conventions.\r\n\r\nUnoSolver.jl or UnifyingNonlinearOptimization.jl, either of which can be simplified with `import <name> as Uno`",
+      "createdAt": "2025-10-09T01:00:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3383688204",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JumIm",
+      "author": {
+        "login": "kellertuer"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] Oh, Uno even has a long form, I think I really like `UnifyingNonlinearOptimization.jl`!\r\n\r\nTo comment on the old solvers, I would have preferred for readability (especially for non-experts) if e.g. SCS would have been called SplittingConicSolver.jl, easier to parse for a user and we are no longer in the 80s, autocomplete exists.",
+      "createdAt": "2025-10-09T07:11:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3384435238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87NImN9",
+      "author": {
+        "login": "amontoison"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thank you all for the comments! We decided to rename the package `UnoSolver.jl` with @cvanaret.\r\nWe found `UnifyingNonlinearOptimization.jl` a little bit too long.\r\nThis PR can be closed, the new one is https://github.com/JuliaRegistries/General/pull/141117.",
+      "createdAt": "2025-10-24T07:43:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139982#issuecomment-3441582973",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: Uno\n- Repository: https://github.com/cvanaret/Uno\n- Created by: @amontoison\n- Version: v0.1.0\n- Commit: 2d54abd88d7839af39028658545cab6b5ded2b58\n- Reviewed by: @amontoison\n- Reference: https://github.com/cvanaret/Uno/commit/2d54abd88d7839af39028658545cab6b5ded2b58#commitcomment-167511923\n- Description: A next-gen SQP & barrier solver for nonlinearly constrained optimization\n<!-- e3d928eca9a7f7df00d4dfb5259a6415a8cbdc1b496884662f3a057f89d7ae239a73769fbf3d3bed4076cb36e2f76982643e64734e1a64a732f68852b601f36a65c7132d735361f9d00507f433924ad70d308252de53649edf83f20d922b020f119ce60b5dc48aeacfde6641c772fd74509f8d8f29d241c18707993b4dd308019109c89070bfd7d1bd23681710b8fae5936ff5e394f6d57dacaf7a27b2b6be5887ef7cb7b0cf7d85c8020d8513d45197b6e5e821db4db3a905891ea60bc40ab9816df006d373ddbcb9b14f8fcbe7d16255729d5db54250ed92de22fe4ae4f5fb -->",
+  "package_name": "Uno",
+  "closed_at": "2025-10-24T11:04:05Z",
+  "title": "New package: Uno v0.1.0"
+}

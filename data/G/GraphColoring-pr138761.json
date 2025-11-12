@@ -1,0 +1,210 @@
+{
+  "created_at": "2025-09-18T07:18:06Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 138761,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87FCnmj",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-18T07:24:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3305798051",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FEqLZ",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'd just want to double-check that the name of the package isn't too general to describe its scope: Does this aspire to handle graph coloring in general (seems like it does!), or just some particular method(s) of graph coloring?\r\n\r\nAlso: could this package be moved to the [JuliaGraphs organization](https://github.com/JuliaGraphs)? It seems that [Graphs.jl itself also contains some support for coloring already](https://juliagraphs.org/Graphs.jl/v1.5/coloring/). How does this library compare and fit in? Would it make sense for `GraphColoring` to return a [`Graphs.Coloring`](https://juliagraphs.org/Graphs.jl/v1.5/coloring/#Graphs.Coloring) object, for better composability within the ecosystem.\r\n\r\nCC @gdalle as someone who seems to have been involved in Graphs.jl and it's coloring support and/or who might be able to connect with owners of the JuliaGraphs org to facilitate a move, if that's appropriate\r\n\r\n[noblock]",
+      "createdAt": "2025-09-18T08:51:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3306332889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FHv_I",
+      "author": {
+        "login": "djukic14"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for the feedback!\r\n\r\nThe package is intended to serve as a general‑purpose graph‑coloring toolbox. It currently implements three families of algorithms: a greedy method, DSATUR, and the workstream approach.\r\n\r\nWhen I designed the package, I decided to keep it separate from Graphs.jl to maintain a lightweight and flexible code base. Consequently, Graphs.jl is listed only as a weak dependency. Users can also describe a graph with a sparse adjacency matrix directly in this framework, which eliminates the need for conversion to a Graphs type when that hierarchy may not be needed.\r\n\r\nWhile Graphs.jl already provides greedy and random coloring, this package also implements DSATUR coloring and the work‑stream method. The latter is especially useful for multithreaded applications, because it balances the sizes of color classes for parallel execution rather than solely minimizing the chromatic number.\r\n\r\nI would be happy to add an option to return a Graphs.Coloring object alongside the current interface, but I prefer to also keep the existing output format. It aligns better with the parallel‑processing use case, where the elements of each color are processed concurrently.\r\n\r\nIf the community feels it would be more appropriate, I am open to moving the repository under the JuliaGraphs organization in the future.",
+      "createdAt": "2025-09-18T12:17:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3307143112",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FIQGh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sounds good to me!\r\n\r\n> I would be happy to add an option to return a `Graphs.Coloring`\r\n\r\nSince you have (and probably want to keep) `Graphs` only as a weak dependency, it would probably be sufficient to just add a `convert` method in your extension module.\r\n\r\n> I am open to moving the repository under the JuliaGraphs organization in the future.\r\n\r\nIt's easier to move a package _before_ it is registered, as moving it afterwards requires a pull request that needs to be handled manually by a registry maintainer (and they tend to be overworked).\r\n\r\nMaybe someone from the JuliaGraphs org will be able to facilitate a move (assuming you're okay with moving now) within the waiting period. If not, I'd just let it merge.",
+      "createdAt": "2025-09-18T12:48:48Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3307274657",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FJMxG",
+      "author": {
+        "login": "gdalle"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Pinging @Krastanov since I'm no longer a JuliaGraphs maintainer",
+      "createdAt": "2025-09-18T13:40:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3307523142",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FJjbb",
+      "author": {
+        "login": "Krastanov"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@djukic14 , you are the one that has put in the work to create this tool, which does provide sophisticated coloring capabilities, so I am in favor of any final decisions being made by you. I do believe it would be beneficial to the community to do the following:\r\n\r\n- Move the package to the JuliaGraphs organization (with you being the owner of the package of course), so that if the single maintainer of such generically name package disappears there is someone else who can help with maintenance.\r\n- Sometime soon make sure that the package can be easily used as a backend for Graphs.jl coloring (I will post an issue to your package about that shortly) and have the documentation of Graphs.jl refer to GraphColoring.jl as a way to access more coloring algorithms.\r\n\r\nGiven that this seems to be a package implementing significantly more capabilities on graph coloring than other parts of the ecosystem, I think it is warranted to take a high profile name in the General registry namespace -- I am in favor of accepting the registration.\r\n\r\n@djukic14 , this is almost a silly question, but it is helpful to have explicit confirmation when managing the future of the General registry namespace -- could you confirm you will be welcoming to contributions of additional coloring algorithms to your package (so that it can be a home for this type of algorithms in the Graphs.jl ecosystem)?",
+      "createdAt": "2025-09-18T13:58:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3307615963",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FJrcj",
+      "author": {
+        "login": "Krastanov"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I do have a minor suggestion for a name change: We already have GraphsOptim.jl and GraphsMatching.jl, so could you consider renaming to GraphsColoring.jl to keep the names a bit more consistent (plural instead of singular)?",
+      "createdAt": "2025-09-18T14:03:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3307648803",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FbWZP",
+      "author": {
+        "login": "djukic14"
+      },
+      "authorAssociation": "NONE",
+      "body": "@Krastanov Thank you for your feedback. I’m fully on board with all your suggestions. I’ll be working through them with the goal of:\r\n- Finalizing the interface with Graphs.jl\r\n- Renaming the package\r\n- Setting up proper CI/CD \r\n\r\nI am also very open to adding new coloring algorithms to the package.\r\n \r\nAfterwards, we can transfer the package to JuliaGraphs and register it. We can halt the current registration before we have transferred this pkg.",
+      "createdAt": "2025-09-19T13:49:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3312281167",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FbX3J",
+      "author": {
+        "login": "djukic14"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz Can you block the registration for now?",
+      "createdAt": "2025-09-19T13:51:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3312287177",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FfRED",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Afterwards, we can transfer the package to JuliaGraphs\r\n\r\nI would encourage to move to the JuliaGraphs org as soon as possible instead of \"afterwards\", even if you decide that there are a bunch of issues you still want to fix before resubmitting a registration. In particular, \"Setting up CI/CD\" is something where you'd end up doing some work twice if you wait with the move.\r\n\r\n@Krastanov Do you have Owner status in the org (or if not, can you point an owner here)? Assuming you do, my understanding is that the most common way to achieve the transfer is\r\n\r\n1. @djukic14 [transfers ownership of the repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) to @Krastanov\r\n2. @Krastanov moves the repo into the org\r\n3. @Krastanov adds @djukic14 to the org as a member\r\n4. @Krastanov adds @djukic14 as maintainer / owner of project repo\r\n\r\nSubstitute @Krastanov for whoever is an org owner.\r\n\r\nEverything else comes after:\r\n\r\n5. @djukic14 renames the project to `GraphsColoring.jl` (I think @djukic14 can do that as a simple member of the org, or it _might_ require help from @Krastanov)\r\n6. Set up CI/CD, GitHub Pages\r\n7. Improve interoperability with Graphs.jl\r\n8. Resubmit for registration\r\n\r\n> Can you block the registration for now?\r\n\r\nIt's already blocked, just by virtue of all of use having posted comments that do not include `[noblock]`, cf. the \"[AutoMerge: last run blocked by comment](https://github.com/JuliaRegistries/General/issues?q=state%3Aopen%20label%3A%22AutoMerge%3A%20last%20run%20blocked%20by%20comment%22)\" tag.",
+      "createdAt": "2025-09-19T18:21:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3313307907",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87FjjUZ",
+      "author": {
+        "login": "Krastanov"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@djukic14 is now a member of the org and should be able to transfer the package. I will make him an owner when the transfer is finished.",
+      "createdAt": "2025-09-20T02:40:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3314431257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Hu_7I",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/139321",
+      "createdAt": "2025-09-30T09:38:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/138761#issuecomment-3350986440",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: GraphColoring\n- Repository: https://github.com/djukic14/GraphColoring.jl\n- Created by: @djukic14\n- Version: v0.1.0\n- Commit: f8362079b34a84d5d9adcad7ad78d6d6d31fb5fa\n- Git reference: HEAD\n- Description: A Julia package implementing greedy, DSATUR (Degree SATURated), and workstream graph coloring algorithms for efficient graph coloring.",
+  "package_name": "GraphColoring",
+  "closed_at": "2025-09-30T09:38:33Z",
+  "title": "New package: GraphColoring v0.1.0"
+}

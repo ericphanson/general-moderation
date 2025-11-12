@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-09-29T21:35:32Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 139360,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87HoGS7",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: PrecompileTools\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 4 existing packages.\n  1. Similar to GLM. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to PPLM. Damerau-Levenshtein distance 2 is at or below cutoff of 2. Normalized visual distance 2.05 is at or below cutoff of 2.50.\n  3. Similar to FEHM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to FDM. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-29T21:51:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139360#issuecomment-3349177531",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Hp4HK",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@SteinerMatthias When renaming a package repo, in this case to https://github.com/SteinerMatthias/FglmAlgorithms.jl, please use (in the future) the GitHub UI to do that renaming. Don't just delete the repo and create a new one. With a proper rename URLs will be automatically forwarded to the new location.\r\n\r\nI would also (preemptively, before you try to re-register) ask that if you want to include the acronym `FGLM` in the package name, it should remain in all-caps. I would probably not object very strongly to `FGLMAlgorithms`, but it would be better to find a more descriptive suffix than `Algorithms`. Something along the lines of `FGLMTermReordering`, maybe. Please remember than in the Julia community, we encourage long and descriptive package names... very much unlike other communities like Python or C++.",
+      "createdAt": "2025-09-30T01:49:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139360#issuecomment-3349643722",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HtS8N",
+      "author": {
+        "login": "SteinerMatthias"
+      },
+      "authorAssociation": "NONE",
+      "body": "Closes in favour of #139383",
+      "createdAt": "2025-09-30T08:06:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139360#issuecomment-3350540045",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: FGLM\n- Repository: https://github.com/SteinerMatthias/FGLM.jl\n- Created by: @SteinerMatthias\n- Version: v0.1.0\n- Commit: acc50dfa97161e5a63d43efaea393ca853675f9a\n- Reviewed by: @SteinerMatthias\n- Reference: https://github.com/SteinerMatthias/FGLM.jl/issues/1\n- Description: Provides implementations of FGLM algorithms on top of Julia/OSCAR.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359872b179a75ee2a0d63d15f4e8d703ade7e5afa378bd4cfd30a8c819486fcc70955d264cd37bcbd64304a85def8fd9e620a8427f10c17af74674b84de6b02acd5c617dfb8417ed7d820d69ad750decacdf103e19a346c0422f6a5fa10bade2a329a115e88fa7c05bcf565775cd91e878812ad16fb58df565f0e86f2a3ddd9235ee -->",
+  "package_name": "FGLM",
+  "closed_at": "2025-09-30T09:03:28Z",
+  "title": "New package: FGLM v0.1.0"
+}

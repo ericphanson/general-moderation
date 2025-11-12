@@ -1,0 +1,127 @@
+{
+  "created_at": "2025-07-06T09:20:09Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 134265,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q861RbAv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-06T09:26:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3041243183",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861RcVX",
+      "author": {
+        "login": "AntonReinhard"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] If anyone has any suggestions for the naming of the package, I'm open to them. I'm not too happy with the current name.",
+      "createdAt": "2025-07-06T09:34:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3041248599",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861Rd6K",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nI would find `PrecisionDetector` considerably clearer at least.",
+      "createdAt": "2025-07-06T09:43:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3041255050",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861Vio0",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would also avoid `Prec` in a package name (\"Precision\"? \"Precedence\"?).\r\n\r\n[From the README](https://github.com/AntonReinhard/PrecDetector.jl?tab=readme-ov-file#how-it-works):\r\n\r\n> This package provides a new type, PrecCarrier{T}\r\n\r\nAnd, [from the guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines):\r\n\r\n> Packages that provide most of their functionality in association with a new type should have pluralized names.\r\n\r\nSo maybe I would rename that type to `PrecisionCarrier{T}`, and then name the package `PrecisionCarriers`. It seems like `PrecisionCarrier` is not something a user would have to type a lot, as the main interface appears to be the `precify` function. So it's probably okay if it's a bit longer.\r\n",
+      "createdAt": "2025-07-06T18:20:05Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3042322996",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861dIjJ",
+      "author": {
+        "login": "AntonReinhard"
+      },
+      "authorAssociation": "NONE",
+      "body": "Oh I'm not sure if this was a mistake, but I reregistered the package after renaming, so there is now a new pull request: https://github.com/JuliaRegistries/General/pull/134309\r\nThis one can be closed.",
+      "createdAt": "2025-07-07T10:10:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3044313289",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861eGkK",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It's expected to get a new PR after renaming (or changing version or url).",
+      "createdAt": "2025-07-07T11:20:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134265#issuecomment-3044567306",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: PrecDetector\n- Repository: https://github.com/AntonReinhard/PrecDetector.jl\n- Created by: @AntonReinhard\n- Version: v0.1.0\n- Commit: 871987203287a5c6ccb87f47d528b56ba805b63d\n- Reviewed by: @AntonReinhard\n- Reference: https://github.com/AntonReinhard/PrecDetector.jl/issues/4\n- Description: Detector for Floating Point Precision Loss\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835984de3546eb6c61bf7523f97a7be2155b959250b135f203847c505790d06b5cb472afd5864ab04146ee500aa1f857e2eab9fdf4c6c2517dbad94483581a65ff26dd24c28e05e4c39938cbaa7cdb80b28355b62c2ee6c13fed5e6cc4861c34170062f39827401cf3a146d6a4ea2082a7f6d2a5372a058875d644b6149306723a064 -->",
+  "package_name": "PrecDetector",
+  "closed_at": "2025-07-07T11:20:16Z",
+  "title": "New package: PrecDetector v0.1.0"
+}

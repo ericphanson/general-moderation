@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-10-18T19:51:00Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 140720,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87LxnmY",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-18T20:06:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140720#issuecomment-3418782104",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L0Jwr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Are you sure that you want to tag this initial version as `v1.0.0`? This looks like a good start for a package, but it also looks like something that could benefit from some cleanup and more in-depth documentation (at a glance, there's a lot of code in the `src` directory that does not yet have docstrings). If you intend to follow [semantic versioning](https://semver.org), a `v1.0.0` indicates a \"stable\" API which must be formally specified and for which you make compatibility guarantees. While I strongly support getting to a stable API as early as possible, while the package isn't quite there yet, it might be better to start with version numbers `<v1.0.0` (typically, `v0.1.0`). It's up to you, though. Of course, a registered packaged should be mostly \"stable\" anyway, even if not completely polished: `Pkg` treats `v0.x.0` as \"breaking\" and General requires a changelog with specified breaking changes for any `v0.x.0` releases. So it's more about the intent that you want to communicate in relation to the semver specifications.\r\n\r\nIn any case, though, you should not create [manual tags](https://github.com/quantum-nanoelectronics/QuantumTransport.jl/tags) for your repository. Versions must be tagged _after_ they are registered, and this happens automatically via [TagBot](https://github.com/JuliaRegistries/TagBot), which you already have [set up](https://github.com/quantum-nanoelectronics/QuantumTransport.jl/blob/main/.github/workflows/TagBot.yml)",
+      "createdAt": "2025-10-19T08:55:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140720#issuecomment-3419446315",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L1JO8",
+      "author": {
+        "login": "somwakdikar"
+      },
+      "authorAssociation": "NONE",
+      "body": "> [noblock] Are you sure that you want to tag this initial version as `v1.0.0`? This looks like a good start for a package, but it also looks like something that could benefit from some cleanup and more in-depth documentation (at a glance, there's a lot of code in the `src` directory that does not yet have docstrings). If you intend to follow [semantic versioning](https://semver.org), a `v1.0.0` indicates a \"stable\" API which must be formally specified and for which you make compatibility guarantees. While I strongly support getting to a stable API as early as possible, while the package isn't quite there yet, it might be better to start with version numbers `<v1.0.0` (typically, `v0.1.0`). It's up to you, though. Of course, a registered packaged should be mostly \"stable\" anyway, even if not completely polished: `Pkg` treats `v0.x.0` as \"breaking\" and General requires a changelog with specified breaking changes for any `v0.x.0` releases. So it's more about the intent that you want to communicate in relation to the semver specifications.\r\n> \r\n> In any case, though, you should not create [manual tags](https://github.com/quantum-nanoelectronics/QuantumTransport.jl/tags) for your repository. Versions must be tagged _after_ they are registered, and this happens automatically via [TagBot](https://github.com/JuliaRegistries/TagBot), which you already have [set up](https://github.com/quantum-nanoelectronics/QuantumTransport.jl/blob/main/.github/workflows/TagBot.yml)\r\n\r\n[noblock] Understood, and your initial impressions of this package are correct. This is intended to be a FOSS package that has room for improvement that you mentioned. Thank you for your suggestions - I will be following both of them.",
+      "createdAt": "2025-10-19T14:21:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/140720#issuecomment-3419706300",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87L1n_c",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/140754",
+      "createdAt": "2025-10-19T17:38:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/140720#issuecomment-3419832284",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: QuantumTransport\n- Repository: https://github.com/quantum-nanoelectronics/QuantumTransport.jl\n- Created by: @somwakdikar\n- Version: v1.0.0\n- Commit: e28eff4df11051af4d527596983980281500326e\n- Reviewed by: @somwakdikar\n- Reference: https://github.com/quantum-nanoelectronics/QuantumTransport.jl/issues/50#issuecomment-3418832155\n- Description: FOSS (free-open source software) for modeling quantum transport in nanoelectronic devices.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835987a31ed5fee37cba28590df350edabfa5319e4442bd989463ea0f18d05470479bb0f7197216b979156d695b9387f09a3a937464e87d8ba607a881ea2a3cc556eb87ca855d8090562b798a23dfb047463a61c7fd5c00b984a3d27c2b6ebcea6f12c6682c601a66d141d7314bd9533494659c772c05b49f527ca7a1563577ad9e2a93af8a70ccbae4047f43f0ef8ab1cf07 -->",
+  "package_name": "QuantumTransport",
+  "closed_at": "2025-10-19T17:38:14Z",
+  "title": "New package: QuantumTransport v1.0.0"
+}

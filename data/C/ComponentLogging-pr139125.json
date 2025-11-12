@@ -1,0 +1,389 @@
+{
+  "created_at": "2025-09-25T08:57:58Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 139125,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87GqX36",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-09-25T09:04:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3332996602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GsIGB",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! Could you add a little bit of documentation before registering? [At the very least](https://discourse.julialang.org/t/when-does-it-make-sense-to-post-a-new-package-to-the-julia-repository/108701/4), that would be a description of the package's purpose and a small usage example in the README. An important part of packages in General is that any potential user can figure out what the package is about and how to get started with using it. That is really difficult when there is no documentation.\r\n\r\nIn general, I definitely recommend setting up a [Documenter](https://documenter.juliadocs.org/stable/)-based documentation. In your case, you already have the documentation badges in the README, but these currently aren't working, as your documentation builds are failing in CI. I think you might be able to fix that failure by adding a [`[sources]` section](https://pkgdocs.julialang.org/dev/toml-files/#The-%5Bsources%5D-section) to [`docs/Project.toml`](https://github.com/abcdvvvv/ComponentLogging.jl/blob/master/docs/Project.toml):\r\n\r\n```\r\n[sources]\r\nComponentLogging = {path = \"..\"}\r\n```\r\n\r\nThis requires using at Julia 1.11 to build the documentation, so you should [change that in your `.github/workflows/Docs.yml` file](https://github.com/abcdvvvv/ComponentLogging.jl/blob/cc37c8846ff6fea715cd9f53e4f99010f9c6492e/.github/workflows/Docs.yml#L18) (probably best to just set it to `'1'`).\r\n\r\nLastly: Could this package be hosted under the [JuliaLogging organization](https://github.com/JuliaLogging)? By putting packages in a well-established organization with multiple owners, it avoids the possibility of becoming permanently unmaintained.",
+      "createdAt": "2025-09-25T11:14:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3333456257",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Gst6S",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "> Thank you for submitting your package! ...\r\n\r\nHello goerz, thank you very much for your feedback!\r\n1. Actually, I'm struggling with the documentation deployment failure. I'll try your suggestion!\r\n\r\n2. Yes, I need to add complete documentation explaining how to use this package. Give me a little time! I'll definitely add it as soon as possible!\r\n\r\n3. Yes, I agree to place it in the JuliaLogging organization. Is there anything I need to do regarding this?\r\n\r\n[noblock]",
+      "createdAt": "2025-09-25T12:01:17Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3333611154",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87GtMcu",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Give me a little time! I'll definitely add it as soon as possible!\r\n\r\nNo rush! There's the three-day waiting period, in any case. You can update the registration at any point just by retriggering it (do not change the version number). This will not reset the waiting period.\r\n\r\n> Yes, I agree to place it in the JuliaLogging organization. Is there anything I need to do regarding this?\r\n\r\nLet me tag @c42f, @fredrikekre and @ericphanson as members of the org, who can probably help you with the move or point you to an org owner who can.\r\n\r\nThe org owner may have their own guidelines for what they would consider requirements for adding the package. My recommendation would be to resolve the same documentation issues I already raised with respect to the registration in general:\r\n\r\n* In the README, explain what problem the package solves and how it fits in with other existing packages in the JuliaLogging org\r\n* Make sure that there is sufficient API documentation\r\n\r\n[noblock]",
+      "createdAt": "2025-09-25T12:38:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3333736238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87G5R4U",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz , I've finished the README. Could you take a look at it?\r\n\r\n[noblock]",
+      "createdAt": "2025-09-26T06:08:44Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3336904212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HI1JG",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Interesting. So this package makes the decision that loggers belong to `Module`s, whereas Base logging thinks that loggers belong to `Task`s (ie, are not inherently global)? From a quick look, that's the core semantic difference which affects both performance and behavior in concurrent code. It's quite a significant difference so you might mention it in the README.\r\n\r\nI'm fine with this going in JuliaLogging if you want.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-27T01:41:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3340980806",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HKqRA",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Done! I've added the follow-up notes at the end of the README (Logger scoping semantics compared with Julia’s stdlib Logging...).\r\n\r\n[noblock]",
+      "createdAt": "2025-09-27T09:55:06Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3341460544",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HqD-N",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @goerz, thanks again for the earlier review. I’ve addressed the feedback (see latest commits) and all checks are passing now. \r\nIf you’re satisfied, could you please add `[noblock]` to your first comment in this PR to release AutoMerge? Much appreciated!\r\n\r\n[noblock]\r\n",
+      "createdAt": "2025-09-30T02:18:21Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3349692301",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HwwPF",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I've finished the README. Could you take a look at it?\r\n\r\nGood enough for me! I can always find nitpicks, of course. I'd probably switch the order around and explain the functions (`clog` etc) first, and then the `ComponentLogger` instantiation. In particular, it's not immediately obvious right now what the symbols and integers in the `rules` dict mean, right now. I think the symbols are arbitrary user-defined labels, and the integers are log-levels (which should probably be named constants)? Not entirely clear.\r\n\r\n> If you’re satisfied, could you please add [noblock] to your first comment in this PR to release AutoMerge? Much appreciated!\r\n\r\nI thought we were going to move this into JuliaLogging?\r\n\r\nI think the process for that is usually\r\n\r\n1. You transfer the project to @c42f (assuming she is an org owner)\r\n2. @c42f move the project into the org, adds you as an org member, and restores you as owner of the project\r\n\r\n[noblock]",
+      "createdAt": "2025-09-30T11:12:38Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3351446469",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87HxRGW",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thank you for your reply.\r\n\r\n>  I'd probably switch the order around and explain the functions (clog etc) first, and then the ComponentLogger instantiation. \r\n\r\nI will reorganize the readme according to this suggestion. Otherwise, the symbols used in the `ComponentLogger` constructor may confuse readers.\r\n\r\n>  I think the symbols are arbitrary user-defined labels, and the integers are log-levels\r\n\r\nYes, that's right. The reason we use integers is so that users don't need to explicitly `using Logging`. After receiving the dictionary with integer values, we perform another conversion, converting all the values ​​from integers to `LogLevel` types.\r\n\r\n> I think the process for that is usually\r\n\r\nOK! I'll see how to do it.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-30T11:37:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3351581078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87IPanh",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hi @c42f — just a gentle ping regarding the repository transfer for `ComponentLogging.jl`. I sent the transfer request; could you please take a look when you have a moment? Thanks!\r\n\r\n[noblock]",
+      "createdAt": "2025-10-02T07:05:36Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3359484385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKY1l",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "@abcdvvvv The transfer expired, sorry!! Try again?\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T02:32:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3374943589",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKhsT",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "@c42f Okay! I transferred just now.\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T02:55:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3374979859",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKpKC",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "See https://github.com/JuliaLogging/ComponentLogging.jl\r\n\r\n@abcdvvvv I've invited you as a member of JuliaLogging so you can be added as admin of the repository.\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T03:17:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375010434",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKrU5",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "I see, thank you for your help! :)\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T03:21:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375019321",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKseK",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Ok you should be all set up to admin the repo in the new location now :)\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T03:23:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375024010",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JKuny",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Sure, it is my honor to be able to enter [JuliaLogging organization](https://github.com/JuliaLogging).\r\n\r\nBy the way, do I still have to wait for this PR to be merged before I can find my package in the Julia registry? (pkg> add ...)\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T03:27:16Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375032818",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JK1lG",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> By the way, do I still have to wait for this PR to be merged before I can find my package in the Julia registry?\r\n\r\nNo, you trigger a new registration from the new location. This will create a new PR, and I'll close this one in favor of the new one.",
+      "createdAt": "2025-10-07T03:32:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375061318",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JK2jy",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Yes, this needs to be merged.\r\n\r\nIdeally the registration PR would be updated with the new URL for the project. I guess you can do that by re-triggering the registration (actually not sure, I don't do transfers often)\r\n\r\n[noblock]",
+      "createdAt": "2025-10-07T03:33:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375065330",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JK20y",
+      "author": {
+        "login": "c42f"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "oh right, thanks @goerz :)",
+      "createdAt": "2025-10-07T03:34:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375066418",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JK3cy",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Make sure to adjust any references to the old location first, though. For example, the documentation badges in the README still reference the old https://abcdvvvv.github.io/ComponentLogging.jl/stable/\r\n\r\nYou may also have to to re-enable GitHub pages and make sure CI / deploying the documentation works as expected.",
+      "createdAt": "2025-10-07T03:35:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375068978",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JK37Y",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "> No, you trigger a new registration from the new location. This will create a new PR, and I'll close this one in favor of the new one.\r\n\r\nOkay, I understand. Thanks for your guide.\r\n\r\nI will follow that.\r\n\r\n> Make sure to adjust any references to the old location first\r\n\r\nI see, I will fix the doc. and CI before making a new PR.",
+      "createdAt": "2025-10-07T03:36:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375070936",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87JLPmu",
+      "author": {
+        "login": "abcdvvvv"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hello, @goerz.  For your information, the package has been re-registered as v0.1.1 (see: https://github.com/JuliaRegistries/General/pull/139833), so this v0.1.0 registration is no longer needed.\r\n\r\nPlease feel free to close this PR. Thank you!",
+      "createdAt": "2025-10-07T04:40:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/139125#issuecomment-3375167918",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ComponentLogging\n- Repository: https://github.com/abcdvvvv/ComponentLogging.jl\n- Created by: @abcdvvvv\n- Version: v0.1.0\n- Commit: 7146a792fafc41c2220c247c759507abf76d79b0\n- Reviewed by: @abcdvvvv\n- Reference: https://github.com/abcdvvvv/ComponentLogging.jl/commit/7146a792fafc41c2220c247c759507abf76d79b0#commitcomment-166849261\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n- feat: Include module name in PlainLogger output. Add module name to the log output format in PlainLogger, displaying it before the filename for better context in log messages.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64195a8368320cc6c979146d5182b43c70af59f42dfe164773528a69898d30a9766b4c36e06b828716d0cf502913fed369e4344dcba3e35a422a6797f79507b0ef7f0bd0880b21b7bb5a0373f44dbe13156d0e37dab73bb4b2f6439516e76a47c8890d58a328d048dbb0d59f429f2bbc1f927f691b62b65b7c7e03cd602d3a66e4dfd08c72f35f54b307844f8163da326d13dd2bb24b83ad45ef46455614210744c0115a4070c39e8f2d6a08b562d73a3 -->",
+  "package_name": "ComponentLogging",
+  "closed_at": "2025-10-07T05:01:52Z",
+  "title": "New package: ComponentLogging v0.1.0"
+}

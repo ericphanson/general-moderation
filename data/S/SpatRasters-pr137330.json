@@ -1,0 +1,203 @@
+{
+  "created_at": "2025-08-26T04:29:29Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 137330,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87AFMSo",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-26T04:36:11Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3222586536",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87AKE9V",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "How does this differ from [Rasters.jl](https://rafaqz.github.io/Rasters.jl/stable/)? If there is any functionality missing in `Rasters`, would it be possible to contribute to the existing package instead of starting a new one?\r\n\r\nCC @rafaqz\r\n\r\nI would also avoid `Spat` as an abbreviation for `Spatial`. This would be an example for \"Err on the side of clarity, even if clarity seems long-winded to you\" in the [guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1). Better to go with `SpatialRasters` or something like `SpatialRastersWGS84`, if the package is too narrow in scope to cover spatial rasters in generality.\r\n\r\n[noblock]",
+      "createdAt": "2025-08-26T11:53:14Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3223867221",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Chf5L",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "How about SimpleRasters.jl? It should be better than the previous.",
+      "createdAt": "2025-09-07T07:37:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3263561291",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CrKnh",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "If you're asking my _opinion_, I'm not a fan of the \"Simple\" prefix in package names. It is pretty arbitrary and meaningless: what if someone else does an even \"simpler\" package?\r\n\r\nMy general recommendation is always going to be to contribute to larger existing packages rather than building new packages that usually end up far less well-maintained.\r\n\r\nThere are no rules or guidelines that touch on any of this, though, and it seems to me that it should be up to the developers of `Rasters` if they have any issues with this.\r\n\r\nThe only issue that _I_ have is with the abbreviation `Spat`.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-08T12:36:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266095585",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CruR4",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I previously tried contributing code to Rasters.jl, but the process was inefficient. The design philosophy of Rasters.jl differs from SpatRasters.jl; Rasters.jl is too heavy for me. Because of these differences, some code I’ve spent a lot of time designing may not be accepted.\r\n\r\nI need a published package to host the spatial data-processing functions required for my research. Publishing this package will make it easier for my colleagues and students to use.\r\n",
+      "createdAt": "2025-09-08T13:10:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266241656",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Cr11k",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "My colleagues and students in China have difficulty installing my Julia packages directly from GitHub. If I could host my packages on alternative mirrors—similar to r-universe (https://github.com/rpkgs/rpkgs.r-universe.dev), I would drop my insistence on publishing them in JuliaRegistries.",
+      "createdAt": "2025-09-08T13:18:26Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266272612",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Cr-4Y",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I need to explain that the name `SpatRaster` is borrowed from R package terra. \r\nAlthough it may seem unfriendly to Julia users, it is familiar for R users.\r\n\r\nhttps://github.com/rspatial/terra/blob/7bac97376527c918d315c9332af23da61641350b/src/spatRaster.h#L197-L215",
+      "createdAt": "2025-09-08T13:26:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266309656",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87Cs36D",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> If I could host my packages on alternative mirrors\r\n\r\nPresumably, one could simply mirror the entire General registry to some in-country server, or set up a [LocalRegistry](https://github.com/GunnarFarneback/LocalRegistry.jl) for a limited set of packages.\r\n\r\n> the name SpatRaster is borrowed from R package terra.\r\n\r\nWhile I don't think that's a valid argument in general, I also don't feel like putting up significant roadblocks. It would really be have been up to @rafaqz to voice any strong objections, and they haven't. Thus, I'm marking my comments as non-blocking.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-08T14:14:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266543235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CuB4Y",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Although SpatRasters may looks ordinary, I need this package to support my other works ([https://github.com/jl-pkgs/SpatInterp.jl ](https://github.com/jl-pkgs/SpatInterp.jl)). Without this package, `SpatInterp.jl` simply could not exist. In the next few days, Mixed Geographically Weighted Regression (https://github.com/jl-pkgs/MGWR.jl) will also rely on SpatRasters.\r\n\r\nI admit that `SpatRasters.jl` is simple and ordinary, but `SpatInterp.jl` and `MGWR` is more valuable. `SpatRasters.jl` is a fundamental package to support them. They implements:\r\n\r\n- Thin Plate Spline Interpolation (tps)\r\n- Angular Distance Weighting Interpolation (adw)\r\n- Inverse Distance Weighting Interpolation (idw)\r\n- Nearest Neighbor Interpolation (nearest)\r\n- Irregular Bilinear Interpolation\r\n- Bilinear Interpolation\r\n- Mixed Geographically Weighted Regression\r\n\r\nI am happy to rename the package according to your suggestions, and I sincerely hope my package can be approved.\r\n\r\nAlthough rafaqz may feel this package is not useful to him, it is nonetheless important to my colleagues and students.",
+      "createdAt": "2025-09-08T15:27:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266846232",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CuNyu",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] I have no blocking concerns for this registration, so you can simply unblock your own comments, and that should continue the auto-merge.\r\n\r\nFor your upcoming packages, I would note that `SpatInterp.jl` is not in line with the [package naming guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines-1), \"Err on the side of clarity, even if clarity seems long-winded to you.\" I would recommend avoiding these kinds of abbreviations in package names (but I'm not going to go out of my way to make a fuss about it).\r\n\r\nFor `MGWR`, you will be running into the much stronger rules against acronyms. My impression of current sentiments among the registry maintainers is that there is almost no chance that a package `MGWR` will make it through the registration process. Thus, you should rename this package before submitting a registration.",
+      "createdAt": "2025-09-08T15:40:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266895022",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87CuaCj",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\r\n> I admit that SpatRasters.jl is simple and ordinary\r\n\r\nThat's really not the issue. The point is (1) to avoid abbreviations (`Spatial`, not `Spat`), and (2) to avoid the confusion of multiple packages existing with basically interchangeable names. `Rasters` and `SpatRaster`/`SpatialRasters` pretty much indicate the same scope, and the general sentiment is that it's better to only have one \"authoritative\" package covering a particular scope. So in general, if a new package has a different / more narrow scope than an existing package, the package name should be descriptive enough to clarify the difference. Alternatively, as the guidelines say \"A less systematic name may suit a package that implements one of several possible approaches to its domain\"\r\n\r\nThese obviously aren't hard rules, but we try to have some reasonable community consensus. In particular, the opinions of existing-package-authors would count a lot when a new package may impinge on the name/scope of their package. But they haven't taken the opportunity to voice any concerns, so I don't think it's my place to further block a registration.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-08T15:53:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3266945187",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87C1tAN",
+      "author": {
+        "login": "kongdd"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I have renamed the package name as `SpatialRasterLite` as the suggestions, <https://github.com/JuliaRegistries/General/pull/138173>. \r\n\r\n`Lite` means small and simple, which clarify the difference from Rasters.jl, avoid competing for or misleading Rasters.jl users. Hope this could be acceptable.\r\n\r\nThis pr can be closed now. Thank u.\r\n\r\n[noblock]",
+      "createdAt": "2025-09-09T04:49:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/137330#issuecomment-3268857869",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: SpatRasters\n- Repository: https://github.com/jl-pkgs/SpatRasters.jl\n- Created by: @kongdd\n- Version: v0.1.0\n- Commit: 638eee0902aeede26936315e3de75e70b62489af\n- Reviewed by: @kongdd\n- Reference: https://github.com/jl-pkgs/SpatRasters.jl/issues/2#issuecomment-3222595662\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598d55e3dedb62abe4b206f2b66699ee2c85f800b2341d2485463f85d719ad42acb09e89e1f362bc2029b042126519773a977c0887e568757d669550810dae00427e59d0037998e93fabe51ef5d599395adc413e6776e0aacf43fc4ca7a5704b1c490481a21399b055e9382f1e2cc7dd6df94cad23b2493d4a0448b7c5c8db887bc -->",
+  "package_name": "SpatRasters",
+  "closed_at": "2025-09-09T09:08:53Z",
+  "title": "New package: SpatRasters v0.1.0"
+}

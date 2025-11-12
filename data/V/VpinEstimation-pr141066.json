@@ -1,0 +1,76 @@
+{
+  "created_at": "2025-10-23T16:13:04Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 141066,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87M64VH",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-23T16:33:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141066#issuecomment-3437987143",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87M7Hiz",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks for submitting your package! For the `CamelCase` that is the norm for Julia packages, I think it would be expected for acronyms to remain in all-caps. So that would be `VPINEstimatation`, in this case. Would you consider [renaming the package](https://github.com/JuliaRegistries/General?tab=readme-ov-file#what-to-do-when-asked-to-reconsiderupdate-the-package-name) accordingly?",
+      "createdAt": "2025-10-23T16:45:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141066#issuecomment-3438049459",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87NGnLJ",
+      "author": {
+        "login": "jinyunfan"
+      },
+      "authorAssociation": "NONE",
+      "body": "Thanks for your feedback! I agree that following the CamelCase convention with acronyms in all-caps is the right approach. I'll rename the package from VpinEstimation to VPINEstimation to align with Julia package naming standards. \r\n\r\nPlease close this PR and I will submit a new registration request for VPINEstimation.jl with the updated name.\r\n",
+      "createdAt": "2025-10-24T04:54:28Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141066#issuecomment-3441062601",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87NG5iK",
+      "author": {
+        "login": "jinyunfan"
+      },
+      "authorAssociation": "NONE",
+      "body": "New registration PR: https://github.com/JuliaRegistries/General/pull/141110",
+      "createdAt": "2025-10-24T05:40:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141066#issuecomment-3441137802",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: VpinEstimation\n- Repository: https://github.com/jinyunfan/VpinEstimation.jl\n- Created by: @jinyunfan\n- Version: v0.1.0\n- Commit: d8811dd8dd7a1ad8a0bd2d759f75cbf163496b0a\n- Reviewed by: @jinyunfan\n- Reference: https://github.com/jinyunfan/VpinEstimation.jl/issues/6#issuecomment-3437923909\n- Description: With reference to Easley et al(2014), the volume synchronized probability of informed trading is estimated under high-frequency environment, and the index VPIN(volume synchronized probability of informed trading) is calculated.\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n## v0.1.0 - Initial Release\n\nFirst release of VpinEstimation.jl for calculating Volume-synchronized Probability of Informed Trading (VPIN) from high-frequency trading data.\n\n### Key Features\n- VPIN calculation algorithm implementation\n- High-frequency data processing capabilities  \n- Comprehensive input validation\n- Performance optimized for Julia\n- Complete documentation and examples\n\n### Usage\n```julia\nusing VpinEstimation\ndaily_vpin, bucket_data = vpin(60, 50, 10, trading_data)\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a8359809fae115fc9008c572fef9cdf8d68ba5eb0ca122d8811c5e33595ec5a8659a0fd608bc43b6684f77226b5578f555c5c07cbcc521d7223824462c12cb2d8041a8515728ec0e8d657ce519e5e9983eeae8dc774cacdac2de8545c83b06f13628f52fc1311da1a0b789f1d9f6b5d4bb4fb065ceee8a43159a10086e628b12a5158d -->",
+  "package_name": "VpinEstimation",
+  "closed_at": "2025-10-24T11:00:25Z",
+  "title": "New package: VpinEstimation v0.1.0"
+}

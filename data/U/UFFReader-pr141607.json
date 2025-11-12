@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-10-31T13:41:37Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 141607,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87PBHJW",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-31T13:48:30Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141607#issuecomment-3473175126",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PL13g",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock] Name similarity is a false positive, and I've applied the override.\r\n\r\nThis name conflicts with the statement in the README\r\n\r\n> A Julia package for reading (and writing in the future) Universal File Format (UFF) files,\r\n\r\nIf that statement is incorrect and you no longer intend to ever add writing files in the future, the name `UFFReader` is fine. Otherwise, I would recommend `UFFFiles` or `UniversalFileFormat`.",
+      "createdAt": "2025-11-01T08:48:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141607#issuecomment-3475987936",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PMD4t",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/141621, since @maucejo confirmed that the package will also implement writing the format",
+      "createdAt": "2025-11-01T09:15:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141607#issuecomment-3476045357",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: UFFReader\n- Repository: https://github.com/maucejo/UFFReader.jl\n- Created by: @maucejo\n- Version: v0.1.0\n- Commit: ce562f68df5ead67baf5b527173e819f2ea105ec\n- Reviewed by: @maucejo\n- Reference: https://github.com/maucejo/UFFReader.jl/commit/ce562f68df5ead67baf5b527173e819f2ea105ec#commitcomment-169363614\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nThis new package aims at providing tools for reading Universal File Format files.\r\nIt currently supports only reading functionalities for datasets: 15, 18, 55, 58, 82, 151, 164, 2411, 2412, 2414.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd60b2b43ba14aab14e58784f235e86d3c26a12fc580a5e94a6c05e62f200eeba992cd22989d8b36a7095db9c9f2941060886e9b87b62aa1e4b51d8bb68c40c6e532ef8b880518b53e13240ad873c29ad1aab3d10cbf136c1adc17f5b7e637fb793da7151cdff2505124f7759c0c797e31b6f9a1ba88556c9931d5db8d9f645ad869f2f47035bef16c11e53764d5e26c3c9188c3fba7f4defb8141d0f97715b1829c4f4304b084362b7a04c9bb31cc1907e -->",
+  "package_name": "UFFReader",
+  "closed_at": "2025-11-01T09:15:57Z",
+  "title": "New package: UFFReader v0.1.0"
+}

@@ -1,0 +1,83 @@
+{
+  "created_at": "2025-10-30T21:29:47Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 141563,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q87O2aIv",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-10-30T21:37:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141563#issuecomment-3470369327",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87O2wSh",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] So LANDFIRE is not an acronym, but it is consistently capitalized: https://landfire.gov.  Please advise.",
+      "createdAt": "2025-10-30T22:17:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141563#issuecomment-3470460065",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87O5iTS",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "As far as I'm concerned, capitalization as such really shouldn't be much of a consideration in package names. That is, if `Landfire` is fine, so should `LANDFIRE` (assuming there are some good reasons for the capitalization). Unfortunately, I don't have sufficient permissions to override the not-all-caps rule. You'll have to get support from a full registry maintainer in the `#pkg-registration` channel on Slack.\r\n\r\nThat being said:\r\n\r\n> So LANDFIRE is not an acronym, but it is consistently capitalized\r\n\r\nActually, if it _was_ an acronym/retronym, I'd be more in favor of keeping it in all-caps. With it _not_ being an acronym, I might consider `LANDFIRE` more of a stylistic choice, and `Landfire` or `LandFire` would be a perfectly fine choice of package name, more in line with Julian expectations.",
+      "createdAt": "2025-10-31T03:34:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/141563#issuecomment-3471189202",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87PNCus",
+      "author": {
+        "login": "joshday"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Changed name to Landfire.jl\r\n\r\nThis can be closed in favor of https://github.com/JuliaRegistries/General/pull/141650",
+      "createdAt": "2025-11-01T12:01:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/141563#issuecomment-3476302764",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: LANDFIRE\n- Repository: https://github.com/joshday/LANDFIRE.jl\n- Created by: @joshday\n- Version: v0.0.1\n- Commit: 9ef0381796ff2ce46a55c5db8b108b57f9cbda07\n- Reviewed by: @joshday\n- Reference: https://github.com/joshday/LANDFIRE.jl/commit/9ef0381796ff2ce46a55c5db8b108b57f9cbda07#commitcomment-169314483\n- Description: Access data through the landfire.gov API\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6bdfced080bfae306b201ae9dc09fc3fc7debc32525421734327ed59e7c896c0d8412c1f9f9ff02e8c2cb27d1b8b6eb640941e7b5b2ebb145e41062a56c993cb0906d064620691d4e82c6f47b05375888d0375da811f914334dd3b69b6cfb6719626e4e34468bdef3faeb626d987ea6c33c8b495b58e24842d9fd45e1116dcc4adfad49dfa020b31326b499320d8f273b081c508bc7e943c8f2dd5b5c45f6d7e14d4b06b10aed7c0a61a2f424a124387e -->",
+  "package_name": "LANDFIRE",
+  "closed_at": "2025-11-01T14:00:48Z",
+  "title": "New package: LANDFIRE v0.0.1"
+}

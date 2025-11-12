@@ -1,0 +1,90 @@
+{
+  "created_at": "2025-07-14T10:12:28Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "GunnarFarneback",
+  "merged_at": null,
+  "pr_number": 134688,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q8626t93",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Repo URL does not end with /name.jl.git, where name is the package name\n- There is no compat entry for `julia`.\n- No licenses detected in the package's top-level folder. An OSI-approved license is required.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-14T10:23:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134688#issuecomment-3068845943",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8627-e3",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closed in favor of #13469.",
+      "createdAt": "2025-07-14T11:43:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134688#issuecomment-3069175735",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8629o6T",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Closed in favor of https://github.com/JuliaRegistries/General/pull/13469.\r\n\r\nI think that's a typo, and should be \"Closed in favor of https://github.com/JuliaRegistries/General/pull/134691\"",
+      "createdAt": "2025-07-14T13:25:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134688#issuecomment-3069611667",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q863BPhL",
+      "author": {
+        "login": "GunnarFarneback"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yeah, a failed copy-and-pasteo.",
+      "createdAt": "2025-07-14T18:25:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134688#issuecomment-3070556235",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: OceanAnalysis\n- Repository: https://github.com/dankelley/OceanAnalysis\n- Created by: @dankelley\n- Version: v0.1.1\n- Commit: 55ef58e7f816e76694ebd3c4297b61a1914890ff\n- Reviewed by: @dankelley\n- Reference: https://github.com/dankelley/OceanAnalysis/issues/11#issuecomment-3068860410\n- Description: Julia code for oceanographic analysis\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\n* This is an early-stage package designed to facilitate some aspects of the analysis of oceanographic data.  It is also my first attempt to release a Julia package.  I'm trying to follow the steps provided at https://github.com/JuliaComputing/Registrator.jl?tab=readme-ov-file#how-to-use but evidently I missed something about release notes.  (I am more familiar with the R ecosystem, in which I've authored several packages. There, files are used for release notes, etc., so I apologize for not realizing that the Julia way is to put release notes in issue comments.)\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835980aa93293997eb54f3b7786f876ee190309ba23045c402ff91888075eaaac5a43ef0beb3ff266e080a4c630a8a47b952a1c79957cb997b3a9c148380f02ba08613af5426977fc28a4da611288616511ba47cc757f09885c0fe19913ececccb0ad2a6c4dc44bc5cd9ab01266a9eefa71362b2c68a1f8eb0f21d5fc09b9eb675d4c -->",
+  "package_name": "OceanAnalysis",
+  "closed_at": "2025-07-14T11:43:56Z",
+  "title": "New package: OceanAnalysis v0.1.1"
+}

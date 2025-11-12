@@ -1,0 +1,403 @@
+{
+  "created_at": "2025-07-12T09:41:33Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 134622,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q862sFyJ",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-12T09:47:56Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3065011337",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862sGOk",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz thanks for the name acceptance 👍\r\n\r\n[noblock]",
+      "createdAt": "2025-07-12T09:51:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3065013156",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862uc4S",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I wonder what's the difference from Interpolations.jl that's been here for years? When would you use one vs the other?\r\n(best to put the answer in the readme or somewhere else visible, not here in comments)",
+      "createdAt": "2025-07-12T14:57:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3065630226",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862vzCQ",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "@aplavin that's a fair question, I'll put this in the README eventually. I think what `NDInterpolations.jl` has going for it is the multi-point evaluation via KernelAbstractions and the focus on arbitrarily high dimensional interpolation. Interpolations.jl is definitely more mature and has a wider breath of options. Maybe someone from Interpolations.jl (@timholy, @mkitti) can chime in from their perspective.\r\n\r\n[noblock]",
+      "createdAt": "2025-07-12T19:12:09Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3065983120",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862z4Po",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Interpolations.jl already supports arbitrary dimensions. IMO, having an extremely similarly named NDInterpolations.jl is confusing: its difference from Interpolations.jl is clearly not in ND vs 1D.\r\nMaybe you could highlight the actual difference from Interpolations.jl, and somehow use it in the name as well? Or, if it's \"same but with better performance\", upstream the improvements to that popular package for all users to benefit?",
+      "createdAt": "2025-07-13T13:35:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3067053032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8620O0m",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "Hmm, sounds like the KernelAbstractions and possibly basis function caching aspects are the only possible benefits over Interpolations.jl left.\r\n\r\nThis package had its origin [here](https://github.com/SciML/DataInterpolations.jl/issues/402). Maybe the angle should be that this package integrates with the SciML ecosystem. @ChrisRackauckas, thoughts?",
+      "createdAt": "2025-07-13T16:22:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3067145510",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8620Qja",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\n\nWith optional dependencies and package extensions, I think it would be worthwhile to consider an interpolations interface.",
+      "createdAt": "2025-07-13T16:29:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3067152602",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8620weO",
+      "author": {
+        "login": "ChrisRackauckas"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> With optional dependencies and package extensions, I think it would be worthwhile to consider an interpolations interface.\r\n\r\nI don't see why we would treat Interpolations.jl as some standard. It has done a fairly poor job at that and has been a noob trap for quite some time. The issue isn't necessarily performance, but a myriad of compatibility that have never been addressed which arise from its design. I think at this time it still doesn't play nice with Symbolics, ModelingToolkit, SparseConnectivityTracer, Enzyme, Mooncake, FillArrays, inside many KA kernels (I think it had issues with Metal last I checked), BLAS-free builds (so effectively julia --trim), etc. It ignores the use of array traits, so it requires sidestepping within codes, and on top of that, the Interpolations.AbstractInterpolation interface is undocumented. It's hard to look at that interface as a standard in comparison to say the DifferentialEquations interpolation interface which has had way more documentation and tutorials written around it, so why not start in that direction?\r\n\r\nThis has been such a longstanding issue that we have a pretty much a blanket response to any Interpolations.jl issue across SciML that if the user gets an issue and we see Interpolations.jl, the first thing to do is to tell them to change that. Because that has a very high likelihood of being the problem. A package of that form is a noob trap. \r\n\r\nAnd it's not something that is easy to fix: it's a fundamental design issue that leads to these general incompatibilities. I think it makes sense given its lineage: it stems from the oldest ages of Julia from before any compiler optimizations tended to exist, and its designs were made to get performance in that regime. While it has dropped some of its more intense specialized macros over time (its v0.5 code was 😅 scary), it still had a design that was geared towards \"I will unroll the loop for you\" CPU-only focus, while also not adopting some of the later styles that came for enhanced performance, such as decreasing allocations in more advanced code use, inlined SIMD finding functions (for example https://github.com/SciML/FindFirstFunctions.jl/blob/main/src/FindFirstFunctions.jl#L6-L62), and caching of search values, each of which have been found to be a larger performance improvement than the kinds of things originally focused on. \r\n\r\nBecause of all of this, Interpolations.jl by its design does not act like a general high-performance Julia package with documented interfaces interfacing with the whole ecosystem, but rather it tends to act more like a wrapped Fortran package which is designed for performance in specific niches and acts nicely mostly on a contained set of types. But it retains its general name because it has been with Julia since the beginning. Thus we have had this need for a very long time to simply start from scratch if we want to achieve the kind of interface we have in other fields. DataInterpolations.jl has been a 1D-specialized version that has got us by for a long time, but now we have a real foundation for the ND-interpolations that we can actually rely on. \r\n\r\nOr if you truly believe Interpolations.jl that Interpolations.jl is not effectively name squatting at this point, then I hope a second interpolation package is a good wake up call that riles up the community to do a complete rewrite of its code and make it work with everything I mentioned above. I'd love to see that, but I've waited about 10 years and it hasn't budged so I don't think there's any merit to a belief it's going to happen any time soon without seeing the PRs start to land. So just like with other such designs in other areas, I'd just leave it alone so it does what it does but then put something new out there with a much larger goal and interface, have Interpolations.jl be one algorithm choice in a more general interface, document its limitations, and just keep moving forward. ",
+      "createdAt": "2025-07-13T20:26:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3067283342",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8621qbO",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock]\r\n\r\nThat's quite a lot of for this particular topic and forum, Chris.\r\n\r\nI would be happy to continue the discussion on Discourse, perhaps on this thread:\r\nhttps://discourse.julialang.org/t/interest-in-a-meta-interpolation-package/104343\r\n\r\nI'm the lone volunteer maintainer of the package, and I do review pull requests. The package does have dependencies whether they be public or not, and I do think we have some obligation to maintain the exported interface until we can offer a transition to a replacement.\r\n\r\nThere are some differences in the current interfaces starting with the order of arguments, which will make reconciling the various packages challenging, but I do not see this as insurmountable.",
+      "createdAt": "2025-07-14T01:52:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "HEART",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3067520718",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8630-hS",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "So, what should we do here?",
+      "createdAt": "2025-07-17T13:39:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084118098",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8631O7P",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Merge it\n\n[noblock]",
+      "createdAt": "2025-07-17T13:57:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084185295",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8632t6x",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Merge it\r\n\r\nDoes anyone still have a particular strong objection to this? @aplavin?\r\n\r\nIf not, I can apply the override to merge it (without everyone having to go back and apply [noblock] manually)",
+      "createdAt": "2025-07-17T15:49:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084574385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8632zQW",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "I just voiced my concerns, that:\r\n- This package has a very similar and potentially confusing name, given that `Interpolations.jl` themselves support ND interpolations. `DataInterpolations.jl` doesn't support ND though, maybe this should be called `DataInterpolationsND.jl` then?\r\n- Its readme doesn't even mention Interpolations.jl (and a brief comparison of the new package wrt it), that is very widely used and well-supported.\r\n\r\nFrom what I saw in General registrations, similar concerns are typically reasonable grounds to suspend the registration and ask the author to address them (and I find this behavior totally reasonable). AFAICT, neither question was addressed: neither in the package name nor in the README.\r\n\r\nBut I'm not acting as a General maintainer, so that's all what I can do from my side.",
+      "createdAt": "2025-07-17T15:57:19Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084596246",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86325p5",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Okay, then it seems we have the rare situation where we didn't reach consensus, and I feel \"above my pay grade\" to apply any overrides… best to let a full registry maintainer (one without a conflict of interest) make a decision on this, or prompt SciML to address your concerns more appropriately",
+      "createdAt": "2025-07-17T16:05:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084622457",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633Bbs",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "I just added a reference to Interpolations.jl in the README, but renaming to `DataInterpolationsND.jl` is also fine by me",
+      "createdAt": "2025-07-17T16:15:40Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084654316",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633Km8",
+      "author": {
+        "login": "ericphanson"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[noblock]\r\n\r\nwhy does SciML need 2 interpolations packages? why not DataInterpolations v2? (I'm not that opposed though, I think \"DataInterpolations2\" style packages are basically fine if you want/need to maintain both for some reason, just seems like there should be a reason)",
+      "createdAt": "2025-07-17T16:28:59Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084691900",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOBhF1q8633Rin",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "> why does SciML need 2 interpolations packages?\r\n\r\nFair question. I do feel like DataInterpolations.jl as a dedicated 1D interpolation package is more beginner-friendly than an ND package (although those who are more familiar with Interpolations.jl might disagree with me there). \r\n\r\n[noblock]",
+      "createdAt": "2025-07-17T16:39:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084720295",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633XER",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "A new PR was made after the name change: https://github.com/JuliaRegistries/General/pull/134953",
+      "createdAt": "2025-07-17T16:47:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084742929",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633Zbj",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Thanks @SouthEndMusic for being open to these changes! IMO, the new naming is totally clear: \"like DataInterpolations, but for ND\".\r\n\r\nBtw, as a reasonably-heavy Interpolations.jl user for 2d, I would be curious about the potential speedup or other improvements DataInterpolationsND.jl can bring (especially when it matures)!",
+      "createdAt": "2025-07-17T16:51:22Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084752611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633dpg",
+      "author": {
+        "login": "SouthEndMusic"
+      },
+      "authorAssociation": "NONE",
+      "body": "@aplavin nice, can you elaborate a bit on your use case?",
+      "createdAt": "2025-07-17T16:58:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084769888",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633fzJ",
+      "author": {
+        "login": "aplavin"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Sure, it's pretty simple: I often have multiple images that have different npix and grid steps, and want to compare or combine their values. Naturally, I just choose a single grid (from one of the images, or an external one) and interpolate onto it.",
+      "createdAt": "2025-07-17T17:00:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084778697",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8633_Fh",
+      "author": {
+        "login": "mkitti"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "As the maintainer of Interpolations.jl, I have no objections to registration of this package. I also have no requirements.\n\nSuch matters are better discussed elsewhere (Discourse). This really needs to be sorted out at the ecosystem level.\n\nSome other issues are better discussed on the repo itself in issues and pull requests. \n\n[noblock]",
+      "createdAt": "2025-07-17T17:40:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084906849",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q8634NQg",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/134953",
+      "createdAt": "2025-07-17T18:04:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134622#issuecomment-3084964896",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: NDInterpolations\n- Repository: https://github.com/SciML/NDInterpolations.jl\n- Created by: @SouthEndMusic\n- Version: v0.1.0\n- Commit: 0cb8e4c38e73bdd3a0bc915d8dc863af0b9f4153\n- Reviewed by: @SouthEndMusic\n- Reference: https://github.com/SciML/NDInterpolations.jl/issues/27#issuecomment-3065011853\n- Description: Interpolation of arbitrarily high dimensional array data\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nRegistration of the NDInterpolations.jl package, for interpolation of arbitrarily high dimensional data. Both the number of input and output dimensions can be arbitrarily high. Grid or unstructured multi-point evaluation is built on KernelAbstractions.jl for efficient parallel CPU/GPU evaluation. We currently support Constant, Linear, B-Spline and NURBS interpolation.\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a835985dce458f687392bac241cbd72951605be6b5171bef1695db89f816bc0fc7020b7f2a15a3dd5d2dd7ea26a6d3fa62f86237bf65dc19203dc142f724ed2c3b52912e2806e00cc607d34bd8622833b93189f3cceec7f7f55b7de6447008a5b86ae19b808117cf4d226321f886806348e0b1cdbfa94c6e5de82c61dcaeca64095e8e -->",
+  "package_name": "NDInterpolations",
+  "closed_at": "2025-07-17T18:04:04Z",
+  "title": "New package: NDInterpolations v0.1.0"
+}

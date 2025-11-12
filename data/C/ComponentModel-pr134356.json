@@ -1,0 +1,61 @@
+{
+  "created_at": "2025-07-08T07:32:23Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 134356,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q861qMVE",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-07-08T07:39:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134356#issuecomment-3047736644",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q861vfYX",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thank you for submitting your package! However, the name `ComponentModel` seems much too general. There are lots of \"component models\" in different domains, so for the broad audience of the General registry, there would not be any context for this package. Probably, `MicrogridComponentModel` would be appropriate.\r\n\r\nAlso:\r\n\r\n* Could you add a `README.md` file to your project with a short description of the project and a link to the full documentation? Maybe use the typical badges for CI success, coverage, etc that most projects have.\r\n\r\n* Can you put all source code inside the `src` directory? That is, move the `AC`, `Carbon`, `DC`, and `Hybrid` folders into `src`. I'm not entirely sure what kind of breakage might result from `src/ComponentModel.jl` using `include` for files from the parent directory, but it's probably best to stick to the standard organization for Julia packages.",
+      "createdAt": "2025-07-08T14:08:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134356#issuecomment-3049125399",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q862Oh5g",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing based on https://github.com/JuliaRegistries/General/pull/134354#issuecomment-3057197024:\r\n\r\n> Thank you, but I want to cancel the application for the package change and release it as a submodule included in other modules.",
+      "createdAt": "2025-07-10T12:32:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/134356#issuecomment-3057262176",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: ComponentModel\n- Repository: https://github.com/Luosipeng/ComponentModel.jl\n- Created by: @Luosipeng\n- Version: v0.1.0\n- Commit: 9a0aa44ba5901afba8f470d77ba7e3dcaa47b047\n- Reviewed by: @Luosipeng\n- Reference: https://github.com/Luosipeng/ComponentModel.jl/issues/1#issuecomment-3047713708\n- Description: ComponentModel.jl is a Julia package for power system and microgrid modeling, providing a rich set of power system component models, including AC components, DC components, converters, microgrid systems, and virtual power plants.\n<!-- bf0c69308befbd3ccf2cc956ac8a4671113b158fd87a6d4e741b0173dab051a48f7dc43e593ffff4357bc647a3a83598ede5267a6841ca5341daf3c76ac9ce1ee9ea72f42e50844f668daeda1713bff2909d352d7070bcc530a906872a89397101affd463e65aaaf016f3b905b670dad01d8393eb7916d116245ef148de0a6c224efcb3409588cafc9c007544ca254193b72535b1872ba3767b43848ef7587414636008b78e79984032e193ed920ea2a -->",
+  "package_name": "ComponentModel",
+  "closed_at": "2025-07-10T12:32:13Z",
+  "title": "New package: ComponentModel v0.1.0"
+}

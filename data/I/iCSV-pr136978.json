@@ -1,0 +1,121 @@
+{
+  "created_at": "2025-08-19T15:15:19Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 136978,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q86-zpZC",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) which are not met ❌\n\n- Name does not meet all of the following: starts with an upper-case letter, ASCII alphanumerics only, not all letters are upper-case.\n- Name is not at least 5 characters long\n- The following dependencies do not have a `[compat]` entry that is upper-bounded and only includes a finite number of breaking releases: CSV, DataFrames, DimensionalData, Reexport\n    <details><summary>Extended explanation</summary>\n\n    Your package has a Project.toml file which might look something like the following:\n\n    ```toml\n    name = \"YourPackage\"\n    uuid = \"random id\"\n    authors = [\"Author Names\"]\n    version = \"major.minor\"\n\n    [deps]\n    # Package dependencies\n    # ...\n\n    [compat]\n    # ...\n    ```\n\n    Every package listed in `[deps]`, along with `julia` itself, must also be listed under `[compat]` (if you don't have a `[compat]` section, make one!). See the [Pkg docs](https://pkgdocs.julialang.org/v1/compatibility/) for the syntax for compatibility bounds, and [this documentation](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/#Upper-bounded-%5Bcompat%5D-entries) for more on the kinds of compat bounds required for AutoMerge.\n\n    </details>\n\n- Package name similar to 5 existing packages.\n  1. Similar to uCSV. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  2. Similar to CSV. Damerau-Levenshtein distance 1 is at or below cutoff of 2. Damerau-Levenshtein distance 1 between lowercased names is at or below cutoff of 1.\n  3. Similar to SCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  4. Similar to WCS. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n  5. Similar to PYiCSV. Damerau-Levenshtein distance 2 is at or below cutoff of 2.\n\n## 3. *Needs action*: here's what to do next\n\n1. Please try to update your package to conform to these guidelines. The [General registry's README](https://github.com/JuliaRegistries/General/blob/master/README.md) has an FAQ that can help figure out how to do so.\n2. After you have fixed the AutoMerge issues, simply retrigger Registrator, the same way you did in the initial registration. This will automatically update this pull request. You do not need to change the version number in your `Project.toml` file (unless the AutoMerge issue is that you skipped a version number).\n\nIf you need help fixing the AutoMerge issues, or want your pull request to be manually merged instead, please post a comment explaining what you need help with or why you would like this pull request to be manually merged. Then, send a message to the `#pkg-registration` channel in the [public Julia Slack](https://julialang.org/slack/) for better visibility.\n\n## 4. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-19T15:23:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3201209922",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86-z7p6",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "A more suitable name might be `InteroperableCSV`.\r\n\r\nIt might also be good to fully describe the iCSV format in the package's documentation, as the \"official format documentation\" linked from https://meteoio.slf.ch/doc-dev/html/icsvio.html is defunct (ending up in https://gitlabext.wsl.ch/users/sign_in).\r\n\r\nAlternatively, this might be better as a submodule in some domain-specific package, as the iCSV format does not appear to be widely used (from what I can determine). A package name that includes something domain specific, like `MeteoICSV` could also be an option",
+      "createdAt": "2025-08-19T15:45:18Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3201284730",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86_8SCs",
+      "author": {
+        "login": "leibersp"
+      },
+      "authorAssociation": "NONE",
+      "body": "For the rename i agree, ill do that. \r\nRegarding the file format specification, thanks for reporting, thats actually a mistake in the docs of MeteoIO. \r\nAnd i thought about it, but so far there is nothing else needed in julia, in that field, but were building a snow model in julia that will need it, I already created a wrapper to the original package that was in python, but that caused problems down the line.",
+      "createdAt": "2025-08-25T13:22:08Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3220250796",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86_8ofj",
+      "author": {
+        "login": "leibersp"
+      },
+      "authorAssociation": "NONE",
+      "body": "So i renamed the project, and added a link to the proper specification. Do i need to create a new pull request, since the name changed, or is it okay like this? \r\n(Repo url stayed the same)",
+      "createdAt": "2025-08-25T13:43:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3220342755",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q86_84fr",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Do i need to create a new pull request\r\n\r\nYes, you trigger another registration, the same way you registered the first one, and that will create a new PR\r\n\r\n> (Repo url stayed the same)\r\n\r\nThat's not possible. Registered Julia package MUST be hosted at an URL that matches the package name, `https://github.com/pleibers/InteroperableCSV.jl` in this case. Please make sure to rename the project (in the GitHub UI) before trying to re-register. Otherwise, it will create a broken PR that will have to be managed manually.",
+      "createdAt": "2025-08-25T13:59:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3220408299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87AZeza",
+      "author": {
+        "login": "leibersp"
+      },
+      "authorAssociation": "NONE",
+      "body": "alrigth, did not read that part sorry, then i guess this pr can be discarded\r\n",
+      "createdAt": "2025-08-27T12:00:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3227905242",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q87BCygq",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Closing in favor of https://github.com/JuliaRegistries/General/pull/137509",
+      "createdAt": "2025-08-30T00:02:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/136978#issuecomment-3238733866",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: iCSV\n- Repository: https://github.com/pleibers/iCSV.jl\n- Created by: @pleibers\n- Version: v0.1.1\n- Commit: 3ebc52401cd2ad99b00f1ab2caa24870568aaee1\n- Reviewed by: @pleibers\n- Reference: https://github.com/pleibers/iCSV.jl/commit/3ebc52401cd2ad99b00f1ab2caa24870568aaee1#commitcomment-164240768\n- Description: iCSV parsing fully in julia\n- Release notes:\n<!-- BEGIN RELEASE NOTES -->\n`````\nReplacing PYiCSV to have a julia only wrapper for interoperably CSV files. The python wrapper could cause problems due to dependencies and was much slower!\n`````\n<!-- END RELEASE NOTES -->\n\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd64fb696c1bd2b1fa75c5b140bd5e3712f0e0c71436e9e56a866dbe45e42a57b0687acfcb256d955f97ea7909181cbdf3c77d0790ca9d1fc1fec81cc0d94544b4b01589ae9d6877222d1c8e9efe0a59c04078be0a37229198d49b7ee9bf381d3a0d1e7cf59859b37c8a0621dd95bf9c2b5ea88a4c4551a297a2f1c92cf24bb936ec1a573c985378618d92d9a8339f7746410b43d99d8a0fc4a03f36880e4030110988ad22e61b1beca43476df64f374cf8 -->",
+  "package_name": "iCSV",
+  "closed_at": "2025-08-30T00:02:00Z",
+  "title": "New package: iCSV v0.1.1"
+}

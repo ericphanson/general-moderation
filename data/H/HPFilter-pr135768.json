@@ -1,0 +1,179 @@
+{
+  "created_at": "2025-08-01T15:29:43Z",
+  "review_comments": [],
+  "state": "closed",
+  "author": "JuliaRegistrator",
+  "closed_by": "goerz",
+  "merged_at": null,
+  "pr_number": 135768,
+  "comments": [
+    {
+      "id": "IC_kwDOBhF1q867dKbO",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Hello, I am an automated registration bot. I help manage the registration process by checking your registration against a set of [AutoMerge guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/). If all these guidelines are met, this pull request will be merged automatically, completing your registration. It is **strongly recommended** to follow the guidelines, since otherwise the pull request needs to be manually reviewed and merged by a human.\n\n## 1. New package registration\n\nPlease make sure that you have read the [package naming guidelines](https://julialang.github.io/Pkg.jl/dev/creating-packages/#Package-naming-guidelines-1).\n\n## 2. [AutoMerge Guidelines](https://juliaregistries.github.io/RegistryCI.jl/stable/guidelines/) are all met! ✅\n\nYour new package registration met all of the guidelines for auto-merging and is scheduled to be merged when the mandatory waiting period (3 days) has elapsed.\n\n## 3. To pause or stop registration\n\nIf you want to prevent this pull request from being auto-merged, simply leave a comment. If you want to post a comment without blocking auto-merging, you must include the text `[noblock]` in your comment.\n\n_Tip: You can edit blocking comments to add `[noblock]` in order to unblock auto-merging._\n\n<!-- [noblock] -->\n<!---\nthis_is_the_single_automerge_comment\n--->",
+      "createdAt": "2025-08-01T15:36:25Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3144984270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867dl6E",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would recommend naming this package `HodrickPrescottFilter`",
+      "createdAt": "2025-08-01T16:16:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3145096836",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867fuL-",
+      "author": {
+        "login": "sdBrinkmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "@goerz I think it is a relatively well known filtering method in time series analysis and there is no danger to confound it with any other filtering method now or any time in the future. The package also tries to shine light on the lesser known first inventor George Bohlmann of the method, so I want to try to avoid naming explicitly Hodrick and Prescott in the title of the package. \r\n\r\nIt is also common place for juliastats packages to use acronyms like GLM.jl, NMF.jl or a similar naming convention to mine: MLBase.jl\r\n\r\n",
+      "createdAt": "2025-08-01T20:09:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_DOWN",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3145655038",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867gAxo",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> The package also tries to shine light on the lesser known first inventor George Bohlmann of the method\r\n\r\nHow does naming it `HPFilter` do that? Doesn't \"HP\" stand for Hodrick-Prescott?\r\n\r\nThe [naming guidelines](https://pkgdocs.julialang.org/dev/creating-packages/#Package-naming-guidelines-1) are pretty clear: \"Avoid jargon\", and \"Err on the side of clarity, even if clarity seems long-winded to you.\"\r\n\r\n> It is also common place for juliastats packages to use acronyms like GLM.jl, NMF.jl or a similar naming convention to mine\r\n\r\nThere is probably no chance that `GLM` or `NMF` could be registered today under those names. These packages were registered a long time ago before the naming conventions were enforced in the registry.\r\n\r\n> MLBase.jl\r\n\r\nSometimes the rules can be a little relaxed, especially for non-public-facing \"base\" packages. Also, `ML` is a _very_ commonly understood acronym, so it would be much more acceptable as part of a package name.\r\n\r\nI don't see how a package named `HPFilter` would not be better named `HodrickPrescottFilter`, unless maybe you want to make the argument that statisticians would recognize \"HP Filter\", but not know that it stands for \"Hodrick-Prescott Filter\" (and thus, would have no idea that a package `HodrickPrescottFilter` would implement HP Filters)\r\n\r\n[noblock]\r\n",
+      "createdAt": "2025-08-01T20:47:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3145731176",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867h3a7",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "[noblock] ML standing for machine learning is understood by the majority of Julia users. One of the most prominent Julia orgs is called SciML. And it's the top Google result for ML.\n\nHP will be understood by a very small fraction of Julia users, and google for HP gives us pages and pages about laptops. So it's best to spell it out so the majority are not confused.",
+      "createdAt": "2025-08-02T04:57:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3146217147",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867iJet",
+      "author": {
+        "login": "sdBrinkmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "[noblock] Renaming it to HodrickPrescottFilter.jl does not bode well with me. Rather I could rename it to TrendDecomposition.jl or TrendDecomp.jl. This would personally solve the attribution problem with me and on the other hand I or others could add more trend decomposition or filter methods like Holts-Winters or even lesser known methods; this would also prevent package fragmentation in the long-run, as many alternative methods themselves do not necessarily warrant their own package.",
+      "createdAt": "2025-08-02T07:29:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3146291117",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867il6J",
+      "author": {
+        "login": "goerz"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure, if you have any plans for adding further methods, `TrendDecomposition.jl` is a good way to go!",
+      "createdAt": "2025-08-02T10:09:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3146407561",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867iqWX",
+      "author": {
+        "login": "rafaqz"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "\nWell that makes HPFilter even worse! But TrendDecomposition.jl is fine, TrendDecomp.jl  isnt",
+      "createdAt": "2025-08-02T10:39:04Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3146425751",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOBhF1q867ru55",
+      "author": {
+        "login": "sdBrinkmann"
+      },
+      "authorAssociation": "NONE",
+      "body": "I've change the package name to TrendDecomposition.jl\r\nThe new pull request can be found here: https://github.com/JuliaRegistries/General/pull/135860\r\n\r\nI guess this old one can be closed now.",
+      "createdAt": "2025-08-04T00:18:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 2
+          }
+        }
+      ],
+      "url": "https://github.com/JuliaRegistries/General/pull/135768#issuecomment-3148803705",
+      "viewerDidAuthor": false
+    }
+  ],
+  "merged_by": null,
+  "body": "- Registering package: HPFilter\n- Repository: https://github.com/sdBrinkmann/HPFilter.jl\n- Created by: @sdBrinkmann\n- Version: v0.2.1\n- Commit: b33d16ca12d8c1e117f6acb1def4d1072f066ea2\n- Reviewed by: @sdBrinkmann\n- Reference: https://github.com/sdBrinkmann/HPFilter.jl/commit/b33d16ca12d8c1e117f6acb1def4d1072f066ea2#commitcomment-163288471\n- Description: Hodrick-Prescott Filter implemented as Julia package\n<!-- bf0c69308befbd3ccf2cc956ac8a46712550b79fc9bfb5e4edf8f833f05f4c18b06eddad8845b45beb9f45c2b8020dd6fa33045916c62fb1376c42d3978e894392873ff54077f9b837b156315c930d7bc522e9542b606f8ab02fa5c438958876e8684f43b6f03a1ec57645072e3a208e5dae0cf7ffbf5237f72d0d5fe9c48280021aba70f913da4ad9f18b25c786d05c51d2be65e43fd676ec5a2fb866db6a84f093cdaac55fac36363cb13deb78e42c3836ba751fa97121a99f3e2aec128cf2088010f5d1fa70835a75cc3b272620dc7c01db5f8f86217437508b3f5c4f54e4 -->",
+  "package_name": "HPFilter",
+  "closed_at": "2025-08-04T00:25:20Z",
+  "title": "New package: HPFilter v0.2.1"
+}
