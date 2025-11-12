@@ -5,6 +5,7 @@
 
 using JSON
 using Dates
+using Random
 
 # === Code-based extractors (FREE) ===
 
@@ -585,7 +586,9 @@ function find_pr_files(dir::String)
             end
         end
     end
-    return sort(all_files)
+    # Use deterministic random order (same seed = same order)
+    Random.seed!(42)
+    return shuffle(all_files)
 end
 
 """Convert data/ path to analysis/ path with same structure"""
