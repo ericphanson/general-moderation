@@ -348,6 +348,8 @@ function main()
 - **With analysis:** $(count(p -> p["has_analysis"], three_letter_packages))
 - **Without analysis:** $(count(p -> !p["has_analysis"], three_letter_packages))
 
+**Category definitions:** See [categories.md](categories.md) for detailed explanations of each acceptance/rejection category.
+
 ## Trends Over Time
 
 ### Overall Acceptance Trends

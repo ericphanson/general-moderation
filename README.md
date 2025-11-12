@@ -14,44 +14,44 @@ So far I have focused on 3-letter package names. You can see my analysis in [./t
 
 Fetches manually-merged "new package" PRs from JuliaRegistries/General with full metadata and comments.
 
-### Prerequisites
+**Prerequisites:** Julia 1.12, GitHub CLI (`gh`) authenticated
 
-- Julia 1.12
-- GitHub CLI (`gh`) authenticated
+**Usage:** `./fetch-prs.jl` (resume anytime - progress auto-saved)
 
-### Usage
-
-```bash
-./fetch-prs.jl
-```
-
-The script runs three stages automatically:
-1. Fetches all PRs with "new package" label
-2. Filters out bot merges (JuliaTagBot, jlbuild)
-3. Downloads full PR details (body, comments, reviews)
-
-Resume any time by running again - progress is saved after each page/PR.
-
-#### Options
-
-```bash
-./fetch-prs.jl --refetch-list  # Re-fetch PR list from scratch
-./fetch-prs.jl --refilter      # Re-run filtering stage
-```
-
-### Output
-
-```
-data/
-  A/Abc-pr123.json
-  B/Builds-pr3242.json
-  ...
-```
-
-Each file contains PR metadata, package name, body, comments, and review comments.
+**Output:** `data/A/Abc-pr123.json` (organized by first letter)
 
 ### `extract-precedents.jl`
 
-Runs cheap LLMs to do some basic analysis on the comments and justifications, as well as non-ML text extraction.
+Hybrid extraction tool combining code-based patterns (free) with LLM analysis (cheap) to understand moderation decisions.
 
-Populates `analysis/`.
+#### What it extracts
+
+**Code-based (free):**
+- AutoMerge guideline violations (name length, format, version, compat, etc.)
+- Library wrapper detection
+- Related PR references
+- Slack channel mentions
+
+**LLM-based (using `llm` CLI):**
+- Comment stance classification (pro/anti/neutral/unrelated merge)
+- Influence ratings (1-5 scale) for each comment
+- Explicit justification categories (wrapper, acronym, precedent, etc.)
+
+#### Usage
+
+```bash
+# Single file
+./extract-precedents.jl data/A/ABC-pr12345.json
+
+# Batch process entire directory (resumable - skips existing analysis)
+./extract-precedents.jl data/
+```
+
+**Default model:** `gemini/gemini-2.0-flash` (cheap: ~$0.10 per 1M input tokens)
+
+#### Output
+
+Creates analysis files in `analysis/` mirroring the `data/` structure:
+- `data/A/ABC-pr12345.json` → `analysis/A/ABC-pr12345-analysis.json`
+
+Each analysis includes violations, wrapper info, justifications, comment classifications with influence scores, decision metadata, and token usage estimates.
