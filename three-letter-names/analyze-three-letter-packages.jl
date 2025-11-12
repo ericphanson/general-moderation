@@ -4,6 +4,8 @@ using JSON
 using Dates
 using CairoMakie
 
+CairoMakie.activate!(px_per_unit=4, pt_per_unit=4)
+
 """Find all PR JSON files in data/ directory"""
 function find_all_pr_files(dir="../data")
     files = []
@@ -382,8 +384,8 @@ This chart breaks down the accepted packages by their approval category. The dom
         report *= """
 ## $(status_emoji) $cat ($(length(pkgs_in_cat)))
 
-| Package | PR # | Date | Status | Proof/Evidence | Data | Analysis |
-|---------|------|------|--------|----------------|------|----------|
+| Package | PR # | Date | Status | By | Proof/Evidence | Data | Analysis |
+|---------|------|------|--------|-------|----------------|------|----------|
 """
 
         for pkg in pkgs_in_cat
@@ -392,6 +394,18 @@ This chart breaks down the accepted packages by their approval category. The dom
             pr_link = "[#$pr_num](https://github.com/JuliaRegistries/General/pull/$pr_num)"
             date = get(pkg, "date", "—")
             status = pkg["merged"] ? "✅ Merged" : "❌ Closed"
+
+            # Get merged_by or closed_by
+            by_user = if pkg["merged"]
+                user = get(pkg, "merged_by", nothing)
+                user !== nothing ? "@$user" : "—"
+            else
+                # For closed PRs, try to get closed_by from PR data
+                pr_data = JSON.parsefile(pkg["pr_file"])
+                user = get(pr_data, "closed_by", nothing)
+                user !== nothing ? "@$user" : "—"
+            end
+
             data_link = "[JSON]($(pkg["pr_file"]))"
 
             analysis_link = if pkg["has_analysis"]
@@ -410,7 +424,7 @@ This chart breaks down the accepted packages by their approval category. The dom
                 proof_clean = proof_clean[1:300] * "..."
             end
 
-            report *= "| $name | $pr_link | $date | $status | $proof_clean | $data_link | $analysis_link |\n"
+            report *= "| $name | $pr_link | $date | $status | $by_user | $proof_clean | $data_link | $analysis_link |\n"
         end
 
         report *= "\n"
