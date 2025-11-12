@@ -210,7 +210,7 @@ function days_between(created, end_date)
         end_dt = DateTime(end_date[1:19], "yyyy-mm-ddTHH:MM:SS")
         return round(Int, (end_dt - created_dt).value / (1000 * 60 * 60 * 24))
     catch e
-        @warn "Failed to parse dates" created end_date error=e
+        @warn "Failed to parse dates" created end_date error = e
         return nothing
     end
 end
@@ -221,7 +221,7 @@ end
 const LLM_CALL_COUNT = Ref(0)
 
 # Global state for cleanup on exit
-const BATCH_STATE = Dict{String, Any}(
+const BATCH_STATE = Dict{String,Any}(
     "batch_mode" => false,
     "success_count" => 0,
     "error_count" => 0,
@@ -232,7 +232,7 @@ const BATCH_STATE = Dict{String, Any}(
 """Call llm CLI with a prompt and schema, return parsed JSON"""
 function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash")
     local result, errs
-    sleep(1)
+    sleep(rand(1:5))
     # Use llm's --schema feature for guaranteed structured output
     oc = OutputCollector(`llm -m $model --schema $schema $prompt`)
     success = wait(oc)
@@ -243,8 +243,8 @@ function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash
 
     # Check for quota/rate limit errors
     if occursin(r"quota|429|exhausted", lowercase(errs)) ||
-        occursin("rate limit", lowercase(errs)) ||
-        occursin("exceeded", lowercase(errs))
+       occursin("rate limit", lowercase(errs)) ||
+       occursin("exceeded", lowercase(errs))
         @error "Quota or rate limit exceeded!"
         throw(ErrorException("QUOTA_EXCEEDED: $errs"))
     end
@@ -270,7 +270,7 @@ function get_usage_stats(num_calls::Int)
 
         return total_input, total_output
     catch e
-        @warn "Failed to get usage stats from llm logs" error=e
+        @warn "Failed to get usage stats from llm logs" error = e
         return 0, 0
     end
 end
@@ -305,7 +305,7 @@ function classify_comments(comments, package_name::String, pr_body::String; mode
 
         # Extract reaction counts
         reaction_groups = get(c, "reactionGroups", [])
-        reactions = Dict{String, Int}()
+        reactions = Dict{String,Int}()
         for rg in reaction_groups
             content = get(rg, "content", "")
             count = get(get(rg, "users", Dict()), "totalCount", 0)
@@ -500,19 +500,19 @@ function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
 
     comments = get(pr_data, "comments", [])
     if !isempty(comments)
-      println("  Classifying comments...")
-      classified_comments = classify_comments(
-          comments,
-          pr_data["package_name"],
-          get(pr_data, "body", "");
-          model=model
-      )
+        println("  Classifying comments...")
+        classified_comments = classify_comments(
+            comments,
+            pr_data["package_name"],
+            get(pr_data, "body", "");
+            model=model
+        )
 
-      println("  Extracting justifications...")
-      justifications = extract_justifications(get(pr_data, "body", ""), comments; model=model)
+        println("  Extracting justifications...")
+        justifications = extract_justifications(get(pr_data, "body", ""), comments; model=model)
     else
-      justifications = []
-      classified_comments = []
+        justifications = []
+        classified_comments = []
     end
 
     # Extract package author
@@ -554,7 +554,7 @@ function print_summary()
         return
     end
 
-    println("\n" * "=" ^ 70)
+    println("\n" * "="^70)
     if BATCH_STATE["interrupted"]
         println("BATCH INTERRUPTED")
         println("Processed: $(BATCH_STATE["success_count"])/$(BATCH_STATE["total_files"])")
@@ -667,7 +667,7 @@ Note: To enable Ctrl-C interruption that shows stats, run with:
     while i <= length(ARGS)
         if ARGS[i] == "--model"
             if i + 1 <= length(ARGS)
-                model = ARGS[i + 1]
+                model = ARGS[i+1]
                 i += 2
             else
                 error("--model requires an argument")
@@ -705,7 +705,7 @@ Note: To enable Ctrl-C interruption that shows stats, run with:
     for (idx, pr_file) in enumerate(pr_files)
         if batch_mode
             println("\n[$idx/$(length(pr_files))] Processing: $pr_file")
-            println("=" ^ 70)
+            println("="^70)
         end
 
         # Check if output already exists
@@ -722,81 +722,60 @@ Note: To enable Ctrl-C interruption that shows stats, run with:
         end
 
         # Extract
-        try
-            extracted = extract_precedent(pr_file, model=model)
+        extracted = extract_precedent(pr_file, model=model)
 
-            # Save to analysis/ directory
-            open(output_file, "w") do f
-                JSON.print(f, extracted, 2)
-            end
+        # Save to analysis/ directory
+        open(output_file, "w") do f
+            JSON.print(f, extracted, 2)
+        end
 
-            if batch_mode
-                println("✓ Saved to: $output_file")
+        if batch_mode
+            println("✓ Saved to: $output_file")
+        else
+            println("\n✓ Analysis saved to: $output_file")
+        end
+
+        # Summary (only show full summary for single file mode)
+        if !batch_mode
+            println("\n=== Summary ===")
+            println("Package: $(extracted["package_name"])")
+            println("Violations: $(length(extracted["violations"]))")
+            println("Wrapper: $(extracted["wrapper_info"]["is_wrapper"])")
+            println("Justifications: $(length(extracted["justifications"]))")
+            println("Related PRs: $(length(extracted["related_prs"]))")
+
+            # Comment stance breakdown
+            discussion = get(extracted, "discussion", [])
+            pro = count(c -> get(c, "stance", "") == "pro_merge", discussion)
+            anti = count(c -> get(c, "stance", "") == "anti_merge", discussion)
+            neutral = count(c -> get(c, "stance", "") == "neutral_merge", discussion)
+            unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
+            unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
+
+            # Influence breakdown
+            high_influence = count(c -> get(c, "influence", 0) >= 4, discussion)
+            medium_influence = count(c -> get(c, "influence", 0) == 3, discussion)
+            low_influence = count(c -> get(c, "influence", 0) <= 2 && get(c, "influence", 0) > 0, discussion)
+
+            if unclassified > 0
+                println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
             else
-                println("\n✓ Analysis saved to: $output_file")
+                println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
             end
+            println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
 
-            # Summary (only show full summary for single file mode)
-            if !batch_mode
-                println("\n=== Summary ===")
-                println("Package: $(extracted["package_name"])")
-                println("Violations: $(length(extracted["violations"]))")
-                println("Wrapper: $(extracted["wrapper_info"]["is_wrapper"])")
-                println("Justifications: $(length(extracted["justifications"]))")
-                println("Related PRs: $(length(extracted["related_prs"]))")
-
-                # Comment stance breakdown
-                discussion = get(extracted, "discussion", [])
-                pro = count(c -> get(c, "stance", "") == "pro_merge", discussion)
-                anti = count(c -> get(c, "stance", "") == "anti_merge", discussion)
-                neutral = count(c -> get(c, "stance", "") == "neutral_merge", discussion)
-                unrelated = count(c -> get(c, "stance", "") == "unrelated", discussion)
-                unclassified = count(c -> get(c, "stance", "") == "unclassified", discussion)
-
-                # Influence breakdown
-                high_influence = count(c -> get(c, "influence", 0) >= 4, discussion)
-                medium_influence = count(c -> get(c, "influence", 0) == 3, discussion)
-                low_influence = count(c -> get(c, "influence", 0) <= 2 && get(c, "influence", 0) > 0, discussion)
-
-                if unclassified > 0
-                    println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated, ⚠️  unclassified: $unclassified)")
-                else
-                    println("Discussion: $(length(discussion)) comments (pro: $pro, anti: $anti, neutral: $neutral, unrelated: $unrelated)")
-                end
-                println("Influence: high (4-5): $high_influence, medium (3): $medium_influence, low (1-2): $low_influence")
-
-                # Decision info
-                decision = extracted["decision"]
-                if decision["merged"]
-                    println("Decision: MERGED by $(decision["merged_by"]) in $(decision["time_to_decision_days"]) days")
-                else
-                    closed_by = decision["closed_by"] !== nothing ? decision["closed_by"] : "unknown"
-                    days_str = decision["time_to_decision_days"] !== nothing ? "$(decision["time_to_decision_days"]) days" : "unknown time"
-                    println("Decision: CLOSED (not merged) by $closed_by in $days_str")
-                end
-            end
-
-            BATCH_STATE["success_count"] += 1
-        catch e
-            if isa(e, InterruptException)
-                println("\n\n⚠️  Interrupted by user (Ctrl-C)")
-                BATCH_STATE["interrupted"] = true
-                break
-            elseif isa(e, ErrorException) && startswith(e.msg, "QUOTA_EXCEEDED")
-                println("\n\n❌ QUOTA/RATE LIMIT EXCEEDED")
-                println("Stopping batch processing to avoid further quota errors.")
-                println("Progress has been saved. You can resume by running the same command again.")
-                BATCH_STATE["interrupted"] = true
-                break
+            # Decision info
+            decision = extracted["decision"]
+            if decision["merged"]
+                println("Decision: MERGED by $(decision["merged_by"]) in $(decision["time_to_decision_days"]) days")
             else
-                BATCH_STATE["error_count"] += 1
-                println("❌ ERROR processing $pr_file:")
-                println("  $(sprint(showerror, e))")
-                if batch_mode
-                    println("  Continuing with next file...")
-                end
+                closed_by = decision["closed_by"] !== nothing ? decision["closed_by"] : "unknown"
+                days_str = decision["time_to_decision_days"] !== nothing ? "$(decision["time_to_decision_days"]) days" : "unknown time"
+                println("Decision: CLOSED (not merged) by $closed_by in $days_str")
             end
         end
+
+        BATCH_STATE["success_count"] += 1
     end
 
     # For single file mode, print token usage immediately
