@@ -138,13 +138,23 @@ end
 const LLM_CALL_COUNT = Ref(0)
 
 """Call llm CLI with a prompt and schema, return parsed JSON"""
-function call_llm(prompt::String, schema::String; model="gemini-2.0-flash-exp")
+function call_llm(prompt::String, schema::String; model="gemini/gemini-2.0-flash")
     try
         # Use llm's --schema feature for guaranteed structured output
         result = readchomp(`llm -m $model --schema $schema $prompt`)
         LLM_CALL_COUNT[] += 1
         return JSON.parse(result)
     catch e
+        error_msg = sprint(showerror, e)
+
+        # Check for quota/rate limit errors
+        if occursin("quota", lowercase(error_msg)) ||
+           occursin("rate limit", lowercase(error_msg)) ||
+           occursin("exceeded", lowercase(error_msg))
+            @error "Quota or rate limit exceeded!"
+            throw(ErrorException("QUOTA_EXCEEDED: $error_msg"))
+        end
+
         @warn "LLM call failed" error=e
         return nothing
     end
@@ -180,7 +190,7 @@ function extract_package_author(body::String)
 end
 
 """Classify all comments by their stance on merging"""
-function classify_comments(comments, package_name::String, pr_body::String; model="gemini-2.0-flash-exp")
+function classify_comments(comments, package_name::String, pr_body::String; model="gemini/gemini-2.0-flash")
     # Extract package author for context
     package_author = extract_package_author(pr_body)
 
@@ -375,7 +385,7 @@ end
 
 # === Main extraction ===
 
-function extract_precedent(pr_file::String; model="gemini-2.0-flash-exp")
+function extract_precedent(pr_file::String; model="gemini/gemini-2.0-flash")
     println("Extracting precedents from: $pr_file")
     println("Using model: $model")
 
@@ -488,7 +498,7 @@ Arguments:
   input           Path to a PR JSON file OR a directory containing PR JSON files
 
 Options:
-  --model MODEL   LLM model to use (default: gemini-2.0-flash-exp)
+  --model MODEL   LLM model to use (default: gemini/gemini-2.0-flash)
 
 Examples:
   # Single file
@@ -504,7 +514,7 @@ Examples:
     end
 
     input_path = ARGS[1]
-    model = "gemini-2.0-flash-exp"
+    model = "gemini/gemini-2.0-flash"
 
     # Parse optional arguments
     i = 2
@@ -540,6 +550,7 @@ Examples:
     batch_mode = length(pr_files) > 1
     success_count = 0
     error_count = 0
+    interrupted = false
 
     for (idx, pr_file) in enumerate(pr_files)
         if batch_mode
@@ -547,12 +558,24 @@ Examples:
             println("=" ^ 70)
         end
 
+        # Check if output already exists
+        output_file = get_analysis_path(pr_file)
+        if isfile(output_file)
+            if batch_mode
+                println("⏭️  Skipping (output exists): $output_file")
+            else
+                println("\n⏭️  Output already exists: $output_file")
+                println("Delete it first if you want to regenerate.")
+            end
+            success_count += 1
+            continue
+        end
+
         # Extract
         try
             extracted = extract_precedent(pr_file, model=model)
 
             # Save to analysis/ directory
-            output_file = get_analysis_path(pr_file)
             open(output_file, "w") do f
                 JSON.print(f, extracted, 2)
             end
@@ -605,11 +628,23 @@ Examples:
 
             success_count += 1
         catch e
-            error_count += 1
-            println("❌ ERROR processing $pr_file:")
-            println("  $(sprint(showerror, e))")
-            if batch_mode
-                println("  Continuing with next file...")
+            if isa(e, InterruptException)
+                println("\n\n⚠️  Interrupted by user (Ctrl-C)")
+                interrupted = true
+                break
+            elseif isa(e, ErrorException) && startswith(e.msg, "QUOTA_EXCEEDED")
+                println("\n\n❌ QUOTA/RATE LIMIT EXCEEDED")
+                println("Stopping batch processing to avoid further quota errors.")
+                println("Progress has been saved. You can resume by running the same command again.")
+                interrupted = true
+                break
+            else
+                error_count += 1
+                println("❌ ERROR processing $pr_file:")
+                println("  $(sprint(showerror, e))")
+                if batch_mode
+                    println("  Continuing with next file...")
+                end
             end
         end
     end
@@ -617,8 +652,15 @@ Examples:
     # Batch summary
     if batch_mode
         println("\n" * "=" ^ 70)
-        println("BATCH COMPLETE")
-        println("Successfully processed: $success_count/$(length(pr_files))")
+        if interrupted
+            println("BATCH INTERRUPTED")
+            println("Processed: $success_count/$(length(pr_files))")
+            println("\n💡 Tip: Run the same command again to resume from where you left off.")
+            println("   Existing analysis files will be skipped automatically.")
+        else
+            println("BATCH COMPLETE")
+            println("Successfully processed: $success_count/$(length(pr_files))")
+        end
         if error_count > 0
             println("Errors: $error_count")
         end
