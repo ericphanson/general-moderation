@@ -214,7 +214,7 @@ function main()
         sort!(packages_by_category[cat], by=x -> get(x, "date", ""), rev=true)
     end
 
-    # Count accepts/rejects by year, with category breakdown for accepted
+    # Count accepts/rejects by year, with category breakdown for accepted and rejected
     println("Generating temporal visualizations...")
     year_stats = Dict{Int, Dict{String, Int}}()
 
@@ -228,6 +228,16 @@ function main()
         "Discretionary Approval"
     ]
 
+    # Define rejected categories
+    rejected_cat_names = [
+        "Duplicate/Superseded PR",
+        "Rejected: Acronym Not Widely Known",
+        "Rejected: Poor Discoverability",
+        "Rejected: Name Collision/Ambiguity",
+        "Technical Rejection",
+        "Rejected: Generic/Other"
+    ]
+
     for pkg in three_letter_packages
         yr = pkg["year"]
         if yr === nothing
@@ -237,6 +247,9 @@ function main()
         if !haskey(year_stats, yr)
             year_stats[yr] = Dict("accepted" => 0, "rejected" => 0)
             for cat in accepted_cat_names
+                year_stats[yr][cat] = 0
+            end
+            for cat in rejected_cat_names
                 year_stats[yr][cat] = 0
             end
         end
@@ -249,6 +262,10 @@ function main()
             end
         else
             year_stats[yr]["rejected"] += 1
+            cat = get(pkg, "category", "Unknown")
+            if haskey(year_stats[yr], cat)
+                year_stats[yr][cat] += 1
+            end
         end
     end
 
@@ -260,9 +277,15 @@ function main()
     rejected_counts = [year_stats[yr]["rejected"] for yr in years]
 
     # Get counts for each accepted category
-    category_counts = Dict{String, Vector{Int}}()
+    accepted_category_counts = Dict{String, Vector{Int}}()
     for cat in accepted_cat_names
-        category_counts[cat] = [get(year_stats[yr], cat, 0) for yr in years]
+        accepted_category_counts[cat] = [get(year_stats[yr], cat, 0) for yr in years]
+    end
+
+    # Get counts for each rejected category
+    rejected_category_counts = Dict{String, Vector{Int}}()
+    for cat in rejected_cat_names
+        rejected_category_counts[cat] = [get(year_stats[yr], cat, 0) for yr in years]
     end
 
     # Create first visualization: Simple accepted vs rejected
@@ -309,7 +332,7 @@ function main()
 
     # Plot accepted category lines
     for (i, cat) in enumerate(accepted_cat_names)
-        counts = category_counts[cat]
+        counts = accepted_category_counts[cat]
         if any(c > 0 for c in counts)  # Only plot if there's data
             style = styles[i]
             lines!(ax2, years, counts,
@@ -327,11 +350,56 @@ function main()
     end
 
     # Add legend
-    axislegend(ax2, position = :lt, nbanks = 2, framevisible = true, bgcolor = (:white, 0.9))
+    axislegend(ax2, position = :lt, nbanks = 2, framevisible = true, backgroundcolor = (:white, 0.9))
 
     # Save second figure
     save("acceptance-by-category.png", fig2)
     println("✓ Category breakdown visualization saved to acceptance-by-category.png")
+
+    # Create third visualization: Rejected category breakdown
+    fig3 = Figure(size=(1000, 600))
+    ax3 = Axis(fig3[1, 1],
+        xlabel = "Year",
+        ylabel = "Number of PRs",
+        title = "Rejected Three-Letter Packages by Category Over Time"
+    )
+
+    # Define distinct visual styles for each rejection category
+    # Using colorblind-friendly Okabe-Ito palette with distinct line styles and markers
+    rejected_styles = [
+        (color = "#E69F00", linestyle = :solid, marker = :circle),      # Duplicate/Superseded PR (orange)
+        (color = "#56B4E9", linestyle = :dash, marker = :diamond),      # Rejected: Acronym Not Widely Known (sky blue)
+        (color = "#009E73", linestyle = :dot, marker = :utriangle),     # Rejected: Poor Discoverability (bluish green)
+        (color = "#F0E442", linestyle = :dashdot, marker = :star5),     # Rejected: Name Collision/Ambiguity (yellow)
+        (color = "#0072B2", linestyle = :dashdotdot, marker = :rect),   # Technical Rejection (blue)
+        (color = "#D55E00", linestyle = :solid, marker = :xcross)       # Rejected: Generic/Other (vermilion)
+    ]
+
+    # Plot rejected category lines
+    for (i, cat) in enumerate(rejected_cat_names)
+        counts = rejected_category_counts[cat]
+        if any(c > 0 for c in counts)  # Only plot if there's data
+            style = rejected_styles[i]
+            lines!(ax3, years, counts,
+                   label = cat,
+                   color = style.color,
+                   linestyle = style.linestyle,
+                   linewidth = 2.5)
+            scatter!(ax3, years, counts,
+                     color = style.color,
+                     marker = style.marker,
+                     markersize = 14,
+                     strokewidth = 1,
+                     strokecolor = :white)
+        end
+    end
+
+    # Add legend
+    axislegend(ax3, position = :lt, nbanks = 2, framevisible = true, backgroundcolor = (:white, 0.9))
+
+    # Save third figure
+    save("rejection-by-category.png", fig3)
+    println("✓ Rejection breakdown visualization saved to rejection-by-category.png")
 
     # Generate markdown report
     println("Generating markdown report with category sections...")
@@ -365,6 +433,12 @@ The chart above shows the number of three-letter package name registration attem
 ![Accepted packages by category](acceptance-by-category.png)
 
 This chart breaks down the accepted packages by their approval category. The dominant category is "Discretionary Approval" (packages merged without a specific exemption), which was more common in earlier years. Other categories like "Library Wrapper" and "Standard File Format" provide specific justifications for approval.
+
+### Rejected Packages by Category
+
+![Rejected packages by category](rejection-by-category.png)
+
+This chart shows the reasons for rejection over time. "Duplicate/Superseded PR" dominates in recent years as the registration process has become stricter and authors often need multiple attempts. "Rejected: Acronym Not Widely Known" and "Rejected: Generic/Other" are also common rejection reasons.
 
 ---
 
